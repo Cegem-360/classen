@@ -25,7 +25,6 @@
                     </div>
                 </div>
             </div>
-            <x-separator />
             <div class="basis-2/3">
                 <div class="flex flex-row">
                     <div class="basis-2/12 justify-center py-[1vw] pt-[33px] text-center uppercase">
