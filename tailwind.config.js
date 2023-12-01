@@ -192,11 +192,13 @@ export default {
             sarga: 'rgba(var(--color-sarga), 1)',
             szurke: 'rgba(var(--color-szurke), 1)',
             smaragd: 'rgba(var(--color-smaragd), 1)',
-            zold: 'rgba(var(--color-zold), 1',
+            zold: 'rgba(var(--color-zold), 1)',
+            zold_attetszo: 'rgba(var(--color-zold), 0.6)',
         },
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                //sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
 
             backgroundImage: {
