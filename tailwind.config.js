@@ -25,11 +25,26 @@ export default {
             '8': '8px',
         },
         screens: {
+            /* Mobile first
             xs: '380px',
             sm: '560px',
             md: '768px',
             lg: '976px',
             xl: '1440px',
+            */
+            // DESKTOP FIRST
+            '2xl': {'max': '1680px'},
+            // => @media (max-width: 1680px) { ... }
+            'xl': {'max': '1440px'},
+            // => @media (max-width: 1440px) { ... }
+            'lg': {'max': '976px'},
+            // => @media (max-width: 976px) { ... }
+            'md': {'max': '768px'},
+            // => @media (max-width: 768px) { ... }
+            'sm': {'max': '560px'},
+            // => @media (max-width: 560px) { ... }
+            'xs': {'max': '380px'},
+            // => @media (max-width: 380px) { ... }
         },
         colors: {
             'sky': {
