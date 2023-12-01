@@ -173,6 +173,11 @@ export default {
             },
             'gray-light': '#d3dce6',
             'white': '#fff',
+
+            sarga: 'rgba(var(--color-sarga), 1)',
+            szurke: 'rgba(var(--color-szurke), 1)',
+            smaragd: 'rgba(var(--color-smaragd), 1)',
+            zold: 'rgba(var(--color-zold), 1',
         },
         extend: {
             fontFamily: {
@@ -187,3 +192,4 @@ export default {
 
     plugins: [forms, require('@tailwindcss/forms'),],
 };
+
