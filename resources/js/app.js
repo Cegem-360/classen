@@ -18,8 +18,52 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-// init Swiper:
-const swiper = new Swiper('.swiper', {
-    // configure Swiper to use modules
-    modules: [Navigation, Pagination],
+
+const swiper = new Swiper('.hero-swiper', {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  //slidesPerView: 3,
+  //spaceBetween: 30,
+
+  // If we need pagination
+  pagination: {
+    el: '.hero-swiper-pagination',
+    type: 'fraction',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.hero-swiper-button-next',
+    prevEl: '.hero-swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+
+const prdSwiper = new Swiper('.prd-swiper', {
+  // configure Swiper to use modules
+  modules: [Navigation, Pagination],
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+  slidesPerView: 4,
+  spaceBetween: 30,
+
+  // If we need pagination
+  pagination: {
+    el: '.prd-swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.prd-swiper-button-next',
+    prevEl: '.prd-swiper-button-prev',
+  },
 });
