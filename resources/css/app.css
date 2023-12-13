@@ -4,11 +4,52 @@
 
 
 @layer base {
-  :root {
-    --color-sarga: 248, 207, 69;
-    --color-szurke: 67, 75, 88;
-    --color-smaragd: 16, 74, 61;
-    --color-zold: 16, 74, 61;
-  }
+    :root {
+        --color-sarga: 248, 207, 69;
+        --color-szurke: 67, 75, 88;
+        --color-smaragd: 16, 74, 61;
+        --color-zold: 16, 74, 61;
+    }
 }
 
+
+.kollekcio-grid {
+    grid-column-gap: 8px;
+    grid-row-gap: 8px;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 75px 300px 300px;
+    grid-template-areas: ". . ."
+        "text img2 img3"
+        "img1 img2 img3";
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 300px 300px;
+        grid-template-areas: "text"
+            "img1";
+    }
+}
+
+#bgr {
+    grid-area: 1 / 1 / 4 / 4;
+    height: 500px;
+    @media (max-width: 768px) {
+        grid-area: 1 / 1 / 2 / 1;
+    }
+}
+
+#text {
+    grid-area: text;
+}
+
+#img1 {
+    grid-area: img1;
+}
+
+#img2 {
+    grid-area: img2;
+}
+
+#img3 {
+    grid-area: img3;
+}
