@@ -27,7 +27,7 @@
             <!-- Page Heading -->
             @include('layouts.navigation.navbar')
             @if (isset($header))
-                <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+                <div class="mx-auto max-w-7xl px-4 py-6 lg:px-8 sm:px-6">
                     {{ $header }}
                 </div>
             @endif
@@ -38,7 +38,7 @@
             </main>
         </div>
         @livewireScriptConfig
-        @vite(['resources/js/app.js', 'resources/js/favorites.js'])
+        @vite(['resources/js/app.js'])
         <script>
             // Function to get cookie value by name
             function getCookie(name) {
