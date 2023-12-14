@@ -2,7 +2,7 @@
 <div class="bg-white">
     <div class="pt-6">
         <nav aria-label="Breadcrumb">
-            <ol class="mx-auto flex max-w-2xl items-center space-x-2 px-4 sm:px-6 lg:max-w-7xl lg:px-8" role="list">
+            <ol class="mx-auto flex max-w-2xl items-center space-x-2 px-4 lg:max-w-7xl lg:px-8 sm:px-6" role="list">
                 <li>
                     <div class="flex items-center">
                         <a class="mr-2 text-sm font-medium text-gray-900" href="{{ route('doors') }}"
@@ -87,7 +87,7 @@
         <!-- Product info -->
         <div class="mt-9 flex w-full flex-row flex-wrap">
             @foreach ($catalogs as $catalog)
-                <x-door.partials.attribute :catalog=$catalog />
+                <x-doors.partials.attribute :catalog=$catalog />
             @endforeach
         </div>
         <div class="mt-9 flex w-full flex-row flex-wrap">

@@ -63,33 +63,6 @@
                         </a>
                     </div>
                     <div class="basis-1/12 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                        <!-- <aside class="flex flex-wrap">
-                        <ul class="basis-1/3">
-                            <li class="helpers__item">
-                                <button class="helpers__button helpers__bigger jsFontIncrease">A</button>
-                            </li>
-                            <li class="helpers__item">
-                                <button class="helpers__button helpers__smaller jsFontDecrease" disabled="disabled">A</button>
-                            </li>
-                            <li class="helpers__item">
-                                <button class="helpers__button jsContrast"><i class="icon-hgh-contrast"></i></button>
-                            </li>
-                            <li class="helpers__item">
-                                <button class="helpers__button jsLanguagesToggler">
-                                    <span class="text">EN</span>
-                                    <i class="icon-close"></i>
-                                </button>
-                            </li>
-                        </ul>
-                        <a class="basis-1/3" href="https://classen.pl/en/european-funds/"><img
-src="/app/themes/classen/img/icons/ue-en.svg"></a>
-                        <div class="basis-1/3">
-                            <a class="helpers__button" href="https://classen.pl/en/classenpol/">
-                                EN </a>
-                            <a class="helpers__button" href="https://classen.pl/classenpol/">
-                                PL </a>
-                        </div>
-                    </aside> -->
                     </div>
                 </div>
             </div>

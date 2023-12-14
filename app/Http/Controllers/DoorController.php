@@ -19,38 +19,6 @@ class DoorController extends Controller
      */
     public function index()
     {
-        /*$baseUrl = 'https://ketkorkft.hu//wp-json/wc/v3/';
-        $endpoint = 'products'; // The WooCommerce API endpoint for products
-        $apiKey = 'ck_dfd0baae141798f29f0931489ad1b2c2cb3407f3'; // Replace with your actual API key
-        $apiSecret = 'cs_19ed8e0f1becfc8d9637a36b042db76be4a61695'; // Replace with your actual API secret
-
-        $client = new Client([
-            'base_uri' => $baseUrl,
-            'headers' => [
-                'Authorization' => 'Basic ' . base64_encode($apiKey . ':' . $apiSecret)
-            ],
-        ]);
-
-        try {
-            $allProducts = [];
-
-            for ($i = 1; $i <= 5; $i++) {
-                $response = $client->get("$endpoint?page=" . $i);
-                $data = $response->getBody()->getContents();
-                $products = json_decode($data, true);
-
-                if (empty($products)) {
-                    break; // No more products to fetch
-                }
-
-                $allProducts = array_merge($allProducts, $products);
-            }
-            $products = $allProducts;
-            return view('doors.index', compact("products"));
-        } catch (\Exception $e) {
-            // Handle error
-            return view('doors.index', ['products' => []]);
-        }*/
         $products = Door::with('category')->get();
         return view('doors.index', compact('products'));
     }

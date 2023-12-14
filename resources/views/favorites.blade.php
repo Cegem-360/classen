@@ -9,6 +9,6 @@
     </x-slot>
 
     <main class="flex w-full flex-wrap">
-        <x-door.layout :products="$products" />
+        <x-doors.layout :products="$products" />
     </main>
 </x-app-layout>
