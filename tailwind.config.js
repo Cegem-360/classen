@@ -2,7 +2,7 @@ import defaultTheme from 'tailwindcss/defaultTheme';
 import forms from '@tailwindcss/forms';
 //import plugin from '@tailwindcss/aspect-ratio';
 /** @type {import('tailwindcss').Config} */
-export default {
+module.exports = {
     content: [
         './vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php',
         './storage/framework/views/*.php',
@@ -12,7 +12,18 @@ export default {
     theme: {
         extend: {
             gridTemplateRows: {
-                '[auto,auto,1fr]': 'auto auto 1fr',
+                'grid-cols-1': 'repeat(1, minmax(0, 1fr))',
+                'grid-cols-2': 'repeat(2, minmax(0, 1fr))',
+                'grid-cols-3': 'repeat(3, minmax(0, 1fr))',
+                'grid-cols-4': 'repeat(4, minmax(0, 1fr))',
+                'grid-cols-5': 'repeat(5, minmax(0, 1fr))',
+                'grid-cols-6': 'repeat(6, minmax(0, 1fr))',
+                'grid-cols-7': 'repeat(7, minmax(0, 1fr))',
+                'grid-cols-8': 'repeat(8, minmax(0, 1fr))',
+                'grid-cols-9': 'repeat(9, minmax(0, 1fr))',
+                'grid-cols-10': 'repeat(10, minmax(0, 1fr))',
+                'grid-cols-11': 'repeat(11, minmax(0, 1fr))',
+                'grid-cols-12': 'repeat(12, minmax(0, 1fr))',
             }
         },
         borderWidth: {
@@ -25,7 +36,8 @@ export default {
             '8': '8px',
         },
         screens: {
-            /* Mobile first
+            /* Mobile first*/
+            /*
             xs: '380px',
             sm: '560px',
             md: '768px',
@@ -33,17 +45,17 @@ export default {
             xl: '1440px',
             */
             // DESKTOP FIRST
-            '2xl': {'max': '1680px'},
+            '2xl': { 'max': '1680px' },
             // => @media (max-width: 1680px) { ... }
-            'xl': {'max': '1440px'},
+            'xl': { 'max': '1440px' },
             // => @media (max-width: 1440px) { ... }
-            'lg': {'max': '976px'},
+            'lg': { 'max': '976px' },
             // => @media (max-width: 976px) { ... }
-            'md': {'max': '768px'},
+            'md': { 'max': '768px' },
             // => @media (max-width: 768px) { ... }
-            'sm': {'max': '560px'},
+            'sm': { 'max': '560px' },
             // => @media (max-width: 560px) { ... }
-            'xs': {'max': '380px'},
+            'xs': { 'max': '380px' },
             // => @media (max-width: 380px) { ... }
         },
         colors: {
@@ -208,5 +220,5 @@ export default {
     },
 
     plugins: [forms, require('@tailwindcss/forms'),],
-};
+}
 
