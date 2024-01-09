@@ -2,9 +2,9 @@ import './bootstrap';
 import { Livewire } from '../../vendor/livewire/livewire/dist/livewire.esm';
 import '../css/app.css';
 import '../css/classen.css';
-//import jQuery from 'jquery';
-//window.$ = jQuery;
-//import qtip from 'qtip2';
+import jQuery from 'jquery';
+window.$ = jQuery;
+import qtip from qtip2;
 import.meta.glob([
     '../img/**',
 ]);
@@ -168,15 +168,3 @@ lightbox.on('closingAnimationStart', () => {
   //  detailPageSwiper.autoplay.start();
   //}
 });
-
-
-
-/* ###############################
-       qTip2 jQuery plugin
-  ##################################  */
-/* https://qtip2.com/guides */
-$('[data-qtip-text!=""]').qtip({ // Grab all elements with a non-blank data-tooltip attr.
-    content: {
-        attr: 'data-qtip-text' // Tell qTip2 to look inside this attr for its content
-    }
-})
