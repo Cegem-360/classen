@@ -21,6 +21,12 @@ use App\Http\Controllers\ManagePageContentController;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/ajtok', function () {
+    return view('ajtok');
+});
+Route::get('/ajtok/lirgo', function () {
+    return view('ajtok/lakkozott-ajtok/lirgo');
+});
 
 Route::get('/blog', [ManagePageContentController::class, 'blog'])->name('blog');
 Route::get('/favorites', [ManagePageContentController::class, 'favorites'])->name('favorites');

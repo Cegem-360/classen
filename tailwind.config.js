@@ -24,7 +24,11 @@ module.exports = {
                 'grid-cols-10': 'repeat(10, minmax(0, 1fr))',
                 'grid-cols-11': 'repeat(11, minmax(0, 1fr))',
                 'grid-cols-12': 'repeat(12, minmax(0, 1fr))',
-            }
+            },
+            gridTemplateColumns: {
+                // Define your custom three-column layout
+                'prdgallery': '3fr 1fr 2fr',
+            },
         },
         borderWidth: {
             '0': '0px',
@@ -197,6 +201,10 @@ module.exports = {
                 900: '#7f1d1d',
                 950: '#450a0a',
                 1000: '#000',
+            },
+            'neutral': {
+                100: '#f5f5f5',
+                200: '#e5e5e5',
             },
             'gray-light': '#d3dce6',
             'white': '#fff',

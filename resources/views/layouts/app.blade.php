@@ -8,6 +8,11 @@
 
         <title>{{ config('app.name', 'Classen') }}</title>
 
+
+        <!-- photoswipe CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.css" />
+        <!-- qTip jQuery plugin -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css" />
         <!-- Fonts -->
         <link href="https://fonts.bunny.net" rel="preconnect">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -109,6 +114,8 @@
                 setCookie('favorites', JSON.stringify(array), 30);
             }
         </script>
+        <!-- qTip jQuery plugin -->
+        <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script> -->
     </body>
 
 </html>
