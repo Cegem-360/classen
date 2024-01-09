@@ -172,8 +172,33 @@ lightbox.on('closingAnimationStart', () => {
        qTip2 jQuery plugin
   ##################################  */
 /* https://qtip2.com/guides */
-$('[data-qtip-text!=""]').qtip({ // Grab all elements with a non-blank data-tooltip attr.
-    content: {
-        attr: 'data-qtip-text' // Tell qTip2 to look inside this attr for its content
-    }
-})
+$(document).ready(function() {
+    $('.jsTooltipBig').each(function() {
+        var _self = $(this);
+
+        // Setup the tooltip
+        _self.qtip({
+            content: {
+                text: function() {
+                    return $(this).attr('data-qtip-text');
+                },
+                title: function() {
+                    return $(this).attr('data-qtip-title');
+                }
+            },
+            show: {
+                event: 'click' // Show tooltip on click
+            },
+            hide: {
+                event: 'click unfocus' // Hide tooltip on click or when losing focus
+            },
+            position: {
+                my: 'top center', // Positioning of the tooltip
+                at: 'bottom center'
+            },
+            style: {
+                classes: 'qtip-light' // Apply custom style class
+            }
+        });
+    });
+});

@@ -244,3 +244,17 @@ ul.property__list {
         border: black solid 1px;
     }
 }
+
+
+
+
+.qtip-light {
+    max-width: 380px;
+    min-width: 280px;
+    background: #fff;
+    box-shadow: 0 2px 7px 0 rgba(0,0,0,.21);
+    color: #000;
+    font-size: 16px;
+    line-height: 26px;
+}
+
