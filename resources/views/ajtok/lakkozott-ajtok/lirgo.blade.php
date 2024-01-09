@@ -323,7 +323,7 @@
                 <h3 class="doors__subheader text-2xl font-bold">
                     <strong class="text-sarga text-4xl">1.</strong> Válassza ki a felület színét</h3>
                 <div class="swiper door-fronts-swiper-thumbs door_colors">
-                    <div class="swiper-wrapper items-center min-h-[330px]">
+                    <div class="swiper-wrapper md:flex-col items-center min-h-[330px]">
                         <div class="swiper-slide door_color p-3">
                             <div class="door_color__wrapper">
                                 <div class="door_color__image">

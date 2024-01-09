@@ -258,3 +258,11 @@ ul.property__list {
     line-height: 26px;
 }
 
+.qtip-close-button {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333; /* You can change the color as needed */
+}

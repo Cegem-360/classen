@@ -176,7 +176,6 @@ $(document).ready(function() {
     $('.jsTooltipBig').each(function() {
         var _self = $(this);
 
-        // Setup the tooltip
         _self.qtip({
             content: {
                 text: function() {
@@ -187,18 +186,34 @@ $(document).ready(function() {
                 }
             },
             show: {
-                event: 'click' // Show tooltip on click
+                event: 'click'
             },
             hide: {
-                event: 'click unfocus' // Hide tooltip on click or when losing focus
+                event: 'click unfocus'
             },
             position: {
-                my: 'top center', // Positioning of the tooltip
+                my: 'top center',
                 at: 'bottom center'
             },
             style: {
-                classes: 'qtip-light' // Apply custom style class
+                classes: 'qtip-light',
+                tip: {
+                    corner: true
+                }
+            },
+            events: {
+                render: function(event, api) {
+                    // Adding a close button to the title bar
+                    var closeButton = $('<div class="qtip-close-button">&#10005;</div>');
+                    $(api.elements.titlebar).append(closeButton);
+
+                    // Click event handler for the close button
+                    closeButton.on('click', function() {
+                        api.hide();
+                    });
+                }
             }
         });
     });
 });
+
