@@ -257,12 +257,20 @@ ul.property__list {
     font-size: 16px;
     line-height: 26px;
 }
-
+@media (max-width: 560px) {
+    .qtip-light {
+        width: 80% !important;
+        max-width: none !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+}
 .qtip-close-button {
     position: absolute;
     top: 5px;
     right: 15px;
     cursor: pointer;
     font-size: 16px;
-    color: #333; /* You can change the color as needed */
+    color: #333;
 }
+

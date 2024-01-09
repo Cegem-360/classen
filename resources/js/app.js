@@ -175,6 +175,15 @@ lightbox.on('closingAnimationStart', () => {
 $(document).ready(function() {
     $('.jsTooltipBig').each(function() {
         var _self = $(this);
+        var windowWidth = $(window).width();
+        var positionMy = 'top center';
+        var positionAt = 'bottom center';
+
+        // Adjust position for small screens
+        if (windowWidth <= 560) { // Adjust 560px as per your breakpoint for 'small screens'
+            positionMy = 'center';
+            positionAt = 'center';
+        }
 
         _self.qtip({
             content: {
@@ -192,8 +201,14 @@ $(document).ready(function() {
                 event: 'click unfocus'
             },
             position: {
-                my: 'top center',
-                at: 'bottom center'
+                my: positionMy,
+                at: positionAt,
+                viewport: $(window), // Ensure tooltip stays within the bounds of the viewport
+                adjust: {
+                    method: 'flipinvert shift', // Automatically adjust and shift the tooltip position
+                    scroll: true, // Reposition on scroll
+                    resize: true // Reposition on window resize
+                }
             },
             style: {
                 classes: 'qtip-light',
