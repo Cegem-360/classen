@@ -53,7 +53,7 @@ const prdSwiper = new Swiper('.prd-swiper', {
     // Optional parameters
     direction: 'horizontal',
     loop: true,
-    slidesPerView: 4,
+    slidesPerView: 1,
     spaceBetween: 30,
 
     // If we need pagination
@@ -66,6 +66,24 @@ const prdSwiper = new Swiper('.prd-swiper', {
     navigation: {
         nextEl: '.prd-swiper-button-next',
         prevEl: '.prd-swiper-button-prev',
+    },
+    breakpoints: {
+        976: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        768: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        560: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        380: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
     },
 });
 

@@ -67,6 +67,9 @@
     min-width: 2rem;
 }
 
+.swiper-pagination-bullet-active {
+    background: rgb(var(--color-sarga))!important;
+}
 
 .tile {
     position: relative;
