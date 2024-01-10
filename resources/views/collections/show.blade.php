@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-collections.partials.collection-single-item :category=$category :doors=$doors :catalogs=$catalogs :tags=$tags />
     <x-nav.breadcrumb />
-    <x-collections.partials.prd-gallery :cateory=$category />
+    <x-collections.partials.prd-gallery :category='$category' />
     <!-- gap -->
     <div class="min-h-[60px]"></div>
 
