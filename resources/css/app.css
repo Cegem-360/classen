@@ -22,9 +22,15 @@
         "text img2 img3"
         "img1 img2 img3";
 
+    @media (max-width: 976px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: 300px 300px;
+            grid-template-areas: "text"
+                "img1";
+        }
     @media (max-width: 768px) {
         grid-template-columns: 1fr;
-        grid-template-rows: 300px 300px;
+        grid-template-rows: 400px 300px;
         grid-template-areas: "text"
             "img1";
     }
