@@ -1,7 +1,7 @@
  @props(['category' => []])
 
  <li class="products-list__tile">
-     <a href="{{ route('category.show', ['category' => $category['id']]) }}" wire:navigate.hover>
+     <a href="{{ route('category.show', ['category' => $category['name']]) }}" wire:navigate.hover>
          <div class="tile">
              <figure class="tile__image aspect-[40/27] overflow-hidden">
                  <img src=" {{ !empty($category['img_url']) ? $category['img_url'] : Vite::asset('resources/img/placeholder.webp') }}"

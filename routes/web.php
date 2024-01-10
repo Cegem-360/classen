@@ -21,7 +21,9 @@ use App\Http\Controllers\ManagePageContentController;
 Route::get('/', function () {
     return view('index');
 });
+//Route::resource('category', CategoryController::class);
 Route::get('/kollekciok', [CategoryController::class, 'index'])->name('kollekciok');
+Route::get('/kollekciok/{category}', [CategoryController::class, 'show'])->name('category.show');
 
 Route::get('/ajtok/lirgo', function () {
     return view('doors/single-prd');
@@ -30,7 +32,7 @@ Route::get('/ajtok/lirgo', function () {
 Route::get('/blog', [ManagePageContentController::class, 'blog'])->name('blog');
 Route::get('/favorites', [ManagePageContentController::class, 'favorites'])->name('favorites');
 Route::resource('door', DoorController::class);
-Route::resource('category', CategoryController::class);
+
 Route::get('/door', [DoorController::class, 'index'])->name('doors');
 
 Route::get('test', [ManagePageContentController::class, 'test']);

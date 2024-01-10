@@ -39,15 +39,15 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    public function show($category)
     {
+        $category = Category::whereName($category)->first();
         $doors = collect($category->doors()->get());
         $doors_tmp =  $doors->mapToGroups(
             function ($item, $key) {
                 return [$item['tag'] => [$item['name'] => $item['img_url']]];
             }
         )->all();
-        //dd($doors_tmp);
         $catalogs = $category->attributes()->get();
         $tags =  $doors->mapToGroups(
             function ($item, $key) {
@@ -61,7 +61,8 @@ class CategoryController extends Controller
             $tags[$collection] = $tag->first();
         }
         //dd($tags);
-        return view('categories.show', compact('category', 'doors', 'catalogs', 'tags'));
+
+        return view('collections.show', compact('category', 'doors', 'catalogs', 'tags'));
     }
 
     /**
