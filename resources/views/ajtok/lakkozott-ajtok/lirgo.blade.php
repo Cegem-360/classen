@@ -106,7 +106,7 @@
         <hr class="relative mt-3 mb-3 w-32 h-1 border-0 bg-sarga">
         <div class="min-h-[30px]"></div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-1 gap-8">
+        <div class="grid grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
             <div class="properties__box">
                 <article class="property">
                     <p class="mb-3"><strong>Végrehajtási szabvány</strong></p>
