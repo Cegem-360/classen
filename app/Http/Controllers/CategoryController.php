@@ -2,19 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
+
 use App\Models\Product;
+use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
+
 
 class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
-        $categories = Category::all();
-        return view('categories.index', compact('categories'));
+        $collections = Category::all();
+        return view('collections.index', compact('collections'));
     }
 
     /**

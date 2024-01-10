@@ -21,9 +21,8 @@ use App\Http\Controllers\ManagePageContentController;
 Route::get('/', function () {
     return view('index');
 });
-Route::get('/ajtok', function () {
-    return view('doors/category');
-});
+Route::get('/kolleckciok', [CategoryController::class, 'index'])->name('kolleckciok');
+
 Route::get('/ajtok/lirgo', function () {
     return view('doors/single-prd');
 });
