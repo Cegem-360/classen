@@ -22,10 +22,10 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/ajtok', function () {
-    return view('ajtok');
+    return view('doors/category');
 });
 Route::get('/ajtok/lirgo', function () {
-    return view('ajtok/lakkozott-ajtok/lirgo');
+    return view('doors/single-prd');
 });
 
 Route::get('/blog', [ManagePageContentController::class, 'blog'])->name('blog');
