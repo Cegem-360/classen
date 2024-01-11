@@ -13,7 +13,7 @@ import.meta.glob([
   #####################################  */
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation, Pagination, Thumbs } from 'swiper/modules';
+import { Navigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -108,12 +108,21 @@ const detailPageSwiper = new Swiper('.detail-page-swiper', {
 });
 
 const doorFrontsSwiperThumbs = new Swiper(".door-fronts-swiper-thumbs", {
-    slidesPerView: 3,
+    modules: [Grid],
+    slidesPerView: 4,
+    grid: {
+        fill: 'row',
+        rows: 8,
+    },
 });
 
 const doorFrontsSwiper = new Swiper('.door-fronts-swiper', {
-    modules: [Thumbs],
+    modules: [Thumbs, EffectFade],
     direction: 'horizontal',
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true,
+    },
     loop: true,
     thumbs: {
         swiper: doorFrontsSwiperThumbs,
