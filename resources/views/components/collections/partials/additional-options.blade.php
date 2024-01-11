@@ -4,7 +4,7 @@
     <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
     <div class="min-h-[30px]"></div>
 
-    <div class="grid grid-cols-2 gap-8 sm:grid-cols-1">
+    <div class="grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
         @foreach ($additional_options ?? [] as $row)
             @for ($i = 1; $i < 4; $i++)
                 @foreach ($row['oszlop_' . $i] ?? [] as $col)
