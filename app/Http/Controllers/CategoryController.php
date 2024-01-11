@@ -60,6 +60,7 @@ class CategoryController extends Controller
         foreach ($tags_tmp as $collection => $tag) {
             $tags[$collection] = $tag->first();
         }
+        //$colorVariants = Door::whereName($door->name)->whereCategoryId($door->category_id)->get()->groupBy('tag')->all();
         //dd($tags);
 
         return view('collections.show', compact('category', 'doors', 'catalogs', 'tags'));

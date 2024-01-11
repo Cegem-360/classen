@@ -19,7 +19,7 @@
     <!-- gap -->
     <div class="min-h-[60px]"></div>
 
-    <x-doors.single-prd.door-options />
+    <x-collections.partials.door-options :doors='$doors' />
 
     <x-footer.layout />
 
