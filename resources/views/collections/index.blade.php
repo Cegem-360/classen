@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-layouts.app>
     <div class="flex">
         <x-collections.layout :collections='$collections' />
     </div>
@@ -8,4 +8,4 @@
 
     <x-footer.layout />
 
-</x-app-layout>
+</x-layouts.app>

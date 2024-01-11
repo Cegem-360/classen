@@ -20,16 +20,15 @@
                 {{ $style }}
             </style>
         @endisset
-        @livewireStyles
         <!-- Scripts -->
-
+        @vite(['resources/js/app.js'])
     </head>
 
     <body class="font-sans antialiased">
         <div class="min-h-screen">
 
             <!-- Page Heading -->
-            @include('layouts.navigation.navbar')
+            <x-layouts.navigation.navbar />
             @if (isset($header))
                 <div class="mx-auto max-w-7xl px-4 py-6 lg:px-8 sm:px-6">
                     {{ $header }}
@@ -41,8 +40,7 @@
                 {{ $slot }}
             </main>
         </div>
-        @livewireScriptConfig
-        @vite(['resources/js/app.js'])
+
         <script>
             // Function to get cookie value by name
             function getCookie(name) {

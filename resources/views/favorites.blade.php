@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-layouts.app>
 
     <x-slot name="header">
         <div class="mb-4 flex items-center justify-between font-bold">
@@ -11,4 +11,4 @@
     <main class="flex w-full flex-wrap">
         <x-doors.layout :products="$products" />
     </main>
-</x-app-layout>
+</x-layouts.app>

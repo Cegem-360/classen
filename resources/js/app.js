@@ -1,19 +1,19 @@
 import './bootstrap';
-import { Livewire } from '../../vendor/livewire/livewire/dist/livewire.esm';
+//import { Livewire } from '../../vendor/livewire/livewire/dist/livewire.esm';
 import '../css/app.css';
 import '../css/classen.css';
 import.meta.glob([
     '../img/**',
 ]);
 
-Livewire.start();
+//Livewire.start();
 
 /* ####################################
        Swiper (carousels, gallerys)
   #####################################  */
 // core version + navigation, pagination modules:
 import Swiper from 'swiper';
-import { Navigation, Pagination, Thumbs} from 'swiper/modules';
+import { Navigation, Pagination, Thumbs } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -71,11 +71,11 @@ const prdSwiper = new Swiper('.prd-swiper', {
         976: {
             slidesPerView: 4,
             spaceBetween: 30,
-          },
+        },
         768: {
             slidesPerView: 3,
             spaceBetween: 30,
-          },
+        },
         560: {
             slidesPerView: 2,
             spaceBetween: 20,
@@ -130,27 +130,27 @@ import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswi
 import PhotoSwipe from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js';
 
 const photo_swipe_options = {
-  gallery: '.lightbox',
-  pswpModule: PhotoSwipe,
-  // set background opacity
-  bgOpacity: 1,
-  showHideOpacity: true,
-  children: 'a',
-  loop: true,
-  showHideAnimationType: 'zoom', /* options: fade, zoom, none */
+    gallery: '.lightbox',
+    pswpModule: PhotoSwipe,
+    // set background opacity
+    bgOpacity: 1,
+    showHideOpacity: true,
+    children: 'a',
+    loop: true,
+    showHideAnimationType: 'zoom', /* options: fade, zoom, none */
 
-  /* Click on image moves to the next slide */
-  imageClickAction: 'close',
-  tapAction: 'close',
+    /* Click on image moves to the next slide */
+    imageClickAction: 'close',
+    tapAction: 'close',
 
-  /* ## Hiding a specific UI element ## */
-  zoom: false,
-  close: true,
-  counter: true,
-  arrowKeys: true,
-  /* ## Options ## */
-  bgOpacity: "1",/* deafult: 0.8 */
-  wheelToZoom: false, /* deafult: undefined */
+    /* ## Hiding a specific UI element ## */
+    zoom: false,
+    close: true,
+    counter: true,
+    arrowKeys: true,
+    /* ## Options ## */
+    bgOpacity: "1",/* deafult: 0.8 */
+    wheelToZoom: false, /* deafult: undefined */
 };
 
 const lightbox = new PhotoSwipeLightbox(photo_swipe_options);
@@ -158,30 +158,30 @@ const lightbox = new PhotoSwipeLightbox(photo_swipe_options);
 lightbox.init();
 
 lightbox.on('change', () => {
-  const { pswp } = lightbox;
-  detailPageSwiper.slideTo(pswp.currIndex, 0, false);
-  console.log('Slide index', pswp.currIndex);
-  //console.log('Slide object', pswp.currSlide);
-  //console.log('Slide object data', pswp.currSlide.data);
+    const { pswp } = lightbox;
+    detailPageSwiper.slideTo(pswp.currIndex, 0, false);
+    console.log('Slide index', pswp.currIndex);
+    //console.log('Slide object', pswp.currSlide);
+    //console.log('Slide object data', pswp.currSlide.data);
 });
 
 /* ### PhotoSwipe events ### */
 
 lightbox.on('afterInit', () => {
-  const { pswp } = lightbox;
-  //if(detailPageSwiper.params.autoplay.enabled){
-  //  detailPageSwiper.autoplay.stop();
-  //};
+    const { pswp } = lightbox;
+    //if(detailPageSwiper.params.autoplay.enabled){
+    //  detailPageSwiper.autoplay.stop();
+    //};
 });
 
 lightbox.on('closingAnimationStart', () => {
-  //console.log('closingAnimationStart');
-  const { pswp } = lightbox;
-  detailPageSwiper.slideTo(pswp.currIndex, 0, false);
-  /* if autoplay enabled == true -> autoplay.start() when close lightbox */
-  //if(detailPageSwiper.params.autoplay.enabled){
-  //  detailPageSwiper.autoplay.start();
-  //}
+    //console.log('closingAnimationStart');
+    const { pswp } = lightbox;
+    detailPageSwiper.slideTo(pswp.currIndex, 0, false);
+    /* if autoplay enabled == true -> autoplay.start() when close lightbox */
+    //if(detailPageSwiper.params.autoplay.enabled){
+    //  detailPageSwiper.autoplay.start();
+    //}
 });
 
 
@@ -190,8 +190,8 @@ lightbox.on('closingAnimationStart', () => {
        qTip2 jQuery plugin
   ##################################  */
 /* https://qtip2.com/guides */
-$(document).ready(function() {
-    $('.jsTooltipBig').each(function() {
+$(document).ready(function () {
+    $('.jsTooltipBig').each(function () {
         var _self = $(this);
         var windowWidth = $(window).width();
         var positionMy = 'top center';
@@ -205,10 +205,10 @@ $(document).ready(function() {
 
         _self.qtip({
             content: {
-                text: function() {
+                text: function () {
                     return $(this).attr('data-qtip-text');
                 },
-                title: function() {
+                title: function () {
                     return $(this).attr('data-qtip-title');
                 }
             },
@@ -235,13 +235,13 @@ $(document).ready(function() {
                 }
             },
             events: {
-                render: function(event, api) {
+                render: function (event, api) {
                     // Adding a close button to the title bar
                     var closeButton = $('<div class="qtip-close-button">&#10005;</div>');
                     $(api.elements.titlebar).append(closeButton);
 
                     // Click event handler for the close button
-                    closeButton.on('click', function() {
+                    closeButton.on('click', function () {
                         api.hide();
                     });
                 }

@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-layouts.app>
 
     <x-nav.breadcrumb />
 
@@ -20,4 +20,4 @@
 
     <x-footer.layout />
 
-</x-app-layout>
+</x-layouts.app>

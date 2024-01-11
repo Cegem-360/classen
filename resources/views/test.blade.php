@@ -1,3 +1,3 @@
-<x-app-layout>
+<x-layouts.app>
     @dd($designForms)
-</x-app-layout>
+</x-layouts.app>

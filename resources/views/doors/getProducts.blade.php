@@ -1,3 +1,3 @@
-<x-app-layout>
+<x-layouts.app>
     {{ dd($allProducts[0]) }}
-</x-app-layout>
+</x-layouts.app>

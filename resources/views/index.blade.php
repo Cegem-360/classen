@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-layouts.app>
 
     <x-partials.hero-banner />
 
@@ -36,4 +36,4 @@
     <!-- Footer -->
     <x-footer.layout />
 
-</x-app-layout>
+</x-layouts.app>

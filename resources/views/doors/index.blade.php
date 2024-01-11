@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-layouts.app>
     <div class="flex pt-20" aria-label="Breadcrumb">
         <ol class="abj flex items-center" role="list">
             <li>
@@ -76,4 +76,4 @@
 
     <x-doors.layout :products="$products" />
 
-</x-app-layout>
+</x-layouts.app>
