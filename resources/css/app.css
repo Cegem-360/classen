@@ -34,6 +34,12 @@
         grid-template-areas: "text"
             "img1";
     }
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 400px 300px;
+        grid-template-areas: "text"
+            "img1";
+    }
 }
 
 #bgr {
