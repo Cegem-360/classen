@@ -5,7 +5,7 @@
     <!-- gap -->
     <div class="min-h-[60px]"></div>
 
-    <x-doors.single-prd.door-model-icons :catalogs='$catalogs' />
+    <x-collections.partials.door-model-icons :catalogs=$catalogs />
 
     <!-- gap -->
     <div class="min-h-[60px]"></div>

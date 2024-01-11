@@ -3,8 +3,7 @@
       <ul class="grid grid-cols-5 gap-6 md:grid-cols-3 sm:grid-cols-2">
 
           @foreach ($catalogs as $catalog)
-              @dd($catalog)
-              <x-collections.partials.attribute :catalog=$catalog />
+              <x-collections.partials.attribute :catalog='$catalog' :qtip='$loop->index' />
           @endforeach
 
       </ul>

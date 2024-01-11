@@ -27,7 +27,7 @@ class AttributeSeeder extends Seeder
                 'base_uri' => UrlPath::BASEURL,
             ]);
         $response =
-            $this->client->get(EndPoint::DESIGFORMS."?per_page=25");
+            $this->client->get(EndPoint::DESIGFORMS . "?per_page=25");
         $designForms = json_decode($response->getBody(), true);
         foreach ($designForms as $designForm) {
             $imgUrl =
