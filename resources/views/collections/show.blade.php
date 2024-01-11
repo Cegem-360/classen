@@ -19,7 +19,7 @@
     <!-- gap -->
     <div class="min-h-[60px]"></div>
 
-    <x-collections.partials.door-options :doors='$doors' />
+    <x-collections.partials.door-options :tags='$tags' :doors=$doors />
 
     <x-footer.layout />
 
