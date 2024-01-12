@@ -146,13 +146,14 @@ const photo_swipe_options = {
     showHideOpacity: true,
     children: 'a',
     loop: true,
-    showHideAnimationType: 'zoom', /* options: fade, zoom, none */
+    showHideAnimationType: 'none', /* options: fade, zoom, none */
 
     /* Click on image moves to the next slide */
     imageClickAction: 'close',
     tapAction: 'close',
 
     /* ## Hiding a specific UI element ## */
+    initialZoomLevel: 0.5,
     zoom: false,
     close: true,
     counter: true,

@@ -168,7 +168,7 @@
                 <div class="swiper lightbox door-fronts-swiper w-full">
                     <div class="swiper-wrapper items-center">
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -178,7 +178,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -188,7 +188,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -198,7 +198,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -208,7 +208,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -218,7 +218,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -228,7 +228,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -238,7 +238,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -248,7 +248,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -258,7 +258,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -268,7 +268,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
@@ -278,7 +278,7 @@
                             </a>
                         </div>
                         <div class="swiper-slide">
-                            <a data-pswp-width="1600" data-pswp-height="900"
+                            <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
                                 itemprop="contentUrl" target="_blank">
                                 <div class="flex h-full w-full justify-center bg-[#ffffff00]">
