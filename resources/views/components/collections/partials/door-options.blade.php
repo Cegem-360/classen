@@ -35,7 +35,6 @@
             <div class="door_fronts">
                 <div class="swiper lightbox door-fronts-swiper w-full">
                     <div class="swiper-wrapper items-center">
-                        @dd($doors)
                         <div class="swiper-slide">
                             <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
