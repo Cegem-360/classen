@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('img_url');
             $table->string('tag');
             $table->string('tag_img_url');
+            $table->string('tag_category');
             $table->foreignIdFor(Category::class);
             $table->timestamps();
         });

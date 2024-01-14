@@ -25,6 +25,9 @@
     </head>
 
     <body class="font-sans antialiased">
+
+        {{-- SPA Do not delete --}}
+        <livewire:app />
         <div class="min-h-screen">
 
             <!-- Page Heading -->
@@ -37,7 +40,9 @@
 
             <!-- Page Content -->
             <main>
+
                 {{ $slot }}
+
             </main>
         </div>
 

@@ -1,5 +1,4 @@
-@props(['doors' => []])
-
+@props(['doors' => [], 'tags' => []])
 <!-- Elérhető opciók -->
 <div class="mx-8">
     <h2 class="mb-3 text-4xl font-bold">{{ __('Available options') }}</h2>
@@ -13,150 +12,19 @@
             </h3>
             <div class="swiper door-fronts-swiper-thumbs door_colors">
                 <div class="swiper-wrapper min-h-[330px] flex-wrap items-center md:flex-col">
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/iridium-bialy-mat-170x126.jpg') }}"
-                                    alt="White">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>White</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/szary-7004-170x126.jpg') }}"
-                                    alt="Gray 7004">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>Gray 7004</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
+                    @foreach ($tags as $name => $tag)
+                        <div class="swiper-slide door_color p-3">
+                            <div class="door_color__wrapper">
+                                <div class="door_color__image">
+                                    <img class="lazy" src="{{ $tag['tag_img_url'] }}" alt="White" loading='lazy'>
+                                </div>
+                                <div class="door_color__meta mt-3">
+                                    <h4> {{ $name }}</h4>
+                                    <p class="text-sm font-bold">{{ $tag['tag_category'] }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/czarny-9005-170x126.jpg') }}"
-                                    alt="Black 9005">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>Black 9005</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/iridium-bialy-mat-170x126.jpg') }}"
-                                    alt="White">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>White</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/szary-7004-170x126.jpg') }}"
-                                    alt="Gray 7004">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>Gray 7004</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/czarny-9005-170x126.jpg') }}"
-                                    alt="Black 9005">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>Black 9005</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/iridium-bialy-mat-170x126.jpg') }}"
-                                    alt="White">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>White</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/szary-7004-170x126.jpg') }}"
-                                    alt="Gray 7004">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>Gray 7004</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/czarny-9005-170x126.jpg') }}"
-                                    alt="Black 9005">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>Black 9005</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/iridium-bialy-mat-170x126.jpg') }}"
-                                    alt="White">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>White</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/szary-7004-170x126.jpg') }}"
-                                    alt="Gray 7004">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>Gray 7004</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-slide door_color p-3">
-                        <div class="door_color__wrapper">
-                            <div class="door_color__image">
-                                <img src="{{ Vite::asset('resources/img/prd-images/feluletek/czarny-9005-170x126.jpg') }}"
-                                    alt="Black 9005">
-                            </div>
-                            <div class="door_color__meta mt-3">
-                                <h4>Black 9005</h4>
-                                <p class="text-sm font-bold">Lacquered</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -167,6 +35,7 @@
             <div class="door_fronts">
                 <div class="swiper lightbox door-fronts-swiper w-full">
                     <div class="swiper-wrapper items-center">
+                        @dd($doors)
                         <div class="swiper-slide">
                             <a data-pswp-width="300" data-pswp-height="660"
                                 href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"

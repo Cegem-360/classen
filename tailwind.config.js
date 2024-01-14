@@ -1,6 +1,8 @@
-import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms';
+const defaultTheme = require('tailwindcss/defaultTheme');
+const colors = require("tailwindcss/colors");
+//import forms from '@tailwindcss/forms';
 //import plugin from '@tailwindcss/aspect-ratio';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
@@ -217,7 +219,6 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                //sans: ['Figtree', ...defaultTheme.fontFamily.sans],
                 sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
 
@@ -227,6 +228,8 @@ module.exports = {
         },
     },
 
-    plugins: [forms, require('@tailwindcss/forms'),],
+    plugins: [
+        require('@tailwindcss/forms'),
+    ],
 }
 

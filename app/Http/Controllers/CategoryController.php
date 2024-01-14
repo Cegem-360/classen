@@ -43,15 +43,17 @@ class CategoryController extends Controller
     {
         $category = Category::whereName($category)->first();
         $doors = collect($category->doors()->get());
+        $catalogs = $category->attributes()->get();
+
         $doors_tmp =  $doors->mapToGroups(
             function ($item, $key) {
                 return [$item['tag'] => [$item['name'] => $item['img_url']]];
             }
         )->all();
-        $catalogs = $category->attributes()->get();
+
         $tags =  $doors->mapToGroups(
             function ($item, $key) {
-                return [$item['tag'] => $item['tag_img_url']];
+                return [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category']]];
             }
         )->all();
         $doors = $doors_tmp;

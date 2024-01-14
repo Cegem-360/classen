@@ -81,24 +81,30 @@ class CategorySeeder extends Seeder
                 $cover = $product->images[0]->src;
                 try {
                     $tag = Cache::remember("tag_" . $product->tags[0]->name, 1, function () use ($woocommerce, $product) {
-                    $tag = $woocommerce->get(EndPoint::PRODUCTSTAGS, ['search' => $product->tags[0]->name]);
-                    return $tag;
-                });
+                        $tag = $woocommerce->get(EndPoint::PRODUCTSTAGS, ['search' => $product->tags[0]->name]);
+
+                        return $tag;
+                    });
                 } catch (\Throwable $th) {
-                   dd($product);
+                    dd($product);
                 }
 
 
                 if (is_null($tag))
                     continue;
                 $tag = collect($tag)->first();
+                $exploded = ['', ''];
+                $exploded = explode('|', $tag->description);
+                if (!isset($exploded[1]))
+                    $exploded = [$exploded[0], ''];
                 $category = Category::whereName($product->categories[0]->name)->first();
                 Door::create([
                     'name' => $product->name,
                     'img_url' => $cover,
                     'category_id' => $category->id,
                     'tag' => $tag->name,
-                    'tag_img_url' =>  $tag->description
+                    'tag_img_url' =>  $exploded[0],
+                    'tag_category' => $exploded[1]
                 ]);
             }
         }

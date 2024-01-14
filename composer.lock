@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9d3113ecf8a6d412610b54d99b2b5b5",
+    "content-hash": "65154277aa98513c3e032e9030091a90",
     "packages": [
         {
             "name": "automattic/woocommerce",
@@ -61,16 +61,16 @@
         },
         {
             "name": "bensampo/laravel-enum",
-            "version": "v6.7.0",
+            "version": "v6.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/BenSampo/laravel-enum.git",
-                "reference": "b4320ac20d5452b50cc2147038a38c3dc91de876"
+                "reference": "9e281ca6dc22f18c9f64257679bef3117aeb8835"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BenSampo/laravel-enum/zipball/b4320ac20d5452b50cc2147038a38c3dc91de876",
-                "reference": "b4320ac20d5452b50cc2147038a38c3dc91de876",
+                "url": "https://api.github.com/repos/BenSampo/laravel-enum/zipball/9e281ca6dc22f18c9f64257679bef3117aeb8835",
+                "reference": "9e281ca6dc22f18c9f64257679bef3117aeb8835",
                 "shasum": ""
             },
             "require": {
@@ -84,16 +84,17 @@
             "require-dev": {
                 "doctrine/dbal": "^3.4",
                 "ergebnis/composer-normalize": "^2.28.3",
+                "larastan/larastan": "^2.6.3",
                 "mll-lab/php-cs-fixer-config": "^5.4",
                 "mockery/mockery": "^1.5",
-                "nunomaduro/larastan": "^2.6.3",
                 "orchestra/testbench": "^7.6.1 || ^8",
+                "phpstan/extension-installer": "^1",
                 "phpstan/phpstan": "^1.8.2",
                 "phpstan/phpstan-mockery": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.1.1",
                 "phpunit/phpunit": "^9.5.21 || ^10",
-                "rector/rector": "^0.17.6",
-                "symplify/rule-doc-generator": "^11"
+                "rector/rector": "^0.19",
+                "symplify/rule-doc-generator": "^11 || ^12"
             },
             "type": "library",
             "extra": {
@@ -140,7 +141,7 @@
             ],
             "support": {
                 "issues": "https://github.com/BenSampo/laravel-enum/issues",
-                "source": "https://github.com/BenSampo/laravel-enum/tree/v6.7.0"
+                "source": "https://github.com/BenSampo/laravel-enum/tree/v6.8.0"
             },
             "funding": [
                 {
@@ -148,7 +149,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-15T15:39:24+00:00"
+            "time": "2024-01-12T15:33:22+00:00"
         },
         {
             "name": "brick/math",
@@ -2246,35 +2247,35 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.2.1",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "95083c0b61c1910ad28c4628e0dfa9c227eb1c41"
+                "reference": "1ef880fbcdc7b6e5e405cc9135a62cd5fdbcd06a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/95083c0b61c1910ad28c4628e0dfa9c227eb1c41",
-                "reference": "95083c0b61c1910ad28c4628e0dfa9c227eb1c41",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/1ef880fbcdc7b6e5e405cc9135a62cd5fdbcd06a",
+                "reference": "1ef880fbcdc7b6e5e405cc9135a62cd5fdbcd06a",
                 "shasum": ""
             },
             "require": {
-                "illuminate/database": "^10.0",
-                "illuminate/support": "^10.0",
-                "illuminate/validation": "^10.0",
+                "illuminate/database": "^10.0|^11.0",
+                "illuminate/support": "^10.0|^11.0",
+                "illuminate/validation": "^10.0|^11.0",
                 "league/mime-type-detection": "^1.9",
                 "php": "^8.1",
-                "symfony/http-kernel": "^6.2"
+                "symfony/http-kernel": "^6.2|^7.0"
             },
             "require-dev": {
                 "calebporzio/sushi": "^2.1",
-                "laravel/framework": "^10.0",
+                "laravel/framework": "^10.0|^11.0",
                 "laravel/prompts": "^0.1.6",
                 "mockery/mockery": "^1.3.1",
-                "orchestra/testbench": "^8.0",
-                "orchestra/testbench-dusk": "^8.0",
-                "phpunit/phpunit": "^9.0",
-                "psy/psysh": "@stable"
+                "orchestra/testbench": "^8.0|^9.0",
+                "orchestra/testbench-dusk": "^8.0|^9.0",
+                "phpunit/phpunit": "^10.4",
+                "psy/psysh": "^0.11.22|^0.12"
             },
             "type": "library",
             "extra": {
@@ -2308,7 +2309,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.2.1"
+                "source": "https://github.com/livewire/livewire/tree/v3.3.5"
             },
             "funding": [
                 {
@@ -2316,7 +2317,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-20T17:05:06+00:00"
+            "time": "2024-01-02T14:29:17+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -9853,16 +9854,16 @@
         },
         {
             "name": "spatie/laravel-ignition",
-            "version": "2.4.0",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-ignition.git",
-                "reference": "b9395ba48d3f30d42092cf6ceff75ed7256cd604"
+                "reference": "005e1e7b1232f3b22d7e7be3f602693efc7dba67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/b9395ba48d3f30d42092cf6ceff75ed7256cd604",
-                "reference": "b9395ba48d3f30d42092cf6ceff75ed7256cd604",
+                "url": "https://api.github.com/repos/spatie/laravel-ignition/zipball/005e1e7b1232f3b22d7e7be3f602693efc7dba67",
+                "reference": "005e1e7b1232f3b22d7e7be3f602693efc7dba67",
                 "shasum": ""
             },
             "require": {
@@ -9941,7 +9942,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-01-04T14:51:24+00:00"
+            "time": "2024-01-12T13:14:58+00:00"
         },
         {
             "name": "symfony/yaml",
