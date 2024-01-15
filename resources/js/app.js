@@ -5,11 +5,11 @@ import.meta.glob([
     '../img/**',
 ]);
 
-import swiperJS from './swiperJS.js';
+import { initSwiperJS } from './swiperJS.js';
 
-document.addEventListener('livewire:init', (swiperJS) => {
-    swiperJS
+document.addEventListener('livewire:init', () => {
+    initSwiperJS();
 });
-document.addEventListener('livewire:navigated', (swiperJS) => {
-    swiperJS
+document.addEventListener('livewire:navigated', () => {
+    initSwiperJS();
 });
