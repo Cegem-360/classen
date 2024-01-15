@@ -48,6 +48,7 @@ namespace App\Models{
  * @property array|null $door_specification
  * @property array|null $technical_parameter
  * @property array|null $additional_options
+ * @property array|null $gallery_imgs
  * @property string|null $img_url
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -65,6 +66,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereCategoryId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereDoorSpecification($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Category whereGalleryImgs($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereImgUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereName($value)

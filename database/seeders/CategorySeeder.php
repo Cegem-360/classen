@@ -51,24 +51,26 @@ class CategorySeeder extends Seeder
             $technical_parameter = null;
             $img = null;
             $gallery_imgs = null;
-            //dd($woocommerceCategory);
-            //Collections(collection)
 
-            $additional_options     = $categories['acf']['additional_options'] ? $categories['acf']['additional_options'] : null;
-            $door_specification     = $categories['acf']['door_specification'] ? $categories['acf']['door_specification'] : null;
-            $technical_parameter    = $categories['acf']['technical_parameter'] ? $categories['acf']['technical_parameter'] : null;
-            $gallery_imgs = $categories['acf']['galeria_kepek'] ? $categories['acf']['galeria_kepek'] : null;
-            if (isset($woocommerceCategory->image->src))
-                $img = $woocommerceCategory->image->src;
+
+            $additional_options     = ($categories['acf']['additional_options']) ? $categories['acf']['additional_options'] : null;
+            $additional_options = $this->str_replace_json('false', 'null', $additional_options);
+            $door_specification     = ($categories['acf']['door_specification']) ? $categories['acf']['door_specification'] : null;
+            $door_specification = $this->str_replace_json('false', 'null', $door_specification);
+            $technical_parameter    = ($categories['acf']['technical_parameter']) ? $categories['acf']['technical_parameter'] : null;
+            $technical_parameter = $this->str_replace_json('false', 'null', $technical_parameter);
+            $gallery_imgs = $categories['acf']['galeria_kepek'] ?? null;
+            $img = $categories['acf']['galeria_kepek'][0] ?? null;
             $created_category = Category::factory()->create(
                 [
                     'name' => $woocommerceCategory->name,
                     'category_id' => $woocommerceCategory->id,
                     'additional_options' => $additional_options,
                     'door_specification' => $door_specification,
-                    'img_url' =>  $img,
                     'technical_parameter' => $technical_parameter,
+                    'img_url' =>  $img,
                     'gallery_imgs' => $gallery_imgs,
+                    'breadcrumb' => $categories['acf']['type'],
                 ]
             );
 
@@ -114,5 +116,9 @@ class CategorySeeder extends Seeder
                 ]);
             }
         }
+    }
+    function str_replace_json($search, $replace, $subject)
+    {
+        return json_decode(str_replace($search, $replace,  json_encode($subject)));
     }
 }
