@@ -35,126 +35,18 @@
             <div class="door_fronts">
                 <div class="swiper lightbox door-fronts-swiper w-full">
                     <div class="swiper-wrapper items-center">
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <div class="swiper-slide">
-                            <a data-pswp-width="300" data-pswp-height="660"
-                                href="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
-                                itemprop="contentUrl" target="_blank">
-                                <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                    <img src="{{ Vite::asset('resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg') }}"
-                                        alt="">
-                                </div>
-                            </a>
-                        </div>
+                        @foreach ($doors as $collection)
+                            <div class="swiper-slide">
+                                @foreach ($collection as $item)
+                                    <a data-pswp-width="300" data-pswp-height="660" href="{{ $item->img_url }}"
+                                        itemprop="contentUrl" target="_blank">
+                                        <div class="flex h-full w-full justify-center bg-[#ffffff00]">
+                                            <img src="{{ $item->img_url }}" alt="">
+                                        </div>
+                                    </a>
+                                @endforeach
+                            </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
