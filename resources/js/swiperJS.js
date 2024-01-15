@@ -7,7 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-export function initSwiperJS(max) {
+export function initSwiperJS() {
     const swiper = new Swiper('.hero-swiper', {
         // configure Swiper to use modules
         modules: [Navigation, Pagination],
