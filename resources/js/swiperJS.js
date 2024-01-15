@@ -8,6 +8,10 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export function initSwiperJS() {
+    /* ####################################
+            Swiper (carousels, gallerys)
+       #####################################  */
+    // core version + navigation, pagination modules:
     const swiper = new Swiper('.hero-swiper', {
         // configure Swiper to use modules
         modules: [Navigation, Pagination],
@@ -117,6 +121,10 @@ export function initSwiperJS() {
         },
     });
 
+    /* ###############################
+             PhotoSwipe v5 (Lightbox)
+        ##################################  */
+    /* https://photoswipe.com/getting-started/ */
     const photo_swipe_options = {
         gallery: '.lightbox',
         pswpModule: PhotoSwipe,
