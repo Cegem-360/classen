@@ -18,6 +18,7 @@ return new class extends Migration
             $table->json('door_specification')->nullable()->default(null);
             $table->json('technical_parameter')->nullable()->default(null);
             $table->json('additional_options')->nullable()->default(null);
+            $table->json('gallery_imgs')->nullable()->default(null);
             $table->string('img_url')->nullable()->default('resources/img/placeholder.webp');
             $table->timestamps();
         });

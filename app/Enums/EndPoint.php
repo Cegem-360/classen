@@ -13,6 +13,7 @@ use BenSampo\Enum\Enum;
  * @method static static PRODUCTS()
  * @method static static PRODUCTSCATEGORIES()
  * @method static static PRODUCTSTAGS()
+ * @method static static COLLECTIONS()
  */
 final class EndPoint extends Enum
 {
@@ -25,4 +26,5 @@ final class EndPoint extends Enum
     const PRODUCTS = 'products';
     const PRODUCTSCATEGORIES = 'products/categories';
     const PRODUCTSTAGS = 'products/tags';
+    const COLLECTIONS = 'collections/';
 }

@@ -37,37 +37,43 @@ class CategorySeeder extends Seeder
             ]
         );
 
-        $categories = $woocommerce->get(EndPoint::PRODUCTSCATEGORIES, ['hide_empty' => true, 'per_page' => 100]);
-        foreach ($categories as $category) {
-            $response = $this->client->get(EndPoint::CATEGORIES . '?per_page=100');
-            $data = json_decode($response->getBody(), true);
-            $assetsTmp = collect($data);
-            $assets = $assetsTmp->where('name', $category->name)->first();
-            if (is_null($assets))
+        $woocommerceCategories = $woocommerce->get(EndPoint::PRODUCTSCATEGORIES, ['hide_empty' => true, 'per_page' => 100]);
+        foreach ($woocommerceCategories as $woocommerceCategory) {
+            //categories (Post)
+            $categories = $this->client->get(EndPoint::CATEGORIES . '?per_page=100');
+            $categories = json_decode($categories->getBody(), true);
+            $categories = collect($categories);
+            $categories = $categories->where('name', $woocommerceCategory->name)->first();
+            if (is_null($categories))
                 continue;
             $additional_options = null;
             $door_specification = null;
             $technical_parameter = null;
             $img = null;
-            //dd($category);
-            $additional_options     = $assets['acf']['additional_options'];
-            $door_specification     = $assets['acf']['door_specification'];
-            $technical_parameter    = $assets['acf']['technical_parameter'];
-            if (isset($category->image->src))
-                $img = $category->image->src;
+            $gallery_imgs = null;
+            //dd($woocommerceCategory);
+            //Collections(collection)
+
+            $additional_options     = $categories['acf']['additional_options'];
+            $door_specification     = $categories['acf']['door_specification'];
+            $technical_parameter    = $categories['acf']['technical_parameter'];
+            $gallery_imgs = $categories['acf']['galeria_kepek'];
+            if (isset($woocommerceCategory->image->src))
+                $img = $woocommerceCategory->image->src;
             $created_category = Category::factory()->create(
                 [
-                    'name' => $category->name,
-                    'category_id' => $category->id,
+                    'name' => $woocommerceCategory->name,
+                    'category_id' => $woocommerceCategory->id,
                     'additional_options' => $additional_options,
                     'door_specification' => $door_specification,
                     'img_url' =>  $img,
                     'technical_parameter' => $technical_parameter,
+                    'gallery_imgs' => $gallery_imgs,
                 ]
             );
 
 
-            $attributes = explode("|", $category->description);
+            $attributes = explode("|", $woocommerceCategory->description);
             foreach ($attributes as $attribute) {
                 if (is_null($attribute)) continue;
                 if (isset($attribute) && $attribute != "") {
@@ -76,7 +82,7 @@ class CategorySeeder extends Seeder
                 }
             }
 
-            $products = $woocommerce->get(EndPoint::PRODUCTS, ['category' => $category->id, 'per_page' => 100, 'orderby' => 'title', 'order' => 'asc']);
+            $products = $woocommerce->get(EndPoint::PRODUCTS, ['category' => $woocommerceCategory->id, 'per_page' => 100, 'orderby' => 'title', 'order' => 'asc']);
             foreach ($products as $product) {
                 $cover = $product->images[0]->src;
                 try {
@@ -97,11 +103,11 @@ class CategorySeeder extends Seeder
                 $exploded = explode('|', $tag->description);
                 if (!isset($exploded[1]))
                     $exploded = [$exploded[0], ''];
-                $category = Category::whereName($product->categories[0]->name)->first();
+                $woocommerceCategory = Category::whereName($product->categories[0]->name)->first();
                 Door::create([
                     'name' => $product->name,
                     'img_url' => $cover,
-                    'category_id' => $category->id,
+                    'category_id' => $woocommerceCategory->id,
                     'tag' => $tag->name,
                     'tag_img_url' =>  $exploded[0],
                     'tag_category' => $exploded[1]

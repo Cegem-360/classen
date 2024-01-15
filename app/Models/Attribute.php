@@ -6,35 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-/**
- * App\Models\Attribute
- *
- * @property int $id
- * @property string $name
- * @property string $value
- * @property string $img
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Category> $categories
- * @property-read int|null $categories_count
- * @method static \Database\Factories\AttributeFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute query()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereImg($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereValue($value)
- * @mixin \Eloquent
- */
+
 class Attribute extends Model
 {
     use HasFactory;
 
     public $fillable = [
-        'id', 'name', 'value','slug'
+        'id', 'name', 'value', 'slug'
     ];
     public function categories(): BelongsToMany
     {
