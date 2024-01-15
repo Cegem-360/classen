@@ -54,10 +54,10 @@ class CategorySeeder extends Seeder
             //dd($woocommerceCategory);
             //Collections(collection)
 
-            $additional_options     = $categories['acf']['additional_options'];
-            $door_specification     = $categories['acf']['door_specification'];
-            $technical_parameter    = $categories['acf']['technical_parameter'];
-            $gallery_imgs = $categories['acf']['galeria_kepek'];
+            $additional_options     = $categories['acf']['additional_options'] ? $categories['acf']['additional_options'] : null;
+            $door_specification     = $categories['acf']['door_specification'] ? $categories['acf']['door_specification'] : null;
+            $technical_parameter    = $categories['acf']['technical_parameter'] ? $categories['acf']['technical_parameter'] : null;
+            $gallery_imgs = $categories['acf']['galeria_kepek'] ? $categories['acf']['galeria_kepek'] : null;
             if (isset($woocommerceCategory->image->src))
                 $img = $woocommerceCategory->image->src;
             $created_category = Category::factory()->create(

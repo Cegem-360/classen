@@ -5,7 +5,6 @@
     <h2 class="mb-3 text-4xl font-bold">Ajtó specifikációk</h2>
     <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
     <div class="min-h-[30px]"></div>
-
     <div class="grid grid-cols-3 gap-8 md:grid-cols-2 sm:grid-cols-1">
         @foreach ($door_specification ?? [] as $row)
             @for ($i = 1; $i < 4; $i++)
