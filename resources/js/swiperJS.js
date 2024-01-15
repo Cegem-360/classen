@@ -80,9 +80,11 @@ export function initSwiperJS() {
     });
 
     const detailPageSwiperThumbs = new Swiper(".detail-page-swiper-thumbs", {
-        slidesPerView: 2,
+        modules: [Grid],
+        slidesPerView: 1,
         grid: {
-            rows: 3,
+            fill: 'row',
+            rows: 8,
         },
         spaceBetween: 10,
         //direction: 'vertical'
@@ -96,6 +98,29 @@ export function initSwiperJS() {
         loop: true,
         thumbs: {
             swiper: detailPageSwiperThumbs,
+        },
+    });
+
+    const doorModelSwiperThumbs = new Swiper(".door-model-swiper-thumbs", {
+        modules: [Grid],
+        slidesPerView: 4,
+        grid: {
+            fill: 'row',
+            rows: 8,
+        },
+        spaceBetween: 10,
+        loop: false,
+    });
+
+    const doorModelSwiper = new Swiper('.door-model-swiper', {
+        modules: [Thumbs, EffectFade],
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        loop: false,
+        thumbs: {
+            swiper: doorModelSwiperThumbs,
         },
     });
 
