@@ -14,7 +14,7 @@
                     <div class="basis-3/5">
                         <div class="flex flex-row">
                             <div class="basis-1/3 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                                <a href="{{ route('kollekciok') }}" wire:navigate.hover>{{ __('doors') }}</a>
+                                <a href="{{ route('category.index') }}" wire:navigate.hover>{{ __('doors') }}</a>
                             </div>
                             <div class="mx-auto basis-1/3 justify-center py-[1vw] pt-[33px] text-center uppercase">
                                 fronts</div>

@@ -22,7 +22,8 @@ Route::get('/', function () {
     return view('index');
 });
 //Route::resource('category', CategoryController::class);
-Route::get('/kollekciok', [CategoryController::class, 'index'])->name('kollekciok');
+Route::get('/kollekciok', [CategoryController::class, 'index'])->name('category.index');
+//Route::get('/kollekciok', [CategoryController::class, 'index'])->name('kollekciok');
 Route::get('/kollekciok/{category}', [CategoryController::class, 'show'])->name('category.show');
 
 Route::get('/ajtok/lirgo', function () {
