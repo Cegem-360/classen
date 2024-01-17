@@ -126,10 +126,10 @@ export function initSwiperJS() {
 
     const doorColorVariantSwiper = new Swiper('.door-color-variant-swiper', {
         modules: [HashNavigation, EffectFade],
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true,
-        },
+        // effect: 'fade',
+        // fadeEffect: {
+        //     crossFade: true,
+        // },
         hashNavigation: {
             watchState: true,
         },
