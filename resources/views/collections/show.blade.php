@@ -3,9 +3,7 @@
         {{ $category->name }}
     </x-nav.breadcrumb>
 
-    <x-collections.partials.door-model-selector :category='$category' />
-    <!-- gap -->
-    <div class="min-h-[60px]"></div>
+    <x-collections.partials.door-color-variant-selector :category='$category' />
 
     <x-collections.partials.prd-gallery :category='$category' />
     <!-- gap -->

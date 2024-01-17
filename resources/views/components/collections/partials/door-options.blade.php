@@ -28,7 +28,7 @@
                 </div>
             </div>
         </div>
-        <div class="doors__col doors__fronts p-4" id="doors__fronts">
+        <div class="doors__col doors__fronts p-8" id="doors__fronts">
             <h3 class="doors__subheader mb-6 text-2xl font-bold">
                 <strong class="text-4xl text-sarga">2.</strong> Ellenőrizze a modellt
             </h3>
@@ -38,10 +38,10 @@
                         @foreach ($doors as $collection)
                             <div class="swiper-slide">
                                 @foreach ($collection as $item)
-                                    <a data-pswp-width="300" data-pswp-height="660" href="{{ $item->img_url }}"
+                                    <a data-pswp-width="540" data-pswp-height="1200" href="{{ $item->img_url }}"
                                         itemprop="contentUrl" target="_blank">
                                         <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                            <img src="{{ $item->img_url }}" alt="">
+                                            <img class="max-h-[500px]" src="{{ $item->img_url }}" alt="">
                                         </div>
                                     </a>
                                 @endforeach

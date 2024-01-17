@@ -1,7 +1,7 @@
    @props(['category' => ''])
-   <div class="mx-8 grid grid-cols-2 gap-3">
+   <div class="mx-8 grid grid-cols-2 md:grid-cols-1 gap-3">
        <div class="swiper door-model-swiper lightbox w-full">
-           <div class="swiper-wrapper p-12 bg-neutral-200">
+           <div class="swiper-wrapper p-12 max-h-[500px] bg-neutral-200">
                <div class="swiper-slide !flex justify-center sm:w-full">
                    <a data-pswp-width="540" data-pswp-height="1200" href="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m1.jpg') }}" itemprop="contentUrl" target="_blank">
                        <img class="max-h-[500px]" src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m1.jpg') }}" />

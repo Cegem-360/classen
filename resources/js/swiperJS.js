@@ -1,7 +1,7 @@
 import Swiper from 'swiper';
 import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js';
 import PhotoSwipe from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js';
-import { Navigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
+import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -124,6 +124,18 @@ export function initSwiperJS() {
         },
     });
 
+    const doorColorVariantSwiper = new Swiper('.door-color-variant-swiper', {
+        modules: [HashNavigation, EffectFade],
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true,
+        },
+        hashNavigation: {
+            watchState: true,
+        },
+        loop: false,
+    });
+
     const doorFrontsSwiperThumbs = new Swiper(".door-fronts-swiper-thumbs", {
         modules: [Grid],
         slidesPerView: 4,
@@ -175,10 +187,9 @@ export function initSwiperJS() {
         wheelToZoom: false, /* deafult: undefined */
     };
 
+    // *** detailPageSwiper ***
     const lightbox = new PhotoSwipeLightbox(photo_swipe_options);
-
     lightbox.init();
-
     lightbox.on('change', () => {
         const { pswp } = lightbox;
         detailPageSwiper.slideTo(pswp.currIndex, 0, false);
@@ -186,16 +197,13 @@ export function initSwiperJS() {
         //console.log('Slide object', pswp.currSlide);
         //console.log('Slide object data', pswp.currSlide.data);
     });
-
     /* ### PhotoSwipe events ### */
-
     lightbox.on('afterInit', () => {
         const { pswp } = lightbox;
         //if(detailPageSwiper.params.autoplay.enabled){
         //  detailPageSwiper.autoplay.stop();
         //};
     });
-
     lightbox.on('closingAnimationStart', () => {
         //console.log('closingAnimationStart');
         const { pswp } = lightbox;
@@ -206,6 +214,75 @@ export function initSwiperJS() {
         //}
     });
 
+    // *** doorModelSwiper ***
+    const photo_swipe_options2 = {
+        gallery: '.lightbox2',
+        pswpModule: PhotoSwipe,
+        // set background opacity
+        bgOpacity: 1,
+        showHideOpacity: true,
+        children: 'a',
+        loop: true,
+        showHideAnimationType: 'none', /* options: fade, zoom, none */
+
+        /* Click on image moves to the next slide */
+        imageClickAction: 'close',
+        tapAction: 'close',
+
+        /* ## Hiding a specific UI element ## */
+        initialZoomLevel: 0.5,
+        zoom: false,
+        close: true,
+        counter: true,
+        arrowKeys: true,
+        /* ## Options ## */
+        bgOpacity: "1",/* deafult: 0.8 */
+        wheelToZoom: false, /* deafult: undefined */
+    };
+    const lightbox2 = new PhotoSwipeLightbox(photo_swipe_options2);
+    lightbox2.init();
+    lightbox2.on('change', () => {
+        const { pswp } = lightbox2;
+        doorModelSwiper.slideTo(pswp.currIndex, 0, false);
+        console.log('Slide index', pswp.currIndex);
+        //console.log('Slide object', pswp.currSlide);
+        //console.log('Slide object data', pswp.currSlide.data);
+    });
+
+    // *** doorColorVariantSwiper ***
+    const photo_swipe_options3 = {
+        gallery: '.lightbox3',
+        pswpModule: PhotoSwipe,
+        // set background opacity
+        bgOpacity: 1,
+        showHideOpacity: true,
+        children: 'a',
+        loop: true,
+        showHideAnimationType: 'none', /* options: fade, zoom, none */
+
+        /* Click on image moves to the next slide */
+        imageClickAction: 'close',
+        tapAction: 'close',
+
+        /* ## Hiding a specific UI element ## */
+        initialZoomLevel: 0.5,
+        zoom: false,
+        close: true,
+        counter: true,
+        arrowKeys: true,
+        /* ## Options ## */
+        bgOpacity: "1",/* deafult: 0.8 */
+        wheelToZoom: false, /* deafult: undefined */
+    };
+    const lightbox3 = new PhotoSwipeLightbox(photo_swipe_options3);
+    lightbox3.init();
+    lightbox3.on('change', () => {
+        const { pswp } = lightbox3;
+        doorColorVariantSwiper.slideTo(pswp.currIndex, 0, false);
+        console.log('Slide index', pswp.currIndex);
+        //console.log('Slide object', pswp.currSlide);
+        //console.log('Slide object data', pswp.currSlide.data);
+    });
 
 
     /* ###############################

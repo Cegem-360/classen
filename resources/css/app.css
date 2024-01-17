@@ -257,6 +257,24 @@ ul.property__list {
     }
 }
 
+
+.doors_colors__variant-set {
+    .door_variant {
+        img {
+            padding: .25rem;
+            border: 1px solid rgba(0, 0, 0, 0);
+            &:hover {
+                border: 1px solid rgba(0, 0, 0, 1);
+            }
+        }
+    }
+    .door_variant.active {
+        img {
+            border: 1px solid rgba(0, 0, 0, 1);
+        }
+    }
+}
+
 .qtip-light {
     max-width: 380px;
     min-width: 280px;
