@@ -1,7 +1,7 @@
 <x-layouts.app>
-    <div class="flex">
-        <x-doors.layout />
-    </div>
+
+        <x-doors.layout :doors='$products' />
+
 
     <!-- gap -->
     <div class="min-h-[60px]"></div>

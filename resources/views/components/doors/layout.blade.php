@@ -1,5 +1,8 @@
-@props(['products' => ''])
- @props(['collections' => []])
- <x-doors.partials.fillter-bar />
+@props(['doors' => ''])
 
- <x-doors.partials.main-content />
+<div class="flex">
+    <x-doors.partials.fillter-bar />
+
+    <x-doors.partials.doors-list.layout :doors='$doors' />
+
+</div>

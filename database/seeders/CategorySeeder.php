@@ -110,7 +110,8 @@ class CategorySeeder extends Seeder
                     'name' => $product->name,
                     'img_url' => $cover,
                     'category_id' => $woocommerceCategory->id,
-                    'tag' => $tag->name,
+                    'tag' => $tag->slug,
+                    'tag_name' => $tag->name,
                     'tag_img_url' =>  $exploded[0],
                     'tag_category' => $exploded[1]
                 ]);

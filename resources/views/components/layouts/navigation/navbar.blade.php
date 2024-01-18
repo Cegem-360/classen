@@ -5,7 +5,8 @@
                 <div class="flex flex-row">
                     <div class="basis-2/5">
                         <h1 class="mb-0 ml-[2.7%] mr-0 mt-6">
-                            <a class="box-border no-underline" href="/" title="Classen" wire:navigate.hover>
+                            <a class="box-border no-underline" href="{{ route('home') }}" title="Classen"
+                                wire:navigate.hover>
                                 <img class="block h-8 w-32" src="https://classen.pl/app/themes/classen/img/logo_old.svg"
                                     alt="Classen">
                             </a>
@@ -14,7 +15,7 @@
                     <div class="basis-3/5">
                         <div class="flex flex-row">
                             <div class="basis-1/3 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                                <a href="{{ route('category.index') }}" wire:navigate.hover>{{ __('doors') }}</a>
+                                <a href="{{ route('door.index') }}" wire:navigate.hover>{{ __('doors') }}</a>
                             </div>
                             <div class="mx-auto basis-1/3 justify-center py-[1vw] pt-[33px] text-center uppercase">
                                 fronts</div>

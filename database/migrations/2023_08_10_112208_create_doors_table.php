@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('img_url');
             $table->string('tag');
+            $table->string('tag_name');
             $table->string('tag_img_url');
             $table->string('tag_category');
             $table->foreignIdFor(Category::class);

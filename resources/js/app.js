@@ -6,10 +6,13 @@ import.meta.glob([
 ]);
 
 import { initSwiperJS } from './swiperJS.js';
+import { initFavorites } from './favorites.js';
 
 document.addEventListener('livewire:init', () => {
     initSwiperJS();
+    initFavorites();
 });
 document.addEventListener('livewire:navigated', () => {
     initSwiperJS();
+    initFavorites();
 });
