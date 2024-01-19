@@ -46,7 +46,8 @@
                             <form class="basis-full" action="https://classen.pl/en/">
                                 <div class="flex flex-nowrap justify-between border-1 border-gray-1000">
                                     <div class="basis-auto">
-                                        <input class="border-0" name="s" type="text" placeholder="Search">
+                                        <input class="border-0" name="s" type="text"
+                                            placeholder="{{ __('Search') }}">
                                     </div>
                                     <button class="basis-auto pr-2">
                                         <x-svg.search />

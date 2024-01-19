@@ -28,9 +28,5 @@ Route::get('/kollekciok/{category}', [CategoryController::class, 'show'])->name(
 Route::get('/ajtok', [DoorController::class, 'index'])->name('door.index');
 Route::get('/ajtok/{door}', [DoorController::class, 'show'])->name('door.show');
 
-Route::get('/ajtok/lirgo', function () {
-    return view('doors/single-prd');
-});
-
 Route::get('/blog', [ManagePageContentController::class, 'blog'])->name('blog');
 Route::get('/favorites', [ManagePageContentController::class, 'favorites'])->name('favorites');
