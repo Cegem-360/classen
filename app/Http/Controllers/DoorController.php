@@ -43,9 +43,11 @@ class DoorController extends Controller
      */
     public function show(Door $door)
     {
+
         $category = $door->category()->first();
+
         $catalogs = $category->attributes()->get();
-        $colorVariants = Door::whereName($door->name)->whereCategoryId($door->category_id)->get()->groupBy('tag')->all();
+        $colorVariants = Door::whereName($door->name)->whereCategoryId($door->category_id)->get()->groupBy('tag_category')->all();
         $modelVariants = Door::whereTag($door->tag)->whereCategoryId($door->category_id)->get()->sortBy('name')->all();
         return view('doors.show', compact('door', 'category', 'catalogs', 'colorVariants', 'modelVariants'));
     }

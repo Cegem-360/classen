@@ -1,71 +1,34 @@
-   @props(['category' => ''])
-   <div class="mx-8 grid grid-cols-2 md:grid-cols-1 gap-3">
+   @props(['category' => '', 'modelVariants' => [], 'door' => ''])
+   <div class="mx-8 grid grid-cols-2 gap-3 md:grid-cols-1">
        <div class="swiper door-model-swiper lightbox w-full">
-           <div class="swiper-wrapper p-12 max-h-[500px] bg-neutral-200">
-               <div class="swiper-slide !flex justify-center sm:w-full">
-                   <a data-pswp-width="540" data-pswp-height="1200" href="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m1.jpg') }}" itemprop="contentUrl" target="_blank">
-                       <img class="max-h-[500px]" src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m1.jpg') }}" />
-                   </a>
-               </div>
-               <div class="swiper-slide !flex justify-center sm:w-full">
-                   <a data-pswp-width="540" data-pswp-height="1200" href="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m2.jpg') }}" itemprop="contentUrl" target="_blank">
-                       <img class="max-h-[500px]" src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m2.jpg') }}" />
-                   </a>
-               </div>
-               <div class="swiper-slide !flex justify-center sm:w-full">
-                   <a data-pswp-width="540" data-pswp-height="1200" href="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m3.jpg') }}" itemprop="contentUrl" target="_blank">
-                       <img class="max-h-[500px]" src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m3.jpg') }}" />
-                   </a>
-               </div>
-               <div class="swiper-slide !flex justify-center sm:w-full">
-                   <a data-pswp-width="540" data-pswp-height="1200" href="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m4.jpg') }}" itemprop="contentUrl" target="_blank">
-                       <img class="max-h-[500px]" src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m4.jpg') }}" />
-                   </a>
-               </div>
-               <div class="swiper-slide !flex justify-center sm:w-full">
-                   <a data-pswp-width="540" data-pswp-height="1200" href="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m5.jpg') }}" itemprop="contentUrl" target="_blank">
-                       <img class="max-h-[500px]" src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m5.jpg') }}" />
-                   </a>
-               </div>
-               <div class="swiper-slide !flex justify-center sm:w-full">
-                   <a data-pswp-width="540" data-pswp-height="1200" href="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m6.jpg') }}" itemprop="contentUrl" target="_blank">
-                       <img class="max-h-[500px]" src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m6.jpg') }}" />
-                   </a>
-               </div>
+           <div class="swiper-wrapper max-h-[500px] bg-neutral-200 p-12">
+               @foreach ($modelVariants as $model)
+                   <div class="swiper-slide !flex justify-center sm:w-full">
+                       <a data-pswp-width="540" data-pswp-height="1200"
+                           href="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
+                           itemprop="contentUrl" target="_blank">
+                           <img class="max-h-[500px]"
+                               src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+                       </a>
+                   </div>
+               @endforeach
            </div>
        </div>
        <div>
            <div class="mb-12 pl-8">
-               <h2 class="mb-3 text-4xl font-bold">modell 1</h2>
+               <h2 class="mb-3 text-4xl font-bold">{{ $door->name }}</h2>
                <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
-               <h3 class="mb-3 text-lg">Kollekció: <span class="font-bold">{{ $category->name }}</span></h3>
+               <h3 class="mb-3 text-lg">{{ __('Collection: ') }}<span class="font-bold">{{ $category->name }}</span>
+               </h3>
            </div>
            <div class="swiper door-model-swiper-thumbs w-full" thumbsSlider="">
                <div class="swiper-wrapper flex-wrap">
-                   <div class="swiper-slide p-6 pb-2 bg-neutral-200">
-                       <img src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m1.jpg') }}" />
-                       <div class="desc pt-2 w-full">Model1</div>
-                   </div>
-                   <div class="swiper-slide p-6 pb-2 bg-neutral-200">
-                       <img src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m2.jpg') }}" />
-                       <div class="desc pt-2 w-full">Model1</div>
-                   </div>
-                   <div class="swiper-slide p-6 pb-2 bg-neutral-200">
-                       <img src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m3.jpg') }}" />
-                       <div class="desc pt-2 w-full">Model1</div>
-                   </div>
-                   <div class="swiper-slide p-6 pb-2 bg-neutral-200">
-                       <img src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m4.jpg') }}" />
-                       <div class="desc pt-2 w-full">Model1</div>
-                   </div>
-                   <div class="swiper-slide p-6 pb-2 bg-neutral-200">
-                       <img src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m5.jpg') }}" />
-                       <div class="desc pt-2 w-full">Model1</div>
-                   </div>
-                   <div class="swiper-slide p-6 pb-2 bg-neutral-200">
-                       <img src="{{ Vite::asset('resources/img/prd-images/ajtok/models/glas_m6.jpg') }}" />
-                       <div class="desc pt-2 w-full">Model1</div>
-                   </div>
+                   @foreach ($modelVariants as $model)
+                       <div class="swiper-slide bg-neutral-200 p-6 pb-2">
+                           <img src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+                           <div class="desc w-full pt-2">{{ $model->name }}</div>
+                       </div>
+                   @endforeach
                </div>
            </div>
        </div>

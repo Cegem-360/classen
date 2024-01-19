@@ -7,7 +7,7 @@
                         <h1 class="mb-0 ml-[2.7%] mr-0 mt-6">
                             <a class="box-border no-underline" href="{{ route('home') }}" title="Classen"
                                 wire:navigate.hover>
-                                <img class="block h-8 w-32" src="https://classen.pl/app/themes/classen/img/logo_old.svg"
+                                <img class="block h-8 w-32" src="{{ Vite::asset('resources/img/arcadia98-logo.svg') }}"
                                     alt="Classen">
                             </a>
                         </h1>
@@ -18,9 +18,10 @@
                                 <a href="{{ route('door.index') }}" wire:navigate.hover>{{ __('doors') }}</a>
                             </div>
                             <div class="mx-auto basis-1/3 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                                fronts</div>
+                                <a href="{{ route('category.index') }}" wire:navigate.hover>{{ __('collections') }}</a>
+                            </div>
                             <div class="basis-1/3 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                                <a href="" wire:navigate.hover>blog</a>
+                                <a href="" wire:navigate.hover>{{ __('About us') }}</a>
                             </div>
                         </div>
                     </div>
@@ -28,17 +29,17 @@
             </div>
             <div class="basis-2/3">
                 <div class="flex flex-row">
-                    <div class="basis-2/12 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                        <a href="" wire:navigate.hover>About us</a>
+                    <div class="basis-1/12 justify-center py-[1vw] pt-[33px] text-center uppercase">
+                        <a href="" wire:navigate.hover></a>
                     </div>
                     <div class="basis-1/12 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                        <a href="" wire:navigate.hover> Downloads</a>
+                        <a href="" wire:navigate.hover>{{ __('Our stores') }}</a>
                     </div>
                     <div class="basis-2/12 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                        <a href="" wire:navigate.hover>Where to buy</a>
+                        <a href="" wire:navigate.hover>{{ __('Where to buy') }}</a>
                     </div>
                     <div class="basis-2/12 justify-center py-[1vw] pt-[33px] text-center uppercase">
-                        <a href="" wire:navigate.hover> Client zone</a>
+                        <a href="" wire:navigate.hover></a>
                     </div>
                     <div class="basis-3/12 justify-center py-[1vw] pt-[33px] text-center uppercase">
                         <aside class="flex flex-nowrap">
