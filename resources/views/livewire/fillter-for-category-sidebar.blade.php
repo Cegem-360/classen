@@ -1,4 +1,4 @@
-<div>
+<div class="flex">
     <div class="h-full w-1/4 bg-[#9f9f9f] pl-8 pt-16 text-white">
         <h3 class="text-xl font-bold uppercase">Ajtó kollekciók</h3>
         <hr class="relative mb-6 mt-4 h-1 w-full border-0 bg-white">
@@ -10,31 +10,31 @@
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <div>
-                        <label for="hagyomanyos">
+                        <label for="options">
                             <input type="checkbox" value="primo_finishing" wire:model="options" />
                             {{ __('Primo finishing') }}
                         </label>
                     </div>
                     <div>
-                        <label for="hagyomanyos">
+                        <label for="options">
                             <input type="checkbox" value="3d_finishing" wire:model="options" />
                             {{ __('3D finishing') }}
                         </label>
                     </div>
                     <div>
-                        <label for="hagyomanyos">
+                        <label for="options">
                             <input type="checkbox" value="iridium_finishing" wire:model="options" />
                             {{ __('Iridium finishing') }}
                         </label>
                     </div>
                     <div>
-                        <label for="hagyomanyos">
+                        <label for="options">
                             <input type="checkbox" value="cpl_laminate" wire:model="options" />
                             {{ __('CPL laminate') }}
                         </label>
                     </div>
                     <div>
-                        <label for="hagyomanyos">
+                        <label for="options">
                             <input type="checkbox" value="hpl_laminate" wire:model="options" />
                             {{ __('HPL laminate') }}
                         </label>
@@ -70,6 +70,7 @@
             </fieldset>
         </div>
 
+        {{ var_export($options) }}
         <div class="relative mb-3">
             <h6 class="mb-0">
                 <button
