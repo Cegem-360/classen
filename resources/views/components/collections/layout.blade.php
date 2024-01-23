@@ -1,4 +1,3 @@
- @props(['collections' => []])
- <x-collections.partials.fillter-bar />
-
- <x-collections.partials.main-content :collections='$collections' />
+<div>
+    <livewire:fillter-for-category-sidebar />
+</div>

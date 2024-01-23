@@ -16,8 +16,7 @@ class CategoryController extends Controller
      */
     public function index(): View
     {
-        $collections = Category::all()->groupBy('breadcrumb')->all();
-        return view('collections.index', compact('collections'));
+        return view('collections.index');
     }
 
     /**

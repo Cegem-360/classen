@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
@@ -31,6 +32,15 @@ class Category extends Model
     public function parameters(): HasMany
     {
         return $this->hasMany(Parameter::class);
+    }
+    /**
+     * Get the AdditionalAttribute associated with the Category
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function AdditionalAttribute(): HasOne
+    {
+        return $this->hasOne(AdditionalAttribute::class, 'category_id', 'id');
     }
     protected $casts = [
         'technical_parameter' => 'array',

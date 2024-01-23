@@ -1,6 +1,6 @@
 <x-layouts.app>
     <div class="flex">
-        <x-collections.layout :collections='$collections' />
+        <x-collections.layout />
     </div>
 
     <!-- gap -->

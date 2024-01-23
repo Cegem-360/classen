@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             AttributeSeeder::class,
             CategorySeeder::class,
+            AdditionalAttributeSeeder::class,
         ]);
     }
 }

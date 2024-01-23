@@ -12,6 +12,82 @@
 
 namespace App\Models{
 /**
+ * App\Models\AdditionalAttribute
+ *
+ * @property int $id
+ * @property string $primo_finishing
+ * @property string $3d_finishing
+ * @property string $iridium_finishing
+ * @property string $cpl_laminate
+ * @property string $hpl_laminate
+ * @property string $lacquered
+ * @property string $room_door
+ * @property string $bathroom_door
+ * @property string $interior_entrance_door
+ * @property string $technical_doors
+ * @property string $fire_door
+ * @property string $anti_burglary_door
+ * @property string $soundproof_door
+ * @property string $sliding_door
+ * @property string $modern
+ * @property string $classic
+ * @property string $loft
+ * @property string $retro
+ * @property string $rustic
+ * @property string $width_60
+ * @property string $width_70
+ * @property string $width_80
+ * @property string $width_90
+ * @property string $width_100
+ * @property string $width_110
+ * @property string $width_120
+ * @property string $panel_doors
+ * @property string $framed_doors
+ * @property int $category_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Category|null $category
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute query()
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute where3dFinishing($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereAntiBurglaryDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereBathroomDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereClassic($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereCplLaminate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereFireDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereFramedDoors($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereHplLaminate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereInteriorEntranceDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereIridiumFinishing($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereLacquered($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereLoft($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereModern($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute wherePanelDoors($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute wherePrimoFinishing($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereRetro($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereRoomDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereRustic($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereSlidingDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereSoundproofDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereTechnicalDoors($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereWidth100($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereWidth110($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereWidth120($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereWidth60($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereWidth70($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereWidth80($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereWidth90($value)
+ */
+	class AdditionalAttribute extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
  * App\Models\Attribute
  *
  * @property int $id
@@ -53,6 +129,7 @@ namespace App\Models{
  * @property string|null $img_url
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\AdditionalAttribute|null $AdditionalAttribute
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Attribute> $attributes
  * @property-read int|null $attributes_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Door> $doors
@@ -118,6 +195,7 @@ namespace App\Models{
  * @property string $name
  * @property string $img_url
  * @property string $tag
+ * @property string $tag_name
  * @property string $tag_img_url
  * @property string $tag_category
  * @property int $category_id
@@ -138,6 +216,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereTag($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagCategory($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagImgUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereUpdatedAt($value)
  */
 	class Door extends \Eloquent {}
@@ -147,10 +226,17 @@ namespace App\Models{
 /**
  * App\Models\Parameter
  *
+ * @property int $id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Database\Factories\ParameterFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class Parameter extends \Eloquent {}
 }
@@ -168,6 +254,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class Tag extends \Eloquent {}
 }
@@ -200,6 +287,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class User extends \Eloquent {}
 }
