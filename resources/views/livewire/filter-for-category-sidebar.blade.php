@@ -1,5 +1,5 @@
-<div class="flex">
-    <div class="h-full w-1/4 bg-[#9f9f9f] pl-8 pt-16 text-white">
+<div class="grid grid-cols-[1fr_3fr] md:grid-cols-[1.5fr_3fr] sm:grid-cols-1">
+    <div class="h-full bg-[#9f9f9f] pl-8 pt-16 text-white">
         <h3 class="text-xl font-bold uppercase">Ajtó kollekciók</h3>
         <hr class="relative mb-6 mt-4 h-1 w-full border-0 bg-white">
         <p class="mb-6 font-bold">Válasszon lenyűgöző ajtó kollekcióink közül.</p>
@@ -126,7 +126,7 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </div>
 
-    <div class="mx-12 my-16 w-3/4">
+    <div class="mx-12 my-16">
         <h1 class="text-3xl font-bold uppercase">Kollekció</h1>
 
         <!-- gap -->
