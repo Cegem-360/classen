@@ -3,7 +3,7 @@
         <div class="md:flex md:flex-col md:justify-between">
           <div class="flex justify-center md:items-start mb-6 md:mb-0">
               <a href="/" class="flex items-center">
-                  <img src="{{ Vite::asset('resources/img/arcadia98-logo.svg') }}" class="h-16 mt-8 mb-8" alt="Arcadia98 Logo" />
+                  <img loading="lazy" src="{{ Vite::asset('resources/img/arcadia98-logo.svg') }}" class="h-16 mt-8 mb-8" alt="Arcadia98 Logo" />
               </a>
           </div>
           <div>

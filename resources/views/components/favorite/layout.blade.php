@@ -9,7 +9,7 @@
                     <div
                         class="aspect-h-1 aspect-w-1 lg:aspect-none w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
 
-                        <img class="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                        <img loading="lazy" class="h-full w-full object-cover object-center lg:h-full lg:w-full"
                             src=" {{ !empty($product['img_url']) ? $product['img_url'] : Vite::asset('resources/img/placeholder.webp') }}"
                             alt="Front of men&#039;s Basic Tee in black." loading='lazy'>
                     </div>

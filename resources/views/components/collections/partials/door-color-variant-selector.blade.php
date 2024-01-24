@@ -17,7 +17,7 @@
                                         href="{{ $variant->img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
                                         itemprop="contentUrl" target="_blank">
                                         <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                            <img class="max-h-[500px]"
+                                            <img loading="lazy" class="max-h-[500px]"
                                                 src="{{ $variant->img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
                                                 alt="" itemprop="contentUrl" target="_blank">
                                         </div>
@@ -35,12 +35,12 @@
                     @foreach ($colorVariants as $category => $colors)
                         <div class="variant-group">
                             <h3 class="text-2xl font-bold">{{ $category }}</h3>
-                            <div class="doors_colors__variant-set flex border-b-1 border-[#bfbfbf] py-8">
+                            <div class="doors_colors__variant-set flex flex-wrap border-b-1 border-[#bfbfbf] py-8">
                                 @foreach ($colors as $color)
-                                    <div class="door_variant mx-4 my-2 first:ml-0" id='{{ $color->tag }}-color'
+                                    <div class="door_variant mx-4 my-2" id='{{ $color->tag }}-color'
                                         onclick="selectColor('{{ $color->tag }}-color')">
                                         <a class="block w-[94px]" href="#{{ $color->tag }}">
-                                            <img class="h-[88px] w-[88px] rounded-full"
+                                            <img loading="lazy" class="h-[88px] w-[88px] rounded-full"
                                                 src="{{ $color->tag_img_url ?? Vite::asset('resources/img/placeholder.webp') }}">
                                             <div class="door_variant__meta">
                                                 <h4 class="mt-2 text-center text-sm">{{ $color->tag_name }}</h4>

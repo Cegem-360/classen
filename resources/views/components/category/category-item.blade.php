@@ -33,7 +33,7 @@
         <!-- Image gallery -->
         <div class="mx-auto ml-20 mt-6 hidden w-full flex-auto overflow-hidden rounded-lg lg:flex">
             <div class="basis-2/5">
-                <img class="aspect-square w-full object-cover object-center"
+                <img  loading="lazy" class="aspect-square w-full object-cover object-center"
                     src="{{ !empty($category->img_url) ? $category->img_url : Vite::asset('resources/img/placeholder.webp') }}"
                     alt="Two each of gray, white, and black shirts laying flat.">
             </div>
@@ -75,7 +75,7 @@
                             <button onclick="show('{{ str_replace('-', '_', $key) }}')">
                                 <div class="basis-1/2">
                                     <x-row>
-                                        <img src="{{ $value }}" alt="">
+                                        <img loading="lazy" src="{{ $value }}" alt="">
 
                                     </x-row>
                                     <x-row>
@@ -102,7 +102,7 @@
                                             <div class="basis-1/3">
                                                 <div class="flex flex-wrap">
                                                     <div class="basis-full">
-                                                        <img src="{{ $img }}" alt="">
+                                                        <img  loading="lazy" src="{{ $img }}" alt="">
                                                     </div>
                                                     <div class="basis-full">
                                                         {{ $model }}

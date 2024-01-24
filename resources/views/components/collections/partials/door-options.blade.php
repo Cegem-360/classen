@@ -16,7 +16,7 @@
                         <div class="swiper-slide door_color p-3">
                             <div class="door_color__wrapper">
                                 <div class="door_color__image">
-                                    <img class="lazy" src="{{ $tag['tag_img_url'] }}" alt="White" loading='lazy'>
+                                    <img loading="lazy" src="{{ $tag['tag_img_url'] }}" alt="White" loading='lazy'>
                                 </div>
                                 <div class="door_color__meta mt-3">
                                     <h4> {{ $name }}</h4>
@@ -41,7 +41,7 @@
                                     <a data-pswp-width="540" data-pswp-height="1200" href="{{ $item->img_url }}"
                                         itemprop="contentUrl" target="_blank">
                                         <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                            <img class="max-h-[500px]" src="{{ $item->img_url }}" alt="">
+                                            <img loading="lazy" class="max-h-[500px]" src="{{ $item->img_url }}" alt="">
                                         </div>
                                     </a>
                                 @endforeach

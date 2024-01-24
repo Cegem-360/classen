@@ -18,7 +18,7 @@
            <div class="swiper-wrapper !h-auto flex-wrap">
                @foreach ($category->gallery_imgs as $img)
                    <div class="swiper-slide">
-                       <img src=" {{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}" />
+                       <img loading="lazy" src=" {{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}" />
                    </div>
                @endforeach
            </div>

@@ -34,7 +34,7 @@
         <!-- Image gallery -->
         <div class="mx-auto ml-20 mt-6 hidden w-full flex-auto overflow-hidden rounded-lg lg:flex">
             <div class="basis-1/2">
-                <img class="mx-14 aspect-square h-auto w-auto scale-90 object-cover object-center px-16"
+                <img loading="lazy" class="mx-14 aspect-square h-auto w-auto scale-90 object-cover object-center px-16"
                     src="{{ !empty($datas->img_url) ? $datas->img_url : Vite::asset('resources/img/placeholder.webp') }}"
                     alt="Two each of gray, white, and black shirts laying flat.">
             </div>
@@ -66,7 +66,7 @@
                                                 <div class="basis-auto">
                                                     <div class="flex flex-wrap">
                                                         <div class="basis-full">
-                                                            <img src="{{ $model->img_url }}">
+                                                            <img loading="lazy" src="{{ $model->img_url }}">
                                                         </div>
                                                         <div class="basis-full">
                                                             {{ $model->name }}
@@ -229,7 +229,7 @@
                     @foreach ($colorVariants as $key => $variants)
                         @foreach ($variants as $variant)
                             <div class="hidden basis-full" id='{{ str_replace('-', '_', $key) }}'>
-                                <img id="" src="{{ $variant->img_url }}">
+                                <img loading="lazy" id="" src="{{ $variant->img_url }}">
                             </div>
                         @endforeach
                     @endforeach
@@ -244,7 +244,7 @@
                         @foreach ($colorVariants as $key => $variants)
                             @foreach ($variants as $variant)
                                 <button>
-                                    <img id="" src="{{ $variant->tag_img_url }}"
+                                    <img loading="lazy" id="" src="{{ $variant->tag_img_url }}"
                                         onClick="show('{{ str_replace('-', '_', $key) }}')">
                                 </button>
                             @endforeach
