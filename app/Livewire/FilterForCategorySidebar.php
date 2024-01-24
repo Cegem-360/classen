@@ -2,10 +2,12 @@
 
 namespace App\Livewire;
 
-use App\Models\AdditionalAttribute;
 use Livewire\Component;
 use App\Models\Category;
 use Illuminate\Support\Collection;
+use App\Models\AdditionalAttribute;
+use Illuminate\Database\Eloquent\Builder;
+
 
 
 class FilterForCategorySidebar extends Component
@@ -24,36 +26,60 @@ class FilterForCategorySidebar extends Component
 
     public function mount()
     {
-        $this->collections = Category::with('category')->all();
     }
-    public function updating()
+    public function updated()
     {
     }
     public function render()
     {
-        $this->collections = new Collection();
+        if ($this->in_array_recursive(true, $this->options, true)) {
+            $categories = [];
+            $results =
+                AdditionalAttribute::with('category')
+                ->when($this->options['surface']['primo_finishing'], function (Builder $query) {
+                    $query->wherePrimoFinishing(true);
+                })->when($this->options['surface']['3d_finishing'], function (Builder $query) {
+                    $query->where3dFinishing(true);
+                })->when($this->options['surface']['iridium_finishing'], function (Builder $query) {
+                    $query->whereIridiumFinishing(true);
+                })->when($this->options['surface']['cpl_laminate'], function (Builder $query) {
+                    $query->whereCplLaminate(true);
+                })->when($this->options['surface']['hpl_laminate'], function (Builder $query) {
+                    $query->whereHplLaminate(true);
+                })->when($this->options['surface']['lacquered'], function (Builder $query) {
+                    $query->whereLacquered(true);
+                })->get();
+            foreach ($results as $result) {
+                $categories[] = $result->category;
+            }
+            $collection = collect($categories);
 
-        if ($this->options['surface']['primo_finishing']) {
-            $attributes = AdditionalAttribute::wherePrimoFinishing(true)->with('category')->get();
-            foreach ($attributes as $attribute)
-                $this->collections = $this->collections->merge($attribute->category);
+            $this->collections = $collection->groupBy('breadcrumb')->all();
+        } else {
+            $this->collections = Category::all()->groupBy('breadcrumb')->all();
         }
-        if ($this->options['surface']['3d_finishing']) {
-            $attributes = AdditionalAttribute::where3dFinishing(true)->with('category')->get();
-            foreach ($attributes as $attribute)
-                $this->collections = $this->collections->merge($attribute->category);
-        }
-        if ($this->options['surface']['iridium_finishing']) {
-            $attributes = AdditionalAttribute::whereIridiumFinishing(true)->with('category')->get();
-            foreach ($attributes as $attribute)
-                $this->collections = $this->collections->merge($attribute->category);
-            dd($this->collections);
-        }
-        $this->collections = $this->collections->groupBy('breadcrumb')->all();
-
         /*$this->collections->merge(
             Category::when($this->options['surface']['primo_finishing'])->whereHas('AdditionalAttribute')->get()
         );*/
         return view('livewire.filter-for-category-sidebar', ['collections' => $this->collections]);
+    }
+    public function in_array_recursive(mixed $needle, array $haystack, bool $strict): bool
+    {
+        foreach ($haystack as $element) {
+            if ($element === $needle) {
+                return true;
+            }
+
+            $isFound = false;
+            if (is_array($element)) {
+                $isFound = $this->in_array_recursive($needle, $element, $strict);
+            }
+
+            if ($isFound === true) {
+                return true;
+            }
+        }
+
+        return false;
     }
 }

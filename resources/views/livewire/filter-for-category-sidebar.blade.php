@@ -75,9 +75,6 @@
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
             </fieldset>
         </div>
-
-        {{ var_export($options) }}
-        {{ var_export($collections) }}
         <div class="relative mb-3">
             <h6 class="mb-0">
                 <button
