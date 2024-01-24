@@ -20,7 +20,7 @@ return new class extends Migration
             ];
             $table->id();
             foreach ($columns as $column) {
-                $table->string($column)->default('0');
+                $table->boolean($column)->default(false);
             }
             $table->foreignIdFor(Category::class)->onDelete('cascade');
             $table->timestamps();

@@ -1,3 +1,3 @@
 <div>
-    <livewire:fillter-for-category-sidebar />
+    <livewire:filter-for-category-sidebar />
 </div>

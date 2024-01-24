@@ -15,34 +15,34 @@ namespace App\Models{
  * App\Models\AdditionalAttribute
  *
  * @property int $id
- * @property string $primo_finishing
- * @property string $3d_finishing
- * @property string $iridium_finishing
- * @property string $cpl_laminate
- * @property string $hpl_laminate
- * @property string $lacquered
- * @property string $room_door
- * @property string $bathroom_door
- * @property string $interior_entrance_door
- * @property string $technical_doors
- * @property string $fire_door
- * @property string $anti_burglary_door
- * @property string $soundproof_door
- * @property string $sliding_door
- * @property string $modern
- * @property string $classic
- * @property string $loft
- * @property string $retro
- * @property string $rustic
- * @property string $width_60
- * @property string $width_70
- * @property string $width_80
- * @property string $width_90
- * @property string $width_100
- * @property string $width_110
- * @property string $width_120
- * @property string $panel_doors
- * @property string $framed_doors
+ * @property bool $primo_finishing
+ * @property bool $3d_finishing
+ * @property bool $iridium_finishing
+ * @property bool $cpl_laminate
+ * @property bool $hpl_laminate
+ * @property bool $lacquered
+ * @property bool $room_door
+ * @property bool $bathroom_door
+ * @property bool $interior_entrance_door
+ * @property bool $technical_doors
+ * @property bool $fire_door
+ * @property bool $anti_burglary_door
+ * @property bool $soundproof_door
+ * @property bool $sliding_door
+ * @property bool $modern
+ * @property int $classic
+ * @property bool $loft
+ * @property bool $retro
+ * @property bool $rustic
+ * @property bool $width_60
+ * @property bool $width_70
+ * @property bool $width_80
+ * @property bool $width_90
+ * @property bool $width_100
+ * @property bool $width_110
+ * @property bool $width_120
+ * @property bool $panel_doors
+ * @property bool $framed_doors
  * @property int $category_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at

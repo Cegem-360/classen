@@ -11,37 +11,43 @@
                 <div>
                     <div>
                         <label for="options">
-                            <input type="checkbox" value="primo_finishing" wire:model="options" />
+                            <input type="checkbox" value="primo_finishing" wire:model="options.surface.primo_finishing"
+                                wire:click="$refresh" />
                             {{ __('Primo finishing') }}
                         </label>
                     </div>
                     <div>
                         <label for="options">
-                            <input type="checkbox" value="3d_finishing" wire:model="options" />
+                            <input type="checkbox" value="3d_finishing" wire:model="options.surface.3d_finishing"
+                                wire:click="$refresh" />
                             {{ __('3D finishing') }}
                         </label>
                     </div>
                     <div>
                         <label for="options">
-                            <input type="checkbox" value="iridium_finishing" wire:model="options" />
+                            <input type="checkbox" value="iridium_finishing"
+                                wire:model="options.surface.iridium_finishing" wire:click="$refresh" />
                             {{ __('Iridium finishing') }}
                         </label>
                     </div>
                     <div>
                         <label for="options">
-                            <input type="checkbox" value="cpl_laminate" wire:model="options" />
+                            <input type="checkbox" value="cpl_laminate" wire:model="options.surface.cpl_laminate"
+                                wire:click="$refresh" />
                             {{ __('CPL laminate') }}
                         </label>
                     </div>
                     <div>
                         <label for="options">
-                            <input type="checkbox" value="hpl_laminate" wire:model="options" />
+                            <input type="checkbox" value="hpl_laminate" wire:model="options.surface.hpl_laminate"
+                                wire:click="$refresh" />
                             {{ __('HPL laminate') }}
                         </label>
                     </div>
                     <div>
                         <label for="hagyomanyos">
-                            <input type="checkbox" value="lacquered" wire:model="options" />
+                            <input type="checkbox" value="lacquered" wire:model="options.surface.lacquered"
+                                wire:click="$refresh" />
                             {{ __('lacquered') }}
                         </label>
                     </div>
@@ -71,6 +77,7 @@
         </div>
 
         {{ var_export($options) }}
+        {{ var_export($collections) }}
         <div class="relative mb-3">
             <h6 class="mb-0">
                 <button
