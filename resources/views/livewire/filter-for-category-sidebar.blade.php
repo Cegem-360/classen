@@ -6,7 +6,7 @@
         <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
         <div>
             <fieldset class="mb-3">
-                <legend class="text-lg font-bold">Felületkezelés</legend>
+                <legend class="text-lg font-bold">{{ __('Finishing and surface durability') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <div>
@@ -45,7 +45,7 @@
                         </label>
                     </div>
                     <div>
-                        <label for="hagyomanyos">
+                        <label for="options">
                             <input type="checkbox" value="lacquered" wire:model="options.surface.lacquered"
                                 wire:click="$refresh" />
                             {{ __('lacquered') }}
@@ -54,7 +54,7 @@
                 </div>
             </fieldset>
             <fieldset class="mb-3">
-                <legend class="text-lg font-bold">Típus / funkció</legend>
+                <legend class="text-lg font-bold">{{ __('Purpose') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <input id="normal-ajto" name="normál ajtó" type="checkbox" />
