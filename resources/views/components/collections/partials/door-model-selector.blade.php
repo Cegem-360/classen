@@ -1,16 +1,11 @@
    @props(['category' => '', 'modelVariants' => [], 'door' => ''])
    <div class="mx-8 grid grid-cols-2 gap-3 md:grid-cols-1">
-       <div class="swiper door-model-swiper lightbox w-full">
+       <div class="swiper door-model-swiper w-full">
            <div class="swiper-wrapper max-h-[500px] bg-neutral-200 p-12">
                @foreach ($modelVariants as $model)
-                   <div class="swiper-slide !flex justify-center sm:w-full">
-                       <a data-pswp-width="540" data-pswp-height="1200"
-                           href="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
-                           itemprop="contentUrl" target="_blank">
-                           <img class="max-h-[500px]"
-                               src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
-                       </a>
-                   </div>
+               <div class="swiper-slide !flex justify-center sm:w-full">
+                   <img class="max-h-[500px]" src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+               </div>
                @endforeach
            </div>
        </div>
@@ -24,10 +19,10 @@
            <div class="swiper door-model-swiper-thumbs w-full" thumbsSlider="">
                <div class="swiper-wrapper flex-wrap">
                    @foreach ($modelVariants as $model)
-                       <div class="swiper-slide bg-neutral-200 p-6 pb-2">
-                           <img src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
-                           <div class="desc w-full pt-2">{{ $model->name }}</div>
-                       </div>
+                   <div class="swiper-slide bg-neutral-200 p-6 pb-2">
+                       <img src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+                       <div class="desc w-full pt-2">{{ $model->name }}</div>
+                   </div>
                    @endforeach
                </div>
            </div>

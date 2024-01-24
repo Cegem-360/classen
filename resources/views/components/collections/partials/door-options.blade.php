@@ -11,19 +11,19 @@
                 <strong class="text-4xl text-sarga">1.</strong> Válassza ki a felület színét
             </h3>
             <div class="swiper door-fronts-swiper-thumbs door_colors">
-                <div class="swiper-wrapper min-h-[330px] flex-wrap items-center md:flex-col">
+                <div class="swiper-wrapper min-h-[330px] items-start !grid grid-cols-4 lg:grid-cols-3 md:grid-cols-2">
                     @foreach ($tags as $name => $tag)
-                        <div class="swiper-slide door_color p-3">
-                            <div class="door_color__wrapper">
-                                <div class="door_color__image">
-                                    <img loading="lazy" src="{{ $tag['tag_img_url'] }}" alt="White" loading='lazy'>
-                                </div>
-                                <div class="door_color__meta mt-3">
-                                    <h4> {{ $name }}</h4>
-                                    <p class="text-sm font-bold">{{ $tag['tag_category'] }}</p>
-                                </div>
+                    <div class="swiper-slide door_color m-px p-3 !w-auto !h-auto">
+                        <div class="door_color__wrapper">
+                            <div class="door_color__image">
+                                <img loading="lazy" src="{{ $tag['tag_img_url'] }}" alt="White" loading='lazy'>
+                            </div>
+                            <div class="door_color__meta mt-3">
+                                <h4> {{ $name }}</h4>
+                                <p class="text-sm font-bold">{{ $tag['tag_category'] }}</p>
                             </div>
                         </div>
+                    </div>
                     @endforeach
                 </div>
             </div>
@@ -33,19 +33,15 @@
                 <strong class="text-4xl text-sarga">2.</strong> Ellenőrizze a modellt
             </h3>
             <div class="door_fronts">
-                <div class="swiper lightbox door-fronts-swiper w-full">
+                <div class="swiper door-fronts-swiper w-full">
                     <div class="swiper-wrapper items-center">
                         @foreach ($doors as $collection)
-                            <div class="swiper-slide">
-                                @foreach ($collection as $item)
-                                    <a data-pswp-width="540" data-pswp-height="1200" href="{{ $item->img_url }}"
-                                        itemprop="contentUrl" target="_blank">
-                                        <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                            <img loading="lazy" class="max-h-[500px]" src="{{ $item->img_url }}" alt="">
-                                        </div>
-                                    </a>
-                                @endforeach
-                            </div>
+                        <div class="swiper-slide !grid grid-cols-3 md:grid-cols-2 gap-6">
+                            @foreach ($collection as $item)
+                                <div class="grid"><img loading="lazy" class="max-h-[500px]" src="{{ $item->img_url }}" alt="">
+                                <h4 class="mt-3">{{ $item->name }}</h4></div>
+                            @endforeach
+                        </div>
                         @endforeach
                     </div>
                 </div>
