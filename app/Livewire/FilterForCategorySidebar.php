@@ -20,7 +20,36 @@ class FilterForCategorySidebar extends Component
             'cpl_laminate' => false,
             'hpl_laminate' => false,
             'lacquered' => false,
-        ]
+        ],
+        'purpose' => [
+            'room_door' => false,
+            'bathroom_door' => false,
+            'interior_entrance_door' => false,
+            'technical_doors' => false,
+            'anti_burglary_door' => false,
+            'soundproof_door' => false,
+            'sliding_door' => false,
+        ],
+        'style' => [
+            'modern' => false,
+            'classic' => false,
+            'loft' => false,
+            'retro' => false,
+            'rustic' => false,
+        ],
+        'width' => [
+            'width_60' => false,
+            'width_70' => false,
+            'width_80' => false,
+            'width_90' => false,
+            'width_100' => false,
+            'width_110' => false,
+            'width_120' => false,
+        ],
+        'construction' => [
+            'panel_doors' => false,
+            'framed_doors' => false,
+        ],
     ];
     public $collections;
 
@@ -48,12 +77,53 @@ class FilterForCategorySidebar extends Component
                     $query->whereHplLaminate(true);
                 })->when($this->options['surface']['lacquered'], function (Builder $query) {
                     $query->whereLacquered(true);
+                })->when($this->options['purpose']['room_door'], function (Builder $query) {
+                    $query->whereRoomDoor(true);
+                })->when($this->options['purpose']['bathroom_door'], function (Builder $query) {
+                    $query->whereBathroomDoor(true);
+                })->when($this->options['purpose']['interior_entrance_door'], function (Builder $query) {
+                    $query->whereInteriorEntranceDoor(true);
+                })->when($this->options['purpose']['technical_doors'], function (Builder $query) {
+                    $query->whereTechnicalDoors(true);
+                })->when($this->options['purpose']['anti_burglary_door'], function (Builder $query) {
+                    $query->whereAntiBurglaryDoor(true);
+                })->when($this->options['purpose']['soundproof_door'], function (Builder $query) {
+                    $query->whereSoundproofDoor(true);
+                })->when($this->options['purpose']['sliding_door'], function (Builder $query) {
+                    $query->whereSlidingDoor(true);
+                })->when($this->options['style']['modern'], function (Builder $query) {
+                    $query->whereModern(true);
+                })->when($this->options['style']['classic'], function (Builder $query) {
+                    $query->whereClassic(true);
+                })->when($this->options['style']['loft'], function (Builder $query) {
+                    $query->whereLoft(true);
+                })->when($this->options['style']['retro'], function (Builder $query) {
+                    $query->whereRetro(true);
+                })->when($this->options['style']['rustic'], function (Builder $query) {
+                    $query->whereRustic(true);
+                })->when($this->options['width']['width_60'], function (Builder $query) {
+                    $query->where('width_60', true);
+                })->when($this->options['width']['width_70'], function (Builder $query) {
+                    $query->where('width_70', true);
+                })->when($this->options['width']['width_80'], function (Builder $query) {
+                    $query->where('width_80', true);
+                })->when($this->options['width']['width_90'], function (Builder $query) {
+                    $query->where('width_90', true);
+                })->when($this->options['width']['width_100'], function (Builder $query) {
+                    $query->where('width_100', true);
+                })->when($this->options['width']['width_110'], function (Builder $query) {
+                    $query->where('width_110', true);
+                })->when($this->options['width']['width_120'], function (Builder $query) {
+                    $query->where('width_120', true);
+                })->when($this->options['construction']['panel_doors'], function (Builder $query) {
+                    $query->wherePanelDoors(true);
+                })->when($this->options['construction']['framed_doors'], function (Builder $query) {
+                    $query->whereFramedDoors(true);
                 })->get();
             foreach ($results as $result) {
                 $categories[] = $result->category;
             }
             $collection = collect($categories);
-
             $this->collections = $collection->groupBy('breadcrumb')->all();
         } else {
             $this->collections = Category::all()->groupBy('breadcrumb')->all();

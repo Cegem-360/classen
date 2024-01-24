@@ -48,7 +48,7 @@
                         <label for="options">
                             <input type="checkbox" value="lacquered" wire:model="options.surface.lacquered"
                                 wire:click="$refresh" />
-                            {{ __('lacquered') }}
+                            {{ __('Lacquered') }}
                         </label>
                     </div>
                 </div>
@@ -57,65 +57,164 @@
                 <legend class="text-lg font-bold">{{ __('Purpose') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
-                    <input id="normal-ajto" name="normál ajtó" type="checkbox" />
-                    <label for="normal-ajto">normál ajtó</label>
+                    <label for="options">
+                        <input type="checkbox" value="room_door" wire:model="options.purpose.room_door"
+                            wire:click="$refresh" />
+                        {{ __('room door') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="bathroom_door" wire:model="options.purpose.bathroom_door"
+                            wire:click="$refresh" />
+                        {{ __('bathroom door') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="interior_entrance_door"
+                            wire:model="options.purpose.interior_entrance_door" wire:click="$refresh" />
+                        {{ __('interior entrance door') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="technical_doors" wire:model="options.purpose.technical_doors"
+                            wire:click="$refresh" />
+                        {{ __('technical doors') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="anti_burglary_door"
+                            wire:model="options.purpose.anti_burglary_door" wire:click="$refresh" />
+                        {{ __('anti burglary door') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="soundproof_door" wire:model="options.purpose.soundproof_door"
+                            wire:click="$refresh" />
+                        {{ __('soundproof door') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="sliding_door" wire:model="options.purpose.sliding_door"
+                            wire:click="$refresh" />
+                        {{ __('sliding door') }}
+                    </label>
                 </div>
 
             </fieldset>
             <fieldset class="mb-3">
-                <legend class="text-lg font-bold">Stílus</legend>
+                <legend class="text-lg font-bold">{{ __('Style') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="modern" wire:model="options.style.modern" wire:click="$refresh" />
+                        {{ __('modern') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="classic" wire:model="options.style.classic"
+                            wire:click="$refresh" />
+                        {{ __('classic') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="loft" wire:model="options.style.loft" wire:click="$refresh" />
+                        {{ __('loft') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="retro" wire:model="options.style.retro" wire:click="$refresh" />
+                        {{ __('retro') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="rustic" wire:model="options.style.rustic"
+                            wire:click="$refresh" />
+                        {{ __('rustic') }}
+                    </label>
+                </div>
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">Szélesség</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="width 60" wire:model="options.width.width_60"
+                            wire:click="$refresh" />
+                        {{ __('60') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="width_70" wire:model="options.width.width_70"
+                            wire:click="$refresh" />
+                        {{ __('70') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="width_80" wire:model="options.width.width_80"
+                            wire:click="$refresh" />
+                        {{ __('80') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="width_90" wire:model="options.width.width_90"
+                            wire:click="$refresh" />
+                        {{ __('90') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="width_100" wire:model="options.width.width_100"
+                            wire:click="$refresh" />
+                        {{ __('100') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="width_110" wire:model="options.width.width_110"
+                            wire:click="$refresh" />
+                        {{ __('110') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="width_120" wire:model="options.width.width_120"
+                            wire:click="$refresh" />
+                        {{ __('120') }}
+                    </label>
+                </div>
             </fieldset>
             <fieldset class="mb-3">
-                <legend class="text-lg font-bold">Konstrukció</legend>
+                <legend class="text-lg font-bold">{{ __('Construction') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="panel_doors" wire:model="options.construction.panel_doors"
+                            wire:click="$refresh" />
+                        {{ __('panel doors') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="framed_doors" wire:model="options.construction.framed_doors"
+                            wire:click="$refresh" />
+                        {{ __('framed doors') }}
+                    </label>
+                </div>
             </fieldset>
         </div>
-        <div class="relative mb-3">
-            <h6 class="mb-0">
-                <button
-                    class="border-b group relative flex w-full cursor-pointer items-center border-b-1 border-solid border-white py-1 text-left font-bold transition-all ease-in"
-                    data-collapse-target="animated-collapse-1">
-                    <span class="text-lg">Felületkezelés</span>
-                    <i
-                        class="fa fa-chevron-down absolute right-4 text-base transition-transform group-open:rotate-180"></i>
-                </button>
-            </h6>
-            <div class="h-0 overflow-hidden pt-2 transition-all duration-300 ease-in-out"
-                data-collapse="animated-collapse-1">
-                <fieldset class="mb-3">
-                    <div>
-                        <input id="hagyomanyos" name="hagyományos" type="checkbox" />
-                        <label for="hagyomanyos">hagyományos</label>
-                    </div>
-                    <div>
-                        <input id="3d" name="3D" type="checkbox" />
-                        <label for="3d">3D</label>
-                    </div>
-                    <div>
-                        <input id="iridium" name="iridium" type="checkbox" />
-                        <label for="iridium">iridium</label>
-                    </div>
-                    <div>
-                        <input id="cpl" name="CPL laminálás" type="checkbox" />
-                        <label for="cpl">CPL laminálás</label>
-                    </div>
-                    <div>
-                        <input id="hpl" name="HPL laminálás" type="checkbox" />
-                        <label for="hpl">HPL laminálás</label>
-                    </div>
-                    <div>
-                        <input id="lakkozas" name="lakkozás" type="checkbox" />
-                        <label for="lakkozas">lakkozás</label>
-                    </div>
-                </fieldset>
-            </div>
-        </div>
-
         <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/fontawesome.min.js"
