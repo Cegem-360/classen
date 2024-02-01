@@ -6,94 +6,60 @@
         <p class="mb-6 font-bold">Válasszon lenyűgöző ajtók közül.</p>
         <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
         <div>
-            <fieldset class="mb-3">
-                <legend class="text-lg font-bold">{{ __('Type') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="rebated_doors" wire:model="options.type.rebated_doors"
-                            wire:click="$refresh" />
-                        {{ __('rebated doors') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="non_rebated_doors" wire:model="options.type.non_rebated_doors"
-                            wire:click="$refresh" />
-                        {{ __('non-rebated doors') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="double_leaf_door" wire:model="options.type.double_leaf_door"
-                            wire:click="$refresh" />
-                        {{ __('double leaf door') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="with_glazing" wire:model="options.type.with_glazing"
-                            wire:click="$refresh" />
-                        {{ __('with glazing') }}
-                    </label>
-                </div>
-
-            </fieldset>
+            <!--
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Colour') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="white" wire:model="options.colour.white" wire:click="$refresh" />
+                        <input type="checkbox" value="white" wire:model="options.colour.white" wire:click="$refresh"/>
                         {{ __('white') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="bright" wire:model="options.colour.bright"
-                            wire:click="$refresh" />
+                        <input type="checkbox" value="bright" wire:model="options.colour.bright" wire:click="$refresh"/>
                         {{ __('bright') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="grey" wire:model="options.colour.grey" wire:click="$refresh" />
+                        <input type="checkbox" value="grey" wire:model="options.colour.grey" wire:click="$refresh"/>
                         {{ __('grey') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="brown" wire:model="options.colour.brown" wire:click="$refresh" />
+                        <input type="checkbox" value="brown" wire:model="options.colour.brown" wire:click="$refresh"/>
                         {{ __('brown') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="graphite" wire:model="options.colour.graphite"
-                            wire:click="$refresh" />
+                        <input type="checkbox" value="graphite" wire:model="options.colour.graphite" wire:click="$refresh"/>
                         {{ __('graphite') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="dark" wire:model="options.colour.dark" wire:click="$refresh" />
+                        <input type="checkbox" value="dark" wire:model="options.colour.dark" wire:click="$refresh"/>
                         {{ __('dark') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="anthracite" wire:model="options.colour.anthracite"
-                            wire:click="$refresh" />
+                        <input type="checkbox" value="anthracite" wire:model="options.colour.anthracite" wire:click="$refresh"/>
                         {{ __('anthracite') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="black" wire:model="options.colour.black" wire:click="$refresh" />
+                        <input type="checkbox" value="black" wire:model="options.colour.black" wire:click="$refresh"/>
                         {{ __('black') }}
                     </label>
                 </div>
             </fieldset>
+        -->
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Colour') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
@@ -133,15 +99,13 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="wenge" wire:model="options.decor.wenge"
-                            wire:click="$refresh" />
+                        <input type="checkbox" value="wenge" wire:model="options.decor.wenge" wire:click="$refresh" />
                         {{ __('wenge') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="walnut" wire:model="options.decor.walnut"
-                            wire:click="$refresh" />
+                        <input type="checkbox" value="walnut" wire:model="options.decor.walnut" wire:click="$refresh" />
                         {{ __('walnut') }}
                     </label>
                 </div>
@@ -154,8 +118,7 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="acacia" wire:model="options.decor.acacia"
-                            wire:click="$refresh" />
+                        <input type="checkbox" value="acacia" wire:model="options.decor.acacia" wire:click="$refresh" />
                         {{ __('acacia') }}
                     </label>
                 </div>
@@ -185,13 +148,6 @@
                 <legend class="text-lg font-bold">{{ __('Finishing and surface durability') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
-                    <div>
-                        <label for="options">
-                            <input type="checkbox" value="primo_finishing"
-                                wire:model="options.surface.primo_finishing" wire:click="$refresh" />
-                            {{ __('Primo finishing') }}
-                        </label>
-                    </div>
                     <div>
                         <label for="options">
                             <input type="checkbox" value="3d_finishing" wire:model="options.surface.3d_finishing"
@@ -248,30 +204,9 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="interior_entrance_door"
-                            wire:model="options.purpose.interior_entrance_door" wire:click="$refresh" />
-                        {{ __('interior entrance door') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
                         <input type="checkbox" value="technical_doors" wire:model="options.purpose.technical_doors"
                             wire:click="$refresh" />
                         {{ __('technical doors') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="anti_burglary_door"
-                            wire:model="options.purpose.anti_burglary_door" wire:click="$refresh" />
-                        {{ __('anti burglary door') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="soundproof_door" wire:model="options.purpose.soundproof_door"
-                            wire:click="$refresh" />
-                        {{ __('soundproof door') }}
                     </label>
                 </div>
                 <div>
@@ -305,20 +240,6 @@
                         <input type="checkbox" value="loft" wire:model="options.style.loft"
                             wire:click="$refresh" />
                         {{ __('loft') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="retro" wire:model="options.style.retro"
-                            wire:click="$refresh" />
-                        {{ __('retro') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="rustic" wire:model="options.style.rustic"
-                            wire:click="$refresh" />
-                        {{ __('rustic') }}
                     </label>
                 </div>
             </fieldset>

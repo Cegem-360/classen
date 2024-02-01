@@ -11,13 +11,6 @@
                 <div>
                     <div>
                         <label for="options">
-                            <input type="checkbox" value="primo_finishing" wire:model="options.surface.primo_finishing"
-                                wire:click="$refresh" />
-                            {{ __('Primo finishing') }}
-                        </label>
-                    </div>
-                    <div>
-                        <label for="options">
                             <input type="checkbox" value="3d_finishing" wire:model="options.surface.3d_finishing"
                                 wire:click="$refresh" />
                             {{ __('3D finishing') }}
@@ -72,13 +65,6 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="interior_entrance_door"
-                            wire:model="options.purpose.interior_entrance_door" wire:click="$refresh" />
-                        {{ __('interior entrance door') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
                         <input type="checkbox" value="technical_doors" wire:model="options.purpose.technical_doors"
                             wire:click="$refresh" />
                         {{ __('technical doors') }}
@@ -89,13 +75,6 @@
                         <input type="checkbox" value="anti_burglary_door"
                             wire:model="options.purpose.anti_burglary_door" wire:click="$refresh" />
                         {{ __('anti burglary door') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="soundproof_door" wire:model="options.purpose.soundproof_door"
-                            wire:click="$refresh" />
-                        {{ __('soundproof door') }}
                     </label>
                 </div>
                 <div>
@@ -127,19 +106,6 @@
                     <label for="options">
                         <input type="checkbox" value="loft" wire:model="options.style.loft" wire:click="$refresh" />
                         {{ __('loft') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="retro" wire:model="options.style.retro" wire:click="$refresh" />
-                        {{ __('retro') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="rustic" wire:model="options.style.rustic"
-                            wire:click="$refresh" />
-                        {{ __('rustic') }}
                     </label>
                 </div>
             </fieldset>
