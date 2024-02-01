@@ -213,29 +213,29 @@ class FilterForProductSidebar extends Component
                             $q->whereFramedDoors(true);
                         });
                     })->when($this->options['decor']['sonoma_oak'], function (Builder $query) {
-                        $query->orWhere('tag', 'sonoma-oak');
+                        $query->where('tag', 'sonoma-oak');
                     })->when($this->options['decor']['natural_oak'], function (Builder $query) {
-                        $query->orWhere('tag', 'natural-oak');
+                        $query->where('tag', 'natural-oak');
                     })->when($this->options['decor']['gray_oak'], function (Builder $query) {
-                        $query->orWhere('tag', 'gray-oak');
+                        $query->where('tag', 'gray-oak');
                     })->when($this->options['decor']['dark_oak'], function (Builder $query) {
-                        $query->orWhere('tag', 'dark-oak');
+                        $query->where('tag', 'dark-oak');
                     })->when($this->options['decor']['beech'], function (Builder $query) {
-                        $query->orWhere('tag', 'beech');
+                        $query->where('tag', 'beech');
                     })->when($this->options['decor']['wenge'], function (Builder $query) {
-                        $query->orWhere('tag', 'wenge');
+                        $query->where('tag', 'wenge');
                     })->when($this->options['decor']['walnut'], function (Builder $query) {
-                        $query->orWhere('tag', 'walnut');
+                        $query->where('tag', 'walnut');
                     })->when($this->options['decor']['light_walnut'], function (Builder $query) {
-                        $query->orWhere('tag', 'light-walnut');
+                        $query->where('tag', 'light-walnut');
                     })->when($this->options['decor']['acacia'], function (Builder $query) {
-                        $query->orWhere('tag', 'acacia');
+                        $query->where('tag', 'acacia');
                     })->when($this->options['decor']['acacia_light'], function (Builder $query) {
-                        $query->orWhere('tag', 'acacia-light');
+                        $query->where('tag', 'acacia-light');
                     })->when($this->options['decor']['light_ash'], function (Builder $query) {
-                        $query->orWhere('tag', 'light-ash');
+                        $query->where('tag', 'light-ash');
                     })->when($this->options['decor']['dark_ash'], function (Builder $query) {
-                        $query->orWhere('tag', 'dark-ash');
+                        $query->where('tag', 'dark-ash');
                     })->get();
 
         } else {
