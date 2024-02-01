@@ -236,7 +236,7 @@ class FilterForProductSidebar extends Component
                         $query->where('tag', 'light-ash');
                     })->when($this->options['decor']['dark_ash'], function (Builder $query) {
                         $query->where('tag', 'dark-ash');
-                    })->get();
+                    })->paginate(15);
 
         } else {
             $doors = Door::paginate(20);
