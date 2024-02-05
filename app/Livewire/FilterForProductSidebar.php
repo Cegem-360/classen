@@ -44,7 +44,6 @@ class FilterForProductSidebar extends Component
         ],
 
         'surface' => [
-            'primo_finishing' => false,
             '3d_finishing' => false,
             'iridium_finishing' => false,
             'cpl_laminate' => false,
@@ -54,11 +53,8 @@ class FilterForProductSidebar extends Component
         'purpose' => [
             'room_door' => false,
             'bathroom_door' => false,
-            'interior_entrance_door' => false,
             'technical_doors' => false,
-            'fire_doors' => false,
             'anti_burglary_door' => false,
-            'soundproof_door' => false,
             'sliding_door' => false,
         ],
         'style' => [
@@ -99,11 +95,6 @@ class FilterForProductSidebar extends Component
                 Door::with('category')
                     ->where(function (Builder $outerQuery) {
                         $outerQuery
-                            ->when($this->options['surface']['primo_finishing'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->wherePrimoFinishing(true);
-                                });
-                            })
                             ->when($this->options['surface']['3d_finishing'], function (Builder $query) {
                                 $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
                                     $q->where3dFinishing(true);
@@ -141,11 +132,6 @@ class FilterForProductSidebar extends Component
                                     $q->whereBathroomDoor(true);
                                 });
                             })
-                            ->when($this->options['purpose']['interior_entrance_door'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->whereInteriorEntranceDoor(true);
-                                });
-                            })
                             ->when($this->options['purpose']['technical_doors'], function (Builder $query) {
                                 $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
                                     $q->whereTechnicalDoors(true);
@@ -154,11 +140,6 @@ class FilterForProductSidebar extends Component
                             ->when($this->options['purpose']['anti_burglary_door'], function (Builder $query) {
                                 $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
                                     $q->whereAntiBurglaryDoor(true);
-                                });
-                            })
-                            ->when($this->options['purpose']['soundproof_door'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->whereSoundproofDoor(true);
                                 });
                             })
                             ->when($this->options['purpose']['sliding_door'], function (Builder $query) {
