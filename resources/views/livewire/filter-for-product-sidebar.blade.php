@@ -320,11 +320,10 @@
                     </div>
                 @endforeach
 
-                @if ($doors instanceof \Illuminate\Pagination\LengthAwarePaginator)
-                    {{ $doors->links() }}
-                @endif
-
             </div>
+            @if ($doors instanceof \Illuminate\Pagination\LengthAwarePaginator)
+                {{ $doors->links() }}
+            @endif
         </div>
     </div>
 </div>
