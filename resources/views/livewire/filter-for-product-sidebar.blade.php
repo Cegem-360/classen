@@ -321,6 +321,8 @@
                 @endforeach
 
             </div>
+            <!-- gap -->
+            <div class="min-h-[60px]"></div>
             @if ($doors instanceof \Illuminate\Pagination\LengthAwarePaginator)
                 {{ $doors->links() }}
             @endif
