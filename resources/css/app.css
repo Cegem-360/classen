@@ -189,28 +189,29 @@
       background: #333332;
     }
 }
+#nav-mobile {
+    input[type=checkbox] {
+      display: none;
 
-input[type=checkbox] {
-  display: none;
-
-  &:checked ~ #overlay {
-    visibility: visible;
-  }
-
-  &:checked ~ #overlay-button {
-    &:hover span, span{
-      background: transparent;
-    }
-    span {
-      &:before {
-        transform: rotate(45deg) translate(7px, 7px);
-        opacity: 1;
+      &:checked ~ #overlay {
+        visibility: visible;
       }
-      &:after {
-        transform: rotate(-45deg) translate(7px, -7px);
+
+      &:checked ~ #overlay-button {
+        &:hover span, span{
+          background: transparent;
+        }
+        span {
+          &:before {
+            transform: rotate(45deg) translate(7px, 7px);
+            opacity: 1;
+          }
+          &:after {
+            transform: rotate(-45deg) translate(7px, -7px);
+          }
+        }
       }
     }
-  }
 }
 
 #overlay {

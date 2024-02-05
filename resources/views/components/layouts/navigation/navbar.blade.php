@@ -35,7 +35,7 @@
                         <x-svg.heart />
                     </a>
                     <!-- Mobile Nav -->
-                    <div class="hidden md:flex justify-center items-center w-16 h-full">
+                    <div id="nav-mobile" class="hidden md:flex justify-center items-center w-16 h-full">
                         <!-- Hamburger Icon -->
                         <input type="checkbox" id="overlay-input" />
                         <label for="overlay-input" id="overlay-button"><span></span></label>
