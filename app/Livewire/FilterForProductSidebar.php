@@ -31,15 +31,10 @@ class FilterForProductSidebar extends Component
             'sonoma_oak' => false,
             'natural_oak' => false,
             'gray_oak' => false,
-            'dark_oak' => false,
             'beech' => false,
             'wenge' => false,
             'walnut' => false,
-            'light_walnut' => false,
-            'acacia' => false,
             'acacia_light' => false,
-            'light_ash' => false,
-            'dark_ash' => false,
         ],
         'type' => [
             'rebated_doors' => false,
@@ -66,7 +61,11 @@ class FilterForProductSidebar extends Component
             'soundproof_door' => false,
             'sliding_door' => false,
         ],
-        'style' => null,
+        'style' => [
+            'modern' => false,
+            'classic' => false,
+            'loft' => false,
+        ],
         'width' => [
             'width_60' => false,
             'width_70' => false,
@@ -98,137 +97,150 @@ class FilterForProductSidebar extends Component
             $doors_grouped = new Collection;
             $doors =
                 Door::with('category')
-                    ->when($this->options['surface']['primo_finishing'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->wherePrimoFinishing(true);
-                        });
-                    })->when($this->options['surface']['3d_finishing'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->where3dFinishing(true);
-                        });
-                    })->when($this->options['surface']['iridium_finishing'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereIridiumFinishing(true);
-                        });
-                    })->when($this->options['surface']['cpl_laminate'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereCplLaminate(true);
-                        });
-                    })->when($this->options['surface']['hpl_laminate'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereHplLaminate(true);
-                        });
-                    })->when($this->options['surface']['lacquered'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereLacquered(true);
-                        });
-                    })->when($this->options['purpose']['room_door'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereRoomDoor(true);
-                        });
-                    })->when($this->options['purpose']['bathroom_door'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereBathroomDoor(true);
-                        });
-                    })->when($this->options['purpose']['interior_entrance_door'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereInteriorEntranceDoor(true);
-                        });
-                    })->when($this->options['purpose']['technical_doors'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereTechnicalDoors(true);
-                        });
-                    })->when($this->options['purpose']['anti_burglary_door'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereAntiBurglaryDoor(true);
-                        });
-                    })->when($this->options['purpose']['soundproof_door'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereSoundproofDoor(true);
-                        });
-                    })->when($this->options['purpose']['sliding_door'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereSlidingDoor(true);
-                        });
-                    })->when(!is_null($this->options['style']), function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereModern(true);
-                        });
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereClassic(true);
-                        });
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereLoft(true);
-                        });
-                    })->when($this->options['style']['retro'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereRetro(true);
-                        });
-                    })->when($this->options['style']['rustic'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereRustic(true);
-                        });
-                    })->when($this->options['width']['width_60'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->where('width_60', true);
-                        });
-                    })->when($this->options['width']['width_70'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->where('width_70', true);
-                        });
-                    })->when($this->options['width']['width_80'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->where('width_80', true);
-                        });
-                    })->when($this->options['width']['width_90'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->where('width_90', true);
-                        });
-                    })->when($this->options['width']['width_100'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->where('width_100', true);
-                        });
-                    })->when($this->options['width']['width_110'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->where('width_110', true);
-                        });
-                    })->when($this->options['width']['width_120'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->where('width_120', true);
-                        });
-                    })->when($this->options['construction']['panel_doors'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->wherePanelDoors(true);
-                        });
-                    })->when($this->options['construction']['framed_doors'], function (Builder $query) {
-                        $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
-                            $q->whereFramedDoors(true);
-                        });
+                    ->where(function (Builder $outerQuery) {
+                        $outerQuery
+                            ->when($this->options['surface']['primo_finishing'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->wherePrimoFinishing(true);
+                                });
+                            })
+                            ->when($this->options['surface']['3d_finishing'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->where3dFinishing(true);
+                                });
+                            })
+                            ->when($this->options['surface']['iridium_finishing'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereIridiumFinishing(true);
+                                });
+                            })
+                            ->when($this->options['surface']['cpl_laminate'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereCplLaminate(true);
+                                });
+                            })
+                            ->when($this->options['surface']['hpl_laminate'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereHplLaminate(true);
+                                });
+                            })
+                            ->when($this->options['surface']['lacquered'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereLacquered(true);
+                                });
+                            });
+                    })->where(function (Builder $outerQuery) {
+                        $outerQuery
+                            ->when($this->options['purpose']['room_door'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereRoomDoor(true);
+                                });
+                            })
+                            ->when($this->options['purpose']['bathroom_door'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereBathroomDoor(true);
+                                });
+                            })
+                            ->when($this->options['purpose']['interior_entrance_door'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereInteriorEntranceDoor(true);
+                                });
+                            })
+                            ->when($this->options['purpose']['technical_doors'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereTechnicalDoors(true);
+                                });
+                            })
+                            ->when($this->options['purpose']['anti_burglary_door'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereAntiBurglaryDoor(true);
+                                });
+                            })
+                            ->when($this->options['purpose']['soundproof_door'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereSoundproofDoor(true);
+                                });
+                            })
+                            ->when($this->options['purpose']['sliding_door'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereSlidingDoor(true);
+                                });
+                            });
+                    })->where(function (Builder $outerQuery) {
+                        $outerQuery
+                            ->when($this->options['style']['modern'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereModern(true);
+                                });
+                            })
+                            ->when($this->options['style']['classic'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereClassic(true);
+                                });
+                            })
+                            ->when($this->options['style']['loft'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereLoft(true);
+                                });
+                            });
+                    })->where(function (Builder $outerQuery) {
+                        $outerQuery
+                            ->when($this->options['width']['width_60'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->where('width_60', true);
+                                });
+                            })->when($this->options['width']['width_70'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->where('width_70', true);
+                                });
+                            })->when($this->options['width']['width_80'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->where('width_80', true);
+                                });
+                            })->when($this->options['width']['width_90'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->where('width_90', true);
+                                });
+                            })->when($this->options['width']['width_100'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->where('width_100', true);
+                                });
+                            })->when($this->options['width']['width_110'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->where('width_110', true);
+                                });
+                            })->when($this->options['width']['width_120'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->where('width_120', true);
+                                });
+                            });
+                    })->where(function (Builder $outerQuery) {
+                        $outerQuery
+                            ->when($this->options['construction']['panel_doors'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->wherePanelDoors(true);
+                                });
+                            })
+                            ->when($this->options['construction']['framed_doors'], function (Builder $query) {
+                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
+                                    $q->whereFramedDoors(true);
+                                });
+                            });
                     })->where(function (Builder $query) {
                         $query->when($this->options['decor']['sonoma_oak'], function (Builder $q) {
-                            $q->where('tag', 'sonoma-oak');
+                            $q->orWhere('tag', 'sonoma-oak');
                         })->when($this->options['decor']['natural_oak'], function (Builder $q) {
-                            $q->where('tag', 'natural-oak');
+                            $q->orWhere('tag', 'natural-oak');
                         })->when($this->options['decor']['gray_oak'], function (Builder $q) {
-                            $q->where('tag', 'gray-oak');
-                        })->when($this->options['decor']['dark_oak'], function (Builder $q) {
-                            $q->where('tag', 'dark-oak');
+                            $q->orWhere('tag', 'gray-oak');
                         })->when($this->options['decor']['beech'], function (Builder $q) {
-                            $q->where('tag', 'beech');
+                            $q->orWhere('tag', 'beech');
                         })->when($this->options['decor']['wenge'], function (Builder $q) {
-                            $q->where('tag', 'wenge');
+                            $q->orWhere('tag', 'wenge');
                         })->when($this->options['decor']['walnut'], function (Builder $q) {
-                            $q->where('tag', 'walnut');
-                        })->when($this->options['decor']['light_walnut'], function (Builder $q) {
-                            $q->where('tag', 'light-walnut');
-                        })->when($this->options['decor']['acacia'], function (Builder $q) {
-                            $q->where('tag', 'acacia');
+                            $q->orWhere('tag', 'walnut');
                         })->when($this->options['decor']['acacia_light'], function (Builder $q) {
-                            $q->where('tag', 'acacia-light');
-                        })->when($this->options['decor']['light_ash'], function (Builder $q) {
-                            $q->where('tag', 'light-ash');
-                        })->when($this->options['decor']['dark_ash'], function (Builder $q) {
-                            $q->where('tag', 'dark-ash');
+                            $q->orWhere('tag', 'acacia-light');
                         });
                     })->paginate(perPage: 20);
 

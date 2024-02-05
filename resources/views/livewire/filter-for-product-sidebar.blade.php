@@ -86,13 +86,6 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="dark_oak" wire:model="options.decor.dark_oak"
-                            wire:click="$refresh" />
-                        {{ __('dark oak') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
                         <input type="checkbox" value="beech" wire:model="options.decor.beech" wire:click="$refresh" />
                         {{ __('beech') }}
                     </label>
@@ -111,36 +104,9 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="light_walnut" wire:model="options.decor.light_walnut"
-                            wire:click="$refresh" />
-                        {{ __('light walnut') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="acacia" wire:model="options.decor.acacia" wire:click="$refresh" />
-                        {{ __('acacia') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
                         <input type="checkbox" value="acacia_light" wire:model="options.decor.acacia_light"
                             wire:click="$refresh" />
                         {{ __('acacia light') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="light_ash" wire:model="options.decor.light_ash"
-                            wire:click="$refresh" />
-                        {{ __('light ash') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="dark_ash" wire:model="options.decor.dark_ash"
-                            wire:click="$refresh" />
-                        {{ __('dark ash') }}
                     </label>
                 </div>
             </fieldset>
@@ -223,23 +189,25 @@
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
-                        <input type="radio" value="modern" wire:model="options.style" wire:click="$refresh" />
+                        <input type="checkbox" value="modern" wire:model="options.style.modern"
+                            wire:click="$refresh" />
                         {{ __('modern') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="radio" value="classic" wire:model="options.style" wire:click="$refresh" />
+                        <input type="checkbox" value="classic" wire:model="options.style.classic"
+                            wire:click="$refresh" />
                         {{ __('classic') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="radio" value="loft" wire:model="options.style" wire:click="$refresh" />
+                        <input type="checkbox" value="loft" wire:model="options.style.loft"
+                            wire:click="$refresh" />
                         {{ __('loft') }}
                     </label>
                 </div>
-                {{ var_export($options['style']) }}
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">Szélesség</legend>
