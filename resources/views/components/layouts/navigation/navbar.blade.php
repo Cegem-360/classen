@@ -1,4 +1,4 @@
-<nav class="" x-data="{ open: false }">
+<nav class="sticky" x-data="{ open: false }">
     <header id="top-header" class="w-full border-[1px] border-b-[#000]">
         <div class="flex text-xs">
             <div class="basis-1/3">
@@ -42,7 +42,7 @@
 
                         <!-- Navigation Menu -->
                         <nav id="overlay" class="fixed top-0 left-0 right-0 hidenav">
-                            <ul class="flex flex-col items-center justify-start p-24 min-h-screen bg-white text-black uppercase">
+                            <ul class="flex flex-col items-center justify-start py-24 min-h-screen bg-white text-center text-black uppercase">
                                 <li>
                                     <form class="flex items-center border-[1px] border-[#000]" action="">
                                         <input class="border-0 text-xs" name="s" type="text" placeholder="{{ __('Search') }}">

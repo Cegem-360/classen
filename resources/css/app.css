@@ -151,7 +151,6 @@
     transition: 1s all cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-
 /* MOBILE NAV */
 #overlay-button {
   position: absolute;
@@ -223,7 +222,8 @@ input[type=checkbox] {
   ul {
     list-style-type: none;
     li {
-      padding: 1em;
+      padding: 1.5em;
+      line-height: 1.5rem;
       a {
         text-decoration: none;
         font-size: 1.5em;
