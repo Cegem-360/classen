@@ -66,13 +66,7 @@ class FilterForProductSidebar extends Component
             'soundproof_door' => false,
             'sliding_door' => false,
         ],
-        'style' => [
-            'modern' => false,
-            'classic' => false,
-            'loft' => false,
-            'retro' => false,
-            'rustic' => false,
-        ],
+        'style' => null,
         'width' => [
             'width_60' => false,
             'width_70' => false,
@@ -156,15 +150,13 @@ class FilterForProductSidebar extends Component
                         $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
                             $q->whereSlidingDoor(true);
                         });
-                    })->when($this->options['style']['modern'], function (Builder $query) {
+                    })->when(!is_null($this->options['style']), function (Builder $query) {
                         $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
                             $q->whereModern(true);
                         });
-                    })->when($this->options['style']['classic'], function (Builder $query) {
                         $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
                             $q->whereClassic(true);
                         });
-                    })->when($this->options['style']['loft'], function (Builder $query) {
                         $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
                             $q->whereLoft(true);
                         });
@@ -212,34 +204,36 @@ class FilterForProductSidebar extends Component
                         $query->whereHas('category.AdditionalAttribute', function (Builder $q) {
                             $q->whereFramedDoors(true);
                         });
-                    })->when($this->options['decor']['sonoma_oak'], function (Builder $query) {
-                        $query->where('tag', 'sonoma-oak');
-                    })->when($this->options['decor']['natural_oak'], function (Builder $query) {
-                        $query->where('tag', 'natural-oak');
-                    })->when($this->options['decor']['gray_oak'], function (Builder $query) {
-                        $query->where('tag', 'gray-oak');
-                    })->when($this->options['decor']['dark_oak'], function (Builder $query) {
-                        $query->where('tag', 'dark-oak');
-                    })->when($this->options['decor']['beech'], function (Builder $query) {
-                        $query->where('tag', 'beech');
-                    })->when($this->options['decor']['wenge'], function (Builder $query) {
-                        $query->where('tag', 'wenge');
-                    })->when($this->options['decor']['walnut'], function (Builder $query) {
-                        $query->where('tag', 'walnut');
-                    })->when($this->options['decor']['light_walnut'], function (Builder $query) {
-                        $query->where('tag', 'light-walnut');
-                    })->when($this->options['decor']['acacia'], function (Builder $query) {
-                        $query->where('tag', 'acacia');
-                    })->when($this->options['decor']['acacia_light'], function (Builder $query) {
-                        $query->where('tag', 'acacia-light');
-                    })->when($this->options['decor']['light_ash'], function (Builder $query) {
-                        $query->where('tag', 'light-ash');
-                    })->when($this->options['decor']['dark_ash'], function (Builder $query) {
-                        $query->where('tag', 'dark-ash');
-                    })->paginate(15);
+                    })->where(function (Builder $query) {
+                        $query->when($this->options['decor']['sonoma_oak'], function (Builder $q) {
+                            $q->where('tag', 'sonoma-oak');
+                        })->when($this->options['decor']['natural_oak'], function (Builder $q) {
+                            $q->where('tag', 'natural-oak');
+                        })->when($this->options['decor']['gray_oak'], function (Builder $q) {
+                            $q->where('tag', 'gray-oak');
+                        })->when($this->options['decor']['dark_oak'], function (Builder $q) {
+                            $q->where('tag', 'dark-oak');
+                        })->when($this->options['decor']['beech'], function (Builder $q) {
+                            $q->where('tag', 'beech');
+                        })->when($this->options['decor']['wenge'], function (Builder $q) {
+                            $q->where('tag', 'wenge');
+                        })->when($this->options['decor']['walnut'], function (Builder $q) {
+                            $q->where('tag', 'walnut');
+                        })->when($this->options['decor']['light_walnut'], function (Builder $q) {
+                            $q->where('tag', 'light-walnut');
+                        })->when($this->options['decor']['acacia'], function (Builder $q) {
+                            $q->where('tag', 'acacia');
+                        })->when($this->options['decor']['acacia_light'], function (Builder $q) {
+                            $q->where('tag', 'acacia-light');
+                        })->when($this->options['decor']['light_ash'], function (Builder $q) {
+                            $q->where('tag', 'light-ash');
+                        })->when($this->options['decor']['dark_ash'], function (Builder $q) {
+                            $q->where('tag', 'dark-ash');
+                        });
+                    })->paginate(perPage: 20);
 
         } else {
-            $doors = Door::paginate(20);
+            $doors = Door::paginate(perPage: 20)->onEachSide(2);
         }
         return view('livewire.filter-for-product-sidebar', compact('doors'));
     }

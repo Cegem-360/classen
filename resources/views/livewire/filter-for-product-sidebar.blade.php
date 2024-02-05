@@ -223,25 +223,23 @@
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="modern" wire:model="options.style.modern"
-                            wire:click="$refresh" />
+                        <input type="radio" value="modern" wire:model="options.style" wire:click="$refresh" />
                         {{ __('modern') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="classic" wire:model="options.style.classic"
-                            wire:click="$refresh" />
+                        <input type="radio" value="classic" wire:model="options.style" wire:click="$refresh" />
                         {{ __('classic') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="loft" wire:model="options.style.loft"
-                            wire:click="$refresh" />
+                        <input type="radio" value="loft" wire:model="options.style" wire:click="$refresh" />
                         {{ __('loft') }}
                     </label>
                 </div>
+                {{ var_export($options['style']) }}
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">Szélesség</legend>
