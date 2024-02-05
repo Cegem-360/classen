@@ -226,7 +226,7 @@ class FilterForProductSidebar extends Component
                     })->paginate(perPage: 20);
 
         } else {
-            $doors = Door::paginate(perPage: 20)->onEachSide(2);
+            $doors = Door::paginate(perPage: 20)->onEachSide(0);
         }
         return view('livewire.filter-for-product-sidebar', compact('doors'));
     }

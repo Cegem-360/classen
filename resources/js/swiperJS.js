@@ -346,4 +346,37 @@ export function initSwiperJS() {
             }
         });
     });
+
+
+
+
+
+    /* ###############################
+           MOBILE NAV
+      ##################################  */
+    /*
+    document.getElementById('hamburger-btn').addEventListener('click', function() {
+        document.getElementById('mobile-nav').classList.toggle('active');
+        console.log('***HAMBURGER-CLICKED');
+    });
+    */
+    /*
+    const menuBtn = document.getElementById('hamburger-btn');
+    const menu = document.getElementById('mobile-nav');
+
+    // Function to toggle menu
+    function toggleMenu() {
+        console.log('clicked');
+        menu.classList.toggle('active');
+    }
+
+    // Ensuring that the event listener is not added more than once
+    if (menuBtn) {
+        // Remove existing event listeners to avoid duplicates
+        menuBtn.removeEventListener('click', toggleMenu);
+
+        // Add the event listener
+        menuBtn.addEventListener('click', toggleMenu);
+    }
+    */
 }
