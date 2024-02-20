@@ -8,8 +8,8 @@
     <!-- Elonyok -->
     <x-partials.elonyok />
 
-    <div class="mx-auto h-1/2 flex flex-wrap justify-end items-center text-white bg-cover" style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/classen_verti.webp') }}');">
-        <div class="w-1/2 sm:w-full h-[50vh] -mt-12 mb-12 px-16 py-24 bg-zold_attetszo">
+    <div class="ad-banner mx-auto h-1/2 flex flex-wrap justify-end items-center text-white bg-cover" style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/classen_verti.webp') }}');">
+        <div class="banner-container w-1/2 sm:w-full h-[50vh] -mt-12 mb-12 px-16 py-24 bg-zold_attetszo">
             <h3 class="max-w-lg mb-8 text-2xl font-bold">Fa mintázatú beltéri ajtók, a természetesség nevében</h3>
             <p class="max-w-lg text-lg">Élvezze a modern ajtók adta lehetőségeket, teremtse meg álmai otthonát megkötések és kompromisszumok nélkül.</p>
         </div>

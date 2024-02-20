@@ -30,3 +30,7 @@ Route::get('/ajtok/{door}', [DoorController::class, 'show'])->name('door.show');
 
 Route::get('/blog', [ManagePageContentController::class, 'blog'])->name('blog');
 Route::get('/favorites', [ManagePageContentController::class, 'favorites'])->name('favorites');
+
+Route::get('/letoltesek', function () {
+    return view('letoltesek/index');
+});

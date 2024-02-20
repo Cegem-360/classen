@@ -19,6 +19,7 @@
     "dependencies": {
         "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
         "@tailwindcss/typography": "^0.5.9",
+        "gsap": "^3.12.5",
         "jquery": "^3.7.1",
         "postcss-nesting": "^12.0.2",
         "qtip2": "^3.0.3",

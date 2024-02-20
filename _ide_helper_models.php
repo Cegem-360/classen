@@ -1,6 +1,7 @@
 <?php
 
 // @formatter:off
+// phpcs:ignoreFile
 /**
  * A helper file for your Eloquent Models
  * Copy the phpDocs from this file to the correct Model,
@@ -201,7 +202,7 @@ namespace App\Models{
  * @property int $category_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @property-read \App\Models\Category $category
+ * @property-read \App\Models\Category|null $category
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Color> $colors
  * @property-read int|null $colors_count
  * @method static \Database\Factories\DoorFactory factory($count = null, $state = [])
