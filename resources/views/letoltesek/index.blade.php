@@ -1,6 +1,6 @@
 <x-layouts.app>
     <x-nav.breadcrumb>
-        BREADCRUMB
+        Letöltések
     </x-nav.breadcrumb>
 
     <!-- gap -->
