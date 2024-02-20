@@ -23,6 +23,7 @@
                 <div class="basis-1/2 md:hidden flex sm:hidden">
                     <a class="px-4 flex items-center h-full" href="" wire:navigate.hover>{{ __('Our stores') }}</a>
                     <a class="px-4 flex items-center h-full" href="" wire:navigate.hover>{{ __('Where to buy') }}</a>
+                    <a class="px-4 flex items-center h-full" href="/letoltesek/" wire:navigate.hover>Letöltések</a>
                 </div>
                 <div class="basis-1/2 relative flex items-center justify-between h-full">
                     <form class="md:hidden flex items-center border-[1px] border-[#000]" action="">
