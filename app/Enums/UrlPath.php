@@ -14,8 +14,12 @@ use BenSampo\Enum\Enum;
 final class UrlPath extends Enum
 {
     const BASEURL = 'http://admin.classen.cegem360.hu/wp-json/wp/v2/';
+
     const BASEURLWC = 'http://admin.classen.cegem360.hu';
+
     const BASEURLCOSTOME = 'http://admin.classen.cegem360.hu/wp-json/custom/v1/';
+
     const OptionTwo = 1;
+
     const OptionThree = 2;
 }

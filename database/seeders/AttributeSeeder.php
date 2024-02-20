@@ -2,21 +2,19 @@
 
 namespace Database\Seeders;
 
-
-use App\Enums\UrlPath;
-use GuzzleHttp\Client;
 use App\Enums\EndPoint;
+use App\Enums\UrlPath;
 use App\Models\Attribute;
+use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
 class AttributeSeeder extends Seeder
 {
     /**
      * Helper
-     * @var \GuzzleHttp\Client $client
-     *
      */
     public Client $client;
+
     /**
      * Run the database seeds.
      */
@@ -27,7 +25,7 @@ class AttributeSeeder extends Seeder
                 'base_uri' => UrlPath::BASEURL,
             ]);
         $response =
-            $this->client->get(EndPoint::DESIGFORMS . "?per_page=25");
+            $this->client->get(EndPoint::DESIGFORMS.'?per_page=25');
         $designForms = json_decode($response->getBody(), true);
         foreach ($designForms as $designForm) {
             $imgUrl =

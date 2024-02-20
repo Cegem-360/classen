@@ -3,9 +3,8 @@
 namespace Database\Seeders;
 
 use App\Imports\AdditionalAttributeImport;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
-use Illuminate\Database\Seeder;
 use Excel;
+use Illuminate\Database\Seeder;
 
 class AdditionalAttributeSeeder extends Seeder
 {

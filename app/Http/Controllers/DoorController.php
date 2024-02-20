@@ -3,23 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\Door;
-use App\Enums\UrlPath;
 use GuzzleHttp\Client;
-use App\Enums\EndPoint;
-use App\Enums\PostPageIds;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Cache;
 
 class DoorController extends Controller
 {
     public Client $client;
+
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
         $products = Door::with('category')->get();
+
         return view('doors.index', compact('products'));
     }
 
@@ -49,6 +46,7 @@ class DoorController extends Controller
         $catalogs = $category->attributes()->get();
         $colorVariants = Door::whereName($door->name)->whereCategoryId($door->category_id)->get()->groupBy('tag_category')->all();
         $modelVariants = Door::whereTag($door->tag)->whereCategoryId($door->category_id)->get()->sortBy('name')->all();
+
         return view('doors.show', compact('door', 'category', 'catalogs', 'colorVariants', 'modelVariants'));
     }
 

@@ -2,13 +2,10 @@
 
 namespace App\Livewire;
 
-use Livewire\Component;
-use App\Models\Category;
-use Illuminate\Support\Collection;
 use App\Models\AdditionalAttribute;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Builder;
-
-
+use Livewire\Component;
 
 class FilterForCategorySidebar extends Component
 {
@@ -46,14 +43,17 @@ class FilterForCategorySidebar extends Component
             'framed_doors' => false,
         ],
     ];
+
     public $collections;
 
     public function mount()
     {
     }
+
     public function updated()
     {
     }
+
     public function render()
     {
         if ($this->in_array_recursive(true, $this->options, true)) {
@@ -124,8 +124,10 @@ class FilterForCategorySidebar extends Component
         } else {
             $this->collections = Category::all()->groupBy('breadcrumb')->all();
         }
+
         return view('livewire.filter-for-category-sidebar', ['collections' => $this->collections]);
     }
+
     public function in_array_recursive(mixed $needle, array $haystack, bool $strict): bool
     {
         foreach ($haystack as $element) {

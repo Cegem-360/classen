@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
+ *
  * @method static \Database\Factories\ParameterFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter newQuery()
@@ -18,6 +19,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereUpdatedAt($value)
+ *
  * @mixin \Eloquent
  */
 class Parameter extends Model

@@ -2,15 +2,12 @@
 
 namespace App\Console\Commands;
 
+use App\Imports\AdditionalAttributeImport;
 use Excel;
 use Illuminate\Console\Command;
-use App\Models\AdditionalAttribute;
-use App\Imports\AdditionalAttributeImport;
 
 class ImportAdditionalAttributes extends Command
 {
-
-
     /**
      * The name and signature of the console command.
      *

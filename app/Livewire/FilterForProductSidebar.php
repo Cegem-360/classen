@@ -3,16 +3,15 @@
 namespace App\Livewire;
 
 use App\Models\Door;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Support\Collection;
 use Livewire\Component;
 use Livewire\WithPagination;
-use Illuminate\Support\Collection;
-use App\Models\AdditionalAttribute;
-use App\Models\Category;
-use Illuminate\Database\Eloquent\Builder;
 
 class FilterForProductSidebar extends Component
 {
     use WithPagination;
+
     public $colors = [
         'colour' => [
             'white' => false,
@@ -26,6 +25,7 @@ class FilterForProductSidebar extends Component
         ],
 
     ];
+
     public $options = [
         'decor' => [
             'sonoma_oak' => false,
@@ -76,16 +76,18 @@ class FilterForProductSidebar extends Component
             'framed_doors' => false,
         ],
 
-
     ];
+
     public $collections;
 
     public function mount()
     {
     }
+
     public function updated()
     {
     }
+
     public function render()
     {
         if ($this->in_array_recursive(true, $this->options, true)) {
@@ -228,8 +230,10 @@ class FilterForProductSidebar extends Component
         } else {
             $doors = Door::paginate(perPage: 20)->onEachSide(0);
         }
+
         return view('livewire.filter-for-product-sidebar', compact('doors'));
     }
+
     public function in_array_recursive(mixed $needle, array $haystack, bool $strict): bool
     {
         foreach ($haystack as $element) {

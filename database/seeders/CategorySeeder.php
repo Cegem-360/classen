@@ -2,18 +2,15 @@
 
 namespace Database\Seeders;
 
-use App\Models\Door;
-use App\Models\Color;
-use App\Enums\UrlPath;
-use GuzzleHttp\Client;
 use App\Enums\EndPoint;
-use App\Models\Category;
+use App\Enums\UrlPath;
 use App\Models\Attribute;
-use App\Enums\PostPageIds;
-use Illuminate\Database\Seeder;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Cache;
+use App\Models\Category;
+use App\Models\Door;
 use Automattic\WooCommerce\Client as WC;
+use GuzzleHttp\Client;
+use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Cache;
 
 class CategorySeeder extends Seeder
 {
@@ -40,18 +37,18 @@ class CategorySeeder extends Seeder
         $woocommerceCategories = $woocommerce->get(EndPoint::PRODUCTSCATEGORIES, ['hide_empty' => true, 'per_page' => 100]);
         foreach ($woocommerceCategories as $woocommerceCategory) {
             //categories (Post)
-            $categories = $this->client->get(EndPoint::CATEGORIES . '?per_page=100');
+            $categories = $this->client->get(EndPoint::CATEGORIES.'?per_page=100');
             $categories = json_decode($categories->getBody(), true);
             $categories = collect($categories);
             $categories = $categories->where('name', $woocommerceCategory->name)->first();
-            if (is_null($categories))
+            if (is_null($categories)) {
                 continue;
+            }
             $additional_options = null;
             $door_specification = null;
             $technical_parameter = null;
             $img = null;
             $gallery_imgs = null;
-
 
             $additional_options = ($categories['acf']['additional_options']) ? $categories['acf']['additional_options'] : null;
             $additional_options = $this->str_replace_json('false', 'null', $additional_options);
@@ -74,12 +71,12 @@ class CategorySeeder extends Seeder
                 ]
             );
 
-
-            $attributes = explode("|", $woocommerceCategory->description);
+            $attributes = explode('|', $woocommerceCategory->description);
             foreach ($attributes as $attribute) {
-                if (is_null($attribute))
+                if (is_null($attribute)) {
                     continue;
-                if (isset($attribute) && $attribute != "") {
+                }
+                if (isset($attribute) && $attribute != '') {
                     $attribute = Attribute::whereName($attribute)->first();
                     $created_category->attributes()->attach($attribute);
                 }
@@ -90,22 +87,24 @@ class CategorySeeder extends Seeder
                 $cover = $product->images[0]->src;
                 try {
 
-                    $tag = Cache::remember("tag_slug_" . $product->tags[0]->slug, 1, function () use ($woocommerce, $product) {
+                    $tag = Cache::remember('tag_slug_'.$product->tags[0]->slug, 1, function () use ($woocommerce, $product) {
                         $tag = $woocommerce->get(EndPoint::PRODUCTSTAGS, ['slug' => $product->tags[0]->slug]);
+
                         return $tag;
                     });
                 } catch (\Throwable $th) {
                     dd($product);
                 }
 
-
-                if (is_null($tag))
+                if (is_null($tag)) {
                     continue;
+                }
                 $tag = collect($tag)->first();
                 $exploded = ['', ''];
                 $exploded = explode('|', $tag->description);
-                if (!isset($exploded[1]))
+                if (! isset($exploded[1])) {
                     $exploded = [$exploded[0], ''];
+                }
                 $woocommerceCategory = Category::whereName($product->categories[0]->name)->first();
                 Door::create([
                     'name' => $product->name,
@@ -114,12 +113,13 @@ class CategorySeeder extends Seeder
                     'tag' => $tag->slug,
                     'tag_name' => $tag->name,
                     'tag_img_url' => $exploded[0],
-                    'tag_category' => $exploded[1]
+                    'tag_category' => $exploded[1],
                 ]);
             }
         }
     }
-    function str_replace_json($search, $replace, $subject)
+
+    public function str_replace_json($search, $replace, $subject)
     {
         return json_decode(str_replace($search, $replace, json_encode($subject)));
     }

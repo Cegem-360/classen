@@ -7,14 +7,14 @@ use App\Enums\PostPageIds;
 use App\Enums\UrlPath;
 use App\Models\Door;
 use Cookie;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Cache;
 use GuzzleHttp\Client;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class ManagePageContentController extends Controller
 {
     public Client $client;
+
     /**
      * Display a listing of the resource.
      */
@@ -34,6 +34,7 @@ class ManagePageContentController extends Controller
         $imgUrl = json_decode($imgUrl->getBody());
         $imgUrl = collect($imgUrl)->first();
         dd($imgUrl);
+
         return view('test', compact('designForms'));
     }
 
@@ -52,27 +53,30 @@ class ManagePageContentController extends Controller
         $category = collect($categories)->firstWhere('name', $category_name);
         $category_id = $category->id;
 
-        $wpApiData = Cache::remember("wpApiData", now()->addDay(), function () {
-            $response = $this->client->get(EndPoint::PAGES . PostPageIds::MAINPAGE);
+        $wpApiData = Cache::remember('wpApiData', now()->addDay(), function () {
+            $response = $this->client->get(EndPoint::PAGES.PostPageIds::MAINPAGE);
             $data = $response->getBody()->getContents();
             $page = json_decode($data, true);
+
             return $page;
         });
 
-        $assets = Cache::remember("assets", now()->addDay(), function () use ($category_id) {
-            $response = $this->client->get(EndPoint::POSTS . "?categories=" . $category_id);
+        $assets = Cache::remember('assets', now()->addDay(), function () use ($category_id) {
+            $response = $this->client->get(EndPoint::POSTS.'?categories='.$category_id);
             $data = $response->getBody()->getContents();
             $assets = json_decode($data, true);
+
             return $assets;
         });
+
         return view('blog', compact('wpApiData', 'assets'));
     }
 
-
     public function favorites(Request $request)
     {
-        $favoriteProductIds =  json_decode(Cookie::get('favorites'));
+        $favoriteProductIds = json_decode(Cookie::get('favorites'));
         $products = Door::whereIn('id', $favoriteProductIds)->get();
+
         return view('favorites', compact('products'));
     }
 

@@ -18,13 +18,22 @@ use BenSampo\Enum\Enum;
 final class EndPoint extends Enum
 {
     const POSTS = 'posts/';
+
     const MAEDIA = 'media/';
+
     const PAGES = 'pages/';
+
     const DESIGFORMS = 'design_forms/';
+
     const CATEGORIES = 'categories/';
+
     const CATEGORY = 'category/';
+
     const PRODUCTS = 'products';
+
     const PRODUCTSCATEGORIES = 'products/categories';
+
     const PRODUCTSTAGS = 'products/tags';
+
     const COLLECTIONS = 'collections/';
 }

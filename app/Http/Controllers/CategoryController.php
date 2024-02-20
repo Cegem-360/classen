@@ -2,12 +2,9 @@
 
 namespace App\Http\Controllers;
 
-
-use App\Models\Product;
 use App\Models\Category;
-use Illuminate\Http\Request;
 use Illuminate\Contracts\View\View;
-
+use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -43,13 +40,13 @@ class CategoryController extends Controller
         $category = Category::whereName($category)->first();
         $doors = collect($category->doors()->get());
         $catalogs = $category->attributes()->get();
-        $tags =  $doors->mapToGroups(
+        $tags = $doors->mapToGroups(
             function ($item, $key) {
                 return [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category']]];
             }
         )->all();
-        $doors =  $doors->groupBy('tag');
-        $doors =  $doors->all();
+        $doors = $doors->groupBy('tag');
+        $doors = $doors->all();
         /*$doors_tmp =  $doors->mapToGroups(
             function ($item, $key) {
                 return [$item['tag'] => [$item['name'] => $item['img_url']]];

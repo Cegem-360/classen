@@ -185,8 +185,6 @@ return [
         // 'Example' => App\Facades\Example::class,
     ])->toArray(),
 
-
-
     /*
     |--------------------------------------------------------------------------
     | Costume config
@@ -195,8 +193,7 @@ return [
     |
     |
     */
-    'woocommerce_api_key'=> env('WORDPRESS_API_KEY'),
-    'woocommerce_api_secret_key'=> env('WORDPRESS_API_SECRET_KEY'),
-
+    'woocommerce_api_key' => env('WORDPRESS_API_KEY'),
+    'woocommerce_api_secret_key' => env('WORDPRESS_API_SECRET_KEY'),
 
 ];

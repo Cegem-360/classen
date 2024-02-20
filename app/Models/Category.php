@@ -2,16 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
-
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 
 class Category extends Model
 {
     use HasFactory;
+
     protected $fillable = ['id', 'name', 'category_id', 'technical_parameter', 'additional_options', 'door_specification', 'gallery_imgs', 'breadcrumb'];
 
     public function doors(): HasMany
@@ -26,22 +26,20 @@ class Category extends Model
 
     /**
      * Get all of the parameters for the Category
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
      */
     public function parameters(): HasMany
     {
         return $this->hasMany(Parameter::class);
     }
+
     /**
      * Get the AdditionalAttribute associated with the Category
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function AdditionalAttribute(): HasOne
     {
         return $this->hasOne(AdditionalAttribute::class, 'category_id', 'id');
     }
+
     protected $casts = [
         'technical_parameter' => 'array',
         'additional_options' => 'array',
