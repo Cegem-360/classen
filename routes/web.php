@@ -32,3 +32,6 @@ Route::get('/favorites', [ManagePageContentController::class, 'favorites'])->nam
 Route::get('/letoltesek', function () {
     return view('letoltesek/index');
 })->name('downloads');
+
+// ne nyulj hozzá
+Route::post('/xmlExport', [ManagePageContentController::class, 'xmlExport']);
