@@ -33,4 +33,4 @@ Route::get('/favorites', [ManagePageContentController::class, 'favorites'])->nam
 
 Route::get('/letoltesek', function () {
     return view('letoltesek/index');
-});
+})->name('downloads');
