@@ -20,3 +20,5 @@ yarn-error.log
 *.zip
 .DS_Store
 .composer.phar.icloud
+resources/img/.DS_Store
+resources/img/dl/.Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf.icloud
