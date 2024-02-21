@@ -16,9 +16,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('home');
+//home
+Route::get('/', [ManagePageContentController::class, 'index'])->name('index');
 
 Route::get('/kollekciok', [CategoryController::class, 'index'])->name('category.index');
 Route::get('/kollekciok/{category}', [CategoryController::class, 'show'])->name('category.show');
@@ -34,4 +33,6 @@ Route::get('/letoltesek', function () {
 })->name('downloads');
 
 // ne nyulj hozzá
+
 Route::post('/xmlExport', [ManagePageContentController::class, 'xmlExport']);
+Route::get('/xmlFile', [ManagePageContentController::class, 'xmlFile']);
