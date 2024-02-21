@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Quotation;
+use App\Models\QuotationItem;
+use Illuminate\Http\Client\Request;
+
 class QuotationController extends Controller
 {
     public function index()
