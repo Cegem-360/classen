@@ -34,10 +34,10 @@ Route::get('/letoltesek', function () {
 
 Route::name('quotation')->group(function () {
     Route::get('/ajanlatkeres', [ManagePageContentController::class, 'quotation'])->name('index');
-    Route::post('/add/{quotationItem}', [ManagePageContentController::class, 'quotation'])->name('add');
-    Route::post('/store', [ManagePageContentController::class, 'quotation'])->name('store');
-    Route::get('/sikeres', [ManagePageContentController::class, 'quotation'])->name('success');
-    Route::delete('/delete/{quotationItem}', [ManagePageContentController::class, 'quotation'])->name('remove');
+    Route::post('/add/{quotationItem}', [ManagePageContentController::class, 'addItem'])->name('add');
+    Route::post('/store', [ManagePageContentController::class, 'store'])->name('store');
+    Route::get('/sikeres', [ManagePageContentController::class, 'success'])->name('success');
+    Route::delete('/delete/{quotationItem}', [ManagePageContentController::class, 'deleteItem'])->name('remove');
 });
 
 // ne nyulj hozzá
