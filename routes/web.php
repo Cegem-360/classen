@@ -3,6 +3,7 @@
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DoorController;
 use App\Http\Controllers\ManagePageContentController;
+use App\Http\Controllers\QuotationController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,12 +33,13 @@ Route::get('/letoltesek', function () {
     return view('letoltesek/index');
 })->name('downloads');
 
-Route::name('quotation')->group(function () {
-    Route::get('/ajanlatkeres', [ManagePageContentController::class, 'quotation'])->name('index');
-    Route::post('/add/{quotationItem}', [ManagePageContentController::class, 'addItem'])->name('add');
-    Route::post('/store', [ManagePageContentController::class, 'store'])->name('store');
-    Route::get('/sikeres', [ManagePageContentController::class, 'success'])->name('success');
-    Route::delete('/delete/{quotationItem}', [ManagePageContentController::class, 'deleteItem'])->name('remove');
+Route::get('/ajanlatkeres', [QuotationController::class, 'index'])->name('quotation.index');
+Route::prefix('quotation')->as('quotation.')->group(function () {
+
+    Route::post('/add/{door}', [QuotationController::class, 'addItem'])->name('add');
+    Route::post('/store', [QuotationController::class, 'store'])->name('store');
+    Route::get('/sikeres', [QuotationController::class, 'success'])->name('success');
+    Route::delete('/delete/{quotationItem}', [QuotationController::class, 'deleteItem'])->name('remove');
 });
 
 // ne nyulj hozzá

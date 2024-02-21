@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Door;
 use App\Models\Quotation;
 use App\Models\QuotationItem;
 use Illuminate\Http\Client\Request;
@@ -10,7 +11,14 @@ class QuotationController extends Controller
 {
     public function index()
     {
-        return view('quotation.index');
+        $quotation = session('quotation', Quotation::create([
+            'session_id' => session()->getId(),
+        ]));
+        if (session()->missing('quotation')) {
+            session(['quotation' => $quotation]);
+        }
+        $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
+        return view('quotation.index', compact('quotation', 'quotationItems'));
     }
 
     public function success()
@@ -18,28 +26,40 @@ class QuotationController extends Controller
         return view('quotation.success');
     }
 
-    public function addItem(Request $request, QuotationItem $quotationItem)
+    public function addItem(Door $door)
     {
-        $quotationItem->update($request->all());
+        $quotation = session()->get('quotation', Quotation::create([
+            'session_id' => session()->getId(),
+        ]));
+        QuotationItem::firstOrCreate([
+            'quotation_id' => $quotation->id,
+            'door_id' => $door->id,
+        ]);
+        session()->put('quotation', $quotation);
 
-        return response()->json($quotationItem, 200);
+        return redirect()->route('quotation.index');
     }
 
     public function deleteItem(QuotationItem $quotationItem)
     {
         $quotationItem->delete();
 
-        return response()->json(null, 204);
+        return redirect()->route('quotation.index');
     }
 
-    public function store(Request $request)
+    public function store(Door $door)
     {
-        $quotation = Quotation::create($request->all());
+        $quotation = session()->get('quotation', Quotation::create([
+            'session_id' => session()->getId(),
+        ]));
+        $quotation->update([
+            'first_name' => request('first_name'),
+            'last_name' => request('last_name'),
+            'email' => request('email'),
+            'phone' => request('phone'),
+            'message' => request('message'),
+        ]);
 
-        foreach ($request->items as $item) {
-            $quotation->items()->create($item);
-        }
-
-        return response()->json($quotation, 201);
+        return redirect()->route('quotation.success');
     }
 }

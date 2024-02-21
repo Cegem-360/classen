@@ -1,6 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require("tailwindcss/colors");
-//import forms from '@tailwindcss/forms';
+import forms from '@tailwindcss/forms';
 //import plugin from '@tailwindcss/aspect-ratio';
 
 /** @type {import('tailwindcss').Config} */
@@ -44,11 +44,11 @@ module.exports = {
         screens: {
             /* Mobile first*/
             /*
-            xs: '380px',
-            sm: '560px',
-            md: '768px',
-            lg: '976px',
-            xl: '1440px',
+                        xs: '380px',
+                        sm: '560px',
+                        md: '768px',
+                        lg: '976px',
+                        xl: '1440px',
             */
             // DESKTOP FIRST
             '2xl': { 'max': '1680px' },
