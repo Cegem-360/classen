@@ -5,7 +5,7 @@
                 <div class="flex">
                     <div class="basis-2/5">
                         <h1 class="m-3 ml-10">
-                            <a class="" href="{{ route('home') }}" title="Classen" wire:navigate.hover>
+                            <a class="" href="{{ route('index') }}" title="Classen" wire:navigate.hover>
                                 <img class="min-w-24 w-24" src="{{ Vite::asset('resources/img/arcadia98-logo.svg') }}"
                                     alt="Arcadia'98">
                             </a>
