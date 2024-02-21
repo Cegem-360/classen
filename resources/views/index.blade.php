@@ -34,7 +34,9 @@
 
     <!-- Szakértő segítség -->
     <x-partials.expert-help />
-
+    @foreach ($categories as $category)
+        {{-- $category->img_url --}}
+    @endforeach
     <!-- Footer -->
     <x-footer.layout />
 
