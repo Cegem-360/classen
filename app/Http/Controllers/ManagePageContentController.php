@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use Cookie;
-use App\Models\Door;
-use App\Enums\UrlPath;
-use GuzzleHttp\Client;
 use App\Enums\EndPoint;
-use App\Models\Category;
 use App\Enums\PostPageIds;
+use App\Enums\UrlPath;
+use App\Models\Category;
+use App\Models\Door;
+use Cookie;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
@@ -26,6 +26,7 @@ class ManagePageContentController extends Controller
 
         return view('index', compact('categories'));
     }
+
     public function test()
     {
         $this->client =
@@ -62,7 +63,7 @@ class ManagePageContentController extends Controller
         $category_id = $category->id;
 
         $wpApiData = Cache::remember('wpApiData', now()->addDay(), function () {
-            $response = $this->client->get(EndPoint::PAGES . PostPageIds::MAINPAGE);
+            $response = $this->client->get(EndPoint::PAGES.PostPageIds::MAINPAGE);
             $data = $response->getBody()->getContents();
             $page = json_decode($data, true);
 
@@ -70,7 +71,7 @@ class ManagePageContentController extends Controller
         });
 
         $assets = Cache::remember('assets', now()->addDay(), function () use ($category_id) {
-            $response = $this->client->get(EndPoint::POSTS . '?categories=' . $category_id);
+            $response = $this->client->get(EndPoint::POSTS.'?categories='.$category_id);
             $data = $response->getBody()->getContents();
             $assets = json_decode($data, true);
 
@@ -87,6 +88,7 @@ class ManagePageContentController extends Controller
 
         return view('favorites', compact('products'));
     }
+
     //ne nyulj hozzá
     public function xmlExport(Request $request)
     {
@@ -101,10 +103,12 @@ class ManagePageContentController extends Controller
         // Optionally, return the filename or any other response if needed
         return response();
     }
+
     //ne nyulj hozzá
     public function xmlFile()
     {
         $filePath = storage_path('app/axelpro_exp_items_.xml');
+
         return response()->file($filePath);
     }
 
