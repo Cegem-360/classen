@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\Door;
 use App\Models\Quotation;
-use App\Models\QuotationItem;
 use Illuminate\Http\Request;
+use App\Models\QuotationItem;
+use App\Mail\RequestQuotationSended;
+use Illuminate\Support\Facades\Mail;
+use Validator;
 
 class QuotationController extends Controller
 {
@@ -32,7 +35,7 @@ class QuotationController extends Controller
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),
         ]));
-        QuotationItem::firstOrCreate([
+        QuotationItem::where('quotation_id', $quotation->id)->where('door_id', $door->id)->firstOrCreate([
             'quotation_id' => $quotation->id,
             'door_id' => $door->id,
         ]);
@@ -53,15 +56,23 @@ class QuotationController extends Controller
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),
         ]));
+        $validated = Validator::make($request->all(), [
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'message' => 'required',
+        ])->validate();
         // $validated = $request->validated();
         $quotation->update([
-            'first_name' => $request->first_name,
-            'last_name' => $request->last_name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'message' => $request->message,
+            'first_name' => $validated['first_name'],
+            'last_name' => $validated['last_name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'message' => $validated['message'],
         ]);
-
+        $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
+        Mail::to($request->email)->send(new RequestQuotationSended($quotation, $quotationItems));
         return redirect()->route('quotation.success');
     }
 }
