@@ -6,7 +6,7 @@
     <!-- gap -->
     <div class="min-h-[60px]"></div>
 
-    <div class="mx-16">
+    <div class="mx-16 md:mx-8 sm:mx-4">
         <div class="mb-16">
             <h2 class="mb-3 text-4xl font-bold">Letöltések</h2>
             <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
@@ -43,7 +43,7 @@
     </div>
 
     <!-- gap -->
-    <div class="min-h-[180px]"></div>
+    <div class="min-h-[180px] md:min-h-[60px]"></div>
 
     <x-footer.layout />
 

@@ -6,21 +6,21 @@
     <!-- gap -->
     <div class="min-h-[60px]"></div>
 
-    <div class="mx-16">
+    <div class="mx-16 md:mx-8 sm:mx-4">
         <div class="mb-16">
             <h2 class="mb-3 text-4xl font-bold">Árajánlat kérés</h2>
             <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
         </div>
-        <div class="max-w-2xl lg:max-w-7xl">
+        <div class="max-w-7xl">
             <h3 class="text-xl font-bold tracking-tight text-gray-900">Customers also purchased</h3>
 
-            <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 xl:gap-x-8 lg:grid-cols-4 sm:grid-cols-2">
+            <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($quotationItems ?? [] as $quotationItem)
                     <div class="group relative">
                         <div
-                            class="aspect-h-1 aspect-w-1 lg:aspect-none w-full overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75 lg:h-80">
-                            <img class="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                                src="{{ $quotationItem->door->img_url }}" alt="Front of men&#039;s Basic Tee in black.">
+                            class="aspect-[7/16] sm:aspect-none overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
+                            <img class="object-cover object-center h-full w-full"
+                                src="{{ $quotationItem->door->img_url }}" alt="{{ $quotationItem->door->name }}">
                         </div>
                         <div class="mt-4 flex justify-between">
                             <div>

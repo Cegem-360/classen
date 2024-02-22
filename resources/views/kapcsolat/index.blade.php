@@ -7,7 +7,7 @@
     <div class="min-h-[60px]"></div>
 
     <div class="mx-16">
-        <div class="mb-16">
+        <div class="mb-16 md:mx-8 sm:mx-4">
             <h2 class="mb-3 text-4xl font-bold">Kapcsolat</h2>
             <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
         </div>
