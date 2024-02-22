@@ -47,17 +47,17 @@ class QuotationController extends Controller
         return redirect()->route('quotation.index');
     }
 
-    public function store(Door $door)
+    public function store(Request $request, Door $door)
     {
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),
         ]));
         $quotation->update([
-            'first_name' => request('first_name'),
-            'last_name' => request('last_name'),
-            'email' => request('email'),
-            'phone' => request('phone'),
-            'message' => request('message'),
+            'first_name' => $request->last_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'message' => $request->message,
         ]);
 
         return redirect()->route('quotation.success');
