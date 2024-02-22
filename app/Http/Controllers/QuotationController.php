@@ -48,7 +48,7 @@ class QuotationController extends Controller
         return redirect()->route('quotation.index');
     }
 
-    public function store(QuotationRequest $request, Door $door)
+    public function store(QuotationRequest $request)
     {
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),
