@@ -12,7 +12,14 @@ class Door extends Model
     use HasFactory;
 
     protected $fillable = [
-        'id', 'name', 'img_url', 'tag', 'tag_img_url', 'tag_category',
+        'id',
+        'product_id',
+        'price',
+        'name',
+        'img_url',
+        'tag',
+        'tag_img_url',
+        'tag_category',
     ];
 
     public function category(): BelongsTo

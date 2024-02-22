@@ -37,7 +37,7 @@ class CategorySeeder extends Seeder
         $woocommerceCategories = $woocommerce->get(EndPoint::PRODUCTSCATEGORIES, ['hide_empty' => true, 'per_page' => 100]);
         foreach ($woocommerceCategories as $woocommerceCategory) {
             //categories (Post)
-            $categories = $this->client->get(EndPoint::CATEGORIES.'?per_page=100');
+            $categories = $this->client->get(EndPoint::CATEGORIES . '?per_page=100');
             $categories = json_decode($categories->getBody(), true);
             $categories = collect($categories);
             $categories = $categories->where('name', $woocommerceCategory->name)->first();
@@ -87,7 +87,7 @@ class CategorySeeder extends Seeder
                 $cover = $product->images[0]->src;
                 try {
 
-                    $tag = Cache::remember('tag_slug_'.$product->tags[0]->slug, 1, function () use ($woocommerce, $product) {
+                    $tag = Cache::remember('tag_slug_' . $product->tags[0]->slug, 1, function () use ($woocommerce, $product) {
                         $tag = $woocommerce->get(EndPoint::PRODUCTSTAGS, ['slug' => $product->tags[0]->slug]);
 
                         return $tag;
@@ -102,11 +102,17 @@ class CategorySeeder extends Seeder
                 $tag = collect($tag)->first();
                 $exploded = ['', ''];
                 $exploded = explode('|', $tag->description);
-                if (! isset($exploded[1])) {
+                if (!isset($exploded[1])) {
                     $exploded = [$exploded[0], ''];
                 }
+                if (!is_numeric($product->regular_price))
+                    $product->regular_price = 0;
                 $woocommerceCategory = Category::whereName($product->categories[0]->name)->first();
+
                 Door::create([
+                    'id' => $product->id,
+                    'product_id' => $product->id,
+                    'price' => $product->regular_price,
                     'name' => $product->name,
                     'img_url' => $cover,
                     'category_id' => $woocommerceCategory->id,

@@ -14,6 +14,8 @@ return new class extends Migration
     {
         Schema::create('doors', function (Blueprint $table) {
             $table->id();
+            $table->integer('product_id')->nullable();
+            $table->integer('price')->default(0)->nullable();
             $table->string('name');
             $table->string('img_url');
             $table->string('tag');
