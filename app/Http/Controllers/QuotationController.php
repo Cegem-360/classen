@@ -6,8 +6,6 @@ use App\Models\Door;
 use App\Models\Quotation;
 use App\Models\QuotationItem;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Log;
-use App\Http\Requests\QuotationRequest;
 
 class QuotationController extends Controller
 {
@@ -20,6 +18,7 @@ class QuotationController extends Controller
             session(['quotation' => $quotation]);
         }
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
+
         return view('quotation.index', compact('quotation', 'quotationItems'));
     }
 

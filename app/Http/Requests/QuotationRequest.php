@@ -24,7 +24,7 @@ class QuotationRequest extends FormRequest
         return [
             'first_name' => ['required', 'string'],
             'last_name' => ['required', 'string'],
-            'email' => ['required',],
+            'email' => ['required'],
             'phone' => ['required'],
             'massage' => ['required'],
         ];

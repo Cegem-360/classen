@@ -51,3 +51,7 @@ Route::prefix('quotation')->as('quotation.')->group(function () {
 // ne nyulj hozzá
 Route::post('/xmlExport', [ManagePageContentController::class, 'xmlExport']);
 Route::get('/xmlFile', [ManagePageContentController::class, 'xmlFile']);
+
+Route::get('/quoteMail', function () {
+    return view('mail.quotation.sended');
+})->name('quote');
