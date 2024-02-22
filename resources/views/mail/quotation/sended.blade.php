@@ -134,7 +134,7 @@
             <tr>
                 <!-- Background -->
                 <td style="background-size: cover; background-position: center;" align="center" bgcolor="#333333"
-                    background="img/bg-main-a.jpg">
+                    background="http://arcadia98.cegem360.hu/build/assets/drzwi-przesuwne2-1920x768-610daff4.webp">
                     <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
 
                         <tr>
@@ -142,7 +142,7 @@
                         </tr>
 
                         <tr>
-                            <td style="font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 400; color: #ffffff; line-height: 48px; letter-spacing: 4px;"
+                            <td style="font-family: 'Montserrat', sans-serif; font-size: 42px; font-weight: 400; color: #000000; line-height: 48px; letter-spacing: 4px;"
                                 align="center">
                                 ÁRAJÁNLAT
                             </td>
@@ -153,7 +153,7 @@
                         </tr>
 
                         <tr>
-                            <td style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 400; color: #ffffff; line-height: 24px; letter-spacing: 2px;"
+                            <td style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #000000; line-height: 24px; letter-spacing: 2px;"
                                 align="center">
                                 Minta Ügyfél részére
                             </td>
@@ -165,7 +165,7 @@
                                 <table width="75" border="0" cellpadding="0" cellspacing="0">
                                     <!-- Edit Underline -->
                                     <tr>
-                                        <td style="border-bottom: 2px solid #ffffff;" height="30"></td>
+                                        <td style="border-bottom: 2px solid #000000;" height="30"></td>
                                     </tr>
                                 </table>
                             </td>
@@ -182,6 +182,68 @@
         </table>
         <!-- END MAIN A -->
 
+        <!-- HEADLINE AND CONTENT -->
+        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center" bgcolor="#eeeeee">
+                    <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
+
+                        <tr>
+                            <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td style="font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 32px;"
+                                align="center">
+                                Árajánlat száma: #12345
+                            </td>
+                        </tr>
+
+                        <!-- Underline -->
+                        <tr>
+                            <td align="center">
+                                <table width="75" border="0" cellpadding="0" cellspacing="0">
+                                    <!-- Edit Underline -->
+                                    <tr>
+                                        <td style="border-bottom: 2px solid #000000;" height="20"></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <!-- End Underline -->
+
+                        <tr>
+                            <td style="font-size: 1px; line-height: 30px;" height="30">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
+                                align="center">
+                                Köszönjük, hogy az [Cég neve] weboldalán keresztül ajánlatkérést nyújtott be beltéri ajtóinkra vonatkozóan. Nagyra értékeljük érdeklődését termékeink iránt, és örömmel állunk rendelkezésére, hogy segítsünk megtalálni az Ön otthonához leginkább illő megoldásokat.
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="font-size: 20px; line-height: 20px;" height="60">&nbsp;</td>
+                        </tr>
+
+                        <tr>
+                            <td style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 28px;"
+                                align="center">
+                                Az alábbiakban találja a kiválasztott termékek részletes listáját és azok fő jellemzőit:
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
+                        </tr>
+
+                    </table>
+                </td>
+            </tr>
+        </table>
+        <!-- END HEADLINE AND CONTENT -->
+
         <!-- ARTICLE 2 -->
         <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
@@ -190,7 +252,7 @@
 
                         <tr>
                             <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
-                        </tr>
+                            </tr>
 
                         <tr>
                             <td>
@@ -200,8 +262,8 @@
 
                                     <tr>
                                         <td align="center">
-                                            <img class="img-full" src="img/img287-1.jpg" alt="img" width="287"
-                                                height="192">
+                                            <img class="img-full" src="http://admin.classen.cegem360.hu/wp-content/uploads/2023/10/diva_przesuwne_jesion-grafitowy.jpeg" alt="img" width="140"
+                                                height="320">
                                         </td>
                                     </tr>
 
@@ -231,12 +293,23 @@
                                         <td style="font-size: 1px; line-height: 20px;" height="20">&nbsp;</td>
                                     </tr>
 
+                                    <!-- Button -->
                                     <tr>
-                                        <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
-                                            align="center">
-                                            Lorem ipsum
+                                        <td align="center">
+                                            <table style="border-radius: 2px;" align="center" border="0" cellpadding="0"
+                                                cellspacing="0" bgcolor="#000000">
+                                                <tr>
+                                                    <td style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 600; color: #ffffff; line-height: 24px; padding-left: 53px; padding-right: 53px;"
+                                                        align="center" height="44">
+                                                        <a href="#" style="text-decoration: none; color: #ffffff;">
+                                                            Termékleírás
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </td>
                                     </tr>
+                                    <!-- End Button -->
 
                                 </table>
 
@@ -253,12 +326,12 @@
 
                                 <table class="full-width"
                                     style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="287" align="right" border="0" cellpadding="0" cellspacing="0">
+                                    width="287" align="left" border="0" cellpadding="0" cellspacing="0">
 
                                     <tr>
                                         <td align="center">
-                                            <img class="img-full" src="img/img287-2.jpg" alt="img"
-                                                width="287" height="192">
+                                            <img class="img-full" src="http://admin.classen.cegem360.hu/wp-content/uploads/2023/10/diva_przesuwne_jesion-sniezny.jpeg" alt="img" width="140"
+                                                height="320">
                                         </td>
                                     </tr>
 
@@ -267,7 +340,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
+                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
                                             align="center">
                                             AERO
                                         </td>
@@ -278,7 +351,7 @@
                                     </tr>
 
                                     <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
+                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
                                             align="center">
                                             Model 2
                                         </td>
@@ -288,12 +361,23 @@
                                         <td style="font-size: 1px; line-height: 20px;" height="20">&nbsp;</td>
                                     </tr>
 
+                                    <!-- Button -->
                                     <tr>
-                                        <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
-                                            align="center">
-                                            Lorem ipsum
+                                        <td align="center">
+                                            <table style="border-radius: 2px;" align="center" border="0" cellpadding="0"
+                                                cellspacing="0" bgcolor="#000000">
+                                                <tr>
+                                                    <td style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 600; color: #ffffff; line-height: 24px; padding-left: 53px; padding-right: 53px;"
+                                                        align="center" height="44">
+                                                        <a href="#" style="text-decoration: none; color: #ffffff;">
+                                                            Termékleírás
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </table>
                                         </td>
                                     </tr>
+                                    <!-- End Button -->
 
                                 </table>
 
@@ -310,238 +394,14 @@
         </table>
         <!-- END ARTICLE 2 -->
 
-        <!-- HEADLINE AND CONTENT -->
-        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td align="center" bgcolor="#ffffff">
-                    <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
-
-                        <tr>
-                            <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 32px;"
-                                align="center">
-                                Loerem ipsum
-                            </td>
-                        </tr>
-
-                        <!-- Underline -->
-                        <tr>
-                            <td align="center">
-                                <table width="75" border="0" cellpadding="0" cellspacing="0">
-                                    <!-- Edit Underline -->
-                                    <tr>
-                                        <td style="border-bottom: 2px solid #000000;" height="20"></td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        <!-- End Underline -->
-
-                        <tr>
-                            <td style="font-size: 20px; line-height: 20px;" height="20">&nbsp;</td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
-                                align="center">
-                                LOREM IPSUM
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-size: 1px; line-height: 30px;" height="30">&nbsp;</td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
-                                align="center">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit odio at sodales
-                                aliquet. Aliquam erat volutpat. Aliquam eget lectus lacinia, bibendum nisl non, rutrum
-                                diam. In sit amet scelerisque leo, a ultricies sem. Curabitur rhoncus est a dolor
-                                pulvinar ullamcorper.
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
-                        </tr>
-
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <!-- END HEADLINE AND CONTENT -->
-
-        <!-- FEATURES 3 -->
-        <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
-            <tr>
-                <td align="center" bgcolor="#ffffff">
-                    <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
-
-                        <tr>
-                            <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
-                        </tr>
-
-                        <tr>
-                            <td>
-
-                                <table class="full-width"
-                                    style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="183" align="left" border="0" cellpadding="0" cellspacing="0">
-
-                                    <tr>
-                                        <td align="center">
-                                            <img src="img/icon64-1.png" alt="icon" width="64"
-                                                height="64">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 1px; line-height: 25px;" height="25">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #333333; line-height: 24px; letter-spacing: 1px;"
-                                            align="center">
-                                            LOREM
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 1px; line-height: 25px;" height="25">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
-                                            align="center">
-                                            Cras mattis consecteturas lconsectetur est at lobor eo sed posuere.
-                                        </td>
-                                    </tr>
-
-                                </table>
-
-                                <!-- SPACE -->
-                                <table class="full-width"
-                                    style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="24" align="left" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td style="font-size: 30px; line-height: 30px;" width="24"
-                                            height="30"></td>
-                                    </tr>
-                                </table>
-                                <!-- END SPACE -->
-
-                                <table class="full-width"
-                                    style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="183" align="left" border="0" cellpadding="0" cellspacing="0">
-
-                                    <tr>
-                                        <td align="center">
-                                            <img src="img/icon64-2.png" alt="icon" width="64"
-                                                height="64">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 1px; line-height: 25px;" height="25">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #333333; line-height: 24px; letter-spacing: 1px;"
-                                            align="center">
-                                            IPSUM
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 1px; line-height: 25px;" height="25">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
-                                            align="center">
-                                            Cras mattis consecteturas lconsectetur est at lobor eo sed posuere.
-                                        </td>
-                                    </tr>
-
-                                </table>
-
-                                <!-- SPACE -->
-                                <table class="full-width"
-                                    style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="1" align="left" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td style="font-size: 30px; line-height: 30px;" width="1"
-                                            height="30"></td>
-                                    </tr>
-                                </table>
-                                <!-- END SPACE -->
-
-                                <table class="full-width"
-                                    style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="183" align="right" border="0" cellpadding="0" cellspacing="0">
-
-                                    <tr>
-                                        <td align="center">
-                                            <img src="img/icon64-3.png" alt="icon" width="64"
-                                                height="64">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 1px; line-height: 25px;" height="25">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 15px; font-weight: 700; color: #333333; line-height: 24px; letter-spacing: 1px;"
-                                            align="center">
-                                            DOLOR
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 1px; line-height: 25px;" height="25">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
-                                            align="center">
-                                            Cras mattis consecteturas lconsectetur est at lobor eo sed posuere.
-                                        </td>
-                                    </tr>
-                                </table>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
-                        </tr>
-
-                    </table>
-                </td>
-            </tr>
-        </table>
-        <!-- END FEATURES 3 -->
-
         <!-- ARTICLE FULL -->
         <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
-                <td align="center" bgcolor="#ffffff">
+                <td align="center" bgcolor="#eeeeee">
                     <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
 
                         <tr>
                             <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 32px;"
-                                align="center">
-                                LOREM IPSUM DOLOR
-                            </td>
                         </tr>
 
                         <!-- Underline -->
@@ -558,38 +418,28 @@
                         <!-- End Underline -->
 
                         <tr>
-                            <td style="font-size: 20px; line-height: 20px;" height="20">&nbsp;</td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
-                                align="center">
-                                LOREM IPSUM
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td style="font-size: 1px; line-height: 30px;" height="30">&nbsp;</td>
-                        </tr>
-
-                        <tr>
-                            <td align="center">
-                                <img class="img-full" src="img/img600.jpg" alt="img" width="600"
-                                    height="215">
-                            </td>
-                        </tr>
-
-                        <tr>
                             <td style="font-size: 1px; line-height: 30px;" height="30">&nbsp;</td>
                         </tr>
 
                         <tr>
                             <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
-                                align="center">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris blandit odio at sodales
-                                aliquet. Aliquam erat volutpat. Aliquam eget lectus lacinia, bibendum nisl non, rutrum
-                                diam. In sit amet scelerisque leo, a ultricies sem. Curabitur rhoncus est a dolor
-                                pulvinar ullamcorper.
+                                align="left">
+                                <p>Kérjük, tekintse meg a mellékelt részletes termékleírásokat és specifikációkat, amelyek segítenek Önnek jobban megérteni termékeink kiváló minőségét és designját.</p>
+
+                                <p>A következő lépésekben szívesen felvesszük Önnel a kapcsolatot telefonon vagy emailben, hogy részletesen megvitassuk igényeit, válaszoljunk kérdéseire, és segítsünk a legmegfelelőbb termékek kiválasztásában. Kérjük, adja meg, melyik időpontokban érné el Önt legkönnyebben, vagy hívjon minket közvetlenül a [Telefonszám] telefonszámon.</p>
+
+                                <p>Az Arcadia'98 Kft. elkötelezett amellett, hogy minőségi termékeket és kiváló ügyfélkiszolgálást nyújtson. Biztosak vagyunk benne, hogy ajtóink hozzájárulnak otthona esztétikájának és funkcionalitásának növeléséhez.</p>
+
+                                <p>Köszönjük, hogy minket választott. Várjuk válaszát, és reméljük, hogy hamarosan üdvözölhetjük Önt elégedett ügyfeleink között.</p>
+
+                                <p>Üdvözlettel,</p>
+
+                                <p>[ügyintéző neve]</p>
+                                <p>[beosztás]</p>
+                                <p>[Cég neve]</p>
+                                <p>[Email cím]</p>
+                                <p>[Telefonszám]</p>
+
                             </td>
                         </tr>
 
@@ -598,6 +448,7 @@
                         </tr>
 
                         <!-- Button -->
+                        <!--
                         <tr>
                             <td align="center">
                                 <table style="border-radius: 2px;" align="center" border="0" cellpadding="0"
@@ -613,6 +464,7 @@
                                 </table>
                             </td>
                         </tr>
+                        -->
                         <!-- End Button -->
 
                         <tr>
@@ -651,8 +503,8 @@
                                                 cellspacing="0">
                                                 <tr>
                                                     <td align="left">
-                                                        <img src="img/img-prefooter.png" alt="icon"
-                                                            width="100" height="150">
+                                                        <img src="http://arcadia98.cegem360.hu/build/assets/arcadia98-logo-2fa7f05a.svg" alt="icon"
+                                                            width="96" height="43">
                                                     </td>
                                                 </tr>
                                             </table>
@@ -677,21 +529,13 @@
                                                 <tr>
                                                     <td style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; color: #333333; letter-spacing: 1px; line-height: 24px;"
                                                         align="left">
-                                                        Lorem Ipsum
+                                                        Arcadia'98 Kft.
                                                     </td>
                                                 </tr>
 
                                                 <tr>
                                                     <td style="font-size: 1px; line-height: 15px;" height="15">
                                                         &nbsp;</td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
-                                                        align="left">
-                                                        Cras mattis consecteturas lconsectetur est at lobor eo sed
-                                                        posuere.
-                                                    </td>
                                                 </tr>
 
                                                 <tr>
@@ -702,8 +546,8 @@
                                                 <tr>
                                                     <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #000000; line-height: 24px;"
                                                         align="left">
-                                                        <a href="#"
-                                                            style="color: #000000; text-decoration: none;">LOREM</a>
+                                                        <a href="arcadia98.hu"
+                                                            style="color: #000000; text-decoration: none;">arcadia98.hu</a>
                                                     </td>
                                                 </tr>
 
@@ -754,7 +598,7 @@
                                     <tr>
                                         <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
                                             align="left">
-                                            Lorem ipsum
+                                            1194 Budapest, Citroen utca 4.
                                         </td>
                                     </tr>
 
@@ -776,7 +620,7 @@
                                     <tr>
                                         <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
                                             align="left">
-                                            +36 1 123-4567
+                                            +36 1 430 3344
                                         </td>
                                     </tr>
 
