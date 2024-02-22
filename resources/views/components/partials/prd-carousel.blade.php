@@ -1,3 +1,5 @@
+@props(['categories' => []])
+
     <div class="mx-auto flex">
         <!-- Nav PREV -->
         <div class="w-fit flex items-center justify-around">
@@ -13,7 +15,14 @@
 
         <div class="swiper prd-swiper w-3/4 sm:w-full h-[50vh]">
             <div class="swiper-wrapper">
-                <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 50%; background-image: url('{{ Vite::asset('resources/img/drzwi-przesuwne2-1920x768.webp') }}');">
+                @foreach ($categories as $category)
+                    <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 50%; background-image: url('{{ $category->img_url }}');">
+                        <a class="absolute inset-0 flex items-center justify-center bg-[#00000033]" href="{{ route('category.show', ['category' => $category['name']]) }}" wire:navigate.hover>
+                            <h3 class="text-white text-2xl font-bold drop-shadow-md">{{ $category['name'] }}</h3>
+                        </a>
+                    </div>
+                @endforeach
+                {{-- <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 50%; background-image: url('{{ Vite::asset('resources/img/drzwi-przesuwne2-1920x768.webp') }}');">
                 </div>
                 <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 100%; background-image: url('{{ Vite::asset('resources/img/classen_china.webp') }}');">
                 </div>
@@ -28,7 +37,7 @@
                 <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 50%; background-image: url('{{ Vite::asset('resources/img/drzwi-przesuwne2-1920x768.webp') }}');">
                 </div>
                 <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 100%; background-image: url('{{ Vite::asset('resources/img/classen_china.webp') }}');">
-                </div>
+                </div> --}}
             </div>
             <div class="swiper-pagination prd-swiper-pagination"></div>
         </div>
@@ -46,3 +55,24 @@
         </div>
 
     </div>
+
+
+{{--
+<ul>
+    @foreach ($category as $cat)
+     <li class="products-list__tile">
+         <a href="{{ route('category.show', ['category' => $category['name']]) }}" wire:navigate.hover>
+             <div class="tile">
+                 <figure class="tile__image aspect-[40/27] overflow-hidden">
+                     <img src=" {{ !empty($category['img_url']) ? $category['img_url'] : Vite::asset('resources/img/placeholder.webp') }}" alt="$category['name']">
+                 </figure>
+                 <h3 class="tile__header hyphenate">{{ $category['name'] }}</h3>
+                 <div class="tile__icon">
+                     <x-doors.partials.arrow-right />
+                 </div>
+             </div>
+         </a>
+     </li>
+    @endforeach
+</ul>
+--}}

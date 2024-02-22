@@ -89,6 +89,21 @@ class ManagePageContentController extends Controller
         return view('favorites', compact('products'));
     }
 
+    public function rolunk()
+    {
+        return view('rolunk/index');
+    }
+
+    public function kapcsolat()
+    {
+        return view('kapcsolat/index');
+    }
+
+    public function szolgaltatasaink()
+    {
+        return view('szolgaltatasaink/index');
+    }
+
     //ne nyulj hozzá
     public function xmlExport(Request $request)
     {

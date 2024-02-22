@@ -21,7 +21,7 @@
     <div class="min-h-[69px]"></div>
 
     <!-- Termekek carousel -->
-    <x-partials.prd-carousel />
+    <x-partials.prd-carousel :categories=$categories />
 
     <!-- gap -->
     <div class="min-h-[69px]"></div>
@@ -35,9 +35,6 @@
     <!-- Szakértő segítség -->
     <x-partials.expert-help />
 
-    @foreach ($categories as $category)
-        {{-- $category->img_url --}}
-    @endforeach
     <!-- Footer -->
     <x-footer.layout />
 
