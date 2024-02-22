@@ -227,12 +227,73 @@ namespace App\Models{
 /**
  * App\Models\Parameter
  *
+ * @property int $id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Database\Factories\ParameterFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class Parameter extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\Quotation
+ *
+ * @property int $id
+ * @property string $session_id
+ * @property string|null $first_name
+ * @property string|null $last_name
+ * @property string|null $email
+ * @property string|null $phone
+ * @property string|null $message
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\QuotationItem> $items
+ * @property-read int|null $items_count
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation query()
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereFirstName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereLastName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereMessage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereSessionId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereUpdatedAt($value)
+ */
+	class Quotation extends \Eloquent {}
+}
+
+namespace App\Models{
+/**
+ * App\Models\QuotationItem
+ *
+ * @property int $id
+ * @property int $quotation_id
+ * @property int $door_id
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property-read \App\Models\Door|null $door
+ * @property-read \App\Models\Quotation|null $quotation
+ * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem query()
+ * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereDoorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereQuotationId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereUpdatedAt($value)
+ */
+	class QuotationItem extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -248,6 +309,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class Tag extends \Eloquent {}
 }
@@ -280,6 +342,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
+ * @mixin \Eloquent
  */
 	class User extends \Eloquent {}
 }

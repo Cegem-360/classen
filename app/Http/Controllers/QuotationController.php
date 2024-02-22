@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\RequestQuotationSended;
 use App\Models\Door;
 use App\Models\Quotation;
-use Illuminate\Http\Request;
 use App\Models\QuotationItem;
-use App\Mail\RequestQuotationSended;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Validator;
 
@@ -73,6 +73,7 @@ class QuotationController extends Controller
         ]);
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
         Mail::to($request->email)->send(new RequestQuotationSended($quotation, $quotationItems));
+
         return redirect()->route('quotation.success');
     }
 }

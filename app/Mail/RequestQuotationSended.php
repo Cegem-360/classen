@@ -3,14 +3,13 @@
 namespace App\Mail;
 
 use App\Models\Quotation;
-use App\Models\QuotationItem;
 use Illuminate\Bus\Queueable;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Database\Eloquent\Collection;
+use Illuminate\Queue\SerializesModels;
 
 class RequestQuotationSended extends Mailable
 {
@@ -54,6 +53,7 @@ class RequestQuotationSended extends Mailable
     {
         return [];
     }
+
     public function build()
     {
         return $this->from('arcadia98@cegem360.hu')->view('mail.quotation.sended');
