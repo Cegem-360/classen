@@ -3,12 +3,14 @@
 namespace App\Mail;
 
 use App\Models\Quotation;
+use App\Models\QuotationItem;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Database\Eloquent\Collection;
 
 class RequestQuotationSended extends Mailable
 {
@@ -17,9 +19,8 @@ class RequestQuotationSended extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public Quotation $quotation)
+    public function __construct(public Quotation $quotation, public Collection $quotationItems)
     {
-
     }
 
     /**
@@ -40,7 +41,7 @@ class RequestQuotationSended extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.mail.quotation.sended',
+            view: 'mail.quotation.sended',
         );
     }
 
@@ -52,5 +53,9 @@ class RequestQuotationSended extends Mailable
     public function attachments(): array
     {
         return [];
+    }
+    public function build()
+    {
+        return $this->from('arcadia98@cegem360.hu')->view('mail.quotation.sended');
     }
 }
