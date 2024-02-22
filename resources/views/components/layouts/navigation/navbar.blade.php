@@ -17,7 +17,7 @@
                                 wire:navigate.hover>{{ __('doors') }}</a>
                             <a class="flex h-full items-center px-4" href="{{ route('category.index') }}"
                                 wire:navigate.hover>{{ __('collections') }}</a>
-                            <a class="flex h-full items-center px-4" href=""
+                            <a class="flex h-full items-center px-4" href="{{ route('rolunk') }}"
                                 wire:navigate.hover>{{ __('About us') }}</a>
                         </div>
                     </div>
@@ -25,12 +25,14 @@
             </div>
             <div class="flex basis-2/3 items-center justify-end">
                 <div class="flex basis-1/2 md:hidden sm:hidden">
-                    <a class="flex h-full items-center px-4" href=""
-                        wire:navigate.hover>{{ __('Our stores') }}</a>
-                    <a class="flex h-full items-center px-4" href=""
-                        wire:navigate.hover>{{ __('Where to buy') }}</a>
+                    <a class="flex h-full items-center px-4" href="{{ route('kapcsolat') }}"
+                        wire:navigate.hover>{{ __('Kapcsolat') }}</a>
+                    <a class="flex h-full items-center px-4" href="{{ route('szolgaltatasaink') }}"
+                        wire:navigate.hover>{{ __('Szolgáltatásaink') }}</a>
                     <a class="flex h-full items-center px-4" href="{{ route('downloads') }}"
                         wire:navigate.hover>Letöltések</a>
+                    <a class="flex h-full items-center px-4" href="{{ route('quotation.index') }}"
+                        wire:navigate.hover>Árajánlat</a>
                 </div>
                 <div class="relative flex h-full basis-1/2 items-center justify-between">
                     <form class="flex items-center border-[1px] border-[#000] md:hidden" action="">
