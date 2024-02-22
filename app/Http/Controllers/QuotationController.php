@@ -6,6 +6,7 @@ use App\Models\Door;
 use App\Models\Quotation;
 use App\Models\QuotationItem;
 use Illuminate\Http\Client\Request;
+use App\Http\Requests\QoutationRequest;
 
 class QuotationController extends Controller
 {
@@ -47,17 +48,18 @@ class QuotationController extends Controller
         return redirect()->route('quotation.index');
     }
 
-    public function store(Request $request, Door $door)
+    public function store(QoutationRequest $request, Door $door)
     {
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),
         ]));
+        $validated = $request->validated();
         $quotation->update([
-            'first_name' => $request->last_name,
-            'last_name' => $request->last_name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'message' => $request->message,
+            'first_name' => $validated['last_name'],
+            'last_name' => $validated['last_name'],
+            'email' => $validated['email'],
+            'phone' => $validated['phone'],
+            'message' => $validated['message'],
         ]);
 
         return redirect()->route('quotation.success');
