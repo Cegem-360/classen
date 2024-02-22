@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Quotation;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
@@ -17,9 +18,9 @@ class RequestQuotationSended extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct(public Quotation $quotation)
     {
-        //
+
     }
 
     /**
