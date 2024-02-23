@@ -11,14 +11,14 @@
            </div>
        </div>
        <div>
-           <div class="mb-12 pl-8">
+           <div class="mb-6 pl-8">
                <h2 class="mb-3 text-4xl font-bold">{{ $door->name }}</h2>
                <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
                <h3 class="mb-3 text-lg">{{ __('Collection: ') }}<span class="font-bold">{{ $category->name }}</span>
                </h3>
                <form action="{{ route('quotation.add', ['door' => $door->id]) }}" method="post">
                    @csrf
-                   <x-primary-button class="w-fit" type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
+                   <x-primary-button class="mt-6 w-fit" type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
                </form>
                <button></button>
            </div>
