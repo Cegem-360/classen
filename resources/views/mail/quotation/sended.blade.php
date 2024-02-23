@@ -219,7 +219,8 @@
                         <tr>
                             <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
                                 align="center">
-                                Köszönjük, hogy az [Cég neve] weboldalán keresztül ajánlatkérést nyújtott be beltéri ajtóinkra vonatkozóan. Nagyra értékeljük érdeklődését termékeink iránt, és örömmel állunk rendelkezésére, hogy segítsünk megtalálni az Ön otthonához leginkább illő megoldásokat.
+                                <h2>Tisztelt [Ügyfél neve]!</h2>
+                                <p>Köszönjük, hogy a cégünk weboldalán keresztül ajánlatkérést nyújtott be beltéri ajtóinkra vonatkozóan. Nagyra értékeljük érdeklődését termékeink iránt, és örömmel állunk rendelkezésére, hogy segítsünk megtalálni az Ön otthonához leginkább illő megoldásokat.</p>
                             </td>
                         </tr>
 
