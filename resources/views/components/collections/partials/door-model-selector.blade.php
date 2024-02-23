@@ -18,9 +18,7 @@
                </h3>
                <form action="{{ route('quotation.add', ['door' => $door->id]) }}" method="post">
                    @csrf
-                   <button type='submit'>
-                       {{ __('Add to Request a Quote') }}
-                   </button>
+                   <x-primary-button class="w-fit" type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
                </form>
                <button></button>
            </div>
