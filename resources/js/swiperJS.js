@@ -502,14 +502,13 @@ export function initSwiperJS() {
 
     /* ###############################
            MOBILE NAV
-      ##################################  */
-    /*
+      ##################################
+
     document.getElementById('hamburger-btn').addEventListener('click', function() {
         document.getElementById('mobile-nav').classList.toggle('active');
         console.log('***HAMBURGER-CLICKED');
     });
-    */
-    /*
+
     const menuBtn = document.getElementById('hamburger-btn');
     const menu = document.getElementById('mobile-nav');
 

@@ -84,12 +84,3 @@
     </header>
 </nav>
 
-<script>
-    /* ###############################
-           MOBILE NAV
-      ##################################  */
-    document.getElementById('hamburger-btn').addEventListener('click', function() {
-        document.getElementById('mobile-nav').classList.toggle('hidenav');
-        console.log('***HAMBURGER-CLICKED');
-    });
-</script>
