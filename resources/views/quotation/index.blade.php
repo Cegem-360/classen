@@ -17,6 +17,9 @@
             <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($quotationItems ?? [] as $quotationItem)
                     <div class="group relative">
+                        <div class="flex items-center justify-center absolute top-3 right-3 z-50 w-6 h-6 bg-[#00000022] group-hover:bg-[#00000077] border-[1px] b-white group-hover:border-0 rounded-md cursor-pointer">
+                            <div class="p-3 text-white text-4xl">×</div>
+                        </div>
                         <div
                             class="aspect-[7/16] sm:aspect-none overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
                             <img class="object-cover object-center h-full w-full"
