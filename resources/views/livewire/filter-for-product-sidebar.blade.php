@@ -7,7 +7,7 @@
         <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
         <div>
             <fieldset class="mb-3">
-                <legend class="text-lg font-bold">{{ __('Colour') }}</legend>
+                <legend class="text-lg font-bold">{{ __('Colours') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
