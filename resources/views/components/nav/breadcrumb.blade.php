@@ -1,13 +1,13 @@
 <nav class="px-8 py-8">
     <ul class="breadcrumbs__list">
         <li class="breadcrumbs__item">
-            <a class="home" href="/" wire:navigate itemprop="item">Főoldal</a>
+            <a class="home" href="{{ route('index') }}" wire:navigate itemprop="item">{{ __('Home') }}</a>
         </li>
         <li class="breadcrumbs__item">
-            <a href="/ajtok/" wire:navigate itemprop="item">Ajtók</a>
+            <a href="{{ route('door.index') }}" wire:navigate itemprop="item">{{ __('doors') }}</a>
         </li>
         <li class="breadcrumbs__item">
-            <a href="/lakkozott-ajtok/" wire:navigate itemprop="item">Lakkozott ajtók</a>
+            <a href="{{ route('category.index') }}" wire:navigate itemprop="item">{{ __('Collections') }}</a>
         </li>
         <li class="breadcrumbs__item">
             <strong>{{ $slot }}</strong>

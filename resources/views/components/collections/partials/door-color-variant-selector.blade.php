@@ -17,9 +17,9 @@
                                         href="{{ $variant->img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
                                         itemprop="contentUrl" target="_blank">
                                         <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                            <img loading="lazy" class="max-h-[500px]"
+                                            <img class="max-h-[500px]"
                                                 src="{{ $variant->img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
-                                                alt="" itemprop="contentUrl" target="_blank">
+                                                alt="" loading="lazy" itemprop="contentUrl" target="_blank">
                                         </div>
                                     </a>
                                 </div>
@@ -34,16 +34,17 @@
                 <div class="min-h-[330px] flex-wrap items-center md:flex-col">
                     @foreach ($colorVariants as $category => $colors)
                         <div class="variant-group">
-                            <h3 class="text-2xl font-bold">{{ $category }}</h3>
+                            <h3 class="text-2xl font-bold">{{ __($category) }}</h3>
                             <div class="doors_colors__variant-set flex flex-wrap border-b-1 border-[#bfbfbf] py-8">
                                 @foreach ($colors as $color)
                                     <div class="door_variant mx-4 my-2" id='{{ $color->tag }}-color'
                                         onclick="selectColor('{{ $color->tag }}-color')">
                                         <a class="block w-[94px]" href="#{{ $color->tag }}">
-                                            <img loading="lazy" class="h-[88px] w-[88px] rounded-full"
-                                                src="{{ $color->tag_img_url ?? Vite::asset('resources/img/placeholder.webp') }}">
+                                            <img class="h-[88px] w-[88px] rounded-full"
+                                                src="{{ $color->tag_img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
+                                                loading="lazy">
                                             <div class="door_variant__meta">
-                                                <h4 class="mt-2 text-center text-sm">{{ $color->tag_name }}</h4>
+                                                <h4 class="mt-2 text-center text-sm">{{ __($color->tag_name) }}</h4>
                                             </div>
                                         </a>
                                     </div>

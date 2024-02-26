@@ -243,7 +243,7 @@
         <!-- gap -->
         <div class="min-h-[60px]"></div>
         <div wire:loading>
-            {{ __("Searching...") }}
+            {{ __('Searching...') }}
         </div>
         <div wire:loading.remove>
             <div class="mx-8 grid grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
@@ -260,7 +260,7 @@
                                 loading='lazy' />
                             <div class="w-full pt-2">
                                 <h4 class="font-bold">{{ $door->category->name }} - {{ $door->name }}</h4>
-                                <p>{{ $door->tag_name }}</p>
+                                <p>{{ __($door->tag_name) }}</p>
                             </div>
                         </a>
                     </div>
