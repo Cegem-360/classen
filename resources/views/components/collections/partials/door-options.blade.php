@@ -19,7 +19,7 @@
                                     <img src="{{ $tag['tag_img_url'] }}" alt="White" loading="lazy" loading='lazy'>
                                 </div>
                                 <div class="door_color__meta mt-3">
-                                    <h4> {{ $name }}</h4>
+                                    <h4> {{ __($name) }}</h4>
                                     <p class="text-sm font-bold">{{ __($tag['tag_category']) }}</p>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@
                                 @foreach ($collection as $item)
                                     <div class="grid"><img class="max-h-[500px]" src="{{ $item->img_url }}"
                                             alt="" loading="lazy">
-                                        <h4 class="mt-3">{{ $item->name }}</h4>
+                                        <h4 class="mt-3">{{ __($item->name) }}</h4>
                                     </div>
                                 @endforeach
                             </div>
