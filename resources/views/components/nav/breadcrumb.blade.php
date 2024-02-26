@@ -4,7 +4,7 @@
             <a class="home" href="{{ route('index') }}" wire:navigate itemprop="item">{{ __('Home') }}</a>
         </li>
         <li class="breadcrumbs__item">
-            <a href="{{ route('door.index') }}" wire:navigate itemprop="item">{{ __('doors') }}</a>
+            <a href="{{ route('door.index') }}" wire:navigate itemprop="item">{{ __('Doors') }}</a>
         </li>
         <li class="breadcrumbs__item">
             <a href="{{ route('category.index') }}" wire:navigate itemprop="item">{{ __('Collections') }}</a>
