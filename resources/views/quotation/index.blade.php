@@ -8,22 +8,23 @@
 
     <div class="mx-16 md:mx-8 sm:mx-4">
         <div class="mb-16">
-            <h2 class="mb-3 text-4xl font-bold">Árajánlat kérés</h2>
+            <h2 class="mb-3 text-4xl font-bold">{{ __('Request a quote') }}</h2>
             <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
         </div>
         <div class="max-w-7xl">
-            <h3 class="text-xl font-bold tracking-tight text-gray-900">Customers also purchased</h3>
+            <h3 class="text-xl font-bold tracking-tight text-gray-900">{{ __('Customers also purchased') }}</h3>
 
             <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($quotationItems ?? [] as $quotationItem)
                     <div class="group relative">
-                        <div class="flex items-center justify-center absolute top-3 right-3 z-50 w-6 h-6 bg-[#00000022] group-hover:bg-[#00000077] border-[1px] b-white group-hover:border-0 rounded-md cursor-pointer">
+                        <div
+                            class="b-white absolute right-3 top-3 z-50 flex h-6 w-6 cursor-pointer items-center justify-center rounded-md border-[1px] bg-[#00000022] group-hover:border-0 group-hover:bg-[#00000077]">
                             {{-- <div class="p-3 text-white text-4xl">×</div> --}}
                             <x-svg.multiply-icon></x-svg.multiply-icon>
                         </div>
                         <div
-                            class="aspect-[7/16] sm:aspect-none overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
-                            <img class="object-cover object-center h-full w-full"
+                            class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
+                            <img class="h-full w-full object-cover object-center"
                                 src="{{ $quotationItem->door->img_url }}" alt="{{ $quotationItem->door->name }}">
                         </div>
                         <div class="mt-4 flex justify-between">
@@ -39,7 +40,7 @@
                                 </h3>
                                 <p class="mt-1 text-sm text-gray-500">{{ $quotationItem->door->category->name }}</p>
                             </div>
-                            <p class="text-sm font-medium text-gray-900">$35</p>
+                            <p class="text-sm font-medium text-gray-900">{{ $quotationItem->door->price }}</p>
                         </div>
                     </div>
                 @endforeach

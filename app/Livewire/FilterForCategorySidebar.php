@@ -21,7 +21,6 @@ class FilterForCategorySidebar extends Component
             'room_door' => false,
             'bathroom_door' => false,
             'technical_doors' => false,
-            'anti_burglary_door' => false,
             'sliding_door' => false,
         ],
         'style' => [
@@ -80,18 +79,16 @@ class FilterForCategorySidebar extends Component
                             $query->orWhere('bathroom_door', true);
                         })->when($this->options['purpose']['technical_doors'], function (Builder $query) {
                             $query->orWhere('technical_doors', true);
-                        })->when($this->options['purpose']['anti_burglary_door'], function (Builder $query) {
-                            $query->orWhere('anti_burglary_door', true);
                         })->when($this->options['purpose']['sliding_door'], function (Builder $query) {
                             $query->orWhere('sliding_door', true);
                         });
                     })->where(function (Builder $outerQuery) {
                         $outerQuery->when($this->options['style']['modern'], function (Builder $query) {
-                            $query->orWhereModern(true);
+                            $query->orWhere('modern', true);
                         })->when($this->options['style']['classic'], function (Builder $query) {
-                            $query->orWhereClassic(true);
+                            $query->orWhere('classic', true);
                         })->when($this->options['style']['loft'], function (Builder $query) {
-                            $query->orWhereLoft(true);
+                            $query->orWhere('loft', true);
                         });
                     })->where(function (Builder $outerQuery) {
                         $outerQuery->when($this->options['width']['width_60'], function (Builder $query) {

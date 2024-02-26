@@ -72,13 +72,6 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="anti_burglary_door"
-                            wire:model="options.purpose.anti_burglary_door" wire:click="$refresh" />
-                        {{ __('anti burglary door') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
                         <input type="checkbox" value="sliding_door" wire:model="options.purpose.sliding_door"
                             wire:click="$refresh" />
                         {{ __('sliding door') }}
