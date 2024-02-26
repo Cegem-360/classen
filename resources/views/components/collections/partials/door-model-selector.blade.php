@@ -18,9 +18,9 @@
                </h3>
                <form action="{{ route('quotation.add', ['door' => $door->id]) }}" method="post">
                    @csrf
-                   <x-primary-button class="mt-6 w-fit" type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
+                   <x-primary-button class="mt-6 w-fit"
+                       type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
                </form>
-               <button></button>
            </div>
            <div class="swiper door-model-swiper-thumbs w-full" thumbsSlider="">
                <div class="swiper-wrapper flex-wrap">
