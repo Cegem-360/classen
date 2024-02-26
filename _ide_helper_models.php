@@ -193,6 +193,8 @@ namespace App\Models{
  * App\Models\Door
  *
  * @property int $id
+ * @property int|null $product_id
+ * @property int|null $price
  * @property string $name
  * @property string $img_url
  * @property string $tag
@@ -214,6 +216,8 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereImgUrl($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Door wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|Door whereProductId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereTag($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagCategory($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagImgUrl($value)
@@ -227,17 +231,10 @@ namespace App\Models{
 /**
  * App\Models\Parameter
  *
- * @property int $id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Database\Factories\ParameterFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|Parameter query()
- * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Parameter whereUpdatedAt($value)
- * @mixin \Eloquent
  */
 	class Parameter extends \Eloquent {}
 }
@@ -309,7 +306,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Tag whereUpdatedAt($value)
- * @mixin \Eloquent
  */
 	class Tag extends \Eloquent {}
 }
@@ -342,7 +338,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
  * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
- * @mixin \Eloquent
  */
 	class User extends \Eloquent {}
 }

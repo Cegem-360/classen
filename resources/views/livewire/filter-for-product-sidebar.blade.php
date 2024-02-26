@@ -6,60 +6,6 @@
         <p class="mb-6 font-bold">Válasszon lenyűgöző ajtók közül.</p>
         <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
         <div>
-            <!--
-            <fieldset class="mb-3">
-                <legend class="text-lg font-bold">{{ __('Colour') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="white" wire:model="options.colour.white" wire:click="$refresh"/>
-                        {{ __('white') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="bright" wire:model="options.colour.bright" wire:click="$refresh"/>
-                        {{ __('bright') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="grey" wire:model="options.colour.grey" wire:click="$refresh"/>
-                        {{ __('grey') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="brown" wire:model="options.colour.brown" wire:click="$refresh"/>
-                        {{ __('brown') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="graphite" wire:model="options.colour.graphite" wire:click="$refresh"/>
-                        {{ __('graphite') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="dark" wire:model="options.colour.dark" wire:click="$refresh"/>
-                        {{ __('dark') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="anthracite" wire:model="options.colour.anthracite" wire:click="$refresh"/>
-                        {{ __('anthracite') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="black" wire:model="options.colour.black" wire:click="$refresh"/>
-                        {{ __('black') }}
-                    </label>
-                </div>
-            </fieldset>
-        -->
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Colour') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
@@ -297,7 +243,7 @@
         <!-- gap -->
         <div class="min-h-[60px]"></div>
         <div wire:loading>
-            Searching...
+            {{ __("Searching...") }}
         </div>
         <div wire:loading.remove>
             <div class="mx-8 grid grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
