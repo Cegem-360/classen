@@ -32,16 +32,27 @@
                                 <h3 class="text-sm text-gray-700">
                                     <a href="{{ route('door.show', ['door' => $quotationItem->door->id]) }}"
                                         wire:navigate>
-                                        <span class="absolute inset-0" aria-hidden="true"></span>
+                                        <span class="inset-0" aria-hidden="true"></span>
                                         {{ $quotationItem->door->name }}
-                                        <span class="absolute inset-0" aria-hidden="true"></span>
+                                        <span class="inset-0" aria-hidden="true"></span>
                                         <b>{{ $quotationItem->door->tag_name }}</b>
                                     </a>
                                 </h3>
                                 <p class="mt-1 text-sm text-gray-500">{{ $quotationItem->door->category->name }}</p>
                             </div>
                             <p class="text-sm font-medium text-gray-900">{{ $quotationItem->door->price }}</p>
+
                         </div>
+                        <p class="text-sm font-medium text-gray-900">
+
+                        <form action="{{ route('quotation.updateItem', ['quotationItem' => $quotationItem->id]) }}"
+                            method="post">
+                            @csrf
+                            <input class="w-10" name="quantity" type="number"
+                                value="{{ $quotationItem->quantity }}">
+                            @method('patch')
+                        </form>
+                        </p>
                     </div>
                 @endforeach
                 <!-- More products... -->

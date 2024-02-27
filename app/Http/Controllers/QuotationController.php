@@ -51,6 +51,15 @@ class QuotationController extends Controller
         return redirect()->route('quotation.index');
     }
 
+    public function updateItem(QuotationItem $quotationItem, $quantity)
+    {
+        $quotationItem->update([
+            'quantity' => $quantity,
+        ]);
+
+        return redirect()->route('quotation.index');
+    }
+
     public function store(Request $request)
     {
         $quotation = session()->get('quotation', Quotation::create([

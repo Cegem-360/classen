@@ -46,6 +46,7 @@ Route::prefix('quotation')->as('quotation.')->group(function () {
     Route::post('/store', [QuotationController::class, 'store'])->name('store');
     Route::get('/sikeres', [QuotationController::class, 'success'])->name('success');
     Route::delete('/delete/{quotationItem}', [QuotationController::class, 'deleteItem'])->name('remove');
+    Route::put('/update/{quotationItem}', [QuotationController::class, 'updateItem'])->name('updateItem');
 });
 
 // ne nyulj hozzá
