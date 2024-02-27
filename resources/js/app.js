@@ -4,7 +4,7 @@ import '../css/classen.css';
 import.meta.glob([
     '../img/**',
 ]);
-
+import 'flowbite';
 import { initSwiperJS } from './swiperJS.js';
 import { initFavorites } from './favorites.js';
 import { initCustomJS } from './customJS.js';

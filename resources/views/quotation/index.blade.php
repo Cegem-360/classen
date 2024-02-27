@@ -44,17 +44,19 @@
 
                         </div>
                         <p class="text-sm font-medium text-gray-900">
-
-                        <form action="{{ route('quotation.updateItem', ['quotationItem' => $quotationItem->id]) }}"
-                            method="post">
-                            @csrf
-                            <input class="w-10" name="quantity" type="number"
-                                value="{{ $quotationItem->quantity }}">
-                            @method('patch')
-                        </form>
+                            <livewire:update-quotation-item :$quotationItem :key="$quotationItem->id" />
                         </p>
                     </div>
                 @endforeach
+                <script>
+                    function increment(id) {
+                        document.getElementById(id).stepUp();
+                    }
+
+                    function decrement(id) {
+                        document.getElementById(id).stepDown();
+                    }
+                </script>
                 <!-- More products... -->
             </div>
         </div>
