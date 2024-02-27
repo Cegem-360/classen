@@ -34,6 +34,51 @@ class CategorySeeder extends Seeder
             ]
         );
 
+        $woocommerceCategories = $woocommerce->get(EndPoint::PRODUCTSCATEGORIES, ['per_page' => 100]);
+        foreach ($woocommerceCategories as $woocommerceCategory) {
+            if (
+                $woocommerceCategory->name == 'Adjustable door frame'
+                || $woocommerceCategory->name == 'Adjustable non-rebated door frame'
+                || $woocommerceCategory->name == 'Standard 2-Pack door frame'
+            ) {
+
+                $categories = $this->client->get(EndPoint::CATEGORIES . '?per_page=100');
+                $categories = json_decode($categories->getBody(), true);
+                $categories = collect($categories);
+                $categories = $categories->where('name', $woocommerceCategory->name)->first();
+                if (is_null($categories)) {
+                    continue;
+                }
+                $additional_options = null;
+                $door_specification = null;
+                $technical_parameter = null;
+                $img = null;
+                $gallery_imgs = null;
+
+                $additional_options = ($categories['acf']['additional_options']) ? $categories['acf']['additional_options'] : null;
+                $additional_options = $this->str_replace_json('false', 'null', $additional_options);
+                $door_specification = ($categories['acf']['door_specification']) ? $categories['acf']['door_specification'] : null;
+                $door_specification = $this->str_replace_json('false', 'null', $door_specification);
+                $technical_parameter = ($categories['acf']['technical_parameter']) ? $categories['acf']['technical_parameter'] : null;
+                $technical_parameter = $this->str_replace_json('false', 'null', $technical_parameter);
+                $gallery_imgs = $categories['acf']['galeria_kepek'] ?? null;
+                $img = $categories['acf']['galeria_kepek'][0] ?? null;
+                $created_category = Category::factory()->create(
+                    [
+                        'name' => $woocommerceCategory->name,
+                        'category_id' => $woocommerceCategory->id,
+                        'additional_options' => $additional_options,
+                        'door_specification' => $door_specification,
+                        'technical_parameter' => $technical_parameter,
+                        'img_url' => $img,
+                        'gallery_imgs' => $gallery_imgs,
+                        'breadcrumb' => $categories['acf']['type'],
+                    ]
+                );
+            } else {
+                continue;
+            }
+        }
         $woocommerceCategories = $woocommerce->get(EndPoint::PRODUCTSCATEGORIES, ['hide_empty' => true, 'per_page' => 100]);
         foreach ($woocommerceCategories as $woocommerceCategory) {
             //categories (Post)
