@@ -27,10 +27,10 @@
                             <img class="h-full w-full object-cover object-center"
                                 src="{{ $quotationItem->door->img_url }}" alt="{{ $quotationItem->door->name }}">
                         </div>
-                        <div class="mt-4 flex justify-between">
+                        <div class="my-4 flex justify-between">
                             <div>
                                 <h3 class="text-sm text-gray-700">
-                                    <a href="{{ route('door.show', ['door' => $quotationItem->door->id]) }}"
+                                    <a class="flex flex-col" href="{{ route('door.show', ['door' => $quotationItem->door->id]) }}"
                                         wire:navigate>
                                         <span class="inset-0" aria-hidden="true"></span>
                                         {{ $quotationItem->door->name }}
@@ -38,14 +38,14 @@
                                         <b>{{ $quotationItem->door->tag_name }}</b>
                                     </a>
                                 </h3>
-                                <p class="mt-1 text-sm text-gray-500">{{ $quotationItem->door->category->name }}</p>
+                                <p class="mt-1 text-sm text-gray-700">{{ $quotationItem->door->category->name }}</p>
                             </div>
                             <p class="text-sm font-medium text-gray-900">{{ $quotationItem->door->price }}</p>
 
                         </div>
-                        <p class="text-sm font-medium text-gray-900">
+                        <div class="text-sm font-medium text-gray-900">
                             <livewire:update-quotation-item :$quotationItem :key="$quotationItem->id" />
-                        </p>
+                        </div>
                     </div>
                 @endforeach
                 <script>
