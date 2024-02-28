@@ -60,9 +60,9 @@
     <!-- Hero Image -->
     <div class="swiper hero-swiper h-[80vh] w-3/4 sm:w-full">
         <div class="swiper-wrapper">
-            @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->where('key', 'kep')->get() as $item->value)
+            @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->where('key', 'kep')->get() as $item)
                 <div class="swiper-slide h-[80vh] w-3/4 bg-cover bg-center sm:w-full"
-                    style="background-position: 40% 50%; background-image: url('{{ $item }}');">
+                    style="background-position: 40% 50%; background-image: url('{{ $item->value }}');">
                 </div>
             @endforeach
 
