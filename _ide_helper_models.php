@@ -353,3 +353,26 @@ namespace App\Models{
 	class User extends \Eloquent {}
 }
 
+namespace App\Models{
+/**
+ * App\Models\WebsiteOptions
+ *
+ * @property int $id
+ * @property string $name
+ * @property string $key
+ * @property string|null $value
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions query()
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereKey($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereValue($value)
+ */
+	class WebsiteOptions extends \Eloquent {}
+}
+

@@ -36,4 +36,6 @@ final class EndPoint extends Enum
     const PRODUCTSTAGS = 'products/tags';
 
     const COLLECTIONS = 'collections/';
+
+    const LARAVELWEBSITEOPTIONS = 'laravel/options/';
 }

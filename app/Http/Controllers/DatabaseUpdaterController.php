@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Jobs\UpdateWebsiteDatabase;
 
 class DatabaseUpdaterController extends Controller
 {
     public function trigger()
     {
-        $this->updatePageOptionsDatabase();
-    }
-    public function updatePageOptionsDatabase(){
-        
+
+        UpdateWebsiteDatabase::dispatch();
+
+        return response()->json(['message' => 'Database update job has been dispatched']);
     }
 }
