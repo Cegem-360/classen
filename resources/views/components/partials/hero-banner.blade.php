@@ -2,6 +2,7 @@
         <!-- Hero Text -->
         <div class="hero-wrapper w-1/4 py-12 sm:w-full">
             <div class="hero-content">
+
                 <h2 class="hero-title mb-4 px-6 text-5xl font-bold">Stílusos tolóajtók</h2>
                 <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
                 <h3 class="hero-text px-6 text-lg font-bold">Klasszikus megjelenés, ezerarcú felhasználás.</h3>
@@ -60,15 +61,12 @@
         <!-- Hero Image -->
         <div class="swiper hero-swiper h-[80vh] w-3/4 sm:w-full">
             <div class="swiper-wrapper">
-                <div class="swiper-slide h-[80vh] w-3/4 bg-cover bg-center sm:w-full"
-                    style="background-position: 40% 50%; background-image: url('{{ Vite::asset('resources/img/drzwi-przesuwne2-1920x768.webp') }}');">
-                </div>
-                <div class="swiper-slide h-[80vh] w-3/4 bg-cover bg-center sm:w-full"
-                    style="background-position: 40% 100%; background-image: url('{{ Vite::asset('resources/img/classen_china.webp') }}');">
-                </div>
-                <div class="swiper-slide h-[80vh] w-3/4 bg-cover bg-center sm:w-full"
-                    style="background-position: 40% 30%; background-image: url('{{ Vite::asset('resources/img/classen_modul.webp') }}');">
-                </div>
+                @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->where('key', 'kep')->get() as $item)
+                    <div class="swiper-slide h-[80vh] w-3/4 bg-cover bg-center sm:w-full"
+                        style="background-position: 40% 50%; background-image: url('{{ $item }}');">
+                    </div>
+                @endforeach
+
             </div>
         </div>
     </div>
