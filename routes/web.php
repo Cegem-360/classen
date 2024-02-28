@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\DoorController;
-use App\Http\Controllers\ManagePageContentController;
-use App\Http\Controllers\QuotationController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DoorController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\QuotationController;
+use App\Http\Controllers\DatabaseUpdaterController;
+use App\Http\Controllers\ManagePageContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +57,6 @@ Route::get('/xmlFile', [ManagePageContentController::class, 'xmlFile']);
 Route::get('/quoteMail', function () {
     return view('mail.quotation.sended');
 })->name('quote');
+Route::prefix('updatePageDatabase')->as('updatePageDatabase.')->group(function () {
+    Route::get('/', [DatabaseUpdaterController::class, 'trigger'])->name('trigger');
+});
