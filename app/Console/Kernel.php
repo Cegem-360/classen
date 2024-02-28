@@ -14,7 +14,7 @@ class Kernel extends ConsoleKernel
     {
         //$schedule->command('inspire')->hourly();
         $schedule->command('queue:work --stop-when-empty')
-            ->dailyAt('00:00')
+            ->everySecond()
             ->withoutOverlapping();
     }
 
