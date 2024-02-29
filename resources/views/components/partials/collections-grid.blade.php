@@ -25,10 +25,10 @@
             </a>
         </div>
         <div class="bg-cover md:col-span-3" id="img1"
-            style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/milk_classen.webp') }}');">
+            style="background-position: 50% 50%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/01/Classen_Venis_drzwi_przesuwne.jpg');">
         </div>
         <div class="bg-auto md:hidden" id="img2"
-            style="background-position: 20% 100%; background-image: url('{{ Vite::asset('resources/img/classen_china.webp') }}');">
+            style="background-position: 20% 100%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/classen_china.webp');">
         </div>
         <div class="bg-cover md:hidden" id="img3"
             style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/classen_modul.webp') }}'); transform: scaleX(-1);">
