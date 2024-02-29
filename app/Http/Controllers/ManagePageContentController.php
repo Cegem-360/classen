@@ -60,7 +60,7 @@ class ManagePageContentController extends Controller
         Storage::put($filename, $xmlData);
 
         // Optionally, return the filename or any other response if needed
-        return response()->json(['success' => ''], 200);
+        return response();
     }
 
     //ne nyulj hozzá
