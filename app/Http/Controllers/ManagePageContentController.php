@@ -2,15 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Enums\EndPoint;
-use App\Enums\PostPageIds;
-use App\Enums\UrlPath;
 use App\Models\Category;
 use App\Models\Door;
 use Cookie;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 class ManagePageContentController extends Controller
@@ -22,7 +18,9 @@ class ManagePageContentController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::whereNot('name', 'Adjustable door frame')
+            ->whereNot('name', 'Adjustable non-rebated door frame')
+            ->whereNot('name', 'Standard 2-Pack door frame')->get();
 
         return view('index', compact('categories'));
     }
