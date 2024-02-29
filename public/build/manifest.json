@@ -19,14 +19,6 @@
     "file": "assets/bemutatoterem_2-2dd3f109.webp",
     "src": "resources/img/bemutatoterem_2.webp"
   },
-  "resources/img/classen_china.webp": {
-    "file": "assets/classen_china-1734acfc.webp",
-    "src": "resources/img/classen_china.webp"
-  },
-  "resources/img/classen_modul.webp": {
-    "file": "assets/classen_modul-b65fe515.webp",
-    "src": "resources/img/classen_modul.webp"
-  },
   "resources/img/classen_verti.webp": {
     "file": "assets/classen_verti-87da2e1a.webp",
     "src": "resources/img/classen_verti.webp"
@@ -43,6 +35,10 @@
     "file": "assets/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek-e29a495d.pdf",
     "src": "resources/img/dl/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.pdf"
   },
+  "resources/img/dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf": {
+    "file": "assets/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024-3c582ef8.pdf",
+    "src": "resources/img/dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf"
+  },
   "resources/img/dl/cover-images/Arcadia98-arlista-2023.webp": {
     "file": "assets/Arcadia98-arlista-2023-d11b0b80.webp",
     "src": "resources/img/dl/cover-images/Arcadia98-arlista-2023.webp"
@@ -58,10 +54,6 @@
   "resources/img/dl/cover-images/Dooroutlet_belteri_ajto.webp": {
     "file": "assets/Dooroutlet_belteri_ajto-5a2591e2.webp",
     "src": "resources/img/dl/cover-images/Dooroutlet_belteri_ajto.webp"
-  },
-  "resources/img/drzwi-przesuwne2-1920x768.webp": {
-    "file": "assets/drzwi-przesuwne2-1920x768-610daff4.webp",
-    "src": "resources/img/drzwi-przesuwne2-1920x768.webp"
   },
   "resources/img/icons/1-belteri-ajtok.svg": {
     "file": "assets/1-belteri-ajtok-8d5c596a.svg",
@@ -544,7 +536,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-a786068b.css",
+    "file": "assets/app-6d068c73.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -553,17 +545,14 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-a786068b.css"
+      "assets/app-6d068c73.css"
     ],
-    "file": "assets/app-c863fbc4.js",
-    "imports": [
-      "resources/js/favorites.js"
-    ],
+    "file": "assets/app-b54e3af3.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/favorites.js": {
-    "file": "assets/favorites-e07784b4.js",
+    "file": "assets/favorites-4ed993c7.js",
     "isEntry": true,
     "src": "resources/js/favorites.js"
   }
