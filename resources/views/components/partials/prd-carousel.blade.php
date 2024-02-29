@@ -50,7 +50,38 @@
     </div>
     <script>
         document.addEventListener('livewire:navigated', () => {
-            // ...
-        })
+            var swiper = new Swiper('.prd-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.prd-swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.prd-swiper-button-next',
+                    prevEl: '.prd-swiper-button-prev',
+                },
+            });
+        });
+
+        function initializeSwiper() {
+            var swiper = new Swiper('.prd-swiper', {
+                slidesPerView: 1,
+                spaceBetween: 30,
+                loop: true,
+                pagination: {
+                    el: '.prd-swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.prd-swiper-button-next',
+                    prevEl: '.prd-swiper-button-prev',
+                },
+            });
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeSwiper();
+        }, true);
     </script>
 </div>

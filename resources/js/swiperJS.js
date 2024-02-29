@@ -1,15 +1,8 @@
-import { gsap } from "gsap";
+
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import Swiper from 'swiper';
 import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js';
 import PhotoSwipe from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js';
-
-import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
-
-swiper.use([Navigation, Pagination, Thumbs, EffectFade, HashNavigation, Grid]);
-window.Swiper = Swiper;
-
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -20,13 +13,14 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 export function initSwiperJS() {
-    /* ####################################
-            Swiper (carousels, gallerys)
-       #####################################  */
-    // core version + navigation, pagination modules:
+    /**
+     * Swiper (carousels, gallerys)
+     *
+     *
+     *
+    */
     const swiper = new Swiper('.hero-swiper', {
         // configure Swiper to use modules
-        modules: [Navigation, Pagination],
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -74,7 +68,6 @@ export function initSwiperJS() {
     // fooldal carousel
     const prdSwiper = new Swiper('.prd-swiper', {
         // configure Swiper to use modules
-        modules: [Navigation, Pagination, Thumbs],
         // Optional parameters
         direction: 'horizontal',
         loop: true,
@@ -113,7 +106,7 @@ export function initSwiperJS() {
     });
 
     const detailPageSwiperThumbs = new Swiper(".detail-page-swiper-thumbs", {
-        modules: [Grid],
+
         slidesPerView: 1,
         grid: {
             fill: 'row',
@@ -126,7 +119,7 @@ export function initSwiperJS() {
     });
 
     const detailPageSwiper = new Swiper('.detail-page-swiper', {
-        modules: [Thumbs],
+
         direction: 'horizontal',
         loop: true,
         thumbs: {
@@ -135,7 +128,7 @@ export function initSwiperJS() {
     });
 
     const doorModelSwiperThumbs = new Swiper(".door-model-swiper-thumbs", {
-        modules: [Grid],
+
         slidesPerView: 4,
         grid: {
             fill: 'row',
@@ -146,7 +139,7 @@ export function initSwiperJS() {
     });
 
     const doorModelSwiper = new Swiper('.door-model-swiper', {
-        modules: [Thumbs, EffectFade],
+
         effect: 'fade',
         fadeEffect: {
             crossFade: true,
@@ -158,7 +151,7 @@ export function initSwiperJS() {
     });
 
     const doorColorVariantSwiper = new Swiper('.door-color-variant-swiper', {
-        modules: [HashNavigation, EffectFade],
+
         // effect: 'fade',
         // fadeEffect: {
         //     crossFade: true,
@@ -170,7 +163,6 @@ export function initSwiperJS() {
     });
 
     const doorFrontsSwiperThumbs = new Swiper(".door-fronts-swiper-thumbs", {
-        modules: [Grid],
         slidesPerView: 4,
         grid: {
             fill: 'row',
@@ -179,7 +171,6 @@ export function initSwiperJS() {
     });
 
     const doorFrontsSwiper = new Swiper('.door-fronts-swiper', {
-        modules: [Thumbs, EffectFade],
         direction: 'horizontal',
         effect: 'fade',
         fadeEffect: {
