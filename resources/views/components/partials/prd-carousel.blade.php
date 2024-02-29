@@ -32,21 +32,6 @@
         </div>
         <div class="swiper-pagination prd-swiper-pagination"></div>
     </div>
-
-    {{--<div class="swiper prd-swiper h-[50vh] w-3/4 sm:w-full">
-        <div class="swiper-wrapper">
-            @foreach ($categories as $category)
-                <a class="swiper-slide bg-cover bg-center"  href="{{ route('category.show', ['category' => $category->name]) }}" wire:navigate
-                    style="background-position: 40% 50%; background-image: url('{{ $category->img_url }}');">
-                    <div class="absolute inset-0 flex items-center justify-center bg-[#00000033]">
-                        <h3 class="text-2xl font-bold text-white drop-shadow-md">{{ $category->name }}</h3>
-                    </div>
-                </a>
-            @endforeach
-        </div>
-        <div class="swiper-pagination prd-swiper-pagination"></div>
-    </div>--}}
-
     <!-- Nav NEXT -->
     <div class="flex w-fit items-center justify-around">
         <div class="prd-swiper-button-next cursor-pointer rounded-full bg-white p-4"><svg class="inline"
@@ -60,27 +45,8 @@
                             d="M40.6,88.1L50.2,78.4L28.6,56.8L97.5,56.8L97.5,43.2L28.6,43.2L50.2,21.6L40.6,11.9L2.5,50L40.6,88.1Z" />
                     </g>
                 </g>
-            </svg></div>
+            </svg>
+        </div>
     </div>
 
 </div>
-
-{{--
-<ul>
-    @foreach ($category as $cat)
-     <li class="products-list__tile">
-         <a href="{{ route('category.show', ['category' => $category['name']]) }}" wire:navigate.hover>
-             <div class="tile">
-                 <figure class="tile__image aspect-[40/27] overflow-hidden">
-                     <img src=" {{ !empty($category['img_url']) ? $category['img_url'] : Vite::asset('resources/img/placeholder.webp') }}" alt="$category['name']">
-                 </figure>
-                 <h3 class="tile__header hyphenate">{{ $category['name'] }}</h3>
-                 <div class="tile__icon">
-                     <x-doors.partials.arrow-right />
-                 </div>
-             </div>
-         </a>
-     </li>
-    @endforeach
-</ul>
---}}
