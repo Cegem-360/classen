@@ -60,7 +60,7 @@ class ManagePageContentController extends Controller
         Storage::put($filename, $xmlData);
 
         // Optionally, return the filename or any other response if needed
-        return response();
+        return response(content: null, status: 200)->header('Content-Type', 'text/plain');
     }
 
     //ne nyulj hozzá
