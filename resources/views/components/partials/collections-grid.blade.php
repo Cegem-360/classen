@@ -31,6 +31,6 @@
             style="background-position: 20% 100%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/classen_china.webp');">
         </div>
         <div class="bg-cover md:hidden" id="img3"
-            style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/classen_modul.webp') }}'); transform: scaleX(-1);">
+            style="background-position: 50% 50%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/classen_modul.webp'); transform: scaleX(-1);">
         </div>
     </div>
