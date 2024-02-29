@@ -29,22 +29,20 @@
                     </a>
                 </div>
             @endforeach
-            {{-- <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 50%; background-image: url('{{ Vite::asset('resources/img/drzwi-przesuwne2-1920x768.webp') }}');">
-                </div>
-                <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 100%; background-image: url('{{ Vite::asset('resources/img/classen_china.webp') }}');">
-                </div>
-                <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 30%; background-image: url('{{ Vite::asset('resources/img/classen_modul.webp') }}');">
-                </div>
-                <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 50%; background-image: url('{{ Vite::asset('resources/img/drzwi-przesuwne2-1920x768.webp') }}');">
-                </div>
-                <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 100%; background-image: url('{{ Vite::asset('resources/img/classen_china.webp') }}');">
-                </div>
-                <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 30%; background-image: url('{{ Vite::asset('resources/img/classen_modul.webp') }}');">
-                </div>
-                <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 50%; background-image: url('{{ Vite::asset('resources/img/drzwi-przesuwne2-1920x768.webp') }}');">
-                </div>
-                <div class="swiper-slide bg-cover bg-center" style="background-position: 40% 100%; background-image: url('{{ Vite::asset('resources/img/classen_china.webp') }}');">
-                </div> --}}
+        </div>
+        <div class="swiper-pagination prd-swiper-pagination"></div>
+    </div>
+
+    <div class="swiper prd-swiper h-[50vh] w-3/4 sm:w-full">
+        <div class="swiper-wrapper">
+            @foreach ($categories as $category)
+                <a class="swiper-slide bg-cover bg-center"  href="{{ route('category.show', ['category' => $category->name]) }}" wire:navigate
+                    style="background-position: 40% 50%; background-image: url('{{ $category->img_url }}');">
+                    {{--<div class="absolute inset-0 flex items-center justify-center bg-[#00000033]">
+                        <h3 class="text-2xl font-bold text-white drop-shadow-md">{{ $category->name }}</h3>
+                    </div>--}}
+                </a>
+            @endforeach
         </div>
         <div class="swiper-pagination prd-swiper-pagination"></div>
     </div>
