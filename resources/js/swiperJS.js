@@ -2,11 +2,15 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Swiper from 'swiper';
-
 import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js';
 import PhotoSwipe from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js';
 
 import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
+
+swiper.use([Navigation, Pagination, Thumbs, EffectFade, HashNavigation, Grid]);
+window.Swiper = Swiper;
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -379,85 +383,85 @@ export function initSwiperJS() {
 
 
 
-        function animationSlide(slideItem) {
-            //if (!slideItem.classList.contains("-runned")) {
-                    const tl = gsap.timeline({
-                            id: "time",
-                            // delay: .6,
-                            onStart: function () {
-                                    //slideItem.classList.add("-runned");
-                            }
-                    });
+    function animationSlide(slideItem) {
+        //if (!slideItem.classList.contains("-runned")) {
+        const tl = gsap.timeline({
+            id: "time",
+            // delay: .6,
+            onStart: function () {
+                //slideItem.classList.add("-runned");
+            }
+        });
 
-                    //const image = slideItem.querySelector(".image");
-                    //const bg = slideItem.querySelector(".image .bg");
-                    //const overlay = slideItem.querySelector(".image .overlay");
-                    const contentWrapper = document.querySelector(".hero-content");
-                    const heroLine = document.querySelector(".hero-line");
-                    const heroTitle = document.querySelector(".hero-content .hero-title");
-                    const heroContent = document.querySelector(".hero-content .hero-text");
-                    const heroCTA = document.querySelector(".hero-content .hero-cta");
+        //const image = slideItem.querySelector(".image");
+        //const bg = slideItem.querySelector(".image .bg");
+        //const overlay = slideItem.querySelector(".image .overlay");
+        const contentWrapper = document.querySelector(".hero-content");
+        const heroLine = document.querySelector(".hero-line");
+        const heroTitle = document.querySelector(".hero-content .hero-title");
+        const heroContent = document.querySelector(".hero-content .hero-text");
+        const heroCTA = document.querySelector(".hero-content .hero-cta");
 
-                    tl.set([heroTitle, heroContent, heroCTA], {
-                        autoAlpha: 0,
-                        //y: 0
-                    })
-                    .fromTo(contentWrapper, {
-                            x: 10,
-                            autoAlpha: 0
-                            //xPercent: "-=20"
+        tl.set([heroTitle, heroContent, heroCTA], {
+            autoAlpha: 0,
+            //y: 0
+        })
+            .fromTo(contentWrapper, {
+                x: 10,
+                autoAlpha: 0
+                //xPercent: "-=20"
+            },
+                {
+                    x: 0,
+                    autoAlpha: 1,
+                    duration: 2,
+                    ease: "power2.inOut"
+                })
+            /* .fromTo(
+                    bg,
+                    {
+                            xPercent: -20,
+                            scale: 1.4
                     },
                     {
-                            x: 0,
-                            autoAlpha: 1,
-                            duration: 2,
-                            ease: "power2.inOut"
-                    })
-                            /* .fromTo(
-                                    bg,
-                                    {
-                                            xPercent: -20,
-                                            scale: 1.4
-                                    },
-                                    {
-                                            xPercent: 0,
-                                            scale: 1,
-                                            duration: 1.5,
-                                            ease: "power2.out"
-                                    },
-                                    "start-=1"
-                            )
-                            .set(
-                                    bg,
-                                    {
-                                            autoAlpha: 1
-                                    },
-                                    "-=1.5"
-                            )
-                            .set(overlay, {
-                                    autoAlpha: 0
-                            }) */
-                            .fromTo(
-                                    [heroTitle, heroContent, heroCTA],
-                                    {
-                                            autoAlpha: 0,
-                                            y: 100
-                                            //y: "+=10"
-                                    },
-                                    {
-                                            autoAlpha: 1,
-                                            y: 0,
-                                            //y: "-=40",
-                                            duration: 1.2,
-                                            ease: "power1.out",
-                                            stagger: 0.25
-                                    },
-                                    "-=1.2"
-                            )
-                            .fromTo(heroLine, {scaleX: 0}, {scaleX: "100%", duration: 1.5, ease: "power1.inOut", transformOrigin: "right"}, "-=1.2")
+                            xPercent: 0,
+                            scale: 1,
+                            duration: 1.5,
+                            ease: "power2.out"
+                    },
+                    "start-=1"
+            )
+            .set(
+                    bg,
+                    {
+                            autoAlpha: 1
+                    },
+                    "-=1.5"
+            )
+            .set(overlay, {
+                    autoAlpha: 0
+            }) */
+            .fromTo(
+                [heroTitle, heroContent, heroCTA],
+                {
+                    autoAlpha: 0,
+                    y: 100
+                    //y: "+=10"
+                },
+                {
+                    autoAlpha: 1,
+                    y: 0,
+                    //y: "-=40",
+                    duration: 1.2,
+                    ease: "power1.out",
+                    stagger: 0.25
+                },
+                "-=1.2"
+            )
+            .fromTo(heroLine, { scaleX: 0 }, { scaleX: "100%", duration: 1.5, ease: "power1.inOut", transformOrigin: "right" }, "-=1.2")
 
-                    return tl;
-            //}
+        return tl;
+        //}
     }
 
     //animationSlide();
@@ -466,38 +470,38 @@ export function initSwiperJS() {
         y: 100,
         autoAlpha: 0
     },
-    {
-        y: 0,
-        autoAlpha: 1,
-        duration: 1.5,
-        ease: "power3.inOut",
-        scrollTrigger: {trigger: ".ad-banner", start: "top 70%", end: "bottom top", markers: false}
-    });
+        {
+            y: 0,
+            autoAlpha: 1,
+            duration: 1.5,
+            ease: "power3.inOut",
+            scrollTrigger: { trigger: ".ad-banner", start: "top 70%", end: "bottom top", markers: false }
+        });
 
     gsap.fromTo(".banner-container2", {
         y: 100,
         autoAlpha: 0
     },
-    {
-        y: 0,
-        autoAlpha: 1,
-        duration: 1.5,
-        ease: "power3.inOut",
-        scrollTrigger: {trigger: ".ad-banner2", start: "top 70%", end: "bottom top", markers: false}
-    });
+        {
+            y: 0,
+            autoAlpha: 1,
+            duration: 1.5,
+            ease: "power3.inOut",
+            scrollTrigger: { trigger: ".ad-banner2", start: "top 70%", end: "bottom top", markers: false }
+        });
 
     gsap.fromTo(["#img1", "#img2", "#img3"], {
         y: 100,
         autoAlpha: 0
     },
-    {
-        y: 0,
-        autoAlpha: 1,
-        duration: 1.5,
-        ease: "power3.inOut",
-        stagger: 0.25,
-        scrollTrigger: {trigger: ".kollekcio-grid", start: "top 70%", end: "bottom top", markers: false}
-    });
+        {
+            y: 0,
+            autoAlpha: 1,
+            duration: 1.5,
+            ease: "power3.inOut",
+            stagger: 0.25,
+            scrollTrigger: { trigger: ".kollekcio-grid", start: "top 70%", end: "bottom top", markers: false }
+        });
 
 
 

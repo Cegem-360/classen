@@ -48,5 +48,9 @@
             </svg>
         </div>
     </div>
-
+    <script>
+        document.addEventListener('livewire:navigated', () => {
+            // ...
+        })
+    </script>
 </div>
