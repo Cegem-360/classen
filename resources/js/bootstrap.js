@@ -9,6 +9,11 @@ window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+import Swiper from 'swiper';
+import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
+
+Swiper.use([Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade]);
+window.Swiper = Swiper;
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting
