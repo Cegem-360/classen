@@ -60,7 +60,7 @@ class ManagePageContentController extends Controller
         Storage::put($filename, $xmlData);
 
         // Optionally, return the filename or any other response if needed
-        return response();
+        return response('XML file has been saved successfully', 200);
     }
 
     //ne nyulj hozzá
