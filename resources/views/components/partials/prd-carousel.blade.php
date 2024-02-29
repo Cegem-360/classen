@@ -33,19 +33,19 @@
         <div class="swiper-pagination prd-swiper-pagination"></div>
     </div>
 
-    <div class="swiper prd-swiper h-[50vh] w-3/4 sm:w-full">
+    {{--<div class="swiper prd-swiper h-[50vh] w-3/4 sm:w-full">
         <div class="swiper-wrapper">
             @foreach ($categories as $category)
                 <a class="swiper-slide bg-cover bg-center"  href="{{ route('category.show', ['category' => $category->name]) }}" wire:navigate
                     style="background-position: 40% 50%; background-image: url('{{ $category->img_url }}');">
-                    {{--<div class="absolute inset-0 flex items-center justify-center bg-[#00000033]">
+                    <div class="absolute inset-0 flex items-center justify-center bg-[#00000033]">
                         <h3 class="text-2xl font-bold text-white drop-shadow-md">{{ $category->name }}</h3>
-                    </div>--}}
+                    </div>
                 </a>
             @endforeach
         </div>
         <div class="swiper-pagination prd-swiper-pagination"></div>
-    </div>
+    </div>--}}
 
     <!-- Nav NEXT -->
     <div class="flex w-fit items-center justify-around">

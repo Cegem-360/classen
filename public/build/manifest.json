@@ -1,0 +1,562 @@
+{
+  "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp": {
+    "file": "assets/Classen-drzwi-Ferro-dab-nordycki-89fc95c0.webp",
+    "src": "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp"
+  },
+  "resources/img/IMG_7478.webp": {
+    "file": "assets/IMG_7478-6ce3b787.webp",
+    "src": "resources/img/IMG_7478.webp"
+  },
+  "resources/img/arcadia98-logo.svg": {
+    "file": "assets/arcadia98-logo-2fa7f05a.svg",
+    "src": "resources/img/arcadia98-logo.svg"
+  },
+  "resources/img/arcadia98kft.webp": {
+    "file": "assets/arcadia98kft-f054a1b9.webp",
+    "src": "resources/img/arcadia98kft.webp"
+  },
+  "resources/img/bemutatoterem_2.webp": {
+    "file": "assets/bemutatoterem_2-2dd3f109.webp",
+    "src": "resources/img/bemutatoterem_2.webp"
+  },
+  "resources/img/classen_verti.webp": {
+    "file": "assets/classen_verti-87da2e1a.webp",
+    "src": "resources/img/classen_verti.webp"
+  },
+  "resources/img/dl/Arcadia98-Kft-brutto-Kiskereskedelmi-arlista-2023.pdf": {
+    "file": "assets/Arcadia98-Kft-brutto-Kiskereskedelmi-arlista-2023-15bba726.pdf",
+    "src": "resources/img/dl/Arcadia98-Kft-brutto-Kiskereskedelmi-arlista-2023.pdf"
+  },
+  "resources/img/dl/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.pdf": {
+    "file": "assets/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok-89648c41.pdf",
+    "src": "resources/img/dl/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.pdf"
+  },
+  "resources/img/dl/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.pdf": {
+    "file": "assets/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek-e29a495d.pdf",
+    "src": "resources/img/dl/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.pdf"
+  },
+  "resources/img/dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf": {
+    "file": "assets/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024-3c582ef8.pdf",
+    "src": "resources/img/dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf"
+  },
+  "resources/img/dl/cover-images/Arcadia98-arlista-2023.webp": {
+    "file": "assets/Arcadia98-arlista-2023-d11b0b80.webp",
+    "src": "resources/img/dl/cover-images/Arcadia98-arlista-2023.webp"
+  },
+  "resources/img/dl/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp": {
+    "file": "assets/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok-544d31f9.webp",
+    "src": "resources/img/dl/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp"
+  },
+  "resources/img/dl/cover-images/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.webp": {
+    "file": "assets/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek-dce27678.webp",
+    "src": "resources/img/dl/cover-images/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.webp"
+  },
+  "resources/img/dl/cover-images/Dooroutlet_belteri_ajto.webp": {
+    "file": "assets/Dooroutlet_belteri_ajto-5a2591e2.webp",
+    "src": "resources/img/dl/cover-images/Dooroutlet_belteri_ajto.webp"
+  },
+  "resources/img/icons/1-belteri-ajtok.svg": {
+    "file": "assets/1-belteri-ajtok-8d5c596a.svg",
+    "src": "resources/img/icons/1-belteri-ajtok.svg"
+  },
+  "resources/img/icons/2-bejarati-ajtok.svg": {
+    "file": "assets/2-bejarati-ajtok-3e9fc149.svg",
+    "src": "resources/img/icons/2-bejarati-ajtok.svg"
+  },
+  "resources/img/icons/3-muszaki-ajtok.svg": {
+    "file": "assets/3-muszaki-ajtok-19ccb0e2.svg",
+    "src": "resources/img/icons/3-muszaki-ajtok.svg"
+  },
+  "resources/img/icons/4-toloajtok.svg": {
+    "file": "assets/4-toloajtok-65862a13.svg",
+    "src": "resources/img/icons/4-toloajtok.svg"
+  },
+  "resources/img/icons/arrow-right.svg": {
+    "file": "assets/arrow-right-f313d714.svg",
+    "src": "resources/img/icons/arrow-right.svg"
+  },
+  "resources/img/icons/elonyok-1.svg": {
+    "file": "assets/elonyok-1-0bf1dac3.svg",
+    "src": "resources/img/icons/elonyok-1.svg"
+  },
+  "resources/img/icons/elonyok-2.svg": {
+    "file": "assets/elonyok-2-0ee59b7a.svg",
+    "src": "resources/img/icons/elonyok-2.svg"
+  },
+  "resources/img/icons/elonyok-3.svg": {
+    "file": "assets/elonyok-3-90771a64.svg",
+    "src": "resources/img/icons/elonyok-3.svg"
+  },
+  "resources/img/icons/heart-sprite.png": {
+    "file": "assets/heart-sprite-0b85e242.png",
+    "src": "resources/img/icons/heart-sprite.png"
+  },
+  "resources/img/icons/tooltip-icon.svg": {
+    "file": "assets/tooltip-icon-30ff94af.svg",
+    "src": "resources/img/icons/tooltip-icon.svg"
+  },
+  "resources/img/icons/tooltip-icon2.svg": {
+    "file": "assets/tooltip-icon2-eb8b7abc.svg",
+    "src": "resources/img/icons/tooltip-icon2.svg"
+  },
+  "resources/img/milk_classen.webp": {
+    "file": "assets/milk_classen-b55f76b7.webp",
+    "src": "resources/img/milk_classen.webp"
+  },
+  "resources/img/placeholder.webp": {
+    "file": "assets/placeholder-5b358f4b.webp",
+    "src": "resources/img/placeholder.webp"
+  },
+  "resources/img/prd-images/Lirgo-czarny-9005-230x150.jpg": {
+    "file": "assets/Lirgo-czarny-9005-230x150-16583f38.jpg",
+    "src": "resources/img/prd-images/Lirgo-czarny-9005-230x150.jpg"
+  },
+  "resources/img/prd-images/Lirgo-czarny-9005-800x550.jpg": {
+    "file": "assets/Lirgo-czarny-9005-800x550-4ff38283.jpg",
+    "src": "resources/img/prd-images/Lirgo-czarny-9005-800x550.jpg"
+  },
+  "resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg": {
+    "file": "assets/Lirgo_bialy-150x330-53496f23.jpg",
+    "src": "resources/img/prd-images/ajtok/Lirgo_bialy-150x330.jpg"
+  },
+  "resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg": {
+    "file": "assets/Lirgo_czarny_9005-150x330-67843a29.jpg",
+    "src": "resources/img/prd-images/ajtok/Lirgo_czarny_9005-150x330.jpg"
+  },
+  "resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg": {
+    "file": "assets/Lirgo_szary_7004-150x330-80c5fea1.jpg",
+    "src": "resources/img/prd-images/ajtok/Lirgo_szary_7004-150x330.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m-4_uni-black.jpg": {
+    "file": "assets/glas_m-4_uni-black-8aa22c1f.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/glas_m-4_uni-black.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m-4_uni-white.jpg": {
+    "file": "assets/glas_m-4_uni-white-d4f33f98.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/glas_m-4_uni-white.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m4_akacja-jasna.jpg": {
+    "file": "assets/glas_m4_akacja-jasna-66ce583e.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/glas_m4_akacja-jasna.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m4_dab-grigio.jpg": {
+    "file": "assets/glas_m4_dab-grigio-3b46191b.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/glas_m4_dab-grigio.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m4_dab-hamilton.jpg": {
+    "file": "assets/glas_m4_dab-hamilton-1ae84dcc.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/glas_m4_dab-hamilton.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m4_dab-kendal.jpg": {
+    "file": "assets/glas_m4_dab-kendal-61f602c3.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/glas_m4_dab-kendal.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m4_dab-marone.jpg": {
+    "file": "assets/glas_m4_dab-marone-9248b5ee.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/glas_m4_dab-marone.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m4_jesion-norweski.jpg": {
+    "file": "assets/glas_m4_jesion-norweski-4a72fead.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/glas_m4_jesion-norweski.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/glas_m4_szary-matt.jpg": {
+    "file": "assets/glas_m4-1770f0bd.jpg",
+    "src": "resources/img/prd-images/ajtok/models/glas_m4.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/CPL-dab-grigio.jpg": {
+    "file": "assets/CPL-dab-grigio-0dcbed23.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/CPL-dab-grigio.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/CPL-dab-kendal.jpg": {
+    "file": "assets/CPL-dab-kendal-54c7bf10.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/CPL-dab-kendal.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/CPL_dab-hamilton.jpg": {
+    "file": "assets/CPL_dab-hamilton-e86ff439.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/CPL_dab-hamilton.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/cpl-akacja-jasna_plyta.jpg": {
+    "file": "assets/cpl-akacja-jasna_plyta-db237051.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/cpl-akacja-jasna_plyta.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/cpl-jesion-norweski_plyta-dr.jpg": {
+    "file": "assets/cpl-jesion-norweski_plyta-dr-a9542435.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/cpl-jesion-norweski_plyta-dr.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/czarny-9005.jpg": {
+    "file": "assets/czarny-9005-a39d13c9.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/czarny-9005.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/dab-marone.jpg": {
+    "file": "assets/dab-marone-e763b40d.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/dab-marone.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/ir-uni-white.jpg": {
+    "file": "assets/ir-uni-white-8c8bab38.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/ir-uni-white.jpg"
+  },
+  "resources/img/prd-images/ajtok/color-variants/swatches/szary-mat-primo-1.jpg": {
+    "file": "assets/szary-mat-primo-1-5476ff3a.jpg",
+    "src": "resources/img/prd-images/ajtok/color-variants/swatches/szary-mat-primo-1.jpg"
+  },
+  "resources/img/prd-images/ajtok/models/glas_m1.jpg": {
+    "file": "assets/glas_m1-c79220b8.jpg",
+    "src": "resources/img/prd-images/ajtok/models/glas_m1.jpg"
+  },
+  "resources/img/prd-images/ajtok/models/glas_m2.jpg": {
+    "file": "assets/glas_m2-5999033a.jpg",
+    "src": "resources/img/prd-images/ajtok/models/glas_m2.jpg"
+  },
+  "resources/img/prd-images/ajtok/models/glas_m3.jpg": {
+    "file": "assets/glas_m3-a0b81be2.jpg",
+    "src": "resources/img/prd-images/ajtok/models/glas_m3.jpg"
+  },
+  "resources/img/prd-images/ajtok/models/glas_m4.jpg": {
+    "file": "assets/glas_m4-1770f0bd.jpg",
+    "src": "resources/img/prd-images/ajtok/models/glas_m4.jpg"
+  },
+  "resources/img/prd-images/ajtok/models/glas_m5.jpg": {
+    "file": "assets/glas_m5-f3065b26.jpg",
+    "src": "resources/img/prd-images/ajtok/models/glas_m5.jpg"
+  },
+  "resources/img/prd-images/ajtok/models/glas_m6.jpg": {
+    "file": "assets/glas_m6-72712e1f.jpg",
+    "src": "resources/img/prd-images/ajtok/models/glas_m6.jpg"
+  },
+  "resources/img/prd-images/classen_lirgo-230x150.jpg": {
+    "file": "assets/classen_lirgo-230x150-2c4a3abb.jpg",
+    "src": "resources/img/prd-images/classen_lirgo-230x150.jpg"
+  },
+  "resources/img/prd-images/classen_lirgo-800x550.jpg": {
+    "file": "assets/classen_lirgo-800x550-d42dccb0.jpg",
+    "src": "resources/img/prd-images/classen_lirgo-800x550.jpg"
+  },
+  "resources/img/prd-images/feluletek/czarny-9005-170x126.jpg": {
+    "file": "assets/czarny-9005-170x126-7129df72.jpg",
+    "src": "resources/img/prd-images/feluletek/czarny-9005-170x126.jpg"
+  },
+  "resources/img/prd-images/feluletek/iridium-bialy-mat-170x126.jpg": {
+    "file": "assets/iridium-bialy-mat-170x126-753fdd5f.jpg",
+    "src": "resources/img/prd-images/feluletek/iridium-bialy-mat-170x126.jpg"
+  },
+  "resources/img/prd-images/feluletek/szary-7004-170x126.jpg": {
+    "file": "assets/szary-7004-170x126-9c3022fe.jpg",
+    "src": "resources/img/prd-images/feluletek/szary-7004-170x126.jpg"
+  },
+  "resources/img/prd-images/thumbnails/21-Co-zamiast-szyby-w-drzwiach-pokojowych_AJ_WSz_DD-Classen-Linea-1-400x270.jpg": {
+    "file": "assets/21-Co-zamiast-szyby-w-drzwiach-pokojowych_AJ_WSz_DD-Classen-Linea-1-400x270-d7f743bc.jpg",
+    "src": "resources/img/prd-images/thumbnails/21-Co-zamiast-szyby-w-drzwiach-pokojowych_AJ_WSz_DD-Classen-Linea-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/ARENA--400x270.jpg": {
+    "file": "assets/ARENA--400x270-8b9431c8.jpg",
+    "src": "resources/img/prd-images/thumbnails/ARENA--400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Akustyczne-400x270.jpg": {
+    "file": "assets/Akustyczne-400x270-9f0275de.jpg",
+    "src": "resources/img/prd-images/thumbnails/Akustyczne-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Andromeda-model-1-400x270.jpg": {
+    "file": "assets/Andromeda-model-1-400x270-da997754.jpg",
+    "src": "resources/img/prd-images/thumbnails/Andromeda-model-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Arcus_g1-1-400x270.jpg": {
+    "file": "assets/Arcus_g1-1-400x270-e653fa42.jpg",
+    "src": "resources/img/prd-images/thumbnails/Arcus_g1-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Asteria-NL-400x270.jpg": {
+    "file": "assets/Asteria-NL-400x270-360cda46.jpg",
+    "src": "resources/img/prd-images/thumbnails/Asteria-NL-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/BORD-MDF-_0005_BORD-MDF-1-400x270.jpg": {
+    "file": "assets/BORD-MDF-_0005_BORD-MDF-1-400x270-ae3af34a.jpg",
+    "src": "resources/img/prd-images/thumbnails/BORD-MDF-_0005_BORD-MDF-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/BORD-Stalowa-stala-W3-_0004_BORD-stalowa-stala-W3-1-400x270.jpg": {
+    "file": "assets/BORD-Stalowa-stala-W3-_0004_BORD-stalowa-stala-W3-1-400x270-6ceabcee.jpg",
+    "src": "resources/img/prd-images/thumbnails/BORD-Stalowa-stala-W3-_0004_BORD-stalowa-stala-W3-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/BORD-stalowa-narozna_0004_BORD-stalowa-narozna-1-400x270.jpg": {
+    "file": "assets/BORD-stalowa-narozna_0004_BORD-stalowa-narozna-1-400x270-0a5b8686.jpg",
+    "src": "resources/img/prd-images/thumbnails/BORD-stalowa-narozna_0004_BORD-stalowa-narozna-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/BORD-stalowa-stala-_0004_BORD-stalowa-stala-1-400x270.jpg": {
+    "file": "assets/BORD-stalowa-stala-_0004_BORD-stalowa-stala-1-400x270-4a90b123.jpg",
+    "src": "resources/img/prd-images/thumbnails/BORD-stalowa-stala-_0004_BORD-stalowa-stala-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/CMOK-_0004_CMOK-1-400x270.jpg": {
+    "file": "assets/CMOK-_0004_CMOK-1-400x270-648aa18c.jpg",
+    "src": "resources/img/prd-images/thumbnails/CMOK-_0004_CMOK-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Century-400x270.jpg": {
+    "file": "assets/Century-400x270-614811b1.jpg",
+    "src": "resources/img/prd-images/thumbnails/Century-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-Linea-Premium-Loft-400x270.jpg": {
+    "file": "assets/Classen-Linea-Premium-Loft-400x270-197cf903.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-Linea-Premium-Loft-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-Malaga-4-4-400x270.jpg": {
+    "file": "assets/Classen-Malaga-4-4-400x270-d3dec69e.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-Malaga-4-4-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Antiope-jesion-bialy-Classen-panele-orest-Dab-Salerno-43523-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Antiope-jesion-bialy-Classen-panele-orest-Dab-Salerno-43523-400x270-6069050a.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Antiope-jesion-bialy-Classen-panele-orest-Dab-Salerno-43523-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Discovery-Dab-kendal-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Discovery-Dab-kendal-400x270-5849c9ab.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Discovery-Dab-kendal-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Ferro-dab-nordycki-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Ferro-dab-nordycki-400x270-cb5222a8.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Ferro-dab-nordycki-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Guard-grafit-RAL-7024-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Guard-grafit-RAL-7024-400x270-139e763a.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Guard-grafit-RAL-7024-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Morano-lakierowane-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Morano-lakierowane-400x270-5576cfbc.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Morano-lakierowane-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Natura-CPL-szare-Classen-panele-Forest-Opal-Wood-41071-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Natura-CPL-szare-Classen-panele-Forest-Opal-Wood-41071-400x270-66fa46a0.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Natura-CPL-szare-Classen-panele-Forest-Opal-Wood-41071-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Natura-biale-Classen-panele-Loft-cerama-Lahti-5000-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Natura-biale-Classen-panele-Loft-cerama-Lahti-5000-400x270-94cbccf8.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Natura-biale-Classen-panele-Loft-cerama-Lahti-5000-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Tosca-dab-antracyt-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Tosca-dab-antracyt-400x270-233f8c78.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Tosca-dab-antracyt-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen-drzwi-Traffic-dab-sonoma-400x270.jpg": {
+    "file": "assets/Classen-drzwi-Traffic-dab-sonoma-400x270-0fbf7a6b.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen-drzwi-Traffic-dab-sonoma-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen_Diva_1-400x270.jpg": {
+    "file": "assets/Classen_Diva_1-400x270-148a6bbe.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen_Diva_1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen_Saga-400x270.jpg": {
+    "file": "assets/Classen_Saga-400x270-84711828.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen_Saga-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen_drzwi_Clif-400x270.jpg": {
+    "file": "assets/Classen_drzwi_Clif-400x270-4b28fc21.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen_drzwi_Clif-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen_drzwi_Venis_S-e1531399589621-400x270.jpg": {
+    "file": "assets/Classen_drzwi_Venis_S-e1531399589621-400x270-035fe3e8.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen_drzwi_Venis_S-e1531399589621-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen_drzwi_brenta-400x270.jpg": {
+    "file": "assets/Classen_drzwi_brenta-400x270-e617c908.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen_drzwi_brenta-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Classen_drzwi_compact-listwa-grafit-400x270.jpg": {
+    "file": "assets/Classen_drzwi_compact-listwa-grafit-400x270-30de6336.jpg",
+    "src": "resources/img/prd-images/thumbnails/Classen_drzwi_compact-listwa-grafit-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/EI30-42-db-przylgowe-400x270.jpg": {
+    "file": "assets/EI30-42-db-przylgowe-400x270-303e10c8.jpg",
+    "src": "resources/img/prd-images/thumbnails/EI30-42-db-przylgowe-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/GUARD-Stalowa-regulowana-_0004_GUARD-stalowa-regulowana-1-400x270.jpg": {
+    "file": "assets/GUARD-Stalowa-regulowana-_0004_GUARD-stalowa-regulowana-1-400x270-354529a8.jpg",
+    "src": "resources/img/prd-images/thumbnails/GUARD-Stalowa-regulowana-_0004_GUARD-stalowa-regulowana-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/GUARD-Stalowa-stala-_0004_GUARD-stalowa-stala-1-400x270.jpg": {
+    "file": "assets/GUARD-Stalowa-stala-_0004_GUARD-stalowa-stala-1-400x270-bdfe6a5b.jpg",
+    "src": "resources/img/prd-images/thumbnails/GUARD-Stalowa-stala-_0004_GUARD-stalowa-stala-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Graffen-aranz-400x270.jpg": {
+    "file": "assets/Graffen-aranz-400x270-2c19a221.jpg",
+    "src": "resources/img/prd-images/thumbnails/Graffen-aranz-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Grego-aranzacja-400x270.jpg": {
+    "file": "assets/Grego-aranzacja-400x270-7c6fccbf.jpg",
+    "src": "resources/img/prd-images/thumbnails/Grego-aranzacja-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/HYBRYDA-400x270.jpg": {
+    "file": "assets/HYBRYDA-400x270-548fadad.jpg",
+    "src": "resources/img/prd-images/thumbnails/HYBRYDA-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Havana-400x270.jpg": {
+    "file": "assets/Havana-400x270-1e3a04b4.jpg",
+    "src": "resources/img/prd-images/thumbnails/Havana-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Kofano-aranzacja-400x270.jpg": {
+    "file": "assets/Kofano-aranzacja-400x270-7ef0f764.jpg",
+    "src": "resources/img/prd-images/thumbnails/Kofano-aranzacja-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Larix-400x270.jpg": {
+    "file": "assets/Larix-400x270-739c83a7.jpg",
+    "src": "resources/img/prd-images/thumbnails/Larix-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Linea-Premium-aranzacja-400x270.jpg": {
+    "file": "assets/Linea-Premium-aranzacja-400x270-12a084f3.jpg",
+    "src": "resources/img/prd-images/thumbnails/Linea-Premium-aranzacja-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Lukka-aranzacja-400x270.jpg": {
+    "file": "assets/Lukka-aranzacja-400x270-95b1e8e3.jpg",
+    "src": "resources/img/prd-images/thumbnails/Lukka-aranzacja-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Magnetic-aranzacja-400x270.jpg": {
+    "file": "assets/Magnetic-aranzacja-400x270-01bdfa57.jpg",
+    "src": "resources/img/prd-images/thumbnails/Magnetic-aranzacja-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Modena-4--400x270.jpg": {
+    "file": "assets/Modena-4--400x270-5b236c46.jpg",
+    "src": "resources/img/prd-images/thumbnails/Modena-4--400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Modi-przesuwne_popr_sRGB_medium-400x270.jpg": {
+    "file": "assets/Modi-przesuwne_popr_sRGB_medium-400x270-a3f53452.jpg",
+    "src": "resources/img/prd-images/thumbnails/Modi-przesuwne_popr_sRGB_medium-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Natura-HR-1-400x270.jpg": {
+    "file": "assets/Natura-HR-1-400x270-6a31ce89.jpg",
+    "src": "resources/img/prd-images/thumbnails/Natura-HR-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/New-Arcus-_0004_New-Arcus-1-400x270.jpg": {
+    "file": "assets/New-Arcus-_0004_New-Arcus-1-400x270-8d42cbb3.jpg",
+    "src": "resources/img/prd-images/thumbnails/New-Arcus-_0004_New-Arcus-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/P-POZ-drewniana-_0004_P-POZ-drewniana-1-400x270.jpg": {
+    "file": "assets/P-POZ-drewniana-_0004_P-POZ-drewniana-1-400x270-a4ebf83f.jpg",
+    "src": "resources/img/prd-images/thumbnails/P-POZ-drewniana-_0004_P-POZ-drewniana-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/P-POZ-stalowa-stala-_0004_P-POZ-stalowa-stala-1-400x270.jpg": {
+    "file": "assets/P-POZ-stalowa-stala-_0004_P-POZ-stalowa-stala-1-400x270-67f79d15.jpg",
+    "src": "resources/img/prd-images/thumbnails/P-POZ-stalowa-stala-_0004_P-POZ-stalowa-stala-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/RB-_0000_regulowana-bezprzylgowa-1-400x270.jpg": {
+    "file": "assets/RB-_0000_regulowana-bezprzylgowa-1-400x270-a059bd5d.jpg",
+    "src": "resources/img/prd-images/thumbnails/RB-_0000_regulowana-bezprzylgowa-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Regulowana-stalowa-_0004_regulowana-stalowa-1-400x270.jpg": {
+    "file": "assets/Regulowana-stalowa-_0004_regulowana-stalowa-1-400x270-3bab862e.jpg",
+    "src": "resources/img/prd-images/thumbnails/Regulowana-stalowa-_0004_regulowana-stalowa-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Regulowana_0001_Oscieznica-regulowana-1-400x270.jpg": {
+    "file": "assets/Regulowana_0001_Oscieznica-regulowana-1-400x270-e423c96f.jpg",
+    "src": "resources/img/prd-images/thumbnails/Regulowana_0001_Oscieznica-regulowana-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Salvano_aranz-400x270.jpg": {
+    "file": "assets/Salvano_aranz-400x270-58da0209.jpg",
+    "src": "resources/img/prd-images/thumbnails/Salvano_aranz-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Stala-stalowa-_0003_stala-stalowa-1-400x270.jpg": {
+    "file": "assets/Stala-stalowa-_0003_stala-stalowa-1-400x270-347ab960.jpg",
+    "src": "resources/img/prd-images/thumbnails/Stala-stalowa-_0003_stala-stalowa-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Stala-stalowa-bezprzylgowa-_0004_Stala-stalowa-bezprzylgowa-1-400x270.jpg": {
+    "file": "assets/Stala-stalowa-bezprzylgowa-_0004_Stala-stalowa-bezprzylgowa-1-400x270-cba616fa.jpg",
+    "src": "resources/img/prd-images/thumbnails/Stala-stalowa-bezprzylgowa-_0004_Stala-stalowa-bezprzylgowa-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Standard_2-pack_0004_Oscieznica-Standard-2-pack-1-e1516820852561-400x270.jpg": {
+    "file": "assets/Standard_2-pack_0004_Oscieznica-Standard-2-pack-1-e1516820852561-400x270-352861d5.jpg",
+    "src": "resources/img/prd-images/thumbnails/Standard_2-pack_0004_Oscieznica-Standard-2-pack-1-e1516820852561-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Temida--400x270.jpg": {
+    "file": "assets/Temida--400x270-70a92fdb.jpg",
+    "src": "resources/img/prd-images/thumbnails/Temida--400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Tetyda-model-2-400x270.jpg": {
+    "file": "assets/Tetyda-model-2-400x270-7b660cba.jpg",
+    "src": "resources/img/prd-images/thumbnails/Tetyda-model-2-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/Venom-ALU-pub_pod-katalog-lustrzane-odbicie-plakatu-400x270.jpg": {
+    "file": "assets/Venom-ALU-pub_pod-katalog-lustrzane-odbicie-plakatu-400x270-6a9d8189.jpg",
+    "src": "resources/img/prd-images/thumbnails/Venom-ALU-pub_pod-katalog-lustrzane-odbicie-plakatu-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/aranz_venom_classen-400x270.jpg": {
+    "file": "assets/aranz_venom_classen-400x270-e7a877ee.jpg",
+    "src": "resources/img/prd-images/thumbnails/aranz_venom_classen-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/bord_w3-new-1-400x270.jpg": {
+    "file": "assets/bord_w3-new-1-400x270-a94c63eb.jpg",
+    "src": "resources/img/prd-images/thumbnails/bord_w3-new-1-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/classen-drzwi-BORD-dab-Grigio-400x270.jpg": {
+    "file": "assets/classen-drzwi-BORD-dab-Grigio-400x270-471e30e7.jpg",
+    "src": "resources/img/prd-images/thumbnails/classen-drzwi-BORD-dab-Grigio-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/classen-drzwi-przesuwne-biale-Classen-panele-Dab-Altea-37325-Impression_poprawione-400x270.jpg": {
+    "file": "assets/classen-drzwi-przesuwne-biale-Classen-panele-Dab-Altea-37325-Impression_poprawione-400x270-f49a796b.jpg",
+    "src": "resources/img/prd-images/thumbnails/classen-drzwi-przesuwne-biale-Classen-panele-Dab-Altea-37325-Impression_poprawione-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/classen_glas-400x270.jpg": {
+    "file": "assets/classen_glas-400x270-6dfc95b8.jpg",
+    "src": "resources/img/prd-images/thumbnails/classen_glas-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/classen_lirgo-400x270.jpg": {
+    "file": "assets/classen_lirgo-400x270-f25d3b84.jpg",
+    "src": "resources/img/prd-images/thumbnails/classen_lirgo-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/classen_modul-400x270.jpg": {
+    "file": "assets/classen_modul-400x270-0c7b7929.jpg",
+    "src": "resources/img/prd-images/thumbnails/classen_modul-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/classen_verti-400x270.jpg": {
+    "file": "assets/classen_verti-400x270-19549c73.jpg",
+    "src": "resources/img/prd-images/thumbnails/classen_verti-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/classic-aranz-400x270.jpg": {
+    "file": "assets/classic-aranz-400x270-16c7f2d7.jpg",
+    "src": "resources/img/prd-images/thumbnails/classic-aranz-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/dark_classen-400x270.jpg": {
+    "file": "assets/dark_classen-400x270-66e71f79.jpg",
+    "src": "resources/img/prd-images/thumbnails/dark_classen-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/demeter-model-2-400x270.jpg": {
+    "file": "assets/demeter-model-2-400x270-26dd1e1d.jpg",
+    "src": "resources/img/prd-images/thumbnails/demeter-model-2-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/milk_classen-400x270.jpg": {
+    "file": "assets/milk_classen-400x270-2a327ecf.jpg",
+    "src": "resources/img/prd-images/thumbnails/milk_classen-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/natura-hk-hpl-400x270.jpg": {
+    "file": "assets/natura-hk-hpl-400x270-a9d333de.jpg",
+    "src": "resources/img/prd-images/thumbnails/natura-hk-hpl-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/ppoz_classen-400x270.jpg": {
+    "file": "assets/ppoz_classen-400x270-5d59bc20.jpg",
+    "src": "resources/img/prd-images/thumbnails/ppoz_classen-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/stala-b-mdf-42-400x270.jpg": {
+    "file": "assets/stala-b-mdf-42-400x270-f4d96669.jpg",
+    "src": "resources/img/prd-images/thumbnails/stala-b-mdf-42-400x270.jpg"
+  },
+  "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg": {
+    "file": "assets/stala-mdf-42-400x270-6587c9a0.jpg",
+    "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
+  },
+  "resources/js/app.css": {
+    "file": "assets/app-a786068b.css",
+    "src": "resources/js/app.css"
+  },
+  "resources/js/app.js": {
+    "assets": [
+      "assets/tooltip-icon2-eb8b7abc.svg",
+      "assets/tooltip-icon-30ff94af.svg"
+    ],
+    "css": [
+      "assets/app-a786068b.css"
+    ],
+    "file": "assets/app-c863fbc4.js",
+    "imports": [
+      "resources/js/favorites.js"
+    ],
+    "isEntry": true,
+    "src": "resources/js/app.js"
+  },
+  "resources/js/favorites.js": {
+    "file": "assets/favorites-e07784b4.js",
+    "isEntry": true,
+    "src": "resources/js/favorites.js"
+  }
+}
