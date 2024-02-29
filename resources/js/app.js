@@ -13,12 +13,9 @@ document.addEventListener('livewire:init', () => {
     initSwiperJS();
     initFavorites();
     initCustomJS();
-    //initializeSwiper();
-
 });
 document.addEventListener('livewire:navigated', () => {
     initSwiperJS();
     initFavorites();
     initCustomJS();
-    //initializeSwiper();
 });
