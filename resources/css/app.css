@@ -413,3 +413,10 @@ ul.property__list {
     font-size: 16px;
     color: #333;
 }
+
+.pswp--custom-bg {
+  --pswp-bg: rgba(0, 0, 0, 0.6);
+  background: var(--pswp-bg)!important;
+}
+
+

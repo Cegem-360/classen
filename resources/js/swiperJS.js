@@ -308,6 +308,37 @@ export function initSwiperJS() {
         //console.log('Slide object data', pswp.currSlide.data);
     });
 
+    // *** Door Frames Lightbox ***
+    const photo_swipe_options_doorframes = {
+        gallery: '.lightbox-doorframes',
+        pswpModule: PhotoSwipe,
+        // set background opacity
+        bgOpacity: 0.5,
+        mainClass: 'pswp--custom-bg',
+        showHideOpacity: true,
+        children: 'a',
+        loop: true,
+        showHideAnimationType: 'none', /* options: fade, zoom, none */
+
+        /* Click on image moves to the next slide */
+        imageClickAction: 'close',
+        tapAction: 'close',
+
+        /* ## Hiding a specific UI element ## */
+        initialZoomLevel: 0.5,
+        zoom: false,
+        close: true,
+        counter: true,
+        arrowKeys: true,
+        /* ## Options ## */
+        bgOpacity: "1",/* deafult: 0.8 */
+        wheelToZoom: false, /* deafult: undefined */
+    };
+    const lightboxDoorFrames = new PhotoSwipeLightbox(photo_swipe_options_doorframes);
+    lightboxDoorFrames.init();
+
+
+
 
     /* ###############################
            qTip2 jQuery plugin
