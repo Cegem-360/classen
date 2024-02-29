@@ -67,6 +67,7 @@ export function initSwiperJS() {
         }
     });
 
+    // fooldal carousel
     const prdSwiper = new Swiper('.prd-swiper', {
         // configure Swiper to use modules
         modules: [Navigation, Pagination, Thumbs],
