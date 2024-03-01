@@ -11,6 +11,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
+use Illuminate\Support\Facades\Artisan;
 
 class UpdateWebsiteDatabase implements ShouldQueue
 {
@@ -39,6 +40,7 @@ class UpdateWebsiteDatabase implements ShouldQueue
         $response = $this->client->get(EndPoint::LARAVELWEBSITEOPTIONS);
         $result = json_decode($response->getBody(), true);
         $result = $result[0]['acf'];
+        Artisan::call('migrate:refresh', ['--table' => 'website_options']);
         foreach ($result['fooldal_hero_banner'] as $value) {
             WebsiteOptions::updateOrCreate([
                 'name' => 'fooldal_hero_banner_kepek',
