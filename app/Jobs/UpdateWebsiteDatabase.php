@@ -5,13 +5,13 @@ namespace App\Jobs;
 use App\Enums\EndPoint;
 use App\Enums\UrlPath;
 use App\Models\WebsiteOptions;
+use Artisan;
 use GuzzleHttp\Client;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Artisan;
 
 class UpdateWebsiteDatabase implements ShouldQueue
 {
@@ -40,7 +40,7 @@ class UpdateWebsiteDatabase implements ShouldQueue
         $response = $this->client->get(EndPoint::LARAVELWEBSITEOPTIONS);
         $result = json_decode($response->getBody(), true);
         $result = $result[0]['acf'];
-        Artisan::call('migrate:refresh', ['--path' => 'database/migrations/2024_02_28_123239_create_website_options_table.php']);
+        Artisan::call('migrate:refresh', ['--path' => 'database/migrations/2024_02_28_123239_create_website_options_table']);
         foreach ($result['fooldal_hero_banner'] as $value) {
             WebsiteOptions::updateOrCreate([
                 'name' => 'fooldal_hero_banner_kepek',
