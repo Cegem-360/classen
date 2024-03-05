@@ -20,9 +20,8 @@
                 {{ $style }}
             </style>
         @endisset
-        @livewireStyles
         <!-- Scripts -->
-
+        @vite(['resources/js/app.js'])
     </head>
 
     <body class="font-sans antialiased">
@@ -41,8 +40,7 @@
                 {{ $slot }}
             </main>
         </div>
-        @livewireScriptConfig
-        @vite(['resources/js/app.js'])
+
         <script>
             // Function to get cookie value by name
             function getCookie(name) {
