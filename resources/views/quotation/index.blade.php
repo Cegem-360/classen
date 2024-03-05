@@ -40,7 +40,7 @@
                                 </h3>
                                 <p class="mt-1 text-sm text-gray-700">{{ $quotationItem->door->category->name }}</p>
                             </div>
-                            <p class="text-sm font-medium text-gray-900">{{ $quotationItem->door->price }}</p>
+                            <p class="text-sm font-medium text-gray-900"><x-collections.partials.price>{{ $quotationItem->door->price }}</x-collections.partials.price></p>
 
                         </div>
                         <div class="text-sm font-medium text-gray-900">

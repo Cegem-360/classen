@@ -16,6 +16,7 @@
                <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
                <h3 class="mb-3 text-lg">{{ __('Collection: ') }}<span class="font-bold">{{ $category->name }}</span>
                </h3>
+               <x-collections.partials.price class="text-lg font-bold">{{$door->price}}</x-collections.partials.price>
                <form action="{{ route('quotation.add', ['door' => $door->id]) }}" method="post">
                    @csrf
                    <x-primary-button class="mt-6 w-fit"
