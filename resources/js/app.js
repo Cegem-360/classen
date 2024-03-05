@@ -8,7 +8,7 @@ import 'flowbite';
 import { initSwiperJS } from './swiperJS.js';
 import { initFavorites } from './favorites.js';
 import { initCustomJS } from './customJS.js';
-import qtip from 'qtip2';
+import qtip from 'qtip';
 document.addEventListener('livewire:init', () => {
     initSwiperJS();
     initFavorites();
