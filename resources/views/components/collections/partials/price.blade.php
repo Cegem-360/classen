@@ -1,2 +1,2 @@
 @use('Illuminate\Support\Number')
-<span> {{ Number::currency(intval($slot->__toString()), locale: 'hu') }} Ft</span>
+<span> {{ Number::currency(intval($slot->__toString()), locale: 'huf') }} Ft</span>
