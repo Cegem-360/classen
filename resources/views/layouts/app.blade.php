@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Classen') }}</title>
-
+        @vite(['resources/js/app.js'])
         <!-- photoswipe CSS -->
         <link href="https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.css" rel="stylesheet" />
         <!-- qTip jQuery plugin -->
@@ -21,7 +21,7 @@
             </style>
         @endisset
         <!-- Scripts -->
-        @vite(['resources/js/app.js'])
+
     </head>
 
     <body class="font-sans antialiased">
