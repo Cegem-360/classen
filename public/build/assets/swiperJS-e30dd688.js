@@ -1,0 +1,1 @@
+import{g as r,S as i}from"./pagination-7f156276.js";import"https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js";import"https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js";r.registerPlugin(i);

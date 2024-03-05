@@ -1,9 +1,9 @@
 {
-  "_pagination-7b0a14f7.js": {
+  "_pagination-7f156276.js": {
     "css": [
       "assets/pagination-d66ac298.css"
     ],
-    "file": "assets/pagination-7b0a14f7.js"
+    "file": "assets/pagination-7f156276.js"
   },
   "pagination.css": {
     "file": "assets/pagination-d66ac298.css",
@@ -557,9 +557,9 @@
     "css": [
       "assets/app-1102ef15.css"
     ],
-    "file": "assets/app-5d83e126.js",
+    "file": "assets/app-94e14bc6.js",
     "imports": [
-      "_pagination-7b0a14f7.js"
+      "_pagination-7f156276.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
@@ -575,9 +575,9 @@
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-a340dde4.js",
+    "file": "assets/swiperJS-e30dd688.js",
     "imports": [
-      "_pagination-7b0a14f7.js"
+      "_pagination-7f156276.js"
     ],
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
