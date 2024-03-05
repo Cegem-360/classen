@@ -1,9 +1,9 @@
 {
-  "_pagination-24e67817.js": {
+  "_pagination-7b0a14f7.js": {
     "css": [
       "assets/pagination-d66ac298.css"
     ],
-    "file": "assets/pagination-24e67817.js"
+    "file": "assets/pagination-7b0a14f7.js"
   },
   "pagination.css": {
     "file": "assets/pagination-d66ac298.css",
@@ -557,16 +557,15 @@
     "css": [
       "assets/app-1102ef15.css"
     ],
-    "file": "assets/app-b59cafa7.js",
+    "file": "assets/app-5d83e126.js",
     "imports": [
-      "_pagination-24e67817.js",
-      "resources/js/customJS.js"
+      "_pagination-7b0a14f7.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
   },
   "resources/js/customJS.js": {
-    "file": "assets/customJS-2dd3f1ea.js",
+    "file": "assets/customJS-4ed993c7.js",
     "isEntry": true,
     "src": "resources/js/customJS.js"
   },
@@ -576,10 +575,9 @@
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-0dd52bba.js",
+    "file": "assets/swiperJS-a340dde4.js",
     "imports": [
-      "resources/js/customJS.js",
-      "_pagination-24e67817.js"
+      "_pagination-7b0a14f7.js"
     ],
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
