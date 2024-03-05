@@ -15,6 +15,7 @@ window.Swiper = Swiper;
 
 import { gsap } from "gsap";
 window.gsap = gsap;
-import $ from "jquery";
+import { $ } from './../../node_modules/jquery';
+//import $ from "jquery";
 window.$ = $;
 

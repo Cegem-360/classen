@@ -10,6 +10,8 @@ export default defineConfig({
         laravel({
             input: [
                 'resources/js/app.js',
+                'resources/js/swiperJS.js',
+                'resources/js/customJS.js',
                 'resources/js/favorites.js',
             ],
             refresh: true,
