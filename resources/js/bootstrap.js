@@ -13,7 +13,7 @@ import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from
 Swiper.use([Navigation, Pagination, Thumbs, EffectFade, HashNavigation, Grid]);
 window.Swiper = Swiper;
 
-import { gsap } from "gsap";
+import gsap from "gsap";
 window.gsap = gsap;
 //import $ from "jquery";
 window.$ = $;

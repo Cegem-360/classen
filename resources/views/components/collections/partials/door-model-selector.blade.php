@@ -4,8 +4,9 @@
            <div class="swiper-wrapper max-h-[500px] bg-neutral-200 p-12">
                @foreach ($modelVariants as $model)
                    <div class="swiper-slide !flex justify-center sm:w-full">
-                       <img class="max-h-[500px]"
-                           src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+                       <a href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate><img class="max-h-[500px]"
+                               src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+                       </a>
                    </div>
                @endforeach
            </div>
@@ -16,7 +17,8 @@
                <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
                <h3 class="mb-3 text-lg">{{ __('Collection: ') }}<span class="font-bold">{{ $category->name }}</span>
                </h3>
-               <x-collections.partials.price class="text-lg font-bold">{{$door->price}}</x-collections.partials.price>
+               <x-collections.partials.price
+                   class="text-lg font-bold">{{ $door->price }}</x-collections.partials.price>
                <form action="{{ route('quotation.add', ['door' => $door->id]) }}" method="post">
                    @csrf
                    <x-primary-button class="mt-6 w-fit"
