@@ -4,7 +4,8 @@
            <div class="swiper-wrapper max-h-[500px] bg-neutral-200 p-12">
                @foreach ($modelVariants as $model)
                    <div class="swiper-slide !flex justify-center sm:w-full">
-                       <a href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate><img class="max-h-[500px]"
+                       <a href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate>
+                           <img class="max-h-[500px]"
                                src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
                        </a>
                    </div>
