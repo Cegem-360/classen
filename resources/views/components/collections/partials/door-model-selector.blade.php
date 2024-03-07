@@ -22,6 +22,7 @@
                    <x-primary-button class="mt-6 w-fit"
                        type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
                </form>
+               <livewire:pop-up-modal :data='$door->id' :show='true' />
            </div>
            <div class="door-model-swiper-thumbs w-full" thumbsSlider="">
                <div class="grid grid-cols-4 gap-3">

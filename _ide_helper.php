@@ -10249,6 +10249,50 @@ namespace Illuminate\Support\Facades {
         {
                         \Illuminate\Routing\Redirector::flushMacros();
         }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function error($message, $replace = [])
+        {
+                        return \Illuminate\Routing\Redirector::error($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function info($message, $replace = [])
+        {
+                        return \Illuminate\Routing\Redirector::info($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function success($message, $replace = [])
+        {
+                        return \Illuminate\Routing\Redirector::success($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function warning($message, $replace = [])
+        {
+                        return \Illuminate\Routing\Redirector::warning($message, $replace);
+        }
             }
             /**
      * 
@@ -18339,6 +18383,50 @@ namespace Maatwebsite\Excel\Facades {
             }
     }
 
+namespace Masmerise\Toaster {
+            /**
+     * 
+     *
+     */        class Toaster {
+                    /**
+         * 
+         *
+         * @static 
+         */        public static function collect($toast)
+        {
+                        /** @var \Masmerise\Toaster\TranslatingCollector $instance */
+                        return $instance->collect($toast);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */        public static function release()
+        {
+                        /** @var \Masmerise\Toaster\TranslatingCollector $instance */
+                        return $instance->release();
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */        public static function assertDispatched($message)
+        {
+                        /** @var \Masmerise\Toaster\TestableCollector $instance */
+                        return $instance->assertDispatched($message);
+        }
+                    /**
+         * 
+         *
+         * @static 
+         */        public static function assertNothingDispatched()
+        {
+                        /** @var \Masmerise\Toaster\TestableCollector $instance */
+                        return $instance->assertNothingDispatched();
+        }
+            }
+    }
+
 namespace Spatie\LaravelIgnition\Facades {
             /**
      * 
@@ -18813,6 +18901,55 @@ namespace Illuminate\Http {
                         return \Illuminate\Http\Request::hasValidSignatureWhileIgnoring($ignoreQuery, $absolute);
         }
             }
+            /**
+     * 
+     *
+     */        class RedirectResponse {
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function error($message, $replace = [])
+        {
+                        return \Illuminate\Http\RedirectResponse::error($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function info($message, $replace = [])
+        {
+                        return \Illuminate\Http\RedirectResponse::info($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function success($message, $replace = [])
+        {
+                        return \Illuminate\Http\RedirectResponse::success($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function warning($message, $replace = [])
+        {
+                        return \Illuminate\Http\RedirectResponse::warning($message, $replace);
+        }
+            }
     }
 
 namespace Illuminate\Routing {
@@ -18829,6 +18966,55 @@ namespace Illuminate\Routing {
          */        public static function lazy($enabled = true)
         {
                         return \Illuminate\Routing\Route::lazy($enabled);
+        }
+            }
+            /**
+     * 
+     *
+     */        class Redirector {
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function error($message, $replace = [])
+        {
+                        return \Illuminate\Routing\Redirector::error($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function info($message, $replace = [])
+        {
+                        return \Illuminate\Routing\Redirector::info($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function success($message, $replace = [])
+        {
+                        return \Illuminate\Routing\Redirector::success($message, $replace);
+        }
+                    /**
+         * 
+         *
+         * @see \Masmerise\Toaster\ToastableMacros::macro()
+         * @param string $message
+         * @param array $replace
+         * @static 
+         */        public static function warning($message, $replace = [])
+        {
+                        return \Illuminate\Routing\Redirector::warning($message, $replace);
         }
             }
     }
@@ -22478,6 +22664,7 @@ namespace  {
             class Debugbar extends \Barryvdh\Debugbar\Facades\Debugbar {}
             class Livewire extends \Livewire\Livewire {}
             class Excel extends \Maatwebsite\Excel\Facades\Excel {}
+            class Toaster extends \Masmerise\Toaster\Toaster {}
             class Flare extends \Spatie\LaravelIgnition\Facades\Flare {}
     }
 
