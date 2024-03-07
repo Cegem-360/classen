@@ -16,15 +16,6 @@
                </h3>
                <x-collections.partials.price
                    class="mt-6 block w-fit bg-neutral-200 px-6 py-3 text-lg font-bold">{{ $door->price }}</x-collections.partials.price>
-               <form action="{{ route('quotation.add', ['door' => $door->id]) }}" method="post">
-                   @csrf
-                   <x-primary-button class="mt-6 w-fit"
-                       type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
-               </form>
-               <livewire:pop-up-modal :data='$door->id' :show='true' />
-               <x-collections.partials.price class="text-lg font-bold">
-                   {{ $door->price }}
-               </x-collections.partials.price>
 
                <livewire:request-quotation-button :door='$door' />
            </div>
