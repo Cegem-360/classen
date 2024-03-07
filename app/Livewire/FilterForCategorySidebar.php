@@ -121,6 +121,7 @@ class FilterForCategorySidebar extends Component
         } else {
             $this->collections = Category::all()->groupBy('breadcrumb')->all();
         }
+        $this->collections['WOOD-BASED DOOR FRAMES'] = array_shift($this->collections);
 
         return view('livewire.filter-for-category-sidebar', ['collections' => $this->collections]);
     }
