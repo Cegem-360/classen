@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 return [
 
@@ -14,7 +16,7 @@ return [
      *
      * Supported: "bottom", "middle" or "top"
      */
-    'alignment' => 'bottom',
+    'alignment' => 'middle',
 
     /**
      * Allow users to close toast messages prematurely.
@@ -28,14 +30,14 @@ return [
      *
      * Minimum: 3000 (in milliseconds)
      */
-    'duration' => 3000,
+    'duration' => 30000,
 
     /**
      * The horizontal position of each toast.
      *
      * Supported: "center", "left" or "right"
      */
-    'position' => 'right',
+    'position' => 'center',
 
     /**
      * Whether messages passed as translation keys should be translated automatically.

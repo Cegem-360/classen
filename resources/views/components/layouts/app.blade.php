@@ -42,9 +42,7 @@
 
             </main>
         </div>
-        <!-- jQuery -->
-        <!-- qTip jQuery plugin -->
-
+        <x-toaster-hub />
     </body>
 
 </html>
