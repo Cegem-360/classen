@@ -37,15 +37,16 @@ Route::get('/kapcsolat', [ManagePageContentController::class, 'kapcsolat'])->nam
 Route::get('/szolgaltatasaink', [ManagePageContentController::class, 'szolgaltatasaink'])->name('szolgaltatasaink');
 
 Route::get('/blog', [ManagePageContentController::class, 'blog'])->name('blog');
-Route::get('/favorites', [ManagePageContentController::class, 'favorites'])->name('favorites');
 
+Route::prefix('kedvencek')->as('favorites.')->group(function () {
+    Route::get('/', [ManagePageContentController::class, 'favorites'])->name('index');
+});
 Route::get('/letoltesek', function () {
     return view('letoltesek/index');
 })->name('downloads');
 
-Route::get('/ajanlatkeres', [QuotationController::class, 'index'])->name('quotation.index');
-Route::prefix('quotation')->as('quotation.')->group(function () {
-
+Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
+    Route::get('/', [QuotationController::class, 'index'])->name('index');
     Route::post('/add/{door}', [QuotationController::class, 'addItem'])->name('add');
     Route::post('/store', [QuotationController::class, 'store'])->name('store');
     Route::get('/sikeres', [QuotationController::class, 'success'])->name('success');

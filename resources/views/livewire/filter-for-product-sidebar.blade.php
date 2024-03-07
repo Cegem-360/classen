@@ -245,6 +245,14 @@
         <div wire:loading>
             {{ __('Searching...') }}
         </div>
+        <div
+            class="sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-1 relative h-80 w-full items-end overflow-hidden bg-white pr-16 text-right group-hover:opacity-75 sm:h-64">
+            <a href="{{ route('category.index') }}" wire:navigate.hover>
+                <h2 class="mr-0 border-1 border-gray-1000 text-center text-2xl font-bold text-gray-900">
+                    {{ __('Go to collections') }}
+                </h2>
+            </a>
+        </div>
         <div wire:loading.remove>
             <div class="mx-8 grid grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
 

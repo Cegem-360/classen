@@ -43,7 +43,7 @@
                         </button>
                     </form>
                     <a class="flex h-full w-16 items-center justify-center border-x-[1px] border-[#000]"
-                        href="{{ route('favorites') }}" wire:navigate>
+                        href="{{ route('favorites.index') }}" wire:navigate>
                         <x-svg.heart />
                     </a>
                     <!-- Mobile Nav -->
@@ -55,7 +55,7 @@
                         <!-- Navigation Menu -->
                         <nav class="hidenav fixed left-0 right-0 top-0" id="overlay">
                             <ul
-                                class="text-black flex min-h-screen flex-col items-center justify-start bg-white py-24 text-center uppercase">
+                                class="flex min-h-screen flex-col items-center justify-start bg-white py-24 text-center uppercase text-black">
                                 <li>
                                     <form class="flex items-center border-[1px] border-[#000]" action="">
                                         <input class="border-0 text-xs" name="s" type="text"
@@ -83,4 +83,3 @@
         </div>
     </header>
 </nav>
-

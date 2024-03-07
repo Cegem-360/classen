@@ -1,4 +1,4 @@
-export function initFavorites() {
+export function initFavoritesJS() {
     // Function to get cookie value by name
     function getCookie(name) {
         const cookieValue = document.cookie
