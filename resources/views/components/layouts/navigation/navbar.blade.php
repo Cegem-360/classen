@@ -1,4 +1,4 @@
-<nav class="sticky" x-data="{ open: false }">
+<nav class="sticky top-0 bg-white z-[99]" x-data="{ open: false }">
     <header class="w-full border-[1px] border-b-[#000]" id="top-header">
         <div class="flex text-xs">
             <div class="basis-1/3">
