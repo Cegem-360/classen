@@ -1,6 +1,9 @@
 import './bootstrap';
 import '../css/app.css';
 import '../css/classen.css';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import.meta.glob([
     '../img/**',
 ]);

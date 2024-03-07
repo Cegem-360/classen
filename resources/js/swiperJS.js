@@ -8,9 +8,7 @@ import PhotoSwipe from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.j
 gsap.registerPlugin(ScrollTrigger);
 
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+
 
 export function initSwiperJS() {
     /**
