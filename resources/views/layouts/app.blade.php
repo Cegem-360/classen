@@ -8,9 +8,7 @@
 
         <title>{{ config('app.name', 'Classen') }}</title>
 
-        <!-- photoswipe CSS -->
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        @vite(['resources/js/app.js'])
         <link href="https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.css" rel="stylesheet" />
         <!-- qTip jQuery plugin -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css" rel="stylesheet" />
@@ -23,7 +21,7 @@
             </style>
         @endisset
         <!-- Scripts -->
-        @vite(['resources/js/app.js'])
+
     </head>
 
     <body class="font-sans antialiased">
