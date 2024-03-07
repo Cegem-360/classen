@@ -9,9 +9,6 @@
         <title>{{ config('app.name', 'Classen') }}</title>
 
         <!-- photoswipe CSS -->
-        <link href="https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.css" rel="stylesheet" />
-        <!-- qTip jQuery plugin -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.css" rel="stylesheet" />
         <!-- Fonts -->
         <link href="https://fonts.bunny.net" rel="preconnect">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -46,10 +43,8 @@
             </main>
         </div>
         <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-            crossorigin="anonymous"></script>
         <!-- qTip jQuery plugin -->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qtip2/3.0.3/jquery.qtip.min.js"></script>
+
     </body>
 
 </html>
