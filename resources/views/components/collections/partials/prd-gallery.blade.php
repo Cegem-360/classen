@@ -18,7 +18,8 @@
            <div class="swiper-wrapper !h-auto flex-wrap">
                @foreach ($category->gallery_imgs as $img)
                    <div class="swiper-slide">
-                       <img loading="lazy" src=" {{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}" />
+                       <img src=" {{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}"
+                           loading="lazy" />
                    </div>
                @endforeach
            </div>
@@ -26,5 +27,10 @@
        <div class="pl-8 md:order-first">
            <h2 class="mb-3 text-4xl font-bold">{{ $category->name }}</h2>
            <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
+           <p>
+               <x-collections.partials.price class="text-lg font-bold">
+                   {{ $category->doors->first()->price }}
+               </x-collections.partials.price>
+           </p>
        </div>
    </div>
