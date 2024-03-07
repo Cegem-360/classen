@@ -3,7 +3,8 @@
        <div class="door-model-swiper w-full">
            <div class="bg-neutral-200 p-12">
                <div class="!flex justify-center sm:w-full">
-                   <img class="max-h-[500px]" src="{{ $door->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+                   <img class="max-h-[500px]"
+                       src="{{ $door->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
                </div>
            </div>
        </div>
@@ -13,22 +14,29 @@
                <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
                <h3 class="mb-3 text-lg">{{ __('Collection: ') }}<span class="font-bold">{{ $category->name }}</span>
                </h3>
-               <x-collections.partials.price class="block w-fit mt-6 px-6 py-3 bg-neutral-200 text-lg font-bold">{{ $door->price }}</x-collections.partials.price>
+               <x-collections.partials.price
+                   class="mt-6 block w-fit bg-neutral-200 px-6 py-3 text-lg font-bold">{{ $door->price }}</x-collections.partials.price>
                <form action="{{ route('quotation.add', ['door' => $door->id]) }}" method="post">
                    @csrf
-                   <x-primary-button class="mt-6 w-fit" type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
+                   <x-primary-button class="mt-6 w-fit"
+                       type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
                </form>
                <livewire:pop-up-modal :data='$door->id' :show='true' />
+               <x-collections.partials.price class="text-lg font-bold">
+                   {{ $door->price }}
+               </x-collections.partials.price>
+
+               <livewire:request-quotation-button :door='$door' />
            </div>
            <div class="door-model-swiper-thumbs w-full" thumbsSlider="">
                <div class="grid grid-cols-4 gap-3">
                    @foreach ($modelVariants as $model)
-                   <div class="bg-neutral-200 p-6 pb-2">
-                       <a href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate>
-                           <img src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
-                       </a>
-                       <div class="desc w-full pt-2">{{ $model->name }}</div>
-                   </div>
+                       <div class="bg-neutral-200 p-6 pb-2">
+                           <a href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate>
+                               <img src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+                           </a>
+                           <div class="desc w-full pt-2">{{ $model->name }}</div>
+                       </div>
                    @endforeach
                </div>
            </div>

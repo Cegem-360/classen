@@ -35,13 +35,7 @@
                         wire:navigate.hover>Árajánlat</a>
                 </div>
                 <div class="relative flex h-full basis-1/2 items-center justify-between">
-                    <form class="flex items-center border-[1px] border-[#000] md:hidden" action="">
-                        <input class="border-0 text-xs" name="s" type="text"
-                            placeholder="{{ __('Search') }}">
-                        <button class="basis-auto pr-2">
-                            <x-svg.search />
-                        </button>
-                    </form>
+                    <livewire:search-box />
                     <a class="flex h-full w-16 items-center justify-center border-x-[1px] border-[#000]"
                         href="{{ route('favorites.index') }}" wire:navigate>
                         <x-svg.heart />
@@ -57,13 +51,8 @@
                             <ul
                                 class="flex min-h-screen flex-col items-center justify-start bg-white py-24 text-center uppercase text-black">
                                 <li>
-                                    <form class="flex items-center border-[1px] border-[#000]" action="">
-                                        <input class="border-0 text-xs" name="s" type="text"
-                                            placeholder="{{ __('Search') }}">
-                                        <button class="basis-auto pr-2">
-                                            <x-svg.search />
-                                        </button>
-                                    </form>
+
+                                    <livewire:searchbox />
                                 </li>
                                 <li><a class="flex h-full items-center px-4" href="{{ route('door.index') }}"
                                         wire:navigate.hover>{{ __('doors') }}</a></li>
