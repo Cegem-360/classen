@@ -8,14 +8,14 @@ import 'flowbite';
 import { initSwiperJS } from './swiperJS.js';
 import { initFavorites } from './favorites.js';
 import { initCustomJS } from './customJS.js';
-import qtip from 'qtip2';
+//import './../../node_modules/qtip2/dist/jquery.qtip.js';
 document.addEventListener('livewire:init', () => {
     initSwiperJS();
-    initFavoritesJS();
+    initFavorites();
     initCustomJS();
 });
 document.addEventListener('livewire:navigated', () => {
     initSwiperJS();
-    initFavoritesJS();
+    initFavorites();
     initCustomJS();
 });

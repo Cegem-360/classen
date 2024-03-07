@@ -30,7 +30,7 @@ class ManagePageContentController extends Controller
         $favoriteProductIds = json_decode(Cookie::get('favorites'));
         $products = Door::whereIn('id', $favoriteProductIds)->get();
 
-        return view('favorites', compact('products'));
+        return view('favorites.index', compact('products'));
     }
 
     public function rolunk()

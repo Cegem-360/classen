@@ -6,7 +6,7 @@
 
 import axios from 'axios';
 window.axios = axios;
-import $ from 'jquery'
+import $ from "jquery";
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 import Swiper from 'swiper';
 import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
@@ -15,6 +15,7 @@ window.Swiper = Swiper;
 
 import gsap from "gsap";
 window.gsap = gsap;
-//import $ from "jquery";
-window.$ = $;
+
+import './../../node_modules/qtip2/dist/jquery.qtip.js';
+window.$ = window.jquery = $;
 
