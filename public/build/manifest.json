@@ -1,17 +1,14 @@
 {
-<<<<<<< HEAD
-  "_pagination-24e67817.js": {
+  "_pagination-7f156276.js": {
     "css": [
       "assets/pagination-d66ac298.css"
     ],
-    "file": "assets/pagination-24e67817.js"
+    "file": "assets/pagination-7f156276.js"
   },
   "pagination.css": {
     "file": "assets/pagination-d66ac298.css",
     "src": "pagination.css"
   },
-=======
->>>>>>> 87f6f4898095c3c1d1f7f52a2b0079da2e1677e6
   "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp": {
     "file": "assets/Classen-drzwi-Ferro-dab-nordycki-89fc95c0.webp",
     "src": "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp"
@@ -549,11 +546,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-<<<<<<< HEAD
-    "file": "assets/app-8bb0084f.css",
-=======
-    "file": "assets/app-f324ab86.css",
->>>>>>> 87f6f4898095c3c1d1f7f52a2b0079da2e1677e6
+    "file": "assets/app-1ed2d3d2.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -562,19 +555,11 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-<<<<<<< HEAD
-      "assets/app-8bb0084f.css"
+      "assets/app-1ed2d3d2.css"
     ],
-    "file": "assets/app-1fd43ad9.js",
+    "file": "assets/app-d9d5a5df.js",
     "imports": [
-      "_pagination-24e67817.js"
-=======
-      "assets/app-f324ab86.css"
-    ],
-    "file": "assets/app-bebfcb33.js",
-    "imports": [
-      "resources/js/swiperJS.js"
->>>>>>> 87f6f4898095c3c1d1f7f52a2b0079da2e1677e6
+      "_pagination-7f156276.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
@@ -589,21 +574,11 @@
     "isEntry": true,
     "src": "resources/js/favorites.js"
   },
-  "resources/js/swiperJS.css": {
-    "file": "assets/swiperJS-d66ac298.css",
-    "src": "resources/js/swiperJS.css"
-  },
   "resources/js/swiperJS.js": {
-<<<<<<< HEAD
-    "file": "assets/swiperJS-83ace67d.js",
+    "file": "assets/swiperJS-e30dd688.js",
     "imports": [
-      "_pagination-24e67817.js"
-=======
-    "css": [
-      "assets/swiperJS-d66ac298.css"
->>>>>>> 87f6f4898095c3c1d1f7f52a2b0079da2e1677e6
+      "_pagination-7f156276.js"
     ],
-    "file": "assets/swiperJS-fb0c0d19.js",
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
   }
