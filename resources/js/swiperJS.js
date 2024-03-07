@@ -1,5 +1,4 @@
 
-import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js';
@@ -128,28 +127,28 @@ export function initSwiperJS() {
         },
     });
 
-//     const doorModelSwiperThumbs = new Swiper(".door-model-swiper-thumbs", {
-//
-//         slidesPerView: 4,
-//         grid: {
-//             fill: 'row',
-//             rows: 8,
-//         },
-//         spaceBetween: 10,
-//         loop: false,
-//     });
-//
-//     const doorModelSwiper = new Swiper('.door-model-swiper', {
-//
-//         effect: 'fade',
-//         fadeEffect: {
-//             crossFade: true,
-//         },
-//         loop: false,
-//         thumbs: {
-//             swiper: doorModelSwiperThumbs,
-//         },
-//     });
+    //     const doorModelSwiperThumbs = new Swiper(".door-model-swiper-thumbs", {
+    //
+    //         slidesPerView: 4,
+    //         grid: {
+    //             fill: 'row',
+    //             rows: 8,
+    //         },
+    //         spaceBetween: 10,
+    //         loop: false,
+    //     });
+    //
+    //     const doorModelSwiper = new Swiper('.door-model-swiper', {
+    //
+    //         effect: 'fade',
+    //         fadeEffect: {
+    //             crossFade: true,
+    //         },
+    //         loop: false,
+    //         thumbs: {
+    //             swiper: doorModelSwiperThumbs,
+    //         },
+    //     });
 
     const doorColorVariantSwiper = new Swiper('.door-color-variant-swiper', {
 

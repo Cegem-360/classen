@@ -1,9 +1,9 @@
 {
-  "_pagination-7f156276.js": {
+  "_pagination-1f3a79b6.js": {
     "css": [
       "assets/pagination-d66ac298.css"
     ],
-    "file": "assets/pagination-7f156276.js"
+    "file": "assets/pagination-1f3a79b6.js"
   },
   "pagination.css": {
     "file": "assets/pagination-d66ac298.css",
@@ -546,7 +546,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-1ed2d3d2.css",
+    "file": "assets/app-9a83666d.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -555,11 +555,11 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-1ed2d3d2.css"
+      "assets/app-9a83666d.css"
     ],
-    "file": "assets/app-25c28d40.js",
+    "file": "assets/app-87da5a97.js",
     "imports": [
-      "_pagination-7f156276.js"
+      "_pagination-1f3a79b6.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
@@ -575,9 +575,9 @@
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-e30dd688.js",
+    "file": "assets/swiperJS-4b90d7b2.js",
     "imports": [
-      "_pagination-7f156276.js"
+      "_pagination-1f3a79b6.js"
     ],
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
