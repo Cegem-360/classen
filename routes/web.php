@@ -24,9 +24,12 @@ Route::get('/', [ManagePageContentController::class, 'index'])->name('index');
 Route::get('/ajtok', [DoorController::class, 'index'])->name('door.index');
 Route::get('/ajtok/{door}', [DoorController::class, 'show'])->name('door.show');
 
-Route::get('/kollekciok', [CategoryController::class, 'index'])->name('category.index');
-Route::get('/kollekciok/{category}', [CategoryController::class, 'show'])->name('category.show');
+Route::prefix('kollekciok')->as('category.')->group(function () {
 
+    Route::get('/', [CategoryController::class, 'index'])->name('index');
+
+    Route::get('/{category}', [CategoryController::class, 'show'])->name('show');
+});
 Route::get('/rolunk', [ManagePageContentController::class, 'rolunk'])->name('rolunk');
 
 Route::get('/kapcsolat', [ManagePageContentController::class, 'kapcsolat'])->name('kapcsolat');

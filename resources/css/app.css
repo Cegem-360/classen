@@ -11,6 +11,9 @@
     }
 }
 
+html{
+    scroll-behavior: smooth;
+}
 .kollekcio-grid {
     grid-column-gap: 8px;
     grid-row-gap: 8px;
@@ -154,8 +157,6 @@
 /* MOBILE NAV */
 #overlay-button {
   position: absolute;
-  //top: 8px;
-  //right: 10px;
   padding: 26px 11px;
   z-index: 99;
   cursor: pointer;

@@ -1,5 +1,5 @@
 <x-layouts.app>
-    {{--  @dd($categories) --}}
+    <!-- Hero banner -->
     <x-partials.hero-banner />
 
     <!-- Ajto tipusok -->

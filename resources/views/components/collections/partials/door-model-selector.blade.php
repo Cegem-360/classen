@@ -22,8 +22,8 @@
                    class="text-lg font-bold">{{ $door->price }}</x-collections.partials.price>
                <form action="{{ route('quotation.add', ['door' => $door->id]) }}" method="post">
                    @csrf
-                   <x-primary-button class="mt-6 w-fit"
-                       type="submit">{{ __('Add to Request a Quote') }}</x-primary-button>
+                   <x-primary-button class="mt-6 w-fit" type="submit">{{ __('Add to Request a Quote') }}
+                   </x-primary-button>
                </form>
            </div>
            <div class="swiper door-model-swiper-thumbs w-full" thumbsSlider="">

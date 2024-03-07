@@ -22,11 +22,13 @@
                 {{ $style }}
             </style>
         @endisset
+        @inertiaHead
         <!-- Scripts -->
 
     </head>
 
     <body class="font-sans antialiased">
+        @inertia
         <div class="min-h-screen">
 
             <!-- Page Heading -->

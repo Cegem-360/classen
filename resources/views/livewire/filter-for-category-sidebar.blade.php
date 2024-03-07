@@ -1,3 +1,4 @@
+@use('Illuminate\Support\Str')
 <div class="grid grid-cols-[1fr_3fr] md:grid-cols-[1.5fr_3fr] sm:grid-cols-1">
     <div class="h-full bg-[#9f9f9f] pl-8 pt-16 text-white">
         <h3 class="text-xl font-bold uppercase">Ajtó kollekciók</h3>
@@ -191,11 +192,11 @@
         <div class="min-h-[60px]"></div>
         @foreach ($collections as $head => $items)
             <hr class="relative mb-3 mt-8 h-1 w-72 border-0 bg-sarga">
-            <h2 class="mb-3 text-2xl uppercase">{{ __($head) }}</h2>
+            <h2 class="mb-3 text-2xl uppercase" id='{{ Str::slug(__($head)) }}'>{{ __($head) }}</h2>
             {{-- title = tag value --}}
             <ul class="products-list grid grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1">
                 @foreach ($items as $item)
-                    <x-collections.partials.collection-item :category=$item />
+                    <livewire:collection-item :category=$item />
                 @endforeach
             </ul>
         @endforeach
