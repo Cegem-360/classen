@@ -9,16 +9,18 @@ import.meta.glob([
 ]);
 import 'flowbite';
 import { initSwiperJS } from './swiperJS.js';
-import { initFavorites } from './favorites.js';
+import initFavoritesJS from './favorites.js'; // Replace 'require' with 'import'
 import { initCustomJS } from './customJS.js';
 //import './../../node_modules/qtip2/dist/jquery.qtip.js';
 document.addEventListener('livewire:init', () => {
     initSwiperJS();
-    initFavorites();
+    initFavoritesJS.initFavorites();
     initCustomJS();
 });
 document.addEventListener('livewire:navigated', () => {
     initSwiperJS();
-    initFavorites();
+    initFavoritesJS.initFavorites();
     initCustomJS();
 });
+
+window.initFavoritesJS = initFavoritesJS;

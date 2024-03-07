@@ -1,13 +1,6 @@
 {
-  "_pagination-1f3a79b6.js": {
-    "css": [
-      "assets/pagination-d66ac298.css"
-    ],
-    "file": "assets/pagination-1f3a79b6.js"
-  },
-  "pagination.css": {
-    "file": "assets/pagination-d66ac298.css",
-    "src": "pagination.css"
+  "_ScrollTrigger-9e689d32.js": {
+    "file": "assets/ScrollTrigger-9e689d32.js"
   },
   "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp": {
     "file": "assets/Classen-drzwi-Ferro-dab-nordycki-89fc95c0.webp",
@@ -546,7 +539,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-9a83666d.css",
+    "file": "assets/app-e4a3257d.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -555,11 +548,11 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-9a83666d.css"
+      "assets/app-e4a3257d.css"
     ],
-    "file": "assets/app-87da5a97.js",
+    "file": "assets/app-0a35af5c.js",
     "imports": [
-      "_pagination-1f3a79b6.js"
+      "_ScrollTrigger-9e689d32.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
@@ -575,9 +568,9 @@
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-4b90d7b2.js",
+    "file": "assets/swiperJS-9dde12fb.js",
     "imports": [
-      "_pagination-1f3a79b6.js"
+      "_ScrollTrigger-9e689d32.js"
     ],
     "isEntry": true,
     "src": "resources/js/swiperJS.js"

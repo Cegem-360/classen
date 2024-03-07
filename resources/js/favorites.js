@@ -1,54 +1,45 @@
-export function initFavorites() {
-    // Function to get cookie value by name
-    function getCookie(name) {
+const initFavoritesJS = {
+    getCookie: function (name) {
         const cookieValue = document.cookie
             .split('; ')
             .find(cookie => cookie.startsWith(name + '='));
-
         return cookieValue ? decodeURIComponent(cookieValue.split('=')[1]) : null;
-    }
+    },
 
-    // Function to set a cookie with an expiration time in days
-    function setCookie(name, value, days) {
+    setCookie: function (name, value, days) {
         const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
         document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
-    }
+    },
 
-    function initFavorites() {
-        let favorites = getFavorites();
+    initFavorites: function () {
+        let favorites = this.getFavorites(); // Use regular function to bind 'this'
         if (favorites === null) {
             favorites = [];
-            setFavorites(favorites);
+            this.setFavorites(favorites);
         }
 
         favorites.forEach(favoriteItem => {
-            // Get the div elements by their IDs
             var heart = document.getElementById("heart-" + favoriteItem);
             if (heart) {
                 heart.classList.add('fill-gray-1000');
                 heart.classList.remove('fill-white');
             }
-
         });
         return favorites;
-    }
-    var favorites = initFavorites();
+    },
 
-    // Function to add a favorite item to the end of the array
-    function toggleFavoriteItem(id) {
-        let favorites = getFavorites() || [];
+    toggleFavoriteItem: function (id) {
+        let favorites = this.getFavorites() || [];
 
         const index = favorites.indexOf(id);
         var heart = document.getElementById("heart-" + id);
         if (index === -1) {
-            // Add the item to favorites if it's not already there
             favorites.push(id);
             if (heart) {
                 heart.classList.add('fill-gray-1000');
                 heart.classList.remove('fill-white');
             }
         } else {
-            // Remove the item from favorites if it's already there
             favorites.splice(index, 1);
             if (heart) {
                 heart.classList.remove('fill-gray-1000');
@@ -56,17 +47,18 @@ export function initFavorites() {
             }
         }
 
-        setFavorites(favorites);
-    }
-    // Function to get favorites from cookies and parse as JSON
-    function getFavorites() {
-        const cookieValue = getCookie('favorites');
+        this.setFavorites(favorites);
+    },
+
+    getFavorites: function () {
+        const cookieValue = this.getCookie('favorites'); // Use regular function to bind 'this'
         return cookieValue ? JSON.parse(cookieValue) : null;
-    }
-    // Function to set favorites as a JSON string in a cookie
-    function setFavorites(array) {
-        setCookie('favorites', JSON.stringify(array), 30);
-    }
+    },
 
-}
+    setFavorites: function (array) {
+        this.setCookie('favorites', JSON.stringify(array), 30);
+        console.log(JSON.stringify(array));
+    }
+};
 
+export default initFavoritesJS;
