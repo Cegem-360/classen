@@ -20,9 +20,10 @@ const initFavoritesJS = {
 
         favorites.forEach(favoriteItem => {
             var heart = document.getElementById("heart-" + favoriteItem);
+            console.log(heart);
             if (heart) {
-                heart.classList.add('fill-gray-1000');
                 heart.classList.remove('fill-white');
+                heart.classList.add('fill-gray-1000');
             }
         });
         return favorites;
@@ -36,8 +37,9 @@ const initFavoritesJS = {
         if (index === -1) {
             favorites.push(id);
             if (heart) {
-                heart.classList.add('fill-gray-1000');
                 heart.classList.remove('fill-white');
+                heart.classList.add('fill-gray-1000');
+
             }
         } else {
             favorites.splice(index, 1);

@@ -27,7 +27,7 @@
                             <p class="text-sm font-medium text-gray-900">
                                 <button class="favorite"
                                     onclick="initFavoritesJS.toggleFavoriteItem('{{ $product['id'] }}')">
-                                    <x-svg.heart class="" id="heart-{{ $product['id'] }}"> </x-svg.heart>
+                                    <x-svg.heart class="fill-white" id="heart-{{ $product['id'] }}"> </x-svg.heart>
                                 </button>
                             </p>
                         </div>

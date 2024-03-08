@@ -256,9 +256,9 @@
 
                 @foreach ($doors as $door)
                     <div class="relative grid place-content-center bg-neutral-100 px-6 pb-2 pt-12">
-                        <x-svg.heart class="" id="heart-{{ $door->id }}"
-                            onclick="initFavoritesJS.toggleFavoriteItem('{{ $door->id }}')">
-                        </x-svg.heart>
+                        <button class="favorite" onclick="initFavoritesJS.toggleFavoriteItem('{{ $door->id }}')">
+                            <x-svg.heart class="" id="heart-{{ $door->id }}"> </x-svg.heart>
+                        </button>
                         <a class="" href="{{ route('door.show', ['door' => $door->id]) }}" wire:navigate>
                             <img class="max-h-[330px]"
                                 src="{{ !empty($door->img_url) ? $door->img_url : Vite::asset('resources/img/placeholder.webp') }}"
