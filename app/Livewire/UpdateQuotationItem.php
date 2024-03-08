@@ -3,13 +3,16 @@
 namespace App\Livewire;
 
 use App\Models\QuotationItem;
-use Livewire\Component;
 use Livewire\Attributes\On;
+use Livewire\Component;
 
 class UpdateQuotationItem extends Component
 {
     public QuotationItem $quotationItem;
+
     public $quantity;
+
+    public $frame;
 
     #[On('quotation-increment')]
     public function increment()
@@ -31,15 +34,18 @@ class UpdateQuotationItem extends Component
             ]);
         }
     }
+
     public function mount(QuotationItem $quotationItem)
     {
         $this->quotationItem = $quotationItem;
         $this->quantity = $quotationItem->quantity;
     }
+
     public function updatingQuantity()
     {
         $this->resetPage();
     }
+
     public function render()
     {
 

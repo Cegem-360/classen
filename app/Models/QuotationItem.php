@@ -12,6 +12,7 @@ class QuotationItem extends Model
     protected $fillable = [
         'door_id',
         'quotation_id',
+        'frame',
         'quantity',
     ];
 

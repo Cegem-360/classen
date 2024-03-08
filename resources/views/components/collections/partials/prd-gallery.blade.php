@@ -25,12 +25,17 @@
            </div>
        </div>
        <div class="pl-8 md:order-first">
-           <h2 class="mb-3 text-4xl font-bold">{{ $category->name }}</h2>
+           <h2 class="mb-3 text-4xl font-bold">{{ __($category->name) }}</h2>
            <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
            <p>
-               <x-collections.partials.price class="text-lg font-bold">
-                   {{ $category->doors->first()->price }}
-               </x-collections.partials.price>
+               @if (
+                   $category->name != 'Adjustable door frame' &&
+                       $category->name != 'Adjustable non-rebated door frame' &&
+                       $category->name != 'Standard 2-Pack door frame')
+                   <x-collections.partials.price class="text-lg font-bold">
+                       {{ $category->doors->first()->price }}
+                   </x-collections.partials.price>
+               @endif
            </p>
        </div>
    </div>

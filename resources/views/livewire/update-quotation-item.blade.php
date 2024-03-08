@@ -24,8 +24,13 @@
                     d="M9 1v16M1 9h16" />
             </svg>
         </button>
+        <input type="radio" value="{{ __('Adjustable door frame') }}" wire:model="frame" @selected(true)>
+        <input type="radio" value="{{ __('Adjustable door frame') }}" wire:model="frame" @selected(true)>
+        <input type="radio" value="{{ __('Adjustable door frame') }}" wire:model="frame" @selected(true)>
+
     </div>
-    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400" id="helper-text-explanation">Please
-        select a 5 digit number from 0 to 9.</p>
-    </form>
+    <p class="mt-2 text-sm text-gray-500 dark:text-gray-400" id="helper-text-explanation">
+        Please select a 5 digit number from 0 to 9.
+    </p>
+
 </div>
