@@ -1,5 +1,5 @@
 <div id="toaster" role="status" x-data="toasterHub(@js($toasts), @js($config))" @class([
-    'fixed z-50 p-4 w-full flex flex-col pointer-events-none sm:p-6',
+    'fixed top-3 right-3 z-[9999] p-0 w-fit h-fit flex flex-col pointer-events-none sm:p-6',
     'bottom-0' => $alignment->is('bottom'),
     'top-1/2 -translate-y-1/2' => $alignment->is('middle'),
     'top-0' => $alignment->is('top'),
@@ -12,10 +12,10 @@
         x-transition:enter-end="translate-y-0 opacity-100" @elseif($alignment->is('top'))
         x-transition:enter-start="-translate-y-12 opacity-0" x-transition:enter-end="translate-y-0 opacity-100" @else
             x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100" @endif x-transition:leave-end="opacity-0 scale-90" @class([
-                'relative duration-300 transform transition ease-in-out max-w-xs w-full pointer-events-auto',
+                'relative duration-300 transform transition ease-in-out max-w-xs w-full pointer-events-auto text-left px-3',
                 'text-center' => $position->is('center'),
             ])
-            :class="toast.select({ error: 'text-black', info: 'text-black', success: 'text-black', warning: 'text-black' })">
+            :class="toast.select({ error: 'text-white', info: 'text-white', success: 'text-white', warning: 'text-white' })">
             <i class="{{ $alignment->is('bottom') ? 'mt-3' : 'mb-3' }} inline-block w-full select-none rounded px-6 py-3 text-sm not-italic shadow-lg"
                 x-text="toast.message"
                 :class="toast.select({
@@ -27,7 +27,7 @@
 
             @if ($closeable)
                 <button
-                    class="{{ $alignment->is('bottom') ? 'top-3' : 'top-0' }} absolute right-0 p-2 focus:outline-none rtl:left-0 rtl:right-auto"
+                    class="{{ $alignment->is('bottom') ? 'top-3' : 'top-0' }} absolute right-3 p-3 focus:outline-none rtl:left-0 rtl:right-auto"
                     aria-label="@lang('close')" @click="toast.dispose()">
                     <svg class="h-4 w-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"
                         fill="currentColor">
