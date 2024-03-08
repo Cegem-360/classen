@@ -24,9 +24,11 @@
                     d="M9 1v16M1 9h16" />
             </svg>
         </button>
-        <input type="radio" value="{{ __('Adjustable door frame') }}" wire:model="frame" @selected(true)>
-        <input type="radio" value="{{ __('Adjustable door frame') }}" wire:model="frame" @selected(true)>
-        <input type="radio" value="{{ __('Adjustable door frame') }}" wire:model="frame" @selected(true)>
+        <input type="radio" value="{{ __('Adjustable door frame') }}" wire:model="frame" @selected($frame == __('Adjustable door frame'))>
+        <input type="radio" value="{{ __('Adjustable non-rebated door frame') }}" wire:model="frame"
+            @selected($frame == __('Adjustable non-rebated door frame'))>
+        <input type="radio" value="{{ __('Standard 2-Pack door frame') }}" wire:model="frame"
+            @selected($frame == __('Standard 2-Pack door frame'))>
 
     </div>
     <p class="mt-2 text-sm text-gray-500 dark:text-gray-400" id="helper-text-explanation">
