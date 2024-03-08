@@ -39,7 +39,7 @@ class SearchBox extends Component
         $this->search = $record->name;
         $this->showdiv = false;
 
-        return $this->redirect(route('category.show', ['category' => $record->name]));
+        return $this->redirect(route('category.show', ['category' => $record->name]), navigate: true);
     }
 
     public function render()
