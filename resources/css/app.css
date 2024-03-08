@@ -371,10 +371,10 @@ ul.property__list {
 .doors_colors__variant-set {
     .door_variant {
         img {
-            padding: .25rem;
-            border: 1px solid rgba(0, 0, 0, 0);
+            border: .5rem solid rgba(0, 0, 0, 0.15);
 
             &:hover {
+            padding: .25rem;
                 border: 1px solid rgba(0, 0, 0, 1);
             }
         }
