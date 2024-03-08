@@ -8,15 +8,17 @@
     <!-- Elonyok -->
     <x-partials.elonyok />
 
-    <div class="ad-banner mx-auto flex h-1/2 flex-wrap items-center justify-end bg-cover text-white"
-        style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/classen_verti.webp') }}');">
+    <div class="ad-banner mx-auto flex h-1/2 flex-wrap items-center justify-end bg-cover text-white" style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/classen_verti.webp') }}');">
         <div class="banner-container -mt-12 mb-12 h-[50vh] w-1/2 bg-zold_attetszo px-16 py-24 sm:w-full">
             <h3 class="mb-8 max-w-lg text-2xl font-bold">Fa mintázatú beltéri ajtók, a természetesség nevében</h3>
-            <p class="max-w-lg text-lg">Élvezze a modern ajtók adta lehetőségeket, teremtse meg álmai otthonát megkötések
+            <p class="mb-8 max-w-lg text-lg">Élvezze a modern ajtók adta lehetőségeket, teremtse meg álmai otthonát megkötések
                 és kompromisszumok nélkül.</p>
+            <a class="flex items-center justify-between gap-6 w-fit px-6 py-3 border-1 border-white" href="{{ route('category.index') }}" wire:navigate.hover>
+                <h2 class="font-bold text-white">{{ __('Go to collections') }}</h2>
+                <div class="scale-75"><x-doors.partials.arrow-right class="![fill:white]"></x-doors.partials.arrow-right></div>
+            </a>
         </div>
     </div>
-
     <!-- gap -->
     <div class="min-h-[69px]"></div>
 

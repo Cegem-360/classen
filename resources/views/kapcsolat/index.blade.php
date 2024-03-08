@@ -69,6 +69,11 @@
     <!-- gap -->
     <div class="min-h-[180px]"></div>
 
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d696.4357209998491!2d19.144179539278472!3d47.438597061166014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c28e0c6156ad%3A0x483308919466b45b!2sARCADIA%2098%20Kft.!5e0!3m2!1shu!2shu!4v1709888363925!5m2!1shu!2shu" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <!-- gap -->
+    <div class="min-h-[90px]"></div>
+
     <x-footer.layout />
 
 </x-layouts.app>
