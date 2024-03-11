@@ -35,6 +35,10 @@
     "file": "assets/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek-e29a495d.pdf",
     "src": "resources/img/dl/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.pdf"
   },
+  "resources/img/dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf": {
+    "file": "assets/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024-3c582ef8.pdf",
+    "src": "resources/img/dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf"
+  },
   "resources/img/dl/cover-images/Arcadia98-arlista-2023.webp": {
     "file": "assets/Arcadia98-arlista-2023-d11b0b80.webp",
     "src": "resources/img/dl/cover-images/Arcadia98-arlista-2023.webp"
@@ -543,7 +547,7 @@
     "css": [
       "assets/app-e033cb8b.css"
     ],
-    "file": "assets/app-7482959a.js",
+    "file": "assets/app-557c4d2e.js",
     "imports": [
       "resources/js/swiperJS.js",
       "resources/js/favorites.js"
@@ -562,7 +566,7 @@
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-dc85ed96.js",
+    "file": "assets/swiperJS-60b81307.js",
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
   }

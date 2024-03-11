@@ -4,7 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js';
 import PhotoSwipe from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js';
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 // import Swiper and modules styles
@@ -401,6 +400,17 @@ export function initSwiperJS() {
     });
 
 
+   /* ###############################
+           tippy.js
+      ##################################  */
+    document.addEventListener('DOMContentLoaded', (event) => {
+        tippy('.jsTooltipBig', {
+            trigger: 'click',
+            hideOnClick: 'toggle',
+            allowHTML: true,
+        });
+        console.log('tippy.js loaded');
+    });
 
 
     function animationSlide(slideItem) {
