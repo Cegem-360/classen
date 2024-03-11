@@ -337,14 +337,12 @@ export function initSwiperJS() {
     /* ###############################
             tippy.js
        ##################################  */
-    document.addEventListener('DOMContentLoaded', (event) => {
-        tippy('.jsTooltipBig', {
-            trigger: 'click',
-            hideOnClick: 'toggle',
-            allowHTML: true,
-        });
-        console.log('tippy.js loaded');
+    tippy('.jsTooltipBig', {
+        trigger: 'click',
+        hideOnClick: 'toggle',
+        allowHTML: true,
     });
+    console.log('tippy.js loaded');
 
 
     function animationSlide(slideItem) {
