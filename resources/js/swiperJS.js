@@ -339,11 +339,12 @@ export function initSwiperJS() {
        ##################################  */
     tippy('.jsTooltipBig', {
         trigger: 'click',
-        hideOnClick: 'toggle',
+        hideOnClick: true,
         allowHTML: true,
+        theme: 'arcadia',
     });
-    console.log('tippy.js loaded');
 
+    
 
     function animationSlide(slideItem) {
         //if (!slideItem.classList.contains("-runned")) {

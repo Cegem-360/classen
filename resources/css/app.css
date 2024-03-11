@@ -415,6 +415,44 @@ ul.property__list {
     color: #333;
 }
 
+
+// TIPPY tooltip
+.tippy-box[data-theme~='tomato'] {
+    background-color: tomato;
+    color: yellow;
+  }
+
+.tippy-box[data-theme~='arcadia'] {
+    max-width: 380px!important;
+    min-width: 280px!important;
+    background-color: #fff!important;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.21)!important;
+    color: #000!important;
+    font-size: 16px!important;
+    line-height: 26px!important;
+    .tippy-content {
+        padding: 30px;
+        h3 {
+            font-weight: 700;
+            padding-bottom: 15px;
+        }
+    }
+    .tippy-arrow {
+        color: #fff!important;
+        //box-shadow: 0 2px 7px 0 rgba(0,0,0,.21);
+    }
+}    
+
+@media (max-width: 560px) {
+    .tippy-box[data-theme~='arcadia'] {
+        width: 80% !important;
+        max-width: none !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }    
+}    
+
+
 .pswp--custom-bg {
   --pswp-bg: rgba(0, 0, 0, 0.6);
   background: var(--pswp-bg)!important;
