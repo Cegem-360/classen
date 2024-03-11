@@ -9,13 +9,14 @@ window.axios = axios;
 import $ from "jquery";
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 import Swiper from 'swiper';
+import tippy from 'tippy.js';
 import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
 Swiper.use([Navigation, Pagination, Thumbs, EffectFade, HashNavigation, Grid]);
 window.Swiper = Swiper;
-
+window.tippy = tippy;
 import gsap from "gsap";
 window.gsap = gsap;
 
-import './../../node_modules/qtip2/dist/jquery.qtip.min.js';
+//import './../../node_modules/qtip2/dist/jquery.qtip.min.js';
 window.$ = window.jquery = $;
 

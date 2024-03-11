@@ -5,7 +5,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 //import 'qtip2';
-import tippy from 'tippy.js';
+
 
 import '../../vendor/masmerise/livewire-toaster/resources/js';
 import.meta.glob([

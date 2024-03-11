@@ -334,75 +334,9 @@ export function initSwiperJS() {
     const lightboxDoorFrames = new PhotoSwipeLightbox(photo_swipe_options_doorframes);
     lightboxDoorFrames.init();
 
-
-
-
     /* ###############################
-           qTip2 jQuery plugin
-      ##################################  */
-    /* https://qtip2.com/guides */
-    $('.jsTooltipBig').each(function () {
-        var _self = $(this);
-        var windowWidth = $(window).width();
-        var positionMy = 'top center';
-        var positionAt = 'bottom center';
-
-        // Adjust position for small screens
-        if (windowWidth <= 560) { // Adjust 560px as per your breakpoint for 'small screens'
-            positionMy = 'center';
-            positionAt = 'center';
-        }
-
-        _self.qtip({
-            content: {
-                text: function () {
-                    return $(this).attr('data-qtip-text');
-                },
-                title: function () {
-                    return $(this).attr('data-qtip-title');
-                }
-            },
-            show: {
-                event: 'click'
-            },
-            hide: {
-                event: 'click unfocus'
-            },
-            position: {
-                my: positionMy,
-                at: positionAt,
-                viewport: $(window), // Ensure tooltip stays within the bounds of the viewport
-                adjust: {
-                    method: 'flipinvert shift', // Automatically adjust and shift the tooltip position
-                    scroll: true, // Reposition on scroll
-                    resize: true // Reposition on window resize
-                }
-            },
-            style: {
-                classes: 'qtip-light',
-                tip: {
-                    corner: true
-                }
-            },
-            events: {
-                render: function (event, api) {
-                    // Adding a close button to the title bar
-                    var closeButton = $('<div class="qtip-close-button">&#10005;</div>');
-                    $(api.elements.titlebar).append(closeButton);
-
-                    // Click event handler for the close button
-                    closeButton.on('click', function () {
-                        api.hide();
-                    });
-                }
-            }
-        });
-    });
-
-
-   /* ###############################
-           tippy.js
-      ##################################  */
+            tippy.js
+       ##################################  */
     document.addEventListener('DOMContentLoaded', (event) => {
         tippy('.jsTooltipBig', {
             trigger: 'click',
