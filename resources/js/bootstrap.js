@@ -16,7 +16,5 @@ window.Swiper = Swiper;
 window.tippy = tippy;
 import gsap from "gsap";
 window.gsap = gsap;
-
-//import './../../node_modules/qtip2/dist/jquery.qtip.min.js';
 window.$ = window.jquery = $;
 
