@@ -17,6 +17,8 @@
                                 wire:navigate.hover>{{ __('doors') }}</a>
                             <a class="flex h-full items-center px-4" href="{{ route('category.index') }}"
                                 wire:navigate.hover>{{ __('collections') }}</a>
+                            <a class="flex h-full items-center px-4" href="{{ route('kilincsek') }}"
+                                wire:navigate.hover>{{ __('Kilincsek') }}</a>
                             <a class="flex h-full items-center px-4" href="{{ route('rolunk') }}"
                                 wire:navigate.hover>{{ __('About us') }}</a>
                         </div>
