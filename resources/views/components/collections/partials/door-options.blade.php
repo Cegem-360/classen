@@ -36,11 +36,16 @@
                 <div class="swiper door-fronts-swiper w-full">
                     <div class="swiper-wrapper items-center">
                         @foreach ($doors as $collection)
-                            <div class="swiper-slide !grid grid-cols-3 gap-6 md:grid-cols-2">
-                                @foreach ($collection as $item)
-                                    <div class="grid"><img class="max-h-[500px]" src="{{ $item->img_url }}"
-                                            alt="" loading="lazy">
-                                        <h4 class="mt-3">{{ __($item->name) }}</h4>
+                        <div class="swiper-slide !grid grid-cols-3 gap-6 md:grid-cols-2">
+                            @foreach ($collection as $item)
+                            <div class="relative grid">
+                                <img class="max-h-[500px]" src="{{ $item->img_url }}" alt="" loading="lazy">
+                                <a href="#" class="group absolute inset-0 flex items-center justify-center transition duration-300 bg-black bg-opacity-5 hover:bg-opacity-40">
+                                    <div class="text-lg font-bold text-white opacity-0 group-hover:opacity-100">
+                                        <x-svg.plus-icon></x-svg.plus-icon>
+                                    </div>
+                                </a>
+                                <h4 class="mt-3">{{ __($item->name) }}</h4>
                                     </div>
                                 @endforeach
                             </div>
