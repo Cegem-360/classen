@@ -36,10 +36,9 @@
                 </h3>
                 <div class="door_fronts">
                     <div class="w-full">
-                        <div class="items-center">
+                        <div class="items items-center">
                             @foreach ($doors as $head => $collection)
-                                <div class="items grid grid-cols-3 gap-6 md:grid-cols-2" id="{{ $head }}-door"
-                                    @if (!$loop->first) style="display: none;" @endif)>
+                                <div class="grid grid-cols-3 gap-6 md:grid-cols-2" id="{{ $head }}-door">
                                     @foreach ($collection as $item)
                                         <div class="option-item relative grid">
                                             <img class="max-h-[500px]" src="{{ $item->img_url }}" alt=""
@@ -63,10 +62,15 @@
         </div>
     </div>
     <script>
-        function selectColor(obj) {
-            $('.items').children().hide();
-            $("#" + obj.toString()).show();
-            console.log($("#" + obj.toString()));
+        document.addEventListener('livewire:navigated', () => {
+            $('.items.items-center').children().hide();
+        });
+
+        function selectColor(string) {
+
+            $('.items.items-center').children().hide();
+            var obj = $("#" + string).show();
+            console.log($("#" + string));
         }
     </script>
 </div>
