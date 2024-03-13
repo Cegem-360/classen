@@ -42,17 +42,11 @@ class CategoryController extends Controller
         $catalogs = $category->attributes()->get();
         $tags = $doors->mapToGroups(
             function ($item, $key) {
-                return [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category']]];
+                return [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]];
             }
         )->all();
         $doors = $doors->groupBy('tag');
         $doors = $doors->all();
-        /*$doors_tmp =  $doors->mapToGroups(
-            function ($item, $key) {
-                return [$item['tag'] => [$item['name'] => $item['img_url']]];
-            }
-        )->all();*/
-
         $tags_tmp = collect($tags)->all();
         $tags = [];
         foreach ($tags_tmp as $collection => $tag) {

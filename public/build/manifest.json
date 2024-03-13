@@ -1,4 +1,7 @@
 {
+  "_ScrollTrigger-facc6abe.js": {
+    "file": "assets/ScrollTrigger-facc6abe.js"
+  },
   "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp": {
     "file": "assets/Classen-drzwi-Ferro-dab-nordycki-89fc95c0.webp",
     "src": "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp"
@@ -551,14 +554,9 @@
     "css": [
       "assets/app-66347494.css"
     ],
-<<<<<<< Updated upstream
-    "file": "assets/app-f0409c0c.js",
-=======
-    "file": "assets/app-c0fc1a80.js",
->>>>>>> Stashed changes
+    "file": "assets/app-ea95f100.js",
     "imports": [
-      "resources/js/swiperJS.js",
-      "resources/js/favorites.js"
+      "_ScrollTrigger-facc6abe.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
@@ -569,12 +567,15 @@
     "src": "resources/js/customJS.js"
   },
   "resources/js/favorites.js": {
-    "file": "assets/favorites-6f10b435.js",
+    "file": "assets/favorites-4ed993c7.js",
     "isEntry": true,
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-8e15dbd9.js",
+    "file": "assets/swiperJS-f6495468.js",
+    "imports": [
+      "_ScrollTrigger-facc6abe.js"
+    ],
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
   }
