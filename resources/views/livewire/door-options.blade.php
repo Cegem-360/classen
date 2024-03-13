@@ -70,7 +70,7 @@
 
             $('.items.items-center').children().hide();
             var obj = $("#" + string).show();
-            console.log($("#" + string));
+            //console.log($("#" + string));
         }
     </script>
 </div>
