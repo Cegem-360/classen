@@ -25,12 +25,12 @@
             </a>
         </div>
         <div class="bg-cover md:col-span-3" id="img1"
-            style="background-position: 50% 50%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/01/Classen_Venis_drzwi_przesuwne.jpg');">
+            style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/also_slide_bal.webp') }}');">
         </div>
         <div class="bg-auto md:hidden" id="img2"
-            style="background-position: 20% 100%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/classen_china.webp');">
+            style="background-size: cover; background-position: 40% 50%; background-image: url('{{ Vite::asset('resources/img/also_slide_kozep.webp') }}');">
         </div>
         <div class="bg-cover md:hidden" id="img3"
-            style="background-position: 50% 50%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/classen_modul.webp'); transform: scaleX(-1);">
+            style="background-position: 70% 50%; background-image: url('{{ Vite::asset('resources/img/also_slide_jobb.webp') }}');">
         </div>
     </div>

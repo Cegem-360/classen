@@ -169,9 +169,9 @@ export function initSwiperJS() {
 
     const doorFrontsSwiper = new Swiper('.door-fronts-swiper', {
         direction: 'horizontal',
-        effect: 'fade',
+        effect: 'slide',
         fadeEffect: {
-            crossFade: true,
+            crossFade: false,
         },
         loop: true,
         thumbs: {
@@ -344,7 +344,7 @@ export function initSwiperJS() {
         theme: 'arcadia',
     });
 
-    
+
 
     function animationSlide(slideItem) {
         //if (!slideItem.classList.contains("-runned")) {

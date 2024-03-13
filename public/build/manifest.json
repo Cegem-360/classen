@@ -1,7 +1,4 @@
 {
-  "_ScrollTrigger-facc6abe.js": {
-    "file": "assets/ScrollTrigger-facc6abe.js"
-  },
   "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp": {
     "file": "assets/Classen-drzwi-Ferro-dab-nordycki-89fc95c0.webp",
     "src": "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp"
@@ -9,6 +6,22 @@
   "resources/img/IMG_7478.webp": {
     "file": "assets/IMG_7478-6ce3b787.webp",
     "src": "resources/img/IMG_7478.webp"
+  },
+  "resources/img/also-banner-szakerto-segitseg.webp": {
+    "file": "assets/also-banner-szakerto-segitseg-6e5d0784.webp",
+    "src": "resources/img/also-banner-szakerto-segitseg.webp"
+  },
+  "resources/img/also_slide_bal.webp": {
+    "file": "assets/also_slide_bal-42586b75.webp",
+    "src": "resources/img/also_slide_bal.webp"
+  },
+  "resources/img/also_slide_jobb.webp": {
+    "file": "assets/also_slide_jobb-5d3faaf0.webp",
+    "src": "resources/img/also_slide_jobb.webp"
+  },
+  "resources/img/also_slide_kozep.webp": {
+    "file": "assets/also_slide_kozep-1becb917.webp",
+    "src": "resources/img/also_slide_kozep.webp"
   },
   "resources/img/arcadia98-logo.svg": {
     "file": "assets/arcadia98-logo-2fa7f05a.svg",
@@ -26,37 +39,21 @@
     "file": "assets/classen_verti-87da2e1a.webp",
     "src": "resources/img/classen_verti.webp"
   },
-  "resources/img/dl/Arcadia98-Kft-brutto-Kiskereskedelmi-arlista-2023.pdf": {
-    "file": "assets/Arcadia98-Kft-brutto-Kiskereskedelmi-arlista-2023-15bba726.pdf",
-    "src": "resources/img/dl/Arcadia98-Kft-brutto-Kiskereskedelmi-arlista-2023.pdf"
-  },
-  "resources/img/dl/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.pdf": {
-    "file": "assets/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok-89648c41.pdf",
-    "src": "resources/img/dl/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.pdf"
-  },
-  "resources/img/dl/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.pdf": {
-    "file": "assets/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek-e29a495d.pdf",
-    "src": "resources/img/dl/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.pdf"
-  },
-  "resources/img/dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf": {
-    "file": "assets/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024-3c582ef8.pdf",
-    "src": "resources/img/dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf"
-  },
-  "resources/img/dl/cover-images/Arcadia98-arlista-2023.webp": {
+  "resources/img/cover-images/Arcadia98-arlista-2023.webp": {
     "file": "assets/Arcadia98-arlista-2023-d11b0b80.webp",
-    "src": "resources/img/dl/cover-images/Arcadia98-arlista-2023.webp"
+    "src": "resources/img/cover-images/Arcadia98-arlista-2023.webp"
   },
-  "resources/img/dl/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp": {
+  "resources/img/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp": {
     "file": "assets/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok-544d31f9.webp",
-    "src": "resources/img/dl/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp"
+    "src": "resources/img/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp"
   },
-  "resources/img/dl/cover-images/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.webp": {
+  "resources/img/cover-images/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.webp": {
     "file": "assets/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek-dce27678.webp",
-    "src": "resources/img/dl/cover-images/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.webp"
+    "src": "resources/img/cover-images/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.webp"
   },
-  "resources/img/dl/cover-images/Dooroutlet_belteri_ajto.webp": {
+  "resources/img/cover-images/Dooroutlet_belteri_ajto.webp": {
     "file": "assets/Dooroutlet_belteri_ajto-5a2591e2.webp",
-    "src": "resources/img/dl/cover-images/Dooroutlet_belteri_ajto.webp"
+    "src": "resources/img/cover-images/Dooroutlet_belteri_ajto.webp"
   },
   "resources/img/icons/1-belteri-ajtok.svg": {
     "file": "assets/1-belteri-ajtok-8d5c596a.svg",
@@ -101,6 +98,10 @@
   "resources/img/icons/tooltip-icon2.svg": {
     "file": "assets/tooltip-icon2-eb8b7abc.svg",
     "src": "resources/img/icons/tooltip-icon2.svg"
+  },
+  "resources/img/kozepso_banner_hatter.webp": {
+    "file": "assets/kozepso_banner_hatter-98b623d0.webp",
+    "src": "resources/img/kozepso_banner_hatter.webp"
   },
   "resources/img/milk_classen.webp": {
     "file": "assets/milk_classen-b55f76b7.webp",
@@ -550,9 +551,10 @@
     "css": [
       "assets/app-a8478451.css"
     ],
-    "file": "assets/app-821530e7.js",
+    "file": "assets/app-f0409c0c.js",
     "imports": [
-      "_ScrollTrigger-facc6abe.js"
+      "resources/js/swiperJS.js",
+      "resources/js/favorites.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
@@ -563,15 +565,12 @@
     "src": "resources/js/customJS.js"
   },
   "resources/js/favorites.js": {
-    "file": "assets/favorites-4ed993c7.js",
+    "file": "assets/favorites-6f10b435.js",
     "isEntry": true,
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-f6495468.js",
-    "imports": [
-      "_ScrollTrigger-facc6abe.js"
-    ],
+    "file": "assets/swiperJS-8e15dbd9.js",
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
   }
