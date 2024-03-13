@@ -165,19 +165,28 @@ export function initSwiperJS() {
             fill: 'row',
             rows: 8,
         },
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
     });
 
     const doorFrontsSwiper = new Swiper('.door-fronts-swiper', {
         direction: 'horizontal',
         effect: 'slide',
-        fadeEffect: {
-            crossFade: false,
-        },
         loop: true,
         thumbs: {
             swiper: doorFrontsSwiperThumbs,
         },
     });
+
+    doorFrontsSwiperThumbs.on('click', function() {
+        let targetIndex = this.clickedIndex;
+        doorFrontsSwiper.params.speed = 0; // disable transition
+        doorFrontsSwiper.slideTo(targetIndex); // move to target slide
+        setTimeout(() => {
+            doorFrontsSwiper.params.speed = 300; // re-enable transition
+        }, 0);
+    });
+
 
     /* ###############################
              PhotoSwipe v5 (Lightbox)
