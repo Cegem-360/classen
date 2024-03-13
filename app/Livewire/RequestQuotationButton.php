@@ -29,7 +29,7 @@ class RequestQuotationButton extends Component
         session()->put('quotation', $quotation);
         Toaster::success(__('Sikeresen hozzáadva az árajánlathoz!'));
 
-        return $this->redirect(route('door.show', ['door' => $this->door]), navigate: true);
+        //return $this->redirect(route('door.show', ['door' => $this->door]), navigate: true);
 
     }
 
