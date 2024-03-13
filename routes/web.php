@@ -45,7 +45,7 @@ Route::get('/letoltesek', function () {
     return view('letoltesek/index');
 })->name('downloads');
 
-Route::view('/kilincsek', 'letoltesek.index')->name('kilincsek');
+Route::view('/kilincsek', 'kilincsek.index')->name('kilincsek');
 
 Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
     Route::get('/', [QuotationController::class, 'index'])->name('index');
