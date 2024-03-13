@@ -14,9 +14,9 @@
                     <div
                         class="swiper-wrapper !grid min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
                         @foreach ($tags as $name => $tag)
-                            <div class="swiper-slide door_color m-px !h-auto !w-auto p-3">
+                            <div class="swiper-slide door_color m-px !h-auto !w-auto p-3" id="{{ $tag['tag'] }}-icon">
                                 <div class="door_color__wrapper">
-                                    <div class="door_color__image" onclick="selectColor('{{ $tag['tag'] }}-door')">
+                                    <div class="door_color__image" onclick="selectColor('{{ $tag['tag'] }}')">
                                         <img src="{{ $tag['tag_img_url'] }}" alt="White" loading="lazy"
                                             loading='lazy'>
                                     </div>
@@ -67,9 +67,10 @@
         });
 
         function selectColor(string) {
-
+            $('.active').removeClass('active');
             $('.items.items-center').children().hide();
-            var obj = $("#" + string).show();
+            $("#" + string + "-door").show();
+            $("#" + string + "-icon").addClass('active');
             //console.log($("#" + string));
         }
     </script>
