@@ -17,7 +17,7 @@ import initFavoritesJS from './favorites.js'; // Replace 'require' with 'import'
 import { initCustomJS } from './customJS.js';
 //import './../../node_modules/qtip2/dist/jquery.qtip.js';
 document.addEventListener('livewire:init', () => {
-    initSwiperJS();
+    //initSwiperJS();
     initCustomJS();
 });
 document.addEventListener('livewire:navigated', () => {

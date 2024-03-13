@@ -24,7 +24,7 @@
     <!-- gap -->
     <div class="min-h-[60px]"></div>
     @if (!empty($tags) && !empty($doors))
-        <x-collections.partials.door-options :tags='$tags' :doors='$doors' />
+        <livewire:door-options :tags='$tags' :doors='$doors' />
     @endif
     @php
         $photos = [

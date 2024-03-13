@@ -540,7 +540,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-a8478451.css",
+    "file": "assets/app-66347494.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -549,9 +549,13 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-a8478451.css"
+      "assets/app-66347494.css"
     ],
+<<<<<<< Updated upstream
     "file": "assets/app-f0409c0c.js",
+=======
+    "file": "assets/app-c0fc1a80.js",
+>>>>>>> Stashed changes
     "imports": [
       "resources/js/swiperJS.js",
       "resources/js/favorites.js"
