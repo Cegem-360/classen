@@ -6,28 +6,24 @@
         <div class="min-h-[30px]"></div>
 
         <div class="grid grid-cols-2 gap-8 bg-neutral-100 sm:grid-cols-1">
-            <div class="doors__col doors__colors bg-neutral-200 p-4">
+            <div class="doors__col doors__colors bg-neutral-200 px-4 py-8">
                 <h3 class="doors__subheader mb-6 text-2xl font-bold">
                     <strong class="text-4xl text-sarga">1.</strong>{{ __(' Choose the surface colour') }}
                 </h3>
-                <div class="door_colors">
-                    <div
-                        class="swiper-wrapper !grid min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
-                        @foreach ($tags as $name => $tag)
-                            <div class="swiper-slide door_color m-px !h-auto !w-auto p-3" id="{{ $tag['tag'] }}-icon">
-                                <div class="door_color__wrapper">
-                                    <div class="door_color__image" onclick="selectColor('{{ $tag['tag'] }}')">
-                                        <img src="{{ $tag['tag_img_url'] }}" alt="White" loading="lazy"
-                                            loading='lazy'>
-                                    </div>
-                                    <div class="door_color__meta mt-3">
-                                        <h4> {{ __($name) }}</h4>
-                                        <p class="text-sm font-bold">{{ __($tag['tag_category']) }}</p>
-                                    </div>
+                <div class="door_colors !grid min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
+                    @foreach ($tags as $name => $tag)
+                        <div class="door_color m-px !h-auto !w-auto p-3 cursor-pointer" id="{{ $tag['tag'] }}-icon">
+                            <div class="door_color__wrapper">
+                                <div class="door_color__image" onclick="selectColor('{{ $tag['tag'] }}')">
+                                    <img src="{{ $tag['tag_img_url'] }}" alt="White" loading="lazy">
+                                </div>
+                                <div class="door_color__meta mt-3">
+                                    <h4> {{ __($name) }}</h4>
+                                    <p class="text-sm font-bold">{{ __($tag['tag_category']) }}</p>
                                 </div>
                             </div>
-                        @endforeach
-                    </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
             <div class="doors__col doors__fronts p-8" id="doors__fronts">
@@ -38,11 +34,10 @@
                     <div class="w-full">
                         <div class="items items-center">
                             @foreach ($doors as $head => $collection)
-                                <div class="grid grid-cols-3 gap-6 md:grid-cols-2" id="{{ $head }}-door">
+                                <div class="grid grid-cols-3 gap-6 md:grid-cols-2 py-3" id="{{ $head }}-door">
                                     @foreach ($collection as $item)
                                         <div class="option-item relative grid">
-                                            <img class="max-h-[500px]" src="{{ $item->img_url }}" alt=""
-                                                loading="lazy">
+                                            <img class="max-h-[500px]" src="{{ $item->img_url }}" alt="" loading="lazy">
                                             <a class="group absolute inset-0 flex items-center justify-center bg-black bg-opacity-5 transition duration-300 hover:bg-opacity-40"
                                                 wire:click="addToQuotation({{ $item->id }})">
                                                 <div

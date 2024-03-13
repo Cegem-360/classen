@@ -1,5 +1,5 @@
 <div id="toaster" role="status" x-data="toasterHub(@js($toasts), @js($config))" @class([
-    'fixed top-3 right-3 z-[9999] p-0 w-fit h-fit flex flex-col pointer-events-none sm:p-6',
+    'fixed top-3 right-3 z-[99999] p-0 w-fit h-fit flex flex-col pointer-events-none sm:p-6',
     'bottom-0' => $alignment->is('bottom'),
     'top-1/2 -translate-y-1/2' => $alignment->is('middle'),
     'top-0' => $alignment->is('top'),

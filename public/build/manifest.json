@@ -1,7 +1,4 @@
 {
-  "_ScrollTrigger-facc6abe.js": {
-    "file": "assets/ScrollTrigger-facc6abe.js"
-  },
   "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp": {
     "file": "assets/Classen-drzwi-Ferro-dab-nordycki-89fc95c0.webp",
     "src": "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp"
@@ -57,6 +54,10 @@
   "resources/img/cover-images/Dooroutlet_belteri_ajto.webp": {
     "file": "assets/Dooroutlet_belteri_ajto-5a2591e2.webp",
     "src": "resources/img/cover-images/Dooroutlet_belteri_ajto.webp"
+  },
+  "resources/img/cover-images/Maestro_kilincskatalogus_online_2023.1.webp": {
+    "file": "assets/Maestro_kilincskatalogus_online_2023.1-66b94850.webp",
+    "src": "resources/img/cover-images/Maestro_kilincskatalogus_online_2023.1.webp"
   },
   "resources/img/icons/1-belteri-ajtok.svg": {
     "file": "assets/1-belteri-ajtok-8d5c596a.svg",
@@ -543,7 +544,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-66347494.css",
+    "file": "assets/app-ae1162d0.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -552,11 +553,12 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-66347494.css"
+      "assets/app-ae1162d0.css"
     ],
-    "file": "assets/app-ea95f100.js",
+    "file": "assets/app-ab37389c.js",
     "imports": [
-      "_ScrollTrigger-facc6abe.js"
+      "resources/js/swiperJS.js",
+      "resources/js/favorites.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
@@ -567,15 +569,12 @@
     "src": "resources/js/customJS.js"
   },
   "resources/js/favorites.js": {
-    "file": "assets/favorites-4ed993c7.js",
+    "file": "assets/favorites-6f10b435.js",
     "isEntry": true,
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-f6495468.js",
-    "imports": [
-      "_ScrollTrigger-facc6abe.js"
-    ],
+    "file": "assets/swiperJS-3b5b66d9.js",
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
   }
