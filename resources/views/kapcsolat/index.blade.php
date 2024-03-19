@@ -29,6 +29,7 @@
                     @csrf
                     <div class="">
                         <h3 class="mb-3 text-xl font-bold">{{ __('Írjon nekünk!') }}</h3>
+                        {{--
                         <div class="grid grid-cols-1 gap-6">
                             <div>
                                 <x-input-label class="hidden" for="first_name">{{ __('First Name') }}</x-input-label>
@@ -59,6 +60,8 @@
                             </div>
                             <x-primary-button class="w-fit">{{ __('Submit') }}</x-primary-button>
                         </div>
+                         --}}
+                        <x-form></x-form>>
                     </div>
                 </form>
             </div>

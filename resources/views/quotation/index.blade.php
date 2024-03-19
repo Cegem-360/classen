@@ -17,8 +17,7 @@
             <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($quotationItems ?? [] as $quotationItem)
                     <div class="group relative">
-                        <div
-                            class="b-white absolute right-3 top-3 z-50 flex h-6 w-6 cursor-pointer items-center justify-center rounded-md border-[1px] bg-[#00000022] group-hover:border-0 group-hover:bg-[#00000077]">
+                        <div class="b-white absolute right-3 top-3 z-50 flex h-6 w-6 cursor-pointer items-center justify-center rounded-md border-[1px] bg-[#00000022] group-hover:border-0 group-hover:bg-[#00000077]">
                             {{-- <div class="p-3 text-white text-4xl">×</div> --}}
                             <x-svg.multiply-icon></x-svg.multiply-icon>
                         </div>
@@ -64,41 +63,14 @@
             <form action="{{ route('quotation.store') }}" method="post">
                 @csrf
                 <div class="mt-8 max-w-md">
-                    <h1>{{ __('Quotation Request') }}</h1>
-                    <p>{{ __('Please fill in the form below and we will get back to you as soon as possible.') }}</p>
-                    <div class="grid grid-cols-1 gap-6">
-                        <div>
-                            <x-input-label class="hidden" for="first_name">{{ __('First Name') }}</x-input-label>
-                            <x-text-input class="form-input mt-0 border-t-0" name="first_name"
-                                placeholder="{{ __('First Name') }}"></x-text-input>
-                        </div>
-                        <div>
-                            <x-input-label class="hidden" for="last_name">{{ __('Last Name') }}</x-input-label>
-                            <x-text-input class="form-input mt-0 border-t-0" name="last_name"
-                                placeholder="{{ __('Last Name') }}"></x-text-input>
-                        </div>
-                        <div>
-                            <x-input-label class="hidden" for="email">{{ __('Email') }}</x-input-label>
-                            <x-text-input class="form-input mt-0 border-t-0" id="email" name="email" type="email"
-                                placeholder="{{ __('Email') }}"></x-text-input>
-                        </div>
-                        <div>
-                            <x-input-label class="hidden" for="phone">{{ __('Phone') }}</x-input-label>
-                            <x-text-input class="form-input mt-0 border-t-0" id="phone" name="phone" type="tel"
-                                placeholder="{{ __('Phone') }}"></x-text-input>
-                        </div>
-                        <div>
-                            <x-input-label class="hidden" for="message">{{ __('Message') }}</x-input-label>
-
-                            <textarea
-                                class="form-textarea mt-4 block w-full border-x-0 border-t-0 border-gray-400 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                id="message" name="message" placeholder="{{ __('Message') }}"></textarea>
-                        </div>
-                        <x-primary-button class="w-fit" type="submit">{{ __('Submit') }}</x-primary-button>
-                    </div>
+                    <h3 class="text-xl">{{ __('Quotation Request') }}</h1>
+                    <p class="mb-4">{{ __('Please fill in the form below and we will get back to you as soon as possible.') }}</p>
+                    <x-form></x-form>
                 </div>
             </form>
         </div>
     </div>
+
+    <x-footer.layout></x-footer.layout>
 
 </x-layouts.app>
