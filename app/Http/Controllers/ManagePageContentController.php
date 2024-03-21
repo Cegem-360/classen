@@ -25,8 +25,7 @@ class ManagePageContentController extends Controller
 
     public function favorites(Request $request)
     {
-
-        return view('favorites.index', compact('products'));
+        return view('favorites.index');
     }
 
     public function rolunk()
