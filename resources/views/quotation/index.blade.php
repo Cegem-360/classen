@@ -17,7 +17,8 @@
             <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($quotationItems ?? [] as $quotationItem)
                     <div class="group relative">
-                        <div class="b-white absolute right-3 top-3 z-50 flex h-6 w-6 cursor-pointer items-center justify-center rounded-md border-[1px] bg-[#00000022] group-hover:border-0 group-hover:bg-[#00000077]">
+                        <div
+                            class="b-white absolute right-3 top-3 z-50 flex h-6 w-6 cursor-pointer items-center justify-center rounded-md border-[1px] bg-[#00000022] group-hover:border-0 group-hover:bg-[#00000077]">
                             {{-- <div class="p-3 text-white text-4xl">×</div> --}}
                             <x-svg.multiply-icon></x-svg.multiply-icon>
                         </div>
@@ -29,17 +30,20 @@
                         <div class="my-4 flex justify-between">
                             <div>
                                 <h3 class="text-sm text-gray-700">
-                                    <a class="flex flex-col" href="{{ route('door.show', ['door' => $quotationItem->door->id]) }}"
+                                    <a class="flex flex-col"
+                                        href="{{ route('door.show', ['door' => $quotationItem->door->id]) }}"
                                         wire:navigate>
                                         <span class="inset-0" aria-hidden="true"></span>
                                         {{ $quotationItem->door->name }}
                                         <span class="inset-0" aria-hidden="true"></span>
-                                        <b>{{ $quotationItem->door->tag_name }}</b>
+                                        <b>{{ __($quotationItem->door->tag_name) }}</b>
                                     </a>
                                 </h3>
-                                <p class="mt-1 text-sm text-gray-700">{{ $quotationItem->door->category->name }}</p>
+                                <p class="mt-1 text-sm text-gray-700">{{ __($quotationItem->door->category->name) }}</p>
                             </div>
-                            <p class="text-sm font-medium text-gray-900"><x-collections.partials.price>{{ $quotationItem->door->price }}</x-collections.partials.price></p>
+                            <p class="text-sm font-medium text-gray-900">
+                                <x-collections.partials.price>{{ $quotationItem->door->price }}</x-collections.partials.price>
+                            </p>
 
                         </div>
                         <div class="text-sm font-medium text-gray-900">
@@ -64,8 +68,10 @@
                 @csrf
                 <div class="mt-8 max-w-md">
                     <h3 class="text-xl">{{ __('Quotation Request') }}</h1>
-                    <p class="mb-4">{{ __('Please fill in the form below and we will get back to you as soon as possible.') }}</p>
-                    <x-form></x-form>
+                        <p class="mb-4">
+                            {{ __('Please fill in the form below and we will get back to you as soon as possible.') }}
+                        </p>
+                        <x-form></x-form>
                 </div>
             </form>
         </div>
