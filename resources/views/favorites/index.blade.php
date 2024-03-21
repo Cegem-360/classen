@@ -36,7 +36,7 @@
                                         <span class="inset-0" aria-hidden="true"></span>
                                         {{ $product['category']['name'] }}
                                         <span class="inset-0" aria-hidden="true"></span>
-                                        <b>{{ $product['tag_name'] }}</b>
+                                        <b>{{ __($product['tag_name']) }}</b>
                                     </a>
                                 </h3>
                                 <p class="mt-1 text-sm text-gray-700">{{ $product['name'] }}</p>
