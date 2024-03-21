@@ -27,3 +27,5 @@ resources/views/collections/.DS_Store
 .icloud
 resources/img/.DS_Store
 resources/.DS_Store
+_ide_helper.php
+_ide_helper_models.php
