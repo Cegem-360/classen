@@ -1,4 +1,8 @@
-@props(['products' => collect()])
+@use('App\Models\Door')
+@php
+    $favoriteProductIds = json_decode(Cookie::get('favorites'));
+    $favoriteProducts = Door::whereIn('id', $favoriteProductIds)->get();
+@endphp
 <nav class="sticky top-0 z-[99999] bg-white" x-data="{ open: false }">
     <header class="w-full border-[1px] border-b-[#000]" id="top-header">
         <div class="flex text-xs">
@@ -42,7 +46,7 @@
                     <a class="flex h-full w-16 items-center justify-center border-x-[1px] border-[#000]"
                         href="{{ route('favorites.index') }}" wire:navigate>
                         <span class="absolute mt-12">
-                            {{ $products->count() }}
+                            {{ $favoriteProducts->count() }}
                         </span>
                         <x-svg.heart />
                     </a>

@@ -43,7 +43,7 @@ class UpdateQuotationItem extends Component
 
     public function updatingQuantity()
     {
-        $this->resetPage();
+        // $this->resetPage();
     }
 
     public function render()
