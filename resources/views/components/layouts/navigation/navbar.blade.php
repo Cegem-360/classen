@@ -1,3 +1,4 @@
+@props(['products' => collect()])
 <nav class="sticky top-0 z-[99999] bg-white" x-data="{ open: false }">
     <header class="w-full border-[1px] border-b-[#000]" id="top-header">
         <div class="flex text-xs">
@@ -37,9 +38,12 @@
                         wire:navigate.hover>Árajánlat</a>
                 </div>
                 <div class="relative flex h-full basis-1/2 items-center justify-between">
-                    <livewire:search-box />
+                    <span class="md:hidden"><livewire:search-box /></span>
                     <a class="flex h-full w-16 items-center justify-center border-x-[1px] border-[#000]"
                         href="{{ route('favorites.index') }}" wire:navigate>
+                        <span class="absolute mt-12">
+                            {{ $products->count() }}
+                        </span>
                         <x-svg.heart />
                     </a>
                     <!-- Mobile Nav -->

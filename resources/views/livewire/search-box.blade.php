@@ -1,4 +1,4 @@
-    <form class="relative flex items-center border-[1px] border-[#000] md:hidden" wire.subbmit="fetchCategory">
+    <form class="relative flex items-center border-[1px] border-[#000]" wire.subbmit="fetchCategory">
         <input class="border-0 active:border-none text-xs" type="text" placeholder="Keresés" wire:model.live="search" wire:keyup="searchResult">
         <button class="flex-auto pr-2">
             <x-svg.search />
