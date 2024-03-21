@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Door;
+use Cookie;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -25,7 +27,10 @@ class ManagePageContentController extends Controller
 
     public function favorites(Request $request)
     {
-        return view('favorites.index');
+        $favoriteProductIds = json_decode(Cookie::get('favorites'));
+        $products = Door::whereIn('id', $favoriteProductIds)->get();
+
+        return view('favorites.index', compact('products'));
     }
 
     public function rolunk()
