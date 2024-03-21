@@ -61,7 +61,7 @@
                             <x-primary-button class="w-fit">{{ __('Submit') }}</x-primary-button>
                         </div>
                          --}}
-                        <x-form></x-form>>
+                        <x-form></x-form>
                     </div>
                 </form>
             </div>
