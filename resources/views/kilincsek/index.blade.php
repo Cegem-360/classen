@@ -12,7 +12,7 @@
             <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
         </div>
         <div class="grid grid-cols-6 gap-12 md:grid-cols-2">
-            <a href="{{ Storage::url('public/dl/Maestro_kilincskatalogus_online_2023.1.pdf') }}" target="_blank">
+            <a href="{{ Storage::url('dl/Maestro_kilincskatalogus_online_2023.1.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Maestro_kilincskatalogus_online_2023.1.webp') }}"
                     alt="Maestro_kilincskatalogus_online_2023.1.pdf" />
                 <p class="text-wrap mt-3 text-sm">Maestro kilincskatalógus online 2023.1</p>
