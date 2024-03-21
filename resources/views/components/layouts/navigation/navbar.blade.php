@@ -2,6 +2,9 @@
 @php
     $favoriteProductIds = json_decode(Cookie::get('favorites'));
     $favoriteProducts = Door::whereIn('id', $favoriteProductIds)->get();
+    if ($favoriteProducts == null) {
+        $favoriteProducts = collect();
+    }
 @endphp
 <nav class="sticky top-0 z-[99999] bg-white" x-data="{ open: false }">
     <header class="w-full border-[1px] border-b-[#000]" id="top-header">
