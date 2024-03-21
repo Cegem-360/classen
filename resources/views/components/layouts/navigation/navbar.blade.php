@@ -68,16 +68,22 @@
 
                                     <livewire:searchbox />
                                 </li>
-                                <li><a class="flex h-full items-center px-4" href="{{ route('door.index') }}"
+                                <li><a class="hidden sm:list-item flex h-full items-center px-4" href="{{ route('door.index') }}"
                                         wire:navigate.hover>{{ __('doors') }}</a></li>
-                                <li><a class="flex h-full items-center px-4" href="{{ route('category.index') }}"
+                                <li><a class="hidden sm:list-item flex h-full items-center px-4" href="{{ route('category.index') }}"
                                         wire:navigate.hover>{{ __('collections') }}</a></li>
-                                <li><a class="flex h-full items-center px-4" href=""
+                                <li><a class="hidden sm:list-item flex h-full items-center px-4" href="{{ route('kilincsek') }}"
+                                        wire:navigate.hover>{{ __('Kilincsek') }}</a></li>
+                                <li><a class="hidden sm:list-item flex h-full items-center px-4" href=""
                                         wire:navigate.hover>{{ __('About us') }}</a></li>
-                                <li><a class="flex h-full items-center px-4" href=""
-                                        wire:navigate.hover>{{ __('Our stores') }}</a></li>
-                                <li><a class="flex h-full items-center px-4" href=""
-                                        wire:navigate.hover>{{ __('Where to buy') }}</a></li>
+                                <li><a class="flex h-full items-center px-4" href="{{ route('kapcsolat') }}"
+                                        wire:navigate.hover>{{ __('Kapcsolat') }}</a></li>
+                                <li><a class="flex h-full items-center px-4" href="{{ route('szolgaltatasaink') }}"
+                                        wire:navigate.hover>{{ __('Szolgáltatásaink') }}</a></li>
+                                <li><a class="flex h-full items-center px-4" href="{{ route('downloads') }}"
+                                        wire:navigate.hover>Letöltések</a></li>
+                                <li><a class="flex h-full items-center px-4" href="{{ route('quotation.index') }}"
+                                        wire:navigate.hover>Árajánlat</a></li>
                             </ul>
                         </nav>
                     </div>

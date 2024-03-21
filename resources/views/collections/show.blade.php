@@ -10,19 +10,8 @@
     <x-collections.partials.door-model-icons :catalogs=$catalogs />
 
     <!-- gap -->
-    <div class="min-h-[60px]"></div>
-    <x-collections.partials.specifications :door_specification='$category->door_specification' />
+    <div class="min-h-[90px]"></div>
 
-    <!-- gap -->
-    <div class="min-h-[60px]"></div>
-    @isset($category->technical_parameter)
-        @isset($category->additional_options)
-            <x-collections.partials.technical-parameters :technical_parameter='$category->technical_parameter' :additional_options='$category->additional_options' />
-        @endisset
-    @endisset
-
-    <!-- gap -->
-    <div class="min-h-[60px]"></div>
     @if (!empty($tags) && !empty($doors))
         <livewire:door-options :tags='$tags' :doors='$doors' />
     @endif
@@ -61,6 +50,19 @@
     @if ($category->name == 'Standard 2-Pack door frame')
         <x-collections.partials.photos :photos="$photos['Standard 2-Pack door frame']" />
     @endif
+
+    <!-- gap -->
+    <div class="min-h-[90px]"></div>
+    <x-collections.partials.specifications :door_specification='$category->door_specification' />
+
+    <!-- gap -->
+    <div class="min-h-[10px]"></div>
+
+    @isset($category->technical_parameter)
+        @isset($category->additional_options)
+            <x-collections.partials.technical-parameters :technical_parameter='$category->technical_parameter' :additional_options='$category->additional_options' />
+        @endisset
+    @endisset
 
     <x-footer.layout />
 
