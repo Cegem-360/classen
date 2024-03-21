@@ -1,21 +1,3 @@
-{{--
-<x-layouts.app>
-
-    <x-slot name="header">
-        <div class="mb-4 flex items-center justify-between font-bold">
-            <div class="basis-auto">
-                <h1 class="mx-1 px-2 text-primary">{{ __('Favorites') }}</h1>
-            </div>
-        </div>
-    </x-slot>
-
-    <main class="flex w-full flex-wrap">
-        <x-favorite.layout :products='$products' />
-    </main>
-</x-layouts.app>
- --}}
-
-@props(['products' => ''])
 <x-layouts.app>
     <x-nav.breadcrumb>
         {{ __('Favorites') }}
@@ -36,9 +18,8 @@
                 @foreach ($products as $product)
                     <div class="group relative">
                         <div class="absolute right-0 top-0 z-50">
-                            {{-- <div class="p-3 text-white text-4xl">×</div> --}}
-                            {{-- <x-svg.multiply-icon></x-svg.multiply-icon> --}}
-                            <button class="favorite" onclick="initFavoritesJS.toggleFavoriteItem('{{ $product['id'] }}')">
+                            <button class="favorite"
+                                onclick="initFavoritesJS.toggleFavoriteItem('{{ $product['id'] }}')">
                                 <x-svg.heart class="fill-white" id="heart-{{ $product['id'] }}"> </x-svg.heart>
                             </button>
                         </div>
@@ -60,7 +41,9 @@
                                 </h3>
                                 <p class="mt-1 text-sm text-gray-700">{{ $product['name'] }}</p>
                             </div>
-                            <p class="text-sm font-medium text-gray-900"><x-collections.partials.price>{{ $product['price'] }}</x-collections.partials.price></p>
+                            <p class="text-sm font-medium text-gray-900">
+                                <x-collections.partials.price>{{ $product['price'] }}</x-collections.partials.price>
+                            </p>
 
                         </div>
                     </div>
