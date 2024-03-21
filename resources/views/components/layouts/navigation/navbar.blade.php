@@ -1,8 +1,9 @@
 @use('App\Models\Door')
 @php
-    $favoriteProductIds = json_decode(Cookie::get('favorites'));
-    $favoriteProducts = Door::whereIn('id', $favoriteProductIds)->get();
-    if ($favoriteProducts == null) {
+    if (!is_null(json_decode(Cookie::get('favorites')))) {
+        $favoriteProductIds = json_decode(Cookie::get('favorites'));
+        $favoriteProducts = Door::whereIn('id', $favoriteProductIds)->get();
+    } else {
         $favoriteProducts = collect();
     }
 @endphp
