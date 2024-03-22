@@ -277,7 +277,6 @@ namespace App\Models{
  * @property int $id
  * @property int $quotation_id
  * @property int $door_id
- * @property string|null $frame
  * @property int $quantity
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -288,7 +287,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem query()
  * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereDoorId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereFrame($value)
  * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereQuantity($value)
  * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereQuotationId($value)

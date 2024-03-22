@@ -7,37 +7,31 @@
               </a>
           </div>
           <div>
-              <h3 class="mb-8">ARCADIA 98 KFT. <br>1111 BUDAPEST, Minta u. 52./B.</h3>
+              <h3 class="mb-8">ARCADIA 98 KFT. <br>1194 Budapest, Citroën utca 4.</h3>
           </div>
           <div class="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-1">
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Üzletünk nyitva tartása</h2>
                   <ul class="text-gray-500 font-medium">
-                      <li class="mb-2">Hétfő 8:00 - 16:00</li>
-                      <li class="mb-2">Kedd 8:00 - 16:00</li>
-                      <li class="mb-2">Szerda 8:00 - 16:00</li>
-                      <li class="mb-2">Csütörtök 8:00 - 16:00</li>
-                      <li class="mb-2">Péntek 8:00 - 16:00</li>
-                      <li class="mb-2">Szombat 8:00 - 16:00</li>
-                      <li class="mb-2">Vasárnap: –</li>
+                      <li class="mb-2">hétfő - péntek: 7:00 - 16:00,</li>
+                      <li class="mb-2">szombat: 9:00 - 13:00</li>
                   </ul>
               </div>
               <div>
                   <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Kapcsolat</h2>
                   <ul class="text-gray-500 font-medium">
                       <li class="mb-2">
-                        <a href="mailto:hello@arcadia.hu" class="hover:underline">E-mail: hello@arcadia.hu</a>
+                        <a href="mailto:info@arcadia98.hu" class="hover:underline">E-mail: info@arcadia98.hu</a>
                       </li>
-                        <li class="mb-2">+36 20 123 4567</li>
-                        <li class="mb-2">+36 1 123 456</li>
+                        <li class="mb-2">+36 1 430 3344</li>
                       </li>
                   </ul>
                   <ul class="text-gray-500 font-medium">
                         <li class="mb-2">
-                          <a href="#" class="hover:underline">ASZF</a>
+                          <a href="/aszf" class="hover:underline">ÁSZF</a>
                         </li>
                         <li class="mb-2">
-                          <a href="#" class="hover:underline">Impresszum</a>
+                          <a href="/adatvedelmi-nyilatkozat" class="hover:underline">Adatvédelmi nyilatkozat</a>
                         </li>
                         </li>
                     </ul>

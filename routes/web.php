@@ -66,3 +66,6 @@ Route::get('/quoteMail', function () {
 Route::prefix('updateWebsiteDatabase')->as('updateWebsiteDatabase.')->group(function () {
     Route::get('/', [DatabaseUpdaterController::class, 'trigger'])->name('trigger');
 });
+
+Route::view('/aszf', 'jogi.aszf')->name('aszf');
+Route::view('/adatvedelmi-nyilatkozat', 'jogi.adatvedelem')->name('adatvedelem');
