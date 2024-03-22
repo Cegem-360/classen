@@ -19,6 +19,7 @@
         @endisset
         <!-- Scripts -->
         @vite(['resources/js/app.js'])
+        @cookieconsentscripts
     </head>
 
     <body class="font-sans antialiased">
@@ -43,6 +44,7 @@
             </main>
         </div>
         <x-toaster-hub />
+        @cookieconsentview
     </body>
 
 </html>
