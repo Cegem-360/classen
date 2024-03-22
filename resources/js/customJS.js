@@ -6,3 +6,4 @@ export function initCustomJS() {
         target.classList.add('active');
     }
 }
+
