@@ -12,7 +12,7 @@
                 </h3>
                 <div class="door_colors !grid min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
                     @foreach ($tags as $name => $tag)
-                        <div class="door_color m-px !h-auto !w-auto p-3 cursor-pointer" id="{{ $tag['tag'] }}-icon">
+                        <div class="door_color m-px !h-auto !w-auto cursor-pointer p-3" id="{{ $tag['tag'] }}-icon">
                             <div class="door_color__wrapper">
                                 <div class="door_color__image" onclick="selectColor('{{ $tag['tag'] }}')">
                                     <img src="{{ $tag['tag_img_url'] }}" alt="White" loading="lazy">
@@ -34,16 +34,19 @@
                     <div class="w-full">
                         <div class="items items-center">
                             @foreach ($doors as $head => $collection)
-                                <div class="grid grid-cols-3 gap-6 md:grid-cols-2 py-3" id="{{ $head }}-door">
+                                <div class="grid grid-cols-3 gap-6 py-3 md:grid-cols-2" id="{{ $head }}-door">
                                     @foreach ($collection as $item)
                                         <div class="option-item relative grid">
-                                            <img class="max-h-[500px]" src="{{ $item->img_url }}" alt="" loading="lazy">
-                                            <a class="group absolute inset-0 flex items-center justify-center cursor-pointer bg-black bg-opacity-5 transition duration-300 hover:bg-opacity-40"
-                                                wire:click="addToQuotation({{ $item->id }})">
+                                            <img class="max-h-[500px]" src="{{ $item->img_url }}" alt=""
+                                                loading="lazy">
+                                            <a class="group absolute inset-0 flex cursor-pointer items-center justify-center bg-black bg-opacity-5 transition duration-300 hover:bg-opacity-40"
+                                                wire:click="addToQuotation({{ $item->id }})"
+                                                onclick="hideOthers('{{ $head }}')">
                                                 <div
                                                     class="flex flex-col items-center text-white opacity-0 group-hover:opacity-100">
                                                     <x-svg.plus-icon></x-svg.plus-icon>
-                                                    <h5 class="mt-3 text-center text-xs font-medium">Hozzáadom az <br />árajánlat kéréshez</h3>
+                                                    <h5 class="mt-3 text-center text-xs font-medium">Hozzáadom az
+                                                        <br />árajánlat kéréshez</h3>
                                                 </div>
                                             </a>
                                             <h4 class="mt-3">{{ __($item->name) }}</h4>
@@ -67,7 +70,13 @@
             $('.items.items-center').children().hide();
             $("#" + string + "-door").show();
             $("#" + string + "-icon").addClass('active');
-            //console.log($("#" + string));
+        }
+
+        function hideOthers(string) {
+            setTimeout(function() {
+                selectColor(string);
+            }, 600);
+
         }
     </script>
 </div>
