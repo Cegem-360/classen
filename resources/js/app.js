@@ -28,7 +28,7 @@ document.addEventListener('livewire:navigated', () => {
 
 window.initFavoritesJS = initFavoritesJS;
 
-document.getElementById('szolg-1').addEventListener('click', function() {
+/* document.getElementById('szolg-1').addEventListener('click', function() {
     window.location.href = '/szolgaltatasaink/#szaktanacsadas';
 });
 document.getElementById('szolg-2').addEventListener('click', function() {
@@ -36,4 +36,4 @@ document.getElementById('szolg-2').addEventListener('click', function() {
 });
 document.getElementById('szolg-3').addEventListener('click', function() {
     window.location.href = '/szolgaltatasaink/#szakszeru-beepites';
-});
+}); */
