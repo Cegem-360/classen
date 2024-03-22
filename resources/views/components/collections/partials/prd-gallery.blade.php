@@ -31,7 +31,8 @@
                @if (
                    $category->name != 'Adjustable door frame' &&
                        $category->name != 'Adjustable non-rebated door frame' &&
-                       $category->name != 'Standard 2-Pack door frame')
+                       $category->name != 'Standard 2-Pack door frame' &&
+                       $category->name != 'Raktár')
                    <x-collections.partials.price class="text-lg font-bold">
                        {{ $category->doors->first()->price }}
                    </x-collections.partials.price>

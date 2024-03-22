@@ -40,9 +40,10 @@ class CategorySeeder extends Seeder
                 $woocommerceCategory->name == 'Adjustable door frame'
                 || $woocommerceCategory->name == 'Adjustable non-rebated door frame'
                 || $woocommerceCategory->name == 'Standard 2-Pack door frame'
+                || $woocommerceCategory->name == 'Raktár'
             ) {
 
-                $categories = $this->client->get(EndPoint::CATEGORIES . '?per_page=100');
+                $categories = $this->client->get(EndPoint::CATEGORIES.'?per_page=100');
                 $categories = json_decode($categories->getBody(), true);
                 $categories = collect($categories);
                 $categories = $categories->where('name', $woocommerceCategory->name)->first();
@@ -82,7 +83,7 @@ class CategorySeeder extends Seeder
         $woocommerceCategories = $woocommerce->get(EndPoint::PRODUCTSCATEGORIES, ['hide_empty' => true, 'per_page' => 100]);
         foreach ($woocommerceCategories as $woocommerceCategory) {
             //categories (Post)
-            $categories = $this->client->get(EndPoint::CATEGORIES . '?per_page=100');
+            $categories = $this->client->get(EndPoint::CATEGORIES.'?per_page=100');
             $categories = json_decode($categories->getBody(), true);
             $categories = collect($categories);
             $categories = $categories->where('name', $woocommerceCategory->name)->first();
@@ -127,18 +128,19 @@ class CategorySeeder extends Seeder
                 }
             }
 
-            $products = $woocommerce->get(EndPoint::PRODUCTS, ['category' => $woocommerceCategory->id, 'per_page' => 100, 'orderby' => 'title', 'order' => 'asc']);
+            $products = $woocommerce->get(EndPoint::PRODUCTS, ['category' => $woocommerceCategory->id,  'orderby' => 'title', 'order' => 'asc']);
             foreach ($products as $product) {
                 $cover = $product->images[0]->src;
                 try {
 
-                    $tag = Cache::remember('tag_slug_' . $product->tags[0]->slug, 1, function () use ($woocommerce, $product) {
+                    $tag = Cache::remember('tag_slug_'.$product->tags[0]->slug, 1, function () use ($woocommerce, $product) {
                         $tag = $woocommerce->get(EndPoint::PRODUCTSTAGS, ['slug' => $product->tags[0]->slug]);
 
                         return $tag;
                     });
                 } catch (\Throwable $th) {
-                    dd($product);
+                    dump($th->getMessage());
+                    dump($product);
                 }
 
                 if (is_null($tag)) {
@@ -147,11 +149,12 @@ class CategorySeeder extends Seeder
                 $tag = collect($tag)->first();
                 $exploded = ['', ''];
                 $exploded = explode('|', $tag->description);
-                if (!isset($exploded[1])) {
+                if (! isset($exploded[1])) {
                     $exploded = [$exploded[0], ''];
                 }
-                if (!is_numeric($product->regular_price))
+                if (! is_numeric($product->regular_price)) {
                     $product->regular_price = 0;
+                }
                 $woocommerceCategory = Category::whereName($product->categories[0]->name)->first();
 
                 Door::create([
