@@ -17,11 +17,8 @@
             <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($quotationItems ?? [] as $quotationItem)
                     <div class="group relative">
-                        <div
-                            class="b-white absolute right-3 top-3 z-50 flex h-6 w-6 cursor-pointer items-center justify-center rounded-md border-[1px] bg-[#00000022] group-hover:border-0 group-hover:bg-[#00000077]">
-                            {{-- <div class="p-3 text-white text-4xl">×</div> --}}
-                            <x-svg.multiply-icon></x-svg.multiply-icon>
-                        </div>
+
+                        <livewire:remove-quotation-item :$quotationItem :key="$quotationItem->id" />
                         <div
                             class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
                             <img class="h-full w-full object-cover object-center"
