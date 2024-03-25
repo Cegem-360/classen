@@ -13,11 +13,14 @@
         </div>
         <div class="max-w-7xl">
             <h3 class="text-xl font-bold tracking-tight text-gray-900">{{ __('Customers also purchased') }}</h3>
-
+            @if ($quotationItems->isEmpty())
+                <div>
+                    Nincsen termék az árajánlatban.
+                </div>
+            @endif
             <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($quotationItems ?? [] as $quotationItem)
                     <div class="group relative">
-
                         <livewire:remove-quotation-item :$quotationItem :key="$quotationItem->id" />
                         <div
                             class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
@@ -36,7 +39,8 @@
                                         <b>{{ __($quotationItem->door->tag_name) }}</b>
                                     </a>
                                 </h3>
-                                <p class="mt-1 text-sm text-gray-700">{{ __($quotationItem->door->category->name) }}</p>
+                                <p class="mt-1 text-sm text-gray-700">{{ __($quotationItem->door->category->name) }}
+                                </p>
                             </div>
                             <p class="text-sm font-medium text-gray-900">
                                 <x-collections.partials.price>{{ $quotationItem->door->price }}</x-collections.partials.price>
