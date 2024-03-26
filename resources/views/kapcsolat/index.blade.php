@@ -1,9 +1,14 @@
 <x-layouts.app>
     <x-nav.breadcrumb>
-        Rólunk
+        Kapcsolat
     </x-nav.breadcrumb>
 
     <!-- gap -->
+    <div class="min-h-[60px]"></div>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d696.4357209998491!2d19.144179539278472!3d47.438597061166014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c28e0c6156ad%3A0x483308919466b45b!2sARCADIA%2098%20Kft.!5e0!3m2!1shu!2shu!4v1709888363925!5m2!1shu!2shu"
+        style="border:0;" width="100%" height="450px" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"></iframe>
     <div class="min-h-[60px]"></div>
 
     <div class="mx-16">
@@ -29,38 +34,7 @@
                     @csrf
                     <div class="">
                         <h3 class="mb-3 text-xl font-bold">{{ __('Írjon nekünk!') }}</h3>
-                        {{--
-                        <div class="grid grid-cols-1 gap-6">
-                            <div>
-                                <x-input-label class="hidden" for="first_name">{{ __('First Name') }}</x-input-label>
-                                <x-text-input class="form-input" name="first_name"
-                                    placeholder="{{ __('First Name') }}"></x-text-input>
-                            </div>
-                            <div>
-                                <x-input-label class="hidden" for="last_name">{{ __('Last Name') }}</x-input-label>
-                                <x-text-input class="form-input" name="last_name"
-                                    placeholder="{{ __('Last Name') }}"></x-text-input>
-                            </div>
-                            <div>
-                                <x-input-label class="hidden" for="email">{{ __('Email') }}</x-input-label>
-                                <x-text-input class="form-input" id="email" name="email" type="email"
-                                    placeholder="{{ __('Email') }}"></x-text-input>
-                            </div>
-                            <div>
-                                <x-input-label class="hidden" for="phone">{{ __('Phone') }}</x-input-label>
-                                <x-text-input class="form-input" id="phone" name="phone" type="tel"
-                                    placeholder="{{ __('Phone') }}"></x-text-input>
-                            </div>
-                            <div>
-                                <x-input-label class="hidden" for="message">{{ __('Message') }}</x-input-label>
 
-                                <textarea
-                                    class="form-textarea mt-4 block w-full border-x-0 border-gray-400 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                                    id="message" name="message" placeholder="{{ __('Message') }}"></textarea>
-                            </div>
-                            <x-primary-button class="w-fit">{{ __('Submit') }}</x-primary-button>
-                        </div>
-                         --}}
                         <x-form></x-form>
                     </div>
                 </form>
@@ -68,11 +42,6 @@
 
         </div>
     </div>
-
-    <!-- gap -->
-    <div class="min-h-[180px]"></div>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d696.4357209998491!2d19.144179539278472!3d47.438597061166014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4741c28e0c6156ad%3A0x483308919466b45b!2sARCADIA%2098%20Kft.!5e0!3m2!1shu!2shu!4v1709888363925!5m2!1shu!2shu" width="100%" height="450px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <!-- gap -->
     <div class="min-h-[90px]"></div>

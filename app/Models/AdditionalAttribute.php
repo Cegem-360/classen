@@ -19,7 +19,7 @@ class AdditionalAttribute extends Model
         'hpl_laminate',
         'lacquered',
         'room_door',
-        'bathroom_door',
+        'inner_door',
         'interior_entrance_door',
         'technical_doors',
         'fire_door',
@@ -31,15 +31,6 @@ class AdditionalAttribute extends Model
         'loft',
         'retro',
         'rustic',
-        'width_60',
-        'width_70',
-        'width_80',
-        'width_90',
-        'width_100',
-        'width_110',
-        'width_120',
-        'panel_doors',
-        'framed_doors',
     ];
 
     public function category(): BelongsTo
