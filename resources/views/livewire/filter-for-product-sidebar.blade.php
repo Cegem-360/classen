@@ -7,7 +7,7 @@
         <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
         <div>
             <fieldset class="mb-3">
-                <legend class="text-lg font-bold">{{ __('Colours') }}</legend>
+                <legend class="text-lg font-bold">{{ __('Legújabb színeink') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
@@ -109,9 +109,9 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="bathroom_door" wire:model="options.purpose.bathroom_door"
+                        <input type="checkbox" value="inner_door" wire:model="options.purpose.inner_door"
                             wire:click="$refresh" />
-                        {{ __('bathroom door') }}
+                        {{ __('beltéri ajtó') }}
                     </label>
                 </div>
                 <div>
@@ -155,77 +155,7 @@
                     </label>
                 </div>
             </fieldset>
-            <fieldset class="mb-3">
-                <legend class="text-lg font-bold">Szélesség</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width 60" wire:model="options.width.width_60"
-                            wire:click="$refresh" />
-                        {{ __('60') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_70" wire:model="options.width.width_70"
-                            wire:click="$refresh" />
-                        {{ __('70') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_80" wire:model="options.width.width_80"
-                            wire:click="$refresh" />
-                        {{ __('80') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_90" wire:model="options.width.width_90"
-                            wire:click="$refresh" />
-                        {{ __('90') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_100" wire:model="options.width.width_100"
-                            wire:click="$refresh" />
-                        {{ __('100') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_110" wire:model="options.width.width_110"
-                            wire:click="$refresh" />
-                        {{ __('110') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_120" wire:model="options.width.width_120"
-                            wire:click="$refresh" />
-                        {{ __('120') }}
-                    </label>
-                </div>
-            </fieldset>
-            <fieldset class="mb-3">
-                <legend class="text-lg font-bold">{{ __('Construction') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="panel_doors" wire:model="options.construction.panel_doors"
-                            wire:click="$refresh" />
-                        {{ __('panel doors') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="framed_doors" wire:model="options.construction.framed_doors"
-                            wire:click="$refresh" />
-                        {{ __('framed doors') }}
-                    </label>
-                </div>
-            </fieldset>
+
         </div>
         <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
 
@@ -240,7 +170,7 @@
     <div class="relative mx-12 my-16 w-3/4">
         <h1 class="text-3xl font-bold uppercase">Összes ajtó</h1>
         <hr class="relative mb-3 mt-8 h-1 w-72 border-0 bg-sarga">
-        <a class="absolute md:relative right-0 top-0 flex w-fit items-center justify-between gap-6 border-1 border-black px-6 py-3"
+        <a class="absolute right-0 top-0 flex w-fit items-center justify-between gap-6 border-1 border-black px-6 py-3 md:relative"
             href="{{ route('category.index') }}" wire:navigate.hover>
             <h2 class="font-bold text-black">{{ __('Go to collections') }}</h2>
             <div class="scale-75"><x-doors.partials.arrow-right class="![fill:black]"></x-doors.partials.arrow-right>

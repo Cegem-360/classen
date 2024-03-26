@@ -52,7 +52,7 @@ class FilterForProductSidebar extends Component
         ],
         'purpose' => [
             'room_door' => false,
-            'bathroom_door' => false,
+            'inner_door' => false,
             'technical_doors' => false,
             'anti_burglary_door' => false,
             'sliding_door' => false,
@@ -62,31 +62,10 @@ class FilterForProductSidebar extends Component
             'classic' => false,
             'loft' => false,
         ],
-        'width' => [
-            'width_60' => false,
-            'width_70' => false,
-            'width_80' => false,
-            'width_90' => false,
-            'width_100' => false,
-            'width_110' => false,
-            'width_120' => false,
-        ],
-        'construction' => [
-            'panel_doors' => false,
-            'framed_doors' => false,
-        ],
 
     ];
 
     public $collections;
-
-    public function mount()
-    {
-    }
-
-    public function updated()
-    {
-    }
 
     public function render()
     {
@@ -129,7 +108,7 @@ class FilterForProductSidebar extends Component
                                     $q->whereRoomDoor(true);
                                 });
                             })
-                            ->when($this->options['purpose']['bathroom_door'], function (Builder $query) {
+                            ->when($this->options['purpose']['inner_door'], function (Builder $query) {
                                 $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
                                     $q->whereBathroomDoor(true);
                                 });
@@ -164,49 +143,6 @@ class FilterForProductSidebar extends Component
                             ->when($this->options['style']['loft'], function (Builder $query) {
                                 $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
                                     $q->whereLoft(true);
-                                });
-                            });
-                    })->where(function (Builder $outerQuery) {
-                        $outerQuery
-                            ->when($this->options['width']['width_60'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->where('width_60', true);
-                                });
-                            })->when($this->options['width']['width_70'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->where('width_70', true);
-                                });
-                            })->when($this->options['width']['width_80'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->where('width_80', true);
-                                });
-                            })->when($this->options['width']['width_90'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->where('width_90', true);
-                                });
-                            })->when($this->options['width']['width_100'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->where('width_100', true);
-                                });
-                            })->when($this->options['width']['width_110'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->where('width_110', true);
-                                });
-                            })->when($this->options['width']['width_120'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->where('width_120', true);
-                                });
-                            });
-                    })->where(function (Builder $outerQuery) {
-                        $outerQuery
-                            ->when($this->options['construction']['panel_doors'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->wherePanelDoors(true);
-                                });
-                            })
-                            ->when($this->options['construction']['framed_doors'], function (Builder $query) {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->whereFramedDoors(true);
                                 });
                             });
                     })->where(function (Builder $query) {

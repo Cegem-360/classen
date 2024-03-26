@@ -59,9 +59,9 @@
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="bathroom_door" wire:model="options.purpose.bathroom_door"
+                        <input type="checkbox" value="inner_door" wire:model="options.purpose.inner_door"
                             wire:click="$refresh" />
-                        {{ __('bathroom door') }}
+                        {{ __('beltéri ajtó') }}
                     </label>
                 </div>
                 <div>
@@ -100,77 +100,6 @@
                     <label for="options">
                         <input type="checkbox" value="loft" wire:model="options.style.loft" wire:click="$refresh" />
                         {{ __('loft') }}
-                    </label>
-                </div>
-            </fieldset>
-            <fieldset class="mb-3">
-                <legend class="text-lg font-bold">Szélesség</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width 60" wire:model="options.width.width_60"
-                            wire:click="$refresh" />
-                        {{ __('60') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_70" wire:model="options.width.width_70"
-                            wire:click="$refresh" />
-                        {{ __('70') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_80" wire:model="options.width.width_80"
-                            wire:click="$refresh" />
-                        {{ __('80') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_90" wire:model="options.width.width_90"
-                            wire:click="$refresh" />
-                        {{ __('90') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_100" wire:model="options.width.width_100"
-                            wire:click="$refresh" />
-                        {{ __('100') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_110" wire:model="options.width.width_110"
-                            wire:click="$refresh" />
-                        {{ __('110') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="width_120" wire:model="options.width.width_120"
-                            wire:click="$refresh" />
-                        {{ __('120') }}
-                    </label>
-                </div>
-            </fieldset>
-            <fieldset class="mb-3">
-                <legend class="text-lg font-bold">{{ __('Construction') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="panel_doors" wire:model="options.construction.panel_doors"
-                            wire:click="$refresh" />
-                        {{ __('panel doors') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="framed_doors" wire:model="options.construction.framed_doors"
-                            wire:click="$refresh" />
-                        {{ __('framed doors') }}
                     </label>
                 </div>
             </fieldset>

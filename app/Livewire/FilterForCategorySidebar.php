@@ -19,7 +19,7 @@ class FilterForCategorySidebar extends Component
         ],
         'purpose' => [
             'room_door' => false,
-            'bathroom_door' => false,
+            'inner_door' => false,
             'technical_doors' => false,
             'sliding_door' => false,
         ],
@@ -28,30 +28,9 @@ class FilterForCategorySidebar extends Component
             'classic' => false,
             'loft' => false,
         ],
-        'width' => [
-            'width_60' => false,
-            'width_70' => false,
-            'width_80' => false,
-            'width_90' => false,
-            'width_100' => false,
-            'width_110' => false,
-            'width_120' => false,
-        ],
-        'construction' => [
-            'panel_doors' => false,
-            'framed_doors' => false,
-        ],
     ];
 
     public $collections;
-
-    public function mount()
-    {
-    }
-
-    public function updated()
-    {
-    }
 
     public function render()
     {
@@ -75,8 +54,8 @@ class FilterForCategorySidebar extends Component
                     ->where(function (Builder $outerQuery) {
                         $outerQuery->when($this->options['purpose']['room_door'], function (Builder $query) {
                             $query->orWhere('room_door', true);
-                        })->when($this->options['purpose']['bathroom_door'], function (Builder $query) {
-                            $query->orWhere('bathroom_door', true);
+                        })->when($this->options['purpose']['inner_door'], function (Builder $query) {
+                            $query->orWhere('inner_door', true);
                         })->when($this->options['purpose']['technical_doors'], function (Builder $query) {
                             $query->orWhere('technical_doors', true);
                         })->when($this->options['purpose']['sliding_door'], function (Builder $query) {
@@ -89,28 +68,6 @@ class FilterForCategorySidebar extends Component
                             $query->orWhere('classic', true);
                         })->when($this->options['style']['loft'], function (Builder $query) {
                             $query->orWhere('loft', true);
-                        });
-                    })->where(function (Builder $outerQuery) {
-                        $outerQuery->when($this->options['width']['width_60'], function (Builder $query) {
-                            $query->orWhere('width_60', true);
-                        })->when($this->options['width']['width_70'], function (Builder $query) {
-                            $query->orWhere('width_70', true);
-                        })->when($this->options['width']['width_80'], function (Builder $query) {
-                            $query->orWhere('width_80', true);
-                        })->when($this->options['width']['width_90'], function (Builder $query) {
-                            $query->orWhere('width_90', true);
-                        })->when($this->options['width']['width_100'], function (Builder $query) {
-                            $query->orWhere('width_100', true);
-                        })->when($this->options['width']['width_110'], function (Builder $query) {
-                            $query->orWhere('width_110', true);
-                        })->when($this->options['width']['width_120'], function (Builder $query) {
-                            $query->orWhere('width_120', true);
-                        });
-                    })->where(function (Builder $outerQuery) {
-                        $outerQuery->when($this->options['construction']['panel_doors'], function (Builder $query) {
-                            $query->orWhere('panel_doors', true);
-                        })->when($this->options['construction']['framed_doors'], function (Builder $query) {
-                            $query->orWhere('framed_doors', true);
                         });
                     })->get();
             foreach ($results as $result) {
