@@ -44,9 +44,9 @@ class CategorySeeder extends Seeder
             if (is_null($category)) {
                 continue;
             }
-            ($category['acf']['additional_options'] == false) ? null : $category['acf']['additional_options'];
-            ($category['acf']['door_specification'] == false) ? null : $category['acf']['door_specification'];
-            ($category['acf']['technical_parameter'] == false) ? null : $category['acf']['technical_parameter'];
+            ($category['acf']['additional_options'] == 'false') ? null : $category['acf']['additional_options'];
+            ($category['acf']['door_specification'] == 'false') ? null : $category['acf']['door_specification'];
+            ($category['acf']['technical_parameter'] == 'false') ? null : $category['acf']['technical_parameter'];
             $created_category = Category::factory()->create(
                 [
                     'name' => $woCategory->name,
