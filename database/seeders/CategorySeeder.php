@@ -41,6 +41,9 @@ class CategorySeeder extends Seeder
                 || $woocommerceCategory->name == 'Adjustable non-rebated door frame'
                 || $woocommerceCategory->name == 'Standard 2-Pack door frame'
                 || $woocommerceCategory->name == 'Raktár'
+                || $woocommerceCategory->name == 'Single leaf and double leaf sliding system'
+                || $woocommerceCategory->name == 'Modi Design sliding system'
+                || $woocommerceCategory->name == 'Compact'
             ) {
 
                 $categories = $this->client->get(EndPoint::CATEGORIES.'?per_page=100');
