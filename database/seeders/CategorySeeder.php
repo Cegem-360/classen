@@ -34,19 +34,20 @@ class CategorySeeder extends Seeder
             ]
         );
         //wooCommerce
-        $woocommerceCategories = $this->wooCommerce->get(EndPoint::PRODUCTSCATEGORIES, ['per_page' => 100]);
+        $woocommerceCategories = $this->wooCommerce->get(EndPoint::PRODUCTSCATEGORIES, ['per_page' => 100, 'exclude' => ['15']]);
         //blog
         $categories = collect(json_decode($this->client->get(EndPoint::CATEGORIES.'?per_page=100')->getBody(), true));
-        //$categories = collect($categories);
         foreach ($woocommerceCategories as $woCategory) {
             $category = $categories->where('name', $woCategory->name)->first();
-            //dump($category);
             if (is_null($category)) {
                 continue;
             }
-            $category['acf']['additional_options'] = ($category['acf']['additional_options'] == 'false') ? null : $category['acf']['additional_options'];
-            $category['acf']['door_specification'] = ($category['acf']['door_specification'] == 'false') ? null : $category['acf']['door_specification'];
-            $category['acf']['technical_parameter'] = ($category['acf']['technical_parameter'] == 'false') ? null : $category['acf']['technical_parameter'];
+            $category['acf']['additional_options'] = ($category['acf']['additional_options'] == false) ? null : $category['acf']['additional_options'];
+            $category['acf']['additional_options'] = $this->str_replace_json('false', 'null', $category['acf']['additional_options']);
+            $category['acf']['door_specification'] = ($category['acf']['door_specification'] == false) ? null : $category['acf']['door_specification'];
+            $category['acf']['door_specification'] = $this->str_replace_json('false', 'null', $category['acf']['door_specification']);
+            $category['acf']['technical_parameter'] = ($category['acf']['technical_parameter'] == false) ? null : $category['acf']['technical_parameter'];
+            $category['acf']['technical_parameter'] = $this->str_replace_json('false', 'null', $category['acf']['technical_parameter']);
             $created_category = Category::factory()->create(
                 [
                     'name' => $woCategory->name,

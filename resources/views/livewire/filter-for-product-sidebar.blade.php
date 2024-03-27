@@ -11,50 +11,47 @@
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="sonoma_oak" wire:model="options.decor.sonoma_oak"
+                        <input type="checkbox" value="honey_catania" wire:model="options.decor.honey_catania"
                             wire:click="$refresh" />
-                        {{ __('sonoma oak') }}
+                        {{ __('Honey Catania') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="natural_oak" wire:model="options.decor.natural_oak"
+                        <input type="checkbox" value="cleveland_oak" wire:model="options.decor.cleveland_oak"
                             wire:click="$refresh" />
-                        {{ __('natural oak') }}
+                        {{ __('Cleveland Oak') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="gray_oak" wire:model="options.decor.gray_oak"
+                        <input type="checkbox" value="uni_white" wire:model="options.decor.uni_white"
                             wire:click="$refresh" />
-                        {{ __('gray oak') }}
+                        {{ __('UNI White') }}
                     </label>
                 </div>
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="beech" wire:model="options.decor.beech" wire:click="$refresh" />
-                        {{ __('beech') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="wenge" wire:model="options.decor.wenge" wire:click="$refresh" />
-                        {{ __('wenge') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="walnut" wire:model="options.decor.walnut" wire:click="$refresh" />
-                        {{ __('walnut') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
-                        <input type="checkbox" value="acacia_light" wire:model="options.decor.acacia_light"
+                        <input type="checkbox" value="uni_Black" wire:model="options.decor.uni_Black"
                             wire:click="$refresh" />
-                        {{ __('acacia light') }}
+                        {{ __('UNI Black') }}
                     </label>
                 </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="hamilton_oak_vertical"
+                            wire:model="options.decor.hamilton_oak_vertical" wire:click="$refresh" />
+                        {{ __('Hamilton Oak Vertical') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="hamilton_oak_horizontal"
+                            wire:model="options.decor.hamilton_oak_horizontal" wire:click="$refresh" />
+                        {{ __('Hamilton Oak Horizontal') }}
+                    </label>
+                </div>
+
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Finishing and surface durability') }}</legend>
@@ -135,8 +132,7 @@
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="modern" wire:model="options.style.modern"
-                            wire:click="$refresh" />
+                        <input type="checkbox" value="modern" wire:model="options.style.modern" wire:click="$refresh" />
                         {{ __('modern') }}
                     </label>
                 </div>

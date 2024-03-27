@@ -63,44 +63,7 @@ export function initSwiperJS() {
     });
 
     // fooldal carousel
-    const prdSwiper = new Swiper('.prd-swiper', {
-        // configure Swiper to use modules
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 30,
 
-        // If we need pagination
-        pagination: {
-            el: '.prd-swiper-pagination',
-            clickable: true,
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.prd-swiper-button-next',
-            prevEl: '.prd-swiper-button-prev',
-        },
-        breakpoints: {
-            976: {
-                slidesPerView: 4,
-                spaceBetween: 30,
-            },
-            768: {
-                slidesPerView: 3,
-                spaceBetween: 30,
-            },
-            560: {
-                slidesPerView: 2,
-                spaceBetween: 20,
-            },
-            380: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
-        },
-    });
 
     const detailPageSwiperThumbs = new Swiper(".detail-page-swiper-thumbs", {
 
@@ -178,7 +141,7 @@ export function initSwiperJS() {
         },
     });
 
-    doorFrontsSwiperThumbs.on('click', function() {
+    doorFrontsSwiperThumbs.on('click', function () {
         let targetIndex = this.clickedIndex;
         doorFrontsSwiper.params.speed = 0; // disable transition
         doorFrontsSwiper.slideTo(targetIndex); // move to target slide

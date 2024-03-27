@@ -12,29 +12,14 @@ class FilterForProductSidebar extends Component
 {
     use WithPagination;
 
-    public $colors = [
-        'colour' => [
-            'white' => false,
-            'bright' => false,
-            'grey' => false,
-            'brown' => false,
-            'graphite' => false,
-            'dark' => false,
-            'anthracite' => false,
-            'black' => false,
-        ],
-
-    ];
-
     public $options = [
         'decor' => [
-            'sonoma_oak' => false,
-            'natural_oak' => false,
-            'gray_oak' => false,
-            'beech' => false,
-            'wenge' => false,
-            'walnut' => false,
-            'acacia_light' => false,
+            'honey_catania' => false,
+            'cleveland_oak' => false,
+            'uni_white' => false,
+            'uni_Black' => false,
+            'hamilton_oak_vertical' => false,
+            'hamilton_oak_horizontal' => false,
         ],
         'type' => [
             'rebated_doors' => false,
@@ -146,20 +131,18 @@ class FilterForProductSidebar extends Component
                                 });
                             });
                     })->where(function (Builder $query) {
-                        $query->when($this->options['decor']['sonoma_oak'], function (Builder $q) {
-                            $q->orWhere('tag', 'sonoma-oak');
-                        })->when($this->options['decor']['natural_oak'], function (Builder $q) {
-                            $q->orWhere('tag', 'natural-oak');
-                        })->when($this->options['decor']['gray_oak'], function (Builder $q) {
-                            $q->orWhere('tag', 'gray-oak');
-                        })->when($this->options['decor']['beech'], function (Builder $q) {
-                            $q->orWhere('tag', 'beech');
-                        })->when($this->options['decor']['wenge'], function (Builder $q) {
-                            $q->orWhere('tag', 'wenge');
-                        })->when($this->options['decor']['walnut'], function (Builder $q) {
-                            $q->orWhere('tag', 'walnut');
-                        })->when($this->options['decor']['acacia_light'], function (Builder $q) {
-                            $q->orWhere('tag', 'acacia-light');
+                        $query->when($this->options['decor']['honey_catania'], function (Builder $q) {
+                            $q->orWhere('tag', 'honey-catania');
+                        })->when($this->options['decor']['cleveland_oak'], function (Builder $q) {
+                            $q->orWhere('tag', 'cleveland-oak');
+                        })->when($this->options['decor']['uni_white'], function (Builder $q) {
+                            $q->orWhere('tag', 'uni-white');
+                        })->when($this->options['decor']['uni_Black'], function (Builder $q) {
+                            $q->orWhere('tag', 'uni-Black');
+                        })->when($this->options['decor']['hamilton_oak_vertical'], function (Builder $q) {
+                            $q->orWhere('tag', 'hamilton-oak-vertical');
+                        })->when($this->options['decor']['hamilton_oak_horizontal'], function (Builder $q) {
+                            $q->orWhere('tag', 'hamilton-oak-horizontal');
                         });
                     })->paginate(perPage: 20);
 
