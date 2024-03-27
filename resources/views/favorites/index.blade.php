@@ -12,7 +12,7 @@
             <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
         </div>
         <div class="max-w-7xl">
-            <h3 class="text-xl font-bold tracking-tight text-gray-900">{{ __('Customers also purchased') }}</h3>
+            <h3 class="text-xl font-bold tracking-tight text-gray-900">{{ __('Kedvencek') }}</h3>
 
             <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($products as $product)
