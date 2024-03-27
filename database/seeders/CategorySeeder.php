@@ -44,9 +44,9 @@ class CategorySeeder extends Seeder
             if (is_null($category)) {
                 continue;
             }
-            ($category['acf']['additional_options'] == 'false') ? null : $category['acf']['additional_options'];
-            ($category['acf']['door_specification'] == 'false') ? null : $category['acf']['door_specification'];
-            ($category['acf']['technical_parameter'] == 'false') ? null : $category['acf']['technical_parameter'];
+            $category['acf']['additional_options'] = ($category['acf']['additional_options'] == 'false') ? null : $category['acf']['additional_options'];
+            $category['acf']['door_specification'] = ($category['acf']['door_specification'] == 'false') ? null : $category['acf']['door_specification'];
+            $category['acf']['technical_parameter'] = ($category['acf']['technical_parameter'] == 'false') ? null : $category['acf']['technical_parameter'];
             $created_category = Category::factory()->create(
                 [
                     'name' => $woCategory->name,
@@ -54,9 +54,9 @@ class CategorySeeder extends Seeder
                     'additional_options' => $category['acf']['additional_options'] ?? null,
                     'door_specification' => $category['acf']['door_specification'] ?? null,
                     'technical_parameter' => $category['acf']['technical_parameter'] ?? null,
-                    'img_url' => $categories['acf']['galeria_kepek'][0] ?? null,
-                    'gallery_imgs' => $categories['acf']['galeria_kepek'] ?? null,
-                    'breadcrumb' => $categories['acf']['type'] ?? null,
+                    'img_url' => $category['acf']['galeria_kepek'][0] ?? null,
+                    'gallery_imgs' => $category['acf']['galeria_kepek'] ?? null,
+                    'breadcrumb' => $category['acf']['type'] ?? null,
                 ]
             );
             $attributes = explode('|', $woCategory->description);
