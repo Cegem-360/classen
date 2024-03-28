@@ -3,7 +3,6 @@
     <!-- Hero Text -->
     <div class="hero-wrapper w-1/4 py-12 sm:w-full">
         <div class="hero-content">
-
             <h2 class="hero-title mb-4 px-6 text-5xl font-bold">Stílusos tolóajtók</h2>
             <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
             <h3 class="hero-text px-6 text-lg font-bold">Klasszikus megjelenés, ezerarcú felhasználás.</h3>
@@ -68,4 +67,57 @@
 
         </div>
     </div>
+    <script>
+        function animationSlide(slideItem) {
+            const tl = gsap.timeline({
+                id: "time",
+                // delay: .6,
+                onStart: function() {}
+            });
+
+            const contentWrapper = document.querySelector(".hero-content");
+            const heroLine = document.querySelector(".hero-line");
+            const heroTitle = document.querySelector(".hero-content .hero-title");
+            const heroContent = document.querySelector(".hero-content .hero-text");
+            const heroCTA = document.querySelector(".hero-content .hero-cta");
+
+            tl.set([heroTitle, heroContent, heroCTA], {
+                    autoAlpha: 0,
+
+                })
+                .fromTo(contentWrapper, {
+                    x: 10,
+                    autoAlpha: 0
+
+                }, {
+                    x: 0,
+                    autoAlpha: 1,
+                    duration: 2,
+                    ease: "power2.inOut"
+                })
+                .fromTo(
+                    [heroTitle, heroContent, heroCTA], {
+                        autoAlpha: 0,
+                        y: 100
+                    }, {
+                        autoAlpha: 1,
+                        y: 0,
+                        duration: 1.2,
+                        ease: "power1.out",
+                        stagger: 0.25
+                    },
+                    "-=1.2"
+                )
+                .fromTo(heroLine, {
+                    scaleX: 0
+                }, {
+                    scaleX: "100%",
+                    duration: 1.5,
+                    ease: "power1.inOut",
+                    transformOrigin: "right"
+                }, "-=1.2")
+
+            return tl;
+        }
+    </script>
 </div>

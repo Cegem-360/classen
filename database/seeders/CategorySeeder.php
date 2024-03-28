@@ -31,12 +31,13 @@ class CategorySeeder extends Seeder
             'cs_d4b3236616414c18c5fd4e333313d7b2783676b8',
             [
                 'version' => 'wc/v3',
+                'timeout' => 120,
             ]
         );
         //wooCommerce
         $woocommerceCategories = $this->wooCommerce->get(EndPoint::PRODUCTSCATEGORIES, ['per_page' => 100, 'exclude' => ['15']]);
         //blog
-        $categories = collect(json_decode($this->client->get(EndPoint::CATEGORIES.'?per_page=100')->getBody(), true));
+        $categories = collect(json_decode($this->client->get(EndPoint::CATEGORIES.'?per_page=100', ['timeout' => 120])->getBody(), true));
         foreach ($woocommerceCategories as $woCategory) {
             $category = $categories->where('name', $woCategory->name)->first();
             if (is_null($category)) {

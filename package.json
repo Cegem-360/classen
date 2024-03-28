@@ -8,6 +8,7 @@
         "@rollup/plugin-inject": "^5.0.5",
         "@tailwindcss/aspect-ratio": "^0.4.2",
         "@tailwindcss/forms": "^0.5.7",
+        "@tailwindcss/typography": "^0.5.12",
         "alpinejs": "^3.4.2",
         "autoprefixer": "^10.4.2",
         "axios": "^1.1.2",
@@ -19,13 +20,12 @@
     },
     "dependencies": {
         "@tailwindcss/nesting": "^0.0.0-insiders.565cd3e",
-        "@tailwindcss/typography": "^0.5.9",
         "flowbite": "^2.3.0",
         "gsap": "^3.12.5",
         "jquery": "^3.7.1",
         "postcss-nesting": "^12.0.2",
         "qtip2": "^3.0.3",
-        "swiper": "^11.0.5",
+        "swiper": "^11.1.0",
         "tippy.js": "^6.3.7"
     }
 }

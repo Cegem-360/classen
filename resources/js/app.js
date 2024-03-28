@@ -1,11 +1,7 @@
 import './bootstrap';
 import '../css/app.css';
-import '../css/classen.css';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-//import 'qtip2';
-
+import '../css/classen.css';;
+import 'swiper/css/bundle';
 
 import '../../vendor/masmerise/livewire-toaster/resources/js';
 import.meta.glob([
@@ -17,7 +13,6 @@ import initFavoritesJS from './favorites.js'; // Replace 'require' with 'import'
 import { initCustomJS } from './customJS.js';
 //import './../../node_modules/qtip2/dist/jquery.qtip.js';
 document.addEventListener('livewire:init', () => {
-    //initSwiperJS();
     initCustomJS();
 });
 document.addEventListener('livewire:navigated', () => {

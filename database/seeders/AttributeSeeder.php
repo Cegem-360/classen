@@ -23,9 +23,10 @@ class AttributeSeeder extends Seeder
         $this->client =
             new Client([
                 'base_uri' => UrlPath::BASEURL,
+                'timeout' => 120,
             ]);
         $response =
-            $this->client->get(EndPoint::DESIGFORMS.'?per_page=25');
+            $this->client->request('GET', EndPoint::DESIGFORMS.'?per_page=25', [['timeout' => 120]]);
         $designForms = json_decode($response->getBody(), true);
         foreach ($designForms as $designForm) {
             $imgUrl =

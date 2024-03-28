@@ -78,7 +78,18 @@ class FilterForCategorySidebar extends Component
         } else {
             $this->collections = Category::all()->groupBy('breadcrumb')->all();
         }
-        $this->collections['WOOD-BASED DOOR FRAMES'] = array_shift($this->collections);
+        dump($this->collections);
+        $tmp['LACQUERED DOORS'] = $this->collections['LACQUERED DOORS'];
+        $tmp['FRAMED DOORS'] = $this->collections['FRAMED DOORS'];
+        $tmp['VENEER PANEL DOORS'] = $this->collections['VENEER PANEL DOORS'];
+        $tmp['INTERIOR ENTRANCE DOORS'] = $this->collections['INTERIOR ENTRANCE DOORS'];
+        $tmp['TECHNICAL AND SYSTEMS DOORS'] = $this->collections['TECHNICAL AND SYSTEMS DOORS'];
+        $tmp['SLIDING DOORS'] = $this->collections['SLIDING DOORS'];
+        $tmp['STORAGE'] = $this->collections['STORAGE'];
+        $tmp['WOOD-BASED DOOR FRAMES'] = $this->collections['WOOD-BASED DOOR FRAMES'];
+
+        $this->collections = $tmp;
+        unset($tmp);
 
         return view('livewire.filter-for-category-sidebar', ['collections' => $this->collections]);
     }

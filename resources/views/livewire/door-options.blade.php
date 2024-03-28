@@ -1,4 +1,24 @@
 <div>
+    <script>
+        document.addEventListener('livewire:navigated', () => {
+            $('.items.items-center').children().hide();
+            $('.items.items-center').first().show();
+        });
+
+        function selectColor(string) {
+            $('.active').removeClass('active');
+            $('.items.items-center').children().hide();
+            $("#" + string + "-door").show();
+            $("#" + string + "-icon").addClass('active');
+        }
+
+        function hideOthers(string) {
+            setTimeout(function() {
+                selectColor(string);
+            }, 600);
+
+        }
+    </script>
     <!-- Elérhető opciók -->
     <div class="mx-8">
         <h2 class="mb-3 text-4xl font-bold">{{ __('Available options') }}</h2>
@@ -12,6 +32,13 @@
                 </h3>
                 <div class="door_colors !grid min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
                     @foreach ($tags as $name => $tag)
+                        @if ($loop->first)
+                            <script>
+                                document.addEventListener('livewire:navigated', () => {
+                                    hideOthers('{{ $tag['tag'] }}');
+                                });
+                            </script>
+                        @endif
                         <div class="door_color m-px !h-auto !w-auto cursor-pointer p-3" id="{{ $tag['tag'] }}-icon">
                             <div class="door_color__wrapper">
                                 <div class="door_color__image" onclick="selectColor('{{ $tag['tag'] }}')">
@@ -49,7 +76,16 @@
                                                         <br />árajánlat kéréshez</h3>
                                                 </div>
                                             </a>
-                                            <h4 class="mt-3">{{ __($item->name) }}</h4>
+                                            <h4 class="mt-3">
+                                                {{ __($item->name) }}
+                                                @if (Request::path() == 'kollekciok/Rakt%C3%A1r%20kollekci%C3%B3')
+                                                    <span>:
+                                                        {{ Number::format(intval((string) $item->price), locale: 'hu') }}
+                                                        Ft
+                                                    </span>
+                                                @endif
+
+                                            </h4>
                                         </div>
                                     @endforeach
                                 </div>
@@ -60,23 +96,5 @@
             </div>
         </div>
     </div>
-    <script>
-        document.addEventListener('livewire:navigated', () => {
-            $('.items.items-center').children().hide();
-        });
 
-        function selectColor(string) {
-            $('.active').removeClass('active');
-            $('.items.items-center').children().hide();
-            $("#" + string + "-door").show();
-            $("#" + string + "-icon").addClass('active');
-        }
-
-        function hideOthers(string) {
-            setTimeout(function() {
-                selectColor(string);
-            }, 600);
-
-        }
-    </script>
 </div>

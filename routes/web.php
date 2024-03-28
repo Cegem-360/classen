@@ -69,3 +69,6 @@ Route::prefix('updateWebsiteDatabase')->as('updateWebsiteDatabase.')->group(func
 
 Route::view('/aszf', 'jogi.aszf')->name('aszf');
 Route::view('/adatvedelmi-nyilatkozat', 'jogi.adatvedelem')->name('adatvedelem');
+Route::get('/refreshDatabase', function () {
+    Artisan::call('migrate:fresh', ['--seed' => 1]);
+});

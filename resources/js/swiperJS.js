@@ -10,60 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export function initSwiperJS() {
-    /**
-     * Swiper (carousels, gallerys)
-     *
-     *
-     *
-    */
-    const swiper = new Swiper('.hero-swiper', {
-        // configure Swiper to use modules
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        //slidesPerView: 3,
-        //spaceBetween: 30,
-
-        // If we need pagination
-        pagination: {
-            el: '.hero-swiper-pagination',
-            type: 'fraction',
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.hero-swiper-button-next',
-            prevEl: '.hero-swiper-button-prev',
-        },
-
-        // And if we need scrollbar
-        scrollbar: {
-            el: '.swiper-scrollbar',
-        },
-        on: {
-            slideNextTransitionStart(swiper) {
-                let index_currentSlide = swiper.realIndex,
-                    currentSlide = swiper.slides[index_currentSlide];
-
-                animationSlide(currentSlide);
-            },
-            slidePrevTransitionStart(swiper) {
-                let index_currentSlide = swiper.realIndex,
-                    currentSlide = swiper.slides[index_currentSlide];
-
-                animationSlide(currentSlide);
-            },
-            afterInit(swiper) {
-                let index_currentSlide = swiper.realIndex,
-                    currentSlide = swiper.slides[index_currentSlide];
-
-                animationSlide(currentSlide);
-            }
-        }
-    });
-
-    // fooldal carousel
-
 
     const detailPageSwiperThumbs = new Swiper(".detail-page-swiper-thumbs", {
 
@@ -73,9 +19,6 @@ export function initSwiperJS() {
             rows: 8,
         },
         spaceBetween: 10,
-        //direction: 'vertical'
-        //freeMode: true,
-        //watchSlidesProgress: true,
     });
 
     const detailPageSwiper = new Swiper('.detail-page-swiper', {
@@ -87,35 +30,7 @@ export function initSwiperJS() {
         },
     });
 
-    //     const doorModelSwiperThumbs = new Swiper(".door-model-swiper-thumbs", {
-    //
-    //         slidesPerView: 4,
-    //         grid: {
-    //             fill: 'row',
-    //             rows: 8,
-    //         },
-    //         spaceBetween: 10,
-    //         loop: false,
-    //     });
-    //
-    //     const doorModelSwiper = new Swiper('.door-model-swiper', {
-    //
-    //         effect: 'fade',
-    //         fadeEffect: {
-    //             crossFade: true,
-    //         },
-    //         loop: false,
-    //         thumbs: {
-    //             swiper: doorModelSwiperThumbs,
-    //         },
-    //     });
-
     const doorColorVariantSwiper = new Swiper('.door-color-variant-swiper', {
-
-        // effect: 'fade',
-        // fadeEffect: {
-        //     crossFade: true,
-        // },
         hashNavigation: {
             watchState: true,
         },
@@ -316,21 +231,57 @@ export function initSwiperJS() {
         theme: 'arcadia',
     });
 
+    const swiper = new Swiper('.hero-swiper', {
+        // configure Swiper to use modules
+        // Optional parameters
+        direction: 'horizontal',
+        loop: true,
+        //slidesPerView: 3,
+        //spaceBetween: 30,
 
+        // If we need pagination
+        pagination: {
+            el: '.hero-swiper-pagination',
+            type: 'fraction',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.hero-swiper-button-next',
+            prevEl: '.hero-swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        on: {
+            slideNextTransitionStart(swiper) {
+                let index_currentSlide = swiper.realIndex,
+                    currentSlide = swiper.slides[index_currentSlide];
+
+                animationSlide(currentSlide);
+            },
+            slidePrevTransitionStart(swiper) {
+                let index_currentSlide = swiper.realIndex,
+                    currentSlide = swiper.slides[index_currentSlide];
+
+                animationSlide(currentSlide);
+            },
+            afterInit(swiper) {
+                let index_currentSlide = swiper.realIndex,
+                    currentSlide = swiper.slides[index_currentSlide];
+                console.log(swiper);
+                animationSlide(currentSlide);
+            }
+        }
+    });
 
     function animationSlide(slideItem) {
-        //if (!slideItem.classList.contains("-runned")) {
+        console.log(slideItem);
         const tl = gsap.timeline({
             id: "time",
-            // delay: .6,
-            onStart: function () {
-                //slideItem.classList.add("-runned");
-            }
         });
-
-        //const image = slideItem.querySelector(".image");
-        //const bg = slideItem.querySelector(".image .bg");
-        //const overlay = slideItem.querySelector(".image .overlay");
         const contentWrapper = document.querySelector(".hero-content");
         const heroLine = document.querySelector(".hero-line");
         const heroTitle = document.querySelector(".hero-content .hero-title");
@@ -352,30 +303,6 @@ export function initSwiperJS() {
                     duration: 2,
                     ease: "power2.inOut"
                 })
-            /* .fromTo(
-                    bg,
-                    {
-                            xPercent: -20,
-                            scale: 1.4
-                    },
-                    {
-                            xPercent: 0,
-                            scale: 1,
-                            duration: 1.5,
-                            ease: "power2.out"
-                    },
-                    "start-=1"
-            )
-            .set(
-                    bg,
-                    {
-                            autoAlpha: 1
-                    },
-                    "-=1.5"
-            )
-            .set(overlay, {
-                    autoAlpha: 0
-            }) */
             .fromTo(
                 [heroTitle, heroContent, heroCTA],
                 {
@@ -396,10 +323,7 @@ export function initSwiperJS() {
             .fromTo(heroLine, { scaleX: 0 }, { scaleX: "100%", duration: 1.5, ease: "power1.inOut", transformOrigin: "right" }, "-=1.2")
 
         return tl;
-        //}
     }
-
-    //animationSlide();
 
     gsap.fromTo(".banner-container", {
         y: 100,
@@ -437,35 +361,5 @@ export function initSwiperJS() {
             stagger: 0.25,
             scrollTrigger: { trigger: ".kollekcio-grid", start: "top 70%", end: "bottom top", markers: false }
         });
-
-
-
-    /* ###############################
-           MOBILE NAV
-      ##################################
-
-    document.getElementById('hamburger-btn').addEventListener('click', function() {
-        document.getElementById('mobile-nav').classList.toggle('active');
-        console.log('***HAMBURGER-CLICKED');
-    });
-
-    const menuBtn = document.getElementById('hamburger-btn');
-    const menu = document.getElementById('mobile-nav');
-
-    // Function to toggle menu
-    function toggleMenu() {
-        console.log('clicked');
-        menu.classList.toggle('active');
-    }
-
-    // Ensuring that the event listener is not added more than once
-    if (menuBtn) {
-        // Remove existing event listeners to avoid duplicates
-        menuBtn.removeEventListener('click', toggleMenu);
-
-        // Add the event listener
-        menuBtn.addEventListener('click', toggleMenu);
-    }
-    */
 }
 

@@ -8,11 +8,11 @@ import axios from 'axios';
 window.axios = axios;
 import $ from "jquery";
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
-import Swiper from 'swiper';
+
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
-import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
-Swiper.use([Navigation, Pagination, Thumbs, EffectFade, HashNavigation, Grid]);
+//import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
+import Swiper from 'swiper/bundle';
 window.Swiper = Swiper;
 window.tippy = tippy;
 import gsap from "gsap";
