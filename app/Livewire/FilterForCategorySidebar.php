@@ -78,7 +78,7 @@ class FilterForCategorySidebar extends Component
         } else {
             $this->collections = Category::all()->groupBy('breadcrumb')->all();
         }
-        dump($this->collections);
+        //dump($this->collections);
         $tmp['LACQUERED DOORS'] = $this->collections['LACQUERED DOORS'];
         $tmp['FRAMED DOORS'] = $this->collections['FRAMED DOORS'];
         $tmp['VENEER PANEL DOORS'] = $this->collections['VENEER PANEL DOORS'];
