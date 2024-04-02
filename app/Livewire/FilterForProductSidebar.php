@@ -144,10 +144,10 @@ class FilterForProductSidebar extends Component
                         })->when($this->options['decor']['hamilton_oak_horizontal'], function (Builder $q) {
                             $q->orWhere('tag', 'hamilton-oak-horizontal');
                         });
-                    })->paginate(perPage: 20);
+                    })->paginate(perPage: 40);
 
         } else {
-            $doors = Door::paginate(perPage: 20)->onEachSide(0);
+            $doors = Door::paginate(perPage: 40)->onEachSide(0);
         }
 
         return view('livewire.filter-for-product-sidebar', compact('doors'));
