@@ -52,18 +52,19 @@
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="room_door" wire:model="options.purpose.room_door"
-                            wire:click="$refresh" />
-                        {{ __('room door') }}
-                    </label>
-                </div>
-                <div>
-                    <label for="options">
                         <input type="checkbox" value="inner_door" wire:model="options.purpose.inner_door"
                             wire:click="$refresh" />
                         {{ __('beltéri ajtó') }}
                     </label>
                 </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="room_door" wire:model="options.purpose.room_door"
+                            wire:click="$refresh" />
+                        {{ __('bejárati ajtó') }}
+                    </label>
+                </div>
+
                 <div>
                     <label for="options">
                         <input type="checkbox" value="technical_doors" wire:model="options.purpose.technical_doors"
@@ -125,7 +126,7 @@
             {{-- title = tag value --}}
             <ul class="products-list grid grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1">
                 @foreach ($items as $item)
-                    <livewire:collection-item :category=$item />
+                    <x-collections.item :category=$item />
                 @endforeach
             </ul>
         @endforeach

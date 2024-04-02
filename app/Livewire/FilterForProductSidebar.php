@@ -95,7 +95,7 @@ class FilterForProductSidebar extends Component
                             })
                             ->when($this->options['purpose']['inner_door'], function (Builder $query) {
                                 $query->orWhereHas('category.AdditionalAttribute', function (Builder $q) {
-                                    $q->whereBathroomDoor(true);
+                                    $q->whereInnerDoor(true);
                                 });
                             })
                             ->when($this->options['purpose']['technical_doors'], function (Builder $query) {
