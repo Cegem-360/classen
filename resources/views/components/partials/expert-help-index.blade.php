@@ -6,7 +6,7 @@
             <p class="max-w-lg text-lg">Szakembereink naprakész segítséget nyújtanak a megfelelő ajtó kiválasztásától a
                 komplett kivitelezésig.</p>
             <a class="mt-2 flex w-full items-center justify-between bg-zold_attetszo px-6 py-2 font-bold text-white"
-                id="szolg-1" href="{{ route('szolgaltatasaink') }}">
+                id="szolg-1" href="#szaktanacsadas">
                 <span>SZAKTANÁCSADÁS</span>
                 <svg class="inline" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
                     width="24" height="24" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@
                 </svg>
             </a>
             <a class="mt-1 flex w-full items-center justify-between bg-zold_attetszo px-6 py-2 font-bold text-white"
-                id="szolg-2" href="{{ route('szolgaltatasaink') }}">
+                id="szolg-2" href="#helyszini-felmeres">
                 <span>HELYSZÍNI FELMÉRÉS</span>
                 <svg class="inline"
                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
@@ -37,7 +37,7 @@
                 </svg>
             </a>
             <a class="mt-1 flex w-full items-center justify-between bg-zold_attetszo px-6 py-2 font-bold text-white"
-                id="szolg-3" href="{{ route('szolgaltatasaink') }}">
+                id="szolg-3" href="#szakszeru-beepites">
                 <span>SZAKSZERŰ BEÉPÍTÉS</span>
                 <svg class="inline"
                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"

@@ -12,7 +12,7 @@
             <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
         </div>
         <!-- Szakértő segítség -->
-        <x-partials.expert-help />
+        <x-partials.expert-help-index />
 
         <!-- gap -->
         <div class="min-h-[90px]"></div>
@@ -27,7 +27,7 @@
                     hogy segítsünk Önnek a legjobb döntés meghozatalában.</p>
             </div>
             <div class="grid grid-cols-1 justify-items-center gap-12">
-                {{-- <img class="w-2/3" src="{{ Vite::asset('resources/img/arcadia98kft.webp') }}" alt="Arcadia98 Kft." loading="lazy" itemprop="contentUrl" target="_blank"> --}}
+
             </div>
             <div class="grid content-center" id="helyszini-felmeres">
                 <h3 class="mb-3 mt-16 text-2xl font-bold uppercase">helyszíni felmérés</h3>
@@ -37,7 +37,7 @@
                     illeszkedjen a helyére, minimalizálva ezzel az esetleges problémákat vagy korrekciókat.</p>
             </div>
             <div class="grid grid-cols-1 justify-items-center gap-12">
-                {{-- <img class="w-2/3" src="{{ Vite::asset('resources/img/arcadia98kft.webp') }}" alt="Arcadia98 Kft." loading="lazy" itemprop="contentUrl" target="_blank"> --}}
+
             </div>
             <div class="grid content-center" id="szakszeru-beepites">
                 <h3 class="mb-3 mt-16 text-2xl font-bold uppercase">szakszerű beépítés</h3>
@@ -48,7 +48,6 @@
                     beépített ajtók tökéletesen teljesítik funkciójukat és hosszú távon is megőrzik szépségüket.</p>
             </div>
             <div class="grid grid-cols-1 justify-items-center gap-12">
-                {{-- <img class="w-2/3" src="{{ Vite::asset('resources/img/arcadia98kft.webp') }}" alt="Arcadia98 Kft." loading="lazy" itemprop="contentUrl" target="_blank"> --}}
             </div>
         </div>
     </div>
