@@ -5,7 +5,19 @@
         <hr class="relative mb-6 mt-4 h-1 w-full border-0 bg-white">
         <p class="mb-6 font-bold">Válasszon lenyűgöző ajtók közül.</p>
         <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
-        <div>
+        <div>Raktári ajtók
+            <fieldset class="mb-3">
+                <legend class="text-lg font-bold">{{ __('Raktári termékek') }}</legend>
+                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <div>
+                    <div>
+                        <label for="options">
+                            <input type="checkbox" value="storage" wire:model="options.storage.storage"
+                                wire:click="$refresh" />
+                            {{ __('Raktári ajtók') }}
+                        </label>
+                    </div>
+            </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Legújabb színeink') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
@@ -133,7 +145,8 @@
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
                 <div>
                     <label for="options">
-                        <input type="checkbox" value="modern" wire:model="options.style.modern" wire:click="$refresh" />
+                        <input type="checkbox" value="modern" wire:model="options.style.modern"
+                            wire:click="$refresh" />
                         {{ __('modern') }}
                     </label>
                 </div>

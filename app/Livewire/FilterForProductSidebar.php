@@ -149,7 +149,9 @@ class FilterForProductSidebar extends Component
                         });
                     })->where(function (Builder $query){
                         $query->when($this->options['storage']['storage'],function (Builder $q){
-                            $q->orWhere('category.name','');
+                            $q->orWhereHas('category',function (Builder $innerQ){
+                                $innerQ->where('name','Raktári ajtók');
+                            });
                         });
                     })
                     ->paginate(perPage: 40);
