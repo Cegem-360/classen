@@ -167,10 +167,10 @@
     <div class="relative mx-12 my-16 w-3/4">
         <h1 class="text-3xl font-bold uppercase">Összes ajtó</h1>
         <hr class="relative mb-3 mt-8 h-1 w-72 border-0 bg-sarga">
-        <a class="absolute right-0 top-0 flex w-fit items-center justify-between gap-6 border-1 border-black px-6 py-3 md:relative"
+        <a class="group absolute right-0 top-0 flex w-fit items-center justify-between gap-6 border-1 border-black px-6 py-3 md:relative"
             href="{{ route('category.index') }}" wire:navigate.hover>
             <h2 class="font-bold text-black">{{ __('Go to collections') }}</h2>
-            <div class="scale-75"><x-doors.partials.arrow-right class="![fill:black]"></x-doors.partials.arrow-right>
+            <div class="scale-75 group-hover:translate-x-2 transition-transform"><x-doors.partials.arrow-right class="![fill:black]"></x-doors.partials.arrow-right>
             </div>
         </a>
         <!-- gap -->
