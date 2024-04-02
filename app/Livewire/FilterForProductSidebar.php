@@ -13,6 +13,9 @@ class FilterForProductSidebar extends Component
     use WithPagination,WithoutUrlPagination;
 
     public $options = [
+        'storage'=>[
+            'storage'=> false
+        ],
         'decor' => [
             'honey_catania' => false,
             'cleveland_oak' => false,
@@ -144,7 +147,12 @@ class FilterForProductSidebar extends Component
                         })->when($this->options['decor']['hamilton_oak_horizontal'], function (Builder $q) {
                             $q->orWhere('tag', 'hamilton-oak-horizontal');
                         });
-                    })->paginate(perPage: 40);
+                    })->where(function (Builder $query){
+                        $query->when($this->options['storage']['storage'],function (Builder $q){
+                            $q->orWhere('category.name','');
+                        });
+                    })
+                    ->paginate(perPage: 40);
 
         } else {
             $doors = Door::paginate(perPage: 40)->onEachSide(0);

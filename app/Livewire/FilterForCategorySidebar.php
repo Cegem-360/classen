@@ -83,7 +83,7 @@ class FilterForCategorySidebar extends Component
             $tmp['INTERIOR ENTRANCE DOORS'] = $this->collections['INTERIOR ENTRANCE DOORS'];
             $tmp['TECHNICAL AND SYSTEMS DOORS'] = $this->collections['TECHNICAL AND SYSTEMS DOORS'];
             $tmp['SLIDING DOORS'] = $this->collections['SLIDING DOORS'];
-            $tmp['STORAGE'] = $this->collections['STORAGE'];
+            $tmp['STORAGE PRODUCTS'] = $this->collections['STORAGE PRODUCTS'];
             $tmp['WOOD-BASED DOOR FRAMES'] = $this->collections['WOOD-BASED DOOR FRAMES'];
             $this->collections = collect($tmp)->all();
         }
