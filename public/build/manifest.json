@@ -43,6 +43,10 @@
     "file": "assets/Arcadia98-arlista-2023-d11b0b80.webp",
     "src": "resources/img/cover-images/Arcadia98-arlista-2023.webp"
   },
+  "resources/img/cover-images/Dnd-kilincskatalogus-2022-2023.webp": {
+    "file": "assets/Dnd-kilincskatalogus-2022-2023-a7f90f21.webp",
+    "src": "resources/img/cover-images/Dnd-kilincskatalogus-2022-2023.webp"
+  },
   "resources/img/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp": {
     "file": "assets/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok-544d31f9.webp",
     "src": "resources/img/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp"
@@ -58,6 +62,14 @@
   "resources/img/cover-images/Maestro_kilincskatalogus_online_2023.1.webp": {
     "file": "assets/Maestro_kilincskatalogus_online_2023.1-66b94850.webp",
     "src": "resources/img/cover-images/Maestro_kilincskatalogus_online_2023.1.webp"
+  },
+  "resources/img/cover-images/SMART-LOCK-kilincskatalogus.webp": {
+    "file": "assets/SMART-LOCK-kilincskatalogus-4046e2e9.webp",
+    "src": "resources/img/cover-images/SMART-LOCK-kilincskatalogus.webp"
+  },
+  "resources/img/cover-images/TUPAI-kilincskatalogus-2022.webp": {
+    "file": "assets/TUPAI-kilincskatalogus-2022-f9cb3104.webp",
+    "src": "resources/img/cover-images/TUPAI-kilincskatalogus-2022.webp"
   },
   "resources/img/icons/1-belteri-ajtok.svg": {
     "file": "assets/1-belteri-ajtok-8d5c596a.svg",
@@ -544,7 +556,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-c5d3d0df.css",
+    "file": "assets/app-51e49e79.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -553,9 +565,9 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-c5d3d0df.css"
+      "assets/app-51e49e79.css"
     ],
-    "file": "assets/app-25154b69.js",
+    "file": "assets/app-97f72132.js",
     "imports": [
       "resources/js/swiperJS.js",
       "resources/js/favorites.js"

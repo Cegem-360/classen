@@ -17,6 +17,21 @@
                     alt="Maestro_kilincskatalogus_online_2023.1.pdf" />
                 <p class="text-wrap mt-3 text-sm">Maestro kilincskatalógus online 2023.1</p>
             </a>
+            <a href="{{ Storage::url('dl/TUPAI-kilincskatalogus-2022.pdf') }}" target="_blank">
+                <img src="{{ Vite::asset('resources/img/cover-images/TUPAI-kilincskatalogus-2022.webp') }}"
+                    alt="cover-images/TUPAI-kilincskatalogus-2022.pdf" />
+                <p class="text-wrap mt-3 text-sm">TUPAI kilincskatalógus 2022</p>
+            </a>
+            <a href="{{ Storage::url('dl/SMART-LOCK-kilincskatalogus.pdf') }}" target="_blank">
+                <img src="{{ Vite::asset('resources/img/cover-images/SMART-LOCK-kilincskatalogus.webp') }}"
+                    alt="SMART-LOCK-kilincskatalogus.pdf" />
+                <p class="text-wrap mt-3 text-sm">SMART LOCK kilincskatalógus</p>
+            </a>
+            <a href="{{ Storage::url('dl/Dnd-kilincskatalogus-2022-2023.pdf') }}" target="_blank">
+                <img src="{{ Vite::asset('resources/img/cover-images/Dnd-kilincskatalogus-2022-2023.webp') }}"
+                    alt="Dnd-kilincskatalogus-2022-2023.pdf" />
+                <p class="text-wrap mt-3 text-sm">Dnd kilincskatalógus 2022-2023</p>
+            </a>
         </div>
     </div>
 
