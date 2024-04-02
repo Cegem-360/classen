@@ -6,9 +6,9 @@
             <p class="mb-6 max-w-lg text-lg">Tervezőink a legújabb lakberendezési trendek szerint alkotják meg az ajtó
                 kollekciókat, hogy azok ízlésesen illeszkedjenek számos enteriőrbe.</p>
             <a href="{{ route('category.index') }}" wire:navigate>
-                <button class="mt-2 flex w-1/2 items-center justify-between bg-white px-6 py-2 font-bold text-smaragd">
+                <button class="group mt-2 flex w-1/2 items-center justify-between bg-white px-6 py-2 font-bold text-smaragd">
                     <span>Kollekciók</span>
-                    <svg class="inline"
+                    <svg class="inline group-hover:translate-x-2 transition-transform"
                         style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
                         width="24" height="24" viewBox="0 0 96 96" version="1.1"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

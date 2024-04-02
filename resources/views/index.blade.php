@@ -13,9 +13,9 @@
             <h3 class="mb-8 max-w-lg text-2xl font-bold">Fa mintázatú beltéri ajtók, a természetesség nevében</h3>
             <p class="mb-8 max-w-lg text-lg">Élvezze a modern ajtók adta lehetőségeket, teremtse meg álmai otthonát megkötések
                 és kompromisszumok nélkül.</p>
-            <a class="flex items-center justify-between gap-6 w-fit px-3 py-1 border-1 border-white" href="{{ route('category.index') }}" wire:navigate.hover>
+            <a class="group flex items-center justify-between gap-6 w-fit px-3 py-1 border-1 border-white" href="{{ route('category.index') }}" wire:navigate.hover>
                 <h3 class="font-bold text-sm text-white">{{ __('Go to wood pattern doors') }}</h3>
-                <div class="scale-75"><x-doors.partials.arrow-right class="![fill:white]"></x-doors.partials.arrow-right></div>
+                <div class="scale-75 group-hover:translate-x-2 transition-transform"><x-doors.partials.arrow-right class="![fill:white]"></x-doors.partials.arrow-right></div>
             </a>
         </div>
     </div>

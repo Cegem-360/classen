@@ -7,9 +7,9 @@
             <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
             <h3 class="hero-text px-6 text-lg font-bold">Klasszikus megjelenés, ezerarcú felhasználás.</h3>
             <button
-                class="hero-cta mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white">
+                class="group hero-cta mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white">
                 <span>TOLÓAJTÓK</span>
-                <svg class="inline" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+                <svg class="inline group-hover:translate-x-2 transition-transform" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
                     width="24" height="24" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/">
                     <rect id="Artboard1" style="fill:none;" x="0" y="0" width="96" height="96" />
