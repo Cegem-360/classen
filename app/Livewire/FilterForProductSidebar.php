@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 use Livewire\WithPagination;
-
+use Livewire\WithoutUrlPagination;
 class FilterForProductSidebar extends Component
 {
-    use WithPagination;
+    use WithPagination,WithoutUrlPagination;
 
     public $options = [
         'decor' => [
