@@ -14,9 +14,15 @@ import { initCustomJS } from './customJS.js';
 //import './../../node_modules/qtip2/dist/jquery.qtip.js';
 document.addEventListener('livewire:init', () => {
     initCustomJS();
+    function setRedNavigation() {
+        $('#quotation').addClass('font-bold text-orange-600');
+    }
 });
 document.addEventListener('livewire:navigated', () => {
     initSwiperJS();
+    function setRedNavigation() {
+        $('#quotation').addClass('font-bold text-orange-600');
+    }
     initFavoritesJS.initFavorites();
     initCustomJS();
 });

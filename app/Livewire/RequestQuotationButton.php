@@ -7,7 +7,7 @@ use App\Models\Quotation;
 use App\Models\QuotationItem;
 use Livewire\Component;
 use Masmerise\Toaster\Toaster;
-
+use Livewire\Attributes\Js;
 class RequestQuotationButton extends Component
 {
     public Door $door;
@@ -17,6 +17,7 @@ class RequestQuotationButton extends Component
         $this->door = $door;
     }
 
+ 
     public function addToQuotation()
     {
         $quotation = session()->get('quotation', Quotation::create([
@@ -28,9 +29,9 @@ class RequestQuotationButton extends Component
         ]);
         session()->put('quotation', $quotation);
         Toaster::success(__('Sikeresen hozzáadva az árajánlathoz!'));
-
+        $this->js("setRedNavigation()");
         //return $this->redirect(route('door.show', ['door' => $this->door]), navigate: true);
-
+       
     }
 
     public function render()

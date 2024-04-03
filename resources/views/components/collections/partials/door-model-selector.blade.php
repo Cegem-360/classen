@@ -12,10 +12,13 @@
            <div class="mb-6 pl-8">
                <h2 class="mb-3 text-4xl font-bold">{{ $door->name }}</h2>
                <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
-               <h3 class="mb-3 text-lg">{{ __('Collection: ') }}<span class="font-bold">{{ $category->name }}</span>
+               <h3 class="mb-3 text-lg">{{ __('Collection: ') }}
+                   <a class="font-bold hover:text-red-500"
+                       href="{{ route('category.show', ['category' => $category->name]) }}" wire:navigate>
+                       {{ $category->name }}
+                   </a>
+
                </h3>
-               <x-collections.partials.price
-                   class="mt-6 block w-fit bg-neutral-200 px-6 py-3 text-lg font-bold">{{ $door->price }}</x-collections.partials.price>
 
                <livewire:request-quotation-button :door='$door' />
            </div>
