@@ -38,6 +38,7 @@ class AdditionalAttributeSeeder extends Seeder
                 'page' => $value['category_page'],
                 'img_url' => $value['kep']['url'],
                 'text' => $value['szoveg'],
+                'link_title' => $value['link_title'],
             ]);
         }
     }

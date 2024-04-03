@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('page')->nullable(false);
             $table->string('img_url')->nullable(false);
             $table->string('text')->nullable(false);
+            $table->string('link_title')->nullable(false);
             $table->timestamps();
         });
     }

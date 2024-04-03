@@ -9,5 +9,5 @@ class WebsiteOptions extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['name', 'img_url', 'text','title','page'];
+    protected $fillable = ['name', 'img_url', 'text','title','page','link_title'];
 }

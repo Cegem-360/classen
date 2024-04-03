@@ -26,7 +26,7 @@
                             </h3>
                             <a class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white"
                                 href="{{ route('category.show', ['category' => $item->page]) }}" wire:navigate>
-                                <span>{{ $item->page }}</span>
+                                <span>{{ $item->link_title }}</span>
                                 <x-svg.hero-btn-arrow />
                             </a>
                         </div>
