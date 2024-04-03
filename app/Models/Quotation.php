@@ -10,6 +10,7 @@ class Quotation extends Model
     use HasFactory;
 
     protected $fillable = [
+        'id',
         'session_id',
         'first_name',
         'last_name',

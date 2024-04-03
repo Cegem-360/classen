@@ -29,8 +29,8 @@ class RequestQuotationSended extends Mailable
     {
         //TODO: Change this to the email of the company
         return new Envelope(
-            from: new Address('cegem360@gmail.com', 'Cegem360'),
-            subject: 'Request Quotation Sended',
+            from: new Address('weboldal@arcadaia98.hu', 'Arcadia98'),
+            subject: 'Ajánlatkérés',
         );
     }
 
@@ -56,6 +56,6 @@ class RequestQuotationSended extends Mailable
 
     public function build()
     {
-        return $this->from('arcadia98@cegem360.hu')->view('mail.quotation.sended');
+        return $this->from('weboldal@arcadaia98.hu')->view('mail.quotation.sended');
     }
 }

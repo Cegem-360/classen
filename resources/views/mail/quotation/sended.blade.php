@@ -195,7 +195,7 @@
                         <tr>
                             <td style="font-family: 'Montserrat', sans-serif; font-size: 28px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 32px;"
                                 align="center">
-                                Árajánlat száma: #12345
+                                Árajánlat száma: {{ $quotation->id }}
                             </td>
                         </tr>
 
@@ -219,8 +219,11 @@
                         <tr>
                             <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
                                 align="center">
-                                <h2>Tisztelt [Ügyfél neve]!</h2>
-                                <p>Köszönjük, hogy a cégünk weboldalán keresztül ajánlatkérést nyújtott be beltéri ajtóinkra vonatkozóan. Nagyra értékeljük érdeklődését termékeink iránt, és örömmel állunk rendelkezésére, hogy segítsünk megtalálni az Ön otthonához leginkább illő megoldásokat.</p>
+                                <h2>Tisztelt {{ $quotation->first_name }} {{ $quotation->last_name }}!</h2>
+                                <p>Köszönjük, hogy a cégünk weboldalán keresztül ajánlatkérést nyújtott be beltéri
+                                    ajtóinkra vonatkozóan. Nagyra értékeljük érdeklődését termékeink iránt, és örömmel
+                                    állunk rendelkezésére, hogy segítsünk megtalálni az Ön otthonához leginkább illő
+                                    megoldásokat.</p>
                             </td>
                         </tr>
 
@@ -253,135 +256,64 @@
 
                         <tr>
                             <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
-                            </tr>
+                        </tr>
 
                         <tr>
                             <td>
-                                <table class="full-width"
-                                    style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="287" align="left" border="0" cellpadding="0" cellspacing="0">
+                                @foreach ($quotationItems as $quotationItem)
+                                    <table class="full-width"
+                                        style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
+                                        width="287" align="left" border="0" cellpadding="0"
+                                        cellspacing="0">
 
-                                    <tr>
-                                        <td align="center">
-                                            <img class="img-full" src="http://admin.classen.cegem360.hu/wp-content/uploads/2023/10/diva_przesuwne_jesion-grafitowy.jpeg" alt="img" width="140"
-                                                height="320">
-                                        </td>
-                                    </tr>
+                                        <tr>
+                                            <td align="center">
+                                                <img class="img-full"
+                                                    src="http://admin.classen.cegem360.hu/wp-content/uploads/2023/10/diva_przesuwne_jesion-grafitowy.jpeg"
+                                                    alt="img" width="140" height="320">
+                                            </td>
+                                        </tr>
 
-                                    <tr>
-                                        <td style="font-size: 20px; line-height: 20px;" height="20">&nbsp;</td>
-                                    </tr>
+                                        <tr>
+                                            <td style="font-size: 20px; line-height: 20px;" height="20">&nbsp;</td>
+                                        </tr>
 
-                                    <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
-                                            align="center">
-                                            AERO
-                                        </td>
-                                    </tr>
+                                        <tr>
+                                            <td style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
+                                                align="center">
+                                                {{ $quotationItem->door->category->name }}
+                                            </td>
+                                        </tr>
 
-                                    <tr>
-                                        <td style="font-size: 15px; line-height: 15px;" height="15">&nbsp;</td>
-                                    </tr>
+                                        <tr>
+                                            <td style="font-size: 15px; line-height: 15px;" height="15">&nbsp;</td>
+                                        </tr>
 
-                                    <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
-                                            align="center">
-                                            Model 1
-                                        </td>
-                                    </tr>
+                                        <tr>
+                                            <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
+                                                align="center">
+                                                {{ $quotationItem->door->name }}
+                                            </td>
+                                        </tr>
 
-                                    <tr>
-                                        <td style="font-size: 1px; line-height: 20px;" height="20">&nbsp;</td>
-                                    </tr>
+                                        <tr>
+                                            <td style="font-size: 1px; line-height: 20px;" height="20">&nbsp;</td>
+                                        </tr>
 
-                                    <!-- Button -->
-                                    <tr>
-                                        <td align="center">
-                                            <table style="border-radius: 2px;" align="center" border="0" cellpadding="0"
-                                                cellspacing="0" bgcolor="#000000">
-                                                <tr>
-                                                    <td style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 600; color: #ffffff; line-height: 24px; padding-left: 53px; padding-right: 53px;"
-                                                        align="center" height="44">
-                                                        <a href="#" style="text-decoration: none; color: #ffffff;">
-                                                            Termékleírás
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <!-- End Button -->
+                                    </table>
 
-                                </table>
-
-                                <!-- SPACE -->
-                                <table class="full-width"
-                                    style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="1" align="left" border="0" cellpadding="0" cellspacing="0">
-                                    <tr>
-                                        <td style="font-size: 40px; line-height: 40px;" width="1"
-                                            height="40"></td>
-                                    </tr>
-                                </table>
-                                <!-- END SPACE -->
-
-                                <table class="full-width"
-                                    style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
-                                    width="287" align="left" border="0" cellpadding="0" cellspacing="0">
-
-                                    <tr>
-                                        <td align="center">
-                                            <img class="img-full" src="http://admin.classen.cegem360.hu/wp-content/uploads/2023/10/diva_przesuwne_jesion-sniezny.jpeg" alt="img" width="140"
-                                                height="320">
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 20px; line-height: 20px;" height="20">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
-                                            align="center">
-                                            AERO
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 15px; line-height: 15px;" height="15">&nbsp;</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
-                                            align="center">
-                                            Model 2
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td style="font-size: 1px; line-height: 20px;" height="20">&nbsp;</td>
-                                    </tr>
-
-                                    <!-- Button -->
-                                    <tr>
-                                        <td align="center">
-                                            <table style="border-radius: 2px;" align="center" border="0" cellpadding="0"
-                                                cellspacing="0" bgcolor="#000000">
-                                                <tr>
-                                                    <td style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 600; color: #ffffff; line-height: 24px; padding-left: 53px; padding-right: 53px;"
-                                                        align="center" height="44">
-                                                        <a href="#" style="text-decoration: none; color: #ffffff;">
-                                                            Termékleírás
-                                                        </a>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                    <!-- End Button -->
-
-                                </table>
-
+                                    <!-- SPACE -->
+                                    <table class="full-width"
+                                        style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;"
+                                        width="1" align="left" border="0" cellpadding="0"
+                                        cellspacing="0">
+                                        <tr>
+                                            <td style="font-size: 40px; line-height: 40px;" width="1"
+                                                height="40"></td>
+                                        </tr>
+                                    </table>
+                                    <!-- END SPACE -->
+                                @endforeach
                             </td>
                         </tr>
 
@@ -425,13 +357,22 @@
                         <tr>
                             <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
                                 align="left">
-                                <p>Kérjük, tekintse meg a mellékelt részletes termékleírásokat és specifikációkat, amelyek segítenek Önnek jobban megérteni termékeink kiváló minőségét és designját.</p>
+                                <p>Kérjük, tekintse meg a mellékelt részletes termékleírásokat és specifikációkat,
+                                    amelyek segítenek Önnek jobban megérteni termékeink kiváló minőségét és designját.
+                                </p>
 
-                                <p>A következő lépésekben szívesen felvesszük Önnel a kapcsolatot telefonon vagy emailben, hogy részletesen megvitassuk igényeit, válaszoljunk kérdéseire, és segítsünk a legmegfelelőbb termékek kiválasztásában. Kérjük, adja meg, melyik időpontokban érné el Önt legkönnyebben, vagy hívjon minket közvetlenül a [Telefonszám] telefonszámon.</p>
+                                <p>A következő lépésekben szívesen felvesszük Önnel a kapcsolatot telefonon vagy
+                                    emailben, hogy részletesen megvitassuk igényeit, válaszoljunk kérdéseire, és
+                                    segítsünk a legmegfelelőbb termékek kiválasztásában. Kérjük, adja meg, melyik
+                                    időpontokban érné el Önt legkönnyebben, vagy hívjon minket közvetlenül a
+                                    [Telefonszám] telefonszámon.</p>
 
-                                <p>Az Arcadia'98 Kft. elkötelezett amellett, hogy minőségi termékeket és kiváló ügyfélkiszolgálást nyújtson. Biztosak vagyunk benne, hogy ajtóink hozzájárulnak otthona esztétikájának és funkcionalitásának növeléséhez.</p>
+                                <p>Az Arcadia'98 Kft. elkötelezett amellett, hogy minőségi termékeket és kiváló
+                                    ügyfélkiszolgálást nyújtson. Biztosak vagyunk benne, hogy ajtóink hozzájárulnak
+                                    otthona esztétikájának és funkcionalitásának növeléséhez.</p>
 
-                                <p>Köszönjük, hogy minket választott. Várjuk válaszát, és reméljük, hogy hamarosan üdvözölhetjük Önt elégedett ügyfeleink között.</p>
+                                <p>Köszönjük, hogy minket választott. Várjuk válaszát, és reméljük, hogy hamarosan
+                                    üdvözölhetjük Önt elégedett ügyfeleink között.</p>
 
                                 <p>Üdvözlettel,</p>
 
@@ -447,26 +388,6 @@
                         <tr>
                             <td style="font-size: 1px; line-height: 40px;" height="40">&nbsp;</td>
                         </tr>
-
-                        <!-- Button -->
-                        <!--
-                        <tr>
-                            <td align="center">
-                                <table style="border-radius: 2px;" align="center" border="0" cellpadding="0"
-                                    cellspacing="0" bgcolor="#000000">
-                                    <tr>
-                                        <td style="font-family: 'Open Sans', sans-serif; font-size: 14px; font-weight: 600; color: #ffffff; line-height: 24px; padding-left: 53px; padding-right: 53px;"
-                                            align="center" height="44">
-                                            <a href="#" style="text-decoration: none; color: #ffffff;">
-                                                LOREM IPSUM
-                                            </a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                        -->
-                        <!-- End Button -->
 
                         <tr>
                             <td style="font-size: 1px; line-height: 50px;" height="50">&nbsp;</td>
@@ -504,8 +425,8 @@
                                                 cellspacing="0">
                                                 <tr>
                                                     <td align="left">
-                                                        <img src="http://arcadia98.cegem360.hu/build/assets/arcadia98-logo-2fa7f05a.svg" alt="icon"
-                                                            width="96" height="43">
+                                                        <img src="http://arcadia98.cegem360.hu/build/assets/arcadia98-logo-2fa7f05a.svg"
+                                                            alt="icon" width="96" height="43">
                                                     </td>
                                                 </tr>
                                             </table>
@@ -643,7 +564,7 @@
                                     <tr>
                                         <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
                                             align="left">
-                                            info@arcadia98.hu
+                                            weboldal@arcadia98.hu
                                         </td>
                                     </tr>
 
