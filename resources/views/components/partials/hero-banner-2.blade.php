@@ -15,25 +15,25 @@
 
         <div class="swiper-wrapper">
 
-            @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->where('key', 'kep')->get() as $item)
-                <div id="slide-{{ $loop->index }}" class="swiper-slide !grid grid-cols-[1fr_3fr] sm:grid-cols-1">
+            @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->get() as $item)
+                <div class="swiper-slide !grid grid-cols-[1fr_3fr] sm:grid-cols-1" id="slide-{{ $loop->index }}">
                     <!-- Hero Text -->
                     <div class="hero-wrapper py-24 sm:py-6">
                         <div class="hero-content">
-                            <h2 class="hero-title mb-4 px-6 text-5xl font-bold">Stílusos tolóajtók</h2>
+                            <h2 class="hero-title mb-4 px-6 text-5xl font-bold">{{ $item->title }}</h2>
                             <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
-                            <h3 class="hero-text px-6 text-lg font-bold">Klasszikus megjelenés, ezerarcú felhasználás.
+                            <h3 class="hero-text px-6 text-lg font-bold">{!! $item->text !!}
                             </h3>
-                            <button
-                                class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white">
-                                <span>TOLÓAJTÓK</span>
+                            <a class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white"
+                                href="{{ route('category.show', ['category' => $item->page]) }}" wire:navigate>
+                                <span>{{ $item->page }}</span>
                                 <x-svg.hero-btn-arrow />
-                            </button>
+                            </a>
                         </div>
                     </div>
                     <!-- Hero Image -->
                     <div class="hero-image h-[80vh] bg-cover bg-center sm:h-[100vh]"
-                        style="background-position: 40% 50%; background-image: url('{{ $item->value }}');"></div>
+                        style="background-position: 40% 50%; background-image: url('{{ $item->img_url }}');"></div>
                 </div>
             @endforeach
 

@@ -2,10 +2,11 @@
 
 namespace App\Livewire;
 
-use App\Models\QuotationItem;
 use Livewire\Component;
-use Masmerise\Toaster\Toaster;
 use Livewire\Attributes\On;
+use App\Models\QuotationItem;
+use Masmerise\Toaster\Toaster;
+
 class RemoveQuotationItem extends Component
 {
     public QuotationItem $quotationItem;
@@ -15,6 +16,7 @@ class RemoveQuotationItem extends Component
         return view('livewire.remove-quotation-item');
     }
 
+    #[On('quotationItemDelete')]
     public function quotationItemDelete()
     {
         $this->quotationItem->delete();

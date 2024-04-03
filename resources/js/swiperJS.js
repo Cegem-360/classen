@@ -241,6 +241,8 @@ export function initSwiperJS() {
     const swiper = new Swiper('.hero-swiper', {
         // configure Swiper to use modules
         // Optional parameters
+        allowTouchMove: false,
+        touchStartPreventDefault: false,
         direction: 'horizontal',
         loop: true,
         //slidesPerView: 3,
@@ -329,8 +331,8 @@ export function initSwiperJS() {
             )
             .fromTo(heroLine, { scaleX: 0 }, { scaleX: "100%", duration: 1.5, ease: "power1.inOut", transformOrigin: "right" }, "-=1.2")
 
-            //console.log("current_index", current_index);
-            //console.log(tl);
+        //console.log("current_index", current_index);
+        //console.log(tl);
         return tl;
     }
 

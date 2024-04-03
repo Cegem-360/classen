@@ -34,13 +34,10 @@ class AdditionalAttributeSeeder extends Seeder
         foreach ($result['fooldal_hero_banner'] as $value) {
             WebsiteOptions::updateOrCreate([
                 'name' => 'fooldal_hero_banner_kepek',
-                'key' => 'kep',
-                'value' => $value['kep']['url'],
-            ]);
-            WebsiteOptions::updateOrCreate([
-                'name' => 'fooldal_hero_banner_kepek',
-                'key' => 'szoveg',
-                'value' => $value['szoveg'],
+                'title' => $value['title'],
+                'page' => $value['category_page'],
+                'img_url' => $value['kep']['url'],
+                'text' => $value['szoveg'],
             ]);
         }
     }

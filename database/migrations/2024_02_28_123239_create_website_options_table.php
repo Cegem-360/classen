@@ -14,8 +14,10 @@ return new class extends Migration
         Schema::create('website_options', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable(false);
-            $table->string('key')->nullable(false);
-            $table->string('value')->nullable();
+            $table->string('title')->nullable(false);
+            $table->string('page')->nullable(false);
+            $table->string('img_url')->nullable(false);
+            $table->string('text')->nullable(false);
             $table->timestamps();
         });
     }
