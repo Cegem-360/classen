@@ -257,28 +257,20 @@ export function initSwiperJS() {
         },
         on: {
             slideNextTransitionStart(swiper) {
-                let index_currentSlide = swiper.realIndex,
-                    currentSlide = swiper.slides[index_currentSlide];
-
-                animationSlide(currentSlide);
+                animationSlide(swiper);
             },
             slidePrevTransitionStart(swiper) {
-                let index_currentSlide = swiper.realIndex,
-                    currentSlide = swiper.slides[index_currentSlide];
-
-                animationSlide(currentSlide);
+                animationSlide(swiper);
             },
             afterInit(swiper) {
-                let index_currentSlide = swiper.realIndex,
-                    currentSlide = swiper.slides[index_currentSlide];
-                console.log(swiper);
-                animationSlide(currentSlide);
+                animationSlide(swiper);
             }
         }
+
     });
 
-    function animationSlide(slideItem) {
-        console.log(slideItem);
+    function animationSlide(swiper) {
+        let current_index = swiper.realIndex;
         const tl = gsap.timeline({
             id: "time",
         });
@@ -290,12 +282,10 @@ export function initSwiperJS() {
 
         tl.set([heroTitle, heroContent, heroCTA], {
             autoAlpha: 0,
-            //y: 0
         })
             .fromTo(contentWrapper, {
                 x: 10,
                 autoAlpha: 0
-                //xPercent: "-=20"
             },
                 {
                     x: 0,
@@ -308,12 +298,10 @@ export function initSwiperJS() {
                 {
                     autoAlpha: 0,
                     y: 100
-                    //y: "+=10"
                 },
                 {
                     autoAlpha: 1,
                     y: 0,
-                    //y: "-=40",
                     duration: 1.2,
                     ease: "power1.out",
                     stagger: 0.25
