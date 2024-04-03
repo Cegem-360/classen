@@ -16,7 +16,7 @@
         <div class="swiper-wrapper">
 
             @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->where('key', 'kep')->get() as $item)
-                <div class="swiper-slide !grid grid-cols-[1fr_3fr] sm:grid-cols-1">
+                <div id="slide-{{ $loop->index }}" class="swiper-slide !grid grid-cols-[1fr_3fr] sm:grid-cols-1">
                     <!-- Hero Text -->
                     <div class="hero-wrapper py-24 sm:py-6">
                         <div class="hero-content">

@@ -231,6 +231,13 @@ export function initSwiperJS() {
         theme: 'arcadia',
     });
 
+
+
+
+    const tl = gsap.timeline({
+        id: "time",
+    });
+
     const swiper = new Swiper('.hero-swiper', {
         // configure Swiper to use modules
         // Optional parameters
@@ -257,28 +264,40 @@ export function initSwiperJS() {
         },
         on: {
             slideNextTransitionStart(swiper) {
+                console.log("slideNextTransitionStart");
+                //tl.clear();
+                //tl.restart();
                 animationSlide(swiper);
             },
             slidePrevTransitionStart(swiper) {
+                console.log("slidePrevTransitionStart");
+                //tl.clear();
+                //tl.restart();
                 animationSlide(swiper);
             },
             afterInit(swiper) {
+                console.log("afterInit");
                 animationSlide(swiper);
             }
         }
 
     });
 
+    swiper.on('slideChange', function () {
+        //console.log("slideChange");
+        //animationSlide(swiper);
+    });
+
     function animationSlide(swiper) {
         let current_index = swiper.realIndex;
-        const tl = gsap.timeline({
-            id: "time",
-        });
-        const contentWrapper = document.querySelector(".hero-content");
-        const heroLine = document.querySelector(".hero-line");
-        const heroTitle = document.querySelector(".hero-content .hero-title");
-        const heroContent = document.querySelector(".hero-content .hero-text");
-        const heroCTA = document.querySelector(".hero-content .hero-cta");
+        const contentWrapper = document.querySelector(`#slide-${current_index} .hero-content`);
+        const heroLine = document.querySelector(`#slide-${current_index} .hero-line`);
+        const heroTitle = document.querySelector(`#slide-${current_index} .hero-content .hero-title`);
+        const heroContent = document.querySelector(`#slide-${current_index} .hero-content .hero-text`);
+        const heroCTA = document.querySelector(`#slide-${current_index} .hero-content .hero-cta`);
+
+        // Clear the timeline before starting a new animation
+        tl.clear();
 
         tl.set([heroTitle, heroContent, heroCTA], {
             autoAlpha: 0,
@@ -310,6 +329,8 @@ export function initSwiperJS() {
             )
             .fromTo(heroLine, { scaleX: 0 }, { scaleX: "100%", duration: 1.5, ease: "power1.inOut", transformOrigin: "right" }, "-=1.2")
 
+            //console.log("current_index", current_index);
+            //console.log(tl);
         return tl;
     }
 
