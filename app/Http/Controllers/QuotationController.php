@@ -9,7 +9,7 @@ use App\Models\QuotationItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Validator;
-
+use Masmerise\Toaster\Toaster;
 class QuotationController extends Controller
 {
     public function index()
@@ -82,7 +82,6 @@ class QuotationController extends Controller
         ]);
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
         Mail::to($request->email)->send(new RequestQuotationSended($quotation, $quotationItems));
-
-        return redirect()->route('quotation.success');
+        return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
 }
