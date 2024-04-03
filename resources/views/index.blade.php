@@ -1,6 +1,6 @@
 <x-layouts.app>
     <!-- Hero banner -->
-    <x-partials.hero-banner />
+    <x-partials.hero-banner-2 />
 
     <!-- Ajto tipusok -->
     <x-partials.door-categories />
