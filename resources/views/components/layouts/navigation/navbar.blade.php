@@ -42,7 +42,7 @@
                         wire:navigate.hover>{{ __('Szolgáltatásaink') }}</a>
                     <a class="flex h-full items-center px-4" href="{{ route('downloads') }}"
                         wire:navigate.hover>Letöltések</a>
-                    <a class="@if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif flex h-full items-center px-4"
+                    <a class="@if (session()->get('quotation') != null) @if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif @endif flex h-full items-center px-4"
                         id="quotation" href="{{ route('quotation.index') }}" wire:navigate.hover>Árajánlat</a>
                 </div>
 
