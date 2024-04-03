@@ -5,7 +5,7 @@
         <hr class="relative mb-6 mt-4 h-1 w-full border-0 bg-white">
         <p class="mb-6 font-bold">Válasszon lenyűgöző ajtók közül.</p>
         <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
-        <div>Raktári ajtók
+        <div>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Raktári termékek') }}</legend>
                 <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
@@ -183,7 +183,8 @@
         <a class="group absolute right-0 top-0 flex w-fit items-center justify-between gap-6 border-1 border-black px-6 py-3 md:relative"
             href="{{ route('category.index') }}" wire:navigate.hover>
             <h2 class="font-bold text-black">{{ __('Go to collections') }}</h2>
-            <div class="scale-75 group-hover:translate-x-2 transition-transform"><x-doors.partials.arrow-right class="![fill:black]"></x-doors.partials.arrow-right>
+            <div class="scale-75 transition-transform group-hover:translate-x-2"><x-doors.partials.arrow-right
+                    class="![fill:black]"></x-doors.partials.arrow-right>
             </div>
         </a>
         <!-- gap -->
