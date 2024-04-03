@@ -1,35 +1,40 @@
 @use('App\Models\WebsiteOptions')
 <div class="mx-auto flex h-1/2 flex-wrap items-center bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
 
-    <div class="swiper hero-swiper relative h-[80vh] sm:h-fit w-full">
+    <div class="swiper hero-swiper relative h-[80vh] w-full sm:h-fit">
 
         <div class="hero-nav absolute bottom-16 z-10">
             <div class="mx-auto flex w-fit items-center justify-around gap-16 px-6 py-2 text-white">
-                <div class="hero-swiper-button-prev cursor-pointer rounded-full bg-white p-4"><x-svg.hero-nav-prev /></div>
+                <div class="hero-swiper-button-prev cursor-pointer rounded-full bg-white p-4"><x-svg.hero-nav-prev />
+                </div>
                 <div class="swiper-pagination hero-swiper-pagination"></div>
-                <div class="hero-swiper-button-next cursor-pointer rounded-full bg-white p-4"><x-svg.hero-nav-next /></div>
+                <div class="hero-swiper-button-next cursor-pointer rounded-full bg-white p-4"><x-svg.hero-nav-next />
+                </div>
             </div>
         </div>
 
         <div class="swiper-wrapper">
 
             @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->where('key', 'kep')->get() as $item)
-            <div class="swiper-slide !grid grid-cols-[1fr_3fr] sm:grid-cols-1">
-                <!-- Hero Text -->
-                <div class="hero-wrapper py-24 sm:py-6">
-                    <div class="hero-content">
-                        <h2 class="hero-title mb-4 px-6 text-5xl font-bold">Stílusos tolóajtók</h2>
-                        <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
-                        <h3 class="hero-text px-6 text-lg font-bold">Klasszikus megjelenés, ezerarcú felhasználás.</h3>
-                        <button class="group hero-cta mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white">
-                            <span>TOLÓAJTÓK</span>
-                            <x-svg.hero-btn-arrow />
-                        </button>
+                <div class="swiper-slide !grid grid-cols-[1fr_3fr] sm:grid-cols-1">
+                    <!-- Hero Text -->
+                    <div class="hero-wrapper py-24 sm:py-6">
+                        <div class="hero-content">
+                            <h2 class="hero-title mb-4 px-6 text-5xl font-bold">Stílusos tolóajtók</h2>
+                            <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
+                            <h3 class="hero-text px-6 text-lg font-bold">Klasszikus megjelenés, ezerarcú felhasználás.
+                            </h3>
+                            <button
+                                class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white">
+                                <span>TOLÓAJTÓK</span>
+                                <x-svg.hero-btn-arrow />
+                            </button>
+                        </div>
                     </div>
+                    <!-- Hero Image -->
+                    <div class="hero-image h-[80vh] bg-cover bg-center sm:h-[100vh]"
+                        style="background-position: 40% 50%; background-image: url('{{ $item->value }}');"></div>
                 </div>
-                <!-- Hero Image -->
-                <div class="hero-image h-[80vh] sm:h-[100vh] bg-cover bg-center" style="background-position: 40% 50%; background-image: url('{{ $item->value }}');"></div>
-            </div>
             @endforeach
 
         </div>

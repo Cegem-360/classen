@@ -78,7 +78,7 @@
                                             </a>
                                             <h4 class="mt-3">
                                                 {{ __($item->name) }}
-                                                @if (Request::path() == 'kollekciok/Rakt%C3%A1r%20kollekci%C3%B3')
+                                                @if (Request::path() == 'kollekciok/Rakt%C3%A1ri%20ajt%C3%B3k')
                                                     <span>:
                                                         {{ Number::format(intval((string) $item->price), locale: 'hu') }}
                                                         Ft
