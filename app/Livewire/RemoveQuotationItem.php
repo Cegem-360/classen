@@ -21,7 +21,7 @@ class RemoveQuotationItem extends Component
     {
         $this->quotationItem->delete();
         Toaster::success(__('Sikeres eltávolítás!'));
-        $this->redirect(route('quotation.index'), true);
+        $this->redirect(route('quotation.index'));
     }
 
     public function mount(QuotationItem $quotationItem)
