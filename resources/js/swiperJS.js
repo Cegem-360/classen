@@ -248,7 +248,7 @@ export function initSwiperJS() {
         //slidesPerView: 3,
         //spaceBetween: 30,
         autoplay: {
-            delay: 6000,
+            delay: 4000,
         },
         // If we need pagination
         pagination: {
