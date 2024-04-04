@@ -53,6 +53,9 @@
         document.addEventListener('livewire:navigated', () => {
             var swiper = new Swiper('.prd-swiper', {
                 slidesPerView: 1,
+                autoplay: {
+                    delay: 2500,
+                }
                 spaceBetween: 30,
                 allowTouchMove: false,
                 touchStartPreventDefault: false,
