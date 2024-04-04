@@ -247,7 +247,9 @@ export function initSwiperJS() {
         loop: true,
         //slidesPerView: 3,
         //spaceBetween: 30,
-
+        autoplay: {
+            delay: 6000,
+        },
         // If we need pagination
         pagination: {
             el: '.hero-swiper-pagination',
@@ -300,7 +302,7 @@ export function initSwiperJS() {
 
         // Clear the timeline before starting a new animation
         tl.clear();
-
+        tl.timeScale(1.75);
         tl.set([heroTitle, heroContent, heroCTA], {
             autoAlpha: 0,
         })
