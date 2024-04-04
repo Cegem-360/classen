@@ -55,7 +55,7 @@
                 slidesPerView: 1,
                 autoplay: {
                     delay: 2500,
-                }
+                },
                 spaceBetween: 30,
                 allowTouchMove: false,
                 touchStartPreventDefault: false,
