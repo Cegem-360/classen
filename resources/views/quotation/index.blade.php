@@ -80,7 +80,8 @@
         -->
         <h2>
             <div class="divide-y h-10 max-w-xl py-12 text-xl md:max-w-4xl">
-                <b>Árajánlat kéréséhez, kérjük vegye fel a kapcolatot kollégáiknál.</b>
+                <b>Kérjük, hogy az árajánlathoz kapcsolatos kérseikhez telefonon vagy emailen kereszül jellezék
+                    kollégáinnak</b>
             </div>
         </h2>
     </div>
