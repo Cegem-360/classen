@@ -234,6 +234,10 @@ export function initSwiperJS() {
 
 
 
+    /* ###############################
+            HERO-SWIPER
+       ##################################  */
+
     const tl = gsap.timeline({
         id: "time",
     });
