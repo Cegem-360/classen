@@ -64,6 +64,7 @@
                 <!-- More products... -->
             </div>
         </div>
+        <!--
         <div class="divide-y max-w-xl py-12 md:max-w-4xl">
             <form action="{{ route('quotation.store') }}" method="post">
                 @csrf
@@ -76,6 +77,12 @@
                 </div>
             </form>
         </div>
+        -->
+        <h2>
+            <div class="divide-y h-10 max-w-xl py-12 text-xl md:max-w-4xl">
+                <b>Árajánlat kéréséhez, kérjük vegye fel a kapcolatot kollégáiknál.</b>
+            </div>
+        </h2>
     </div>
 
     <x-footer.layout></x-footer.layout>

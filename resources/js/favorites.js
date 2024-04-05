@@ -31,7 +31,6 @@ const initFavoritesJS = {
 
     toggleFavoriteItem: function (id) {
         let favorites = this.getFavorites() || [];
-
         const index = favorites.indexOf(id);
         var heart = document.getElementById("heart-" + id);
         if (index === -1) {
@@ -48,7 +47,8 @@ const initFavoritesJS = {
                 heart.classList.add('fill-white');
             }
         }
-
+        let favorite_element = document.getElementById('favorites_numbers');
+        favorite_element.innerHTML = favorites.length;
         this.setFavorites(favorites);
     },
 

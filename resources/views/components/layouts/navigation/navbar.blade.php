@@ -14,7 +14,7 @@
                 <div class="flex">
                     <div class="basis-2/5">
                         <h1 class="m-3 ml-10">
-                            <a class="" href="{{ route('index') }}" title="Classen" wire:navigate.hover>
+                            <a class="" href="{{ route('index') }}" title="Classen" wire:navigate>
                                 <img class="min-w-24 w-24" src="{{ Vite::asset('resources/img/arcadia98-logo.svg') }}"
                                     alt="Arcadia'98">
                             </a>
@@ -23,13 +23,13 @@
                     <div class="basis-3/5 sm:hidden">
                         <div class="flex h-full justify-center border-r-[1px] border-[#000] uppercase">
                             <a class="flex h-full items-center px-4" href="{{ route('door.index') }}"
-                                wire:navigate.hover>{{ __('doors') }}</a>
+                                wire:navigate>{{ __('doors') }}</a>
                             <a class="flex h-full items-center px-4" href="{{ route('category.index') }}"
-                                wire:navigate.hover>{{ __('collections') }}</a>
+                                wire:navigate>{{ __('collections') }}</a>
                             <a class="flex h-full items-center px-4" href="{{ route('kilincsek') }}"
-                                wire:navigate.hover>{{ __('Kilincsek') }}</a>
+                                wire:navigate>{{ __('Kilincsek') }}</a>
                             <a class="flex h-full items-center px-4" href="{{ route('rolunk') }}"
-                                wire:navigate.hover>{{ __('About us') }}</a>
+                                wire:navigate>{{ __('About us') }}</a>
                         </div>
                     </div>
                 </div>
@@ -37,20 +37,20 @@
             <div class="flex basis-2/3 items-center justify-end">
                 <div class="flex basis-1/2 md:hidden sm:hidden">
                     <a class="flex h-full items-center px-4" href="{{ route('kapcsolat') }}"
-                        wire:navigate.hover>{{ __('Kapcsolat') }}</a>
+                        wire:navigate>{{ __('Kapcsolat') }}</a>
                     <a class="flex h-full items-center px-4" href="{{ route('szolgaltatasaink') }}"
-                        wire:navigate.hover>{{ __('Szolgáltatásaink') }}</a>
+                        wire:navigate>{{ __('Szolgáltatásaink') }}</a>
                     <a class="flex h-full items-center px-4" href="{{ route('downloads') }}"
-                        wire:navigate.hover>Letöltések</a>
+                        wire:navigate>Letöltések</a>
                     <a class="@if (session()->get('quotation') != null) @if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif @endif flex h-full items-center px-4"
-                        id="quotation" href="{{ route('quotation.index') }}" wire:navigate.hover>Árajánlat</a>
+                        id="quotation" href="{{ route('quotation.index') }}" wire:navigate>Árajánlat</a>
                 </div>
 
                 <div class="relative flex h-full basis-1/2 items-center justify-between">
                     <span class="md:hidden"><livewire:search-box /></span>
                     <a class="flex h-full w-16 items-center justify-center border-x-[1px] border-[#000]"
                         href="{{ route('favorites.index') }}" wire:navigate>
-                        <span class="absolute mt-12">
+                        <span class="absolute mt-12" id="favorites_numbers">
                             {{ $favoriteProducts->count() }}
                         </span>
                         <x-svg.heart />
@@ -70,26 +70,26 @@
                                 </li>
                                 <li>
                                     <a class="flex hidden h-full items-center px-4 sm:list-item"
-                                        href="{{ route('door.index') }}" wire:navigate.hover>
+                                        href="{{ route('door.index') }}" wire:navigate>
                                         {{ __('doors') }}
                                     </a>
                                 </li>
                                 <li><a class="flex hidden h-full items-center px-4 sm:list-item"
-                                        href="{{ route('category.index') }}"
-                                        wire:navigate.hover>{{ __('collections') }}</a></li>
+                                        href="{{ route('category.index') }}" wire:navigate>{{ __('collections') }}</a>
+                                </li>
                                 <li><a class="flex hidden h-full items-center px-4 sm:list-item"
-                                        href="{{ route('kilincsek') }}" wire:navigate.hover>{{ __('Kilincsek') }}</a>
+                                        href="{{ route('kilincsek') }}" wire:navigate>{{ __('Kilincsek') }}</a>
                                 </li>
                                 <li><a class="flex hidden h-full items-center px-4 sm:list-item" href=""
-                                        wire:navigate.hover>{{ __('About us') }}</a></li>
+                                        wire:navigate>{{ __('About us') }}</a></li>
                                 <li><a class="flex h-full items-center px-4" href="{{ route('kapcsolat') }}"
-                                        wire:navigate.hover>{{ __('Kapcsolat') }}</a></li>
+                                        wire:navigate>{{ __('Kapcsolat') }}</a></li>
                                 <li><a class="flex h-full items-center px-4" href="{{ route('szolgaltatasaink') }}"
-                                        wire:navigate.hover>{{ __('Szolgáltatásaink') }}</a></li>
+                                        wire:navigate>{{ __('Szolgáltatásaink') }}</a></li>
                                 <li><a class="flex h-full items-center px-4" href="{{ route('downloads') }}"
-                                        wire:navigate.hover>Letöltések</a></li>
-                                <li><a class="@if (session()->get('quotation') != null) @if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif @endif flex h-full items-center px-4"
-                                        href="{{ route('quotation.index') }}" wire:navigate.hover>Árajánlat</a></li>
+                                        wire:navigate>Letöltések</a></li>
+                                <li><a class="@if (!session()->missing('quotation')) @if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif @endif flex h-full items-center px-4"
+                                        href="{{ route('quotation.index') }}" wire:navigate>Árajánlat</a></li>
                             </ul>
                         </nav>
                     </div>

@@ -1,6 +1,8 @@
 <x-layouts.app>
 
-    <x-doors.layout :doors='$products' />
+    <div class="w-full">
+        <livewire:filter-for-product-sidebar />
+    </div>
     <!-- gap -->
     <div class="min-h-[60px]"></div>
 

@@ -15,9 +15,7 @@ class DoorController extends Controller
      */
     public function index()
     {
-        $products = Door::with('category')->get();
-
-        return view('doors.index', compact('products'));
+        return view('doors.index',);
     }
 
     /**
