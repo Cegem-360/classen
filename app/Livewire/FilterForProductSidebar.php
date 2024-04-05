@@ -154,10 +154,10 @@ class FilterForProductSidebar extends Component
                             });
                         });
                     })
-                    ->paginate(perPage: 40);
+                    ->inRandomOrder()->paginate(perPage: 40);
 
         } else {
-            $doors = Door::paginate(perPage: 40)->onEachSide(0);
+            $doors = Door::inRandomOrder()->paginate(perPage: 40)->onEachSide(0);
         }
 
         return view('livewire.filter-for-product-sidebar', compact('doors'));
