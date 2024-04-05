@@ -3,13 +3,10 @@
        <div class="swiper detail-page-swiper lightbox w-full">
            <div class="swiper-wrapper">
                @foreach ($category->gallery_imgs as $img)
-                   <div class="swiper-slide min-h-[380px] w-3/4 bg-cover bg-center sm:w-full"
-                       style="background-position: 40% 50%; background-image: url('{{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}');">
-                       <a data-pswp-width="1600" data-pswp-height="900"
-                           href="{{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}"
-                           itemprop="contentUrl" target="_blank">
+                   <div class="swiper-slide min-h-[380px] w-3/4 bg-cover bg-center sm:w-full" style="background-position: 40% 50%; background-image: url('{{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}');">
+                       {{-- <a data-pswp-width="1600" data-pswp-height="900" href="{{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}" itemprop="contentUrl" target="_blank">
                            <div class="h-full w-full bg-[#ffffff00]"></div>
-                       </a>
+                       </a> --}}
                    </div>
                @endforeach
            </div>

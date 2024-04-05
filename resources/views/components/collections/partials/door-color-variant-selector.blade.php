@@ -13,15 +13,11 @@
                         @foreach ($colorVariants as $colorVariant)
                             @foreach ($colorVariant as $variant)
                                 <div class="swiper-slide" data-hash="{{ $variant->tag }}">
-                                    <a data-pswp-width="540" data-pswp-height="1200"
-                                        href="{{ $variant->img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
-                                        itemprop="contentUrl" target="_blank">
+                                    {{-- <a data-pswp-width="540" data-pswp-height="1200" href="{{ $variant->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" itemprop="contentUrl" target="_blank"> --}}
                                         <div class="flex h-full w-full justify-center bg-[#ffffff00]">
-                                            <img class="max-h-[500px]"
-                                                src="{{ $variant->img_url ?? Vite::asset('resources/img/placeholder.webp') }}"
-                                                alt="" loading="lazy" itemprop="contentUrl" target="_blank">
+                                            <img class="max-h-[500px]" src="{{ $variant->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" alt="" loading="lazy" itemprop="contentUrl" target="_blank">
                                         </div>
-                                    </a>
+                                    {{-- </a> --}}
                                 </div>
                             @endforeach
                         @endforeach
