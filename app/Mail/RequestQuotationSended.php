@@ -20,7 +20,7 @@ class RequestQuotationSended extends Mailable
      */
     public function __construct(public Quotation $quotation, public Collection $quotationItems)
     {
-        $this->from('weboldal@arcadaia98.hu');
+        //$this->from('weboldal@arcadaia98.hu');
     }
 
     /**
@@ -30,7 +30,7 @@ class RequestQuotationSended extends Mailable
     {
         //TODO: Change this to the email of the company
         return new Envelope(
-            from: new Address('weboldal@arcadaia98.hu', 'Arcadia98'),
+            
             subject: 'Ajánlatkérés',
         );
     }
@@ -59,8 +59,5 @@ class RequestQuotationSended extends Mailable
         return [];
     }
 
-    public function build()
-    {
-        return $this->from('weboldal@arcadaia98.hu')->view('mail.quotation.sended');
-    }
+    
 }
