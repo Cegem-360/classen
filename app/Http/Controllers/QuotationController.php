@@ -82,7 +82,12 @@ class QuotationController extends Controller
             'message' => $validated['message'],
         ]);
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
-        Mail::to($request->email)->cc($admin)->send(new RequestQuotationSended($quotation, $quotationItems));
+        try {
+            Mail::to($request->email)->send(new RequestQuotationSended($quotation, $quotationItems));
+        } catch (\Throwable $th) {
+            throw $th;
+        }
+       
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
 }
