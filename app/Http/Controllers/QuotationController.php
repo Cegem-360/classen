@@ -62,6 +62,7 @@ class QuotationController extends Controller
 
     public function store(Request $request)
     {
+        $admin = 'zoli.szabok@gmail.com';
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),
         ]));
@@ -81,7 +82,7 @@ class QuotationController extends Controller
             'message' => $validated['message'],
         ]);
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
-        Mail::to($request->email)->send(new RequestQuotationSended($quotation, $quotationItems));
+        Mail::to($request->email)->cc($admin)->send(new RequestQuotationSended($quotation, $quotationItems));
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
 }
