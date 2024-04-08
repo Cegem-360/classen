@@ -42,6 +42,10 @@ class RequestQuotationSended extends Mailable
     {
         return new Content(
             view: 'mail.quotation.sended',
+            with: [
+                'quotation' => $this->quotation,
+                'quotationItems' => $this->quotationItems,
+            ],
         );
     }
 
