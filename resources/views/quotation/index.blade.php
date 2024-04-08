@@ -64,7 +64,7 @@
                 <!-- More products... -->
             </div>
         </div>
-        <!--
+
         <div class="divide-y max-w-xl py-12 md:max-w-4xl">
             <form action="{{ route('quotation.store') }}" method="post">
                 @csrf
@@ -77,15 +77,7 @@
                 </div>
             </form>
         </div>
-        -->
-        <h2>
-            <div class="divide-y h-10 max-w-xl py-12 text-xl md:max-w-4xl">
-                <b>
-                    Kérjük, hogy az árajánlathoz kapcsolatos kérseikhez telefonon vagy emailen kereszül jellezék
-                    kollégáinnak
-                </b>
-            </div>
-        </h2>
+
     </div>
 
     <x-footer.layout></x-footer.layout>
