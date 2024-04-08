@@ -27,6 +27,10 @@ class QuotationController extends Controller
 
     public function success()
     {
+        //reset session Quotation
+        session()->forget('quotation');
+        //frm database reset
+        Quotation::where('session_id', session()->getId())->delete();
         return view('quotation.success');
     }
 
