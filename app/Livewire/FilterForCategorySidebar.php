@@ -87,6 +87,7 @@ class FilterForCategorySidebar extends Component
             $tmp['WOOD-BASED DOOR FRAMES'] = $this->collections['WOOD-BASED DOOR FRAMES'];
             $this->collections = collect($tmp)->all();
         }
+
         return view('livewire.filter-for-category-sidebar', ['collections' => $this->collections]);
     }
 

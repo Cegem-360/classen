@@ -6,15 +6,16 @@ use App\Models\Door;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Livewire\Component;
-use Livewire\WithPagination;
 use Livewire\WithoutUrlPagination;
+use Livewire\WithPagination;
+
 class FilterForProductSidebar extends Component
 {
-    use WithPagination,WithoutUrlPagination;
+    use WithoutUrlPagination,WithPagination;
 
     public $options = [
-        'storage'=>[
-            'storage'=> false
+        'storage' => [
+            'storage' => false,
         ],
         'decor' => [
             'honey_catania' => false,
@@ -147,10 +148,10 @@ class FilterForProductSidebar extends Component
                         })->when($this->options['decor']['hamilton_oak_horizontal'], function (Builder $q) {
                             $q->orWhere('tag', 'hamilton-oak-horizontal');
                         });
-                    })->where(function (Builder $query){
-                        $query->when($this->options['storage']['storage'],function (Builder $q){
-                            $q->orWhereHas('category',function (Builder $innerQ){
-                                $innerQ->where('name','Raktári ajtók');
+                    })->where(function (Builder $query) {
+                        $query->when($this->options['storage']['storage'], function (Builder $q) {
+                            $q->orWhereHas('category', function (Builder $innerQ) {
+                                $innerQ->where('name', 'Raktári ajtók');
                             });
                         });
                     })

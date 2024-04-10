@@ -9,7 +9,7 @@ use App\Models\QuotationItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Validator;
-use Masmerise\Toaster\Toaster;
+
 class QuotationController extends Controller
 {
     public function index()
@@ -31,6 +31,7 @@ class QuotationController extends Controller
         session()->forget('quotation');
         //frm database reset
         Quotation::where('session_id', session()->getId())->delete();
+
         return view('quotation.success');
     }
 
@@ -91,7 +92,7 @@ class QuotationController extends Controller
         } catch (\Throwable $th) {
             throw $th;
         }
-       
+
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
 }

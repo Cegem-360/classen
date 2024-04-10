@@ -7,23 +7,7 @@
                             alt="Arcadia98 Logo" loading="lazy" />
                     </a>
                 </div>
-                <div>
-                    <p>
-                        Az oldalon található képi és írott anyagok elsődleges funkciója az általános tájékoztatás, azok
-                        alapján sem Árajánlataink sem Vevőrendeléseink nem értelmezhetők!
-                    </p>
-                    <br />
-                    <p>
-                        A termékfotókon és színmintákon látható színek eltérhetnek a valóságtól! A termék és enterieur
-                        fotókon látható kiegészítők, kilincsek nem tartozékai a termékeknek!
-                    </p>
-                    <br />
-                    <p>
-                        A weboldalon található esetleges pontatlanságokért nem vállalunk felelősséget és a változtatás
-                        jogát
-                        mindenkor fenntartjuk!
-                    </p>
-                </div>
+
                 <div>
                     <h3 class="mb-8">ARCADIA 98 KFT. <br>1194 Budapest, Citroën utca 4.</h3>
                 </div>
@@ -58,6 +42,7 @@
                     </div>
                     <div>
                         <h2 class="mb-6 text-sm font-semibold uppercase text-gray-900">Közösségi oldalaink</h2>
+
                         <div class="flex gap-2">
                             <svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
                                 width="5%" height="5%" viewBox="0 0 800 800" version="1.1"
@@ -113,6 +98,28 @@
                                     </g>
                                 </g>
                             </svg>
+                        </div>
+
+                        <div class="min-h-[30px]"></div>
+                        <div class="text-sm">
+                            <p>
+                                Az oldalon található képi és írott anyagok elsődleges funkciója az általános
+                                tájékoztatás, azok
+                                alapján sem Árajánlataink sem Vevőrendeléseink nem értelmezhetők!
+                            </p>
+                            <br />
+                            <p>
+                                A termékfotókon és színmintákon látható színek eltérhetnek a valóságtól! A termék és
+                                enterieur
+                                fotókon látható kiegészítők, kilincsek nem tartozékai a termékeknek!
+                            </p>
+                            <br />
+                            <p>
+                                A weboldalon található esetleges pontatlanságokért nem vállalunk felelősséget és a
+                                változtatás
+                                jogát
+                                mindenkor fenntartjuk!
+                            </p>
                         </div>
                     </div>
                 </div>

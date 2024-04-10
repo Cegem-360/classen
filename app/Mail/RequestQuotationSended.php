@@ -6,7 +6,6 @@ use App\Models\Quotation;
 use Illuminate\Bus\Queueable;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -30,7 +29,7 @@ class RequestQuotationSended extends Mailable
     {
         //TODO: Change this to the email of the company
         return new Envelope(
-            
+
             subject: 'Ajánlatkérés',
         );
     }
@@ -58,6 +57,4 @@ class RequestQuotationSended extends Mailable
     {
         return [];
     }
-
-    
 }

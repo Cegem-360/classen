@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -10,8 +9,6 @@ class DatabaseSeeder extends Seeder
     /**
      * Seed the application's database.
      */
-
-
     public function run(): void
     {
         $this->call([

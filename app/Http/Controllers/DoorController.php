@@ -15,7 +15,7 @@ class DoorController extends Controller
      */
     public function index()
     {
-        return view('doors.index',);
+        return view('doors.index');
     }
 
     /**

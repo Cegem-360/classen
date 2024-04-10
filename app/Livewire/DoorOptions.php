@@ -30,9 +30,8 @@ class DoorOptions extends Component
         ]);
         session()->put('quotation', $quotation);
         Toaster::success(__('Sikeresen hozzáadva az árajánlathoz!'));
-
+        $this->js('setRedNavigation()');
         //return $this->redirect(route('category.show', ['door' => $this->door]), navigate: true);
-
     }
 
     public function render()
