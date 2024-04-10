@@ -48,7 +48,9 @@ class UpdateQuotationItem extends Component
 
     public function render()
     {
-
+        $this->quotationItem->update([
+            'frame' => $this->frame,
+        ]);
         return view('livewire.update-quotation-item', ['quotationItem' => $this->quotationItem, 'quantity' => $this->quantity]);
     }
 }
