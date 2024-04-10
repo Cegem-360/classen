@@ -185,7 +185,7 @@
         <!-- HEADLINE AND CONTENT -->
         <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
-                <td align="center" bgcolor="#eeeeee">
+                <td align="center" bgcolor="#eee">
                     <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
 
                         <tr>
@@ -251,7 +251,7 @@
         <!-- ARTICLE 2 -->
         <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
-                <td align="center" bgcolor="#ffffff">
+                <td align="center" bgcolor="#fff">
                     <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
 
                         <tr>
@@ -268,8 +268,7 @@
 
                                         <tr>
                                             <td align="center">
-                                                <img class="img-full"
-                                                    src="http://admin.classen.cegem360.hu/wp-content/uploads/2023/10/diva_przesuwne_jesion-grafitowy.jpeg"
+                                                <img class="img-full" src="{{ $quotationItem->door->img_url }}"
                                                     alt="img" width="140" height="320">
                                             </td>
                                         </tr>
@@ -295,7 +294,18 @@
                                                 {{ $quotationItem->door->name }}
                                             </td>
                                         </tr>
-
+                                        <tr>
+                                            <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
+                                                align="center">
+                                                {{ $quotationItem->quantity }} db
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td style="font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 24px;"
+                                                align="center">
+                                                {{ $quotationItem->frame }}
+                                            </td>
+                                        </tr>
                                         <tr>
                                             <td style="font-size: 1px; line-height: 20px;" height="20">&nbsp;</td>
                                         </tr>
@@ -309,7 +319,8 @@
                                         cellspacing="0">
                                         <tr>
                                             <td style="font-size: 40px; line-height: 40px;" width="1"
-                                                height="40"></td>
+                                                height="40">
+                                            </td>
                                         </tr>
                                     </table>
                                     <!-- END SPACE -->
@@ -330,7 +341,7 @@
         <!-- ARTICLE FULL -->
         <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
             <tr>
-                <td align="center" bgcolor="#eeeeee">
+                <td align="center" bgcolor="#eee">
                     <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
 
                         <tr>
@@ -376,11 +387,18 @@
 
                                 <p>Üdvözlettel,</p>
 
-                                <p>[ügyintéző neve]</p>
-                                <p>[beosztás]</p>
-                                <p>[Cég neve]</p>
-                                <p>[Email cím]</p>
-                                <p>[Telefonszám]</p>
+                                <p>Kerék András</p>
+                                <p>ARCADIA 98 KFT.</p>
+                                <p>
+                                    <a class="hover:underline" href="mailto:info@arcadia98.hu">
+                                        E-mail: info@arcadia98.hu
+                                    </a>
+                                </p>
+                                <p>
+                                    <a class="hover:underline" href="tel:+3614303344">
+                                        +36 1 430 3344
+                                    </a>
+                                </p>
 
                             </td>
                         </tr>
