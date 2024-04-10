@@ -3,6 +3,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js';
 import PhotoSwipe from 'https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js';
+import { speed } from "jquery";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -243,6 +244,7 @@ export function initSwiperJS() {
     });
 
     const swiper = new Swiper('.hero-swiper', {
+        speed: 1500,
         // configure Swiper to use modules
         // Optional parameters
         allowTouchMove: false,
@@ -270,6 +272,7 @@ export function initSwiperJS() {
         scrollbar: {
             el: '.swiper-scrollbar',
         },
+
         on: {
             slideNextTransitionStart(swiper) {
                 console.log("slideNextTransitionStart");
@@ -306,7 +309,7 @@ export function initSwiperJS() {
 
         // Clear the timeline before starting a new animation
         tl.clear();
-        tl.timeScale(1.75);
+        tl.timeScale(1.25);
         tl.set([heroTitle, heroContent, heroCTA], {
             autoAlpha: 0,
         })
@@ -329,13 +332,13 @@ export function initSwiperJS() {
                 {
                     autoAlpha: 1,
                     y: 0,
-                    duration: 1.2,
+                    duration: 1.4,
                     ease: "power1.out",
                     stagger: 0.25
                 },
                 "-=1.2"
             )
-            .fromTo(heroLine, { scaleX: 0 }, { scaleX: "100%", duration: 1.5, ease: "power1.inOut", transformOrigin: "right" }, "-=1.2")
+            .fromTo(heroLine, { scaleX: 0 }, { scaleX: "100%", duration: 2, ease: "power1.inOut", transformOrigin: "right" }, "-=1.2")
 
         //console.log("current_index", current_index);
         //console.log(tl);

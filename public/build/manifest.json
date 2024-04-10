@@ -1,6 +1,6 @@
 {
-  "_ScrollTrigger-facc6abe.js": {
-    "file": "assets/ScrollTrigger-facc6abe.js"
+  "_ScrollTrigger-9e689d32.js": {
+    "file": "assets/ScrollTrigger-9e689d32.js"
   },
   "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp": {
     "file": "assets/Classen-drzwi-Ferro-dab-nordycki-89fc95c0.webp",
@@ -574,9 +574,9 @@
     "css": [
       "assets/app-a65dee5a.css"
     ],
-    "file": "assets/app-e4e8802f.js",
+    "file": "assets/app-7335f999.js",
     "imports": [
-      "_ScrollTrigger-facc6abe.js"
+      "_ScrollTrigger-9e689d32.js"
     ],
     "isEntry": true,
     "src": "resources/js/app.js"
@@ -592,9 +592,9 @@
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-f6495468.js",
+    "file": "assets/swiperJS-9dde12fb.js",
     "imports": [
-      "_ScrollTrigger-facc6abe.js"
+      "_ScrollTrigger-9e689d32.js"
     ],
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
