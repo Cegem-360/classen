@@ -75,7 +75,7 @@
                                                     <h5 class="mt-3 text-center text-xs font-medium">Hozzáadom az
                                                         <br />árajánlat kéréshez</h3>
                                                 </div>
-                                            </a>
+                                            </a> 
                                             <h4 class="mt-3">
                                                 {{ __($item->name) }}
                                                 @if (Request::path() == 'kollekciok/Rakt%C3%A1ri%20ajt%C3%B3k')

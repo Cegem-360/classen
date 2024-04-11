@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\AdditionalAttribute;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Builder;
+use Livewire\Attributes\Url;
 use Livewire\Component;
 
 class FilterForCategorySidebar extends Component
@@ -31,6 +32,8 @@ class FilterForCategorySidebar extends Component
     ];
 
     public $collections;
+
+
 
     public function render()
     {

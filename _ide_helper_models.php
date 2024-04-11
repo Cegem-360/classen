@@ -334,8 +334,11 @@ namespace App\Models{
  *
  * @property int $id
  * @property string $name
- * @property string $key
- * @property string|null $value
+ * @property string $title
+ * @property string $page
+ * @property string $img_url
+ * @property string $text
+ * @property string $link_title
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions newModelQuery()
@@ -343,10 +346,13 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions query()
  * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereCreatedAt($value)
  * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereKey($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereImgUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereLinkTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions wherePage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereTitle($value)
  * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereValue($value)
  */
 	class WebsiteOptions extends \Eloquent {}
 }
