@@ -23,6 +23,8 @@ class FilterForCategorySidebar extends Component
             'inner_door' => false,
             'technical_doors' => false,
             'sliding_door' => false,
+            'wood_door' => false,
+            'interior_entrance_door' => false,
         ],
         'style' => [
             'modern' => false,
@@ -33,10 +35,51 @@ class FilterForCategorySidebar extends Component
 
     public $collections;
 
+    #[Url(as: 'q')]
+    public string $q = '';
 
+    #[Url(as: 'g')]
+    public string $g = '';
 
     public function render()
     {
+        if ($this->g == 'surface') {
+            if ($this->q == 'lacquered') {
+                $this->options['surface']['lacquered'] = ! $this->options['surface']['lacquered'];
+            } elseif ($this->q == '3d_finishing') {
+                $this->options['surface']['3d_finishing'] = ! $this->options['surface']['3d_finishing'];
+            } elseif ($this->q == 'iridium_finishing') {
+                $this->options['surface']['iridium_finishing'] = ! $this->options['surface']['iridium_finishing'];
+            } elseif ($this->q == 'cpl_laminate') {
+                $this->options['surface']['cpl_laminate'] = ! $this->options['surface']['cpl_laminate'];
+            } elseif ($this->q == 'hpl_laminate') {
+                $this->options['surface']['hpl_laminate'] = ! $this->options['surface']['hpl_laminate'];
+            }
+        } elseif ($this->g == 'purpose') {
+            if ($this->q == 'room_door') {
+                $this->options['purpose']['room_door'] = ! $this->options['purpose']['room_door'];
+            } elseif ($this->q == 'inner_door') {
+                $this->options['purpose']['inner_door'] = ! $this->options['purpose']['inner_door'];
+            } elseif ($this->q == 'technical_doors') {
+                $this->options['purpose']['technical_doors'] = ! $this->options['purpose']['technical_doors'];
+            } elseif ($this->q == 'sliding_door') {
+                $this->options['purpose']['sliding_door'] = ! $this->options['purpose']['sliding_door'];
+            } elseif ($this->q == 'wood_door') {
+                $this->options['purpose']['wood_door'] = ! $this->options['purpose']['wood_door'];
+            } elseif ($this->q == 'interior_entrance_door') {
+                $this->options['purpose']['interior_entrance_door'] = ! $this->options['purpose']['interior_entrance_door'];
+            }
+        } elseif ($this->g == 'style') {
+            if ($this->q == 'modern') {
+                $this->options['style']['modern'] = ! $this->options['style']['modern'];
+            } elseif ($this->q == 'classic') {
+                $this->options['style']['classic'] = ! $this->options['style']['classic'];
+            } elseif ($this->q == 'loft') {
+                $this->options['style']['loft'] = ! $this->options['style']['loft'];
+            }
+        }
+        $this->q = '';
+        $this->g = '';
         if ($this->in_array_recursive(true, $this->options, true)) {
             $categories = [];
             $results =
@@ -63,6 +106,10 @@ class FilterForCategorySidebar extends Component
                             $query->orWhere('technical_doors', true);
                         })->when($this->options['purpose']['sliding_door'], function (Builder $query) {
                             $query->orWhere('sliding_door', true);
+                        })->when($this->options['purpose']['interior_entrance_door'], function (Builder $query) {
+                            $query->orWhere('interior_entrance_door', true);
+                        })->when($this->options['purpose']['wood_door'], function (Builder $query) {
+                            $query->orWhere('wood_door', true);
                         });
                     })->where(function (Builder $outerQuery) {
                         $outerQuery->when($this->options['style']['modern'], function (Builder $query) {
@@ -76,8 +123,10 @@ class FilterForCategorySidebar extends Component
             foreach ($results as $result) {
                 $categories[] = $result->category;
             }
+
             $collection = collect($categories);
-            $this->collections = $collection->groupBy('breadcrumb')->all();
+            $this->collections = $collection->groupBy('breadcrumb')->sortBy('breadcrumb')->all();
+            //dump($this->collections);
         } else {
             $this->collections = Category::all()->groupBy('breadcrumb')->all();
             $tmp['LACQUERED DOORS'] = $this->collections['LACQUERED DOORS'];

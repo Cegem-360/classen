@@ -31,6 +31,7 @@ class AdditionalAttribute extends Model
         'loft',
         'retro',
         'rustic',
+        'wood_door',
     ];
 
     public function category(): BelongsTo
@@ -49,6 +50,7 @@ class AdditionalAttribute extends Model
         'bathroom_door' => 'boolean',
         'interior_entrance_door' => 'boolean',
         'technical_doors' => 'boolean',
+        'wood_door' => 'boolean',
         'fire_door' => 'boolean',
         'anti_burglary_door' => 'boolean',
         'soundproof_door' => 'boolean',
@@ -67,5 +69,6 @@ class AdditionalAttribute extends Model
         'width_120' => 'boolean',
         'panel_doors' => 'boolean',
         'framed_doors' => 'boolean',
+
     ];
 }

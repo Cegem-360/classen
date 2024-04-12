@@ -59,6 +59,13 @@
                 </div>
                 <div>
                     <label for="options">
+                        <input type="checkbox" value="interior_entrance_door"
+                            wire:model="options.purpose.interior_entrance_door" wire:click="$refresh" />
+                        {{ __('Enteriőrbe illő bejárati ajtó') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
                         <input type="checkbox" value="room_door" wire:model="options.purpose.room_door"
                             wire:click="$refresh" />
                         {{ __('bejárati ajtó') }}
@@ -77,6 +84,13 @@
                         <input type="checkbox" value="sliding_door" wire:model="options.purpose.sliding_door"
                             wire:click="$refresh" />
                         {{ __('sliding door') }}
+                    </label>
+                </div>
+                <div>
+                    <label for="options">
+                        <input type="checkbox" value="wood_door" wire:model="options.purpose.wood_door"
+                            wire:click="$refresh" />
+                        {{ __('Fa mintázatú ajtók') }}
                     </label>
                 </div>
 

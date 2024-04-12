@@ -34,6 +34,7 @@ return new class extends Migration
                 'loft',
                 'retro',
                 'rustic',
+                'wood_door',
             ];
             $table->id();
             foreach ($columns as $column) {
