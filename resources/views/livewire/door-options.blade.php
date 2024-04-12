@@ -42,7 +42,7 @@
                         <div class="door_color m-px !h-auto !w-auto cursor-pointer p-3" id="{{ $tag['tag'] }}-icon">
                             <div class="door_color__wrapper">
                                 <div class="door_color__image" onclick="selectColor('{{ $tag['tag'] }}')">
-                                    <img src="{{ $tag['tag_img_url'] }}" alt="White" loading="lazy">
+                                    <img src="{{ $tag['tag_img_url'] }}" alt="White">
                                 </div>
                                 <div class="door_color__meta mt-3">
                                     <h4> {{ __($name) }}</h4>
@@ -75,7 +75,7 @@
                                                     <h5 class="mt-3 text-center text-xs font-medium">Hozzáadom az
                                                         <br />árajánlat kéréshez</h3>
                                                 </div>
-                                            </a> 
+                                            </a>
                                             <h4 class="mt-3">
                                                 {{ __($item->name) }}
                                                 @if (Request::path() == 'kollekciok/Rakt%C3%A1ri%20ajt%C3%B3k')
