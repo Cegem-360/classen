@@ -39,3 +39,4 @@ document.getElementById('szolg-3').addEventListener('click', function() {
     window.location.href = '/szolgaltatasaink/#szakszeru-beepites';
 }); */
 
+ 

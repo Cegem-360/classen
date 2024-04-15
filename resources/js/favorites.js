@@ -65,3 +65,4 @@ const initFavoritesJS = {
 
 export default initFavoritesJS;
 
+ 
