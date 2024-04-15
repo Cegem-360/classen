@@ -301,6 +301,17 @@ export function initSwiperJS() {
 
     function animationSlide(swiper) {
         let current_index = swiper.realIndex;
+
+        // Hide all slides
+        const allSlides = document.querySelectorAll('.hero-wrapper');
+        allSlides.forEach(slide => {
+            slide.style.display = 'none';
+        });
+
+        // Show only the current slide
+        const currentSlide = document.querySelector(`#slide-${current_index}`);
+        currentSlide.style.display = 'block';
+
         const contentWrapper = document.querySelector(`#slide-${current_index} .hero-content`);
         const heroLine = document.querySelector(`#slide-${current_index} .hero-line`);
         const heroTitle = document.querySelector(`#slide-${current_index} .hero-content .hero-title`);
