@@ -16,7 +16,7 @@
                 megkötések
                 és kompromisszumok nélkül.</p>
             <a class="group flex w-fit items-center justify-between gap-6 border-1 border-white px-3 py-1"
-                href="{{ route('category.index') }}" wire:navigate.hover>
+                href="{{ route('category.index', ['g' => 'purpose', 'q' => 'wood_door']) }}" wire:navigate>
                 <h3 class="text-sm font-bold text-white">{{ __('Go to wood pattern doors') }}</h3>
                 <div class="scale-75 transition-transform group-hover:translate-x-2"><x-doors.partials.arrow-right
                         class="![fill:white]"></x-doors.partials.arrow-right></div>

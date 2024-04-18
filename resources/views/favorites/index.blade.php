@@ -23,11 +23,14 @@
                                 <x-svg.heart class="fill-white" id="heart-{{ $product['id'] }}"> </x-svg.heart>
                             </button>
                         </div>
-                        <div
-                            class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
-                            <img class="h-full w-full object-cover object-center"
-                                src=" {{ !empty($product['img_url']) ? $product['img_url'] : Vite::asset('resources/img/placeholder.webp') }}">
-                        </div>
+                        <a href="{{ route('door.show', ['door' => $product['id']]) }}" wire:navigate>
+                            <div
+                                class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
+                                <img class="h-full w-full object-cover object-center"
+                                    src=" {{ !empty($product['img_url']) ? $product['img_url'] : Vite::asset('resources/img/placeholder.webp') }}">
+                            </div>
+                        </a>
+
                         <div class="my-4 flex justify-between">
                             <div>
                                 <h3 class="text-sm text-gray-700">
