@@ -15,6 +15,7 @@ class Kernel extends ConsoleKernel
         //$schedule->command('inspire')->hourly();
         $schedule->command('queue:work', ['--stop-when-empty' => 1])
             ->everyMinute();
+        $schedule->command('sitemap:generate')->daily();
     }
 
     /**
