@@ -365,7 +365,7 @@ export function initSwiperJS() {
             autoAlpha: 1,
             duration: 1.5,
             ease: "power3.inOut",
-            scrollTrigger: { trigger: ".ad-banner", start: "top 70%", end: "bottom top", markers: false }
+            scrollTrigger: { trigger: ".ad-banner", start: "top 90%", end: "bottom top", markers: false }
         });
 
     gsap.fromTo(".banner-container2", {
@@ -377,7 +377,7 @@ export function initSwiperJS() {
             autoAlpha: 1,
             duration: 1.5,
             ease: "power3.inOut",
-            scrollTrigger: { trigger: ".ad-banner2", start: "top 70%", end: "bottom top", markers: false }
+            scrollTrigger: { trigger: ".ad-banner2", start: "top 80%", end: "bottom top", markers: false }
         });
 
     gsap.fromTo(["#img1", "#img2", "#img3"], {
@@ -394,4 +394,3 @@ export function initSwiperJS() {
         });
 }
 
- 
