@@ -81,3 +81,7 @@ Route::get('/clearCache', function () {
     Artisan::call('view:clear');
     return 'Cache cleared';
 });
+Route::get('/sitemap', function () {
+    Artisan::call('sitemap:generate');
+    return 'Sitemap generated';
+});
