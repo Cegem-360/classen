@@ -30,10 +30,10 @@ class GenerateSitemap extends Command
     public function handle()
     {
         // modify this to your own needs
-        /*SitemapGenerator::create('https://arcadia98.hu')->getSitemap()->add(Url::create('/')->setPriority(1.0))
-            ->writeToFile(public_path('sitemap.xml'));*/
+        SitemapGenerator::create(config('app.url'))->getSitemap()->add(Url::create('/')->setPriority(1.0))
+            ->writeToFile(public_path('sitemap.xml'));
 
 
-dd(Http::get(config('app.url'))->status());
+//dd(Http::get(config('app.url'))->status());
     }
 }
