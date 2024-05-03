@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
-
+        <meta name="google-site-verification" content="1r1A-5l2zFHc6q7tQRiEKDz2iIvykXK-WXwqrZwHU2Q" />
         <title>{{ config('app.name', 'Classen') }}</title>
 
         <!-- photoswipe CSS -->
@@ -31,7 +31,7 @@
             <!-- Page Heading -->
             <x-layouts.navigation.navbar />
             @if (isset($header))
-                <div class="mx-auto max-w-7xl px-4 py-6 lg:px-8 sm:px-6">
+                <div class="px-4 py-6 mx-auto max-w-7xl lg:px-8 sm:px-6">
                     {{ $header }}
                 </div>
             @endif
