@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\DatabaseUpdaterController;
-use App\Http\Controllers\DoorController;
-use App\Http\Controllers\ManagePageContentController;
-use App\Http\Controllers\QuotationController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\DoorController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\QuotationController;
+use App\Http\Controllers\DatabaseUpdaterController;
+use App\Http\Controllers\ManagePageContentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -71,4 +72,12 @@ Route::view('/aszf', 'jogi.aszf')->name('aszf');
 Route::view('/adatvedelmi-nyilatkozat', 'jogi.adatvedelem')->name('adatvedelem');
 Route::get('/refreshDatabase', function () {
     Artisan::call('migrate:fresh', ['--seed' => 1]);
+});
+
+Route::get('/clearCache', function () {
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('route:clear');
+    Artisan::call('view:clear');
+    return 'Cache cleared';
 });
