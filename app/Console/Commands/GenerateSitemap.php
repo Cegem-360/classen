@@ -2,6 +2,7 @@
 
 namespace App\Console\Commands;
 
+use Spatie\Sitemap\Tags\Url;
 use Illuminate\Console\Command;
 use Spatie\Sitemap\SitemapGenerator;
 
@@ -29,7 +30,7 @@ class GenerateSitemap extends Command
     public function handle()
     {
         // modify this to your own needs
-        SitemapGenerator::create(config('app.url'))
+        SitemapGenerator::create('https://arcadia98.hu')->getSitemap()->add(Url::create('/')->setPriority(1.0))
             ->writeToFile(public_path('sitemap.xml'));
     }
 }
