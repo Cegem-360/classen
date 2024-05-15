@@ -90,3 +90,4 @@ Route::get('/sitemap', function () {
     Artisan::call('sitemap:generate');
     return 'Sitemap generated';
 });
+

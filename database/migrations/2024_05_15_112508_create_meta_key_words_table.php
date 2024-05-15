@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('meta_key_words', function (Blueprint $table) {
             $table->id();
             $table->string('collection_name')->index();
-            $table->text('meta_description');
-            $table->text('key_words');
+            $table->text('meta_description')->nullable();
+            $table->text('key_words')->nullable();
             $table->timestamps();
         });
     }
