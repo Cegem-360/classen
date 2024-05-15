@@ -25,14 +25,15 @@
         style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/kozepso_banner_hatter.webp') }}');">
         <div class="banner-container -mt-12 mb-12 h-[50vh] w-1/2 bg-zold_attetszo px-16 py-24 sm:w-full">
             <h3 class="max-w-lg mb-8 text-2xl font-bold">Fa mintázatú beltéri ajtók, a természetesség nevében</h3>
-            <p class="max-w-lg mb-8 text-lg">Élvezze a modern ajtók adta lehetőségeket, teremtse meg álmai otthonát
-                megkötések
-                és kompromisszumok nélkül.</p>
+            <p class="max-w-lg mb-8 text-lg">
+                Élvezze a modern ajtók adta lehetőségeket, teremtse meg álmai otthonát megkötések és kompromisszumok
+                nélkül.</p>
             <a class="flex items-center justify-between gap-6 px-3 py-1 border-white group w-fit border-1"
                 href="{{ route('category.index', ['g' => 'purpose', 'q' => 'wood_door']) }}" wire:navigate>
                 <h3 class="text-sm font-bold text-white">{{ __('Go to wood pattern doors') }}</h3>
-                <div class="transition-transform scale-75 group-hover:translate-x-2"><x-doors.partials.arrow-right
-                        class="![fill:white]"></x-doors.partials.arrow-right></div>
+                <div class="transition-transform scale-75 group-hover:translate-x-2">
+                    <x-doors.partials.arrow-right class="![fill:white]"></x-doors.partials.arrow-right>
+                </div>
             </a>
         </div>
     </div>

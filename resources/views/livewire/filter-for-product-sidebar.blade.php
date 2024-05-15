@@ -1,14 +1,14 @@
 <div class="grid grid-cols-[1fr_3fr] md:grid-cols-[1.5fr_3fr] sm:grid-cols-1">
     @use('\Illuminate\Pagination\LengthAwarePaginator')
     <div class="h-full bg-[#9f9f9f] pl-8 pt-16 text-white">
-        <h3 class="text-xl font-bold uppercase">Ajtó kollekciók</h3>
-        <hr class="relative mb-6 mt-4 h-1 w-full border-0 bg-white">
+        <h1 class="text-xl font-bold uppercase">Ajtó kollekciók</h1>
+        <hr class="relative w-full h-1 mt-4 mb-6 bg-white border-0">
         <p class="mb-6 font-bold">Válasszon lenyűgöző ajtók közül.</p>
-        <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
+        <h2 class="mb-3 text-xl font-bold">Személyre szabott keresés</h2>
         <div>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Raktári termékek') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <hr class="relative w-full h-px mt-1 mb-2 bg-white border-0">
                 <div>
                     <div>
                         <label for="options">
@@ -20,7 +20,7 @@
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Legújabb színeink') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <hr class="relative w-full h-px mt-1 mb-2 bg-white border-0">
                 <div>
                     <label for="options">
                         <input type="checkbox" value="honey_catania" wire:model="options.decor.honey_catania"
@@ -67,7 +67,7 @@
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Finishing and surface durability') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <hr class="relative w-full h-px mt-1 mb-2 bg-white border-0">
                 <div>
                     <div>
                         <label for="options">
@@ -108,7 +108,7 @@
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Purpose') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <hr class="relative w-full h-px mt-1 mb-2 bg-white border-0">
                 <div>
                     <label for="options">
                         <input type="checkbox" value="inner_door" wire:model="options.purpose.inner_door"
@@ -142,7 +142,7 @@
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Style') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <hr class="relative w-full h-px mt-1 mb-2 bg-white border-0">
                 <div>
                     <label for="options">
                         <input type="checkbox" value="modern" wire:model="options.style.modern"
@@ -177,13 +177,13 @@
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </div>
 
-    <div class="relative mx-12 my-16 w-3/4">
+    <div class="relative w-3/4 mx-12 my-16">
         <h1 class="text-3xl font-bold uppercase">Összes ajtó</h1>
-        <hr class="relative mb-3 mt-8 h-1 w-72 border-0 bg-sarga">
-        <a class="group absolute right-0 top-0 flex w-fit items-center justify-between gap-6 border-1 border-black px-6 py-3 md:relative"
+        <hr class="relative h-1 mt-8 mb-3 border-0 w-72 bg-sarga">
+        <a class="absolute top-0 right-0 flex items-center justify-between gap-6 px-6 py-3 border-black group w-fit border-1 md:relative"
             href="{{ route('category.index') }}" wire:navigate.hover>
             <h2 class="font-bold text-black">{{ __('Go to collections') }}</h2>
-            <div class="scale-75 transition-transform group-hover:translate-x-2"><x-doors.partials.arrow-right
+            <div class="transition-transform scale-75 group-hover:translate-x-2"><x-doors.partials.arrow-right
                     class="![fill:black]"></x-doors.partials.arrow-right>
             </div>
         </a>
@@ -193,10 +193,10 @@
             {{ __('Searching...') }}
         </div>
         <div wire:loading.remove>
-            <div class="mx-8 grid grid-cols-4 gap-6 md:grid-cols-2 sm:grid-cols-1">
+            <div class="grid grid-cols-4 gap-6 mx-8 md:grid-cols-2 sm:grid-cols-1">
 
                 @foreach ($doors as $door)
-                    <div class="relative grid place-content-center bg-neutral-100 px-6 pb-2 pt-12">
+                    <div class="relative grid px-6 pt-12 pb-2 place-content-center bg-neutral-100">
                         <button class="favorite" onclick="initFavoritesJS.toggleFavoriteItem('{{ $door->id }}')">
                             <x-svg.heart class="" id="heart-{{ $door->id }}"> </x-svg.heart>
                         </button>

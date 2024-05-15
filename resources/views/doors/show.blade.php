@@ -3,13 +3,13 @@
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
         <meta name="description"
-            content="Az Arcadia98 Kft. Ajtók aloldala bemutatja {{ $category->name }} {{ $door->name }}, részletes információkat nyújt a moddelről. Fedezze fel kínálatunkat, és válasszon az Önnek legmegfelelőbb ajtók közül!">
+            content="Az Arcadia98 Kft. Ajtók aloldala bemutatja {{ __($category->name) }} {{ $door->name }}, részletes információkat nyújt a moddelről. Fedezze fel kínálatunkat, és válasszon az Önnek legmegfelelőbb ajtók közül!">
         <meta name="keywords"
-            content="ajtók, egyedi modellek, kínálat, szűrés, Arcadia98 Kft., {{ $category->name }}, {{ $door->name }}">
+            content="ajtók, egyedi modellek, kínálat, szűrés, Arcadia98 Kft., {{ __($category->name) }}, {{ $door->name }}">
         <title>{{ strtoupper($door->name) }} - {{ strtoupper($category->name) }} - Arcadia98 Kft. </title>
     </x-slot>
     <x-nav.breadcrumb>
-        {{ $category->name }}
+        {{ __($category->name) }}
     </x-nav.breadcrumb>
 
     <x-collections.partials.door-model-selector :category='$category' :modelVariants='$modelVariants' :door='$door' />

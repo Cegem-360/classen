@@ -5,7 +5,7 @@
         <meta name="description"
             content="Az Arcadia98 Kft. Ajtó Kollekciók oldala bemutatja legújabb ajtó kollekcióinkat, amelyek a legfrissebb lakberendezési trendeket követik. Fedezze fel kínálatunkat, és inspirálódjon a modern és klasszikus enteriőrökben megmutatkozó stílusokkal!">
         <meta name="keywords" content="ajtók, kollekciók, enteriőr, lakberendezési trendek, Arcadia98 Kft.">
-        <title>Ajtó Kollekciók - Arcadia98 Kft.</title>
+        <title>Kollekciók - Arcadia98 Kft.</title>
     </x-slot>
     <div class="flex">
         <x-collections.layout />

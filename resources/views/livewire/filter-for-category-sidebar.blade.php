@@ -1,14 +1,14 @@
 @use('Illuminate\Support\Str')
 <div class="grid grid-cols-[1fr_3fr] md:grid-cols-[1.5fr_3fr] sm:grid-cols-1">
     <div class="h-full bg-[#9f9f9f] pl-8 pt-16 text-white">
-        <h3 class="text-xl font-bold uppercase">Ajtó kollekciók</h3>
-        <hr class="relative mb-6 mt-4 h-1 w-full border-0 bg-white">
+        <h1 class="text-xl font-bold uppercase">Ajtó kollekciók</h1>
+        <hr class="relative w-full h-1 mt-4 mb-6 bg-white border-0">
         <p class="mb-6 font-bold">Válasszon lenyűgöző ajtó kollekcióink közül.</p>
-        <h3 class="mb-3 text-xl font-bold">Személyre szabott keresés</h3>
+        <h2 class="mb-3 text-xl font-bold">Személyre szabott keresés</h2>
         <div>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Finishing and surface durability') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <hr class="relative w-full h-px mt-1 mb-2 bg-white border-0">
                 <div>
                     <div>
                         <label for="options">
@@ -49,7 +49,7 @@
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Purpose') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <hr class="relative w-full h-px mt-1 mb-2 bg-white border-0">
                 <div>
                     <label for="options">
                         <input type="checkbox" value="inner_door" wire:model="options.purpose.inner_door"
@@ -97,7 +97,7 @@
             </fieldset>
             <fieldset class="mb-3">
                 <legend class="text-lg font-bold">{{ __('Style') }}</legend>
-                <hr class="relative mb-2 mt-1 h-px w-full border-0 bg-white">
+                <hr class="relative w-full h-px mt-1 mb-2 bg-white border-0">
                 <div>
                     <label for="options">
                         <input type="checkbox" value="modern" wire:model="options.style.modern" wire:click="$refresh" />
@@ -135,10 +135,10 @@
         <!-- gap -->
         <div class="min-h-[60px]"></div>
         @foreach ($collections as $head => $items)
-            <hr class="relative mb-3 mt-8 h-1 w-72 border-0 bg-sarga">
+            <hr class="relative h-1 mt-8 mb-3 border-0 w-72 bg-sarga">
             <h2 class="mb-3 text-2xl" id='{{ Str::slug(__($head)) }}'>{{ __($head) }}</h2>
             {{-- title = tag value --}}
-            <ul class="products-list grid grid-cols-3 gap-4 md:grid-cols-2 sm:grid-cols-1">
+            <ul class="grid grid-cols-3 gap-4 products-list md:grid-cols-2 sm:grid-cols-1">
                 @foreach ($items as $item)
                     <x-collections.item :category=$item />
                 @endforeach
