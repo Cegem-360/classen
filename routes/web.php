@@ -47,7 +47,11 @@ Route::get('/letoltesek', function () {
 })->name('downloads');
 
 Route::view('/kilincsek', 'kilincsek.index')->name('kilincsek');
-Route::view('/meta', 'google.index')->name('meta');
+Route::view('/meta', 'google.index',
+[
+
+    ]
+)->name('meta');
 
 Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
     Route::get('/', [QuotationController::class, 'index'])->name('index');

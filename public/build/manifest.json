@@ -78,6 +78,10 @@
     "file": "assets/TUPAI-kilincskatalogus-2022-f9cb3104.webp",
     "src": "resources/img/cover-images/TUPAI-kilincskatalogus-2022.webp"
   },
+  "resources/img/favicon.ico": {
+    "file": "assets/favicon-73792219.ico",
+    "src": "resources/img/favicon.ico"
+  },
   "resources/img/icons/1-belteri-ajtok.svg": {
     "file": "assets/1-belteri-ajtok-8d5c596a.svg",
     "src": "resources/img/icons/1-belteri-ajtok.svg"
@@ -563,7 +567,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-540ca3f4.css",
+    "file": "assets/app-dfd5c832.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -572,9 +576,9 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-540ca3f4.css"
+      "assets/app-dfd5c832.css"
     ],
-    "file": "assets/app-22c0979c.js",
+    "file": "assets/app-8db4edc7.js",
     "imports": [
       "_ScrollTrigger-9e689d32.js"
     ],
