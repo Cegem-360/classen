@@ -3,9 +3,8 @@
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
         <meta name="description"
-            content="Az Arcadia98 Kft. Ajtó Kollekciók oldala bemutatja legújabb ajtó kollekcióinkat, amelyek a legfrissebb lakberendezési trendeket követik. Fedezze fel kínálatunkat, és inspirálódjon a modern és klasszikus enteriőrökben megmutatkozó stílusokkal!">
-        <meta name="keywords"
-            content="ajtók, kollekciók, enteriőr, lakberendezési trendek,{{ __($category->name) }}, Arcadia98 Kft.">
+            content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->meta_description }}">
+        <meta name="keywords" content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->key_words }}">
         <title>{{ __($category->name) }} Kollekció - Arcadia98 Kft.</title>
     </x-slot>
     <x-nav.breadcrumb>
