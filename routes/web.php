@@ -26,11 +26,10 @@ Route::get('/ajtok', [DoorController::class, 'index'])->name('door.index');
 Route::get('/ajtok/{door}', [DoorController::class, 'show'])->name('door.show');
 
 Route::prefix('kollekciok')->as('category.')->group(function () {
-
     Route::get('/', [CategoryController::class, 'index'])->name('index');
-
     Route::get('/{category}', [CategoryController::class, 'show'])->name('show');
 });
+
 Route::get('/rolunk', [ManagePageContentController::class, 'rolunk'])->name('rolunk');
 
 Route::get('/kapcsolat', [ManagePageContentController::class, 'kapcsolat'])->name('kapcsolat');
@@ -47,10 +46,9 @@ Route::get('/letoltesek', function () {
 })->name('downloads');
 
 Route::view('/kilincsek', 'kilincsek.index')->name('kilincsek');
-Route::view('/meta', 'google.index',
-[
-
-    ]
+Route::view(
+    '/meta',
+    'google.index'
 )->name('meta');
 
 Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
@@ -90,4 +88,3 @@ Route::get('/sitemap', function () {
     Artisan::call('sitemap:generate');
     return 'Sitemap generated';
 });
-

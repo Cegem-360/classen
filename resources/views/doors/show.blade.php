@@ -1,11 +1,11 @@
+@use('App\Models\MetaKeyWords')
 <x-layouts.app>
     <x-slot name="meta">
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
         <meta name="description"
-            content="Az Arcadia98 Kft. Ajtók aloldala bemutatja {{ __($category->name) }} {{ $door->name }}, részletes információkat nyújt a moddelről. Fedezze fel kínálatunkat, és válasszon az Önnek legmegfelelőbb ajtók közül!">
-        <meta name="keywords"
-            content="ajtók, egyedi modellek, kínálat, szűrés, Arcadia98 Kft., {{ __($category->name) }}, {{ $door->name }}">
+            content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->meta_description }}">
+        <meta name="keywords" content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->key_words }}">
         <title>{{ strtoupper($door->name) }} - {{ strtoupper($category->name) }} - Arcadia98 Kft. </title>
     </x-slot>
     <x-nav.breadcrumb>

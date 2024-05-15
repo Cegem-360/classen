@@ -137,7 +137,7 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereTechnicalParameter($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
  */
-	class Category extends \Eloquent {}
+	class Category extends \Eloquent implements \Spatie\Sitemap\Contracts\Sitemapable {}
 }
 
 namespace App\Models{
@@ -208,16 +208,28 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagName($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Door whereUpdatedAt($value)
  */
-	class Door extends \Eloquent {}
+	class Door extends \Eloquent implements \Spatie\Sitemap\Contracts\Sitemapable {}
 }
 
 namespace App\Models{
 /**
  * App\Models\MetaKeyWords
  *
+ * @property int $id
+ * @property string $collection_name
+ * @property string|null $meta_description
+ * @property string|null $key_words
+ * @property \Illuminate\Support\Carbon|null $created_at
+ * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords query()
+ * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereCollectionName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereKeyWords($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereMetaDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereUpdatedAt($value)
  */
 	class MetaKeyWords extends \Eloquent {}
 }
