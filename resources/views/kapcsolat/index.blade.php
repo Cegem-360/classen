@@ -1,4 +1,12 @@
 <x-layouts.app>
+    <x-slot name="meta">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="description"
+            content="Lépjen kapcsolatba az Arcadia98 Kft.-vel! Itt megtalálja elérhetőségeinket, hogy kérdéseivel és megkereséseivel fordulhasson hozzánk.">
+        <meta name="keywords" content="kapcsolat, elérhetőség, Arcadia98 Kft., üzenetküldés">
+        <title>Kapcsolat - Arcadia98 Kft.</title>
+    </x-slot>
     <x-nav.breadcrumb>
         Kapcsolat
     </x-nav.breadcrumb>
@@ -14,9 +22,9 @@
     <div class="mx-16">
         <div class="mb-16 md:mx-8 sm:mx-4">
             <h2 class="mb-3 text-4xl font-bold">Kapcsolat</h2>
-            <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
+            <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
-        <div class="grid max-w-7xl grid-cols-2 gap-12 sm:grid-cols-1">
+        <div class="grid grid-cols-2 gap-12 max-w-7xl sm:grid-cols-1">
             <div class="">
                 <h3 class="mb-3 text-xl">Arcadia 98 Kft.</h3>
                 <p class="mb-1">1194 Budapest, Citroën utca 4.</p>

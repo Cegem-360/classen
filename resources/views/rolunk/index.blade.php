@@ -1,4 +1,14 @@
 <x-layouts.app>
+    <x-slot name="meta">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+
+        <meta name="description"
+            content="Ha ajtó vásárlás előtt áll, mert építkezésbe, felújításba kezdő tulajdonos, szakember, vállalkozó, viszonteladó vagy ügyeskezű barkácsoló – az Arcadia ’98 Kft. a profi partner abban, hogy a beltéri ajtókat és tartozékait a legmegfelelőbben válassza ki. Cégünk 1998 óta foglalkozik nyílászárók forgalmazásával, jelenleg a Classen cég beltéri ajtóválasztékának kiemelt forgalmazói vagyunk Magyarországon.">
+        <meta name="keywords"
+            content="ajtó vásárlás, beltéri ajtók, beltéri ajtó választás, szaktanácsadás, építkezés, felújítás, Classen, nyílászárók, raktárkészlet, bemutatótermék, kilincs, szakember">
+        <title>Rólunk - Arcadia98 Kft.</title>
+    </x-slot>
     <x-nav.breadcrumb>
         Rólunk
     </x-nav.breadcrumb>
@@ -9,14 +19,15 @@
     <div class="mx-16 md:mx-8 sm:mx-4">
         <div class="mb-16">
             <h2 class="mb-3 text-4xl font-bold">Rólunk</h2>
-            <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
+            <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
-        <div class="grid max-w-7xl grid-cols-2 gap-12 sm:grid-cols-1">
+        <div class="grid grid-cols-2 gap-12 max-w-7xl sm:grid-cols-1">
             <div>
                 <p class="mb-3">Ha ajtó vásárlás előtt áll, mert építkezésbe, felújításba kezdő tulajdonos, szakember,
                     vállalkozó, viszonteladó vagy ügyeskezű barkácsoló – az Arcadia ’98 Kft. a profi partner abban, hogy
                     a beltéri ajtókat és tartozékait a legmegfelelőbben válassza ki.</p>
-                <p class="mb-3">Cégünk 1998 óta foglalkozik nyílászárók forgalmazásával, jelenleg a Classen cég beltéri
+                <p class="mb-3">Cégünk 1998 óta foglalkozik nyílászárók forgalmazásával, jelenleg a Classen cég
+                    beltéri
                     ajtóválasztékának kiemelt forgalmazói vagyunk Magyarországon.</p>
                 <p class="mb-3">Széleskörű kínálattal rendelkezünk mind a beltéri ajtók és kiegészítői, mind az ezzel
                     kapcsolatos szolgáltatások terén.</p>

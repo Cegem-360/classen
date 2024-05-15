@@ -1,4 +1,12 @@
 <x-layouts.app>
+    <x-slot name="meta">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+        <meta name="description"
+            content="Az Arcadia98 Kft. Kedvencek Ajtók oldala lehetővé teszi számára, hogy elmentse és megtekinthesse a kedvenc ajtókat. Válogasson kedvére széles választékunkból, és mentsen el az Ön számára fontos ajtókat ezen az oldalon.">
+        <meta name="keywords" content="kedvencek, ajtók, Arcadia98 Kft., mentés, választék">
+        <title>Kedvencek Ajtók - Arcadia98 Kft.</title>
+    </x-slot>
     <x-nav.breadcrumb>
         {{ __('Favorites') }}
     </x-nav.breadcrumb>
@@ -9,15 +17,15 @@
     <div class="mx-16 md:mx-8 sm:mx-4">
         <div class="mb-16">
             <h2 class="mb-3 text-4xl font-bold">{{ __('Favorites') }}</h2>
-            <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
+            <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
         <div class="max-w-7xl">
             <h3 class="text-xl font-bold tracking-tight text-gray-900">{{ __('Kiválasztott kedvencek') }}</h3>
 
-            <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
+            <div class="grid grid-cols-6 mt-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($products as $product)
-                    <div class="group relative">
-                        <div class="absolute right-0 top-0 z-50">
+                    <div class="relative group">
+                        <div class="absolute top-0 right-0 z-50">
                             <button class="favorite"
                                 onclick="initFavoritesJS.toggleFavoriteItem('{{ $product['id'] }}')">
                                 <x-svg.heart class="fill-white" id="heart-{{ $product['id'] }}"> </x-svg.heart>
@@ -26,12 +34,12 @@
                         <a href="{{ route('door.show', ['door' => $product['id']]) }}" wire:navigate>
                             <div
                                 class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
-                                <img class="h-full w-full object-cover object-center"
+                                <img class="object-cover object-center w-full h-full"
                                     src=" {{ !empty($product['img_url']) ? $product['img_url'] : Vite::asset('resources/img/placeholder.webp') }}">
                             </div>
                         </a>
 
-                        <div class="my-4 flex justify-between">
+                        <div class="flex justify-between my-4">
                             <div>
                                 <h3 class="text-sm text-gray-700">
                                     <a class="flex flex-col" href="{{ route('door.show', ['door' => $product['id']]) }}"

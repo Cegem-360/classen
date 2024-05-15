@@ -1,4 +1,14 @@
 <x-layouts.app>
+    <x-slot name="meta">
+        <meta name="robots" content="index, follow">
+        <meta name="googlebot" content="index, follow">
+
+        <meta name="description"
+            content="Kérjen árajánlatot beltéri ajtókra az Arcadia98 Kft.-től. Töltse ki az űrlapot, és mi hamarosan felvesszük Önnel a kapcsolatot az árajánlat részleteinek megbeszélése érdekében.">
+        <meta name="keywords"
+            content="árajánlat kérés, beltéri ajtók, ajánlatkérés, árajánlat, Arcadia98 Kft., nyílászárók">
+        <title>Árajánlat kérés - Arcadia98 Kft.</title>
+    </x-slot>
     <x-nav.breadcrumb>
         Árajánlat kérés
     </x-nav.breadcrumb>
@@ -9,7 +19,7 @@
     <div class="mx-16 md:mx-8 sm:mx-4">
         <div class="mb-16">
             <h2 class="mb-3 text-4xl font-bold">{{ __('Request a quote') }}</h2>
-            <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
+            <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
         <div class="max-w-7xl">
             <h3 class="text-xl font-bold tracking-tight text-gray-900">{{ __('Customers also purchased') }}</h3>
@@ -18,16 +28,16 @@
                     Nincsen termék az árajánlatban.
                 </div>
             @endif
-            <div class="mt-6 grid grid-cols-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
+            <div class="grid grid-cols-6 mt-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
                 @foreach ($quotationItems ?? [] as $quotationItem)
-                    <div class="group relative">
+                    <div class="relative group">
                         <livewire:remove-quotation-item :$quotationItem :key="$quotationItem->id" />
                         <div
                             class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
-                            <img class="h-full w-full object-cover object-center"
+                            <img class="object-cover object-center w-full h-full"
                                 src="{{ $quotationItem->door->img_url }}" alt="{{ $quotationItem->door->name }}">
                         </div>
-                        <div class="my-4 flex justify-between">
+                        <div class="flex justify-between my-4">
                             <div>
                                 <h3 class="text-sm text-gray-700">
                                     <a class="flex flex-col"
@@ -65,10 +75,10 @@
             </div>
         </div>
 
-        <div class="divide-y max-w-xl py-12 md:max-w-4xl">
+        <div class="max-w-xl py-12 divide-y md:max-w-4xl">
             <form action="{{ route('quotation.store') }}" method="post">
                 @csrf
-                <div class="mt-8 max-w-md">
+                <div class="max-w-md mt-8">
                     <h3 class="text-xl">{{ __('Quotation Request') }}</h1>
                         <p class="mb-4">
                             {{ __('Please fill in the form below and we will get back to you as soon as possible.') }}
