@@ -1,3 +1,4 @@
+@use('App\Models\MetaKeyWords')
 <x-layouts.app>
     <x-slot name="meta">
         <meta name="robots" content="index, follow">
