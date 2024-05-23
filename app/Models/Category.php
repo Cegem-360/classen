@@ -54,7 +54,7 @@ class Category extends Model implements Sitemapable
         // Simple return:
 
         // Return with fine-grained control:
-        return Url::create(route('category.show', $this))
+        return Url::create(route('category.show', $this->name))
             ->setLastModificationDate(Carbon::create($this->updated_at))
             ->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY)
             ->setPriority(0.1);
