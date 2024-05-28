@@ -8,9 +8,9 @@
             BELTÉRI AJTÓK
         </title>
         <meta name="description"
-            content="Üdvözöljük weboldalunkon, ahol formabontó megoldásokat kínálunk a legújabb trendek szerint. Keresse meg tökéletes tapéta és compact ajtóinkat, hogy enteriőre tökéletesen illeszkedjen.">
+            content="Az Arcadia 98 Kft. több évtizedes tapasztalattal rendelkezik a beltéri ajtók forgalmazásában. Kínálatunkban festett ajtók, fa mintázatú ajtók és többféle stílusú ajtó is megtalálható, széles méretválasztékban. Ajtóink kiváló minőségűek, tartósak és esztétikusak.">
         <meta name="keywords"
-            content="tapéta ajtó, compact ajtórendszer, belső ajtók, trendek, enteriőr, formabontó megoldások, fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók">
+            content="beltéri ajtók, festett ajtók, fa mintázatú ajtók, modern ajtók, klasszikus ajtók, rusztikus ajtók, Budapest, Citroën utca 4., Arcadia 98 Kft.">
     </x-slot>
     <!-- Hero banner -->
     <x-partials.hero-banner-3 />
