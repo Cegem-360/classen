@@ -567,7 +567,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-dfd5c832.css",
+    "file": "assets/app-ce0d799d.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -576,9 +576,9 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-dfd5c832.css"
+      "assets/app-ce0d799d.css"
     ],
-    "file": "assets/app-8db4edc7.js",
+    "file": "assets/app-1986ccd2.js",
     "imports": [
       "_ScrollTrigger-9e689d32.js"
     ],

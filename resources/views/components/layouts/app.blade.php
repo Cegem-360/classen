@@ -10,7 +10,7 @@
     <link href="https://fonts.bunny.net" rel="preconnect">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <meta name="google-site-verification" content="1r1A-5l2zFHc6q7tQRiEKDz2iIvykXK-WXwqrZwHU2Q" />
-
+    @include('googletagmanager::head')
     @if (isset($meta))
         {{ $meta }}
     @endif
@@ -50,7 +50,7 @@
 </head>
 
 <body class="font-sans antialiased">
-
+    @include('googletagmanager::body')
     {{-- SPA Do not delete --}}
     <livewire:app />
     <div class="min-h-screen">
