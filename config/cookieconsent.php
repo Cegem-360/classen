@@ -37,7 +37,7 @@ return [
     */
 
     'cookie' => [
-        'name' => Str::slug(env('APP_NAME', 'laravel'), '_').'_cookie_consent',
+        'name' => Str::slug(env('APP_NAME', 'laravel'), '_') . '_cookie_consent',
         'duration' => (60 * 24 * 365),
         'domain' => null,
     ],
@@ -55,4 +55,5 @@ return [
 
     'policy' => null,
 
+    'google_analytics_id' => env('GOOGLE_ANALYTICS_ID', ''),
 ];
