@@ -35,6 +35,6 @@ class RequestQuotationButton extends Component
 
     public function render()
     {
-        return view('livewire.request-quotation-button');
+        return view('livewire.request-quotation-button')->with('door', $this->door);
     }
 }
