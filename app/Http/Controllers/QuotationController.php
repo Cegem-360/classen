@@ -82,7 +82,7 @@ class QuotationController extends Controller
             'last_name' => $validated['last_name'],
             'email' => $validated['email'],
             'phone' => $validated['phone'],
-            'message' => $validated['message'],
+            'message' => $request->message,
         ]);
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
         Mail::to($request->email)->cc('web-ertesito@arcadia98.hu')->send(new RequestQuotationSended($quotation, $quotationItems));
