@@ -38,7 +38,7 @@
                     szombat: 9:00 - 13:00</p>
             </div>
             <div class="">
-                <form action="" method="post">
+                <form action="{{ route('mail.sendContact') }}" method="POST">
                     @csrf
                     <div class="">
                         <h3 class="mb-3 text-xl font-bold">{{ __('Írjon nekünk!') }}</h3>

@@ -34,6 +34,11 @@ Route::get('/rolunk', [ManagePageContentController::class, 'rolunk'])->name('rol
 
 Route::get('/kapcsolat', [ManagePageContentController::class, 'kapcsolat'])->name('kapcsolat');
 
+Route::prefix('mail')->as('mail.')->group(function () {
+    // Route::get('/contact', [ManagePageContentController::class, 'contact'])->name('contact');
+    Route::post('/sendContact', [ManagePageContentController::class, 'sendContact'])->name('sendContact');
+});
+
 Route::get('/szolgaltatasaink', [ManagePageContentController::class, 'szolgaltatasaink'])->name('szolgaltatasaink');
 
 Route::get('/blog', [ManagePageContentController::class, 'blog'])->name('blog');

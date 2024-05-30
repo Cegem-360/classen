@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Category;
-use App\Models\Door;
 use Cookie;
+use App\Models\Door;
 use GuzzleHttp\Client;
+use App\Models\Category;
+use App\Mail\ContactForm;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
 class ManagePageContentController extends Controller
@@ -41,6 +43,32 @@ class ManagePageContentController extends Controller
     public function kapcsolat()
     {
         return view('kapcsolat/index');
+    }
+    public function sendContact(Request $request)
+    {
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required|email',
+            'message' => 'required',
+        ]);
+
+        $first_name = $request->input('first_name');
+        $last_name = $request->input('last_name');
+        $email = $request->input('email');
+        $phone = $request->input('phone');
+        $message = $request->input('message');
+
+        // Send email
+        Mail::to('vevoszolgalat@arcadia98.hu')->send(new ContactForm(
+            $first_name,
+            $last_name,
+            $email,
+            $phone,
+            $message
+        ));
+
+        return redirect()->route('kapcsolat')->with('success', __('Message sent successfully!'));
     }
 
     public function szolgaltatasaink()
