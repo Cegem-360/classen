@@ -67,7 +67,6 @@ class QuotationController extends Controller
 
     public function store(Request $request)
     {
-        $admin = 'zoli.szabok@gmail.com';
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),
         ]));
@@ -76,7 +75,6 @@ class QuotationController extends Controller
             'last_name' => 'required',
             'email' => 'required|email',
             'phone' => 'required',
-            'message' => 'required',
         ])->validate();
         // $validated = $request->validated();
         $quotation->update([
@@ -87,12 +85,7 @@ class QuotationController extends Controller
             'message' => $validated['message'],
         ]);
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
-        try {
-            Mail::to($request->email)->cc('web-ertesito@arcadia98.hu')->send(new RequestQuotationSended($quotation, $quotationItems));
-        } catch (\Throwable $th) {
-            throw $th;
-        }
-
+        Mail::to($request->email)->cc('web-ertesito@arcadia98.hu')->send(new RequestQuotationSended($quotation, $quotationItems));
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
 }
