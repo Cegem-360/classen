@@ -139,8 +139,8 @@
                     <li><strong>Szavatosság:</strong></li>
                 </ol>
                 <p>Panaszt csak és kizárólag írásos formában (e-mailen elküldhetik a </p><a
-                    href="mailto:vevoszolgalat@arcadia98.hu">
-                    <p>vevoszolgalat@arcadia98.hu</p>
+                    href="mailto:web-ertesito@arcadia98.hu">
+                    <p>web-ertesito@arcadia98.hu</p>
                 </a>
                 <p> -ra, vagy bejelenthetik a </p><a href="http://www.dooroutlet.hu">
                     <p>www.dooroutlet.hu</p>

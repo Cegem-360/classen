@@ -88,7 +88,7 @@ class QuotationController extends Controller
         ]);
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
         try {
-            Mail::to($request->email)->cc('vevoszolgalat@arcadia98.hu')->send(new RequestQuotationSended($quotation, $quotationItems));
+            Mail::to($request->email)->cc('web-ertesito@arcadia98.hu')->send(new RequestQuotationSended($quotation, $quotationItems));
         } catch (\Throwable $th) {
             throw $th;
         }
