@@ -50,14 +50,14 @@ class ManagePageContentController extends Controller
             'first_name' => 'required',
             'last_name' => 'required',
             'email' => 'required|email',
-            'message' => 'required',
+            'emailMessage' => 'required',
         ]);
 
         $first_name = $request->first_name;
         $last_name = $request->last_name;
         $email = $request->inputemail;
         $phone = $request->phone;
-        $message = $request->message;
+        $emailMessage = $request->message;
 
         // Send email
         Mail::to('vevoszolgalat@arcadia98.hu')->send(new ContactForm(
@@ -65,7 +65,7 @@ class ManagePageContentController extends Controller
             $last_name,
             $email,
             $phone,
-            $message
+            $emailMessage
         ));
 
         return redirect()->route('kapcsolat')->with('success', __('Message sent successfully!'));

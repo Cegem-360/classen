@@ -17,18 +17,18 @@ class ContactForm extends Mailable
     public $last_name;
     public $email;
     public $phone;
-    public $message;
+    public $emailMessage;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($first_name, $last_name, $email, $phone, $message)
+    public function __construct($first_name, $last_name, $email, $phone, $emailMessage)
     {
         $this->first_name = $first_name;
         $this->last_name = $last_name;
         $this->email = $email;
         $this->phone = $phone;
-        $this->message = $message;
+        $this->emailMessage = $emailMessage;
     }
 
     /**
@@ -53,7 +53,7 @@ class ContactForm extends Mailable
                 'last_name' => $this->last_name,
                 'email' => $this->email,
                 'phone' => $this->phone,
-                'message' => $this->message,
+                'emailMessage' => $this->emailMessage,
             ]
         );
     }

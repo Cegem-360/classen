@@ -174,7 +174,7 @@
                     <tr>
                         <td style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #000000; line-height: 24px; letter-spacing: 2px;"
                             align="center">
-                            {{ $message }}
+                            {{ $emailMessage }}
                         </td>
                     </tr>
 
