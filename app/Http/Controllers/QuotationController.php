@@ -76,6 +76,7 @@ class QuotationController extends Controller
             'email' => 'required|email',
             'phone' => 'required',
         ])->validate();
+
         $quotation->update([
             'first_name' => $validated['first_name'],
             'last_name' => $validated['last_name'],
