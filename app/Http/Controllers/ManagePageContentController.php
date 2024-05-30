@@ -53,11 +53,11 @@ class ManagePageContentController extends Controller
             'message' => 'required',
         ]);
 
-        $first_name = $request->input('first_name');
-        $last_name = $request->input('last_name');
-        $email = $request->input('email');
-        $phone = $request->input('phone');
-        $message = $request->input('message');
+        $first_name = $request->first_name;
+        $last_name = $request->last_name;
+        $email = $request->inputemail;
+        $phone = $request->phone;
+        $message = $request->message;
 
         // Send email
         Mail::to('vevoszolgalat@arcadia98.hu')->send(new ContactForm(
