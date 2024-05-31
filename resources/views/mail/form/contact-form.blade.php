@@ -155,7 +155,7 @@
                     <tr>
                         <td style="font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 700; color: #000000; line-height: 24px; letter-spacing: 2px;"
                             align="center">
-                            {{ $first_name }} {{ $last_name }} részére
+                            {{ $first_name }} {{ $last_name }}
                         </td>
                     </tr>
 

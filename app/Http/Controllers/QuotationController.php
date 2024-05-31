@@ -82,10 +82,13 @@ class QuotationController extends Controller
             'last_name' => $validated['last_name'],
             'email' => $validated['email'],
             'phone' => $validated['phone'],
-            'message' => $request->message,
+            'message' => $request->message ?? '',
         ]);
+
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
-        Mail::to($request->email)->cc('web-ertesito@arcadia98.hu')->send(new RequestQuotationSended($quotation, $quotationItems));
+
+        Mail::to($request->email)->cc(config('mail.from.address', ''))->send(new RequestQuotationSended($quotation, $quotationItems));
+
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
 }

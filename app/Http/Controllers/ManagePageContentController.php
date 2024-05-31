@@ -57,10 +57,10 @@ class ManagePageContentController extends Controller
         $last_name = $request->last_name;
         $email = $request->inputemail;
         $phone = $request->phone;
-        $emailMessage = $request->message;
+        $emailMessage = $request->emailMessage;
 
         // Send email
-        Mail::to('web-ertesito@arcadia98.hu')->send(new ContactForm(
+        Mail::to(config('mail.from.address', 'web-ertesito@arcadia98.hu'))->send(new ContactForm(
             $first_name,
             $last_name,
             $email,
