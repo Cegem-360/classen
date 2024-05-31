@@ -19,7 +19,6 @@ class RequestQuotationSended extends Mailable
      */
     public function __construct(public Quotation $quotation, public Collection $quotationItems)
     {
-        //$this->from('weboldal@arcadaia98.hu');
     }
 
     /**
