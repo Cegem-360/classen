@@ -68,7 +68,7 @@ class ManagePageContentController extends Controller
             $emailMessage
         ));
 
-        return redirect()->route('kapcsolat')->with('success', __('Message sent successfully!'));
+        return redirect()->route('kapcsolat')->success(__('Message sent successfully!'));
     }
 
     public function szolgaltatasaink()
