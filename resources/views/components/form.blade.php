@@ -10,8 +10,8 @@
             placeholder="{{ __('Last Name') }}"></x-text-input>
     </div>
     <div>
-        <x-input-label class="hidden" for="email">{{ __('Email') }}</x-input-label>
-        <x-text-input class="mt-0 border-t-0 form-input" id="email" name="email" type="email"
+        <x-input-label class="hidden" for="contactEmail">{{ __('Email') }}</x-input-label>
+        <x-text-input class="mt-0 border-t-0 form-input" id="contactEmail" name="contactEmail" type="email"
             placeholder="{{ __('Email') }}"></x-text-input>
     </div>
     <div>
@@ -20,7 +20,7 @@
             placeholder="{{ __('Phone') }}"></x-text-input>
     </div>
     <div>
-        <x-input-label class="hidden" for="message">{{ __('Message') }}</x-input-label>
+        <x-input-label class="hidden" for="emailMessage">{{ __('Message') }}</x-input-label>
 
         <textarea
             class="block w-full mt-4 border-t-0 border-gray-400 form-textarea border-x-0 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"

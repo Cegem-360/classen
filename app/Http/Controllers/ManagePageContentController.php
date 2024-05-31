@@ -49,13 +49,13 @@ class ManagePageContentController extends Controller
         $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required|email',
+            'contactEmail' => 'required|email',
             'emailMessage' => 'required',
         ]);
 
         $first_name = $request->first_name;
         $last_name = $request->last_name;
-        $email = $request->inputemail;
+        $contactEmail = $request->contactEmail;
         $phone = $request->phone;
         $emailMessage = $request->emailMessage;
 
@@ -63,7 +63,7 @@ class ManagePageContentController extends Controller
         Mail::to(config('mail.from.address', 'web-ertesito@arcadia98.hu'))->send(new ContactForm(
             $first_name,
             $last_name,
-            $email,
+            $contactEmail,
             $phone,
             $emailMessage
         ));

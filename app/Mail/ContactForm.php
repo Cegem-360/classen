@@ -15,18 +15,18 @@ class ContactForm extends Mailable
 
     public $first_name;
     public $last_name;
-    public $email;
+    public $contactEmail;
     public $phone;
     public $emailMessage;
 
     /**
      * Create a new message instance.
      */
-    public function __construct($first_name, $last_name, $email, $phone, $emailMessage)
+    public function __construct($first_name, $last_name, $contactEmail, $phone, $emailMessage)
     {
         $this->first_name = $first_name;
         $this->last_name = $last_name;
-        $this->email = $email;
+        $this->contactEmail = $contactEmail;
         $this->phone = $phone;
         $this->emailMessage = $emailMessage;
     }
@@ -51,7 +51,7 @@ class ContactForm extends Mailable
             with: [
                 'first_name' => $this->first_name,
                 'last_name' => $this->last_name,
-                'email' => $this->email,
+                'contactEmail' => $this->contactEmail,
                 'phone' => $this->phone,
                 'emailMessage' => $this->emailMessage,
             ]
