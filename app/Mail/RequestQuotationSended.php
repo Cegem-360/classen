@@ -27,7 +27,6 @@ class RequestQuotationSended extends Mailable
      */
     public function envelope(): Envelope
     {
-        //TODO: Change this to the email of the company
         return new Envelope(
 
             subject: 'Ajánlatkérés',
