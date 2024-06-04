@@ -1,9 +1,9 @@
 <x-layouts.app>
     <x-slot name="meta">
         <meta name="description"
-            content="fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók">
+            content="beltéri ajtók,fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók">
         <meta name="keywords"
-            content="fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók">
+            content="beltéri ajtók,fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók">
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
 
