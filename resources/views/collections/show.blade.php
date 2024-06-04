@@ -6,6 +6,7 @@
         <meta name="description"
             content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->meta_description }}">
         <meta name="keywords" content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->key_words }}">
+        <link rel="canonical" href="{{ Request::url() }}">
         <title>{{ __($category->name) }} Kollekció - Arcadia98 Kft.</title>
     </x-slot>
     <x-nav.breadcrumb>
