@@ -5,6 +5,7 @@
         <meta name="description"
             content="Az Arcadia98 Kft. Kedvencek Ajtók oldala lehetővé teszi számára, hogy elmentse és megtekinthesse a kedvenc ajtókat. Válogasson kedvére széles választékunkból, és mentsen el az Ön számára fontos ajtókat ezen az oldalon.">
         <meta name="keywords" content="kedvencek, ajtók, Arcadia98 Kft., mentés, választék">
+        <link rel="canonical" href="{{ Request::url() }}">
         <title>Kedvencek Ajtók - Arcadia98 Kft.</title>
     </x-slot>
     <x-nav.breadcrumb>

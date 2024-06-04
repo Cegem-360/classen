@@ -5,6 +5,7 @@
         <meta name="description"
             content="Az Általános Szerződési Feltételek (ÁSZF) meghatározzák az Arcadia98 Kft. weboldalának használatára vonatkozó feltételeket és szabályokat. Kérjük, olvassa el a részleteket, mielőtt használná weboldalunkat.">
         <meta name="keywords" content="ÁSZF, Általános Szerződési Feltételek, felhasználási feltételek, Arcadia98 Kft.">
+        <link rel="canonical" href="{{ Request::url() }}">
         <title>Általános Szerződési Feltételek - Arcadia98 Kft.</title>
     </x-slot>
     <x-nav.breadcrumb>

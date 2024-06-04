@@ -5,6 +5,7 @@
         <meta name="description"
             content="Az Adatvédelmi Nyilatkozat részletesen ismerteti, hogy az Arcadia98 Kft. hogyan kezeli és védi az Ön személyes adatait weboldalunk használata során. Kérjük, olvassa el a részleteket az adatvédelemmel kapcsolatban.">
         <meta name="keywords" content="adatvédelem, adatvédelmi nyilatkozat, Arcadia98 Kft., személyes adatok">
+        <link rel="canonical" href="{{ Request::url() }}">
         <title>Adatvédelmi Nyilatkozat - Arcadia98 Kft.</title>
     </x-slot>
     <x-nav.breadcrumb>

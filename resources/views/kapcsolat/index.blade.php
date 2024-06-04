@@ -5,6 +5,7 @@
         <meta name="description"
             content="Lépjen kapcsolatba az Arcadia98 Kft.-vel! Itt megtalálja elérhetőségeinket, hogy kérdéseivel és megkereséseivel fordulhasson hozzánk.">
         <meta name="keywords" content="kapcsolat, elérhetőség, Arcadia98 Kft., üzenetküldés">
+        <link rel="canonical" href="{{ Request::url() }}">
         <title>Kapcsolat - Arcadia98 Kft.</title>
     </x-slot>
     <x-nav.breadcrumb>

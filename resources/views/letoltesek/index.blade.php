@@ -6,6 +6,7 @@
             content="Arcadia98 Kft. letölthető dokumentumok: bővített beltéri ajtókatalógus 2024, Dooroutlet belteri ajtó raktári üveges színek 2024, Dooroutlet ajtólap méretek és nyitási irányok, Dooroutlet utólag beépíthető falcolt tok méretek, Arcadia 98 Kft. bruttó Kiskereskedelmi árlista 2023.">
         <meta name="keywords"
             content="letöltések, Arcadia98 Kft., beltéri ajtók, katalógus, árlista, Dooroutlet, méretek, nyitási irányok">
+        <link rel="canonical" href="{{ Request::url() }}">
         <title>Letöltések - Arcadia98 Kft.</title>
     </x-slot>
     <x-nav.breadcrumb>

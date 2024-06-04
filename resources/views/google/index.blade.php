@@ -6,7 +6,7 @@
             content="beltéri ajtók,fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók">
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
-
+        <link rel="canonical" href="{{ Request::url() }}">
         <title>
             Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók
         </title>

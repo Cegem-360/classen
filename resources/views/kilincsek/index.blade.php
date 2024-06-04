@@ -6,6 +6,7 @@
             content="Arcadia98 Kft. letölthető dokumentumok: Maestro kilincskatalógus online 2023.1, TUPAI kilincskatalógus 2022, SMART LOCK kilincskatalógus, Dnd kilincskatalógus 2022-2023.">
         <meta name="keywords"
             content="kilincsek, Arcadia98 Kft., letöltések, Maestro, TUPAI, SMART LOCK, Dnd, kilincskatalógus">
+        <link rel="canonical" href="{{ Request::url() }}">
         <title>Kilincsek - Arcadia98 Kft.</title>
     </x-slot>
     <x-nav.breadcrumb>
