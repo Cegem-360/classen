@@ -73,7 +73,7 @@ class QuotationController extends Controller
         $validated = Validator::make($request->all(), [
             'first_name' => 'required',
             'last_name' => 'required',
-            'email' => 'required|email',
+            'contactEmail' => 'required|email',
             'phone' => 'required',
         ])->validate();
 
@@ -81,7 +81,7 @@ class QuotationController extends Controller
             'first_name' => $validated['first_name'],
             'last_name' => $validated['last_name'],
             'email' => $validated['email'],
-            'phone' => $validated['phone'],
+            'phone' => $validated['contactEmail'],
             'message' => $request->message ?? '',
         ]);
 
