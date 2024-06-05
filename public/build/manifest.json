@@ -6,6 +6,14 @@
     "file": "assets/Classen-drzwi-Ferro-dab-nordycki-89fc95c0.webp",
     "src": "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp"
   },
+  "resources/img/Classen_Venis_drzwi_przesuwne.jpg": {
+    "file": "assets/Classen_Venis_drzwi_przesuwne-3f182238.jpg",
+    "src": "resources/img/Classen_Venis_drzwi_przesuwne.jpg"
+  },
+  "resources/img/Classen_Venis_drzwi_przesuwne.webp": {
+    "file": "assets/Classen_Venis_drzwi_przesuwne-bf769e7b.webp",
+    "src": "resources/img/Classen_Venis_drzwi_przesuwne.webp"
+  },
   "resources/img/IMG_7478.webp": {
     "file": "assets/IMG_7478-6ce3b787.webp",
     "src": "resources/img/IMG_7478.webp"
@@ -578,7 +586,7 @@
     "css": [
       "assets/app-ce0d799d.css"
     ],
-    "file": "assets/app-1986ccd2.js",
+    "file": "assets/app-5326f775.js",
     "imports": [
       "_ScrollTrigger-9e689d32.js"
     ],

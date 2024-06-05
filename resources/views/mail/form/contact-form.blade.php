@@ -134,7 +134,7 @@
         <tr>
             <!-- Background -->
             <td style="background-size: cover; background-position: center;" align="center" bgcolor="#333333"
-                background="http://arcadia98.cegem360.hu/build/assets/drzwi-przesuwne2-1920x768-610daff4.webp">
+                background="{{ Vite::asset('resources/img/Classen_Venis_drzwi_przesuwne.webp') }}">
                 <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
 
                     <tr>
