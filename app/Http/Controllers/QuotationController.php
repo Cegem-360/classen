@@ -84,7 +84,7 @@ class QuotationController extends Controller
             'last_name' => $validated['last_name'],
             'email' => $validated['contactEmail'],
             'phone' => $validated['phone'],
-            'message' => $request->message ?? '',
+            'message' => $request->emailMessage ?? '',
         ]);
 
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
