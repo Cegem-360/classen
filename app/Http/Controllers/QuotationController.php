@@ -80,14 +80,14 @@ class QuotationController extends Controller
         $quotation->update([
             'first_name' => $validated['first_name'],
             'last_name' => $validated['last_name'],
-            'email' => $validated['email'],
-            'phone' => $validated['contactEmail'],
+            'email' => $validated['contactEmail'],
+            'phone' => $validated['phone'],
             'message' => $request->message ?? '',
         ]);
 
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
 
-        Mail::to($request->email)->cc(config('mail.from.address', 'web-ertesito@arcadia98.hu'))->send(new RequestQuotationSended($quotation, $quotationItems));
+        Mail::to($validated['contactEmail'])->cc(config('mail.from.address', 'web-ertesito@arcadia98.hu'))->send(new RequestQuotationSended($quotation, $quotationItems));
 
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
