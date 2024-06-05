@@ -14,7 +14,7 @@ class QuotationController extends Controller
 {
     public function index()
     {
-        $quotation = session('quotation', Quotation::create([
+        $quotation = session('quotation', Quotation::firstOrcreate([
             'session_id' => session()->getId(),
         ]));
         if (session()->missing('quotation')) {
