@@ -67,7 +67,7 @@ class QuotationController extends Controller
 
     public function store(Request $request)
     {
-        $quotation = session()->get('quotation', Quotation::create([
+        $quotation = session()->get('quotation', Quotation::firstOrcreate([
             'session_id' => session()->getId(),
         ]));
         $validated = Validator::make($request->all(), [
