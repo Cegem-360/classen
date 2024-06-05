@@ -78,6 +78,7 @@ class QuotationController extends Controller
         ])->validate();
 
         $quotation->update([
+            'session_id' => session()->getId(),
             'first_name' => $validated['first_name'],
             'last_name' => $validated['last_name'],
             'email' => $validated['contactEmail'],
