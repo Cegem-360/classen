@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Mail\RequestQuotationSended;
+use Validator;
 use App\Models\Door;
 use App\Models\Quotation;
-use App\Models\QuotationItem;
+use App\Mail\QuotationInner;
 use Illuminate\Http\Request;
+use App\Models\QuotationItem;
+use App\Mail\RequestQuotationSended;
 use Illuminate\Support\Facades\Mail;
-use Validator;
 
 class QuotationController extends Controller
 {
@@ -89,6 +90,7 @@ class QuotationController extends Controller
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
 
         Mail::to($validated['contactEmail'])->cc(config('mail.from.address', 'web-ertesito@arcadia98.hu'))->send(new RequestQuotationSended($quotation, $quotationItems));
+        Mail::to(config('mail.from.address', 'web-ertesito@arcadia98.hu'))->send(new QuotationInner($quotation, $quotationItems));
 
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
