@@ -4,7 +4,7 @@
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
         <meta name="description"
-            content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->meta_description }}">
+            content="{{ MetaKeyWords::where('collection_name', $category->name)->firstOrCreate(['meta_description' => 'Arcadia98 Kft. letölthető dokumentumok: bővített beltéri ajtókatalógus 2024, Dooroutlet belteri ajtó raktári üveges színek 2024, Dooroutlet ajtólap méretek és nyitási irányok, Dooroutlet utólag beépíthető falcolt tok méretek, Arcadia 98 Kft. bruttó Kiskereskedelmi árlista 2023.'])->meta_description }}">
         <meta name="keywords" content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->key_words }}">
         <link rel="canonical" href="{{ Request::url() }}">
         <title>{{ __($category->name) }} Kollekció - Arcadia98 Kft.</title>
