@@ -87,7 +87,7 @@ class QuotationController extends Controller
 
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
 
-        Mail::to($request->email)->cc(config('mail.from.address', ''))->send(new RequestQuotationSended($quotation, $quotationItems));
+        Mail::to($request->email)->cc(config('mail.from.address', 'web-ertesito@arcadia98.hu'))->send(new RequestQuotationSended($quotation, $quotationItems));
 
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
