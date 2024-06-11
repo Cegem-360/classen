@@ -24,42 +24,44 @@
             <h3 class="text-xl font-bold tracking-tight text-gray-900">{{ __('Kiválasztott kedvencek') }}</h3>
 
             <div class="grid grid-cols-6 mt-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
-                @foreach ($products ?? [] as $product)
-                    <div class="relative group">
-                        <div class="absolute top-0 right-0 z-50">
-                            <button class="favorite"
-                                onclick="initFavoritesJS.toggleFavoriteItem('{{ $product['id'] }}')">
-                                <x-svg.heart class="fill-white" id="heart-{{ $product['id'] }}"> </x-svg.heart>
-                            </button>
-                        </div>
-                        <a href="{{ route('door.show', ['door' => $product['id']]) }}" wire:navigate>
-                            <div
-                                class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
-                                <img class="object-cover object-center w-full h-full"
-                                    src=" {{ !empty($product['img_url']) ? $product['img_url'] : Vite::asset('resources/img/placeholder.webp') }}">
+                @empty(!$products)
+                    @foreach ($products ?? [] as $product)
+                        <div class="relative group">
+                            <div class="absolute top-0 right-0 z-50">
+                                <button class="favorite"
+                                    onclick="initFavoritesJS.toggleFavoriteItem('{{ $product['id'] }}')">
+                                    <x-svg.heart class="fill-white" id="heart-{{ $product['id'] }}"> </x-svg.heart>
+                                </button>
                             </div>
-                        </a>
+                            <a href="{{ route('door.show', ['door' => $product['id']]) }}" wire:navigate>
+                                <div
+                                    class="sm:aspect-none aspect-[7/16] overflow-hidden rounded-md bg-gray-200 group-hover:opacity-75">
+                                    <img class="object-cover object-center w-full h-full"
+                                        src=" {{ !empty($product['img_url']) ? $product['img_url'] : Vite::asset('resources/img/placeholder.webp') }}">
+                                </div>
+                            </a>
 
-                        <div class="flex justify-between my-4">
-                            <div>
-                                <h3 class="text-sm text-gray-700">
-                                    <a class="flex flex-col" href="{{ route('door.show', ['door' => $product['id']]) }}"
-                                        wire:navigate>
-                                        <span class="inset-0" aria-hidden="true"></span>
-                                        {{ $product['category']['name'] }}
-                                        <span class="inset-0" aria-hidden="true"></span>
-                                        <b>{{ __($product['tag_name']) }}</b>
-                                    </a>
-                                </h3>
-                                <p class="mt-1 text-sm text-gray-700">{{ $product['name'] }}</p>
+                            <div class="flex justify-between my-4">
+                                <div>
+                                    <h3 class="text-sm text-gray-700">
+                                        <a class="flex flex-col" href="{{ route('door.show', ['door' => $product['id']]) }}"
+                                            wire:navigate>
+                                            <span class="inset-0" aria-hidden="true"></span>
+                                            {{ $product['category']['name'] }}
+                                            <span class="inset-0" aria-hidden="true"></span>
+                                            <b>{{ __($product['tag_name']) }}</b>
+                                        </a>
+                                    </h3>
+                                    <p class="mt-1 text-sm text-gray-700">{{ $product['name'] }}</p>
+                                </div>
+                                <p class="text-sm font-medium text-gray-900">
+                                    <x-collections.partials.price>{{ $product['price'] }}</x-collections.partials.price>
+                                </p>
+
                             </div>
-                            <p class="text-sm font-medium text-gray-900">
-                                <x-collections.partials.price>{{ $product['price'] }}</x-collections.partials.price>
-                            </p>
-
                         </div>
-                    </div>
-                @endforeach
+                    @endforeach
+                @endempty
             </div>
         </div>
     </div>
