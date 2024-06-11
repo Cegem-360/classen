@@ -24,7 +24,7 @@
             <h3 class="text-xl font-bold tracking-tight text-gray-900">{{ __('Kiválasztott kedvencek') }}</h3>
 
             <div class="grid grid-cols-6 mt-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
-                @foreach ($products as $product)
+                @foreach ($products ?? [] as $product)
                     <div class="relative group">
                         <div class="absolute top-0 right-0 z-50">
                             <button class="favorite"
