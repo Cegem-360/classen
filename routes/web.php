@@ -29,6 +29,8 @@ Route::prefix('kollekciok')->as('category.')->group(function () {
     Route::get('/', [CategoryController::class, 'index'])->name('index');
     Route::get('/{category}', [CategoryController::class, 'show'])->name('show');
 });
+Route::get('/category-import', [CategoryController::class, 'upload']);
+Route::post('/category-proccess', [CategoryController::class, 'import'])->name('exel.proccess');
 
 Route::get('/rolunk', [ManagePageContentController::class, 'rolunk'])->name('rolunk');
 

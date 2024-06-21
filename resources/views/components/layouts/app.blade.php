@@ -11,9 +11,10 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     <meta name="google-site-verification" content="1r1A-5l2zFHc6q7tQRiEKDz2iIvykXK-WXwqrZwHU2Q" />
     @include('googletagmanager::head')
-    @if (isset($meta))
+
+    @isset($meta)
         {{ $meta }}
-    @endif
+    @endisset
 
     @isset($style)
         <style>
