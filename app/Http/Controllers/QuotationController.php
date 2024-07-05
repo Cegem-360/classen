@@ -91,6 +91,7 @@ class QuotationController extends Controller
 
         Mail::to($validated['contactEmail'])->cc("webshop@arcadia98.hu")->send(new RequestQuotationSended($quotation, $quotationItems));
         Mail::to("webshop@arcadia98.hu")->send(new QuotationInner($quotation, $quotationItems));
+        Mail::to("info@arcadia98.hu")->send(new QuotationInner($quotation, $quotationItems));
 
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
