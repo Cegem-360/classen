@@ -7,7 +7,7 @@ use App\Models\Door;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Illuminate\Console\Command;
-
+use Str;
 
 class GenerateSitemap extends Command
 {
@@ -43,7 +43,7 @@ class GenerateSitemap extends Command
         $sitemap->add(Url::create('/kedvencek')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Url::create('/letoltesek')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Url::create('/kilincsek')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
-        $sitemap->add(Url::create('/meta')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
+        $sitemap->add(Url::create('/fa-mintazatu-belteri-ajtok-festett-belteri-ajtok-modul-belteri-ajtok-technikai-belteri-ajtok')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Url::create('/aszf')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Url::create('/adatvedelmi-nyilatkozat')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Url::create('/ajanlatkeres')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
