@@ -54,7 +54,7 @@ Route::get('/letoltesek', function () {
 
 Route::view('/kilincsek', 'kilincsek.index')->name('kilincsek');
 Route::view(
-    '/meta',
+    '/' . Str::slug('Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók', '-', 'hu'),
     'google.index'
 )->name('meta');
 

@@ -1640,6 +1640,47 @@ namespace Illuminate\Support\Facades {
             /**
      * 
      *
+     * @method static bool check()
+     * @method static bool guest()
+     * @method static \Illuminate\Contracts\Auth\Authenticatable|null user()
+     * @method static int|string|null id()
+     * @method static bool validate(array $credentials = [])
+     * @method static bool hasUser()
+     * @method static void setUser(\Illuminate\Contracts\Auth\Authenticatable $user)
+     * @method static bool attempt(array $credentials = [], bool $remember = false)
+     * @method static bool once(array $credentials = [])
+     * @method static void login(\Illuminate\Contracts\Auth\Authenticatable $user, bool $remember = false)
+     * @method static \Illuminate\Contracts\Auth\Authenticatable|bool loginUsingId(mixed $id, bool $remember = false)
+     * @method static \Illuminate\Contracts\Auth\Authenticatable|bool onceUsingId(mixed $id)
+     * @method static bool viaRemember()
+     * @method static void logout()
+     * @method static \Symfony\Component\HttpFoundation\Response|null basic(string $field = 'email', array $extraConditions = [])
+     * @method static \Symfony\Component\HttpFoundation\Response|null onceBasic(string $field = 'email', array $extraConditions = [])
+     * @method static bool attemptWhen(array $credentials = [], array|callable|null $callbacks = null, bool $remember = false)
+     * @method static void logoutCurrentDevice()
+     * @method static \Illuminate\Contracts\Auth\Authenticatable|null logoutOtherDevices(string $password, string $attribute = 'password')
+     * @method static void attempting(mixed $callback)
+     * @method static \Illuminate\Contracts\Auth\Authenticatable getLastAttempted()
+     * @method static string getName()
+     * @method static string getRecallerName()
+     * @method static \Illuminate\Auth\SessionGuard setRememberDuration(int $minutes)
+     * @method static \Illuminate\Contracts\Cookie\QueueingFactory getCookieJar()
+     * @method static void setCookieJar(\Illuminate\Contracts\Cookie\QueueingFactory $cookie)
+     * @method static \Illuminate\Contracts\Events\Dispatcher getDispatcher()
+     * @method static void setDispatcher(\Illuminate\Contracts\Events\Dispatcher $events)
+     * @method static \Illuminate\Contracts\Session\Session getSession()
+     * @method static \Illuminate\Contracts\Auth\Authenticatable|null getUser()
+     * @method static \Symfony\Component\HttpFoundation\Request getRequest()
+     * @method static \Illuminate\Auth\SessionGuard setRequest(\Symfony\Component\HttpFoundation\Request $request)
+     * @method static \Illuminate\Support\Timebox getTimebox()
+     * @method static \Illuminate\Contracts\Auth\Authenticatable authenticate()
+     * @method static \Illuminate\Auth\SessionGuard forgetUser()
+     * @method static \Illuminate\Contracts\Auth\UserProvider getProvider()
+     * @method static void setProvider(\Illuminate\Contracts\Auth\UserProvider $provider)
+     * @method static void macro(string $name, object|callable $macro)
+     * @method static void mixin(object $mixin, bool $replace = true)
+     * @method static bool hasMacro(string $name)
+     * @method static void flushMacros()
      * @see \Illuminate\Auth\AuthManager
      * @see \Illuminate\Auth\SessionGuard
      */        class Auth {
@@ -1819,452 +1860,6 @@ namespace Illuminate\Support\Facades {
         {
                         /** @var \Illuminate\Auth\AuthManager $instance */
                         return $instance->getDefaultUserProvider();
-        }
-                    /**
-         * Get the currently authenticated user.
-         *
-         * @return \App\Models\User|null 
-         * @static 
-         */        public static function user()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->user();
-        }
-                    /**
-         * Get the ID for the currently authenticated user.
-         *
-         * @return int|string|null 
-         * @static 
-         */        public static function id()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->id();
-        }
-                    /**
-         * Log a user into the application without sessions or cookies.
-         *
-         * @param array $credentials
-         * @return bool 
-         * @static 
-         */        public static function once($credentials = [])
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->once($credentials);
-        }
-                    /**
-         * Log the given user ID into the application without sessions or cookies.
-         *
-         * @param mixed $id
-         * @return \App\Models\User|false 
-         * @static 
-         */        public static function onceUsingId($id)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->onceUsingId($id);
-        }
-                    /**
-         * Validate a user's credentials.
-         *
-         * @param array $credentials
-         * @return bool 
-         * @static 
-         */        public static function validate($credentials = [])
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->validate($credentials);
-        }
-                    /**
-         * Attempt to authenticate using HTTP Basic Auth.
-         *
-         * @param string $field
-         * @param array $extraConditions
-         * @return \Symfony\Component\HttpFoundation\Response|null 
-         * @throws \Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException
-         * @static 
-         */        public static function basic($field = 'email', $extraConditions = [])
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->basic($field, $extraConditions);
-        }
-                    /**
-         * Perform a stateless HTTP Basic login attempt.
-         *
-         * @param string $field
-         * @param array $extraConditions
-         * @return \Symfony\Component\HttpFoundation\Response|null 
-         * @throws \Symfony\Component\HttpKernel\Exception\UnauthorizedHttpException
-         * @static 
-         */        public static function onceBasic($field = 'email', $extraConditions = [])
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->onceBasic($field, $extraConditions);
-        }
-                    /**
-         * Attempt to authenticate a user using the given credentials.
-         *
-         * @param array $credentials
-         * @param bool $remember
-         * @return bool 
-         * @static 
-         */        public static function attempt($credentials = [], $remember = false)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->attempt($credentials, $remember);
-        }
-                    /**
-         * Attempt to authenticate a user with credentials and additional callbacks.
-         *
-         * @param array $credentials
-         * @param array|callable|null $callbacks
-         * @param bool $remember
-         * @return bool 
-         * @static 
-         */        public static function attemptWhen($credentials = [], $callbacks = null, $remember = false)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->attemptWhen($credentials, $callbacks, $remember);
-        }
-                    /**
-         * Log the given user ID into the application.
-         *
-         * @param mixed $id
-         * @param bool $remember
-         * @return \App\Models\User|false 
-         * @static 
-         */        public static function loginUsingId($id, $remember = false)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->loginUsingId($id, $remember);
-        }
-                    /**
-         * Log a user into the application.
-         *
-         * @param \Illuminate\Contracts\Auth\Authenticatable $user
-         * @param bool $remember
-         * @return void 
-         * @static 
-         */        public static function login($user, $remember = false)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        $instance->login($user, $remember);
-        }
-                    /**
-         * Log the user out of the application.
-         *
-         * @return void 
-         * @static 
-         */        public static function logout()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        $instance->logout();
-        }
-                    /**
-         * Log the user out of the application on their current device only.
-         * 
-         * This method does not cycle the "remember" token.
-         *
-         * @return void 
-         * @static 
-         */        public static function logoutCurrentDevice()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        $instance->logoutCurrentDevice();
-        }
-                    /**
-         * Invalidate other sessions for the current user.
-         * 
-         * The application must be using the AuthenticateSession middleware.
-         *
-         * @param string $password
-         * @param string $attribute
-         * @return \App\Models\User|null 
-         * @throws \Illuminate\Auth\AuthenticationException
-         * @static 
-         */        public static function logoutOtherDevices($password, $attribute = 'password')
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->logoutOtherDevices($password, $attribute);
-        }
-                    /**
-         * Register an authentication attempt event listener.
-         *
-         * @param mixed $callback
-         * @return void 
-         * @static 
-         */        public static function attempting($callback)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        $instance->attempting($callback);
-        }
-                    /**
-         * Get the last user we attempted to authenticate.
-         *
-         * @return \App\Models\User 
-         * @static 
-         */        public static function getLastAttempted()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getLastAttempted();
-        }
-                    /**
-         * Get a unique identifier for the auth session value.
-         *
-         * @return string 
-         * @static 
-         */        public static function getName()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getName();
-        }
-                    /**
-         * Get the name of the cookie used to store the "recaller".
-         *
-         * @return string 
-         * @static 
-         */        public static function getRecallerName()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getRecallerName();
-        }
-                    /**
-         * Determine if the user was authenticated via "remember me" cookie.
-         *
-         * @return bool 
-         * @static 
-         */        public static function viaRemember()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->viaRemember();
-        }
-                    /**
-         * Set the number of minutes the remember me cookie should be valid for.
-         *
-         * @param int $minutes
-         * @return \Illuminate\Auth\SessionGuard 
-         * @static 
-         */        public static function setRememberDuration($minutes)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->setRememberDuration($minutes);
-        }
-                    /**
-         * Get the cookie creator instance used by the guard.
-         *
-         * @return \Illuminate\Contracts\Cookie\QueueingFactory 
-         * @throws \RuntimeException
-         * @static 
-         */        public static function getCookieJar()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getCookieJar();
-        }
-                    /**
-         * Set the cookie creator instance used by the guard.
-         *
-         * @param \Illuminate\Contracts\Cookie\QueueingFactory $cookie
-         * @return void 
-         * @static 
-         */        public static function setCookieJar($cookie)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        $instance->setCookieJar($cookie);
-        }
-                    /**
-         * Get the event dispatcher instance.
-         *
-         * @return \Illuminate\Contracts\Events\Dispatcher 
-         * @static 
-         */        public static function getDispatcher()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getDispatcher();
-        }
-                    /**
-         * Set the event dispatcher instance.
-         *
-         * @param \Illuminate\Contracts\Events\Dispatcher $events
-         * @return void 
-         * @static 
-         */        public static function setDispatcher($events)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        $instance->setDispatcher($events);
-        }
-                    /**
-         * Get the session store used by the guard.
-         *
-         * @return \Illuminate\Contracts\Session\Session 
-         * @static 
-         */        public static function getSession()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getSession();
-        }
-                    /**
-         * Return the currently cached user.
-         *
-         * @return \App\Models\User|null 
-         * @static 
-         */        public static function getUser()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getUser();
-        }
-                    /**
-         * Set the current user.
-         *
-         * @param \Illuminate\Contracts\Auth\Authenticatable $user
-         * @return \Illuminate\Auth\SessionGuard 
-         * @static 
-         */        public static function setUser($user)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->setUser($user);
-        }
-                    /**
-         * Get the current request instance.
-         *
-         * @return \Symfony\Component\HttpFoundation\Request 
-         * @static 
-         */        public static function getRequest()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getRequest();
-        }
-                    /**
-         * Set the current request instance.
-         *
-         * @param \Symfony\Component\HttpFoundation\Request $request
-         * @return \Illuminate\Auth\SessionGuard 
-         * @static 
-         */        public static function setRequest($request)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->setRequest($request);
-        }
-                    /**
-         * Get the timebox instance used by the guard.
-         *
-         * @return \Illuminate\Support\Timebox 
-         * @static 
-         */        public static function getTimebox()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getTimebox();
-        }
-                    /**
-         * Determine if the current user is authenticated. If not, throw an exception.
-         *
-         * @return \App\Models\User 
-         * @throws \Illuminate\Auth\AuthenticationException
-         * @static 
-         */        public static function authenticate()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->authenticate();
-        }
-                    /**
-         * Determine if the guard has a user instance.
-         *
-         * @return bool 
-         * @static 
-         */        public static function hasUser()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->hasUser();
-        }
-                    /**
-         * Determine if the current user is authenticated.
-         *
-         * @return bool 
-         * @static 
-         */        public static function check()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->check();
-        }
-                    /**
-         * Determine if the current user is a guest.
-         *
-         * @return bool 
-         * @static 
-         */        public static function guest()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->guest();
-        }
-                    /**
-         * Forget the current user.
-         *
-         * @return \Illuminate\Auth\SessionGuard 
-         * @static 
-         */        public static function forgetUser()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->forgetUser();
-        }
-                    /**
-         * Get the user provider used by the guard.
-         *
-         * @return \Illuminate\Contracts\Auth\UserProvider 
-         * @static 
-         */        public static function getProvider()
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        return $instance->getProvider();
-        }
-                    /**
-         * Set the user provider used by the guard.
-         *
-         * @param \Illuminate\Contracts\Auth\UserProvider $provider
-         * @return void 
-         * @static 
-         */        public static function setProvider($provider)
-        {
-                        /** @var \Illuminate\Auth\SessionGuard $instance */
-                        $instance->setProvider($provider);
-        }
-                    /**
-         * Register a custom macro.
-         *
-         * @param string $name
-         * @param object|callable $macro
-         * @return void 
-         * @static 
-         */        public static function macro($name, $macro)
-        {
-                        \Illuminate\Auth\SessionGuard::macro($name, $macro);
-        }
-                    /**
-         * Mix another object into the class.
-         *
-         * @param object $mixin
-         * @param bool $replace
-         * @return void 
-         * @throws \ReflectionException
-         * @static 
-         */        public static function mixin($mixin, $replace = true)
-        {
-                        \Illuminate\Auth\SessionGuard::mixin($mixin, $replace);
-        }
-                    /**
-         * Checks if macro is registered.
-         *
-         * @param string $name
-         * @return bool 
-         * @static 
-         */        public static function hasMacro($name)
-        {
-                        return \Illuminate\Auth\SessionGuard::hasMacro($name);
-        }
-                    /**
-         * Flush the existing macros.
-         *
-         * @return void 
-         * @static 
-         */        public static function flushMacros()
-        {
-                        \Illuminate\Auth\SessionGuard::flushMacros();
         }
             }
             /**
@@ -4423,93 +4018,6 @@ namespace Illuminate\Support\Facades {
          */        public static function flushMacros()
         {
                         \Illuminate\Cookie\CookieJar::flushMacros();
-        }
-            }
-            /**
-     * 
-     *
-     * @see \Illuminate\Encryption\Encrypter
-     */        class Crypt {
-                    /**
-         * Determine if the given key and cipher combination is valid.
-         *
-         * @param string $key
-         * @param string $cipher
-         * @return bool 
-         * @static 
-         */        public static function supported($key, $cipher)
-        {
-                        return \Illuminate\Encryption\Encrypter::supported($key, $cipher);
-        }
-                    /**
-         * Create a new encryption key for the given cipher.
-         *
-         * @param string $cipher
-         * @return string 
-         * @static 
-         */        public static function generateKey($cipher)
-        {
-                        return \Illuminate\Encryption\Encrypter::generateKey($cipher);
-        }
-                    /**
-         * Encrypt the given value.
-         *
-         * @param mixed $value
-         * @param bool $serialize
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\EncryptException
-         * @static 
-         */        public static function encrypt($value, $serialize = true)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->encrypt($value, $serialize);
-        }
-                    /**
-         * Encrypt a string without serialization.
-         *
-         * @param string $value
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\EncryptException
-         * @static 
-         */        public static function encryptString($value)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->encryptString($value);
-        }
-                    /**
-         * Decrypt the given value.
-         *
-         * @param string $payload
-         * @param bool $unserialize
-         * @return mixed 
-         * @throws \Illuminate\Contracts\Encryption\DecryptException
-         * @static 
-         */        public static function decrypt($payload, $unserialize = true)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->decrypt($payload, $unserialize);
-        }
-                    /**
-         * Decrypt the given string without unserialization.
-         *
-         * @param string $payload
-         * @return string 
-         * @throws \Illuminate\Contracts\Encryption\DecryptException
-         * @static 
-         */        public static function decryptString($payload)
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->decryptString($payload);
-        }
-                    /**
-         * Get the encryption key that the encrypter is currently using.
-         *
-         * @return string 
-         * @static 
-         */        public static function getKey()
-        {
-                        /** @var \Illuminate\Encryption\Encrypter $instance */
-                        return $instance->getKey();
         }
             }
             /**
@@ -9726,77 +9234,6 @@ namespace Illuminate\Support\Facades {
                         return $instance->setConnectionName($name);
         }
                     /**
-         * Release a reserved job back onto the queue after (n) seconds.
-         *
-         * @param string $queue
-         * @param \Illuminate\Queue\Jobs\DatabaseJobRecord $job
-         * @param int $delay
-         * @return mixed 
-         * @static 
-         */        public static function release($queue, $job, $delay)
-        {
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
-                        return $instance->release($queue, $job, $delay);
-        }
-                    /**
-         * Delete a reserved job from the queue.
-         *
-         * @param string $queue
-         * @param string $id
-         * @return void 
-         * @throws \Throwable
-         * @static 
-         */        public static function deleteReserved($queue, $id)
-        {
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
-                        $instance->deleteReserved($queue, $id);
-        }
-                    /**
-         * Delete a reserved job from the reserved queue and release it.
-         *
-         * @param string $queue
-         * @param \Illuminate\Queue\Jobs\DatabaseJob $job
-         * @param int $delay
-         * @return void 
-         * @static 
-         */        public static function deleteAndRelease($queue, $job, $delay)
-        {
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
-                        $instance->deleteAndRelease($queue, $job, $delay);
-        }
-                    /**
-         * Delete all of the jobs from the queue.
-         *
-         * @param string $queue
-         * @return int 
-         * @static 
-         */        public static function clear($queue)
-        {
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
-                        return $instance->clear($queue);
-        }
-                    /**
-         * Get the queue or return the default.
-         *
-         * @param string|null $queue
-         * @return string 
-         * @static 
-         */        public static function getQueue($queue)
-        {
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
-                        return $instance->getQueue($queue);
-        }
-                    /**
-         * Get the underlying database instance.
-         *
-         * @return \Illuminate\Database\Connection 
-         * @static 
-         */        public static function getDatabase()
-        {
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
-                        return $instance->getDatabase();
-        }
-                    /**
          * Get the maximum number of attempts for an object-based queue handler.
          *
          * @param mixed $job
@@ -9804,7 +9241,7 @@ namespace Illuminate\Support\Facades {
          * @static 
          */        public static function getJobTries($job)
         {            //Method inherited from \Illuminate\Queue\Queue         
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
                         return $instance->getJobTries($job);
         }
                     /**
@@ -9815,7 +9252,7 @@ namespace Illuminate\Support\Facades {
          * @static 
          */        public static function getJobBackoff($job)
         {            //Method inherited from \Illuminate\Queue\Queue         
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
                         return $instance->getJobBackoff($job);
         }
                     /**
@@ -9826,7 +9263,7 @@ namespace Illuminate\Support\Facades {
          * @static 
          */        public static function getJobExpiration($job)
         {            //Method inherited from \Illuminate\Queue\Queue         
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
                         return $instance->getJobExpiration($job);
         }
                     /**
@@ -9837,7 +9274,7 @@ namespace Illuminate\Support\Facades {
          * @static 
          */        public static function createPayloadUsing($callback)
         {            //Method inherited from \Illuminate\Queue\Queue         
-                        \Illuminate\Queue\DatabaseQueue::createPayloadUsing($callback);
+                        \Illuminate\Queue\SyncQueue::createPayloadUsing($callback);
         }
                     /**
          * Get the container instance being used by the connection.
@@ -9846,7 +9283,7 @@ namespace Illuminate\Support\Facades {
          * @static 
          */        public static function getContainer()
         {            //Method inherited from \Illuminate\Queue\Queue         
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
                         return $instance->getContainer();
         }
                     /**
@@ -9857,7 +9294,7 @@ namespace Illuminate\Support\Facades {
          * @static 
          */        public static function setContainer($container)
         {            //Method inherited from \Illuminate\Queue\Queue         
-                        /** @var \Illuminate\Queue\DatabaseQueue $instance */
+                        /** @var \Illuminate\Queue\SyncQueue $instance */
                         $instance->setContainer($container);
         }
             }
@@ -10018,291 +9455,6 @@ namespace Illuminate\Support\Facades {
         {
                         /** @var \Illuminate\Cache\RateLimiter $instance */
                         return $instance->cleanRateLimiterKey($key);
-        }
-            }
-            /**
-     * 
-     *
-     * @see \Illuminate\Routing\Redirector
-     */        class Redirect {
-                    /**
-         * Create a new redirect response to the previous location.
-         *
-         * @param int $status
-         * @param array $headers
-         * @param mixed $fallback
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function back($status = 302, $headers = [], $fallback = false)
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->back($status, $headers, $fallback);
-        }
-                    /**
-         * Create a new redirect response to the current URI.
-         *
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function refresh($status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->refresh($status, $headers);
-        }
-                    /**
-         * Create a new redirect response, while putting the current URL in the session.
-         *
-         * @param string $path
-         * @param int $status
-         * @param array $headers
-         * @param bool|null $secure
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function guest($path, $status = 302, $headers = [], $secure = null)
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->guest($path, $status, $headers, $secure);
-        }
-                    /**
-         * Create a new redirect response to the previously intended location.
-         *
-         * @param mixed $default
-         * @param int $status
-         * @param array $headers
-         * @param bool|null $secure
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function intended($default = '/', $status = 302, $headers = [], $secure = null)
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->intended($default, $status, $headers, $secure);
-        }
-                    /**
-         * Create a new redirect response to the given path.
-         *
-         * @param string $path
-         * @param int $status
-         * @param array $headers
-         * @param bool|null $secure
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function to($path, $status = 302, $headers = [], $secure = null)
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->to($path, $status, $headers, $secure);
-        }
-                    /**
-         * Create a new redirect response to an external URL (no validation).
-         *
-         * @param string $path
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function away($path, $status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->away($path, $status, $headers);
-        }
-                    /**
-         * Create a new redirect response to the given HTTPS path.
-         *
-         * @param string $path
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function secure($path, $status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->secure($path, $status, $headers);
-        }
-                    /**
-         * Create a new redirect response to a named route.
-         *
-         * @param string $route
-         * @param mixed $parameters
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function route($route, $parameters = [], $status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->route($route, $parameters, $status, $headers);
-        }
-                    /**
-         * Create a new redirect response to a signed named route.
-         *
-         * @param string $route
-         * @param mixed $parameters
-         * @param \DateTimeInterface|\DateInterval|int|null $expiration
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function signedRoute($route, $parameters = [], $expiration = null, $status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->signedRoute($route, $parameters, $expiration, $status, $headers);
-        }
-                    /**
-         * Create a new redirect response to a signed named route.
-         *
-         * @param string $route
-         * @param \DateTimeInterface|\DateInterval|int|null $expiration
-         * @param mixed $parameters
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function temporarySignedRoute($route, $expiration, $parameters = [], $status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->temporarySignedRoute($route, $expiration, $parameters, $status, $headers);
-        }
-                    /**
-         * Create a new redirect response to a controller action.
-         *
-         * @param string|array $action
-         * @param mixed $parameters
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function action($action, $parameters = [], $status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->action($action, $parameters, $status, $headers);
-        }
-                    /**
-         * Get the URL generator instance.
-         *
-         * @return \Illuminate\Routing\UrlGenerator 
-         * @static 
-         */        public static function getUrlGenerator()
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->getUrlGenerator();
-        }
-                    /**
-         * Set the active session store.
-         *
-         * @param \Illuminate\Session\Store $session
-         * @return void 
-         * @static 
-         */        public static function setSession($session)
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        $instance->setSession($session);
-        }
-                    /**
-         * Get the "intended" URL from the session.
-         *
-         * @return string|null 
-         * @static 
-         */        public static function getIntendedUrl()
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->getIntendedUrl();
-        }
-                    /**
-         * Set the "intended" URL in the session.
-         *
-         * @param string $url
-         * @return \Illuminate\Routing\Redirector 
-         * @static 
-         */        public static function setIntendedUrl($url)
-        {
-                        /** @var \Illuminate\Routing\Redirector $instance */
-                        return $instance->setIntendedUrl($url);
-        }
-                    /**
-         * Register a custom macro.
-         *
-         * @param string $name
-         * @param object|callable $macro
-         * @return void 
-         * @static 
-         */        public static function macro($name, $macro)
-        {
-                        \Illuminate\Routing\Redirector::macro($name, $macro);
-        }
-                    /**
-         * Mix another object into the class.
-         *
-         * @param object $mixin
-         * @param bool $replace
-         * @return void 
-         * @throws \ReflectionException
-         * @static 
-         */        public static function mixin($mixin, $replace = true)
-        {
-                        \Illuminate\Routing\Redirector::mixin($mixin, $replace);
-        }
-                    /**
-         * Checks if macro is registered.
-         *
-         * @param string $name
-         * @return bool 
-         * @static 
-         */        public static function hasMacro($name)
-        {
-                        return \Illuminate\Routing\Redirector::hasMacro($name);
-        }
-                    /**
-         * Flush the existing macros.
-         *
-         * @return void 
-         * @static 
-         */        public static function flushMacros()
-        {
-                        \Illuminate\Routing\Redirector::flushMacros();
-        }
-                    /**
-         * 
-         *
-         * @see \Masmerise\Toaster\ToastableMacros::macro()
-         * @param string $message
-         * @param array $replace
-         * @static 
-         */        public static function error($message, $replace = [])
-        {
-                        return \Illuminate\Routing\Redirector::error($message, $replace);
-        }
-                    /**
-         * 
-         *
-         * @see \Masmerise\Toaster\ToastableMacros::macro()
-         * @param string $message
-         * @param array $replace
-         * @static 
-         */        public static function info($message, $replace = [])
-        {
-                        return \Illuminate\Routing\Redirector::info($message, $replace);
-        }
-                    /**
-         * 
-         *
-         * @see \Masmerise\Toaster\ToastableMacros::macro()
-         * @param string $message
-         * @param array $replace
-         * @static 
-         */        public static function success($message, $replace = [])
-        {
-                        return \Illuminate\Routing\Redirector::success($message, $replace);
-        }
-                    /**
-         * 
-         *
-         * @see \Masmerise\Toaster\ToastableMacros::macro()
-         * @param string $message
-         * @param array $replace
-         * @static 
-         */        public static function warning($message, $replace = [])
-        {
-                        return \Illuminate\Routing\Redirector::warning($message, $replace);
         }
             }
             /**
@@ -12380,259 +11532,6 @@ namespace Illuminate\Support\Facades {
          */        public static function hasValidSignatureWhileIgnoring($ignoreQuery = [], $absolute = true)
         {
                         return \Illuminate\Http\Request::hasValidSignatureWhileIgnoring($ignoreQuery, $absolute);
-        }
-            }
-            /**
-     * 
-     *
-     * @see \Illuminate\Routing\ResponseFactory
-     */        class Response {
-                    /**
-         * Create a new response instance.
-         *
-         * @param mixed $content
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\Response 
-         * @static 
-         */        public static function make($content = '', $status = 200, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->make($content, $status, $headers);
-        }
-                    /**
-         * Create a new "no content" response.
-         *
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\Response 
-         * @static 
-         */        public static function noContent($status = 204, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->noContent($status, $headers);
-        }
-                    /**
-         * Create a new response for a given view.
-         *
-         * @param string|array $view
-         * @param array $data
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\Response 
-         * @static 
-         */        public static function view($view, $data = [], $status = 200, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->view($view, $data, $status, $headers);
-        }
-                    /**
-         * Create a new JSON response instance.
-         *
-         * @param mixed $data
-         * @param int $status
-         * @param array $headers
-         * @param int $options
-         * @return \Illuminate\Http\JsonResponse 
-         * @static 
-         */        public static function json($data = [], $status = 200, $headers = [], $options = 0)
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->json($data, $status, $headers, $options);
-        }
-                    /**
-         * Create a new JSONP response instance.
-         *
-         * @param string $callback
-         * @param mixed $data
-         * @param int $status
-         * @param array $headers
-         * @param int $options
-         * @return \Illuminate\Http\JsonResponse 
-         * @static 
-         */        public static function jsonp($callback, $data = [], $status = 200, $headers = [], $options = 0)
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->jsonp($callback, $data, $status, $headers, $options);
-        }
-                    /**
-         * Create a new streamed response instance.
-         *
-         * @param callable $callback
-         * @param int $status
-         * @param array $headers
-         * @return \Symfony\Component\HttpFoundation\StreamedResponse 
-         * @static 
-         */        public static function stream($callback, $status = 200, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->stream($callback, $status, $headers);
-        }
-                    /**
-         * Create a new streamed response instance.
-         *
-         * @param array $data
-         * @param int $status
-         * @param array $headers
-         * @param int $encodingOptions
-         * @return \Symfony\Component\HttpFoundation\StreamedJsonResponse 
-         * @static 
-         */        public static function streamJson($data, $status = 200, $headers = [], $encodingOptions = 15)
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->streamJson($data, $status, $headers, $encodingOptions);
-        }
-                    /**
-         * Create a new streamed response instance as a file download.
-         *
-         * @param callable $callback
-         * @param string|null $name
-         * @param array $headers
-         * @param string|null $disposition
-         * @return \Symfony\Component\HttpFoundation\StreamedResponse 
-         * @static 
-         */        public static function streamDownload($callback, $name = null, $headers = [], $disposition = 'attachment')
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->streamDownload($callback, $name, $headers, $disposition);
-        }
-                    /**
-         * Create a new file download response.
-         *
-         * @param \SplFileInfo|string $file
-         * @param string|null $name
-         * @param array $headers
-         * @param string|null $disposition
-         * @return \Symfony\Component\HttpFoundation\BinaryFileResponse 
-         * @static 
-         */        public static function download($file, $name = null, $headers = [], $disposition = 'attachment')
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->download($file, $name, $headers, $disposition);
-        }
-                    /**
-         * Return the raw contents of a binary file.
-         *
-         * @param \SplFileInfo|string $file
-         * @param array $headers
-         * @return \Symfony\Component\HttpFoundation\BinaryFileResponse 
-         * @static 
-         */        public static function file($file, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->file($file, $headers);
-        }
-                    /**
-         * Create a new redirect response to the given path.
-         *
-         * @param string $path
-         * @param int $status
-         * @param array $headers
-         * @param bool|null $secure
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function redirectTo($path, $status = 302, $headers = [], $secure = null)
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->redirectTo($path, $status, $headers, $secure);
-        }
-                    /**
-         * Create a new redirect response to a named route.
-         *
-         * @param string $route
-         * @param mixed $parameters
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function redirectToRoute($route, $parameters = [], $status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->redirectToRoute($route, $parameters, $status, $headers);
-        }
-                    /**
-         * Create a new redirect response to a controller action.
-         *
-         * @param array|string $action
-         * @param mixed $parameters
-         * @param int $status
-         * @param array $headers
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function redirectToAction($action, $parameters = [], $status = 302, $headers = [])
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->redirectToAction($action, $parameters, $status, $headers);
-        }
-                    /**
-         * Create a new redirect response, while putting the current URL in the session.
-         *
-         * @param string $path
-         * @param int $status
-         * @param array $headers
-         * @param bool|null $secure
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function redirectGuest($path, $status = 302, $headers = [], $secure = null)
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->redirectGuest($path, $status, $headers, $secure);
-        }
-                    /**
-         * Create a new redirect response to the previously intended location.
-         *
-         * @param string $default
-         * @param int $status
-         * @param array $headers
-         * @param bool|null $secure
-         * @return \Illuminate\Http\RedirectResponse 
-         * @static 
-         */        public static function redirectToIntended($default = '/', $status = 302, $headers = [], $secure = null)
-        {
-                        /** @var \Illuminate\Routing\ResponseFactory $instance */
-                        return $instance->redirectToIntended($default, $status, $headers, $secure);
-        }
-                    /**
-         * Register a custom macro.
-         *
-         * @param string $name
-         * @param object|callable $macro
-         * @return void 
-         * @static 
-         */        public static function macro($name, $macro)
-        {
-                        \Illuminate\Routing\ResponseFactory::macro($name, $macro);
-        }
-                    /**
-         * Mix another object into the class.
-         *
-         * @param object $mixin
-         * @param bool $replace
-         * @return void 
-         * @throws \ReflectionException
-         * @static 
-         */        public static function mixin($mixin, $replace = true)
-        {
-                        \Illuminate\Routing\ResponseFactory::mixin($mixin, $replace);
-        }
-                    /**
-         * Checks if macro is registered.
-         *
-         * @param string $name
-         * @return bool 
-         * @static 
-         */        public static function hasMacro($name)
-        {
-                        return \Illuminate\Routing\ResponseFactory::hasMacro($name);
-        }
-                    /**
-         * Flush the existing macros.
-         *
-         * @return void 
-         * @static 
-         */        public static function flushMacros()
-        {
-                        \Illuminate\Routing\ResponseFactory::flushMacros();
         }
             }
             /**
@@ -19489,7 +18388,6 @@ namespace  {
             class Cache extends \Illuminate\Support\Facades\Cache {}
             class Config extends \Illuminate\Support\Facades\Config {}
             class Cookie extends \Illuminate\Support\Facades\Cookie {}
-            class Crypt extends \Illuminate\Support\Facades\Crypt {}
             class Date extends \Illuminate\Support\Facades\Date {}
             class DB extends \Illuminate\Support\Facades\DB {}
             class Eloquent extends \Illuminate\Database\Eloquent\Model {                            /**
@@ -23012,9 +21910,7 @@ namespace  {
             class Process extends \Illuminate\Support\Facades\Process {}
             class Queue extends \Illuminate\Support\Facades\Queue {}
             class RateLimiter extends \Illuminate\Support\Facades\RateLimiter {}
-            class Redirect extends \Illuminate\Support\Facades\Redirect {}
             class Request extends \Illuminate\Support\Facades\Request {}
-            class Response extends \Illuminate\Support\Facades\Response {}
             class Route extends \Illuminate\Support\Facades\Route {}
             class Schema extends \Illuminate\Support\Facades\Schema {}
             class Session extends \Illuminate\Support\Facades\Session {}
