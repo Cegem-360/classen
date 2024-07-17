@@ -57,6 +57,18 @@ Route::view(
     '/' . Str::slug('Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók', '-', 'hu'),
     'google.index'
 )->name('meta');
+Route::view(
+    '/' . Str::slug('Enteriőrbe illő bejárati ajtók - Stílus és biztonság', '-', 'hu'),
+    'google.enterior'
+)->name('enterior');
+Route::view(
+    '/' . Str::slug('Modulajtók - Stílus, funkcionalitás és minőség', '-', 'hu'),
+    'google.modern'
+)->name('modern');
+Route::view(
+    '/' . Str::slug(' Fa mintázatú ajtók - Természetes elegancia és stílus', '-', 'hu'),
+    'google.woodenstyle'
+)->name('woodenstyle');
 
 Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
     Route::get('/', [QuotationController::class, 'index'])->name('index');
