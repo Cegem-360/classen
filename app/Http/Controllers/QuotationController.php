@@ -71,12 +71,19 @@ class QuotationController extends Controller
         $quotation = session()->get('quotation', Quotation::firstOrcreate([
             'session_id' => session()->getId(),
         ]));
+
+        if($quotation->items->count() == 0){
+           return redirect()->route('quotation.index')->error('Kérjük válasszon terméket az árajánlat kéréshez');
+        }
+
         $validated = Validator::make($request->all(), [
             'first_name' => 'required',
             'last_name' => 'required',
             'contactEmail' => 'required|email',
             'phone' => 'required',
         ])->validate();
+
+        $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
 
         $quotation->update([
             'session_id' => session()->getId(),
@@ -87,7 +94,7 @@ class QuotationController extends Controller
             'message' => $request->emailMessage ?? '',
         ]);
 
-        $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
+
 
         Mail::to($validated['contactEmail'])->cc("webshop@arcadia98.hu")->send(new RequestQuotationSended($quotation, $quotationItems));
         Mail::to("webshop@arcadia98.hu")->send(new QuotationInner($quotation, $quotationItems));
