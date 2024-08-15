@@ -26,6 +26,15 @@
             @if ($quotationItems->isEmpty())
                 <div>
                     Nincsen termék az árajánlatban.
+                    Kérjük válasszon modellt, vagy írja le elképzeléseit a Kapcsolat menüpontra kattintva! <a class="flex flex-col"
+                    href="{{ route('kapcsolat') }}"
+                    wire:navigate>
+                    <span class="inset-0 text-red-600" aria-hidden="true">
+                        Ide
+                    </span>
+                    <span class="inset-0" aria-hidden="true"></span>
+
+                </a>
                 </div>
             @endif
             <div class="grid grid-cols-6 mt-6 gap-x-6 gap-y-10 md:grid-cols-4 sm:grid-cols-2">
