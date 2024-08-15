@@ -583,7 +583,7 @@
     "css": [
       "assets/app-af1f084a.css"
     ],
-    "file": "assets/app-d27f5948.js",
+    "file": "assets/app-d17bcf77.js",
     "imports": [
       "resources/js/swiperJS.js",
       "resources/js/favorites.js"
@@ -602,7 +602,7 @@
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-d74c4461.js",
+    "file": "assets/swiperJS-5ad34c5a.js",
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
   }

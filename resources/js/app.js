@@ -11,7 +11,6 @@ import 'flowbite';
 import { initSwiperJS } from './swiperJS.js';
 import initFavoritesJS from './favorites.js'; // Replace 'require' with 'import'
 import { initCustomJS } from './customJS.js';
-//import './../../node_modules/qtip2/dist/jquery.qtip.js';
 document.addEventListener('livewire:init', () => {
     initCustomJS();
     function setRedNavigation() {
@@ -39,4 +38,3 @@ document.getElementById('szolg-3').addEventListener('click', function() {
     window.location.href = '/szolgaltatasaink/#szakszeru-beepites';
 }); */
 
- 
