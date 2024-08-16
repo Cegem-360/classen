@@ -133,8 +133,7 @@
     <table width="100%" align="center" border="0" cellpadding="0" cellspacing="0">
         <tr>
             <!-- Background -->
-            <td style="background-size: cover; background-position: center;" align="center" bgcolor="#333333"
-                background="{{ Vite::asset('resources/img/Classen_Venis_drzwi_przesuwne.webp') }}">
+            <td style="background-size: cover; background-position: center;" align="center" bgcolor="#aaa">
                 <table class="table600" width="600" border="0" cellpadding="0" cellspacing="0">
 
                     <tr>
