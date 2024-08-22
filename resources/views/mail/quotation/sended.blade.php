@@ -363,26 +363,12 @@
                     <tr>
                         <td style="font-family: 'Open Sans', sans-serif; font-size: 13px; font-weight: 400; color: #8f96a1; line-height: 24px;"
                             align="left">
-                            <p>Kérjük, tekintse meg a mellékelt részletes termékleírásokat és specifikációkat,
-                                amelyek segítenek Önnek jobban megérteni termékeink kiváló minőségét és designját.
+                            <p>
+                                Kollégáink hamarosan felveszik Önnel a kapcsolatot.
                             </p>
-
-                            <p>A következő lépésekben szívesen felvesszük Önnel a kapcsolatot telefonon vagy
-                                emailben, hogy részletesen megvitassuk igényeit, válaszoljunk kérdéseire, és
-                                segítsünk a legmegfelelőbb termékek kiválasztásában. Kérjük, adja meg, melyik
-                                időpontokban érné el Önt legkönnyebben, vagy hívjon minket közvetlenül a
-                                [Telefonszám] telefonszámon.</p>
-
-                            <p>Az Arcadia'98 Kft. elkötelezett amellett, hogy minőségi termékeket és kiváló
-                                ügyfélkiszolgálást nyújtson. Biztosak vagyunk benne, hogy ajtóink hozzájárulnak
-                                otthona esztétikájának és funkcionalitásának növeléséhez.</p>
-
-                            <p>Köszönjük, hogy minket választott. Várjuk válaszát, és reméljük, hogy hamarosan
-                                üdvözölhetjük Önt elégedett ügyfeleink között.</p>
 
                             <p>Üdvözlettel,</p>
 
-                            <p>Kerék András</p>
                             <p>ARCADIA 98 KFT.</p>
                             <p>
                                 <a class="hover:underline" href="mailto:info@arcadia98.hu">
