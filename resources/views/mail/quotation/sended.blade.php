@@ -221,9 +221,7 @@
                             align="center">
                             <h2>Tisztelt {{ $quotation->first_name }} {{ $quotation->last_name }}!</h2>
                             <p>Köszönjük, hogy a cégünk weboldalán keresztül ajánlatkérést nyújtott be beltéri
-                                ajtóinkra vonatkozóan. Nagyra értékeljük érdeklődését termékeink iránt, és örömmel
-                                állunk rendelkezésére, hogy segítsünk megtalálni az Ön otthonához leginkább illő
-                                megoldásokat.</p>
+                                ajtóinkra vonatkozóan.</p>
                         </td>
                     </tr>
 
@@ -234,7 +232,7 @@
                     <tr>
                         <td style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 28px;"
                             align="center">
-                            Az alábbiakban találja a kiválasztott termékek részletes listáját és azok fő jellemzőit:
+                            Az alábbiakban találja a kiválasztott termékek listáját:
                         </td>
                     </tr>
 

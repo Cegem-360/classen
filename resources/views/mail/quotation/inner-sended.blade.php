@@ -252,7 +252,7 @@
                     <tr>
                         <td style="font-family: 'Montserrat', sans-serif; font-size: 16px; font-weight: 400; color: #333333; letter-spacing: 2px; line-height: 28px;"
                             align="center">
-                            Az alábbiakban találja a kiválasztott termékek részletes listáját és azok fő jellemzőit:
+                            Az alábbiakban találja a kiválasztott termékek listáját:
                         </td>
                     </tr>
 
