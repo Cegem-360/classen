@@ -64,7 +64,7 @@ class ManagePageContentController extends Controller
         $emailMessage = $request->emailMessage;
 
         // Send email
-        Mail::to(config('mail.from.address', 'info@arcadia98.hu'))->send(new ContactForm(
+        Mail::to( 'info@arcadia98.hu')->send(new ContactForm(
             $first_name,
             $last_name,
             $contactEmail,
