@@ -72,7 +72,7 @@ class QuotationController extends Controller
             'session_id' => session()->getId(),
         ])->with(['items']));
 
-        if($quotation->items->count() < 0){
+        if($quotation->items->count() < 1){
            return redirect()->route('quotation.index')->error('Kérjük válasszon terméket az árajánlat kéréshez');
         }
 
