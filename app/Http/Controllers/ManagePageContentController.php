@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Cookie;
-use App\Models\Door;
-use GuzzleHttp\Client;
-use App\Models\Category;
 use App\Mail\ContactForm;
+use App\Models\Category;
+use App\Models\Door;
+use Cookie;
+use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
@@ -48,8 +48,14 @@ class ManagePageContentController extends Controller
     {
         return view('kapcsolat/index');
     }
+
     public function sendContact(Request $request)
     {
+
+        if ($request->input('website') !== '') {
+            return redirect()->route('kapcsolat')->error(__('Bot detected!'));
+        }
+
         $request->validate([
             'first_name' => 'required',
             'last_name' => 'required',
@@ -64,7 +70,7 @@ class ManagePageContentController extends Controller
         $emailMessage = $request->emailMessage;
 
         // Send email
-        Mail::to( 'info@arcadia98.hu')->send(new ContactForm(
+        Mail::to('info@arcadia98.hu')->send(new ContactForm(
             $first_name,
             $last_name,
             $contactEmail,
