@@ -30,7 +30,7 @@
                 </div>
             </div>
         @endforeach
-        <div class="hero-nav absolute bottom-16 z-10">
+        <div class="hero-nav absolute bottom-16 z-10 sm:hidden block">
             <div class="mx-auto flex w-fit items-center justify-around gap-16 px-6 py-2 text-white">
                 <div class="hero-swiper-button-prev cursor-pointer rounded-full bg-white p-4"><x-svg.hero-nav-prev />
                 </div>
