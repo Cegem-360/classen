@@ -3,9 +3,20 @@
     class="mx-auto flex h-1/2 flex-wrap items-center !grid grid-cols-[1fr_3fr] sm:grid-cols-1 bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
 
     <div class="relative h-[80vh] sm:h-fit">
+        <!-- slide-0 -->
+        <div id="slide-0" class="hero-wrapper py-24 sm:py-6">
+            <div class="hero-content">
+                <h2 class="hero-title mb-4 px-6 text-5xl font-bold">Boldog Karácsonyt kívánunk!</h2>
+                <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
+                <h3 class="hero-text px-6 text-lg font-bold">Köszönjük, hogy idén is velünk tartottak – bízunk benne,
+                    hogy jövőre is részesei lehetünk otthona szépítésének.
+                    <br><br>🎅 Békés, boldog karácsonyt és sikerekben gazdag új évet kíván az Arcadia 98 csapata!
+                </h3>
+            </div>
+        </div>
         @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->get() as $item)
             <!-- Hero Text -->
-            <div id="slide-{{ $loop->index }}" class="hero-wrapper py-24 sm:py-6">
+            <div id="slide-{{ $loop->index + 1 }}" class="hero-wrapper py-24 sm:py-6">
                 <div class="hero-content">
                     <h2 class="hero-title mb-4 px-6 text-5xl font-bold">{{ $item->title }}</h2>
                     <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
@@ -33,7 +44,7 @@
     <div class="swiper hero-swiper relative h-[80vh] w-full sm:h-fit">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <!-- Hero Image -->
+                <!-- slide-0 -->
                 <div class="hero-image h-[80vh] bg-cover bg-center sm:h-[100vh]"
                     style="background-position: 40% 50%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/12/arcadia-karacsony.webp');">
                 </div>
