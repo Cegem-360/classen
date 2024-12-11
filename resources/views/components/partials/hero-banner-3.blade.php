@@ -45,14 +45,14 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide">
                 <!-- slide-0 -->
-                <div class="hero-image h-[80vh] bg-cover bg-center sm:h-[100vh]"
+                <div class="hero-image sm:h-auto h-[80vh] bg-cover bg-center sm:h-[100vh]"
                     style="background-position: 40% 50%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/12/arcadia-karacsony.webp');">
                 </div>
             </div>
             @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->get() as $item)
                 <div class="swiper-slide">
                     <!-- Hero Image -->
-                    <div class="hero-image h-[80vh] bg-cover bg-center sm:h-[100vh]"
+                    <div class="hero-image sm:h-auto h-[80vh] bg-cover bg-center sm:h-[100vh]"
                         style="background-position: 40% 50%; background-image: url('{{ $item->img_url }}');"></div>
                 </div>
             @endforeach
