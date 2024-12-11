@@ -248,7 +248,7 @@ export function initSwiperJS() {
         speed: 1500,
         // configure Swiper to use modules
         // Optional parameters
-        allowTouchMove: false,
+        allowTouchMove: true,
         touchStartPreventDefault: false,
         direction: 'horizontal',
         loop: true,
