@@ -4,7 +4,7 @@
 
     <div class="relative h-[80vh] sm:h-fit">
         <!-- slide-0 -->
-        <div id="slide-0" class="hero-wrapper py-24 sm:py-6">
+        {{-- <div id="slide-0" class="hero-wrapper py-24 sm:py-6">
             <div class="hero-content">
                 <h2 class="hero-title mb-4 px-6 text-5xl font-bold">Boldog Karácsonyt kívánunk!</h2>
                 <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
@@ -13,10 +13,11 @@
                     <br><br>🎅 Békés, boldog karácsonyt és sikerekben gazdag új évet kíván az Arcadia 98 csapata!
                 </h3>
             </div>
-        </div>
+        </div> --}}
         @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->get() as $item)
             <!-- Hero Text -->
-            <div id="slide-{{ $loop->index + 1 }}" class="hero-wrapper py-24 sm:py-6">
+            {{-- <div id="slide-{{ $loop->index + 1 }}" class="hero-wrapper py-24 sm:py-6"> --}}
+            <div id="slide-{{ $loop->index }}" class="hero-wrapper py-24 sm:py-6">
                 <div class="hero-content">
                     <h2 class="hero-title mb-4 px-6 text-5xl font-bold">{{ $item->title }}</h2>
                     <hr class="hero-line relative mb-6 ml-6 h-1 w-96 border-0 bg-sarga">
@@ -43,12 +44,12 @@
 
     <div class="swiper hero-swiper relative h-[80vh] w-full sm:h-fit">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">
+            {{-- <div class="swiper-slide">
                 <!-- slide-0 -->
                 <div class="hero-image sm:h-[70vw] h-[80vh] bg-cover bg-center sm:h-[100vh]"
                     style="background-position: 40% 50%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/12/xmas-banner.webp');">
                 </div>
-            </div>
+            </div> --}}
             @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->get() as $item)
                 <div class="swiper-slide">
                     <!-- Hero Image -->
