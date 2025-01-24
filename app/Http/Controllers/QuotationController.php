@@ -2,14 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Validator;
+use App\Mail\QuotationInner;
+use App\Mail\RequestQuotationSended;
 use App\Models\Door;
 use App\Models\Quotation;
-use App\Mail\QuotationInner;
-use Illuminate\Http\Request;
 use App\Models\QuotationItem;
-use App\Mail\RequestQuotationSended;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Validator;
 
 class QuotationController extends Controller
 {
@@ -72,8 +72,8 @@ class QuotationController extends Controller
             'session_id' => session()->getId(),
         ])->with(['items']));
 
-        if($quotation->items->count() < 1){
-           return redirect()->route('quotation.index')->error('Kérjük válasszon terméket az árajánlat kéréshez');
+        if ($quotation->items->count() < 1) {
+            return redirect()->route('quotation.index')->error('Kérjük válasszon terméket az árajánlat kéréshez');
         }
 
         $validated = Validator::make($request->all(), [
@@ -94,11 +94,8 @@ class QuotationController extends Controller
             'message' => $request->emailMessage ?? '',
         ]);
 
-
-
-        Mail::to($validated['contactEmail'])->cc("info@arcadia98.hu")->send(new RequestQuotationSended($quotation, $quotationItems));
-        Mail::to("info@arcadia98.hu")->send(new QuotationInner($quotation, $quotationItems));
-        Mail::to("info@arcadia98.hu")->send(new QuotationInner($quotation, $quotationItems));
+        Mail::to($validated['contactEmail'])->cc('info@arcadia98.hu')->send(new RequestQuotationSended($quotation, $quotationItems));
+        Mail::to('info@arcadia98.hu')->send(new QuotationInner($quotation, $quotationItems));
 
         return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
