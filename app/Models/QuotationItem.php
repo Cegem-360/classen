@@ -13,6 +13,7 @@ class QuotationItem extends Model
         'door_id',
         'quotation_id',
         'frame',
+        'color',
         'quantity',
     ];
 

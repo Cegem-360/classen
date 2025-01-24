@@ -19,6 +19,7 @@ return new class extends Migration
             $table->foreignIdFor(Door::class);
             $table->string('frame')->nullable();
             $table->integer('quantity')->default(1);
+            $table->string('color')->nullable();
             $table->timestamps();
         });
     }
