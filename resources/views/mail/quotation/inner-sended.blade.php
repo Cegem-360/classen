@@ -284,7 +284,8 @@
                                             <th>Kategória</th>
                                             <th>Ajtó neve</th>
                                             <th>Mennyiség</th>
-                                            <th>Keretszín</th>
+                                            <th>Keret</th>
+                                            <th>Szín</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -294,6 +295,8 @@
                                                 <td align="center">{{ $quotationItem->door->name }}</td>
                                                 <td align="center">{{ $quotationItem->quantity }} db</td>
                                                 <td align="center">{{ $quotationItem->frame }}</td>
+                                                <td align="center">{{ $quotationItem->door->tag_name }}</td>
+
                                             </tr>
                                         @endforeach
                                     </tbody>
