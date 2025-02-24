@@ -51,6 +51,10 @@
     "file": "assets/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2024-ENG-d8edb320.webp",
     "src": "resources/img/cover-images/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2024-ENG.webp"
   },
+  "resources/img/cover-images/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2025-HU-ENG.webp": {
+    "file": "assets/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2025-HU-ENG-7d1d6462.webp",
+    "src": "resources/img/cover-images/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2025-HU-ENG.webp"
+  },
   "resources/img/cover-images/Arcadia98-arlista-2023.webp": {
     "file": "assets/Arcadia98-arlista-2023-d11b0b80.webp",
     "src": "resources/img/cover-images/Arcadia98-arlista-2023.webp"
@@ -572,7 +576,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.css": {
-    "file": "assets/app-8bd54f3f.css",
+    "file": "assets/app-a772c521.css",
     "src": "resources/js/app.css"
   },
   "resources/js/app.js": {
@@ -581,9 +585,9 @@
       "assets/tooltip-icon-30ff94af.svg"
     ],
     "css": [
-      "assets/app-8bd54f3f.css"
+      "assets/app-a772c521.css"
     ],
-    "file": "assets/app-908b29f5.js",
+    "file": "assets/app-59159808.js",
     "imports": [
       "resources/js/swiperJS.js",
       "resources/js/favorites.js"
@@ -602,7 +606,7 @@
     "src": "resources/js/favorites.js"
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-611b4704.js",
+    "file": "assets/swiperJS-33070329.js",
     "isEntry": true,
     "src": "resources/js/swiperJS.js"
   }

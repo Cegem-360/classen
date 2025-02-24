@@ -22,9 +22,9 @@
             <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
         <div class="grid grid-cols-6 gap-12 md:grid-cols-2">
-            <a href="{{ Storage::url('dl/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2024-ENG.pdf') }}"
+            <a href="{{ Storage::url('dl/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2025-HU-ENG.pdf') }}"
                 target="_blank">
-                <img src="{{ Vite::asset('resources/img/cover-images/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2024-ENG.webp') }}"
+                <img src="{{ Vite::asset('resources/img/cover-images/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2025-HU-ENG.webp') }}"
                     alt="Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2024-ENG.pdf" />
                 <p class="mt-3 text-sm">Arcadia98 Kft. bővített beltéri ajtókatalógus 2024-ENG</p>
             </a>
