@@ -26,7 +26,7 @@
                 target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2025-HU-ENG.webp') }}"
                     alt="Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2024-ENG.pdf" />
-                <p class="mt-3 text-sm">Arcadia98 Kft. bővített beltéri ajtókatalógus 2024-ENG</p>
+                <p class="mt-3 text-sm">Arcadia98 Kft. bővített beltéri ajtókatalógus 2025-HU-ENG</p>
             </a>
             <a href="{{ Storage::url('dl/Dooroutlet_belteri_ajto_raktari_uveges_szinek_2024.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Dooroutlet_belteri_ajto.webp') }}"
