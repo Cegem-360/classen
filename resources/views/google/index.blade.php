@@ -12,7 +12,7 @@
         </title>
     </x-slot>
     <x-nav.breadcrumb>
-        fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók
+        Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók
     </x-nav.breadcrumb>
 
     <!-- gap -->
@@ -21,7 +21,7 @@
     <div class="mx-16 md:mx-8 sm:mx-4">
         <div class="mb-16">
             <h2 class="mb-3 text-4xl font-bold">
-                fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók
+                Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók
             </h2>
             <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>

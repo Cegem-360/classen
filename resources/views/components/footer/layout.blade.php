@@ -1,9 +1,9 @@
     <footer class="bg-white">
-        <div class="max-w-screen-xl mx-auto max-w-7xl p-4 py-6 lg:py-8">
+        <div class="max-w-screen-xl p-4 py-6 mx-auto max-w-7xl lg:py-8">
             <div class="md:flex md:flex-col md:justify-between">
-                <div class="mb-6 flex justify-center md:mb-0 md:items-start">
+                <div class="flex justify-center mb-6 md:mb-0 md:items-start">
                     <a class="flex items-center" href="/">
-                        <img class="mb-8 mt-8 h-16" src="{{ Vite::asset('resources/img/arcadia98-logo.svg') }}"
+                        <img class="h-16 mt-8 mb-8" src="{{ Vite::asset('resources/img/arcadia98-logo.svg') }}"
                             alt="Arcadia98 Logo" loading="lazy" />
                     </a>
                 </div>
@@ -15,14 +15,14 @@
                 <div class="min-h-[69px]"></div>
                 <div class="grid grid-cols-3 gap-8 sm:grid-cols-1 sm:gap-6">
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase text-gray-900">Üzletünk nyitva tartása</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Üzletünk nyitva tartása</h2>
                         <ul class="font-medium text-gray-500">
                             <li class="mb-2">hétfő - péntek: 7:00 - 16:00,</li>
                             <li class="mb-2">szombat: 9:00 - 13:00</li>
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase text-gray-900">Kapcsolat</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Kapcsolat</h2>
                         <ul class="font-medium text-gray-500">
                             <li class="mb-2">
                                 <a class="hover:underline" href="mailto:info@arcadia98.hu">E-mail: info@arcadia98.hu</a>
@@ -41,7 +41,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 class="mb-6 text-sm font-semibold uppercase text-gray-900">Közösségi oldalaink</h2>
+                        <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Közösségi oldalaink</h2>
 
                         <div class="flex gap-2">
                             <svg style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
@@ -126,7 +126,7 @@
             </div>
             <hr class="my-6 border-gray-200 lg:my-8 sm:mx-auto" />
             <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-500 sm:text-center">© 2023 <a class="hover:underline"
+                <span class="text-sm text-gray-500 sm:text-center">© {{ date('Y') }} <a class="hover:underline"
                         href="#">Arcadia98</a>
                 </span>
             </div>

@@ -103,7 +103,7 @@ export function initSwiperJS() {
     lightbox.on('change', () => {
         const { pswp } = lightbox;
         detailPageSwiper.slideTo(pswp.currIndex, 0, false);
-        console.log('Slide index', pswp.currIndex);
+        //console.log('Slide index', pswp.currIndex);
         //console.log('Slide object', pswp.currSlide);
         //console.log('Slide object data', pswp.currSlide.data);
     });
@@ -154,7 +154,7 @@ export function initSwiperJS() {
     lightbox2.on('change', () => {
         const { pswp } = lightbox2;
         doorModelSwiper.slideTo(pswp.currIndex, 0, false);
-        console.log('Slide index', pswp.currIndex);
+        //console.log('Slide index', pswp.currIndex);
         //console.log('Slide object', pswp.currSlide);
         //console.log('Slide object data', pswp.currSlide.data);
     });
@@ -189,7 +189,7 @@ export function initSwiperJS() {
     lightbox3.on('change', () => {
         const { pswp } = lightbox3;
         doorColorVariantSwiper.slideTo(pswp.currIndex, 0, false);
-        console.log('Slide index', pswp.currIndex);
+        //console.log('Slide index', pswp.currIndex);
         //console.log('Slide object', pswp.currSlide);
         //console.log('Slide object data', pswp.currSlide.data);
     });
@@ -276,19 +276,19 @@ export function initSwiperJS() {
 
         on: {
             slideNextTransitionStart(swiper) {
-                console.log("slideNextTransitionStart");
+                //console.log("slideNextTransitionStart");
                 //tl.clear();
                 //tl.restart();
                 animationSlide(swiper);
             },
             slidePrevTransitionStart(swiper) {
-                console.log("slidePrevTransitionStart");
+                //console.log("slidePrevTransitionStart");
                 //tl.clear();
                 //tl.restart();
                 animationSlide(swiper);
             },
             afterInit(swiper) {
-                console.log("afterInit");
+                //console.log("afterInit");
                 animationSlide(swiper);
             }
         }

@@ -1,12 +1,12 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Artisan;
-use App\Http\Controllers\DoorController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\QuotationController;
 use App\Http\Controllers\DatabaseUpdaterController;
+use App\Http\Controllers\DoorController;
 use App\Http\Controllers\ManagePageContentController;
+use App\Http\Controllers\QuotationController;
+use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -54,21 +54,23 @@ Route::get('/letoltesek', function () {
 
 Route::view('/kilincsek', 'kilincsek.index')->name('kilincsek');
 Route::view(
-    '/' . Str::slug('Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók', '-', 'hu'),
+    '/'.Str::slug('Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók', '-', 'hu'),
     'google.index'
 )->name('meta');
 Route::view(
-    '/' . Str::slug('Enteriőrbe illő bejárati ajtók - Stílus és biztonság', '-', 'hu'),
+    '/'.Str::slug('Enteriőrbe illő bejárati ajtók - Stílus és biztonság', '-', 'hu'),
     'google.enterior'
 )->name('enterior');
 Route::view(
-    '/' . Str::slug('Modulajtók - Stílus, funkcionalitás és minőség', '-', 'hu'),
+    '/'.Str::slug('Modulajtók - Stílus, funkcionalitás és minőség', '-', 'hu'),
     'google.modern'
 )->name('modern');
 Route::view(
-    '/' . Str::slug(' Fa mintázatú ajtók - Természetes elegancia és stílus', '-', 'hu'),
+    '/'.Str::slug('Fa mintázatú ajtók - Természetes elegancia és stílus', '-', 'hu'),
     'google.woodenstyle'
 )->name('woodenstyle');
+
+Route::view('/kimelt-termekeink', 'kimelt-termekeink')->name('kimelt-termekeink');
 
 Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
     Route::get('/', [QuotationController::class, 'index'])->name('index');
@@ -101,9 +103,11 @@ Route::get('/clearCache', function () {
     Artisan::call('config:clear');
     Artisan::call('route:clear');
     Artisan::call('view:clear');
+
     return 'Cache cleared';
 });
 Route::get('/sitemap', function () {
     Artisan::call('sitemap:generate');
+
     return 'Sitemap generated';
 });

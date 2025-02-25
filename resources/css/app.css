@@ -429,7 +429,7 @@ ul.property__list {
 }
 
 
-// TIPPY tooltip
+/*TIPPY tooltip*/
 .tippy-box[data-theme~='tomato'] {
     background-color: tomato;
     color: yellow;
@@ -452,7 +452,7 @@ ul.property__list {
     }
     .tippy-arrow {
         color: #fff!important;
-        //box-shadow: 0 2px 7px 0 rgba(0,0,0,.21);
+        /*box-shadow: 0 2px 7px 0 rgba(0,0,0,.21);*/
     }
 }
 

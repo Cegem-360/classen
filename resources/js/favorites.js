@@ -20,7 +20,7 @@ const initFavoritesJS = {
 
         favorites.forEach(favoriteItem => {
             var heart = document.getElementById("heart-" + favoriteItem);
-            console.log(heart);
+            //console.log(heart);
             if (heart) {
                 heart.classList.remove('fill-white');
                 heart.classList.add('fill-gray-1000');
@@ -59,7 +59,7 @@ const initFavoritesJS = {
 
     setFavorites: function (array) {
         this.setCookie('favorites', JSON.stringify(array), 30);
-        console.log(JSON.stringify(array));
+        //console.log(JSON.stringify(array));
     }
 };
 
