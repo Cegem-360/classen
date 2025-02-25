@@ -47,7 +47,7 @@
             {{-- <div class="swiper-slide">
                 <!-- slide-0 -->
                 <div class="hero-image sm:h-[70vw] h-[80vh] bg-cover bg-center sm:h-[100vh]"
-                    style="background-position: 40% 50%; background-image: url('http://admin.classen.cegem360.hu/wp-content/uploads/2024/12/xmas-banner.webp');">
+                    style="background-position: 40% 50%; background-image: url('https://admin.classen.cegem360.hu/wp-content/uploads/2024/12/xmas-banner.webp');">
                 </div>
             </div> --}}
             @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->get() as $item)

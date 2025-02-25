@@ -28,26 +28,26 @@
     @php
         $photos = [
             'Adjustable door frame' => [
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_6_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_6.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_7_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_5_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_3_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_1_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_6_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_6.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_7_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_5_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_3_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_1_en.jpg',
             ],
             'Adjustable non-rebated door frame' => [
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_6_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_5_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_4_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_3_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_2_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_1_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_6_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_5_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_4_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_3_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_2_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/regulowana_b_1_en.jpg',
             ],
             'Standard 2-Pack door frame' => [
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_4_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_3_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_2_en.jpg',
-                'http://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_1_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_4_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_3_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_2_en.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_1_en.jpg',
             ],
         ];
     @endphp

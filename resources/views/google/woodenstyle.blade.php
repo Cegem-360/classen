@@ -11,9 +11,9 @@
             Fa mintázatú ajtók - Természetes elegancia és stílus az Arcadia98-tól
         </title>
     </x-slot>
-    <x-nav.breadcrumb>
+    <x-nav.breadcrumb-home-end>
         Fa mintázatú ajtók - Természetes elegancia és stílus
-    </x-nav.breadcrumb>
+    </x-nav.breadcrumb-home-end>
 
     <!-- gap -->
     <div class="min-h-[60px]"></div>

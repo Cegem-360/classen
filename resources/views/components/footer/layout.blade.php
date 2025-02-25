@@ -125,9 +125,21 @@
                 </div>
             </div>
             <hr class="my-6 border-gray-200 lg:my-8 sm:mx-auto" />
-            <div class="sm:flex sm:items-center sm:justify-between">
+            <div class="mt-6 text-left">
+                <a href="{{ route('kiemelt-termekeink') }}" class="text-sm font-semibold text-gray-900 hover:underline">
+                    Kiemelt termékeink
+                </a>
+            </div>
+
+            <div class="text-center sm:flex sm:items-center sm:justify-center">
                 <span class="text-sm text-gray-500 sm:text-center">© {{ date('Y') }} <a class="hover:underline"
-                        href="#">Arcadia98</a>
+                        href="#">Arcadia98</a></span>
+                <span class="text-sm text-gray-500 sm:text-center">Az oldalt készítette <a class="hover:underline"
+                        href="https://cegem360.hu">Cegem360 Kft.</a>
+                    <a class="" href="https://cegem360.hu">
+                        <img class="inline h-8 ml-4" src="{{ Vite::asset('resources/img/cegem360-logo.webp') }}"
+                            alt="Cegem360 Kft. Logo" loading="lazy" />
+                    </a>
                 </span>
             </div>
         </div>

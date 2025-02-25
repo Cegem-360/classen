@@ -43,6 +43,10 @@
     "file": "assets/bemutatoterem_2-BvDn5kws.webp",
     "src": "resources/img/bemutatoterem_2.webp"
   },
+  "resources/img/cegem360-logo.webp": {
+    "file": "assets/cegem360-logo-CH-wjD0Y.webp",
+    "src": "resources/img/cegem360-logo.webp"
+  },
   "resources/img/classen_verti.webp": {
     "file": "assets/classen_verti-Cri5Ybc0.webp",
     "src": "resources/img/classen_verti.webp"
@@ -576,7 +580,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CEPxEXeJ.js",
+    "file": "assets/app-CTVOr0ih.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -585,7 +589,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-hFWlDxwa.css"
+      "assets/app-DcMHkcB3.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",

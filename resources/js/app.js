@@ -16,7 +16,7 @@ document.addEventListener('livewire:init', () => {
     function setRedNavigation() {
         $('#quotation').addClass('font-bold text-orange-600');
     }
-});
+},{once: true});
 document.addEventListener('livewire:navigated', () => {
     initSwiperJS();
     function setRedNavigation() {
@@ -24,7 +24,7 @@ document.addEventListener('livewire:navigated', () => {
     }
     initFavoritesJS.initFavorites();
     initCustomJS();
-});
+},{once: true});
 
 window.initFavoritesJS = initFavoritesJS;
 

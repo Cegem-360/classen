@@ -1,28 +1,28 @@
 <x-layouts.app>
     <x-slot name="meta">
         <meta name="description"
-            content="beltéri ajtók,fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók">
+            content="Fedezze fel az Arcadia98 fa mintázatú beltéri ajtóinak széles választékát. Prémium minőségű, stílusos és tartós ajtók, amelyek tökéletesen illeszkednek otthona belső tereibe. Válasszon most!">
         <meta name="keywords"
-            content="beltéri ajtók,fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók">
+            content="fa mintázatú beltéri ajtók, beltéri ajtók, Arcadia98, prémium ajtók, stílusos ajtók, tartós ajtók">
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
         <link rel="canonical" href="{{ Request::url() }}">
         <title>
-            Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók
+            Fa mintázatú beltéri ajtók - Prémium minőség és stílus az Arcadia98-tól
         </title>
     </x-slot>
-    <x-nav.breadcrumb>
-        Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók
-    </x-nav.breadcrumb>
+    <x-nav.breadcrumb-home-end>
+        Fa mintázatú beltéri ajtók - Prémium minőség és stílus az Arcadia98-tól
+    </x-nav.breadcrumb-home-end>
 
     <!-- gap -->
     <div class="min-h-[60px]"></div>
 
     <div class="mx-16 md:mx-8 sm:mx-4">
         <div class="mb-16">
-            <h2 class="mb-3 text-4xl font-bold">
-                Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók
-            </h2>
+            <h1 class="mb-3 text-4xl font-bold">
+                Fa mintázatú beltéri ajtók - Prémium minőség és stílus az Arcadia98-tól
+            </h1>
             <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
 
@@ -75,11 +75,146 @@
             <p class="text-lg">Weboldal: arcadia98.hu</p>
         </div>
 
+        <div class="min-h-[180px]"></div>
+
+        <section>
+            <h2 class="mb-4 text-2xl font-bold">Az Arcadia98 Fa Mintázatú Beltéri Ajtók Előnyei</h2>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 fa mintázatú beltéri ajtói nemcsak esztétikai szempontból kiemelkedőek, hanem a legújabb
+                technológiai megoldásokkal is rendelkeznek. Az ajtók kiváló hő- és hangszigetelési tulajdonságokkal
+                bírnak, így hozzájárulnak otthona energiahatékonyságához és kényelméhez. A biztonsági funkciók, mint
+                például a többpontos zárak és a megerősített szerkezetek, garantálják a nyugalmat és a védelmet.
+            </p>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 csapata elkötelezett amellett, hogy ügyfeleinek a legjobb szolgáltatást nyújtsa.
+                Szakértőink segítenek a megfelelő ajtó kiválasztásában, figyelembe véve az egyedi igényeket és
+                preferenciákat. Emellett professzionális telepítési szolgáltatásokat is kínálunk, hogy biztosítsuk az
+                ajtók tökéletes illeszkedését és működését.
+            </p>
+            <p class="mb-4 text-lg">
+                Látogasson el bemutatótermünkbe, ahol személyesen is megtekintheti az Arcadia98 ajtók széles
+                választékát. Tapasztalja meg a minőséget és a dizájnt, és találja meg az otthonához legjobban illő
+                ajtót. Az Arcadia98 ajtók nemcsak egy termék, hanem egy életstílus választása is, amely ötvözi a
+                funkcionalitást és az esztétikumot.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="mb-4 text-2xl font-bold">Az Arcadia98 Fa Mintázatú Beltéri Ajtók Különböző Stílusai</h2>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 fa mintázatú beltéri ajtók különböző stílusokban és kivitelben érhetők el, így mindenki
+                megtalálhatja a számára legmegfelelőbb darabot. A klasszikus stílusú ajtók időtálló eleganciát
+                sugároznak, míg a modern ajtók letisztult vonalaikkal és innovatív megoldásaikkal hódítanak. Az egyedi
+                ajtók lehetőséget adnak arra, hogy teljes mértékben személyre szabott megoldásokat válasszon, amelyek
+                tökéletesen illeszkednek otthona stílusához és hangulatához.
+            </p>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók nemcsak a lakás belső tereiben, hanem a bejárati ajtók esetében is kiváló választást
+                jelentenek. A bejárati ajtók különleges biztonsági megoldásokkal vannak ellátva, amelyek garantálják
+                otthona védelmét. Emellett a bejárati ajtók esztétikai szempontból is kiemelkedőek, így már az első
+                pillanatban lenyűgözik a látogatókat.
+            </p>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók kiváló minőségű anyagokból készülnek, amelyek biztosítják a hosszú élettartamot és a
+                tartósságot. Az ajtók felülete ellenáll a karcolásoknak és a kopásnak, így hosszú évekig megőrzik
+                eredeti szépségüket. Emellett az ajtók könnyen tisztíthatók és karbantarthatók, így mindig újszerű
+                állapotban tarthatók.
+            </p>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók különböző méretekben és kivitelben érhetők el, így mindenki megtalálhatja a számára
+                legmegfelelőbb darabot. Az ajtók egyedi méretre is rendelhetők, így biztos lehet benne, hogy tökéletesen
+                illeszkednek otthona nyílászáróihoz. Az ajtók különböző színekben és felületekkel érhetők el, így
+                mindenki megtalálhatja a számára legmegfelelőbb stílust.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="mb-4 text-2xl font-bold">Az Arcadia98 Fa Mintázatú Beltéri Ajtók Technológiai Megoldásai</h2>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók a legújabb technológiai megoldásokkal rendelkeznek, amelyek biztosítják a kényelmet
+                és a biztonságot. Az ajtók kiváló hő- és hangszigetelési tulajdonságokkal bírnak, így hozzájárulnak
+                otthona energiahatékonyságához és kényelméhez. A biztonsági funkciók, mint például a többpontos zárak és
+                a megerősített szerkezetek, garantálják a nyugalmat és a védelmet.
+            </p>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók különböző anyagokból készülnek, amelyek biztosítják a hosszú élettartamot és a
+                tartósságot. Az ajtók felülete ellenáll a karcolásoknak és a kopásnak, így hosszú évekig megőrzik
+                eredeti szépségüket. Emellett az ajtók könnyen tisztíthatók és karbantarthatók, így mindig újszerű
+                állapotban tarthatók.
+            </p>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók különböző méretekben és kivitelben érhetők el, így mindenki megtalálhatja a számára
+                legmegfelelőbb darabot. Az ajtók egyedi méretre is rendelhetők, így biztos lehet benne, hogy tökéletesen
+                illeszkednek otthona nyílászáróihoz. Az ajtók különböző színekben és felületekkel érhetők el, így
+                mindenki megtalálhatja a számára legmegfelelőbb stílust.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="mb-4 text-2xl font-bold">Az Arcadia98 Fa Mintázatú Beltéri Ajtók Vásárlói Vélemények</h2>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók vásárlói véleményei is megerősítik a termékek kiváló minőségét és megbízhatóságát. A
+                vásárlók elégedettek az ajtók esztétikai megjelenésével, funkcionalitásával és tartósságával. Az
+                Arcadia98 csapata elkötelezett amellett, hogy ügyfeleinek a legjobb szolgáltatást nyújtsa, és minden
+                igényt kielégítsen.
+            </p>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók nemcsak egy termék, hanem egy életstílus választása is, amely ötvözi a
+                funkcionalitást és az esztétikumot. Az ajtók különböző stílusokban és kivitelben érhetők el, így
+                mindenki megtalálhatja a számára legmegfelelőbb darabot. Az ajtók kiváló minőségű anyagokból készülnek,
+                amelyek biztosítják a hosszú élettartamot és a tartósságot.
+            </p>
+            <p class="mb-4 text-lg">
+                Az Arcadia98 ajtók különböző méretekben és kivitelben érhetők el, így mindenki megtalálhatja a számára
+                legmegfelelőbb darabot. Az ajtók egyedi méretre is rendelhetők, így biztos lehet benne, hogy tökéletesen
+                illeszkednek otthona nyílászáróihoz. Az ajtók különböző színekben és felületekkel érhetők el, így
+                mindenki megtalálhatja a számára legmegfelelőbb stílust.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="mb-4 text-2xl font-bold">Fedezze fel kollekcióinkat</h2>
+            <p class="mb-4">
+                Tekintse meg az Arcadia98 különböző ajtókollekcióit, és találja meg az otthonához legjobban illő
+                darabot.
+                Kattintson az alábbi linkekre, hogy többet tudjon meg egy-egy kollekcióról:
+            </p>
+
+            <a wire:navigate href="{{ route('category.index') . '?g=purpose&q=wood_door' }}"
+                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Fa mintázatú ajtók
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+            </a>
+
+            <a wire:navigate href="{{ route('category.index') . '?g=purpose&q=wood_door' }}"
+                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Fa mintázatú ajtók
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+            </a>
+
+            <a wire:navigate href="{{ route('category.show', ['category' => 'andromeda']) }}"
+                class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-900">
+                Andromeda
+                <svg class="w-3.5 h-3.5 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9" />
+                </svg>
+            </a>
+
+        </section>
     </div>
 
     <!-- gap -->
     <div class="min-h-[180px]"></div>
 
     <x-footer.layout />
-
 </x-layouts.app>

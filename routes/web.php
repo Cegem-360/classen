@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//home
+// home
 Route::get('/', [ManagePageContentController::class, 'index'])->name('index');
 
 Route::get('/ajtok', [DoorController::class, 'index'])->name('door.index');
@@ -70,7 +70,7 @@ Route::view(
     'google.woodenstyle'
 )->name('woodenstyle');
 
-Route::view('/kimelt-termekeink', 'kimelt-termekeink')->name('kimelt-termekeink');
+Route::view('/kiemelt-termekeink', 'kiemelt-termekeink')->name('kiemelt-termekeink');
 
 Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
     Route::get('/', [QuotationController::class, 'index'])->name('index');
