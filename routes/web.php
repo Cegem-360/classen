@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DatabaseUpdaterController;
 use App\Http\Controllers\DoorController;
@@ -43,7 +44,8 @@ Route::prefix('mail')->as('mail.')->group(function () {
 
 Route::get('/szolgaltatasaink', [ManagePageContentController::class, 'szolgaltatasaink'])->name('szolgaltatasaink');
 
-Route::get('/blog', [ManagePageContentController::class, 'blog'])->name('blog');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
+Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 
 Route::prefix('kedvencek')->as('favorites.')->group(function () {
     Route::get('/', [ManagePageContentController::class, 'favorites'])->name('index');

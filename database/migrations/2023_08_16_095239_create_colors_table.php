@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Category;
+use App\Models\Door;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,8 +19,8 @@ return new class extends Migration
             $table->string('small_img', 1000)->nullable()->default('resources/img/placeholder.webp');
             $table->string('big_img', 1000)->nullable()->default('resources/img/placeholder.webp');
             $table->string('material_category', 500)->nullable()->default('');
-            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreignId('door_id')->references('id')->on('doors')->onDelete('cascade');
+            $table->foreignIdFor(Category::class)->onDelete('cascade');
+            $table->foreignIdFor(Door::class)->onDelete('cascade');
             $table->timestamps();
         });
     }
