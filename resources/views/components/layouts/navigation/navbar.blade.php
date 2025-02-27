@@ -2,7 +2,10 @@
 @php
     if (!is_null(json_decode(Cookie::get('favorites')))) {
         $favoriteProductIds = json_decode(Cookie::get('favorites'));
-        $favoriteProducts = Door::whereIn('id', $favoriteProductIds)->get();
+        $favoriteProducts = collect();
+        if ($favoriteProductIds != null) {
+            $favoriteProducts = Door::whereIn('id', $favoriteProductIds)->get();
+        }
     } else {
         $favoriteProducts = collect();
     }
@@ -51,7 +54,7 @@
                     <a class="flex h-full w-16 items-center justify-center border-x-[1px] border-[#000]"
                         href="{{ route('favorites.index') }}" wire:navigate>
                         <span class="absolute mt-12" id="favorites_numbers">
-                            {{ $favoriteProducts->count() }}
+                            {{ $favoriteProducts?->count() }}
                         </span>
                         <x-svg.heart />
                     </a>

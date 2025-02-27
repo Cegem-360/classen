@@ -29,7 +29,7 @@ class DatabaseSeeder extends Seeder
             CategorySeeder::class,
             DoorSeeder::class,
             AdditionalAttributeSeeder::class,
-
+            BlogSeeder::class,
         ]);
 
     }

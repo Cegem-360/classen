@@ -209,6 +209,19 @@
                                 <p>{{ __($door->tag_name) }}</p>
                             </div>
                         </a>
+                        <div class="w-full pt-2">
+                            <p class="font-bold"> {{ $door->price }} {{ __('Ft.') }}</p>
+                        </div>
+                        <div>
+                            <form wire:submit='addToQuotation'>
+                                @csrf
+                                <button
+                                    class="inline-flex items-center px-6 py-3 mt-6 text-xs font-semibold tracking-widest text-white uppercase transition duration-150 ease-in-out bg-gray-800 border border-transparent w-fit hover:bg-gray-700 focus:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 active:bg-gray-900"
+                                    type="submit">
+                                    {{ __('Hozzáadás az árajánlathoz') }}
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 @endforeach
 

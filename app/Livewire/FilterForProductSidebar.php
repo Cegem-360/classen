@@ -3,11 +3,14 @@
 namespace App\Livewire;
 
 use App\Models\Door;
+use App\Models\Quotation;
+use App\Models\QuotationItem;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 use Livewire\WithoutUrlPagination;
 use Livewire\WithPagination;
+use Masmerise\Toaster\Toaster;
 
 class FilterForProductSidebar extends Component
 {
@@ -182,5 +185,22 @@ class FilterForProductSidebar extends Component
         }
 
         return false;
+    }
+
+    public function addToQuotation($id)
+    {
+        $door = Door::find($id);
+        $quotation = session()->get('quotation', Quotation::create([
+            'session_id' => session()->getId(),
+        ]));
+        QuotationItem::whereQuotationId($quotation->id)->whereDoorId($door->id)->firstOrCreate([
+            'quotation_id' => $quotation->id,
+            'door_id' => $this->door->id,
+        ]);
+        session()->put('quotation', $quotation);
+        Toaster::success(__('Sikeresen hozzáadva az árajánlathoz!'));
+        $this->js('setRedNavigation()');
+        // return $this->redirect(route('door.show', ['door' => $this->door]), navigate: true);
+
     }
 }

@@ -33,21 +33,6 @@
                     alt="Dooroutlet_beltéri_ajtó_raktári_üveges_színek_2024.pdf" />
                 <p class="mt-3 text-sm">Dooroutlet beltéri ajtó raktári üveges színek 2024.pdf</p>
             </a>
-            <a href="{{ Storage::url('dl/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.pdf') }}" target="_blank">
-                <img src="{{ Vite::asset('resources/img/cover-images/Dooroutlet-ajtolap-meretek-es-nyitasi-iranyok.webp') }}"
-                    alt="Dooroutlet ajtólap méretek és nyitási irányok.pdf" />
-                <p class="mt-3 text-sm">Dooroutlet ajtólap méretek és nyitási irányok.pdf</p>
-            </a>
-            <a href="{{ Storage::url('dl/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.pdf') }}" target="_blank">
-                <img src="{{ Vite::asset('resources/img/cover-images/Dooroutlet-utolag-beepitheto-falcolt-tok-meretek.webp') }}"
-                    alt="Dooroutlet utólag beépíthető falcolt tok méretek.pdf" />
-                <p class="mt-3 text-sm">Dooroutlet utólag beépíthető falcolt tok méretek.pdf</p>
-            </a>
-            <a href="{{ Storage::url('dl/Arcadia98-Kft-brutto-Kiskereskedelmi-arlista-2023.pdf') }}" target="_blank">
-                <img src="{{ Vite::asset('resources/img/cover-images/Arcadia98-arlista-2023.webp') }}"
-                    alt="Arcadia 98 Kft. - bruttó Kiskereskedelmi árlista 2023.pdf" />
-                <p class="mt-3 text-sm">Arcadia 98 Kft. - bruttó Kiskereskedelmi árlista 2023.pdf</p>
-            </a>
         </div>
     </div>
 
