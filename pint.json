@@ -9,5 +9,8 @@
             "import_constants": true,
             "import_functions": true
         }
-    }
+    },
+    "notPath": [
+        "app/Http/Controllers/Controller.php"
+    ]
 }
