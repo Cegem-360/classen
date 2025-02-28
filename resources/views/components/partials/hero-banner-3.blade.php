@@ -1,6 +1,6 @@
 @use('App\Models\WebsiteOptions')
 <div
-    class="mx-auto flex h-1/2 flex-wrap items-center grid-cols-[1fr_3fr] sm:grid-cols-1 bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
+    class="mx-auto flex h-1/2 flex-wrap items-center !grid grid-cols-[1fr_3fr] sm:grid-cols-1 bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
 
     <div class="relative h-[80vh] sm:h-fit">
         <!-- slide-0 -->
@@ -44,10 +44,16 @@
 
     <div class="swiper hero-swiper relative h-[80vh] w-full sm:h-fit">
         <div class="swiper-wrapper">
+            {{-- <div class="swiper-slide">
+                <!-- slide-0 -->
+                <div class="hero-image sm:h-[70vw] h-[80vh] bg-cover bg-center sm:h-[100vh]"
+                    style="background-position: 40% 50%; background-image: url('https://admin.classen.cegem360.hu/wp-content/uploads/2024/12/xmas-banner.webp');">
+                </div>
+            </div> --}}
             @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->get() as $item)
                 <div class="swiper-slide">
                     <!-- Hero Image -->
-                    <div class="hero-image sm:h-[70vw] h-[80vh] bg-cover bg-center"
+                    <div class="hero-image sm:h-[70vw] h-[80vh] bg-cover bg-center sm:h-[100vh]"
                         style="background-position: 40% 50%; background-image: url('{{ $item->img_url }}');"></div>
                 </div>
             @endforeach
