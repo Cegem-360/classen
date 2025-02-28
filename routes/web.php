@@ -10,6 +10,7 @@ use App\Http\Controllers\ManagePageContentController;
 use App\Http\Controllers\QuotationController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Str;
 
 /*
 |--------------------------------------------------------------------------
