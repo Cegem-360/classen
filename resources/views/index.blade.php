@@ -21,6 +21,9 @@
     <!-- Elonyok -->
     <x-partials.elonyok />
 
+    <!-- blog -->
+    <x-partials.blog />
+
     <div class="flex flex-wrap items-center justify-end mx-auto text-white bg-cover ad-banner h-1/2"
         style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/kozepso_banner_hatter.webp') }}');">
         <div class="banner-container -mt-12 mb-12 h-[50vh] w-1/2 bg-zold_attetszo px-16 py-24 sm:w-full">
