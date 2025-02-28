@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use App\Models\QuotationItem;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
-class UpdateQuotationItem extends Component
+final class UpdateQuotationItem extends Component
 {
     public QuotationItem $quotationItem;
 

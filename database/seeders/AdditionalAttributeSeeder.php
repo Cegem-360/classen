@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Enums\EndPoint;
@@ -10,7 +12,7 @@ use Excel;
 use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
-class AdditionalAttributeSeeder extends Seeder
+final class AdditionalAttributeSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -27,7 +29,7 @@ class AdditionalAttributeSeeder extends Seeder
                 'base_uri' => UrlPath::BASEURL,
             ]
         );
-        //$this->client->
+        // $this->client->
         $response = $this->client->get(EndPoint::LARAVELWEBSITEOPTIONS, ['timeout' => 120]);
         $result = json_decode($response->getBody(), true);
         $result = $result[0]['acf'];

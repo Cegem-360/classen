@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Console\Commands;
 
 use App\Models\Category;
@@ -9,7 +11,7 @@ use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 use Str;
 
-class GenerateSitemap extends Command
+final class GenerateSitemap extends Command
 {
     /**
      * The console command name.

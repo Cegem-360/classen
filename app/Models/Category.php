@@ -1,17 +1,19 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use Spatie\Sitemap\Tags\Url;
-use Illuminate\Support\Carbon;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Sitemap\Contracts\Sitemapable;
-use Illuminate\Database\Eloquent\Relations\HasOne;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Support\Carbon;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 
-class Category extends Model implements Sitemapable
+final class Category extends Model implements Sitemapable
 {
     use HasFactory;
 
@@ -49,6 +51,7 @@ class Category extends Model implements Sitemapable
         'door_specification' => 'array',
         'gallery_imgs' => 'array',
     ];
+
     public function toSitemapTag(): Url
     {
         // Simple return:

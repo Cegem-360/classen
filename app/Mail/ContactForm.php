@@ -1,22 +1,27 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactForm extends Mailable
+final class ContactForm extends Mailable
 {
     use Queueable, SerializesModels;
 
     public $first_name;
+
     public $last_name;
+
     public $contactEmail;
+
     public $phone;
+
     public $emailMessage;
 
     /**

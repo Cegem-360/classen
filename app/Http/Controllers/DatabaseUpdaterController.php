@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Jobs\UpdateWebsiteDatabase;
 
-class DatabaseUpdaterController extends Controller
+final class DatabaseUpdaterController extends Controller
 {
     public function trigger()
     {

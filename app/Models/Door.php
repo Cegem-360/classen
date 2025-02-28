@@ -1,16 +1,18 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use Spatie\Sitemap\Tags\Url;
-use Illuminate\Support\Carbon;
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Sitemap\Contracts\Sitemapable;
-use Illuminate\Database\Eloquent\Relations\HasMany;
-use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Carbon;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 
-class Door extends Model  implements Sitemapable
+final class Door extends Model implements Sitemapable
 {
     use HasFactory;
 
@@ -34,6 +36,7 @@ class Door extends Model  implements Sitemapable
     {
         return $this->hasMany(Color::class, 'color_door');
     }
+
     public function toSitemapTag(): Url
     {
         // Simple return:

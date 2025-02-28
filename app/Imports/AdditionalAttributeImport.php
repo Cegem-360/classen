@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Imports;
 
 use App\Models\AdditionalAttribute;
@@ -8,8 +10,9 @@ use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\Importable;
 use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
+use Throwable;
 
-class AdditionalAttributeImport implements ToCollection, WithHeadingRow
+final class AdditionalAttributeImport implements ToCollection, WithHeadingRow
 {
     use Importable;
 
@@ -33,7 +36,7 @@ class AdditionalAttributeImport implements ToCollection, WithHeadingRow
                 }
 
                 AdditionalAttribute::create($data);
-            } catch (\Throwable $th) {
+            } catch (Throwable $th) {
                 dd($row['kollekciok']);
             }
         }

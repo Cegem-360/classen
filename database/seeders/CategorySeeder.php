@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Enums\EndPoint;
@@ -10,7 +12,7 @@ use Automattic\WooCommerce\Client as WC;
 use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
-class CategorySeeder extends Seeder
+final class CategorySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -35,10 +37,10 @@ class CategorySeeder extends Seeder
                 'timeout' => 300,
             ]
         );
-        //wooCommerce
+        // wooCommerce
 
         $woocommerceCategories = $this->wooCommerce->get(EndPoint::PRODUCTSCATEGORIES, ['per_page' => 100, 'exclude' => ['15']]);
-        //blog
+        // blog
         $categories = collect(json_decode($this->client->get(EndPoint::CATEGORIES.'?per_page=100', ['timeout' => 120])->getBody(), true));
         foreach ($woocommerceCategories as $woCategory) {
             $category = $categories->where('name', $woCategory->name)->first();

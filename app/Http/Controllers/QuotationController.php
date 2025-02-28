@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Mail\QuotationInner;
@@ -11,7 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Validator;
 
-class QuotationController extends Controller
+final class QuotationController extends Controller
 {
     public function index()
     {
@@ -28,9 +30,9 @@ class QuotationController extends Controller
 
     public function success()
     {
-        //reset session Quotation
+        // reset session Quotation
         session()->forget('quotation');
-        //frm database reset
+        // frm database reset
         Quotation::where('session_id', session()->getId())->delete();
 
         return view('quotation.success');

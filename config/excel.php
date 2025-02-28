@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use Maatwebsite\Excel\Excel;
 
 return [
@@ -160,8 +162,8 @@ return [
        */
         'cells' => [
             'middleware' => [
-                //\Maatwebsite\Excel\Middleware\TrimCellValue::class,
-                //\Maatwebsite\Excel\Middleware\ConvertEmptyCellValuesToNull::class,
+                // \Maatwebsite\Excel\Middleware\TrimCellValue::class,
+                // \Maatwebsite\Excel\Middleware\ConvertEmptyCellValuesToNull::class,
             ],
         ],
 

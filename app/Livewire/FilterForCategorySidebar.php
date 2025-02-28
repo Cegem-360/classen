@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use App\Models\AdditionalAttribute;
@@ -8,7 +10,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Livewire\Attributes\Url;
 use Livewire\Component;
 
-class FilterForCategorySidebar extends Component
+final class FilterForCategorySidebar extends Component
 {
     public $options = [
         'surface' => [
@@ -126,7 +128,7 @@ class FilterForCategorySidebar extends Component
 
             $collection = collect($categories);
             $this->collections = $collection->groupBy('breadcrumb')->sortBy('breadcrumb')->all();
-            //dump($this->collections);
+            // dump($this->collections);
         } else {
             $this->collections = Category::all()->groupBy('breadcrumb')->all();
             $tmp['LACQUERED DOORS'] = $this->collections['LACQUERED DOORS'];

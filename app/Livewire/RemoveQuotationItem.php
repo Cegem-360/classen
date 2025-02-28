@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use App\Models\QuotationItem;
@@ -7,7 +9,7 @@ use Livewire\Attributes\On;
 use Livewire\Component;
 use Masmerise\Toaster\Toaster;
 
-class RemoveQuotationItem extends Component
+final class RemoveQuotationItem extends Component
 {
     public QuotationItem $quotationItem;
 

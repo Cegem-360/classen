@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Console\Commands;
 
 use App\Imports\AdditionalAttributeImport;
 use Excel;
 use Illuminate\Console\Command;
 
-class ImportAdditionalAttributes extends Command
+final class ImportAdditionalAttributes extends Command
 {
     /**
      * The name and signature of the console command.

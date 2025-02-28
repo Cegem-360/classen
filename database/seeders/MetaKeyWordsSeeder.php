@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Imports\MetaDataImport;
-use Illuminate\Database\Seeder;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Excel;
-class MetaKeyWordsSeeder extends Seeder
+use Illuminate\Database\Seeder;
+
+final class MetaKeyWordsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,7 +19,7 @@ class MetaKeyWordsSeeder extends Seeder
         $fileContents = file_get_contents($fileUrl);
 
         $file = fopen(storage_path('app/import/meta_data.xlsx'), 'w');
-        fputs($file, $fileContents);
+        fwrite($file, $fileContents);
         fclose($file);
 
         Excel::import(new MetaDataImport, storage_path('app/import/meta_data.xlsx'));

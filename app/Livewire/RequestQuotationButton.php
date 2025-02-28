@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use App\Models\Door;
@@ -8,7 +10,7 @@ use App\Models\QuotationItem;
 use Livewire\Component;
 use Masmerise\Toaster\Toaster;
 
-class RequestQuotationButton extends Component
+final class RequestQuotationButton extends Component
 {
     public Door $door;
 
@@ -29,7 +31,7 @@ class RequestQuotationButton extends Component
         session()->put('quotation', $quotation);
         Toaster::success(__('Sikeresen hozzáadva az árajánlathoz!'));
         $this->js('setRedNavigation()');
-        //return $this->redirect(route('door.show', ['door' => $this->door]), navigate: true);
+        // return $this->redirect(route('door.show', ['door' => $this->door]), navigate: true);
 
     }
 

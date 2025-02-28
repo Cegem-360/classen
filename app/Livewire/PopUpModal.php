@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use Livewire\Component;
 
-class PopUpModal extends Component
+final class PopUpModal extends Component
 {
     public $data;
 

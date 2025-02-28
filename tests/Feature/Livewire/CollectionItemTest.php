@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Tests\Feature\Livewire;
 
 use App\Livewire\CollectionItem;
 use Livewire\Livewire;
 use Tests\TestCase;
 
-class CollectionItemTest extends TestCase
+final class CollectionItemTest extends TestCase
 {
     /** @test */
     public function renders_successfully()

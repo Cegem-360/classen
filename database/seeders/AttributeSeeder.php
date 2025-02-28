@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Enums\EndPoint;
@@ -8,7 +10,7 @@ use App\Models\Attribute;
 use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
-class AttributeSeeder extends Seeder
+final class AttributeSeeder extends Seeder
 {
     /**
      * Helper

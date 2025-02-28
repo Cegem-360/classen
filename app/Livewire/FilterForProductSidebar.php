@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use App\Models\Door;
@@ -12,7 +14,7 @@ use Livewire\WithoutUrlPagination;
 use Livewire\WithPagination;
 use Masmerise\Toaster\Toaster;
 
-class FilterForProductSidebar extends Component
+final class FilterForProductSidebar extends Component
 {
     use WithoutUrlPagination,WithPagination;
 

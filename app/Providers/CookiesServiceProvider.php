@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Providers;
 
 use Whitecube\LaravelCookieConsent\Consent;
 use Whitecube\LaravelCookieConsent\CookiesServiceProvider as ServiceProvider;
 use Whitecube\LaravelCookieConsent\Facades\Cookies;
 
-class CookiesServiceProvider extends ServiceProvider
+final class CookiesServiceProvider extends ServiceProvider
 {
     /**
      * Define the cookies users should be aware of.
@@ -27,6 +29,6 @@ class CookiesServiceProvider extends ServiceProvider
             ->name('darkmode_enabled')
             ->description(__('This cookie helps us remember your preferences regarding the interface\'s brightness.'))
             ->duration(120);
-        //->accepted(fn (Consent $consent, MyDarkmode $darkmode) => $consent->cookie(value: $darkmode->getDefaultValue()));
+        // ->accepted(fn (Consent $consent, MyDarkmode $darkmode) => $consent->cookie(value: $darkmode->getDefaultValue()));
     }
 }

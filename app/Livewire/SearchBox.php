@@ -1,11 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use App\Models\Category;
 use Livewire\Component;
 
-class SearchBox extends Component
+final class SearchBox extends Component
 {
     public $showdiv = false;
 

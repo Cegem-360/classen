@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Database\Seeders;
 
 use App\Enums\EndPoint;
@@ -11,7 +13,7 @@ use Automattic\WooCommerce\HttpClient\HttpClientException;
 use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
-class DoorSeeder extends Seeder
+final class DoorSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -35,9 +37,9 @@ class DoorSeeder extends Seeder
         try {
             $products = $woocommerce->get(EndPoint::PRODUCTS, ['limit' => 10000]);
             $products_tags = collect($woocommerce->get(EndPoint::PRODUCTSTAGS, ['per_page' => 100]));
-            //dump($products_tags);
+            // dump($products_tags);
             foreach ($products as $product) {
-                //dump($product);
+                // dump($product);
                 $cover = $product->images[0]->src;
                 if (isset($product->tags[0])) {
                     $tag = $products_tags->where('slug', $product->tags[0]->slug)->first();

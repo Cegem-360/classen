@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Mail;
 
 use App\Models\Quotation;
@@ -10,16 +12,14 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class RequestQuotationSended extends Mailable
+final class RequestQuotationSended extends Mailable
 {
     use Queueable, SerializesModels;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(public Quotation $quotation, public Collection $quotationItems)
-    {
-    }
+    public function __construct(public Quotation $quotation, public Collection $quotationItems) {}
 
     /**
      * Get the message envelope.

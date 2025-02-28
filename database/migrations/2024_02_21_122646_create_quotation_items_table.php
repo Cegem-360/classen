@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use App\Models\Door;
 use App\Models\Quotation;
 use Illuminate\Database\Migrations\Migration;

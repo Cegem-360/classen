@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Mail\ContactForm;
@@ -11,7 +13,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
-class ManagePageContentController extends Controller
+final class ManagePageContentController extends Controller
 {
     public Client $client;
 
@@ -86,7 +88,7 @@ class ManagePageContentController extends Controller
         return view('szolgaltatasaink/index');
     }
 
-    //ne nyulj hozzá
+    // ne nyulj hozzá
     public function xmlExport(Request $request)
     {
         $xmlData = $request->input('AXELPRO_EXP_ITEMS'); // Assuming AXELPRO_EXP_ITEMS is the key in your POST request
@@ -101,7 +103,7 @@ class ManagePageContentController extends Controller
         return response('XML file has been saved successfully', 200);
     }
 
-    //ne nyulj hozzá
+    // ne nyulj hozzá
     public function xmlFile()
     {
         $filePath = storage_path('app/axelpro_exp_items_.xml');

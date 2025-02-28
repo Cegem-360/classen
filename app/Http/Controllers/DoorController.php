@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers;
 
 use App\Models\Door;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 
-class DoorController extends Controller
+final class DoorController extends Controller
 {
     public Client $client;
 
@@ -21,9 +23,7 @@ class DoorController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
-    {
-    }
+    public function create() {}
 
     /**
      * Store a newly created resource in storage.

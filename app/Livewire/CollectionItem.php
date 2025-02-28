@@ -1,10 +1,12 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Livewire;
 
 use Livewire\Component;
 
-class CollectionItem extends Component
+final class CollectionItem extends Component
 {
     public $category;
 
