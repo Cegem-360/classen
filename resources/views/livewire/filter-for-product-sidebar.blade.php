@@ -201,7 +201,7 @@
                             <x-svg.heart class="" id="heart-{{ $door->id }}"> </x-svg.heart>
                         </button>
                         <a class="" href="{{ route('door.show', ['door' => $door->id]) }}" wire:navigate>
-                            <img class="max-h-[330px]"
+                            <img class="h-[330px]"
                                 src="{{ !empty($door->img_url) ? $door->img_url : Vite::asset('resources/img/placeholder.webp') }}"
                                 loading='lazy' />
                             <div class="w-full min-h-24 pt-2">

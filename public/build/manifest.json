@@ -580,7 +580,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-BuQi3Qqz.js",
+    "file": "assets/app-MnEXimLI.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -589,7 +589,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-XvxjeI5x.css"
+      "assets/app-7MHEqbF4.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",
