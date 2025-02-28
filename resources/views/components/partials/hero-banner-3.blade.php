@@ -47,7 +47,7 @@
             @foreach (WebsiteOptions::where('name', 'fooldal_hero_banner_kepek')->get() as $item)
                 <div class="swiper-slide">
                     <!-- Hero Image -->
-                    <div class="hero-image sm:h-[70vw] h-[80vh] bg-cover bg-center sm:h-[100vh]"
+                    <div class="hero-image sm:h-[70vw] h-[80vh] bg-cover bg-center"
                         style="background-position: 40% 50%; background-image: url('{{ $item->img_url }}');"></div>
                 </div>
             @endforeach
