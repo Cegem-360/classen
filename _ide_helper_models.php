@@ -13,7 +13,7 @@
 
 namespace App\Models{
 /**
- * App\Models\AdditionalAttribute
+ * 
  *
  * @property int $id
  * @property bool $primo_finishing
@@ -40,40 +40,40 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Category|null $category
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute query()
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute where3dFinishing($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereAntiBurglaryDoor($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereCategoryId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereClassic($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereCplLaminate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereFireDoor($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereHplLaminate($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereInnerDoor($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereInteriorEntranceDoor($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereIridiumFinishing($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereLacquered($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereLoft($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereModern($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute wherePrimoFinishing($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereRetro($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereRoomDoor($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereRustic($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereSlidingDoor($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereSoundproofDoor($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereTechnicalDoors($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|AdditionalAttribute whereWoodDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute where3dFinishing($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereAntiBurglaryDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereClassic($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereCplLaminate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereFireDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereHplLaminate($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereInnerDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereInteriorEntranceDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereIridiumFinishing($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereLacquered($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereLoft($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereModern($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute wherePrimoFinishing($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereRetro($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereRoomDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereRustic($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereSlidingDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereSoundproofDoor($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereTechnicalDoors($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute whereWoodDoor($value)
  */
-	class AdditionalAttribute extends \Eloquent {}
+	final class AdditionalAttribute extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
- * App\Models\Attribute
+ * 
  *
  * @property int $id
  * @property string $name
@@ -85,23 +85,23 @@ namespace App\Models{
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Category> $categories
  * @property-read int|null $categories_count
  * @method static \Database\Factories\AttributeFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute query()
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereImg($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereSlug($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Attribute whereValue($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute whereImg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Attribute whereValue($value)
  */
-	class Attribute extends \Eloquent {}
+	final class Attribute extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
- * App\Models\Blog
+ * 
  *
  * @property int $id
  * @property string $title
@@ -111,31 +111,31 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @method static \Database\Factories\BlogFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Blog newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Blog newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Blog query()
- * @method static \Illuminate\Database\Eloquent\Builder|Blog whereContent($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Blog whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Blog whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Blog whereImgUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Blog whereSlug($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Blog whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Blog whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereContent($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereImgUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereSlug($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog whereUpdatedAt($value)
  */
-	class Blog extends \Eloquent {}
+	final class Blog extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
- * App\Models\Category
+ * 
  *
  * @property int $id
  * @property string|null $name
  * @property int|null $category_id
- * @property array|null $door_specification
- * @property array|null $technical_parameter
- * @property array|null $additional_options
- * @property array|null $gallery_imgs
+ * @property array<array-key, mixed>|null $door_specification
+ * @property array<array-key, mixed>|null $technical_parameter
+ * @property array<array-key, mixed>|null $additional_options
+ * @property array<array-key, mixed>|null $gallery_imgs
  * @property string|null $breadcrumb
  * @property string|null $img_url
  * @property \Illuminate\Support\Carbon|null $created_at
@@ -148,27 +148,27 @@ namespace App\Models{
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Parameter> $parameters
  * @property-read int|null $parameters_count
  * @method static \Database\Factories\CategoryFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Category newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Category newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Category query()
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereAdditionalOptions($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereBreadcrumb($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereCategoryId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereDoorSpecification($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereGalleryImgs($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereImgUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereTechnicalParameter($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Category whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereAdditionalOptions($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereBreadcrumb($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereDoorSpecification($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereGalleryImgs($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereImgUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereTechnicalParameter($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Category whereUpdatedAt($value)
  */
-	class Category extends \Eloquent implements \Spatie\Sitemap\Contracts\Sitemapable {}
+	final class Category extends \Eloquent implements \Spatie\Sitemap\Contracts\Sitemapable {}
 }
 
 namespace App\Models{
 /**
- * App\Models\Color
+ * 
  *
  * @property int $id
  * @property string|null $name
@@ -182,25 +182,25 @@ namespace App\Models{
  * @property-read \App\Models\Category|null $category
  * @property-read \App\Models\Door|null $door
  * @method static \Database\Factories\ColorFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Color newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Color newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Color query()
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereBigImg($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereCategoryId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereDoorId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereMaterialCategory($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereSmallImg($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Color whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereBigImg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereDoorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereMaterialCategory($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereSmallImg($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Color whereUpdatedAt($value)
  */
-	class Color extends \Eloquent {}
+	final class Color extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
- * App\Models\Door
+ * 
  *
  * @property int $id
  * @property int|null $product_id
@@ -218,28 +218,28 @@ namespace App\Models{
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Color> $colors
  * @property-read int|null $colors_count
  * @method static \Database\Factories\DoorFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Door newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Door newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Door query()
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereCategoryId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereImgUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door wherePrice($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereProductId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereTag($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagCategory($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagImgUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereTagName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Door whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereCategoryId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereImgUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door wherePrice($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereProductId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereTag($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereTagCategory($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereTagImgUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereTagName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Door whereUpdatedAt($value)
  */
-	class Door extends \Eloquent implements \Spatie\Sitemap\Contracts\Sitemapable {}
+	final class Door extends \Eloquent implements \Spatie\Sitemap\Contracts\Sitemapable {}
 }
 
 namespace App\Models{
 /**
- * App\Models\MetaKeyWords
+ * 
  *
  * @property int $id
  * @property string $collection_name
@@ -247,17 +247,17 @@ namespace App\Models{
  * @property string|null $key_words
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords query()
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereCollectionName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereKeyWords($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereMetaDescription($value)
- * @method static \Illuminate\Database\Eloquent\Builder|MetaKeyWords whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords whereCollectionName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords whereKeyWords($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords whereMetaDescription($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords whereUpdatedAt($value)
  */
-	class MetaKeyWords extends \Eloquent {}
+	final class MetaKeyWords extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -265,16 +265,16 @@ namespace App\Models{
  * App\Models\Parameter
  *
  * @method static \Database\Factories\ParameterFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|Parameter newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Parameter newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Parameter query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Parameter newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Parameter newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Parameter query()
  */
-	class Parameter extends \Eloquent {}
+	final class Parameter extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
- * App\Models\Quotation
+ * 
  *
  * @property int $id
  * @property string $session_id
@@ -288,29 +288,29 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $deleted_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\QuotationItem> $items
  * @property-read int|null $items_count
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation onlyTrashed()
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation query()
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereDeletedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereFirstName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereLastName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereMessage($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation wherePhone($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereSessionId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation whereUpdatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation withTrashed()
- * @method static \Illuminate\Database\Eloquent\Builder|Quotation withoutTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation onlyTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereDeletedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereFirstName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereLastName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereMessage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation wherePhone($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereSessionId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation withTrashed()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation withoutTrashed()
  */
-	class Quotation extends \Eloquent {}
+	final class Quotation extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
- * App\Models\QuotationItem
+ * 
  *
  * @property int $id
  * @property int $quotation_id
@@ -321,18 +321,18 @@ namespace App\Models{
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Door|null $door
  * @property-read \App\Models\Quotation|null $quotation
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem query()
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereDoorId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereFrame($value)
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereQuantity($value)
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereQuotationId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|QuotationItem whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem whereDoorId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem whereFrame($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem whereQuantity($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem whereQuotationId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem whereUpdatedAt($value)
  */
-	class QuotationItem extends \Eloquent {}
+	final class QuotationItem extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -342,14 +342,14 @@ namespace App\Models{
  * @property int $id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|Tag newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Tag newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Tag query()
- * @method static \Illuminate\Database\Eloquent\Builder|Tag whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Tag whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Tag whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag whereUpdatedAt($value)
  */
-	class Tag extends \Eloquent {}
+	final class Tag extends \Eloquent {}
 }
 
 namespace App\Models{
@@ -360,7 +360,7 @@ namespace App\Models{
  * @property string $name
  * @property string $email
  * @property \Illuminate\Support\Carbon|null $email_verified_at
- * @property mixed $password
+ * @property string $password
  * @property string|null $remember_token
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
@@ -369,24 +369,24 @@ namespace App\Models{
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
  * @property-read int|null $tokens_count
  * @method static \Database\Factories\UserFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder|User newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|User newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|User query()
- * @method static \Illuminate\Database\Eloquent\Builder|User whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereEmail($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereEmailVerifiedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User wherePassword($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereRememberToken($value)
- * @method static \Illuminate\Database\Eloquent\Builder|User whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereEmail($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereEmailVerifiedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User wherePassword($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereRememberToken($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|User whereUpdatedAt($value)
  */
-	class User extends \Eloquent {}
+	final class User extends \Eloquent {}
 }
 
 namespace App\Models{
 /**
- * App\Models\WebsiteOptions
+ * 
  *
  * @property int $id
  * @property string $name
@@ -397,19 +397,19 @@ namespace App\Models{
  * @property string $link_title
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions query()
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereImgUrl($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereLinkTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereName($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions wherePage($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereText($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereTitle($value)
- * @method static \Illuminate\Database\Eloquent\Builder|WebsiteOptions whereUpdatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions newModelQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions newQuery()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions query()
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions whereCreatedAt($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions whereId($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions whereImgUrl($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions whereLinkTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions whereName($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions wherePage($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions whereText($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions whereTitle($value)
+ * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions whereUpdatedAt($value)
  */
-	class WebsiteOptions extends \Eloquent {}
+	final class WebsiteOptions extends \Eloquent {}
 }
 
