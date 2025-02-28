@@ -11,20 +11,20 @@ import 'flowbite';
 import { initSwiperJS } from './swiperJS.js';
 import initFavoritesJS from './favorites.js'; // Replace 'require' with 'import'
 import { initCustomJS } from './customJS.js';
-/* document.addEventListener('livewire:init', () => {
+document.addEventListener('livewire:init', () => {
     initCustomJS();
     function setRedNavigation() {
         $('#quotation').addClass('font-bold text-orange-600');
     }
-},{once: true}); */
-document.addEventListener('livewire:init', () => {
+});
+document.addEventListener('livewire:navigated', () => {
     initSwiperJS();
     function setRedNavigation() {
         $('#quotation').addClass('font-bold text-orange-600');
     }
     initFavoritesJS.initFavorites();
     initCustomJS();
-},{once: true});
+});
 
 window.initFavoritesJS = initFavoritesJS;
 
