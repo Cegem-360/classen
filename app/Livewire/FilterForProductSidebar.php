@@ -5,14 +5,11 @@ declare(strict_types=1);
 namespace App\Livewire;
 
 use App\Models\Door;
-use App\Models\Quotation;
-use App\Models\QuotationItem;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Collection;
 use Livewire\Component;
 use Livewire\WithoutUrlPagination;
 use Livewire\WithPagination;
-use Masmerise\Toaster\Toaster;
 
 final class FilterForProductSidebar extends Component
 {
@@ -163,7 +160,7 @@ final class FilterForProductSidebar extends Component
                     ->inRandomOrder()->paginate(perPage: 40);
 
         } else {
-            $doors = Door::inRandomOrder()->paginate(perPage: 40)->onEachSide(0);
+            $doors = Door::inRandomOrder()->paginate(perPage: 40);
         }
 
         return view('livewire.filter-for-product-sidebar', compact('doors'));
@@ -189,20 +186,9 @@ final class FilterForProductSidebar extends Component
         return false;
     }
 
-    public function addToQuotation($id)
+    public function showDetails($id)
     {
         $door = Door::find($id);
-        $quotation = session()->get('quotation', Quotation::create([
-            'session_id' => session()->getId(),
-        ]));
-        QuotationItem::whereQuotationId($quotation->id)->whereDoorId($door->id)->firstOrCreate([
-            'quotation_id' => $quotation->id,
-            'door_id' => $this->door->id,
-        ]);
-        session()->put('quotation', $quotation);
-        Toaster::success(__('Sikeresen hozzáadva az árajánlathoz!'));
-        $this->js('setRedNavigation()');
-        // return $this->redirect(route('door.show', ['door' => $this->door]), navigate: true);
-
+        $this->redirect(route('door.show', ['door' => $door]), navigate: true);
     }
 }
