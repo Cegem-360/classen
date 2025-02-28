@@ -204,9 +204,10 @@
                             <img class="max-h-[330px]"
                                 src="{{ !empty($door->img_url) ? $door->img_url : Vite::asset('resources/img/placeholder.webp') }}"
                                 loading='lazy' />
-                            <div class="w-full pt-2">
-                                <h4 class="font-bold">{{ $door->category->name }} - {{ $door->name }}</h4>
-                                <p>{{ __($door->tag_name) }}</p>
+                            <div class="w-full min-h-24 pt-2">
+                                <h4 class="text-sm font-bold text-balance">{{ $door->category->name }} -
+                                    {{ $door->name }}</h4>
+                                <p class="text-sm">{{ __($door->tag_name) }}</p>
                             </div>
                         </a>
                         <div class="w-full pt-2">
