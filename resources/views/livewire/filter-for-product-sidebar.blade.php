@@ -214,15 +214,12 @@
                             <p class="font-bold">
                                 {{ Number::format($door->price, precision: 0, locale: 'hu') }} Ft. - tól</p>
                         </div>
-                        <div>
+                        <button
+                            class="inline-flex w-full items-center px-6 py-3 mt-6 text-xs font-semibold tracking-widest uppercase transition duration-150 ease-in-out border-black border-1 border-spacing-1 text-gray-950 hover:text-white w-fit hover:bg-gray-400 focus:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 active:bg-gray-900"
+                            type="button" wire:click="showDetails({{ $door->id }})">
+                            {{ __('Model variációk') }}
+                        </button>
 
-                            <button
-                                class="inline-flex items-center px-6 py-3 mt-6 text-xs font-semibold tracking-widest uppercase transition duration-150 ease-in-out border-black border-1 border-spacing-1 text-gray-950 hover:text-white w-fit hover:bg-gray-400 focus:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 active:bg-gray-900"
-                                type="button" wire:click="showDetails({{ $door->id }})">
-                                {{ __('Model variációk') }}
-                            </button>
-
-                        </div>
                     </div>
                 @endforeach
 
