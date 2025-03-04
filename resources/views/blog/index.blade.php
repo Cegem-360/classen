@@ -12,9 +12,12 @@
 
                 <div class="p-4 sm:mb-0 mb-6">
                     <div class="rounded-lg h-64 overflow-hidden">
-                        <img alt="content" class="object-cover object-center h-full w-full" src="{{ $blog->img_url }}">
+                        <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"><img alt="content"
+                                class="object-cover object-center h-full w-full" src="{{ $blog->img_url }}"></a>
                     </div>
-                    <h2 class="text-xl font-medium title-font text-gray-900 mt-5">"{{ $blog->title }}</h2>
+                    <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}">
+                        <h2 class="text-xl font-medium title-font text-gray-900 mt-5">{{ $blog->title }}</h2>
+                    </a>
                     <p class="text-base leading-relaxed mt-2">{{ Str::limit(strip_tags($blog->content), 150, '...') }}
                     </p>
                     <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}"
