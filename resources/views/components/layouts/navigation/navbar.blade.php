@@ -45,6 +45,7 @@
                         wire:navigate>{{ __('Szolgáltatásaink') }}</a>
                     <a class="flex items-center h-full px-4" href="{{ route('downloads') }}"
                         wire:navigate>Letöltések</a>
+                    <a class="flex items-center h-full px-4" href="{{ route('blog') }}" wire:navigate>Blog</a>
                     <a class="@if (session()->get('quotation') != null) @if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif @endif flex h-full items-center px-4"
                         id="quotation" href="{{ route('quotation.index') }}" wire:navigate>Árajánlat kérés</a>
                 </div>
@@ -91,6 +92,8 @@
                                         wire:navigate>{{ __('Szolgáltatásaink') }}</a></li>
                                 <li><a class="flex items-center h-full px-4" href="{{ route('downloads') }}"
                                         wire:navigate>Letöltések</a></li>
+                                <li><a class="flex items-center h-full px-4" href="{{ route('blog') }}"
+                                        wire:navigate>Blog</a></li>
                                 <li><a class="@if (!session()->missing('quotation')) @if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif @endif flex h-full items-center px-4"
                                         href="{{ route('quotation.index') }}" wire:navigate>Árajánlat kérés</a></li>
                             </ul>
