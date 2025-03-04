@@ -5,15 +5,18 @@
     <div class="grid grid-cols-3 sm:grid-cols-1 gap-4 -m-4 -mx-4 -mb-10 -mt-4">
         <div class="p-4 sm:mb-0 mb-6">
             <div class="rounded-lg h-64 overflow-hidden">
-                <img alt="content" class="object-cover object-center h-full w-full"
-                    src="{{ Vite::asset('resources/img/Classen_Venis_drzwi_przesuwne.webp') }}">
+                <a href="/blog/stilusos-toloajtok-az-indusztrialis-megjelenesert"><img alt="content"
+                        class="object-cover object-center h-full w-full"
+                        src="{{ Vite::asset('resources/img/Classen_Venis_drzwi_przesuwne.webp') }}"></a>
             </div>
-            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Stílusos tolóajtók az indusztriális
-                megjelenésért</h2>
-            <p class="text-base leading-relaxed mt-2">Fedezze fel a Modi design tolóajtókat, amelyek egyedi
-                indusztriális stílust kölcsönöznek otthonának. Kombinálja tetszőleges ajtódizájnnal a modern és
-                letisztult megjelenés érdekében.</p>
-            <a class="text-black font-bold inline-flex items-center mt-3">Tovább
+            <a href="/blog/stilusos-toloajtok-az-indusztrialis-megjelenesert">
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Stílusos tolóajtók az indusztriális
+                    megjelenésért</h2>
+            </a>
+            <p class="text-base leading-relaxed mt-2">Az indusztriális stílus egyre népszerűbb a lakberendezésben,
+                hiszen a nyers anyagok és a letisztult formák kombinációja különleges atmoszférát teremt.... </p>
+            <a href="/blog/stilusos-toloajtok-az-indusztrialis-megjelenesert"
+                class="text-black font-bold inline-flex items-center mt-3">Elolvasom
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                     stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -22,14 +25,17 @@
         </div>
         <div class="p-4 sm:mb-0 mb-6">
             <div class="rounded-lg h-64 overflow-hidden">
-                <img alt="content" class="object-cover object-center h-full w-full"
-                    src="{{ Vite::asset('resources/img/also_slide_bal.webp') }}">
+                <a href="/blog/tapeta-ajtok-formabonto-megoldasok"><img alt="content"
+                        class="object-cover object-center h-full w-full"
+                        src="{{ Vite::asset('resources/img/also_slide_bal.webp') }}"></a>
             </div>
-            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Tapéta ajtók: formabontó megoldások</h2>
-            <p class="text-base leading-relaxed mt-2">Ismerje meg a Compact ajtórendszert, amely lehetővé teszi,
-                hogy ajtói tökéletesen illeszkedjenek a belső tér hangulatához. Alkalmazzon különböző tapéta
-                mintákat az egyedi és stílusos megjelenésért.</p>
-            <a class="text-black font-bold inline-flex items-center mt-3">Tovább
+            <a href="/blog/tapeta-ajtok-formabonto-megoldasok">
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Tapéta ajtók: formabontó megoldások</h2>
+            </a>
+            <p class="text-base leading-relaxed mt-2">A belsőépítészetben egyre nagyobb figyelmet kapnak azok a
+                megoldások, amelyek nemcsak funkcionálisak, hanem esztétikailag is kiemelkedőek. A tapétaajt... </p>
+            <a href="/blog/tapeta-ajtok-formabonto-megoldasok"
+                class="text-black font-bold inline-flex items-center mt-3">Tovább
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                     stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -38,15 +44,18 @@
         </div>
         <div class="p-4 sm:mb-0 mb-6">
             <div class="rounded-lg h-64 overflow-hidden">
-                <img alt="content" class="object-cover object-center h-full w-full"
-                    src="{{ Vite::asset('resources/img/prd-images/classen_lirgo-800x550.jpg') }}">
+                <a href="/blog/festett-ajtok-szeles-szinvalasztek-a-szivarvany-minden-arnyalataban"><img alt="content"
+                        class="object-cover object-center h-full w-full"
+                        src="{{ Vite::asset('resources/img/prd-images/classen_lirgo-800x550.jpg') }}"></a>
             </div>
-            <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Festett ajtók: széles színválaszték a
-                szivárvány minden árnyalatában</h2>
-            <p class="text-base leading-relaxed mt-2">A Graffen festett ajtók kínálatában számos szín közül
-                választhat, hogy otthona igazán egyedi legyen. Találja meg az enteriőrjéhez leginkább illő
-                árnyalatot, és élvezze a minőségi kivitelezést.</p>
-            <a class="text-black font-bold inline-flex items-center mt-3">Tovább
+            <a href="/blog/festett-ajtok-szeles-szinvalasztek-a-szivarvany-minden-arnyalataban">
+                <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Festett ajtók: széles színválaszték a
+                    szivárvány minden árnyalatában</h2>
+            </a>
+            <p class="text-base leading-relaxed mt-2">A beltéri ajtók nem csupán funkcionális elemei otthonunknak, hanem
+                jelentős hatással vannak annak esztétikájára is. A megfelelő színválasztás révén az... </p>
+            <a href="/blog/festett-ajtok-szeles-szinvalasztek-a-szivarvany-minden-arnyalataban"
+                class="text-black font-bold inline-flex items-center mt-3">Tovább
                 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                     stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
                     <path d="M5 12h14M12 5l7 7-7 7"></path>
