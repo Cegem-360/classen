@@ -29,11 +29,11 @@ final class AttributeSeeder extends Seeder
             ]);
         $response =
             $this->client->get(EndPoint::DESIGFORMS.'?per_page=25', [['timeout' => 120]]);
-        $designForms = json_decode($response->getBody(), true);
+        $designForms = json_decode($response->getBody()->getContents(), true);
         foreach ($designForms as $designForm) {
             $imgUrl =
                 $this->client->get($designForm['_links']['wp:attachment'][0]['href']);
-            $imgUrl = json_decode($imgUrl->getBody());
+            $imgUrl = json_decode($imgUrl->getBody()->getContents());
             $imgUrl = collect($imgUrl)->first();
             Attribute::factory(1)->create([
                 'name' => $designForm['title']['rendered'],

@@ -41,7 +41,7 @@ final class CategorySeeder extends Seeder
 
         $woocommerceCategories = $this->wooCommerce->get(EndPoint::PRODUCTSCATEGORIES, ['per_page' => 100, 'exclude' => ['15']]);
         // blog
-        $categories = collect(json_decode($this->client->get(EndPoint::CATEGORIES.'?per_page=100', ['timeout' => 120])->getBody(), true));
+        $categories = collect(json_decode($this->client->get(EndPoint::CATEGORIES.'?per_page=100', ['timeout' => 120])->getBody()->getContents(), true));
         foreach ($woocommerceCategories as $woCategory) {
             $category = $categories->where('name', $woCategory->name)->first();
             if (is_null($category)) {

@@ -31,7 +31,7 @@ final class AdditionalAttributeSeeder extends Seeder
         );
         // $this->client->
         $response = $this->client->get(EndPoint::LARAVELWEBSITEOPTIONS, ['timeout' => 120]);
-        $result = json_decode($response->getBody(), true);
+        $result = json_decode($response->getBody()->getContents(), true);
         $result = $result[0]['acf'];
         foreach ($result['fooldal_hero_banner'] as $value) {
             WebsiteOptions::updateOrCreate([

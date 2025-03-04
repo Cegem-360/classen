@@ -37,7 +37,7 @@ final class UpdateWebsiteDatabase implements ShouldQueue
             ]
         );
         $response = $this->client->get(EndPoint::LARAVELWEBSITEOPTIONS);
-        $result = json_decode($response->getBody(), true);
+        $result = json_decode($response->getBody()->getContents(), true);
         $result = $result[0]['acf'];
         Artisan::call('migrate:refresh', ['--path' => 'database/migrations/2024_02_28_123239_create_website_options_table']);
         foreach ($result['fooldal_hero_banner'] as $value) {
