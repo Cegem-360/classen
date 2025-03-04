@@ -44,7 +44,7 @@
     <div class="min-h-[69px]"></div>
 
     <!-- Termekek carousel -->
-    <x-partials.prd-carousel :categories=$categories />
+    <x-partials.blog />
     <!-- gap -->
     <div class="min-h-[69px]"></div>
 
