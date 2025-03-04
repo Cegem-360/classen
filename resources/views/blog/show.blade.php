@@ -1,4 +1,22 @@
 <x-layouts.app>
+    <style>
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        strong {
+            font-weight: 700;
+        }
+    </style>
+
 
     @isset($blog)
         {{-- <div class="container mx-auto px-4">
@@ -25,7 +43,8 @@
             <div class="container px-8 mx-auto">
                 <div class="grid grid-cols-2 sm:grid-cols-1 gap-8 mb-16">
                     {{-- <h1 class="gap-40 my-11">{{ $blog?->title }}</h1> --}}
-                    <div>{!! str($blog?->content)->sanitizeHtml() !!}</div>
+                    {{-- <div>{!! str($blog?->content)->sanitizeHtml() !!}</div> --}}
+                    <div>{{ $blog?->content }}</div>
                     <img src="{{ $blog?->img_url }}" alt="{{ $blog?->title }}"
                         class="sm:order-1 w-fit object-cover aspect-4/3">
                 </div>
