@@ -17,9 +17,9 @@ final class BlogController extends Controller
 
     public function show($slug)
     {
-        dump($slug);
+        /* dump($slug); */
         $blog = Blog::whereSlug($slug)->first();
-        dump($blog);
+        /* dump($blog); */
         if (! $blog) {
             abort(404);
         }
