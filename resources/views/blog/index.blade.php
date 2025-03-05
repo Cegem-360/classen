@@ -14,7 +14,7 @@
                     <div class="p-4 sm:mb-0 mb-6">
                         <div class="h-64 overflow-hidden">
                             <img alt="{{ $blog->title }}" class="object-cover object-center h-full w-full"
-                                src="{{ $blog->img_url }}">
+                                src="{{ Vite::img($blog->img_url) }}">
                         </div>
                         <h2 class="text-xl font-medium title-font text-gray-900 mt-5">{{ $blog->title }}</h2>
                         <p class="text-base leading-relaxed mt-2">
