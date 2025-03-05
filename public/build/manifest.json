@@ -1,4 +1,8 @@
 {
+  "resources/img/Classen - Linea Premium.webp": {
+    "file": "assets/Classen - Linea Premium-hkuFlEbs.webp",
+    "src": "resources/img/Classen - Linea Premium.webp"
+  },
   "resources/img/Classen - Modi Design.webp": {
     "file": "assets/Classen - Modi Design-CONnsgCP.webp",
     "src": "resources/img/Classen - Modi Design.webp"
@@ -54,6 +58,10 @@
   "resources/img/classen_verti.webp": {
     "file": "assets/classen_verti-Cri5Ybc0.webp",
     "src": "resources/img/classen_verti.webp"
+  },
+  "resources/img/compact2.webp": {
+    "file": "assets/compact2-DEJUq9rP.webp",
+    "src": "resources/img/compact2.webp"
   },
   "resources/img/cover-images/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2024-ENG.webp": {
     "file": "assets/Arcadia98-Kft-bovitett_belteri_ajtokatalogus-2024-ENG-BXKZ1LFz.webp",
