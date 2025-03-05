@@ -7,6 +7,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\BlogResource\Pages;
 use App\Models\Blog;
 use Filament\Forms;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -30,7 +31,7 @@ final class BlogResource extends Resource
                 Forms\Components\TextInput::make('img_url')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('content')
+                RichEditor::make('content')
                     ->required()
                     ->columnSpanFull(),
             ]);
