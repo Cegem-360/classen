@@ -17,7 +17,6 @@
         }
     </style>
 
-
     @isset($blog)
         {{-- <div class="container mx-auto px-4">
             <div class="flex flex-wrap">
@@ -45,7 +44,7 @@
                     {{-- <h1 class="gap-40 my-11">{{ $blog?->title }}</h1> --}}
                     <div>{!! str($blog?->content)->sanitizeHtml() !!}</div>
                     {{-- <div>{{ $blog?->content }}</div> --}}
-                    <img src="{{ $blog?->img_url }}" alt="{{ $blog?->title }}"
+                    <img src="{{ Vite::asset('resources/img/' . $blog?->img_url) }}" alt="{{ $blog?->title }}"
                         class="sm:order-1 w-fit object-cover aspect-4/3">
                 </div>
 
