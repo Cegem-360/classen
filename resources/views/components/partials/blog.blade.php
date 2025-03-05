@@ -1,5 +1,5 @@
 @props(['latestBlogs' => []])
-<div class="container px-8 pb-36 mx-auto">
+<div class="container px-8 pb-2 mx-auto">
     <div class="flex items-center">
         <h1 class="text-black font-bold text-2xl mb-8">Blog</h1>
     </div>
