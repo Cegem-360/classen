@@ -17,12 +17,11 @@
 
     <!-- gap -->
     <div class="min-h-[60px]"></div>
+    <x-collections.partials.door-model-icons :catalogs=$catalogs />
 
-    <x-collections.partials.door-color-variant-selector :modelVariants='$modelVariants' :colorVariants='$colorVariants' />
     <!-- gap -->
     <div class="min-h-[60px]"></div>
-
-    <x-collections.partials.door-model-icons :catalogs=$catalogs />
+    <x-collections.partials.door-color-variant-selector :modelVariants='$modelVariants' :colorVariants='$colorVariants' />
 
     <!-- gap -->
     <div class="min-h-[60px]"></div>
