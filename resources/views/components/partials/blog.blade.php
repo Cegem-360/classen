@@ -1,9 +1,10 @@
+@props(['latestBlogs' => []])
 <div class="container px-8 pb-36 mx-auto">
     <div class="flex items-center">
         <h1 class="text-black font-bold text-2xl mb-8">Blog</h1>
     </div>
     <div class="grid grid-cols-3 sm:grid-cols-1 gap-4 -m-4 -mx-4 -mb-10 -mt-4">
-        @foreach ($latestBlogs as $blog)
+        @foreach ($latestBlogs ?? [] as $blog)
             <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}" class="group">
                 <div class="p-4 sm:mb-0 mb-6">
                     <div class="rounded-lg h-64 overflow-hidden">
