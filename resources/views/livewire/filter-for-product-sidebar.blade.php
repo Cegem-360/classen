@@ -196,8 +196,9 @@
             <div class="grid grid-cols-4 gap-6 mx-8 md:grid-cols-2 sm:grid-cols-1">
 
                 @foreach ($doors as $door)
-                    <div class="relative grid px-6 pt-12 pb-2 place-content-center bg-neutral-100">
-                        <button class="favorite" onclick="initFavoritesJS.toggleFavoriteItem('{{ $door->id }}')">
+                    <div class="relative grid px-6 pt-14 pb-2 place-content-center bg-neutral-100">
+                        <button class="favorite bg-neutral-100"
+                            onclick="initFavoritesJS.toggleFavoriteItem('{{ $door->id }}')">
                             <x-svg.heart class="" id="heart-{{ $door->id }}"> </x-svg.heart>
                         </button>
                         <a class="" href="{{ route('door.show', ['door' => $door->id]) }}" wire:navigate>
