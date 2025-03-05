@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Mail\ContactForm;
-use App\Models\Category;
+use App\Models\Blog;
 use App\Models\Door;
-use Cookie;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
@@ -22,20 +22,17 @@ final class ManagePageContentController extends Controller
      */
     public function index()
     {
-        $categories = Category::whereNot('name', 'Adjustable door frame')
-            ->whereNot('name', 'Adjustable non-rebated door frame')
-            ->whereNot('name', 'Standard 2-Pack door frame')->get();
+        $latestBlogs = Blog::latest()->take(3)->get();
 
-        return view('index', compact('categories'));
+        return view('index', compact('latestBlogs'));
     }
 
     public function favorites(Request $request)
     {
         $favoriteProductIds = json_decode(Cookie::get('favorites'));
+        $products = [];
         if ($favoriteProductIds != null) {
             $products = Door::whereIn('id', $favoriteProductIds)->get();
-        } else {
-            $products = [];
         }
 
         return view('favorites.index', compact('products'));

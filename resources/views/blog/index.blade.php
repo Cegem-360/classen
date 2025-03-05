@@ -12,7 +12,7 @@
 
                 <a href="{{ route('blog.show', ['slug' => $blog->slug]) }}" class="group">
                     <div class="p-4 sm:mb-0 mb-6">
-                        <div class="rounded-lg h-64 overflow-hidden">
+                        <div class="h-64 overflow-hidden">
                             <img alt="{{ $blog->title }}" class="object-cover object-center h-full w-full"
                                 src="{{ $blog->img_url }}">
                         </div>
