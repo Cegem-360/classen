@@ -1,4 +1,8 @@
 {
+  "resources/img/Classen - Modi Design.webp": {
+    "file": "assets/Classen - Modi Design-CONnsgCP.webp",
+    "src": "resources/img/Classen - Modi Design.webp"
+  },
   "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp": {
     "file": "assets/Classen-drzwi-Ferro-dab-nordycki-zVMVEQjn.webp",
     "src": "resources/img/Classen-drzwi-Ferro-dab-nordycki.webp"
@@ -580,7 +584,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DveMaYf-.js",
+    "file": "assets/app-DMIIiwO5.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -589,7 +593,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-Dop5tMJH.css"
+      "assets/app-DrZ9dqJt.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",
