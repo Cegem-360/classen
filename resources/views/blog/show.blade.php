@@ -56,7 +56,7 @@
 
     <div class="container mx-auto px-4">
         <a wire:navigate href="{{ route('blog') }}"
-            class="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700">
+            class="block px-6 py-3 mt-6 text-lg font-bold w-fit bg-neutral-200 ">
             &larr; Vissza a blogokhoz
         </a>
     </div>
