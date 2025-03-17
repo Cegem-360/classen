@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use App\Filament\Exports\BlogExporter;
+use App\Filament\Imports\BlogImporter;
 use App\Filament\Resources\BlogResource\Pages;
 use App\Models\Blog;
 use Filament\Forms;
@@ -11,6 +13,8 @@ use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ExportAction;
+use Filament\Tables\Actions\ImportAction;
 use Filament\Tables\Table;
 
 final class BlogResource extends Resource
@@ -62,6 +66,10 @@ final class BlogResource extends Resource
             ->actions([
                 Tables\Actions\ViewAction::make(),
                 Tables\Actions\EditAction::make(),
+            ])
+            ->headerActions([
+                ImportAction::make()->importer(BlogImporter::class),
+                ExportAction::make()->exporter(BlogExporter::class),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
