@@ -37,7 +37,7 @@
                 target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Dooroutlet_belteri_ajto.webp') }}"
                     alt="Arcadia 98 Kft._Bruttó_Kiskeresekdelmi_árlista_20250317.pdf" />
-                <p class="mt-3 text-sm">Dooroutlet beltéri ajtó raktári üveges színek 2024.pdf</p>
+                <p class="mt-3 text-sm">Dooroutlet beltéri ajtók kiskereskedelmi árlistája</p>
             </a>
         </div>
     </div>
