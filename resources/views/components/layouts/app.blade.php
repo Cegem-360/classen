@@ -22,6 +22,7 @@
             </style>
         @endisset
         <!-- Scripts -->
+        @filamentStyles
         @vite(['resources/js/app.js'])
         @cookieconsentscripts
         <!-- Google tag (gtag.js) -->
@@ -38,6 +39,7 @@
 
             gtag('config', 'AW-516794458');
         </script>
+
     </head>
 
     <body class="font-sans antialiased">
@@ -58,10 +60,11 @@
             <main>
 
                 {{ $slot }}
-
+                @livewire('notifications')
             </main>
         </div>
         <x-toaster-hub />
+        @filamentScripts
         @cookieconsentview
     </body>
 
