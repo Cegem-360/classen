@@ -60,7 +60,7 @@
             <main>
 
                 {{ $slot }}
-                @livewire('database-notifications')
+                @livewire('notifications')
             </main>
         </div>
         <x-toaster-hub />
