@@ -16,6 +16,8 @@ return new class extends Migration
     {
 
         Schema::create('additional_attributes', function (Blueprint $table) {
+            $table->id();
+            $table->foreignIdFor(Category::class)->onDelete('cascade');
             $columns = [
                 'primo_finishing',
                 '3d_finishing',
@@ -38,11 +40,11 @@ return new class extends Migration
                 'rustic',
                 'wood_door',
             ];
-            $table->id();
+
             foreach ($columns as $column) {
                 $table->boolean($column)->default(false);
             }
-            $table->foreignIdFor(Category::class)->onDelete('cascade');
+
             $table->timestamps();
         });
     }
