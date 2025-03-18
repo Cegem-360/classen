@@ -35,9 +35,9 @@
             </a>
             <a href="{{ Storage::url('dl/Arcadia 98 Kft._Bruttó_Kiskeresekdelmi_árlista_20250317.pdf') }}"
                 target="_blank">
-                <img src="{{ Vite::asset('resources/img/cover-images/Dooroutlet_belteri_ajto.webp') }}"
+                <img src="{{ Vite::asset('resources/img/cover-images/door_outlet_img.png') }}"
                     alt="Arcadia 98 Kft._Bruttó_Kiskeresekdelmi_árlista_20250317.pdf" />
-                <p class="mt-3 text-sm">Dooroutlet beltéri ajtók kiskereskedelmi árlistája</p>
+                <p class="mt-3 text-sm">Arcadia 98 Kft. bruttó Kiskereskedelmi árlista</p>
             </a>
         </div>
     </div>
