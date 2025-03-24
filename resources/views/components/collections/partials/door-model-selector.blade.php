@@ -27,7 +27,7 @@
                    @foreach ($modelVariants as $model)
                        <div class="swiper-slide bg-neutral-200 p-6 pb-2">
                            <a class="group" href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate>
-                               <img class="group-hover:scale-105 transition-transform duration-700"
+                               <img class="group-hover:scale-105 transition-transform duration-700 ease-in-out"
                                    src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
                            </a>
                            <div class="desc w-full min-h-20 pt-2">{{ $model->name }}</div>
@@ -36,7 +36,7 @@
                </div>
            </div>
            <!-- Nav PREV / NEXT -->
-           <div class="flex w-fit items-center gap-2 py-2">
+           <div class="flex w-fit items-center gap-2 pl-8 py-4">
                <div class="door-model-thumbs-swiper-button-prev cursor-pointer">
                    <x-svg.arrow-left class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
                </div>
