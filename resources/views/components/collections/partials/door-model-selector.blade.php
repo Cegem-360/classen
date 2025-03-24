@@ -22,17 +22,68 @@
 
                <livewire:request-quotation-button :door='$door' />
            </div>
-           <div class="door-model-swiper-thumbs w-full" thumbsSlider="">
-               <div class="grid grid-cols-4 gap-3">
+           <div class="swiper door-model-thumbs-swiper w-full" thumbsSlider="">
+               <div class="swiper-wrapper grid grid-cols-4 gap-3">
                    @foreach ($modelVariants as $model)
-                       <div class="bg-neutral-200 p-6 pb-2">
-                           <a href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate>
-                               <img src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
+                       <div class="swiper-slide bg-neutral-200 p-6 pb-2">
+                           <a class="group" href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate>
+                               <img class="group-hover:scale-105"
+                                   src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
                            </a>
                            <div class="desc w-full pt-2">{{ $model->name }}</div>
                        </div>
                    @endforeach
                </div>
            </div>
+           <!-- Nav PREV / NEXT -->
+           <div class="flex w-fit items-center gap-2 py-2">
+               <div class="door-model-thumbs-swiper-button-prev cursor-pointer">
+                   <x-svg.arrow-left class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
+               </div>
+               <div class="door-model-thumbs-swiper-button-next cursor-pointer">
+                   <x-svg.arrow-right class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
+               </div>
+           </div>
        </div>
+
+       <script>
+           document.addEventListener('livewire:navigated', () => {
+               var swiper = new Swiper('.door-model-thumbs-swiper', {
+                   slidesPerView: 1,
+                   /* autoplay: {
+                       delay: 2500,
+                   }, */
+                   spaceBetween: 30,
+                   allowTouchMove: true,
+                   touchStartPreventDefault: false,
+                   loop: true,
+                   pagination: {
+                       el: '.door-model-thumbs-swiper-pagination',
+                       clickable: true,
+                   },
+                   navigation: {
+                       nextEl: '.door-model-thumbs-swiper-button-next',
+                       prevEl: '.door-model-thumbs-swiper-button-prev',
+                   },
+                   breakpoints: {
+                       976: {
+                           slidesPerView: 4,
+                           spaceBetween: 30,
+                       },
+                       768: {
+                           slidesPerView: 3,
+                           spaceBetween: 30,
+                       },
+                       560: {
+                           slidesPerView: 2,
+                           spaceBetween: 20,
+                       },
+                       380: {
+                           slidesPerView: 1,
+                           spaceBetween: 20,
+                       },
+                   },
+               });
+           });
+       </script>
    </div>
