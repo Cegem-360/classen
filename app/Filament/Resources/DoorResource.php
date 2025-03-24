@@ -1,19 +1,22 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Resources;
 
+use App\Filament\Exports\DoorExportByCategoryExporter;
 use App\Filament\Resources\DoorResource\Pages;
-use App\Filament\Resources\DoorResource\RelationManagers;
+use App\Models\Category;
 use App\Models\Door;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
+use Filament\Tables\Actions\ExportAction;
+use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
-class DoorResource extends Resource
+final class DoorResource extends Resource
 {
     protected static ?string $model = Door::class;
 
@@ -88,10 +91,19 @@ class DoorResource extends Resource
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
-                //
+                SelectFilter::make('category_id')
+                    ->options(
+                        Category::all()->pluck('name', 'id')->toArray()
+                    ),
+            ])
+            ->headerActions([
+                ExportAction::make()->exporter(DoorExportByCategoryExporter::class)
+                    ->label('Export by Category')
+                    ->icon('heroicon-o-document'),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([

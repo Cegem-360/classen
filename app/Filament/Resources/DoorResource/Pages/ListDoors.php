@@ -1,12 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Resources\DoorResource\Pages;
 
+use App\Filament\Exports\DoorExportByCategoryExporter;
 use App\Filament\Resources\DoorResource;
 use Filament\Actions;
+use Filament\Actions\ExportAction;
 use Filament\Resources\Pages\ListRecords;
 
-class ListDoors extends ListRecords
+final class ListDoors extends ListRecords
 {
     protected static string $resource = DoorResource::class;
 
@@ -14,6 +18,9 @@ class ListDoors extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            ExportAction::make(DoorExportByCategoryExporter::class)
+                ->label('Export by Category')
+                ->icon('heroicon-o-document'),
         ];
     }
 }

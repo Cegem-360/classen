@@ -17,7 +17,7 @@ final class BlogSeeder extends Seeder
     public function run(): void
     {
 
-        $this->model::factory()->count(10)->create();
+        // $this->model::factory()->count(10)->create();
 
     }
 }

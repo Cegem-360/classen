@@ -31,7 +31,8 @@
                        $category->name != 'Single leaf and double leaf sliding system' &&
                        $category->name != 'Modi Design sliding system' &&
                        $category->name != 'Compact' &&
-                       $category->name != 'Raktári ajtók')
+                       $category->name != 'Raktári ajtók' &&
+                       $category->name != 'Door őrület')
                    <x-collections.partials.price class="block px-6 py-3 mt-6 text-lg font-bold w-fit bg-neutral-200">
                        {{ $category?->doors?->first()?->price }}
                    </x-collections.partials.price>

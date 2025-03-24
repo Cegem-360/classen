@@ -16,6 +16,7 @@ namespace App\Models{
  * 
  *
  * @property int $id
+ * @property int $category_id
  * @property bool $primo_finishing
  * @property bool $3d_finishing
  * @property bool $iridium_finishing
@@ -23,7 +24,7 @@ namespace App\Models{
  * @property bool $hpl_laminate
  * @property bool $lacquered
  * @property bool $room_door
- * @property int $inner_door
+ * @property bool $inner_door
  * @property bool $interior_entrance_door
  * @property bool $technical_doors
  * @property bool $fire_door
@@ -31,12 +32,11 @@ namespace App\Models{
  * @property bool $soundproof_door
  * @property bool $sliding_door
  * @property bool $modern
- * @property int $classic
+ * @property bool $classic
  * @property bool $loft
  * @property bool $retro
  * @property bool $rustic
  * @property bool $wood_door
- * @property int $category_id
  * @property \Illuminate\Support\Carbon|null $created_at
  * @property \Illuminate\Support\Carbon|null $updated_at
  * @property-read \App\Models\Category|null $category
