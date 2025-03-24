@@ -27,10 +27,10 @@
                    @foreach ($modelVariants as $model)
                        <div class="swiper-slide bg-neutral-200 p-6 pb-2">
                            <a class="group" href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate>
-                               <img class="group-hover:scale-105"
+                               <img class="group-hover:scale-105 transition-transform duration-700"
                                    src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
                            </a>
-                           <div class="desc w-full pt-2">{{ $model->name }}</div>
+                           <div class="desc w-full min-h-20 pt-2">{{ $model->name }}</div>
                        </div>
                    @endforeach
                </div>
