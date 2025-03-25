@@ -69,9 +69,9 @@
 
                                             <h4 class="mt-3">
                                                 {{ __($item->name) }}
-                                                @dump(Request::path())
+
                                                 @if (Request::path() == 'kollekciok/Rakt%C3%A1ri%20ajt%C3%B3k' ||
-                                                        Request::path() == 'kollekciok/Door%20Outlet%20kollekció')
+                                                        Request::path() == 'kollekciok/Door%20Outlet%20kollekci%C3%B3')
                                                     <span>:
                                                         {{ Number::format(intval((string) $item->price), locale: 'hu') }}
                                                         Ft
