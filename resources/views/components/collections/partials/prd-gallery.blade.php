@@ -32,7 +32,7 @@
                        $category->name != 'Modi Design sliding system' &&
                        $category->name != 'Compact' &&
                        $category->name != 'Raktári ajtók' &&
-                       $category->name != 'Door őrület')
+                       $category->name != 'Door Outlet kollekció')
                    <x-collections.partials.price class="block px-6 py-3 mt-6 text-lg font-bold w-fit bg-neutral-200">
                        {{ $category?->doors?->first()?->price }}
                    </x-collections.partials.price>
