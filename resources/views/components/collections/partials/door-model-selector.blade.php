@@ -8,8 +8,8 @@
                </div>
            </div>
        </div>
-       <div class="flex flex-wrap">
-           <div class="col-span-full mb-6 pl-8">
+       <div class="">
+           <div class="mb-6 pl-8">
                <h2 class="mb-3 text-4xl font-bold">{{ $door->name }}</h2>
                <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
                <h3 class="mb-3 text-lg">{{ __('Collection: ') }}
@@ -22,12 +22,12 @@
 
                <livewire:request-quotation-button :door='$door' />
            </div>
-           <div class="col-span-full swiper door-model-thumbs-swiper w-full" thumbsSlider="">
+           <div class="swiper door-model-thumbs-swiper w-full" thumbsSlider="">
                <div class="swiper-wrapper grid grid-cols-4 gap-3">
                    @foreach ($modelVariants as $model)
                        <div class="swiper-slide bg-neutral-200 p-6 pb-2">
                            <a class="group" href="{{ route('door.show', ['door' => $model->id]) }}" wire:navigate>
-                               <img class="group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                               <img class="group-hover:shadow-lg group-hover:scale-105 origin-bottom transition-all duration-700 ease-in-out"
                                    src="{{ $model->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
                            </a>
                            <div class="desc w-full min-h-20 pt-2">{{ $model->name }}</div>
@@ -36,11 +36,11 @@
                </div>
            </div>
            <!-- Nav PREV / NEXT -->
-           <div class="col-span-full w-full flex items-center gap-2 py-4  pr-8">
-               <div class="door-model-thumbs-swiper-button-prev cursor-pointer order-1">
+           <div class="col-span-full w-full flex items-center justify-end gap-2 py-4">
+               <div class="door-model-thumbs-swiper-button-prev cursor-pointer">
                    <x-svg.arrow-left class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
                </div>
-               <div class="door-model-thumbs-swiper-button-next cursor-pointer order-2">
+               <div class="door-model-thumbs-swiper-button-next cursor-pointer">
                    <x-svg.arrow-right class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
                </div>
            </div>
