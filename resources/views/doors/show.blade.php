@@ -4,8 +4,9 @@
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
         <meta name="description"
-            content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->meta_description }}">
-        <meta name="keywords" content="{{ MetaKeyWords::where('collection_name', $category->name)->first()->key_words }}">
+            content="{{ MetaKeyWords::where('collection_name', $category->name)->first()?->meta_description }}">
+        <meta name="keywords"
+            content="{{ MetaKeyWords::where('collection_name', $category->name)->first()?->key_words }}">
         <link rel="canonical" href="{{ Request::url() }}">
         <title>{{ strtoupper($door->name) }} - {{ strtoupper($category->name) }} - Arcadia98 Kft. </title>
     </x-slot>
