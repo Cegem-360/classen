@@ -36,11 +36,11 @@
                </div>
            </div>
            <!-- Nav PREV / NEXT -->
-           <div class="col-span-full w-full flex flex-row-reverse items-center gap-2 py-4  pr-8">
-               <div class="door-model-thumbs-swiper-button-prev cursor-pointer order-2">
+           <div class="col-span-full w-full flex items-center gap-2 py-4  pr-8">
+               <div class="door-model-thumbs-swiper-button-prev cursor-pointer order-1">
                    <x-svg.arrow-left class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
                </div>
-               <div class="door-model-thumbs-swiper-button-next cursor-pointer order-1">
+               <div class="door-model-thumbs-swiper-button-next cursor-pointer order-2">
                    <x-svg.arrow-right class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
                </div>
            </div>
