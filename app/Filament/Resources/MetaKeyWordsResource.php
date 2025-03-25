@@ -1,17 +1,16 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\MetaKeyWordsResource\Pages;
-use App\Filament\Resources\MetaKeyWordsResource\RelationManagers;
 use App\Models\MetaKeyWords;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class MetaKeyWordsResource extends Resource
 {

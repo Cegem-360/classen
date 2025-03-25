@@ -1,9 +1,10 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Resources\AdditionalAttributeResource\Pages;
 
 use App\Filament\Resources\AdditionalAttributeResource;
-use Filament\Actions;
 use Filament\Resources\Pages\CreateRecord;
 
 class CreateAdditionalAttribute extends CreateRecord
