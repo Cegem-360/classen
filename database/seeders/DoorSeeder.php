@@ -40,6 +40,9 @@ final class DoorSeeder extends Seeder
             // dump($products_tags);
             foreach ($products as $product) {
                 // dump($product);
+                if (empty($product->images) || ! isset($product->images[0]->src)) {
+                    continue;
+                }
                 $cover = $product->images[0]->src;
                 if (isset($product->tags[0])) {
                     $tag = $products_tags->where('slug', $product->tags[0]->slug)->first();
