@@ -8,8 +8,8 @@
                </div>
            </div>
        </div>
-       <div>
-           <div class="mb-6 pl-8">
+       <div class="flex flex-wrap">
+           <div class="col-span-full mb-6 pl-8">
                <h2 class="mb-3 text-4xl font-bold">{{ $door->name }}</h2>
                <hr class="relative mb-3 mt-3 h-1 w-32 border-0 bg-sarga">
                <h3 class="mb-3 text-lg">{{ __('Collection: ') }}
@@ -22,7 +22,7 @@
 
                <livewire:request-quotation-button :door='$door' />
            </div>
-           <div class="swiper door-model-thumbs-swiper w-full" thumbsSlider="">
+           <div class="col-span-full swiper door-model-thumbs-swiper w-full" thumbsSlider="">
                <div class="swiper-wrapper grid grid-cols-4 gap-3">
                    @foreach ($modelVariants as $model)
                        <div class="swiper-slide bg-neutral-200 p-6 pb-2">
@@ -36,11 +36,11 @@
                </div>
            </div>
            <!-- Nav PREV / NEXT -->
-           <div class="flex w-fit items-center gap-2 pl-8 py-4">
-               <div class="door-model-thumbs-swiper-button-prev cursor-pointer">
+           <div class="col-span-full w-full flex flex-row-reverse items-center gap-2 py-4  pr-8">
+               <div class="door-model-thumbs-swiper-button-prev cursor-pointer order-2">
                    <x-svg.arrow-left class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
                </div>
-               <div class="door-model-thumbs-swiper-button-next cursor-pointer">
+               <div class="door-model-thumbs-swiper-button-next cursor-pointer order-1">
                    <x-svg.arrow-right class="fill:rgb(var(--color-szurke));fill-rule:nonzero;" />
                </div>
            </div>
