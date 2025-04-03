@@ -86,6 +86,12 @@ Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
     Route::patch('/update/{quotationItem}', [QuotationController::class, 'updateItem'])->name('updateItem');
 });
 
+Route::get('/raktari-ajtok–megbizhatosag-tartossag', function () {
+    return view('google.raktari-ajtok–megbizhatosag-tartossag');
+})->name('seo.raktari-ajtok-megbizhatosag-tartossag');
+Route::get('/raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere', function () {
+    return view('google.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere');
+})->name('seo.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere');
 // ne nyulj hozzá
 Route::post('/xmlExport', [ManagePageContentController::class, 'xmlExport']);
 Route::get('/xmlFile', [ManagePageContentController::class, 'xmlFile']);

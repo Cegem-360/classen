@@ -7,9 +7,9 @@ namespace App\Console\Commands;
 use App\Models\Category;
 use App\Models\Door;
 use Illuminate\Console\Command;
+use Illuminate\Support\Str;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
-use Str;
 
 final class GenerateSitemap extends Command
 {
@@ -54,6 +54,8 @@ final class GenerateSitemap extends Command
         $sitemap->add(Url::create('/'.Str::slug('Modulajtók - Stílus, funkcionalitás és minőség', '-', 'hu'))->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Url::create('/'.Str::slug('Enteriőrbe illő bejárati ajtók - Stílus és biztonság', '-', 'hu'))->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Url::create('/kimelt-termekeink')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+        $sitemap->add(Url::create('/raktari-ajtok–megbizhatosag-tartossag')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
+        $sitemap->add(Url::create('/raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Category::all());
         $sitemap->add(Door::all());
         $sitemap->writeToFile(public_path('sitemap.xml'));

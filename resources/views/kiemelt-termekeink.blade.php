@@ -55,6 +55,20 @@
                     Fa mintázatú ajtók - Természetes elegancia és stílus
                 </a>
             </li>
+
+            <li>
+                <a href="{{ route('seo.raktari-ajtok-megbizhatosag-tartossag') }}"
+                    class="text-blue-500 hover:underline">
+                    Raktári ajtók – Megbízhatóság, tartósság és esztétika az Arcadia 98 Kft.-től
+                </a>
+            </li>
+
+            <li>
+                <a href="{{ route('seo.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere') }}"
+                    class="text-blue-500 hover:underline">
+                    Raktári ajtók: A tökéletes választás otthonába és munkahelyére
+                </a>
+            </li>
         </ul>
     </div>
 
