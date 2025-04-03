@@ -54,7 +54,7 @@ Route::prefix('kedvencek')->as('favorites.')->group(function () {
     Route::get('/', [ManagePageContentController::class, 'favorites'])->name('index');
 });
 Route::get('/letoltesek', function () {
-    return view('letoltesek/index');
+    return view('letoltesek.index');
 })->name('downloads');
 
 Route::view('/kilincsek', 'kilincsek.index')->name('kilincsek');
