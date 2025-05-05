@@ -69,6 +69,16 @@
                     Raktári ajtók: A tökéletes választás otthonába és munkahelyére
                 </a>
             </li>
+            <li>
+                <a href="{{ route('seo.belteri-ajtok') }}" class="text-blue-500 hover:underline">
+                    Beltéri ajtók közvetlenül gyártótól | Minőség és stílus – Arcadia 98
+                </a>
+            </li>
+            <li>
+                <a href="{{ route('seo.cpl') }}" class="text-blue-500 hover:underline">
+                    CPL beltéri ajtók | Karcálló, modern ajtók elérhető áron – Arcadia 98
+                </a>
+            </li>
         </ul>
     </div>
 
