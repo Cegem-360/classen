@@ -56,6 +56,8 @@ final class GenerateSitemap extends Command
         $sitemap->add(Url::create('/kimelt-termekeink')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         $sitemap->add(Url::create('/raktari-ajtok–megbizhatosag-tartossag')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Url::create('/raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
+        $sitemap->add(Url::create('/beltéri-ajtók–stilus-minőség-tartósság')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
+        $sitemap->add(Url::create('/cpl-belteri-ajtok-karcallo-modern-ajtok')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Category::all());
         $sitemap->add(Door::all());
         $sitemap->writeToFile(public_path('sitemap.xml'));

@@ -92,6 +92,13 @@ Route::get('/raktari-ajtok–megbizhatosag-tartossag', function () {
 Route::get('/raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere', function () {
     return view('google.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere');
 })->name('seo.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere');
+Route::get('beltéri-ajtók–stilus-minőség-tartósság', function () {
+    return view('google.belteri');
+})->name('seo.belteri-ajtok');
+Route::get('/cpl-belteri-ajtok-karcallo-modern-ajtok', function () {
+    return view('google.cpl');
+})->name('seo.cpl');
+
 // ne nyulj hozzá
 Route::post('/xmlExport', [ManagePageContentController::class, 'xmlExport']);
 Route::get('/xmlFile', [ManagePageContentController::class, 'xmlFile']);
