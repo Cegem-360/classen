@@ -129,6 +129,10 @@
                 <a href="{{ route('kiemelt-termekeink') }}" class="text-sm font-semibold text-gray-900 hover:underline">
                     Kiemelt termékeink
                 </a>
+                <a href="{{ route('featured-sales-areas.index') }}"
+                    class="text-sm font-semibold text-gray-900 hover:underline">
+                    Értékesítési területeink
+                </a>
             </div>
 
             <div class="text-center sm:flex sm:items-center sm:justify-center">
