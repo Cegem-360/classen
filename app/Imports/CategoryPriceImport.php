@@ -16,16 +16,17 @@ final class CategoryPriceImport implements ToModel, WithHeadingRow
     /**
      * @param  Collection  $collection
      */
-    public function model(array $row)
+    public function model(array $row): void
     {
         try {
             $category = Category::whereName($row['kollekcio'])->first();
             if (! $category) {
                 return;
             }
-        } catch (Exception $e) {
+        } catch (Exception) {
             return;
         }
+
         $models = Door::whereCategoryId(Category::whereName($row['kollekcio'])->first()->id)->get();
         foreach ($models as $model) {
             $model->update([

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Imports;
 
+use Illuminate\Database\Eloquent\Model;
 use App\Models\AdditionalAttribute;
 use App\Models\Category;
 use Illuminate\Support\Collection;
@@ -18,11 +19,11 @@ final class AdditionalAttributeImport implements ToCollection, WithHeadingRow
 
     /**
      * @param  array  $row
-     * @return \Illuminate\Database\Eloquent\Model|null
+     * @return Model|null
      */
-    public ?Category $category;
+    public ?Category $category = null;
 
-    public function collection(Collection $rows)
+    public function collection(Collection $rows): void
     {
         foreach ($rows as $row) {
             try {
@@ -36,7 +37,7 @@ final class AdditionalAttributeImport implements ToCollection, WithHeadingRow
                 }
 
                 AdditionalAttribute::create($data);
-            } catch (Throwable $th) {
+            } catch (Throwable) {
                 dd($row['kollekciok']);
             }
         }

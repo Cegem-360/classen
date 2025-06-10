@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('website_options', function (Blueprint $table) {
+        Schema::create('website_options', function (Blueprint $table): void {
             $table->id();
             $table->string('name')->nullable(false);
             $table->string('title')->nullable(false);

@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('meta_key_words', function (Blueprint $table) {
+        Schema::create('meta_key_words', function (Blueprint $table): void {
             $table->id();
             $table->string('collection_name')->index();
             $table->text('meta_description')->nullable();

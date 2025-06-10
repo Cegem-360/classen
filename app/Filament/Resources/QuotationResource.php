@@ -4,6 +4,15 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\QuotationResource\Pages\ListQuotations;
+use App\Filament\Resources\QuotationResource\Pages\CreateQuotation;
+use App\Filament\Resources\QuotationResource\Pages\EditQuotation;
 use App\Filament\Resources\QuotationResource\Pages;
 use App\Models\Quotation;
 use Filament\Forms;
@@ -22,20 +31,20 @@ final class QuotationResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Textarea::make('session_id')
+                Textarea::make('session_id')
                     ->required()
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('first_name')
+                TextInput::make('first_name')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('last_name')
+                TextInput::make('last_name')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('email')
+                TextInput::make('email')
                     ->email()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('phone')
+                TextInput::make('phone')
                     ->tel()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('message')
+                Textarea::make('message')
                     ->columnSpanFull(),
             ]);
     }
@@ -44,23 +53,23 @@ final class QuotationResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('first_name')
+                TextColumn::make('first_name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('last_name')
+                TextColumn::make('last_name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('email')
+                TextColumn::make('email')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('phone')
+                TextColumn::make('phone')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('deleted_at')
+                TextColumn::make('deleted_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -69,11 +78,11 @@ final class QuotationResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -88,9 +97,9 @@ final class QuotationResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListQuotations::route('/'),
-            'create' => Pages\CreateQuotation::route('/create'),
-            'edit' => Pages\EditQuotation::route('/{record}/edit'),
+            'index' => ListQuotations::route('/'),
+            'create' => CreateQuotation::route('/create'),
+            'edit' => EditQuotation::route('/{record}/edit'),
         ];
     }
 }

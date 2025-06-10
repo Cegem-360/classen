@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Mail;
 
+use Illuminate\Mail\Mailables\Attachment;
 use App\Models\Quotation;
 use Illuminate\Bus\Queueable;
 use Illuminate\Database\Eloquent\Collection;
@@ -14,8 +15,8 @@ use Illuminate\Queue\SerializesModels;
 
 final class RequestQuotationSended extends Mailable
 {
-    use Queueable, SerializesModels;
-
+    use Queueable;
+    use SerializesModels;
     /**
      * Create a new message instance.
      */
@@ -49,7 +50,7 @@ final class RequestQuotationSended extends Mailable
     /**
      * Get the attachments for the message.
      *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+     * @return array<int, Attachment>
      */
     public function attachments(): array
     {

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Mail;
 
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
@@ -12,28 +13,13 @@ use Illuminate\Queue\SerializesModels;
 
 final class ContactForm extends Mailable
 {
-    use Queueable, SerializesModels;
-
-    public $first_name;
-
-    public $last_name;
-
-    public $contactEmail;
-
-    public $phone;
-
-    public $emailMessage;
-
+    use Queueable;
+    use SerializesModels;
     /**
      * Create a new message instance.
      */
-    public function __construct($first_name, $last_name, $contactEmail, $phone, $emailMessage)
+    public function __construct(public $first_name, public $last_name, public $contactEmail, public $phone, public $emailMessage)
     {
-        $this->first_name = $first_name;
-        $this->last_name = $last_name;
-        $this->contactEmail = $contactEmail;
-        $this->phone = $phone;
-        $this->emailMessage = $emailMessage;
     }
 
     /**
@@ -66,7 +52,7 @@ final class ContactForm extends Mailable
     /**
      * Get the attachments for the message.
      *
-     * @return array<int, \Illuminate\Mail\Mailables\Attachment>
+     * @return array<int, Attachment>
      */
     public function attachments(): array
     {

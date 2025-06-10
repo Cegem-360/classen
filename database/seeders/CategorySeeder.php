@@ -47,6 +47,7 @@ final class CategorySeeder extends Seeder
             if (is_null($category)) {
                 continue;
             }
+
             $category['acf']['additional_options'] = ($category['acf']['additional_options'] === false) ? null : $category['acf']['additional_options'];
             $category['acf']['additional_options'] = $this->str_replace_json('false', 'null', $category['acf']['additional_options']);
             $category['acf']['door_specification'] = ($category['acf']['door_specification'] === false) ? null : $category['acf']['door_specification'];
@@ -65,12 +66,13 @@ final class CategorySeeder extends Seeder
                     'breadcrumb' => $category['acf']['type'] ?? null,
                 ]
             );
-            $attributes = explode('|', $woCategory->description);
+            $attributes = explode('|', (string) $woCategory->description);
             foreach ($attributes as $attribute) {
                 if (is_null($attribute)) {
                     continue;
                 }
-                if (isset($attribute) && $attribute !== '') {
+
+                if ($attribute !== '') {
                     $attribute = Attribute::whereName($attribute)->first();
                     $created_category->attributes()->attach($attribute);
                 }
@@ -80,7 +82,7 @@ final class CategorySeeder extends Seeder
 
     }
 
-    public function str_replace_json($search, $replace, $subject)
+    public function str_replace_json($search, $replace, $subject): mixed
     {
         return json_decode(str_replace($search, $replace, json_encode($subject)));
     }

@@ -7,7 +7,7 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Parameter>
+ * @extends Factory<\App\Models\Parameter>
  */
 final class ParameterFactory extends Factory
 {

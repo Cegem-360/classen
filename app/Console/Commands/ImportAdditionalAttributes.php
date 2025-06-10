@@ -27,7 +27,7 @@ final class ImportAdditionalAttributes extends Command
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
         $path = storage_path('app/public/arcadiaAdditionalAttributes.csv');
 

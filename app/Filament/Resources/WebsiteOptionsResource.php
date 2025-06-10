@@ -4,6 +4,16 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\WebsiteOptionsResource\Pages\ListWebsiteOptions;
+use App\Filament\Resources\WebsiteOptionsResource\Pages\CreateWebsiteOptions;
+use App\Filament\Resources\WebsiteOptionsResource\Pages\ViewWebsiteOptions;
+use App\Filament\Resources\WebsiteOptionsResource\Pages\EditWebsiteOptions;
 use App\Filament\Resources\WebsiteOptionsResource\Pages;
 use App\Models\WebsiteOptions;
 use Filament\Forms;
@@ -22,22 +32,22 @@ final class WebsiteOptionsResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('title')
+                TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('page')
+                TextInput::make('page')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('img_url')
+                TextInput::make('img_url')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('text')
+                TextInput::make('text')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('link_title')
+                TextInput::make('link_title')
                     ->required()
                     ->maxLength(255),
             ]);
@@ -47,23 +57,23 @@ final class WebsiteOptionsResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('title')
+                TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('page')
+                TextColumn::make('page')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('img_url')
+                TextColumn::make('img_url')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('text')
+                TextColumn::make('text')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('link_title')
+                TextColumn::make('link_title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -72,12 +82,12 @@ final class WebsiteOptionsResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                ViewAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -92,10 +102,10 @@ final class WebsiteOptionsResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListWebsiteOptions::route('/'),
-            'create' => Pages\CreateWebsiteOptions::route('/create'),
-            'view' => Pages\ViewWebsiteOptions::route('/{record}'),
-            'edit' => Pages\EditWebsiteOptions::route('/{record}/edit'),
+            'index' => ListWebsiteOptions::route('/'),
+            'create' => CreateWebsiteOptions::route('/create'),
+            'view' => ViewWebsiteOptions::route('/{record}'),
+            'edit' => EditWebsiteOptions::route('/{record}/edit'),
         ];
     }
 }

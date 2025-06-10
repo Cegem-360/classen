@@ -10,7 +10,7 @@ final class CollectionItem extends Component
 {
     public $category;
 
-    public function mount($category)
+    public function mount($category): void
     {
         $this->category = $category;
     }

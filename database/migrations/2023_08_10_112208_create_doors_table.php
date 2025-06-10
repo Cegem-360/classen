@@ -14,7 +14,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('doors', function (Blueprint $table) {
+        Schema::create('doors', function (Blueprint $table): void {
             $table->id();
             $table->integer('product_id')->nullable();
             $table->integer('price')->default(0)->nullable();

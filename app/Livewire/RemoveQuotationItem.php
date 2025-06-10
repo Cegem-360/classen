@@ -19,14 +19,14 @@ final class RemoveQuotationItem extends Component
     }
 
     #[On('quotationItemDelete')]
-    public function quotationItemDelete()
+    public function quotationItemDelete(): void
     {
         $this->quotationItem->delete();
         Toaster::success(__('Sikeres eltávolítás!'));
         $this->redirect(route('quotation.index'));
     }
 
-    public function mount(QuotationItem $quotationItem)
+    public function mount(QuotationItem $quotationItem): void
     {
         $this->quotationItem = $quotationItem;
     }

@@ -15,7 +15,7 @@ return new class extends Migration
     public function up(): void
     {
 
-        Schema::create('additional_attributes', function (Blueprint $table) {
+        Schema::create('additional_attributes', function (Blueprint $table): void {
             $table->id();
             $table->foreignIdFor(Category::class)->onDelete('cascade');
             $columns = [

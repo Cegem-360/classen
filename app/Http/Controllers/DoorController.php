@@ -21,14 +21,9 @@ final class DoorController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create() {}
-
-    /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): void
     {
         //
     }
@@ -45,13 +40,13 @@ final class DoorController extends Controller
         $colorVariants = Door::whereName($door->name)->whereCategoryId($door->category_id)->get()->groupBy('tag_category')->all();
         $modelVariants = Door::whereTag($door->tag)->whereCategoryId($door->category_id)->get()->sortBy('name')->all();
 
-        return view('doors.show', compact('door', 'category', 'catalogs', 'colorVariants', 'modelVariants'));
+        return view('doors.show', ['door' => $door, 'category' => $category, 'catalogs' => $catalogs, 'colorVariants' => $colorVariants, 'modelVariants' => $modelVariants]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Door $doors)
+    public function edit(Door $doors): void
     {
         //
     }
@@ -59,7 +54,7 @@ final class DoorController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Door $doors)
+    public function update(Request $request, Door $doors): void
     {
         //
     }
@@ -67,7 +62,7 @@ final class DoorController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Door $doors)
+    public function destroy(Door $doors): void
     {
         //
     }

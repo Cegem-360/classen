@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\CategoryResource\Pages\ListCategories;
+use App\Filament\Resources\CategoryResource\Pages\CreateCategory;
+use App\Filament\Resources\CategoryResource\Pages\EditCategory;
 use App\Filament\Resources\CategoryResource\Pages;
 use App\Models\Category;
 use Filament\Forms;
@@ -22,18 +30,18 @@ final class CategoryResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                TextInput::make('name')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('category_id')
+                TextInput::make('category_id')
                     ->numeric()
                     ->default(1),
-                Forms\Components\TextInput::make('door_specification'),
-                Forms\Components\TextInput::make('technical_parameter'),
-                Forms\Components\TextInput::make('additional_options'),
-                Forms\Components\TextInput::make('gallery_imgs'),
-                Forms\Components\TextInput::make('breadcrumb')
+                TextInput::make('door_specification'),
+                TextInput::make('technical_parameter'),
+                TextInput::make('additional_options'),
+                TextInput::make('gallery_imgs'),
+                TextInput::make('breadcrumb')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('img_url')
+                TextInput::make('img_url')
                     ->maxLength(255)
                     ->default('resources/img/placeholder.webp'),
             ]);
@@ -43,20 +51,20 @@ final class CategoryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('category_id')
+                TextColumn::make('category_id')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('breadcrumb')
+                TextColumn::make('breadcrumb')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('img_url')
+                TextColumn::make('img_url')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -65,11 +73,11 @@ final class CategoryResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -84,9 +92,9 @@ final class CategoryResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListCategories::route('/'),
-            'create' => Pages\CreateCategory::route('/create'),
-            'edit' => Pages\EditCategory::route('/{record}/edit'),
+            'index' => ListCategories::route('/'),
+            'create' => CreateCategory::route('/create'),
+            'edit' => EditCategory::route('/{record}/edit'),
         ];
     }
 }

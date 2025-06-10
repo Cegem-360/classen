@@ -14,30 +14,30 @@ final class PopUpModal extends Component
 
     protected $listeners = ['showModal' => 'showModal'];
 
-    public function mount($data)
+    public function mount($data): void
     {
         $this->data = $data;
         $this->show = false;
     }
 
-    public function showModal($data)
+    public function showModal($data): void
     {
         $this->data = $data;
 
         $this->doShow();
     }
 
-    public function doShow()
+    public function doShow(): void
     {
         $this->show = true;
     }
 
-    public function doClose()
+    public function doClose(): void
     {
         $this->show = false;
     }
 
-    public function doSomething()
+    public function doSomething(): void
     {
         // Do Something With Your Modal
 

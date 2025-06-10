@@ -10,8 +10,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 final class Quotation extends Model
 {
-    use HasFactory, SoftDeletes;
-
+    use HasFactory;
+    use SoftDeletes;
     protected $fillable = [
         'id',
         'session_id',

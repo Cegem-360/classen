@@ -23,9 +23,10 @@ final class QuotationController extends Controller
         if (session()->missing('quotation')) {
             session(['quotation' => $quotation]);
         }
+
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
 
-        return view('quotation.index', compact('quotation', 'quotationItems'));
+        return view('quotation.index', ['quotation' => $quotation, 'quotationItems' => $quotationItems]);
     }
 
     public function success()

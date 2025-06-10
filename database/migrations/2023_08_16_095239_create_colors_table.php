@@ -15,7 +15,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('colors', function (Blueprint $table) {
+        Schema::create('colors', function (Blueprint $table): void {
             $table->id();
             $table->string('name', 200)->nullable()->default('');
             $table->string('small_img', 1000)->nullable()->default('resources/img/placeholder.webp');

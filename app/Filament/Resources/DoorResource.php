@@ -4,6 +4,15 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\DoorResource\Pages\ListDoors;
+use App\Filament\Resources\DoorResource\Pages\CreateDoor;
+use App\Filament\Resources\DoorResource\Pages\EditDoor;
 use App\Filament\Exports\DoorExportByCategoryExporter;
 use App\Filament\Resources\DoorResource\Pages;
 use App\Models\Category;
@@ -26,31 +35,31 @@ final class DoorResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('product_id')
+                TextInput::make('product_id')
                     ->numeric(),
-                Forms\Components\TextInput::make('price')
+                TextInput::make('price')
                     ->numeric()
                     ->default(0)
                     ->prefix('$'),
-                Forms\Components\TextInput::make('name')
+                TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('img_url')
+                TextInput::make('img_url')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('tag')
+                TextInput::make('tag')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('tag_name')
+                TextInput::make('tag_name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('tag_img_url')
+                TextInput::make('tag_img_url')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('tag_category')
+                TextInput::make('tag_category')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Select::make('category_id')
+                Select::make('category_id')
                     ->relationship('category', 'name')
                     ->required(),
             ]);
@@ -60,32 +69,32 @@ final class DoorResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('product_id')
+                TextColumn::make('product_id')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('price')
+                TextColumn::make('price')
                     ->money()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('img_url')
+                TextColumn::make('img_url')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('tag')
+                TextColumn::make('tag')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('tag_name')
+                TextColumn::make('tag_name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('tag_img_url')
+                TextColumn::make('tag_img_url')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('tag_category')
+                TextColumn::make('tag_category')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('category.name')
+                TextColumn::make('category.name')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -102,12 +111,12 @@ final class DoorResource extends Resource
                     ->icon('heroicon-o-document'),
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
 
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -122,9 +131,9 @@ final class DoorResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListDoors::route('/'),
-            'create' => Pages\CreateDoor::route('/create'),
-            'edit' => Pages\EditDoor::route('/{record}/edit'),
+            'index' => ListDoors::route('/'),
+            'create' => CreateDoor::route('/create'),
+            'edit' => EditDoor::route('/{record}/edit'),
         ];
     }
 }

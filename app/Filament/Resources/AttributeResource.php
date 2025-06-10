@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\AttributeResource\Pages\ListAttributes;
+use App\Filament\Resources\AttributeResource\Pages\CreateAttribute;
+use App\Filament\Resources\AttributeResource\Pages\EditAttribute;
 use App\Filament\Resources\AttributeResource\Pages;
 use App\Models\Attribute;
 use Filament\Forms;
@@ -22,17 +30,17 @@ final class AttributeResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                TextInput::make('name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('value')
+                TextInput::make('value')
                     ->required()
                     ->maxLength(1000),
-                Forms\Components\TextInput::make('img')
+                TextInput::make('img')
                     ->required()
                     ->maxLength(255)
                     ->default('resources/img/placeholder.webp'),
-                Forms\Components\TextInput::make('slug')
+                TextInput::make('slug')
                     ->required()
                     ->maxLength(255)
                     ->default('default'),
@@ -43,19 +51,19 @@ final class AttributeResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('value')
+                TextColumn::make('value')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('img')
+                TextColumn::make('img')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
+                TextColumn::make('slug')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -64,11 +72,11 @@ final class AttributeResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -83,9 +91,9 @@ final class AttributeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAttributes::route('/'),
-            'create' => Pages\CreateAttribute::route('/create'),
-            'edit' => Pages\EditAttribute::route('/{record}/edit'),
+            'index' => ListAttributes::route('/'),
+            'create' => CreateAttribute::route('/create'),
+            'edit' => EditAttribute::route('/{record}/edit'),
         ];
     }
 }

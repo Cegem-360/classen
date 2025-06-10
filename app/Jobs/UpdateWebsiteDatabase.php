@@ -17,14 +17,11 @@ use Illuminate\Queue\SerializesModels;
 
 final class UpdateWebsiteDatabase implements ShouldQueue
 {
-    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
-
+    use Dispatchable;
+    use InteractsWithQueue;
+    use Queueable;
+    use SerializesModels;
     public Client $client;
-
-    /**
-     * Create a new job instance.
-     */
-    public function __construct() {}
 
     /**
      * Execute the job.

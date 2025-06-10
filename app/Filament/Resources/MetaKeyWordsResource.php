@@ -4,6 +4,15 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Textarea;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\MetaKeyWordsResource\Pages\ListMetaKeyWords;
+use App\Filament\Resources\MetaKeyWordsResource\Pages\CreateMetaKeyWords;
+use App\Filament\Resources\MetaKeyWordsResource\Pages\EditMetaKeyWords;
 use App\Filament\Resources\MetaKeyWordsResource\Pages;
 use App\Models\MetaKeyWords;
 use Filament\Forms;
@@ -22,12 +31,12 @@ final class MetaKeyWordsResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('collection_name')
+                TextInput::make('collection_name')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('meta_description')
+                Textarea::make('meta_description')
                     ->columnSpanFull(),
-                Forms\Components\Textarea::make('key_words')
+                Textarea::make('key_words')
                     ->columnSpanFull(),
             ]);
     }
@@ -36,13 +45,13 @@ final class MetaKeyWordsResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('collection_name')
+                TextColumn::make('collection_name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -51,11 +60,11 @@ final class MetaKeyWordsResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -70,9 +79,9 @@ final class MetaKeyWordsResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListMetaKeyWords::route('/'),
-            'create' => Pages\CreateMetaKeyWords::route('/create'),
-            'edit' => Pages\EditMetaKeyWords::route('/{record}/edit'),
+            'index' => ListMetaKeyWords::route('/'),
+            'create' => CreateMetaKeyWords::route('/create'),
+            'edit' => EditMetaKeyWords::route('/{record}/edit'),
         ];
     }
 }

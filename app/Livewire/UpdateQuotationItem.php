@@ -17,7 +17,7 @@ final class UpdateQuotationItem extends Component
     public $frame;
 
     #[On('quotation-increment')]
-    public function increment()
+    public function increment(): void
     {
         $this->quantity++;
         $this->quotationItem->update([
@@ -26,7 +26,7 @@ final class UpdateQuotationItem extends Component
     }
 
     #[On('quotation-decrement')]
-    public function decrement()
+    public function decrement(): void
     {
 
         if ($this->quotationItem->quantity > 1) {
@@ -37,13 +37,13 @@ final class UpdateQuotationItem extends Component
         }
     }
 
-    public function mount(QuotationItem $quotationItem)
+    public function mount(QuotationItem $quotationItem): void
     {
         $this->quotationItem = $quotationItem;
         $this->quantity = $quotationItem->quantity;
     }
 
-    public function updatingQuantity()
+    public function updatingQuantity(): void
     {
         // $this->resetPage();
     }

@@ -4,6 +4,16 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\BlogResource\Pages\ListBlogs;
+use App\Filament\Resources\BlogResource\Pages\CreateBlog;
+use App\Filament\Resources\BlogResource\Pages\ViewBlog;
+use App\Filament\Resources\BlogResource\Pages\EditBlog;
 use App\Filament\Exports\BlogExporter;
 use App\Filament\Imports\BlogImporter;
 use App\Filament\Resources\BlogResource\Pages;
@@ -27,12 +37,12 @@ final class BlogResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
+                TextInput::make('title')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\TextInput::make('slug')
+                TextInput::make('slug')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('img_url')
+                TextInput::make('img_url')
                     ->required()
                     ->maxLength(255),
                 RichEditor::make('content')
@@ -45,17 +55,17 @@ final class BlogResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('title')
+                TextColumn::make('title')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('slug')
+                TextColumn::make('slug')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('img_url')
+                TextColumn::make('img_url')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -64,16 +74,16 @@ final class BlogResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\ViewAction::make(),
-                Tables\Actions\EditAction::make(),
+                ViewAction::make(),
+                EditAction::make(),
             ])
             ->headerActions([
                 ImportAction::make()->importer(BlogImporter::class),
                 ExportAction::make()->exporter(BlogExporter::class),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -88,10 +98,10 @@ final class BlogResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListBlogs::route('/'),
-            'create' => Pages\CreateBlog::route('/create'),
-            'view' => Pages\ViewBlog::route('/{record}'),
-            'edit' => Pages\EditBlog::route('/{record}/edit'),
+            'index' => ListBlogs::route('/'),
+            'create' => CreateBlog::route('/create'),
+            'view' => ViewBlog::route('/{record}'),
+            'edit' => EditBlog::route('/{record}/edit'),
         ];
     }
 }

@@ -14,12 +14,12 @@ final class RequestQuotationButton extends Component
 {
     public Door $door;
 
-    public function mount(Door $door)
+    public function mount(Door $door): void
     {
         $this->door = $door;
     }
 
-    public function addToQuotation()
+    public function addToQuotation(): void
     {
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),

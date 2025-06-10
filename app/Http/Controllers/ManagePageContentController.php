@@ -24,7 +24,7 @@ final class ManagePageContentController extends Controller
     {
         $latestBlogs = Blog::latest()->take(3)->get();
 
-        return view('index', compact('latestBlogs'));
+        return view('index', ['latestBlogs' => $latestBlogs]);
     }
 
     public function favorites(Request $request)
@@ -35,7 +35,7 @@ final class ManagePageContentController extends Controller
             $products = Door::whereIn('id', $favoriteProductIds)->get();
         }
 
-        return view('favorites.index', compact('products'));
+        return view('favorites.index', ['products' => $products]);
     }
 
     public function rolunk()
@@ -56,10 +56,10 @@ final class ManagePageContentController extends Controller
         }
 
         $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'contactEmail' => 'required|email',
-            'emailMessage' => 'required',
+            'first_name' => ['required'],
+            'last_name' => ['required'],
+            'contactEmail' => ['required', 'email'],
+            'emailMessage' => ['required'],
         ]);
 
         $first_name = $request->first_name;

@@ -9,8 +9,6 @@ use Illuminate\Database\Seeder;
 
 final class BlogSeeder extends Seeder
 {
-    protected $model = Blog::class;
-
     /**
      * Run the database seeds.
      */

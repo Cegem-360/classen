@@ -42,7 +42,7 @@ final class AdditionalAttribute extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function casts(): array
+    protected function casts(): array
     {
         return [
             'primo_finishing' => 'boolean',
@@ -67,6 +67,7 @@ final class AdditionalAttribute extends Model
             'wood_door' => 'boolean',
         ];
     }
+
     /*
     protected $casts = [
         'primo_finishing' => 'boolean',

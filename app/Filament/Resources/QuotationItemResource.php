@@ -4,6 +4,14 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\QuotationItemResource\Pages\ListQuotationItems;
+use App\Filament\Resources\QuotationItemResource\Pages\CreateQuotationItem;
+use App\Filament\Resources\QuotationItemResource\Pages\EditQuotationItem;
 use App\Filament\Resources\QuotationItemResource\Pages;
 use App\Models\QuotationItem;
 use Filament\Forms;
@@ -22,15 +30,15 @@ final class QuotationItemResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('quotation_id')
+                TextInput::make('quotation_id')
                     ->required()
                     ->numeric(),
-                Forms\Components\TextInput::make('door_id')
+                TextInput::make('door_id')
                     ->required()
                     ->numeric(),
-                Forms\Components\TextInput::make('frame')
+                TextInput::make('frame')
                     ->maxLength(255),
-                Forms\Components\TextInput::make('quantity')
+                TextInput::make('quantity')
                     ->required()
                     ->numeric()
                     ->default(1),
@@ -41,22 +49,22 @@ final class QuotationItemResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('quotation_id')
+                TextColumn::make('quotation_id')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('door_id')
+                TextColumn::make('door_id')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('frame')
+                TextColumn::make('frame')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('quantity')
+                TextColumn::make('quantity')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -65,11 +73,11 @@ final class QuotationItemResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -84,9 +92,9 @@ final class QuotationItemResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListQuotationItems::route('/'),
-            'create' => Pages\CreateQuotationItem::route('/create'),
-            'edit' => Pages\EditQuotationItem::route('/{record}/edit'),
+            'index' => ListQuotationItems::route('/'),
+            'create' => CreateQuotationItem::route('/create'),
+            'edit' => EditQuotationItem::route('/{record}/edit'),
         ];
     }
 }

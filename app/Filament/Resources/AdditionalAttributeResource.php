@@ -4,6 +4,16 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\AdditionalAttributeResource\Pages\ListAdditionalAttributes;
+use App\Filament\Resources\AdditionalAttributeResource\Pages\CreateAdditionalAttribute;
+use App\Filament\Resources\AdditionalAttributeResource\Pages\EditAdditionalAttribute;
 use App\Filament\Resources\AdditionalAttributeResource\Pages;
 use App\Models\AdditionalAttribute;
 use Filament\Forms;
@@ -22,47 +32,47 @@ final class AdditionalAttributeResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Toggle::make('primo_finishing')
+                Toggle::make('primo_finishing')
                     ->required(),
-                Forms\Components\Toggle::make('3d_finishing')
+                Toggle::make('3d_finishing')
                     ->required(),
-                Forms\Components\Toggle::make('iridium_finishing')
+                Toggle::make('iridium_finishing')
                     ->required(),
-                Forms\Components\Toggle::make('cpl_laminate')
+                Toggle::make('cpl_laminate')
                     ->required(),
-                Forms\Components\Toggle::make('hpl_laminate')
+                Toggle::make('hpl_laminate')
                     ->required(),
-                Forms\Components\Toggle::make('lacquered')
+                Toggle::make('lacquered')
                     ->required(),
-                Forms\Components\Toggle::make('room_door')
+                Toggle::make('room_door')
                     ->required(),
-                Forms\Components\Toggle::make('inner_door')
+                Toggle::make('inner_door')
                     ->required(),
-                Forms\Components\Toggle::make('interior_entrance_door')
+                Toggle::make('interior_entrance_door')
                     ->required(),
-                Forms\Components\Toggle::make('technical_doors')
+                Toggle::make('technical_doors')
                     ->required(),
-                Forms\Components\Toggle::make('fire_door')
+                Toggle::make('fire_door')
                     ->required(),
-                Forms\Components\Toggle::make('anti_burglary_door')
+                Toggle::make('anti_burglary_door')
                     ->required(),
-                Forms\Components\Toggle::make('soundproof_door')
+                Toggle::make('soundproof_door')
                     ->required(),
-                Forms\Components\Toggle::make('sliding_door')
+                Toggle::make('sliding_door')
                     ->required(),
-                Forms\Components\Toggle::make('modern')
+                Toggle::make('modern')
                     ->required(),
-                Forms\Components\Toggle::make('classic')
+                Toggle::make('classic')
                     ->required(),
-                Forms\Components\Toggle::make('loft')
+                Toggle::make('loft')
                     ->required(),
-                Forms\Components\Toggle::make('retro')
+                Toggle::make('retro')
                     ->required(),
-                Forms\Components\Toggle::make('rustic')
+                Toggle::make('rustic')
                     ->required(),
-                Forms\Components\Toggle::make('wood_door')
+                Toggle::make('wood_door')
                     ->required(),
-                Forms\Components\Select::make('category_id')
+                Select::make('category_id')
                     ->relationship('category', 'name')
                     ->required(),
             ]);
@@ -72,54 +82,54 @@ final class AdditionalAttributeResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\IconColumn::make('primo_finishing')
+                IconColumn::make('primo_finishing')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('3d_finishing')
+                IconColumn::make('3d_finishing')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('iridium_finishing')
+                IconColumn::make('iridium_finishing')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('cpl_laminate')
+                IconColumn::make('cpl_laminate')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('hpl_laminate')
+                IconColumn::make('hpl_laminate')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('lacquered')
+                IconColumn::make('lacquered')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('room_door')
+                IconColumn::make('room_door')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('inner_door')
+                IconColumn::make('inner_door')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('interior_entrance_door')
+                IconColumn::make('interior_entrance_door')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('technical_doors')
+                IconColumn::make('technical_doors')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('fire_door')
+                IconColumn::make('fire_door')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('anti_burglary_door')
+                IconColumn::make('anti_burglary_door')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('soundproof_door')
+                IconColumn::make('soundproof_door')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('sliding_door')
+                IconColumn::make('sliding_door')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('modern')
+                IconColumn::make('modern')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('classic')
+                IconColumn::make('classic')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('loft')
+                IconColumn::make('loft')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('retro')
+                IconColumn::make('retro')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('rustic')
+                IconColumn::make('rustic')
                     ->boolean(),
-                Tables\Columns\IconColumn::make('wood_door')
+                IconColumn::make('wood_door')
                     ->boolean(),
-                Tables\Columns\TextColumn::make('category.name')
+                TextColumn::make('category.name')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -128,11 +138,11 @@ final class AdditionalAttributeResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -147,9 +157,9 @@ final class AdditionalAttributeResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListAdditionalAttributes::route('/'),
-            'create' => Pages\CreateAdditionalAttribute::route('/create'),
-            'edit' => Pages\EditAdditionalAttribute::route('/{record}/edit'),
+            'index' => ListAdditionalAttributes::route('/'),
+            'create' => CreateAdditionalAttribute::route('/create'),
+            'edit' => EditAdditionalAttribute::route('/{record}/edit'),
         ];
     }
 }

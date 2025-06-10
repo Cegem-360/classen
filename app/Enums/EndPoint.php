@@ -17,25 +17,25 @@ use BenSampo\Enum\Enum;
  */
 final class EndPoint extends Enum
 {
-    public const POSTS = 'posts/';
+    public const string POSTS = 'posts/';
 
-    public const MAEDIA = 'media/';
+    public const string MAEDIA = 'media/';
 
-    public const PAGES = 'pages/';
+    public const string PAGES = 'pages/';
 
-    public const DESIGFORMS = 'design_forms/';
+    public const string DESIGFORMS = 'design_forms/';
 
-    public const CATEGORIES = 'categories/';
+    public const string CATEGORIES = 'categories/';
 
-    public const CATEGORY = 'category/';
+    public const string CATEGORY = 'category/';
 
-    public const PRODUCTS = 'products';
+    public const string PRODUCTS = 'products';
 
-    public const PRODUCTSCATEGORIES = 'products/categories';
+    public const string PRODUCTSCATEGORIES = 'products/categories';
 
-    public const PRODUCTSTAGS = 'products/tags';
+    public const string PRODUCTSTAGS = 'products/tags';
 
-    public const COLLECTIONS = 'collections/';
+    public const string COLLECTIONS = 'collections/';
 
-    public const LARAVELWEBSITEOPTIONS = 'laravel/options/';
+    public const string LARAVELWEBSITEOPTIONS = 'laravel/options/';
 }

@@ -80,45 +80,46 @@ final class FilterForCategorySidebar extends Component
                 $this->options['style']['loft'] = ! $this->options['style']['loft'];
             }
         }
+
         $this->q = '';
         $this->g = '';
         if ($this->in_array_recursive(true, $this->options, true)) {
             $categories = [];
             $results =
                 AdditionalAttribute::with('category')
-                    ->where(function (Builder $outerQuery) {
-                        $outerQuery->when($this->options['surface']['3d_finishing'], function (Builder $query) {
+                    ->where(function (Builder $outerQuery): void {
+                        $outerQuery->when($this->options['surface']['3d_finishing'], function (Builder $query): void {
                             $query->orWhere('3d_finishing', true);
-                        })->when($this->options['surface']['iridium_finishing'], function (Builder $query) {
+                        })->when($this->options['surface']['iridium_finishing'], function (Builder $query): void {
                             $query->orWhere('iridium_finishing', true);
-                        })->when($this->options['surface']['cpl_laminate'], function (Builder $query) {
+                        })->when($this->options['surface']['cpl_laminate'], function (Builder $query): void {
                             $query->orWhere('cpl_laminate', true);
-                        })->when($this->options['surface']['hpl_laminate'], function (Builder $query) {
+                        })->when($this->options['surface']['hpl_laminate'], function (Builder $query): void {
                             $query->orWhere('hpl_laminate', true);
-                        })->when($this->options['surface']['lacquered'], function (Builder $query) {
+                        })->when($this->options['surface']['lacquered'], function (Builder $query): void {
                             $query->orWhere('lacquered', true);
                         });
                     })
-                    ->where(function (Builder $outerQuery) {
-                        $outerQuery->when($this->options['purpose']['room_door'], function (Builder $query) {
+                    ->where(function (Builder $outerQuery): void {
+                        $outerQuery->when($this->options['purpose']['room_door'], function (Builder $query): void {
                             $query->orWhere('room_door', true);
-                        })->when($this->options['purpose']['inner_door'], function (Builder $query) {
+                        })->when($this->options['purpose']['inner_door'], function (Builder $query): void {
                             $query->orWhere('inner_door', true);
-                        })->when($this->options['purpose']['technical_doors'], function (Builder $query) {
+                        })->when($this->options['purpose']['technical_doors'], function (Builder $query): void {
                             $query->orWhere('technical_doors', true);
-                        })->when($this->options['purpose']['sliding_door'], function (Builder $query) {
+                        })->when($this->options['purpose']['sliding_door'], function (Builder $query): void {
                             $query->orWhere('sliding_door', true);
-                        })->when($this->options['purpose']['interior_entrance_door'], function (Builder $query) {
+                        })->when($this->options['purpose']['interior_entrance_door'], function (Builder $query): void {
                             $query->orWhere('interior_entrance_door', true);
-                        })->when($this->options['purpose']['wood_door'], function (Builder $query) {
+                        })->when($this->options['purpose']['wood_door'], function (Builder $query): void {
                             $query->orWhere('wood_door', true);
                         });
-                    })->where(function (Builder $outerQuery) {
-                        $outerQuery->when($this->options['style']['modern'], function (Builder $query) {
+                    })->where(function (Builder $outerQuery): void {
+                        $outerQuery->when($this->options['style']['modern'], function (Builder $query): void {
                             $query->orWhere('modern', true);
-                        })->when($this->options['style']['classic'], function (Builder $query) {
+                        })->when($this->options['style']['classic'], function (Builder $query): void {
                             $query->orWhere('classic', true);
-                        })->when($this->options['style']['loft'], function (Builder $query) {
+                        })->when($this->options['style']['loft'], function (Builder $query): void {
                             $query->orWhere('loft', true);
                         });
                     })->get();
@@ -157,7 +158,7 @@ final class FilterForCategorySidebar extends Component
                 $isFound = $this->in_array_recursive($needle, $element, $strict);
             }
 
-            if ($isFound === true) {
+            if ($isFound) {
                 return true;
             }
         }

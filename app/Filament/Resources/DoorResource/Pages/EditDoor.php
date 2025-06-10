@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\DoorResource\Pages;
 
+use Filament\Actions\DeleteAction;
 use App\Filament\Resources\DoorResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
@@ -15,7 +16,7 @@ final class EditDoor extends EditRecord
     protected function getHeaderActions(): array
     {
         return [
-            Actions\DeleteAction::make(),
+            DeleteAction::make(),
         ];
     }
 }

@@ -15,13 +15,13 @@ final class DoorOptions extends Component
 
     public $tags;
 
-    public function mount($doors, $tags)
+    public function mount($doors, $tags): void
     {
         $this->doors = $doors;
         $this->tags = $tags;
     }
 
-    public function addToQuotation($id)
+    public function addToQuotation($id): void
     {
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),

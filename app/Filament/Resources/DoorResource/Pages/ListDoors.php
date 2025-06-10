@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\DoorResource\Pages;
 
+use Filament\Actions\CreateAction;
 use App\Filament\Exports\DoorExportByCategoryExporter;
 use App\Filament\Resources\DoorResource;
 use Filament\Actions;
@@ -17,7 +18,7 @@ final class ListDoors extends ListRecords
     protected function getHeaderActions(): array
     {
         return [
-            Actions\CreateAction::make(),
+            CreateAction::make(),
             ExportAction::make(DoorExportByCategoryExporter::class)
                 ->label('Export by Category')
                 ->icon('heroicon-o-document'),

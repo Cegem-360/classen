@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('attribute_category', function (Blueprint $table) {
+        Schema::create('attribute_category', function (Blueprint $table): void {
             $table->id();
             $table->foreignId('attribute_id')->references('id')->on('attributes')->onDelete('cascade');
             $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');

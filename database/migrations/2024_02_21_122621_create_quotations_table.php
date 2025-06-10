@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('quotations', function (Blueprint $table) {
+        Schema::create('quotations', function (Blueprint $table): void {
             $table->id();
             $table->text('session_id');
             $table->string('first_name')->nullable();

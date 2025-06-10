@@ -16,7 +16,7 @@ final class SearchBox extends Component
     public $records;
 
     // Fetch records
-    public function searchResult()
+    public function searchResult(): void
     {
 
         if (! empty($this->search)) {

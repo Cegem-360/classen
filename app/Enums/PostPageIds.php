@@ -12,11 +12,11 @@ use BenSampo\Enum\Enum;
  */
 final class PostPageIds extends Enum
 {
-    public const BLOG = 1;
+    public const int BLOG = 1;
 
-    public const MAINPAGE = 17;
+    public const int MAINPAGE = 17;
 
-    public const OptionTwo = 1;
+    public const int OptionTwo = 1;
 
-    public const OptionThree = 2;
+    public const int OptionThree = 2;
 }

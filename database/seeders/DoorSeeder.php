@@ -15,17 +15,8 @@ use Illuminate\Database\Seeder;
 
 final class DoorSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
-    private Client $client;
-
     public function run(): void
     {
-        $this->client =
-           new Client([
-               'base_uri' => UrlPath::BASEURL,
-           ]);
         $woocommerce = new WC(
             UrlPath::BASEURLWC,
             'ck_dae8ceb27e124f2ecd884d0e1aff83ebed5bbdbd',
@@ -40,26 +31,32 @@ final class DoorSeeder extends Seeder
             // dump($products_tags);
             foreach ($products as $product) {
                 // dump($product);
-                if (empty($product->images) || ! isset($product->images[0]->src)) {
+                if (empty($product->images)) {
                     continue;
                 }
+                if (! isset($product->images[0]->src)) {
+                    continue;
+                }
+
                 $cover = $product->images[0]->src;
                 if (isset($product->tags[0])) {
                     $tag = $products_tags->where('slug', $product->tags[0]->slug)->first();
                 } else {
                     $tag = $products_tags->where('slug', 'uni-white')->first();
                 }
+
                 if (is_null($tag)) {
                     continue;
                 }
-                $exploded = ['', ''];
-                $exploded = explode('|', $tag->description);
+                $exploded = explode('|', (string) $tag->description);
                 if (! isset($exploded[1])) {
                     $exploded = [$exploded[0], ''];
                 }
+
                 if (! is_numeric($product->regular_price)) {
                     $product->regular_price = 0;
                 }
+
                 $woocommerceCategory = Category::whereName($product->categories[0]->name)->first();
 
                 Door::create([
@@ -75,10 +72,10 @@ final class DoorSeeder extends Seeder
                     'tag_category' => $exploded[1],
                 ]);
             }
-        } catch (HttpClientException $e) {
-            echo '<pre><code>'.print_r($e->getMessage(), true).'</code><pre>'; // Error message.
-            echo '<pre><code>'.print_r($e->getRequest(), true).'</code><pre>'; // Last request data.
-            echo '<pre><code>'.print_r($e->getResponse(), true).'</code><pre>'; // Last response data.
+        } catch (HttpClientException $httpClientException) {
+            echo '<pre><code>'.print_r($httpClientException->getMessage(), true).'</code><pre>'; // Error message.
+            echo '<pre><code>'.print_r($httpClientException->getRequest(), true).'</code><pre>'; // Last request data.
+            echo '<pre><code>'.print_r($httpClientException->getResponse(), true).'</code><pre>'; // Last response data.
         }
     }
 }

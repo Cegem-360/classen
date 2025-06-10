@@ -4,6 +4,15 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\Select;
+use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use App\Filament\Resources\ColorResource\Pages\ListColors;
+use App\Filament\Resources\ColorResource\Pages\CreateColor;
+use App\Filament\Resources\ColorResource\Pages\EditColor;
 use App\Filament\Resources\ColorResource\Pages;
 use App\Models\Color;
 use Filament\Forms;
@@ -22,20 +31,20 @@ final class ColorResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('name')
+                TextInput::make('name')
                     ->maxLength(200),
-                Forms\Components\TextInput::make('small_img')
+                TextInput::make('small_img')
                     ->maxLength(1000)
                     ->default('resources/img/placeholder.webp'),
-                Forms\Components\TextInput::make('big_img')
+                TextInput::make('big_img')
                     ->maxLength(1000)
                     ->default('resources/img/placeholder.webp'),
-                Forms\Components\TextInput::make('material_category')
+                TextInput::make('material_category')
                     ->maxLength(500),
-                Forms\Components\Select::make('category_id')
+                Select::make('category_id')
                     ->relationship('category', 'name')
                     ->required(),
-                Forms\Components\Select::make('door_id')
+                Select::make('door_id')
                     ->relationship('door', 'name')
                     ->required(),
             ]);
@@ -45,25 +54,25 @@ final class ColorResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
+                TextColumn::make('name')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('small_img')
+                TextColumn::make('small_img')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('big_img')
+                TextColumn::make('big_img')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('material_category')
+                TextColumn::make('material_category')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('category.name')
+                TextColumn::make('category.name')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('door.name')
+                TextColumn::make('door.name')
                     ->numeric()
                     ->sortable(),
-                Tables\Columns\TextColumn::make('created_at')
+                TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
+                TextColumn::make('updated_at')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
@@ -72,11 +81,11 @@ final class ColorResource extends Resource
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
+                EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+                BulkActionGroup::make([
+                    DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -91,9 +100,9 @@ final class ColorResource extends Resource
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListColors::route('/'),
-            'create' => Pages\CreateColor::route('/create'),
-            'edit' => Pages\EditColor::route('/{record}/edit'),
+            'index' => ListColors::route('/'),
+            'create' => CreateColor::route('/create'),
+            'edit' => EditColor::route('/{record}/edit'),
         ];
     }
 }

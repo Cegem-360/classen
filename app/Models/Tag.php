@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Illuminate\Support\Carbon;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -11,15 +13,15 @@ use Illuminate\Database\Eloquent\Model;
  * App\Models\Tag
  *
  * @property int $id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property Carbon|null $created_at
+ * @property Carbon|null $updated_at
  *
- * @method static \Illuminate\Database\Eloquent\Builder|Tag newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Tag newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Tag query()
- * @method static \Illuminate\Database\Eloquent\Builder|Tag whereCreatedAt($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Tag whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Tag whereUpdatedAt($value)
+ * @method static Builder|Tag newModelQuery()
+ * @method static Builder|Tag newQuery()
+ * @method static Builder|Tag query()
+ * @method static Builder|Tag whereCreatedAt($value)
+ * @method static Builder|Tag whereId($value)
+ * @method static Builder|Tag whereUpdatedAt($value)
  *
  * @mixin \Eloquent
  */
