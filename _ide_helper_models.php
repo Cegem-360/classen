@@ -145,8 +145,6 @@ namespace App\Models{
  * @property-read int|null $attributes_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Door> $doors
  * @property-read int|null $doors_count
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Parameter> $parameters
- * @property-read int|null $parameters_count
  * @method static \Database\Factories\CategoryFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Category newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Category newQuery()
@@ -258,18 +256,6 @@ namespace App\Models{
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords whereUpdatedAt($value)
  */
 	final class MetaKeyWords extends \Eloquent {}
-}
-
-namespace App\Models{
-/**
- * App\Models\Parameter
- *
- * @method static \Database\Factories\ParameterFactory factory($count = null, $state = [])
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Parameter newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Parameter newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder<static>|Parameter query()
- */
-	final class Parameter extends \Eloquent {}
 }
 
 namespace App\Models{

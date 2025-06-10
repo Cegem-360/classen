@@ -4,18 +4,17 @@
  * CSRF token as a header based on the value of the "XSRF" token cookie.
  */
 
-import axios from 'axios';
+import axios from "axios";
 window.axios = axios;
 import $ from "jquery";
-window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+window.axios.defaults.headers.common["X-Requested-With"] = "XMLHttpRequest";
 
-import tippy from 'tippy.js';
-import 'tippy.js/dist/tippy.css';
+import tippy from "tippy.js";
+import "tippy.js/dist/tippy.css";
 //import { Navigation, HashNavigation, Pagination, Thumbs, Grid, EffectFade } from 'swiper/modules';
-import Swiper from 'swiper/bundle';
+import Swiper from "swiper/bundle";
 window.Swiper = Swiper;
 window.tippy = tippy;
 import gsap from "gsap";
 window.gsap = gsap;
 window.$ = window.jquery = $;
-

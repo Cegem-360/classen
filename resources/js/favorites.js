@@ -1,13 +1,17 @@
 const initFavoritesJS = {
     getCookie: function (name) {
         const cookieValue = document.cookie
-            .split('; ')
-            .find(cookie => cookie.startsWith(name + '='));
-        return cookieValue ? decodeURIComponent(cookieValue.split('=')[1]) : null;
+            .split("; ")
+            .find((cookie) => cookie.startsWith(name + "="));
+        return cookieValue
+            ? decodeURIComponent(cookieValue.split("=")[1])
+            : null;
     },
 
     setCookie: function (name, value, days) {
-        const expires = new Date(Date.now() + days * 24 * 60 * 60 * 1000).toUTCString();
+        const expires = new Date(
+            Date.now() + days * 24 * 60 * 60 * 1000,
+        ).toUTCString();
         document.cookie = `${name}=${encodeURIComponent(value)}; expires=${expires}; path=/`;
     },
 
@@ -18,12 +22,12 @@ const initFavoritesJS = {
             this.setFavorites(favorites);
         }
 
-        favorites.forEach(favoriteItem => {
+        favorites.forEach((favoriteItem) => {
             var heart = document.getElementById("heart-" + favoriteItem);
             //console.log(heart);
             if (heart) {
-                heart.classList.remove('fill-white');
-                heart.classList.add('fill-gray-1000');
+                heart.classList.remove("fill-white");
+                heart.classList.add("fill-gray-1000");
             }
         });
         return favorites;
@@ -36,33 +40,30 @@ const initFavoritesJS = {
         if (index === -1) {
             favorites.push(id);
             if (heart) {
-                heart.classList.remove('fill-white');
-                heart.classList.add('fill-gray-1000');
-
+                heart.classList.remove("fill-white");
+                heart.classList.add("fill-gray-1000");
             }
         } else {
             favorites.splice(index, 1);
             if (heart) {
-                heart.classList.remove('fill-gray-1000');
-                heart.classList.add('fill-white');
+                heart.classList.remove("fill-gray-1000");
+                heart.classList.add("fill-white");
             }
         }
-        let favorite_element = document.getElementById('favorites_numbers');
+        let favorite_element = document.getElementById("favorites_numbers");
         favorite_element.innerHTML = favorites.length;
         this.setFavorites(favorites);
     },
 
     getFavorites: function () {
-        const cookieValue = this.getCookie('favorites'); // Use regular function to bind 'this'
+        const cookieValue = this.getCookie("favorites"); // Use regular function to bind 'this'
         return cookieValue ? JSON.parse(cookieValue) : null;
     },
 
     setFavorites: function (array) {
-        this.setCookie('favorites', JSON.stringify(array), 30);
+        this.setCookie("favorites", JSON.stringify(array), 30);
         //console.log(JSON.stringify(array));
-    }
+    },
 };
 
 export default initFavoritesJS;
-
- 

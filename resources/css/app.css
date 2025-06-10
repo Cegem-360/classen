@@ -11,7 +11,7 @@
     }
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 .kollekcio-grid {
@@ -138,7 +138,8 @@ html{
     color: #fff;
     transition: 1s all cubic-bezier(0.19, 1, 0.22, 1);
 
-    .icon-arrow2 {}
+    .icon-arrow2 {
+    }
 }
 
 .tile__header {
@@ -156,87 +157,90 @@ html{
 
 /* MOBILE NAV */
 #overlay-button {
-  position: absolute;
-  padding: 26px 11px;
-  z-index: 99;
-  cursor: pointer;
-  user-select: none;
-  span {
-      height: 2px;
-      width: 30px;
-      border-radius: 2px;
-      background-color: black;
-      position: relative;
-      display: block;
-      transition: all .2s ease-in-out;
-      &:before {
-        top: -10px;
-        visibility: visible;
-      }
-      &:after {
-        top: 10px;
-      }
-      &:before, &:after {
-          height: 2px;
-          width: 30px;
-          border-radius: 2px;
-          background-color: black;
-          position: absolute;
-          content: "";
-          transition: all .2s ease-in-out;
-      }
+    position: absolute;
+    padding: 26px 11px;
+    z-index: 99;
+    cursor: pointer;
+    user-select: none;
+    span {
+        height: 2px;
+        width: 30px;
+        border-radius: 2px;
+        background-color: black;
+        position: relative;
+        display: block;
+        transition: all 0.2s ease-in-out;
+        &:before {
+            top: -10px;
+            visibility: visible;
+        }
+        &:after {
+            top: 10px;
+        }
+        &:before,
+        &:after {
+            height: 2px;
+            width: 30px;
+            border-radius: 2px;
+            background-color: black;
+            position: absolute;
+            content: "";
+            transition: all 0.2s ease-in-out;
+        }
     }
-    &:hover span, &:hover span:before, &:hover span:after {
-      background: #333332;
+    &:hover span,
+    &:hover span:before,
+    &:hover span:after {
+        background: #333332;
     }
 }
 #nav-mobile {
-    input[type=checkbox] {
-      display: none;
+    input[type="checkbox"] {
+        display: none;
 
-      &:checked ~ #overlay {
-        visibility: visible;
-      }
+        &:checked ~ #overlay {
+            visibility: visible;
+        }
 
-      &:checked ~ #overlay-button {
-        &:hover span, span{
-          background: transparent;
+        &:checked ~ #overlay-button {
+            &:hover span,
+            span {
+                background: transparent;
+            }
+            span {
+                &:before {
+                    transform: rotate(45deg) translate(7px, 7px);
+                    opacity: 1;
+                }
+                &:after {
+                    transform: rotate(-45deg) translate(7px, -7px);
+                }
+            }
         }
-        span {
-          &:before {
-            transform: rotate(45deg) translate(7px, 7px);
-            opacity: 1;
-          }
-          &:after {
-            transform: rotate(-45deg) translate(7px, -7px);
-          }
-        }
-      }
     }
 }
 
 #overlay {
-  z-index: 90;
-  visibility: hidden;
-  &.active {
-    visibility: visible;
-  }
-  ul {
-    list-style-type: none;
-    li {
-      padding: 1.5em;
-      line-height: 1.5rem;
-      a {
-        text-decoration: none;
-        font-size: 1.5em;
-        &:hover {
-          color: #333332;
-        }
-      }
+    z-index: 90;
+    visibility: hidden;
+    &.active {
+        visibility: visible;
     }
-  }
+    ul {
+        list-style-type: none;
+        li {
+            padding: 1.5em;
+            line-height: 1.5rem;
+            a {
+                text-decoration: none;
+                font-size: 1.5em;
+                &:hover {
+                    color: #333332;
+                }
+            }
+        }
+    }
 }
-
 
 .breadcrumbs__list {
     list-style: none;
@@ -350,13 +354,14 @@ ul.property__list {
             padding: 10px 0;
             border-bottom: 1px solid #b2b2b2;
 
-            .property__name {}
+            .property__name {
+            }
 
-            .property__value {}
+            .property__value {
+            }
         }
     }
 }
-
 
 /* old swiper solution */
 .door-fronts-swiper-thumbs {
@@ -369,14 +374,13 @@ ul.property__list {
     }
 }
 
-
 .doors_colors__variant-set {
     .door_variant {
         img {
-            border: .5rem solid rgba(0, 0, 0, 0.15);
+            border: 0.5rem solid rgba(0, 0, 0, 0.15);
 
             &:hover {
-            padding: .25rem;
+                padding: 0.25rem;
                 border: 1px solid rgba(0, 0, 0, 1);
             }
         }
@@ -390,13 +394,13 @@ ul.property__list {
 }
 /* end old swiper solution */
 
-    .door_color {
-        /* cursor: pointer; */
-        border: 1px solid rgba(0, 0, 0, 0);
-        &.active {
-            border: 1px solid rgba(0, 0, 0, 1);
-        }
-.door_colors {
+.door_color {
+    /* cursor: pointer; */
+    border: 1px solid rgba(0, 0, 0, 0);
+    &.active {
+        border: 1px solid rgba(0, 0, 0, 1);
+    }
+    .door_colors {
     }
 }
 
@@ -428,21 +432,20 @@ ul.property__list {
     color: #333;
 }
 
-
 /*TIPPY tooltip*/
-.tippy-box[data-theme~='tomato'] {
+.tippy-box[data-theme~="tomato"] {
     background-color: tomato;
     color: yellow;
-  }
+}
 
-.tippy-box[data-theme~='arcadia'] {
-    max-width: 380px!important;
-    min-width: 280px!important;
-    background-color: #fff!important;
-    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.21)!important;
-    color: #000!important;
-    font-size: 16px!important;
-    line-height: 26px!important;
+.tippy-box[data-theme~="arcadia"] {
+    max-width: 380px !important;
+    min-width: 280px !important;
+    background-color: #fff !important;
+    box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.21) !important;
+    color: #000 !important;
+    font-size: 16px !important;
+    line-height: 26px !important;
     .tippy-content {
         padding: 30px;
         h3 {
@@ -451,13 +454,13 @@ ul.property__list {
         }
     }
     .tippy-arrow {
-        color: #fff!important;
+        color: #fff !important;
         /*box-shadow: 0 2px 7px 0 rgba(0,0,0,.21);*/
     }
 }
 
 @media (max-width: 560px) {
-    .tippy-box[data-theme~='arcadia'] {
+    .tippy-box[data-theme~="arcadia"] {
         width: 80% !important;
         max-width: none !important;
         left: 50% !important;
@@ -465,10 +468,7 @@ ul.property__list {
     }
 }
 
-
 .pswp--custom-bg {
-  --pswp-bg: rgba(0, 0, 0, 0.6);
-  background: var(--pswp-bg)!important;
+    --pswp-bg: rgba(0, 0, 0, 0.6);
+    background: var(--pswp-bg) !important;
 }
-
-

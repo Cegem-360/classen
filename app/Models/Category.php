@@ -17,7 +17,17 @@ final class Category extends Model implements Sitemapable
 {
     use HasFactory;
 
-    protected $fillable = ['id', 'name', 'category_id', 'technical_parameter', 'additional_options', 'door_specification', 'gallery_imgs', 'breadcrumb'];
+    protected $fillable =
+        [
+            'id',
+            'name',
+            'category_id',
+            'technical_parameter',
+            'additional_options',
+            'door_specification',
+            'gallery_imgs',
+            'breadcrumb',
+        ];
 
     public function doors(): HasMany
     {
@@ -27,14 +37,6 @@ final class Category extends Model implements Sitemapable
     public function attributes(): BelongsToMany
     {
         return $this->belongsToMany(Attribute::class, 'attribute_category');
-    }
-
-    /**
-     * Get all of the parameters for the Category
-     */
-    public function parameters(): HasMany
-    {
-        return $this->hasMany(Parameter::class);
     }
 
     /**
