@@ -129,3 +129,11 @@ Route::get('/sitemap', function () {
 
     return 'Sitemap generated';
 });
+
+Route::prefix('kiemelt-ertekesitesi-teruleteink')->as('featured-sales-areas.')->group(function () {
+    Route::view('/', 'pages.featured-sales-areas.index')->name('index');
+    Route::get('/{slug}', function ($slug) {
+        return view('pages.featured-sales-areas.show', ['slug' => $slug]);
+    })->name('show');
+
+});

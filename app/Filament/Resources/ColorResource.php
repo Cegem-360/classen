@@ -4,21 +4,18 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Select;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Tables\Actions\DeleteBulkAction;
-use App\Filament\Resources\ColorResource\Pages\ListColors;
 use App\Filament\Resources\ColorResource\Pages\CreateColor;
 use App\Filament\Resources\ColorResource\Pages\EditColor;
-use App\Filament\Resources\ColorResource\Pages;
+use App\Filament\Resources\ColorResource\Pages\ListColors;
 use App\Models\Color;
-use Filament\Forms;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 final class ColorResource extends Resource

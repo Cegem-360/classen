@@ -10,7 +10,6 @@ use App\Models\Category;
 use App\Models\Door;
 use Automattic\WooCommerce\Client as WC;
 use Automattic\WooCommerce\HttpClient\HttpClientException;
-use GuzzleHttp\Client;
 use Illuminate\Database\Seeder;
 
 final class DoorSeeder extends Seeder

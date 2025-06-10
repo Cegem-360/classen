@@ -4,22 +4,19 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Actions\ViewAction;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Tables\Actions\DeleteBulkAction;
-use App\Filament\Resources\WebsiteOptionsResource\Pages\ListWebsiteOptions;
 use App\Filament\Resources\WebsiteOptionsResource\Pages\CreateWebsiteOptions;
-use App\Filament\Resources\WebsiteOptionsResource\Pages\ViewWebsiteOptions;
 use App\Filament\Resources\WebsiteOptionsResource\Pages\EditWebsiteOptions;
-use App\Filament\Resources\WebsiteOptionsResource\Pages;
+use App\Filament\Resources\WebsiteOptionsResource\Pages\ListWebsiteOptions;
+use App\Filament\Resources\WebsiteOptionsResource\Pages\ViewWebsiteOptions;
 use App\Models\WebsiteOptions;
-use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Actions\ViewAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 final class WebsiteOptionsResource extends Resource

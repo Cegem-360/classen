@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace App\Mail;
 
-use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Attachment;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
@@ -15,12 +15,11 @@ final class ContactForm extends Mailable
 {
     use Queueable;
     use SerializesModels;
+
     /**
      * Create a new message instance.
      */
-    public function __construct(public $first_name, public $last_name, public $contactEmail, public $phone, public $emailMessage)
-    {
-    }
+    public function __construct(public $first_name, public $last_name, public $contactEmail, public $phone, public $emailMessage) {}
 
     /**
      * Get the message envelope.

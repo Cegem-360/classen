@@ -12,6 +12,7 @@ final class Quotation extends Model
 {
     use HasFactory;
     use SoftDeletes;
+
     protected $fillable = [
         'id',
         'session_id',

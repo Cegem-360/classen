@@ -15,6 +15,7 @@ final class FilterForProductSidebar extends Component
 {
     use WithoutUrlPagination;
     use WithPagination;
+
     public $options = [
         'storage' => [
             'storage' => false,

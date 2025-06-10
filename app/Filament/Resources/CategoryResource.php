@@ -4,20 +4,17 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Tables\Actions\DeleteBulkAction;
-use App\Filament\Resources\CategoryResource\Pages\ListCategories;
 use App\Filament\Resources\CategoryResource\Pages\CreateCategory;
 use App\Filament\Resources\CategoryResource\Pages\EditCategory;
-use App\Filament\Resources\CategoryResource\Pages;
+use App\Filament\Resources\CategoryResource\Pages\ListCategories;
 use App\Models\Category;
-use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 final class CategoryResource extends Resource

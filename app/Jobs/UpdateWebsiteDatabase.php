@@ -21,6 +21,7 @@ final class UpdateWebsiteDatabase implements ShouldQueue
     use InteractsWithQueue;
     use Queueable;
     use SerializesModels;
+
     public Client $client;
 
     /**

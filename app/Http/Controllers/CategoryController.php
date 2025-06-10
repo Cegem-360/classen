@@ -48,7 +48,7 @@ final class CategoryController extends Controller
         $doors = collect($category->doors()->get());
         $catalogs = $category->attributes()->get();
         $tags = $doors->mapToGroups(
-            fn(array $item, $key) => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]]
+            fn (array $item, $key) => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]]
         )->all();
         $doors = $doors->groupBy('tag');
         $doors = $doors->all();

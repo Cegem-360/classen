@@ -4,22 +4,19 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
-use Filament\Forms\Components\Toggle;
-use Filament\Forms\Components\Select;
-use Filament\Tables\Columns\IconColumn;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Tables\Actions\DeleteBulkAction;
-use App\Filament\Resources\AdditionalAttributeResource\Pages\ListAdditionalAttributes;
 use App\Filament\Resources\AdditionalAttributeResource\Pages\CreateAdditionalAttribute;
 use App\Filament\Resources\AdditionalAttributeResource\Pages\EditAdditionalAttribute;
-use App\Filament\Resources\AdditionalAttributeResource\Pages;
+use App\Filament\Resources\AdditionalAttributeResource\Pages\ListAdditionalAttributes;
 use App\Models\AdditionalAttribute;
-use Filament\Forms;
+use Filament\Forms\Components\Select;
+use Filament\Forms\Components\Toggle;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\IconColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 final class AdditionalAttributeResource extends Resource

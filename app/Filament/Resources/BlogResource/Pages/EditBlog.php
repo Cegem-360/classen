@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\BlogResource\Pages;
 
-use Filament\Actions\ViewAction;
-use Filament\Actions\DeleteAction;
 use App\Filament\Resources\BlogResource;
-use Filament\Actions;
+use Filament\Actions\DeleteAction;
+use Filament\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;
 
 final class EditBlog extends EditRecord

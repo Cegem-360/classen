@@ -5,17 +5,17 @@ declare(strict_types=1);
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Support\Carbon;
-use Illuminate\Notifications\DatabaseNotificationCollection;
-use Illuminate\Notifications\DatabaseNotification;
-use Illuminate\Database\Eloquent\Collection;
-use Laravel\Sanctum\PersonalAccessToken;
 use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\DatabaseNotification;
+use Illuminate\Notifications\DatabaseNotificationCollection;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Carbon;
 use Laravel\Sanctum\HasApiTokens;
+use Laravel\Sanctum\PersonalAccessToken;
 
 /**
  * App\Models\User
@@ -53,6 +53,7 @@ final class User extends Authenticatable
     use HasApiTokens;
     use HasFactory;
     use Notifiable;
+
     /**
      * The attributes that are mass assignable.
      *

@@ -4,18 +4,16 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Tables\Actions\DeleteBulkAction;
-use App\Filament\Resources\TagResource\Pages\ListTags;
 use App\Filament\Resources\TagResource\Pages\CreateTag;
 use App\Filament\Resources\TagResource\Pages\EditTag;
-use App\Filament\Resources\TagResource\Pages;
+use App\Filament\Resources\TagResource\Pages\ListTags;
 use App\Models\Tag;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 final class TagResource extends Resource

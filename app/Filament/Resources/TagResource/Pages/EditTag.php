@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\TagResource\Pages;
 
-use Filament\Actions\DeleteAction;
 use App\Filament\Resources\TagResource;
-use Filament\Actions;
+use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
 final class EditTag extends EditRecord

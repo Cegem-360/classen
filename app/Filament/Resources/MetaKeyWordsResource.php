@@ -4,21 +4,18 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
-use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Tables\Actions\DeleteBulkAction;
-use App\Filament\Resources\MetaKeyWordsResource\Pages\ListMetaKeyWords;
 use App\Filament\Resources\MetaKeyWordsResource\Pages\CreateMetaKeyWords;
 use App\Filament\Resources\MetaKeyWordsResource\Pages\EditMetaKeyWords;
-use App\Filament\Resources\MetaKeyWordsResource\Pages;
+use App\Filament\Resources\MetaKeyWordsResource\Pages\ListMetaKeyWords;
 use App\Models\MetaKeyWords;
-use Filament\Forms;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables;
+use Filament\Tables\Actions\BulkActionGroup;
+use Filament\Tables\Actions\DeleteBulkAction;
+use Filament\Tables\Actions\EditAction;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
 final class MetaKeyWordsResource extends Resource
