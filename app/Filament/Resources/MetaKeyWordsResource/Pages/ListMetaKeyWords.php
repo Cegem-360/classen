@@ -8,7 +8,7 @@ use App\Filament\Resources\MetaKeyWordsResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListMetaKeyWords extends ListRecords
+final class ListMetaKeyWords extends ListRecords
 {
     protected static string $resource = MetaKeyWordsResource::class;
 

@@ -13,13 +13,13 @@ use BenSampo\Enum\Enum;
  */
 final class UrlPath extends Enum
 {
-    const BASEURL = 'https://admin.classen.cegem360.hu/wp-json/wp/v2/';
+    public const BASEURL = 'https://admin.classen.cegem360.hu/wp-json/wp/v2/';
 
-    const BASEURLWC = 'https://admin.classen.cegem360.hu';
+    public const BASEURLWC = 'https://admin.classen.cegem360.hu';
 
-    const BASEURLCOSTOME = 'https://admin.classen.cegem360.hu/wp-json/custom/v1/';
+    public const BASEURLCOSTOME = 'https://admin.classen.cegem360.hu/wp-json/custom/v1/';
 
-    const OptionTwo = 1;
+    public const OptionTwo = 1;
 
-    const OptionThree = 2;
+    public const OptionThree = 2;
 }

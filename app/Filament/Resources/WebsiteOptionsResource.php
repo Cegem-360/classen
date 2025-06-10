@@ -12,7 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class WebsiteOptionsResource extends Resource
+final class WebsiteOptionsResource extends Resource
 {
     protected static ?string $model = WebsiteOptions::class;
 

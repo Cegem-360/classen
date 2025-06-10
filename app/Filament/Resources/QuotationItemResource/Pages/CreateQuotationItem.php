@@ -7,7 +7,7 @@ namespace App\Filament\Resources\QuotationItemResource\Pages;
 use App\Filament\Resources\QuotationItemResource;
 use Filament\Resources\Pages\CreateRecord;
 
-class CreateQuotationItem extends CreateRecord
+final class CreateQuotationItem extends CreateRecord
 {
     protected static string $resource = QuotationItemResource::class;
 }

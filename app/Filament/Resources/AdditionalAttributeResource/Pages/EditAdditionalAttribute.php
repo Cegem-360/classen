@@ -8,7 +8,7 @@ use App\Filament\Resources\AdditionalAttributeResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditAdditionalAttribute extends EditRecord
+final class EditAdditionalAttribute extends EditRecord
 {
     protected static string $resource = AdditionalAttributeResource::class;
 

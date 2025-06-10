@@ -12,7 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class QuotationResource extends Resource
+final class QuotationResource extends Resource
 {
     protected static ?string $model = Quotation::class;
 

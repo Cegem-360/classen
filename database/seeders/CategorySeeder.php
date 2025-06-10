@@ -47,11 +47,11 @@ final class CategorySeeder extends Seeder
             if (is_null($category)) {
                 continue;
             }
-            $category['acf']['additional_options'] = ($category['acf']['additional_options'] == false) ? null : $category['acf']['additional_options'];
+            $category['acf']['additional_options'] = ($category['acf']['additional_options'] === false) ? null : $category['acf']['additional_options'];
             $category['acf']['additional_options'] = $this->str_replace_json('false', 'null', $category['acf']['additional_options']);
-            $category['acf']['door_specification'] = ($category['acf']['door_specification'] == false) ? null : $category['acf']['door_specification'];
+            $category['acf']['door_specification'] = ($category['acf']['door_specification'] === false) ? null : $category['acf']['door_specification'];
             $category['acf']['door_specification'] = $this->str_replace_json('false', 'null', $category['acf']['door_specification']);
-            $category['acf']['technical_parameter'] = ($category['acf']['technical_parameter'] == false) ? null : $category['acf']['technical_parameter'];
+            $category['acf']['technical_parameter'] = ($category['acf']['technical_parameter'] === false) ? null : $category['acf']['technical_parameter'];
             $category['acf']['technical_parameter'] = $this->str_replace_json('false', 'null', $category['acf']['technical_parameter']);
             $created_category = Category::factory()->create(
                 [
@@ -70,7 +70,7 @@ final class CategorySeeder extends Seeder
                 if (is_null($attribute)) {
                     continue;
                 }
-                if (isset($attribute) && $attribute != '') {
+                if (isset($attribute) && $attribute !== '') {
                     $attribute = Attribute::whereName($attribute)->first();
                     $created_category->attributes()->attach($attribute);
                 }

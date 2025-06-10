@@ -12,7 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class ColorResource extends Resource
+final class ColorResource extends Resource
 {
     protected static ?string $model = Color::class;
 

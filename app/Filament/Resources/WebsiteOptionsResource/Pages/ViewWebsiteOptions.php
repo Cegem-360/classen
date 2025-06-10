@@ -8,7 +8,7 @@ use App\Filament\Resources\WebsiteOptionsResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ViewRecord;
 
-class ViewWebsiteOptions extends ViewRecord
+final class ViewWebsiteOptions extends ViewRecord
 {
     protected static string $resource = WebsiteOptionsResource::class;
 

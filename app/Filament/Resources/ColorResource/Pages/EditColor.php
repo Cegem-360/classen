@@ -8,7 +8,7 @@ use App\Filament\Resources\ColorResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditColor extends EditRecord
+final class EditColor extends EditRecord
 {
     protected static string $resource = ColorResource::class;
 

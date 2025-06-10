@@ -37,8 +37,8 @@ namespace App\Models{
  * @property bool $retro
  * @property bool $rustic
  * @property bool $wood_door
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @property-read \App\Models\Category|null $category
  * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|AdditionalAttribute newQuery()
@@ -80,8 +80,8 @@ namespace App\Models{
  * @property string $value
  * @property string $img
  * @property string $slug
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Category> $categories
  * @property-read int|null $categories_count
  * @method static \Database\Factories\AttributeFactory factory($count = null, $state = [])
@@ -108,8 +108,8 @@ namespace App\Models{
  * @property string|null $slug
  * @property string $img_url
  * @property string $content
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @method static \Database\Factories\BlogFactory factory($count = null, $state = [])
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Blog newQuery()
@@ -138,8 +138,8 @@ namespace App\Models{
  * @property array<array-key, mixed>|null $gallery_imgs
  * @property string|null $breadcrumb
  * @property string|null $img_url
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @property-read \App\Models\AdditionalAttribute|null $AdditionalAttribute
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Attribute> $attributes
  * @property-read int|null $attributes_count
@@ -175,8 +175,8 @@ namespace App\Models{
  * @property string|null $material_category
  * @property int $category_id
  * @property int $door_id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @property-read \App\Models\Category|null $category
  * @property-read \App\Models\Door|null $door
  * @method static \Database\Factories\ColorFactory factory($count = null, $state = [])
@@ -210,8 +210,8 @@ namespace App\Models{
  * @property string $tag_img_url
  * @property string $tag_category
  * @property int $category_id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @property-read \App\Models\Category|null $category
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Color> $colors
  * @property-read int|null $colors_count
@@ -243,8 +243,8 @@ namespace App\Models{
  * @property string $collection_name
  * @property string|null $meta_description
  * @property string|null $key_words
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|MetaKeyWords query()
@@ -269,9 +269,9 @@ namespace App\Models{
  * @property string|null $email
  * @property string|null $phone
  * @property string|null $message
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
- * @property \Illuminate\Support\Carbon|null $deleted_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $deleted_at
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\QuotationItem> $items
  * @property-read int|null $items_count
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Quotation newModelQuery()
@@ -303,8 +303,8 @@ namespace App\Models{
  * @property int $door_id
  * @property string|null $frame
  * @property int $quantity
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @property-read \App\Models\Door|null $door
  * @property-read \App\Models\Quotation|null $quotation
  * @method static \Illuminate\Database\Eloquent\Builder<static>|QuotationItem newModelQuery()
@@ -326,8 +326,8 @@ namespace App\Models{
  * App\Models\Tag
  *
  * @property int $id
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|Tag query()
@@ -345,11 +345,11 @@ namespace App\Models{
  * @property int $id
  * @property string $name
  * @property string $email
- * @property \Illuminate\Support\Carbon|null $email_verified_at
+ * @property \Carbon\CarbonImmutable|null $email_verified_at
  * @property string $password
  * @property string|null $remember_token
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @property-read \Illuminate\Notifications\DatabaseNotificationCollection<int, \Illuminate\Notifications\DatabaseNotification> $notifications
  * @property-read int|null $notifications_count
  * @property-read \Illuminate\Database\Eloquent\Collection<int, \Laravel\Sanctum\PersonalAccessToken> $tokens
@@ -381,8 +381,8 @@ namespace App\Models{
  * @property string $img_url
  * @property string $text
  * @property string $link_title
- * @property \Illuminate\Support\Carbon|null $created_at
- * @property \Illuminate\Support\Carbon|null $updated_at
+ * @property \Carbon\CarbonImmutable|null $created_at
+ * @property \Carbon\CarbonImmutable|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions newModelQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions newQuery()
  * @method static \Illuminate\Database\Eloquent\Builder<static>|WebsiteOptions query()

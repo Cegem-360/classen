@@ -9,7 +9,7 @@ use Filament\Actions\Exports\ExportColumn;
 use Filament\Actions\Exports\Exporter;
 use Filament\Actions\Exports\Models\Export;
 
-class BlogExporter extends Exporter
+final class BlogExporter extends Exporter
 {
     protected static ?string $model = Blog::class;
 

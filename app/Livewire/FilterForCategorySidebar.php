@@ -45,38 +45,38 @@ final class FilterForCategorySidebar extends Component
 
     public function render()
     {
-        if ($this->g == 'surface') {
-            if ($this->q == 'lacquered') {
+        if ($this->g === 'surface') {
+            if ($this->q === 'lacquered') {
                 $this->options['surface']['lacquered'] = ! $this->options['surface']['lacquered'];
-            } elseif ($this->q == '3d_finishing') {
+            } elseif ($this->q === '3d_finishing') {
                 $this->options['surface']['3d_finishing'] = ! $this->options['surface']['3d_finishing'];
-            } elseif ($this->q == 'iridium_finishing') {
+            } elseif ($this->q === 'iridium_finishing') {
                 $this->options['surface']['iridium_finishing'] = ! $this->options['surface']['iridium_finishing'];
-            } elseif ($this->q == 'cpl_laminate') {
+            } elseif ($this->q === 'cpl_laminate') {
                 $this->options['surface']['cpl_laminate'] = ! $this->options['surface']['cpl_laminate'];
-            } elseif ($this->q == 'hpl_laminate') {
+            } elseif ($this->q === 'hpl_laminate') {
                 $this->options['surface']['hpl_laminate'] = ! $this->options['surface']['hpl_laminate'];
             }
-        } elseif ($this->g == 'purpose') {
-            if ($this->q == 'room_door') {
+        } elseif ($this->g === 'purpose') {
+            if ($this->q === 'room_door') {
                 $this->options['purpose']['room_door'] = ! $this->options['purpose']['room_door'];
-            } elseif ($this->q == 'inner_door') {
+            } elseif ($this->q === 'inner_door') {
                 $this->options['purpose']['inner_door'] = ! $this->options['purpose']['inner_door'];
-            } elseif ($this->q == 'technical_doors') {
+            } elseif ($this->q === 'technical_doors') {
                 $this->options['purpose']['technical_doors'] = ! $this->options['purpose']['technical_doors'];
-            } elseif ($this->q == 'sliding_door') {
+            } elseif ($this->q === 'sliding_door') {
                 $this->options['purpose']['sliding_door'] = ! $this->options['purpose']['sliding_door'];
-            } elseif ($this->q == 'wood_door') {
+            } elseif ($this->q === 'wood_door') {
                 $this->options['purpose']['wood_door'] = ! $this->options['purpose']['wood_door'];
-            } elseif ($this->q == 'interior_entrance_door') {
+            } elseif ($this->q === 'interior_entrance_door') {
                 $this->options['purpose']['interior_entrance_door'] = ! $this->options['purpose']['interior_entrance_door'];
             }
-        } elseif ($this->g == 'style') {
-            if ($this->q == 'modern') {
+        } elseif ($this->g === 'style') {
+            if ($this->q === 'modern') {
                 $this->options['style']['modern'] = ! $this->options['style']['modern'];
-            } elseif ($this->q == 'classic') {
+            } elseif ($this->q === 'classic') {
                 $this->options['style']['classic'] = ! $this->options['style']['classic'];
-            } elseif ($this->q == 'loft') {
+            } elseif ($this->q === 'loft') {
                 $this->options['style']['loft'] = ! $this->options['style']['loft'];
             }
         }

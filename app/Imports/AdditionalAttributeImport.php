@@ -30,7 +30,7 @@ final class AdditionalAttributeImport implements ToCollection, WithHeadingRow
                 $data = ['category_id' => $this->category->id];
 
                 foreach ($row as $key => $value) {
-                    if ($key != 'kollekciok') {
+                    if ($key !== 'kollekciok') {
                         $data[$key] = $value;
                     }
                 }

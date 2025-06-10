@@ -8,7 +8,7 @@ use App\Filament\Resources\QuotationItemResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListQuotationItems extends ListRecords
+final class ListQuotationItems extends ListRecords
 {
     protected static string $resource = QuotationItemResource::class;
 

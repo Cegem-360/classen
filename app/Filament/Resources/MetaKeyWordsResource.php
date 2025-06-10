@@ -12,7 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 
-class MetaKeyWordsResource extends Resource
+final class MetaKeyWordsResource extends Resource
 {
     protected static ?string $model = MetaKeyWords::class;
 

@@ -8,7 +8,7 @@ use App\Filament\Resources\AdditionalAttributeResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListAdditionalAttributes extends ListRecords
+final class ListAdditionalAttributes extends ListRecords
 {
     protected static string $resource = AdditionalAttributeResource::class;
 

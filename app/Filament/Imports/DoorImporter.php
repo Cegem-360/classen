@@ -47,15 +47,6 @@ final class DoorImporter extends Importer
         ];
     }
 
-    public function resolveRecord(): ?Door
-    {
-        return Door::firstOrNew([
-            'email' => $this->data['email'],
-        ]);
-
-        return new Door;
-    }
-
     public static function getCompletedNotificationBody(Import $import): string
     {
         $body = 'Your door import has completed and '.number_format($import->successful_rows).' '.str('row')->plural($import->successful_rows).' imported.';
@@ -65,5 +56,14 @@ final class DoorImporter extends Importer
         }
 
         return $body;
+    }
+
+    public function resolveRecord(): ?Door
+    {
+        return Door::firstOrNew([
+            'email' => $this->data['email'],
+        ]);
+
+        return new Door;
     }
 }

@@ -31,7 +31,7 @@ final class ManagePageContentController extends Controller
     {
         $favoriteProductIds = json_decode(Cookie::get('favorites'));
         $products = [];
-        if ($favoriteProductIds != null) {
+        if ($favoriteProductIds !== null) {
             $products = Door::whereIn('id', $favoriteProductIds)->get();
         }
 

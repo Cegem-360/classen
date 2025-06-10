@@ -8,7 +8,7 @@ use App\Filament\Resources\DoorResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditDoor extends EditRecord
+final class EditDoor extends EditRecord
 {
     protected static string $resource = DoorResource::class;
 

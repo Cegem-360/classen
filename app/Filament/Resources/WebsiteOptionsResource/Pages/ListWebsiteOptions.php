@@ -8,7 +8,7 @@ use App\Filament\Resources\WebsiteOptionsResource;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
-class ListWebsiteOptions extends ListRecords
+final class ListWebsiteOptions extends ListRecords
 {
     protected static string $resource = WebsiteOptionsResource::class;
 

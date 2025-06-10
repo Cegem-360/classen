@@ -29,6 +29,13 @@ final class Category extends Model implements Sitemapable
             'breadcrumb',
         ];
 
+    protected $casts = [
+        'technical_parameter' => 'array',
+        'additional_options' => 'array',
+        'door_specification' => 'array',
+        'gallery_imgs' => 'array',
+    ];
+
     public function doors(): HasMany
     {
         return $this->hasMany(Door::class, 'category_id', 'id');
@@ -46,13 +53,6 @@ final class Category extends Model implements Sitemapable
     {
         return $this->hasOne(AdditionalAttribute::class, 'category_id', 'id');
     }
-
-    protected $casts = [
-        'technical_parameter' => 'array',
-        'additional_options' => 'array',
-        'door_specification' => 'array',
-        'gallery_imgs' => 'array',
-    ];
 
     public function toSitemapTag(): Url
     {

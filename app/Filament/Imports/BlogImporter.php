@@ -30,15 +30,6 @@ final class BlogImporter extends Importer
         ];
     }
 
-    public function resolveRecord(): ?Blog
-    {
-        return Blog::firstOrNew([
-            'slug' => $this->data['slug'],
-        ]);
-
-        // return new Blog;
-    }
-
     public static function getCompletedNotificationBody(Import $import): string
     {
         $body = 'Your blog import has completed and '.number_format($import->successful_rows).' '.str('row')->plural($import->successful_rows).' imported.';
@@ -48,5 +39,14 @@ final class BlogImporter extends Importer
         }
 
         return $body;
+    }
+
+    public function resolveRecord(): ?Blog
+    {
+        return Blog::firstOrNew([
+            'slug' => $this->data['slug'],
+        ]);
+
+        // return new Blog;
     }
 }

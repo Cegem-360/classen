@@ -8,7 +8,7 @@ use App\Filament\Resources\WebsiteOptionsResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditWebsiteOptions extends EditRecord
+final class EditWebsiteOptions extends EditRecord
 {
     protected static string $resource = WebsiteOptionsResource::class;
 

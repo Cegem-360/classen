@@ -8,7 +8,7 @@ use App\Filament\Resources\QuotationResource;
 use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 
-class EditQuotation extends EditRecord
+final class EditQuotation extends EditRecord
 {
     protected static string $resource = QuotationResource::class;
 
