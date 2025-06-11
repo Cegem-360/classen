@@ -47,9 +47,7 @@ final class CategoryController extends Controller
         $category = Category::whereName($category)->first();
         $doors = collect($category->doors()->get());
         $catalogs = $category->attributes()->get();
-        $tags = $doors->mapToGroups(
-            fn (array $item, $key) => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]]
-        )->all();
+        $tags = $doors->mapToGroups(fn($item, $key) => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]])->all();
         $doors = $doors->groupBy('tag');
         $doors = $doors->all();
 
@@ -96,25 +94,20 @@ final class CategoryController extends Controller
 
     public function import(Request $request): RedirectResponse
     {
-        $validator = Validator::make(
-            $request->all(),
-            [
-                'file' => ['required', 'mimes:xlsx,xls'],
-            ]
-        );
+        $validator = Validator::make($request->all(), [
+            'file' => ['required', 'mimes:xlsx,xls'],
+        ]);
 
         if ($validator->fails()) {
-            return Redirect::back()
-                ->error('Import sikertelen!');
+            return Redirect::back()->error('Import sikertelen!');
         }
 
         // Get the uploaded file
         $file = $request->file('file');
 
         // process the file
-        Excel::import(new CategoryPriceImport, $file);
+        Excel::import(new CategoryPriceImport(), $file);
 
-        return Redirect::route('index')
-            ->info('Import sikeres!');
+        return Redirect::route('index')->info('Import sikeres!');
     }
 }
