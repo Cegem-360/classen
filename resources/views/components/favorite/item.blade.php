@@ -87,7 +87,7 @@
         <!-- Product info -->
         <div class="mt-9 flex w-full flex-row flex-wrap">
             @foreach ($catalogs as $catalog)
-                <x-doors.partials.attribute :catalog=$catalog />
+                {{--  <x-doors.partials.attribute :catalog=$catalog /> --}}
             @endforeach
         </div>
         <div class="mt-9 flex w-full flex-row flex-wrap">
