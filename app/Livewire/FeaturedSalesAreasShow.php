@@ -11,9 +11,9 @@ final class FeaturedSalesAreasShow extends Component
 {
     public $slug;
 
-    public ?FeaturedSalesPage $featuredSalesPage;
+    public ?FeaturedSalesPage $featuredSalesPage = null;
 
-    public function mount($slug)
+    public function mount($slug): void
     {
         $this->slug = $slug;
         $this->featuredSalesPage = FeaturedSalesPage::where('slug', $slug)->first();

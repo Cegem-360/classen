@@ -33,6 +33,7 @@ final class DoorSeeder extends Seeder
                 if (empty($product->images)) {
                     continue;
                 }
+
                 if (! isset($product->images[0]->src)) {
                     continue;
                 }
@@ -47,6 +48,7 @@ final class DoorSeeder extends Seeder
                 if (is_null($tag)) {
                     continue;
                 }
+
                 $exploded = explode('|', (string) $tag->description);
                 if (! isset($exploded[1])) {
                     $exploded = [$exploded[0], ''];

@@ -11,9 +11,9 @@ return new class() extends Migration
     /**
      * Run the migrations.
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('featured_sales_pages', function (Blueprint $table) {
+        Schema::create('featured_sales_pages', function (Blueprint $table): void {
             $table->id();
             $table->string('title')->nullable();
             $table->text('content')->nullable();
@@ -44,7 +44,7 @@ return new class() extends Migration
     /**
      * Reverse the migrations.
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('featured_sales_pages');
     }

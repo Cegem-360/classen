@@ -48,7 +48,7 @@ final class FeaturedSalesPageResource extends Resource
                 TextInput::make('slug')
                     ->live(onBlur: true, debounce: 1000)
                     ->maxLength(255)
-                    ->afterStateUpdated(function ($state, Set $set) {
+                    ->afterStateUpdated(function ($state, Set $set): void {
                         $set('slug', Str::slug($state));
                     }),
                 TextInput::make('link')
