@@ -51,9 +51,9 @@ final class ManagePageContentController extends Controller
     public function sendContact(Request $request)
     {
 
-        if ($request->input('website') !== '') {
+        /* if ($request->website !== '') {
             return redirect()->route('kapcsolat')->error(__('Bot detected!'));
-        }
+        } */
 
         $request->validate([
             'first_name' => ['required'],
