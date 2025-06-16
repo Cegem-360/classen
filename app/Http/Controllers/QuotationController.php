@@ -17,13 +17,7 @@ final class QuotationController extends Controller
 {
     public function index()
     {
-        $quotation = session('quotation', Quotation::firstOrcreate([
-            'session_id' => session()->getId(),
-        ]));
-        if (session()->missing('quotation')) {
-            session(['quotation' => $quotation]);
-        }
-
+        $quotation = session('quotation');
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
 
         return view('quotation.index', ['quotation' => $quotation, 'quotationItems' => $quotationItems]);
@@ -41,14 +35,11 @@ final class QuotationController extends Controller
 
     public function addItem(Door $door)
     {
-        $quotation = session()->get('quotation', Quotation::create([
-            'session_id' => session()->getId(),
-        ]));
+        $quotation = session('quotation');
         QuotationItem::where('quotation_id', $quotation->id)->where('door_id', $door->id)->firstOrCreate([
             'quotation_id' => $quotation->id,
             'door_id' => $door->id,
         ]);
-        session()->put('quotation', $quotation);
 
         return redirect()->route('quotation.index');
     }
@@ -71,9 +62,7 @@ final class QuotationController extends Controller
 
     public function store(Request $request)
     {
-        $quotation = session()->get('quotation', Quotation::firstOrcreate([
-            'session_id' => session()->getId(),
-        ])->with(['items']));
+        $quotation = session('quotation');
 
         if ($quotation->items->count() < 1) {
             return redirect()->route('quotation.index')->error('Kérjük válasszon terméket az árajánlat kéréshez');

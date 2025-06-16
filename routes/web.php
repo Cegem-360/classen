@@ -77,7 +77,7 @@ Route::view(
 
 Route::view('/kiemelt-termekeink', 'kiemelt-termekeink')->name('kiemelt-termekeink');
 
-Route::prefix('ajanlatkeres')->as('quotation.')->group(function () {
+Route::prefix('ajanlatkeres')->as('quotation.')->middleware('ensure.quotation')->group(function () {
     Route::get('/', [QuotationController::class, 'index'])->name('index');
     Route::post('/add/{door}', [QuotationController::class, 'addItem'])->name('add');
     Route::post('/store', [QuotationController::class, 'store'])->name('store');

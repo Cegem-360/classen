@@ -31,7 +31,6 @@ final class RequestQuotationButton extends Component
         session()->put('quotation', $quotation);
         Toaster::success(__('Sikeresen hozzáadva az árajánlathoz!'));
         $this->js('setRedNavigation()');
-        // return $this->redirect(route('door.show', ['door' => $this->door]), navigate: true);
 
     }
 
