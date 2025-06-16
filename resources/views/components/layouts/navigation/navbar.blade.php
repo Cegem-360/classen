@@ -30,7 +30,7 @@
                             <a class="flex items-center h-full px-4" href="{{ route('category.index') }}"
                                 wire:navigate>{{ __('collections') }}</a>
                             <a class="flex items-center h-full px-4" href="{{ route('kilincsek') }}"
-                                wire:navigate>{{ __('Kilincsek') }}</a>
+                                wire:navigate>{{ __('Handles') }}</a>
                             <a class="flex items-center h-full px-4" href="{{ route('rolunk') }}"
                                 wire:navigate>{{ __('About us') }}</a>
                         </div>
@@ -40,14 +40,16 @@
             <div class="flex items-center justify-end basis-2/3">
                 <div class="flex basis-1/2 md:hidden sm:hidden">
                     <a class="flex items-center h-full px-4" href="{{ route('kapcsolat') }}"
-                        wire:navigate>{{ __('Kapcsolat') }}</a>
+                        wire:navigate>{{ __('Contact') }}</a>
                     <a class="flex items-center h-full px-4" href="{{ route('szolgaltatasaink') }}"
-                        wire:navigate>{{ __('Szolgáltatásaink') }}</a>
+                        wire:navigate>{{ __('Our services') }}</a>
                     <a class="flex items-center h-full px-4" href="{{ route('downloads') }}"
-                        wire:navigate>Letöltések</a>
-                    <a class="flex items-center h-full px-4" href="{{ route('blog') }}" wire:navigate>Blog</a>
+                        wire:navigate>{{ __('Downloads') }}</a>
+                    <a class="flex items-center h-full px-4" href="{{ route('blog') }}"
+                        wire:navigate>{{ __('Blog') }}</a>
                     <a class="@if (session()->get('quotation') != null) @if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif @endif flex h-full items-center px-4"
-                        id="quotation" href="{{ route('quotation.index') }}" wire:navigate>Árajánlat kérés</a>
+                        id="quotation" href="{{ route('quotation.index') }}"
+                        wire:navigate>{{ __('Request a quote') }}</a>
                 </div>
 
                 <div class="relative flex items-center justify-between h-full basis-1/2">
@@ -73,29 +75,30 @@
                                     <livewire:search-box />
                                 </li>
                                 <li>
-                                    <a class="flex items-center hidden h-full px-4 sm:list-item"
+                                    <a class="flex items-center  h-full px-4 sm:list-item"
                                         href="{{ route('door.index') }}" wire:navigate>
                                         {{ __('doors') }}
                                     </a>
                                 </li>
-                                <li><a class="flex items-center hidden h-full px-4 sm:list-item"
+                                <li><a class="flex items-center  h-full px-4 sm:list-item"
                                         href="{{ route('category.index') }}" wire:navigate>{{ __('collections') }}</a>
                                 </li>
-                                <li><a class="flex items-center hidden h-full px-4 sm:list-item"
-                                        href="{{ route('kilincsek') }}" wire:navigate>{{ __('Kilincsek') }}</a>
+                                <li><a class="flex items-center  h-full px-4 sm:list-item"
+                                        href="{{ route('kilincsek') }}" wire:navigate>{{ __('Handles') }}</a>
                                 </li>
-                                <li><a class="flex items-center hidden h-full px-4 sm:list-item" href=""
+                                <li><a class="flex items-center  h-full px-4 sm:list-item" href=""
                                         wire:navigate>{{ __('About us') }}</a></li>
                                 <li><a class="flex items-center h-full px-4" href="{{ route('kapcsolat') }}"
-                                        wire:navigate>{{ __('Kapcsolat') }}</a></li>
+                                        wire:navigate>{{ __('Contact') }}</a></li>
                                 <li><a class="flex items-center h-full px-4" href="{{ route('szolgaltatasaink') }}"
-                                        wire:navigate>{{ __('Szolgáltatásaink') }}</a></li>
+                                        wire:navigate>{{ __('Our services') }}</a></li>
                                 <li><a class="flex items-center h-full px-4" href="{{ route('downloads') }}"
-                                        wire:navigate>Letöltések</a></li>
+                                        wire:navigate>{{ __('Downloads') }}</a></li>
                                 <li><a class="flex items-center h-full px-4" href="{{ route('blog') }}"
-                                        wire:navigate>Blog</a></li>
+                                        wire:navigate>{{ __('Blog') }}</a></li>
                                 <li><a class="@if (!session()->missing('quotation')) @if (session()->get('quotation')->items()->get()->isNotEmpty()) font-bold text-orange-600 @endif @endif flex h-full items-center px-4"
-                                        href="{{ route('quotation.index') }}" wire:navigate>Árajánlat kérés</a></li>
+                                        href="{{ route('quotation.index') }}"
+                                        wire:navigate>{{ __('Request a quote') }}</a></li>
                             </ul>
                         </nav>
                     </div>
