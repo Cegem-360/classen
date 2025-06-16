@@ -63,8 +63,8 @@ final class QuotationController extends Controller
     public function store(Request $request)
     {
         $quotation = session('quotation');
-        dump($quotation);
-        if ($quotation->items->count() < 1) {
+
+        if (! $quotation) {
             return redirect()->route('quotation.index')->error('Kérjük válasszon terméket az árajánlat kéréshez');
         }
 
