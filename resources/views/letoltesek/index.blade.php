@@ -40,12 +40,12 @@
                 <p class="mt-3 text-sm">Arcadia98 Kft. bruttó Kiskereskedelmi árlista</p>
             </a>
             <a href="{{ Storage::url('dl/Arcadia_98_Kft_Beltéri_ajtó_katalógus_2025.pdf') }}" target="_blank">
-                <img src="{{ Vite::asset('resources/img/cover-images/Beltéri_ajtó_katalógus_2025.jpg') }}"
+                <img src="{{ Vite::asset('resources/img/cover-images/Belteri_ajto_katalogus_2025.jpg.jpg') }}"
                     alt="Arcadia_98_Kft_Beltéri_ajtó_katalógus_2025.pdf" />
                 <p class="mt-3 text-sm">Arcadia98 Kft. Beltéri ajtó katalógus 2025</p>
             </a>
             <a href="{{ Storage::url('dl/Dooroutlet_Szabvány_beltéri_ajtó_katalógus_2025.pdf') }}" target="_blank">
-                <img src="{{ Vite::asset('resources/img/cover-images/Szabvány_beltéri_ajtó_katalógus_2025.jpg') }}"
+                <img src="{{ Vite::asset('resources/img/cover-images/Szabvany_belteri_ajto_katalogus_2025.jpg') }}"
                     alt="Dooroutlet_Szabvány_beltéri_ajtó_katalógus_2025.pdf" />
                 <p class="mt-3 text-sm">Dooroutlet utólag beépíthető falcolt tok méretek</p>
             </a>
