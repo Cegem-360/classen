@@ -11,7 +11,7 @@ use App\Models\Quotation;
 use App\Models\QuotationItem;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use Validator;
+use Illuminate\Support\Facades\Validator;
 
 final class QuotationController extends Controller
 {
