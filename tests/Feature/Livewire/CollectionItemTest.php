@@ -13,7 +13,8 @@ final class CollectionItemTest extends TestCase
     /** @test */
     public function renders_successfully()
     {
-        Livewire::test(CollectionItem::class)
+        $category = \App\Models\Category::factory()->create(['name' => 'test-category']);
+        Livewire::test(CollectionItem::class, ['category' => $category])
             ->assertStatus(200);
     }
 }

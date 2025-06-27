@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace App\Livewire;
 
+use App\Models\Category;
 use Livewire\Component;
 
 final class CollectionItem extends Component
 {
-    public $category;
+    public Category $category;
 
-    public function mount($category): void
+    public function mount(Category $category): void
     {
         $this->category = $category;
     }

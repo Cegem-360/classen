@@ -75,6 +75,10 @@
     "file": "assets/Arcadia98-arlista-2023-DelRqoPS.webp",
     "src": "resources/img/cover-images/Arcadia98-arlista-2023.webp"
   },
+  "resources/img/cover-images/Beltéri_ajtó_katalógus_2025.jpg": {
+    "file": "assets/Beltéri_ajtó_katalógus_2025-CKVNtT42.jpg",
+    "src": "resources/img/cover-images/Beltéri_ajtó_katalógus_2025.jpg"
+  },
   "resources/img/cover-images/Dnd-kilincskatalogus-2022-2023.webp": {
     "file": "assets/Dnd-kilincskatalogus-2022-2023-DYSS5uNS.webp",
     "src": "resources/img/cover-images/Dnd-kilincskatalogus-2022-2023.webp"
@@ -98,6 +102,10 @@
   "resources/img/cover-images/SMART-LOCK-kilincskatalogus.webp": {
     "file": "assets/SMART-LOCK-kilincskatalogus-U8FhC3NT.webp",
     "src": "resources/img/cover-images/SMART-LOCK-kilincskatalogus.webp"
+  },
+  "resources/img/cover-images/Szabvány_beltéri_ajtó_katalógus_2025.jpg": {
+    "file": "assets/Szabvány_beltéri_ajtó_katalógus_2025-BqgN_mRj.jpg",
+    "src": "resources/img/cover-images/Szabvány_beltéri_ajtó_katalógus_2025.jpg"
   },
   "resources/img/cover-images/TUPAI-kilincskatalogus-2022.webp": {
     "file": "assets/TUPAI-kilincskatalogus-2022-Crw-wp9_.webp",
@@ -596,7 +604,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CheZ3tQB.js",
+    "file": "assets/app-CldhV25L.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -605,7 +613,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-BF-JtLAf.css"
+      "assets/app-CG523SZU.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",

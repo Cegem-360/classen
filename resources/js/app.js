@@ -1,4 +1,4 @@
-import "./bootstrap";
+import "./bootstrap.js";
 import "../css/app.css";
 import "../css/classen.css";
 import "swiper/css/bundle";
