@@ -27,17 +27,6 @@
         </div>
         <div class="grid grid-cols-2 gap-12 max-w-7xl sm:grid-cols-1">
             <div class="">
-                {{-- <div class="mb-6">
-                    <h2 class="mb-3 text-xl" style="color:red;">Évvégi és Ünnepi nyitva tartásunk az alábbiak szerint
-                        alakul:</h2>
-                    <p class="mb-3 font-bold">2024. december 6 – 7 (péntek – szombat)<br>
-                        LELTÁR MIATT ZÁRVA</p>
-                    <p class="mb-3 font-bold">2024. december 21. – től 2025. január 5.-ig<br>
-                        ZÁRVA</p>
-                    <p class="mb-3">Utolsó munkanap az idei évben 2024. december 20. normál nyitvatartási rend
-                        szerint.</p>
-                    <p class="mb-3">Első munkanap a jövő évben 2025. január 6. normál nyitvatartási rend szerint.</p>
-                </div> --}}
                 <h3 class="mb-3 text-xl">Arcadia 98 Kft.</h3>
                 <p class="mb-1">1194 Budapest, Citroën utca 4.</p>
                 <p class="mb-1"><strong>Adószám: </strong>11752550-2-43</p>
@@ -52,6 +41,7 @@
             <div class="">
                 <form action="{{ route('mail.sendContact') }}" method="POST">
                     @csrf
+                    @honeypot
                     <div class="">
                         <h3 class="mb-3 text-xl font-bold">{{ __('Írjon nekünk!') }}</h3>
 
