@@ -1,4 +1,8 @@
 {
+  "resources/img/Arcadia-Facebook-poszt.webp": {
+    "file": "assets/Arcadia-Facebook-poszt-D0DAfJNf.webp",
+    "src": "resources/img/Arcadia-Facebook-poszt.webp"
+  },
   "resources/img/Classen - Linea Premium.webp": {
     "file": "assets/Classen - Linea Premium-hkuFlEbs.webp",
     "src": "resources/img/Classen - Linea Premium.webp"
@@ -604,7 +608,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CldhV25L.js",
+    "file": "assets/app-Dvs-iLtB.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -613,7 +617,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-CG523SZU.css"
+      "assets/app-BNK7nCbR.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",

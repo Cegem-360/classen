@@ -18,6 +18,12 @@
     <!-- Ajto tipusok -->
     <x-partials.door-categories />
 
+    <!-- fb kampany -->
+    <a href="/ir-wenge-belteri-ajto-akcio/">
+        <img src="{{ Vite::asset('resources/img/Arcadia-Facebook-poszt.webp') }}" alt="Facebook kampány"
+            class="w-full h-auto object-cover">
+    </a>
+
     <!-- Elonyok -->
     <x-partials.elonyok />
 

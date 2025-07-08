@@ -137,3 +137,8 @@ Route::prefix('kiemelt-ertekesitesi-teruleteink')->as('featured-sales-areas.')->
     })->name('show');
 
 });
+
+// IR-WENGE akciós oldal
+Route::get('/ir-wenge-belteri-ajto-akcio', function () {
+    return view('pages.ir-wenge-belteri-ajto-akcio');
+})->name('ir-wenge-akcio');
