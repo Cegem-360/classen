@@ -128,9 +128,9 @@
                 vagy további prémium kollekcióinkat! Oldalunkon többféle stílus és árkategória várja!
             </p>
             <div class="flex flex-wrap gap-4">
-                <a href="{{ route('door.index') }}"
+                <a href="/kollekciok/Rakt%C3%A1ri%20ajt%C3%B3k"
                     class="inline-flex items-center px-6 py-3 bg-smaragd text-white font-medium rounded-lg hover:bg-zold transition-colors">
-                    Összes ajtó megtekintése
+                    Raktári ajtók megtekintése
                 </a>
                 <a href="{{ route('category.index') }}"
                     class="inline-flex items-center px-6 py-3 bg-szurke text-white font-medium rounded-lg hover:opacity-90 transition-opacity">
