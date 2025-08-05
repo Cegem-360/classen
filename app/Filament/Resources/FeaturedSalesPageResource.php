@@ -44,7 +44,7 @@ final class FeaturedSalesPageResource extends Resource
                 TextInput::make('title')
                     ->required()
                     ->afterStateUpdated(function ($state, Set $set): void {
-                        $set('slug', Str::slug($state, ' - ', 'hu'));
+                        $set('slug', Str::slug($state, '-', 'hu'));
                     })
                     ->maxLength(255),
                 TextInput::make('seo_title')
