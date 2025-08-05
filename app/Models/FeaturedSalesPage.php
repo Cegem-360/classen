@@ -32,6 +32,7 @@ final class FeaturedSalesPage extends Model
         'type',
         'link',
         'title',
+        'seo_title',
         'content',
         'excerpt',
     ];

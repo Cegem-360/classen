@@ -43,6 +43,8 @@ final class FeaturedSalesPageResource extends Resource
             ->schema([
                 TextInput::make('title')
                     ->maxLength(255),
+                TextInput::make('seo_title')
+                    ->maxLength(255),
                 RichEditor::make('content')
                     ->columnSpanFull(),
                 TextInput::make('slug')

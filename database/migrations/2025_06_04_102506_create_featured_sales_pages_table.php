@@ -37,6 +37,7 @@ return new class() extends Migration
             $table->string('meta')->nullable();
             $table->string('categories')->nullable();
             $table->string('tags')->nullable();
+            $table->string('seo_title')->nullable();
             $table->timestamps();
         });
     }
