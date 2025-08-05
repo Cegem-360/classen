@@ -42,6 +42,10 @@ final class FeaturedSalesPageResource extends Resource
         return $form
             ->schema([
                 TextInput::make('title')
+                    ->required()
+                    ->afterStateUpdated(function ($state, Set $set): void {
+                        $set('slug', Str::slug($state));
+                    })
                     ->maxLength(255),
                 TextInput::make('seo_title')
                     ->maxLength(255),
