@@ -33,8 +33,9 @@
                 szabad áramlásáról, valamint a 95/46/EK rendelet hatályon kívül helyezéséről (általános adatvédelmi
                 rendelet) AZ EURÓPAI PARLAMENT ÉS A TANÁCS (EU) 2016/679 RENDELETE (2016. április 27.) szerint az alábbi
                 tájékoztatást adjuk.</p>
-            <p>Jelen adatkezelési tájékoztató az alábbi oldalak adatkezelését szabályozza: https://cegem360.hu</p>
-            <p>Az adatkezelési tájékoztató elérhető az alábbi oldalról: https://cegem360.hu/adatvedelmi-tajekoztato/</p>
+            <p>Jelen adatkezelési tájékoztató az alábbi oldalak adatkezelését szabályozza: https://arcadia98.hu</p>
+            <p>Az adatkezelési tájékoztató elérhető az alábbi oldalról: https://arcadia98.hu/adatvedelmi-tajekoztato/
+            </p>
             <p>A tájékoztató módosításai a fenti címen történő közzététellel lépnek hatályba.</p>
             <h2>Az adatkezelő és elérhetőségei:</h2>
             <p>Név: Cégem 360 Kft.<br />Székhely: 1182 Budapest, Gulipán utca 6.<br />E-mail:
@@ -129,8 +130,8 @@
             </ol>
             <ol start="2">
                 <li>Adatfeldolgozó megnevezése és elérhetősége:<br />Tárhelypark Kft.<br />Székhely: 1122 Budapest, Gaál
-                    József út 24.<br />Telefonszám: +36 1 700 4140<br />Postázási cím: 1122 Budapest, Gaál József út
-                    24.<br />E-mail: info@tarhelypark.hu</li>
+                    József út 24.<br />Telefonszám: +36 1 700 4140<br />Postázási cím: 1122 Budapest, Gaál József út
+                    24.<br />E-mail: info@tarhelypark.hu</li>
             </ol>
             <ol start="3">
                 <li>Az adatkezelés ténye, a kezelt adatok köre: Az érintett által megadott valamennyi személyes adat.
@@ -171,8 +172,8 @@
             <ol start="5">
                 <li>Az adatkezelés időtartama, az adatok törlésének határideje:</li>
             </ol>
-            <p> </p>
-            <p> </p>
+            <p> </p>
+            <p> </p>
             <table cellspacing="0" cellpadding="7">
                 <colgroup>
                     <col width="90" />
@@ -247,7 +248,7 @@
                     konverziókövetési statisztikákban.</li>
             </ol>
             <ol start="7">
-                <li>További információ valamint a Google adatvédelmi nyilatkozata az alábbi oldalon érhető el: <a
+                <li>További információ valamint a Google adatvédelmi nyilatkozata az alábbi oldalon érhető el: <a
                         href="http://www.google.de/policies/privacy/">www.google.de/policies/privacy/</a></li>
             </ol>
             <h3>A Google Analytics alkalmazása</h3>
@@ -293,7 +294,7 @@
                             esetben előfordulhat, hogy ennek a honlapnak nem minden funkciója lesz teljes körűen
                             használható. Megakadályozhatja továbbá, hogy a Google gyűjtse és feldolgozza a cookie-k
                             általi, a Felhasználó weboldalhasználattal kapcsolatos adatait (beleértve az IP-címet is),
-                            ha letölti és telepíti a következő linken elérhető böngésző plugint. <a
+                            ha letölti és telepíti a következő linken elérhető böngésző plugint. <a
                                 href="https://tools.google.com/dlpage/gaoptout?hl=hu">https://tools.google.com/dlpage/gaoptout?hl=hu</a>
                         </li>
                     </ol>
@@ -318,7 +319,7 @@
                     üzenetben lévő linkre kattintva.</li>
             </ol>
             <ol start="4">
-                <li>Az adatgyűjtés ténye, a kezelt adatok köre és az <strong>adatkezelés célja</strong>:</li>
+                <li>Az adatgyűjtés ténye, a kezelt adatok köre és az <strong>adatkezelés célja</strong>:</li>
             </ol>
             <table cellspacing="0" cellpadding="7">
                 <colgroup>
@@ -377,8 +378,8 @@
                 <li>e-mail útján az info@cegem360.hu e-mail címen,</li>
                 <li>telefonon a +36203319550 számon.</li>
             </ul>
-            <p><span style="font-size: 14.4px;">Az érintett bármikor, </span><strong
-                    style="font-size: 14.4px;">ingyenesen leiratkozhat</strong><span style="font-size: 14.4px;"> a
+            <p><span style="font-size: 14.4px;">Az érintett bármikor, </span><strong
+                    style="font-size: 14.4px;">ingyenesen leiratkozhat</strong><span style="font-size: 14.4px;"> a
                     hírlevélről.</span></p>
             <p><strong>Az adatkezelés jogalapja</strong>: az érintett hozzájárulása, 6. cikk (1) bekezdés a) pont, az az
                 Infotv. 5. § (1) bekezdése, és a gazdasági reklámtevékenység alapvető feltételeiről és egyes korlátairól
@@ -390,9 +391,9 @@
                 személy előzetes hozzájárulásával adható át.</p>
             <p>Tájékoztatjuk, hogy</p>
             <ul>
-                <li><strong>az adatkezelés az Ön hozzájárulásán</strong> alapul.</li>
-                <li><strong>köteles</strong> a személyes adatokat megadni, ha hírlevelet szeretne kapni tőlünk.</li>
-                <li>az adatszolgáltatás elmaradása azzal a <strong>következményekkel</strong> jár, hogy nem tudunk Önnek
+                <li><strong>az adatkezelés az Ön hozzájárulásán</strong> alapul.</li>
+                <li><strong>köteles</strong> a személyes adatokat megadni, ha hírlevelet szeretne kapni tőlünk.</li>
+                <li>az adatszolgáltatás elmaradása azzal a <strong>következményekkel</strong> jár, hogy nem tudunk Önnek
                     hírlevelet küldeni.</li>
             </ul>
             <h2>Közösségi oldalak</h2>
@@ -524,12 +525,12 @@
             </ul>
             <h2>Intézkedési határidő</h2>
             <p>Az adatkezelő indokolatlan késedelem nélkül, de mindenféleképpen a kérelem beérkezésétől
-                számított <strong>1 hónapon belül</strong> tájékoztatja Önt a fenti kérelmek nyomán hozott
+                számított <strong>1 hónapon belül</strong> tájékoztatja Önt a fenti kérelmek nyomán hozott
                 intézkedésekről.</p>
-            <p>Szükség esetén ez <strong>2 hónappal meghosszabbítható</strong>. A határidő meghosszabbításáról az
-                adatkezelő a késedelem okainak megjelölésével a kérelem kézhezvételétől számított <strong>1 hónapon
-                    belül</strong> tájékoztatja Önt.</p>
-            <p>Ha az adatkezelő nem tesz intézkedéseket Ön kérelme nyomán, <strong>késedelem nélkül, de legkésőbb a
+            <p>Szükség esetén ez <strong>2 hónappal meghosszabbítható</strong>. A határidő meghosszabbításáról az
+                adatkezelő a késedelem okainak megjelölésével a kérelem kézhezvételétől számított <strong>1 hónapon
+                    belül</strong> tájékoztatja Önt.</p>
+            <p>Ha az adatkezelő nem tesz intézkedéseket Ön kérelme nyomán, <strong>késedelem nélkül, de legkésőbb a
                     kérelem beérkezésétől számított egy hónapon belül tájékoztatja Önt az intézkedés elmaradásának
                     okairól</strong>, valamint arról, hogy Ön panaszt nyújthat be valamely felügyeleti hatóságnál, és
                 élhet bírósági jogorvoslati jogával.</p>
@@ -558,7 +559,7 @@
             <p>Ha az adatvédelmi incidens valószínűsíthetően magas kockázattal jár a természetes személyek jogaira és
                 szabadságaira nézve, az adatkezelő indokolatlan késedelem nélkül tájékoztatja az érintettet az
                 adatvédelmi incidensről.</p>
-            <p>Az érintett részére adott tájékoztatásban <strong>világosan és közérthetően</strong> ismertetni kell az
+            <p>Az érintett részére adott tájékoztatásban <strong>világosan és közérthetően</strong> ismertetni kell az
                 adatvédelmi incidens jellegét, és közölni kell az adatvédelmi tisztviselő vagy a további tájékoztatást
                 nyújtó egyéb kapcsolattartó nevét és elérhetőségeit; ismertetni kell az adatvédelmi incidensből eredő,
                 valószínűsíthető következményeket; ismertetni kell az adatkezelő által az adatvédelmi incidens
@@ -566,15 +567,15 @@
                 esetleges hátrányos következmények enyhítését célzó intézkedéseket.</p>
             <p>Az érintettet nem kell tájékoztatni, ha a következő feltételek bármelyike teljesül:</p>
             <ul>
-                <li>az adatkezelő <strong>megfelelő technikai és szervezési védelmi intézkedéseket hajtott
+                <li>az adatkezelő <strong>megfelelő technikai és szervezési védelmi intézkedéseket hajtott
                         végre</strong>, és ezeket az intézkedéseket az adatvédelmi incidens által érintett adatok
                     tekintetében alkalmazták, különösen azokat az intézkedéseket – mint például a titkosítás alkalmazása
                     –, amelyek a személyes adatokhoz való hozzáférésre fel nem jogosított személyek
-                    számára <strong>értelmezhetetlenné teszik az adatokat</strong>;</li>
+                    számára <strong>értelmezhetetlenné teszik az adatokat</strong>;</li>
                 <li>az adatkezelő az adatvédelmi incidenst követően olyan további intézkedéseket tett,
-                    amelyek <strong>biztosítják, hogy az érintett jogaira és szabadságaira jelentett, magas kockázat a
+                    amelyek <strong>biztosítják, hogy az érintett jogaira és szabadságaira jelentett, magas kockázat a
                         továbbiakban valószínűsíthetően nem valósul meg</strong>;</li>
-                <li>a tájékoztatás <strong>aránytalan erőfeszítést tenne szükségessé</strong>. Ilyen esetekben az
+                <li>a tájékoztatás <strong>aránytalan erőfeszítést tenne szükségessé</strong>. Ilyen esetekben az
                     érintetteket nyilvánosan közzétett információk útján kell tájékoztatni, vagy olyan hasonló
                     intézkedést kell hozni, amely biztosítja az érintettek hasonlóan hatékony tájékoztatását.</li>
             </ul>
@@ -592,7 +593,7 @@
                 Hatóságnál lehet élni:</p>
             <p>Nemzeti Adatvédelmi és Információszabadság Hatóság<br />1125 Budapest, Szilágyi Erzsébet fasor
                 22/C.<br />Levelezési cím: 1530 Budapest, Postafiók: 5.<br />Telefon: +36 -1-391-1400<br />Fax:
-                +36-1-391-1410<br />E-mail: <a href="mailto:ugyfelszolgalat@naih.hu">ugyfelszolgalat@naih.hu</a></p>
+                +36-1-391-1410<br />E-mail: <a href="mailto:ugyfelszolgalat@naih.hu">ugyfelszolgalat@naih.hu</a></p>
             <h2>Zárszó</h2>
             <p>A tájékoztató elkészítése során figyelemmel voltunk az alábbi jogszabályokra:</p>
             <ul>
