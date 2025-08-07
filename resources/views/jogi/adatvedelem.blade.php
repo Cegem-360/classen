@@ -27,7 +27,7 @@
         <div class="grid grid-cols-1 gap-12 max-w-7xl">
 
             <h2>Bevezetés</h2>
-            <p>A Cégem 360 Kft. (székhely: 1182 Budapest, Gulipán utca 6. adószám: 14286249-2-43) (a továbbiakban:
+            <p>A Arcadia98 Kft. (székhely: 1194 Budapest, Citroen utca 4. adószám: 11752550-2-43) (a továbbiakban:
                 Szolgáltató, adatkezelő) alá veti magát a következő tájékoztatónak.</p>
             <p>A természetes személyeknek a személyes adatok kezelése tekintetében történő védelméről és az ilyen adatok
                 szabad áramlásáról, valamint a 95/46/EK rendelet hatályon kívül helyezéséről (általános adatvédelmi
@@ -38,8 +38,8 @@
             </p>
             <p>A tájékoztató módosításai a fenti címen történő közzététellel lépnek hatályba.</p>
             <h2>Az adatkezelő és elérhetőségei:</h2>
-            <p>Név: Cégem 360 Kft.<br />Székhely: 1182 Budapest, Gulipán utca 6.<br />E-mail:
-                info@cegem360.hu<br />Telefon: +36203319550</p>
+            <p>Név: Arcadia98 Kft.<br />Székhely: 1194 Budapest, Citroen utca 4.<br />E-mail:
+                info@arcadia98.hu<br />Telefon: +3614303344</p>
             <h2>Fogalom meghatározások</h2>
             <ol>
                 <li>„személyes adat”: azonosított vagy azonosítható természetes személyre („érintett”) vonatkozó bármely
@@ -129,9 +129,11 @@
                 <li>Adatfeldolgozó által ellátott tevékenység: Tárhely-szolgáltatás</li>
             </ol>
             <ol start="2">
-                <li>Adatfeldolgozó megnevezése és elérhetősége:<br />Tárhelypark Kft.<br />Székhely: 1122 Budapest, Gaál
-                    József út 24.<br />Telefonszám: +36 1 700 4140<br />Postázási cím: 1122 Budapest, Gaál József út
-                    24.<br />E-mail: info@tarhelypark.hu</li>
+                <li>Adatfeldolgozó megnevezése és elérhetősége:<br />Tárhely.Eu Szolgáltató Korlátolt Felelősségű
+                    Társaság<br />Székhely: 1144 Budapest, Ormánság utca 4. X. em. 241.<br />Telefonszám: +36 1 700
+                    4140<br />Postázási cím: 1144 Budapest, Ormánság utca 4. X. em. 241.<br />E-mail:
+                    info@tarhely.eu
+                </li>
             </ol>
             <ol start="3">
                 <li>Az adatkezelés ténye, a kezelt adatok köre: Az érintett által megadott valamennyi személyes adat.
