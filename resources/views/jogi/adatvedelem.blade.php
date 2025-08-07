@@ -156,26 +156,7 @@
                     információs társadalommal összefüggő szolgáltatások egyes kérdéseiről szóló 2001. évi CVIII. törvény
                     13/A. § (3) bekezdése.</li>
             </ol>
-            <h3>Egyéb adatfeldolgozó</h3>
-            <p>Octonull Kft<br />Székhely: 1085 Budapest, József körút 74. I. em. 6.<br />E-mail: hello@billingo.hu</p>
-            <h2>Cookie-k (sütik) kezelése</h2>
-            <ol>
-                <li>Weboldalakra jellemző cookie-k</li>
-            </ol>
-            <ol start="2">
-                <li>Az adatkezelés ténye, a kezelt adatok köre: Egyedi azonosítószám, dátumok, időpontok</li>
-            </ol>
-            <ol start="3">
-                <li>Az érintettek köre: A weboldalt látogató valamennyi érintett.</li>
-            </ol>
-            <ol start="4">
-                <li>Az adatkezelés célja: A felhasználók azonosítása, és a látogatók nyomon követése.</li>
-            </ol>
-            <ol start="5">
-                <li>Az adatkezelés időtartama, az adatok törlésének határideje:</li>
-            </ol>
-            <p> </p>
-            <p> </p>
+
             <table cellspacing="0" cellpadding="7">
                 <colgroup>
                     <col width="90" />
@@ -376,9 +357,9 @@
                     korlátozását, az adatok hordozhatóságát, az adatkezelések elleni tiltakozást az alábbi módokon tudja
                     érintett kezdeményezni</strong>:</p>
             <ul>
-                <li>postai úton a 1182 Budapest, Gulipán utca 6. címen,</li>
-                <li>e-mail útján az info@cegem360.hu e-mail címen,</li>
-                <li>telefonon a +36203319550 számon.</li>
+                <li>postai úton a 1194 Budapest, Citroen utca 4. címen,</li>
+                <li>e-mail útján az info@arcadia98.hu e-mail címen,</li>
+                <li>telefonon a +3614303344 számon.</li>
             </ul>
             <p><span style="font-size: 14.4px;">Az érintett bármikor, </span><strong
                     style="font-size: 14.4px;">ingyenesen leiratkozhat</strong><span style="font-size: 14.4px;"> a
