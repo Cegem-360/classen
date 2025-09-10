@@ -21,6 +21,9 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->append([
             ProtectAgainstSpam::class,
         ]);
+        $middleware->encryptCookies(except: [
+            'favorites',
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

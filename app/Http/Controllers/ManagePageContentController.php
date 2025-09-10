@@ -9,7 +9,6 @@ use App\Models\Blog;
 use App\Models\Door;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
@@ -30,8 +29,7 @@ final class ManagePageContentController extends Controller
     public function favorites(Request $request)
     {
         /** @var array<int, int|string>|null $rawFavoriteIds */
-        dump(Cookie::get('favorites'));
-        $rawFavoriteIds = json_decode(Cookie::get('favorites', '[]'), true);
+        $rawFavoriteIds = json_decode($request->cookie('favorites', '[]'), true);
 
         $favoriteProductIds = collect(is_array($rawFavoriteIds) ? $rawFavoriteIds : [])
             ->filter(fn ($id) => is_int($id) || (is_string($id) && ctype_digit($id)))
