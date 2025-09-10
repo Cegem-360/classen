@@ -608,7 +608,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DsQZ7X3h.js",
+    "file": "assets/app-BKFmW1TJ.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -617,7 +617,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-CE48yppa.css"
+      "assets/app-BQoC2G7u.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",
@@ -631,13 +631,13 @@
     "isEntry": true
   },
   "resources/js/favorites.js": {
-    "file": "assets/favorites-DEpwL6Nz.js",
+    "file": "assets/favorites-DCwbOg68.js",
     "name": "favorites",
     "src": "resources/js/favorites.js",
     "isEntry": true
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-Mf9jutbL.js",
+    "file": "assets/swiperJS-BpOtLOS_.js",
     "name": "swiperJS",
     "src": "resources/js/swiperJS.js",
     "isEntry": true

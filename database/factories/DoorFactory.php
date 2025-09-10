@@ -20,8 +20,15 @@ final class DoorFactory extends Factory
     public function definition(): array
     {
         return [
+            'product_id' => fake()->randomNumber(4),
+            'price' => fake()->numberBetween(10000, 100000),
             'name' => fake()->name(),
             'img_url' => 'resources/img/placeholder.webp',
+            'tag' => 'teszt-tag',
+            'tag_name' => 'Teszt Kategória',
+            'tag_img_url' => 'resources/img/placeholder.webp',
+            'tag_category' => 'kategoria',
+            'category_id' => 1,
         ];
     }
 }

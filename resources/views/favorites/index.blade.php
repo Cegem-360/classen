@@ -47,7 +47,7 @@
                                         <a class="flex flex-col" href="{{ route('door.show', ['door' => $product['id']]) }}"
                                             wire:navigate>
                                             <span class="inset-0" aria-hidden="true"></span>
-                                            {{ $product['category']['name'] }}
+                                            {{ $product->category?->name ?? $product['tag_category'] }}
                                             <span class="inset-0" aria-hidden="true"></span>
                                             <b>{{ __($product['tag_name']) }}</b>
                                         </a>

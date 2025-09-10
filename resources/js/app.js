@@ -13,6 +13,8 @@ document.addEventListener("livewire:init", () => {
     function setRedNavigation() {
         $("#quotation").addClass("font-bold text-orange-600");
     }
+    // Initialize favorites on first load
+    initFavoritesJS.initFavorites();
 });
 document.addEventListener("livewire:navigated", () => {
     initSwiperJS();

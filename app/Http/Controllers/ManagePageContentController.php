@@ -32,7 +32,7 @@ final class ManagePageContentController extends Controller
         $favoriteProductIds = json_decode(Cookie::get('favorites', '[]'), true) ?? null;
         $products = [];
         if ($favoriteProductIds !== null) {
-            $products = Door::whereIn('id', $favoriteProductIds)->get();
+            $products = Door::with('category')->whereIn('id', $favoriteProductIds)->get();
         }
 
         return view('favorites.index', ['products' => $products]);

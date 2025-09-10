@@ -22,6 +22,12 @@ const initFavoritesJS = {
             this.setFavorites(favorites);
         }
 
+        // Update the navbar counter
+        let favorite_element = document.getElementById("favorites_numbers");
+        if (favorite_element) {
+            favorite_element.innerHTML = favorites.length;
+        }
+
         favorites.forEach((favoriteItem) => {
             var heart = document.getElementById("heart-" + favoriteItem);
             //console.log(heart);
