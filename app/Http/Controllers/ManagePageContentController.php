@@ -29,13 +29,22 @@ final class ManagePageContentController extends Controller
 
     public function favorites(Request $request)
     {
-        $favoriteProductIds = json_decode(Cookie::get('favorites', '[]'), true);
-        dump($favoriteProductIds);
-        $products = [];
-        if ($favoriteProductIds !== null) {
-            $products = Door::whereIn('id', $favoriteProductIds)->get();
-        }
-        dump($products);
+        /** @var array<int, int|string>|null $rawFavoriteIds */
+        dump(Cookie::get('favorites'));
+        $rawFavoriteIds = json_decode(Cookie::get('favorites', '[]'), true);
+
+        $favoriteProductIds = collect(is_array($rawFavoriteIds) ? $rawFavoriteIds : [])
+            ->filter(fn ($id) => is_int($id) || (is_string($id) && ctype_digit($id)))
+            ->map(fn ($id) => (int) $id)
+            ->unique()
+            ->values()
+            ->all();
+
+        $products = empty($favoriteProductIds)
+            ? collect()
+            : Door::query()
+                ->whereIn('id', $favoriteProductIds)
+                ->get();
 
         return view('favorites.index', ['products' => $products]);
     }
