@@ -1,13 +1,20 @@
 @use('App\Models\Door')
 @php
-    if (!is_null(json_decode(Cookie::get('favorites')))) {
-        $favoriteProductIds = json_decode(Cookie::get('favorites'));
-        $favoriteProducts = collect();
-        if ($favoriteProductIds != null) {
-            $favoriteProducts = Door::whereIn('id', $favoriteProductIds)->get();
+    $favoriteProducts = collect();
+
+    $raw = Cookie::get('favorites');
+
+    if ($raw) {
+        $ids = json_decode($raw, true);
+
+        if (json_last_error() === JSON_ERROR_NONE && is_array($ids) && !empty($ids)) {
+            // Normalize: keep unique positive integer IDs only
+            $ids = array_values(array_filter(array_unique(array_map('intval', $ids)), fn($v) => $v > 0));
+
+            if (!empty($ids)) {
+                $favoriteProducts = Door::whereIn('id', $ids)->get();
+            }
         }
-    } else {
-        $favoriteProducts = collect();
     }
 @endphp
 <nav class="sticky top-0 z-[99999] bg-white" x-data="{ open: false }">
