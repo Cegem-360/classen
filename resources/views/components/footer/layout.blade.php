@@ -28,7 +28,6 @@
                             <a class="hover:underline" href="mailto:info@arcadia98.hu">E-mail: info@arcadia98.hu</a>
                         </li>
                         <li class="mb-2">+36 1 430 3344</li>
-                        </li>
                     </ul>
                     <ul class="font-medium text-gray-500">
                         <li class="mb-2">
@@ -36,7 +35,6 @@
                         </li>
                         <li class="mb-2">
                             <a class="hover:underline" href="/adatvedelmi-nyilatkozat">Adatvédelmi nyilatkozat</a>
-                        </li>
                         </li>
                     </ul>
                 </div>
