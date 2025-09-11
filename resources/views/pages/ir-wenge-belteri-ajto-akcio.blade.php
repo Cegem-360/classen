@@ -10,25 +10,6 @@
             content="IR-WENGE beltéri ajtó, CPL fóliás ajtó, akciós ajtó, beltéri ajtó akció, Arcadia 98 Kft., Budapest">
         <link rel="canonical" href="{{ Request::url() }}">
 
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": "IR-WENGE CPL Beltéri Ajtó",
-          "description": "IR-WENGE CPL fóliás beltéri ajtó átfogó tokkal",
-          "brand": {
-            "@type": "Brand",
-            "name": "Arcadia 98 Kft."
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": "79900",
-            "priceCurrency": "HUF",
-            "availability": "https://schema.org/InStock",
-            "priceValidUntil": "2025-12-31"
-          }
-        }
-        </script>
     </x-slot>
 
     <x-nav.breadcrumb>
