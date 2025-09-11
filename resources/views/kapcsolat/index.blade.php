@@ -56,6 +56,6 @@
     <!-- gap -->
     <div class="min-h-[90px]"></div>
 
-    <x-footer.layout />
+    <x-footer.layout></x-footer.layout>
 
 </x-layouts.app>

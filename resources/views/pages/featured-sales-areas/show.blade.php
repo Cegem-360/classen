@@ -7,5 +7,5 @@
 
     @livewire('featured-sales-areas-show', ['slug' => $slug])
 
-    <x-footer.layout />
+    <x-footer.layout></x-footer.layout>
 </x-layouts.app>

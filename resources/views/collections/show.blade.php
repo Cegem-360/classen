@@ -74,6 +74,6 @@
         @endisset
     @endisset
 
-    <x-footer.layout />
+    <x-footer.layout></x-footer.layout>
 
 </x-layouts.app>
