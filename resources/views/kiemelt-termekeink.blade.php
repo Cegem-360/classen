@@ -11,18 +11,7 @@
         <meta name="keywords"
             content="kiemelt beltéri ajtók, festett ajtók, fa mintázatú ajtók, modern ajtók, klasszikus ajtók, rusztikus ajtók, Arcadia 98 Kft., Budapest, Citroën utca 4.">
         <link rel="canonical" href="{{ Request::url() }}">
-        <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Product",
-          "name": "Kiemelt Termékeink",
-          "description": "Fedezze fel az Arcadia 98 Kft. kiemelt beltéri ajtóit! Kínálatunkban festett ajtók, fa mintázatú ajtók és különböző stílusú ajtók széles választéka található, kiváló minőségben és tartóssággal.",
-          "brand": {
-            "@type": "Brand",
-            "name": "Arcadia 98 Kft."
-          }
-        }
-        </script>
+
     </x-slot>
 
     <x-nav.breadcrumb>
