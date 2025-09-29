@@ -67,38 +67,4 @@ final class AdditionalAttribute extends Model
             'wood_door' => 'boolean',
         ];
     }
-
-    /*
-    protected $casts = [
-        'primo_finishing' => 'boolean',
-        '3d_finishing' => 'boolean',
-        'iridium_finishing' => 'boolean',
-        'cpl_laminate' => 'boolean',
-        'hpl_laminate' => 'boolean',
-        'lacquered' => 'boolean',
-        'room_door' => 'boolean',
-        'bathroom_door' => 'boolean',
-        'interior_entrance_door' => 'boolean',
-        'technical_doors' => 'boolean',
-        'wood_door' => 'boolean',
-        'fire_door' => 'boolean',
-        'anti_burglary_door' => 'boolean',
-        'soundproof_door' => 'boolean',
-        'sliding_door' => 'boolean',
-        'modern' => 'boolean',
-        'cpl_laminclassicate' => 'boolean',
-        'loft' => 'boolean',
-        'retro' => 'boolean',
-        'rustic' => 'boolean',
-        'width_60' => 'boolean',
-        'width_70' => 'boolean',
-        'width_80' => 'boolean',
-        'width_90' => 'boolean',
-        'width_100' => 'boolean',
-        'width_110' => 'boolean',
-        'width_120' => 'boolean',
-        'panel_doors' => 'boolean',
-        'framed_doors' => 'boolean',
-
-    ]; */
 }

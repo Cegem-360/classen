@@ -6,7 +6,6 @@ namespace App\Livewire;
 
 use App\Models\Door;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Collection;
 use Livewire\Component;
 use Livewire\WithoutUrlPagination;
 use Livewire\WithPagination;
@@ -62,78 +61,77 @@ final class FilterForProductSidebar extends Component
     public function render()
     {
         if ($this->in_array_recursive(true, $this->options, true)) {
-            $categories = [];
-            $doors_grouped = new Collection;
+
             $doors =
                 Door::with('category')
                     ->where(function (Builder $outerQuery): void {
                         $outerQuery
                             ->when($this->options['surface']['3d_finishing'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->where3dFinishing(true);
                                 });
                             })
                             ->when($this->options['surface']['iridium_finishing'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereIridiumFinishing(true);
                                 });
                             })
                             ->when($this->options['surface']['cpl_laminate'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereCplLaminate(true);
                                 });
                             })
                             ->when($this->options['surface']['hpl_laminate'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereHplLaminate(true);
                                 });
                             })
                             ->when($this->options['surface']['lacquered'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereLacquered(true);
                                 });
                             });
                     })->where(function (Builder $outerQuery): void {
                         $outerQuery
                             ->when($this->options['purpose']['room_door'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereRoomDoor(true);
                                 });
                             })
                             ->when($this->options['purpose']['inner_door'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereInnerDoor(true);
                                 });
                             })
                             ->when($this->options['purpose']['technical_doors'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereTechnicalDoors(true);
                                 });
                             })
                             ->when($this->options['purpose']['anti_burglary_door'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereAntiBurglaryDoor(true);
                                 });
                             })
                             ->when($this->options['purpose']['sliding_door'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereSlidingDoor(true);
                                 });
                             });
                     })->where(function (Builder $outerQuery): void {
                         $outerQuery
                             ->when($this->options['style']['modern'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereModern(true);
                                 });
                             })
                             ->when($this->options['style']['classic'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereClassic(true);
                                 });
                             })
                             ->when($this->options['style']['loft'], function (Builder $query): void {
-                                $query->orWhereHas('category.AdditionalAttribute', function (Builder $q): void {
+                                $query->orWhereHas('category.additionalAttribute', function (Builder $q): void {
                                     $q->whereLoft(true);
                                 });
                             });

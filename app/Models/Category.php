@@ -47,9 +47,9 @@ final class Category extends Model implements Sitemapable
     }
 
     /**
-     * Get the AdditionalAttribute associated with the Category
+     * Get the additionalAttribute associated with the Category
      */
-    public function AdditionalAttribute(): HasOne
+    public function additionalAttribute(): HasOne
     {
         return $this->hasOne(AdditionalAttribute::class, 'category_id', 'id');
     }
