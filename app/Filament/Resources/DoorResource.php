@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use App\Filament\Exports\AdditionalAttributeExporter;
 use App\Filament\Exports\DoorExportByCategoryExporter;
 use App\Filament\Resources\DoorResource\Pages\CreateDoor;
 use App\Filament\Resources\DoorResource\Pages\EditDoor;
@@ -106,6 +107,9 @@ final class DoorResource extends Resource
                 ExportAction::make()->exporter(DoorExportByCategoryExporter::class)
                     ->label('Export by Category')
                     ->icon('heroicon-o-document'),
+                ExportAction::make()->exporter(AdditionalAttributeExporter::class)
+                    ->label('Export Additional Attributes')
+                    ->icon('heroicon-o-document-text'),
             ])
             ->actions([
                 EditAction::make(),
