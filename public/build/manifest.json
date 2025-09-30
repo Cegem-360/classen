@@ -71,6 +71,22 @@
     "file": "assets/arcadia98kft-B-gcgEue.webp",
     "src": "resources/img/arcadia98kft.webp"
   },
+  "resources/img/avatar01.png": {
+    "file": "assets/avatar01-BMuagQ7_.png",
+    "src": "resources/img/avatar01.png"
+  },
+  "resources/img/avatar02.png": {
+    "file": "assets/avatar02-D5CBoTlv.png",
+    "src": "resources/img/avatar02.png"
+  },
+  "resources/img/avatar03.png": {
+    "file": "assets/avatar03-D1765Brh.png",
+    "src": "resources/img/avatar03.png"
+  },
+  "resources/img/avatar04.png": {
+    "file": "assets/avatar04-DIG67ZH0.png",
+    "src": "resources/img/avatar04.png"
+  },
   "resources/img/bemutatoterem_2.webp": {
     "file": "assets/bemutatoterem_2-BvDn5kws.webp",
     "src": "resources/img/bemutatoterem_2.webp"
@@ -142,6 +158,10 @@
   "resources/img/favicon.ico": {
     "file": "assets/favicon-B_uQVUcH.ico",
     "src": "resources/img/favicon.ico"
+  },
+  "resources/img/googlelogo.svg": {
+    "file": "assets/googlelogo-hDDRKZZT.svg",
+    "src": "resources/img/googlelogo.svg"
   },
   "resources/img/icons/1-belteri-ajtok.svg": {
     "file": "assets/1-belteri-ajtok-CkvTRhX_.svg",

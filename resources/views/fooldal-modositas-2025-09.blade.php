@@ -230,16 +230,16 @@
                     <p class="text-lg text-[#222e38] mb-6">Igénybe vette szolgáltatásainkat? Kérjük, oszd meg
                         tapasztalataidat, hogy még több embernek segíthessünk otthonukat megújítani!</p>
                 </div>
-                <div class="w-fit">
+                {{-- <div class="w-fit">
                     <a href="#"
                         class="px-8 py-3 bg-[#1cb0f6] text-white font-semibold rounded shadow hover:bg-[#009ee3] transition flex items-center gap-2">
                         Vélemény írása <span class="font-bold text-lg">G</span>
                     </a>
-                </div>
+                </div> --}}
             </div>
             <div class="flex flex-wrap justify-center gap-8">
                 <!-- Google értékelés blokk -->
-                <div class="p-6 flex flex-col items-center justify-center w-64">
+                {{-- <div class="p-6 flex flex-col items-center justify-center w-64">
                     <span class="text-xl font-bold text-[#222e38] mb-1">KIVÁLÓ</span>
                     <div class="flex items-center mb-2">
                         <span class="text-yellow-400 text-3xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
@@ -247,55 +247,67 @@
                     <span class="text-[#222e38] text-sm mb-2">104 vélemény alapján</span>
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
                         alt="Google" class="h-6 mt-2">
-                </div>
+                </div> --}}
                 <!-- Vélemény kártyák -->
                 <div class="bg-white rounded-2xl shadow-lg p-6 w-72 flex flex-col gap-2">
-                    <div class="flex flex-col gap-2 mb-2">
-                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Nóri"
+                    <div class="flex flex-col gap-2 items-start mb-2">
+                        <img src="{{ Vite::asset('resources/img/avatar01.png') }}" alt=""
                             class="w-8 h-8 rounded-full">
-                        <span class="font-bold text-[#222e38]">Nóri Fehérvári-Göttli</span>
-                        <span class="text-xs text-gray-500">2025-09-03</span>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                            alt="Google" class="h-4">
+                        <span class="font-bold text-[#222e38]">Éva Bogaráné Posztós</span>
+                        <span class="text-xs text-gray-500">egy éve</span>
+                        <img src="{{ Vite::asset('resources/img/googlelogo.svg') }}" alt="Google" class="h-4">
                     </div>
                     <div class="flex items-center mb-1">
                         <span class="text-yellow-400 text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         {{-- <span class="ml-2 text-blue-500">&#10004;</span> --}}
                     </div>
-                    <p class="text-[#222e38] text-base">Nagyon kedves, türelmes szolgáltató, ajánlom!</p>
+                    <p class="text-[#222e38] text-base">Nagy beltéri ajtó választék található.</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-6 w-72 flex flex-col gap-2">
-                    <div class="flex flex-col gap-2 mb-2">
-                        <img src="https://randomuser.me/api/portraits/women/40.jpg" alt="Nóri"
+                    <div class="flex flex-col gap-2 items-start mb-2">
+                        <img src="{{ Vite::asset('resources/img/avatar02.png') }}" alt=""
                             class="w-8 h-8 rounded-full">
-                        <span class="font-bold text-[#222e38]">Judit Zentai</span>
-                        <span class="text-xs text-gray-500">2025-09-02</span>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                            alt="Google" class="h-4">
+                        <span class="font-bold text-[#222e38]">Erdős Ferenc</span>
+                        <span class="text-xs text-gray-500">3 éve</span>
+                        <img src="{{ Vite::asset('resources/img/googlelogo.svg') }}" alt="Google" class="h-4">
                     </div>
                     <div class="flex items-center mb-1">
                         <span class="text-yellow-400 text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         {{-- <span class="ml-2 text-blue-500">&#10004;</span> --}}
                     </div>
-                    <p class="text-[#222e38] text-base">Csupa maszat és foltos kanapém, újjá varázsolva. Nagy nagy
-                        köszönet!</p>
+                    <p class="text-[#222e38] text-base">Szuper cég. Eladók szívélyesek. Árukiadók segítőkészek a
+                        raktárban.</p>
                 </div>
                 <div class="bg-white rounded-2xl shadow-lg p-6 w-72 flex flex-col gap-2">
-                    <div class="flex flex-col gap-2 mb-2">
-                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Gergő"
+                    <div class="flex flex-col gap-2 items-start mb-2">
+                        <img src="{{ Vite::asset('resources/img/avatar03.png') }}" alt=""
                             class="w-8 h-8 rounded-full">
-                        <span class="font-bold text-[#222e38]">Gergő Bálint</span>
-                        <span class="text-xs text-gray-500">2025-09-01</span>
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg"
-                            alt="Google" class="h-4">
+                        <span class="font-bold text-[#222e38]">Melinda Kiss</span>
+                        <span class="text-xs text-gray-500">4 éve</span>
+                        <img src="{{ Vite::asset('resources/img/googlelogo.svg') }}" alt="Google" class="h-4">
                     </div>
                     <div class="flex items-center mb-1">
                         <span class="text-yellow-400 text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
                         {{-- <span class="ml-2 text-blue-500">&#10004;</span> --}}
                     </div>
-                    <p class="text-[#222e38] text-base">Nagyon szépen kitisztították a kanapénkat, szinte olyan, mint
-                        új
-                        korában! Gyors és precíz munka, bátran ajánlom másoknak is.</p>
+                    <p class="text-[#222e38] text-base">Nagyon szimpatikus és felkészült értékesítők</p>
+                </div>
+                <div class="bg-white rounded-2xl shadow-lg p-6 w-72 flex flex-col gap-2">
+                    <div class="flex flex-col gap-2 items-start mb-2">
+                        <img src="{{ Vite::asset('resources/img/avatar04.png') }}" alt=""
+                            class="w-8 h-8 rounded-full">
+                        <span class="font-bold text-[#222e38]">Kovcs Ervin</span>
+                        <span class="text-xs text-gray-500">4 éve</span>
+                        <img src="{{ Vite::asset('resources/img/googlelogo.svg') }}" alt="Google" class="h-4">
+                    </div>
+                    <div class="flex items-center mb-1">
+                        <span class="text-yellow-400 text-xl">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                        {{-- <span class="ml-2 text-blue-500">&#10004;</span> --}}
+                    </div>
+                    <p class="text-[#222e38] text-base">Az eladó tisztelet tudoan hallgatta meg elképzelésem, feltárta
+                        az ajtók világát, kérdéseimre precíz és teljeskörü válaszokat kaptam, ami segített a döntésben,
+                        hogy milyen ajtót akarok az elkövetző években nyitogatni. 😃
+                        Szép bemutató terem, felkészült eladók. Én javaslom.</p>
                 </div>
             </div>
         </div>
