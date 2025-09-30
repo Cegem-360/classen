@@ -72,7 +72,7 @@
             'title' => 'Az ajtótokok felületkezeltek',
             'text' =>
                 'Minden ajtótokunkat modern technológiával, tartós felületkezeléssel látjuk el, hogy hosszú távon megőrizze szépségét és ellenállóságát.',
-            'img_url' => Vite::asset('resources/img/aééithatp-ajtokeret.webp'),
+            'img_url' => Vite::asset('resources/img/allithato-ajtokeret.webp'),
             'link_title' => 'Ajtók megtekintése',
             'page' => 'ajtok',
         ],
