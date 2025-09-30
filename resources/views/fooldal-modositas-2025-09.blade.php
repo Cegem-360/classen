@@ -254,7 +254,7 @@
                         <img src="{{ Vite::asset('resources/img/avatar01.png') }}" alt=""
                             class="w-8 h-8 rounded-full">
                         <span class="font-bold text-[#222e38]">Éva Bogaráné Posztós</span>
-                        <span class="text-xs text-gray-500">egy éve</span>
+                        {{-- <span class="text-xs text-gray-500">egy éve</span> --}}
                         <img src="{{ Vite::asset('resources/img/googlelogo.svg') }}" alt="Google" class="h-4">
                     </div>
                     <div class="flex items-center mb-1">
@@ -268,7 +268,7 @@
                         <img src="{{ Vite::asset('resources/img/avatar02.png') }}" alt=""
                             class="w-8 h-8 rounded-full">
                         <span class="font-bold text-[#222e38]">Erdős Ferenc</span>
-                        <span class="text-xs text-gray-500">3 éve</span>
+                        {{-- <span class="text-xs text-gray-500">3 éve</span> --}}
                         <img src="{{ Vite::asset('resources/img/googlelogo.svg') }}" alt="Google" class="h-4">
                     </div>
                     <div class="flex items-center mb-1">
@@ -283,7 +283,7 @@
                         <img src="{{ Vite::asset('resources/img/avatar03.png') }}" alt=""
                             class="w-8 h-8 rounded-full">
                         <span class="font-bold text-[#222e38]">Melinda Kiss</span>
-                        <span class="text-xs text-gray-500">4 éve</span>
+                        {{-- <span class="text-xs text-gray-500">4 éve</span> --}}
                         <img src="{{ Vite::asset('resources/img/googlelogo.svg') }}" alt="Google" class="h-4">
                     </div>
                     <div class="flex items-center mb-1">
@@ -297,7 +297,7 @@
                         <img src="{{ Vite::asset('resources/img/avatar04.png') }}" alt=""
                             class="w-8 h-8 rounded-full">
                         <span class="font-bold text-[#222e38]">Kovcs Ervin</span>
-                        <span class="text-xs text-gray-500">4 éve</span>
+                        {{-- <span class="text-xs text-gray-500">4 éve</span> --}}
                         <img src="{{ Vite::asset('resources/img/googlelogo.svg') }}" alt="Google" class="h-4">
                     </div>
                     <div class="flex items-center mb-1">
@@ -346,7 +346,7 @@
                     <a href="/ajtok"
                         class="px-8 py-3 bg-[#978f88] text-white font-semibold rounded shadow hover:bg-[#7c7267] transition">Ajtók
                         böngészése</a>
-                    <a href="/favorites"
+                    <a href="/kedvencek"
                         class="px-8 py-3 bg-white text-[#978f88] font-semibold rounded shadow border border-[#978f88] hover:bg-[#f5f3f0] transition">Kedvencek
                         megtekintése</a>
                 </div>
