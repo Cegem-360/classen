@@ -1,4 +1,8 @@
 {
+  "resources/img/40-Jakie-drzwi-do-wnetrza-w-stylu-boho-CLIF-e1666651321909.jpg": {
+    "file": "assets/40-Jakie-drzwi-do-wnetrza-w-stylu-boho-CLIF-e1666651321909-Decak7XK.jpg",
+    "src": "resources/img/40-Jakie-drzwi-do-wnetrza-w-stylu-boho-CLIF-e1666651321909.jpg"
+  },
   "resources/img/Arcadia-Facebook-poszt.webp": {
     "file": "assets/Arcadia-Facebook-poszt-D0DAfJNf.webp",
     "src": "resources/img/Arcadia-Facebook-poszt.webp"
@@ -23,9 +27,21 @@
     "file": "assets/Classen_Venis_drzwi_przesuwne-CBKPWK2S.webp",
     "src": "resources/img/Classen_Venis_drzwi_przesuwne.webp"
   },
+  "resources/img/EN_slider_katalog-drzwi-2025_desktop.jpg": {
+    "file": "assets/EN_slider_katalog-drzwi-2025_desktop-Djb_VwDB.jpg",
+    "src": "resources/img/EN_slider_katalog-drzwi-2025_desktop.jpg"
+  },
   "resources/img/IMG_7478.webp": {
     "file": "assets/IMG_7478-DqgaR16e.webp",
     "src": "resources/img/IMG_7478.webp"
+  },
+  "resources/img/Slider_Hot-Stamping_NCBiR_4_EN.jpg": {
+    "file": "assets/Slider_Hot-Stamping_NCBiR_4_EN-OijXxA1V.jpg",
+    "src": "resources/img/Slider_Hot-Stamping_NCBiR_4_EN.jpg"
+  },
+  "resources/img/aééithatp-ajtokeret.webp": {
+    "file": "assets/aééithatp-ajtokeret-BzqWAXWh.webp",
+    "src": "resources/img/aééithatp-ajtokeret.webp"
   },
   "resources/img/also-banner-szakerto-segitseg.webp": {
     "file": "assets/also-banner-szakerto-segitseg-Ce4Oz1QP.webp",
@@ -42,6 +58,10 @@
   "resources/img/also_slide_kozep.webp": {
     "file": "assets/also_slide_kozep-iV6WlIhB.webp",
     "src": "resources/img/also_slide_kozep.webp"
+  },
+  "resources/img/arcadia-ajanlatkeres.webp": {
+    "file": "assets/arcadia-ajanlatkeres-BaA8s1tI.webp",
+    "src": "resources/img/arcadia-ajanlatkeres.webp"
   },
   "resources/img/arcadia98-logo.svg": {
     "file": "assets/arcadia98-logo-C-Z16H_G.svg",
@@ -174,6 +194,10 @@
   "resources/img/milk_classen.webp": {
     "file": "assets/milk_classen-Zs0pTi5Z.webp",
     "src": "resources/img/milk_classen.webp"
+  },
+  "resources/img/mini_BFF2512_a-e1666651832579.jpg": {
+    "file": "assets/mini_BFF2512_a-e1666651832579-DsExeHub.jpg",
+    "src": "resources/img/mini_BFF2512_a-e1666651832579.jpg"
   },
   "resources/img/placeholder.webp": {
     "file": "assets/placeholder-FmWpOVGg.webp",
@@ -608,7 +632,7 @@
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
   "resources/js/app.js": {
-    "file": "assets/app-CO5hwJ9f.js",
+    "file": "assets/app-DfsI3H9Y.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -617,7 +641,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-D6LmifPW.css"
+      "assets/app-BZcKr28O.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",
@@ -637,7 +661,7 @@
     "isEntry": true
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-BpOtLOS_.js",
+    "file": "assets/swiperJS-Mf9jutbL.js",
     "name": "swiperJS",
     "src": "resources/js/swiperJS.js",
     "isEntry": true
