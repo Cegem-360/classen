@@ -85,22 +85,23 @@
                             <p class="text-[#434B58] mb-4">Természetes, világos enteriőrökbe ajánlott, modern stílusú
                                 ajtó.
                                 A Clif kollekció a letisztult otthonok kedvence.</p>
-                            <a href="/kollekciok/clif"
+                            <a href="/kollekciok/Clif"
                                 class="mt-auto px-6 py-2 bg-[#978f88] text-white font-semibold rounded shadow hover:bg-[#7c7267] transition w-fit">Megnézem</a>
                         </div>
                     </div>
-                    <!-- Kollekció 2 -->
-                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
-                        <img src="{{ Vite::asset('resources/img/Classen-drzwi-Ferro-dab-nordycki.webp') }}"
-                            alt="Ferro Dąb Nordycki" class="w-full h-48 object-cover">
+                    <!-- Kollekció 2 (csere: Tosca) -->
+                    <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col relative">
+                        <img src="{{ Vite::asset('resources/img/prd-images/thumbnails/Classen-drzwi-Tosca-dab-antracyt-400x270.jpg') }}"
+                            alt="Tosca" class="w-full h-48 object-cover">
                         <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-2xl font-bold text-[#434B58] mb-2">Ferro Dąb Nordycki</h3>
-                            <p class="text-[#434B58] mb-4">Skandináv stílus, természetes tölgyfa hatás, tartós
-                                szerkezet. A
-                                Ferro Dąb Nordycki kollekció a természetesség és a modern otthonok találkozása.</p>
-                            <a href="/kollekciok/ferro-dab-nordycki"
+                            <h3 class="text-2xl font-bold text-[#434B58] mb-2">Tosca</h3>
+                            <p class="text-[#434B58] mb-4">Elegáns, kortárs megjelenés, finom fa struktúrával és
+                                harmonikus arányokkal. Modern otthonok megbízható választása.</p>
+                            <a href="/kollekciok/Tosca"
                                 class="mt-auto px-6 py-2 bg-[#978f88] text-white font-semibold rounded shadow hover:bg-[#7c7267] transition w-fit">Megnézem</a>
                         </div>
+                        <span
+                            class="absolute top-3 left-3 bg-[#434B58] text-white text-xs font-bold tracking-wide px-3 py-1 rounded-full shadow">ÚJ</span>
                     </div>
                     <!-- Kollekció 3 -->
                     <div class="bg-white rounded-2xl shadow-lg overflow-hidden flex flex-col">
@@ -111,7 +112,7 @@
                             <p class="text-[#434B58] mb-4">Letisztult, modern formavilág, prémium minőségű anyagokkal.
                                 A
                                 Linea Premium kollekció a minimalista elegancia kedvelőinek készült.</p>
-                            <a href="/kollekciok/linea-premium"
+                            <a href="/kollekciok/Linea Premium"
                                 class="mt-auto px-6 py-2 bg-[#978f88] text-white font-semibold rounded shadow hover:bg-[#7c7267] transition w-fit">Megnézem</a>
                         </div>
                     </div>
@@ -124,7 +125,7 @@
                             <p class="text-[#434B58] mb-4">Különleges mintázatok, egyedi megjelenés, kreatív
                                 enteriőrökhez.
                                 A Modi Design kollekcióval igazán egyedivé teheti otthonát.</p>
-                            <a href="/kollekciok/modi-design"
+                            <a href="/kollekciok/Modi Design sliding system"
                                 class="mt-auto px-6 py-2 bg-[#978f88] text-white font-semibold rounded shadow hover:bg-[#7c7267] transition w-fit">Megnézem</a>
                         </div>
                     </div>
@@ -152,7 +153,7 @@
             </div>
             <div class="flex justify-center gap-8">
                 <!-- Inspiráció kép 1 -->
-                <a href="/kollekciok/clif" class="group relative block w-96 h-56 rounded-2xl overflow-hidden shadow-lg">
+                <a href="/kollekciok/Clif" class="group relative block w-96 h-56 rounded-2xl overflow-hidden shadow-lg">
                     <img src="{{ Vite::asset('resources/img/40-Jakie-drzwi-do-wnetrza-w-stylu-boho-CLIF-e1666651321909.jpg') }}"
                         alt="Clif"
                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
@@ -167,7 +168,7 @@
                     </span>
                 </a>
                 <!-- Inspiráció kép 2 -->
-                <a href="/kollekciok/linea-premium"
+                <a href="/kollekciok/Linea Premium"
                     class="group relative block w-96 h-56 rounded-2xl overflow-hidden shadow-lg">
                     <img src="{{ Vite::asset('resources/img/Classen - Linea Premium.webp') }}" alt="Linea Premium"
                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
@@ -183,7 +184,7 @@
                     </span>
                 </a>
                 <!-- Inspiráció kép 3 -->
-                <a href="/kollekciok/modi-design"
+                <a href="/kollekciok/Modi Design sliding system"
                     class="group relative block w-96 h-56 rounded-2xl overflow-hidden shadow-lg">
                     <img src="{{ Vite::asset('resources/img/Classen - Modi Design.webp') }}" alt="Modi Design"
                         class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
