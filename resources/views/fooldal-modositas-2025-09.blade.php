@@ -21,8 +21,8 @@
     <x-partials.door-categories />
 
     <!-- Bemutatóterem szekció (első blokk, teljes háttérrel) -->
-    <section class="w-full min-h-[540px] bg-cover bg-[center_80%] relative flex items-center justify-center"
-        style="background-image: url('{{ Vite::asset('resources/img/arcadia98kft.webp') }}');">
+    <section class="w-full min-h-[540px] bg-cover bg-[center] relative flex items-center justify-center"
+        style="background-image: url('{{ Vite::asset('resources/img/bemutatoterem-02.webp') }}');">
         <div class="absolute inset-0 bg-black/30"></div>
         <div class="container mx-auto px-4 relative z-10 flex flex-col items-center justify-center">
             <div class="max-w-2xl bg-white/60 rounded-2xl shadow-2xl p-10 backdrop-blur-[60px]">

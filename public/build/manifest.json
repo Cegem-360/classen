@@ -87,6 +87,10 @@
     "file": "assets/avatar04-DIG67ZH0.png",
     "src": "resources/img/avatar04.png"
   },
+  "resources/img/bemutatoterem-02.webp": {
+    "file": "assets/bemutatoterem-02-Bdh0zaCD.webp",
+    "src": "resources/img/bemutatoterem-02.webp"
+  },
   "resources/img/bemutatoterem_2.webp": {
     "file": "assets/bemutatoterem_2-BvDn5kws.webp",
     "src": "resources/img/bemutatoterem_2.webp"
@@ -206,6 +210,10 @@
   "resources/img/icons/tooltip-icon2.svg": {
     "file": "assets/tooltip-icon2-cYKXuiC6.svg",
     "src": "resources/img/icons/tooltip-icon2.svg"
+  },
+  "resources/img/katalogus-02.webp": {
+    "file": "assets/katalogus-02-GZu4L9dn.webp",
+    "src": "resources/img/katalogus-02.webp"
   },
   "resources/img/kozepso_banner_hatter.webp": {
     "file": "assets/kozepso_banner_hatter-CxoHFyv4.webp",
@@ -651,8 +659,12 @@
     "file": "assets/stala-mdf-42-400x270-A2BsjRv1.jpg",
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
+  "resources/img/slide-1.webp": {
+    "file": "assets/slide-1-pYvz0OxY.webp",
+    "src": "resources/img/slide-1.webp"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-DfsI3H9Y.js",
+    "file": "assets/app--b87aKKG.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -661,7 +673,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-BZcKr28O.css"
+      "assets/app-BgYwlnZ7.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",

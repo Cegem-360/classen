@@ -73,23 +73,23 @@
             'text' =>
                 'Minden ajtótokunkat modern technológiával, tartós felületkezeléssel látjuk el, hogy hosszú távon megőrizze szépségét és ellenállóságát.',
             'img_url' => Vite::asset('resources/img/allithato-ajtokeret.webp'),
-            'link_title' => 'Ajtók megtekintése',
-            'page' => 'ajtok',
+            'link_title' => 'Ajtótokok megtekintése',
+            'url' => route('category.index'),
         ],
         [
             'title' => 'Elkészült az új katalógus',
             'text' =>
                 'Fedezze fel legújabb termékeinket és inspirálódjon az új katalógusunkból! Letölthető vagy megtekinthető online.',
-            'img_url' => Vite::asset('resources/img/EN_slider_katalog-drzwi-2025_desktop.jpg'),
+            'img_url' => Vite::asset('resources/img/katalogus-02.webp'),
             'link_title' => 'Katalógus letöltése',
-            'page' => 'letoltesek',
+            'url' => route('downloads'),
         ],
         [
             'title' => 'Raktárról azonnal elérhető ajtók',
             'text' => 'Válogasson raktáron lévő ajtóink közül, gyors szállítással és kedvező árakkal!',
             'img_url' => Vite::asset('resources/img/IMG_7478.webp'),
             'link_title' => 'Raktárról elérhető ajtók',
-            'page' => 'ajtok',
+            'url' => route('category.show', ['category' => 'Raktári ajtók']),
         ],
     ];
 @endphp
@@ -104,7 +104,7 @@
                     <hr class="relative h-1 mb-6 ml-6 border-0 hero-line w-96 bg-sarga">
                     <h3 class="px-6 text-lg font-bold hero-text">{!! $item['text'] !!}</h3>
                     <a class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white"
-                        href="{{ route('category.show', ['category' => $item['page']]) }}" wire:navigate>
+                        href="{{ $item['url'] }}" wire:navigate>
                         <span>{{ $item['link_title'] }}</span>
                         <x-svg.hero-btn-arrow />
                     </a>
