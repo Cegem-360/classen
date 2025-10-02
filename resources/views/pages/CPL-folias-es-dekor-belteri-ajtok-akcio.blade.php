@@ -18,8 +18,8 @@
 
     <!-- Hero Image - teljes szélességű -->
     <div class="w-full mb-8">
-        <img src="{{ Vite::asset('resources/img/slide-1.webp') }}" alt="IR-WENGE CPL beltéri ajtó akció"
-            class="w-full h-auto object-cover">
+        <img src="{{ Vite::asset('resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-2.webp') }}"
+            alt="IR-WENGE CPL beltéri ajtó akció" class="w-full h-auto object-cover">
     </div>
 
     <div class="max-w-6xl mx-auto px-4 py-8">
