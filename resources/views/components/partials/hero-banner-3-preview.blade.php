@@ -69,6 +69,13 @@
 @php
     $heroBannerItems = [
         [
+            'title' => 'Hihetetlen áron',
+            'text' => 'CPL fóliás és dekor beltéri ajtók a készlet erejéig raktárról azonnal elérhetők',
+            'img_url' => Vite::asset('resources/img/slide-1.webp'),
+            'link_title' => 'Ajtók megtekintése',
+            'url' => route('pages.CPL-folias-es-dekor-belteri-ajtok-akcio'),
+        ],
+        [
             'title' => 'Az ajtótokok felületkezeltek',
             'text' =>
                 'Minden ajtótokunkat modern technológiával, tartós felületkezeléssel látjuk el, hogy hosszú távon megőrizze szépségét és ellenállóságát.',

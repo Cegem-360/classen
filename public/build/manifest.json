@@ -664,7 +664,7 @@
     "src": "resources/img/slide-1.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app--b87aKKG.js",
+    "file": "assets/app-DmIQ71F8.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -673,7 +673,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-BgYwlnZ7.css"
+      "assets/app-DAxCZBR8.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",
