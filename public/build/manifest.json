@@ -1,7 +1,19 @@
 {
+  "resources/img/40-Jakie-drzwi-do-wnetrza-w-stylu-boho-CLIF-e1666651321909.jpg": {
+    "file": "assets/40-Jakie-drzwi-do-wnetrza-w-stylu-boho-CLIF-e1666651321909-Decak7XK.jpg",
+    "src": "resources/img/40-Jakie-drzwi-do-wnetrza-w-stylu-boho-CLIF-e1666651321909.jpg"
+  },
   "resources/img/Arcadia-Facebook-poszt.webp": {
     "file": "assets/Arcadia-Facebook-poszt-D0DAfJNf.webp",
     "src": "resources/img/Arcadia-Facebook-poszt.webp"
+  },
+  "resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-1.webp": {
+    "file": "assets/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-1-DxC1OQNl.webp",
+    "src": "resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-1.webp"
+  },
+  "resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-2.webp": {
+    "file": "assets/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-2-HNj_UhIe.webp",
+    "src": "resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-2.webp"
   },
   "resources/img/Classen - Linea Premium.webp": {
     "file": "assets/Classen - Linea Premium-hkuFlEbs.webp",
@@ -23,9 +35,21 @@
     "file": "assets/Classen_Venis_drzwi_przesuwne-CBKPWK2S.webp",
     "src": "resources/img/Classen_Venis_drzwi_przesuwne.webp"
   },
+  "resources/img/EN_slider_katalog-drzwi-2025_desktop.jpg": {
+    "file": "assets/EN_slider_katalog-drzwi-2025_desktop-Djb_VwDB.jpg",
+    "src": "resources/img/EN_slider_katalog-drzwi-2025_desktop.jpg"
+  },
   "resources/img/IMG_7478.webp": {
     "file": "assets/IMG_7478-DqgaR16e.webp",
     "src": "resources/img/IMG_7478.webp"
+  },
+  "resources/img/Slider_Hot-Stamping_NCBiR_4_EN.jpg": {
+    "file": "assets/Slider_Hot-Stamping_NCBiR_4_EN-OijXxA1V.jpg",
+    "src": "resources/img/Slider_Hot-Stamping_NCBiR_4_EN.jpg"
+  },
+  "resources/img/allithato-ajtokeret.webp": {
+    "file": "assets/allithato-ajtokeret-BzqWAXWh.webp",
+    "src": "resources/img/allithato-ajtokeret.webp"
   },
   "resources/img/also-banner-szakerto-segitseg.webp": {
     "file": "assets/also-banner-szakerto-segitseg-Ce4Oz1QP.webp",
@@ -43,6 +67,10 @@
     "file": "assets/also_slide_kozep-iV6WlIhB.webp",
     "src": "resources/img/also_slide_kozep.webp"
   },
+  "resources/img/arcadia-ajanlatkeres.webp": {
+    "file": "assets/arcadia-ajanlatkeres-BaA8s1tI.webp",
+    "src": "resources/img/arcadia-ajanlatkeres.webp"
+  },
   "resources/img/arcadia98-logo.svg": {
     "file": "assets/arcadia98-logo-C-Z16H_G.svg",
     "src": "resources/img/arcadia98-logo.svg"
@@ -50,6 +78,26 @@
   "resources/img/arcadia98kft.webp": {
     "file": "assets/arcadia98kft-B-gcgEue.webp",
     "src": "resources/img/arcadia98kft.webp"
+  },
+  "resources/img/avatar01.png": {
+    "file": "assets/avatar01-BMuagQ7_.png",
+    "src": "resources/img/avatar01.png"
+  },
+  "resources/img/avatar02.png": {
+    "file": "assets/avatar02-D5CBoTlv.png",
+    "src": "resources/img/avatar02.png"
+  },
+  "resources/img/avatar03.png": {
+    "file": "assets/avatar03-D1765Brh.png",
+    "src": "resources/img/avatar03.png"
+  },
+  "resources/img/avatar04.png": {
+    "file": "assets/avatar04-DIG67ZH0.png",
+    "src": "resources/img/avatar04.png"
+  },
+  "resources/img/bemutatoterem-02.webp": {
+    "file": "assets/bemutatoterem-02-Bdh0zaCD.webp",
+    "src": "resources/img/bemutatoterem-02.webp"
   },
   "resources/img/bemutatoterem_2.webp": {
     "file": "assets/bemutatoterem_2-BvDn5kws.webp",
@@ -123,6 +171,10 @@
     "file": "assets/favicon-B_uQVUcH.ico",
     "src": "resources/img/favicon.ico"
   },
+  "resources/img/googlelogo.svg": {
+    "file": "assets/googlelogo-hDDRKZZT.svg",
+    "src": "resources/img/googlelogo.svg"
+  },
   "resources/img/icons/1-belteri-ajtok.svg": {
     "file": "assets/1-belteri-ajtok-CkvTRhX_.svg",
     "src": "resources/img/icons/1-belteri-ajtok.svg"
@@ -167,6 +219,10 @@
     "file": "assets/tooltip-icon2-cYKXuiC6.svg",
     "src": "resources/img/icons/tooltip-icon2.svg"
   },
+  "resources/img/katalogus-02.webp": {
+    "file": "assets/katalogus-02-GZu4L9dn.webp",
+    "src": "resources/img/katalogus-02.webp"
+  },
   "resources/img/kozepso_banner_hatter.webp": {
     "file": "assets/kozepso_banner_hatter-CxoHFyv4.webp",
     "src": "resources/img/kozepso_banner_hatter.webp"
@@ -174,6 +230,10 @@
   "resources/img/milk_classen.webp": {
     "file": "assets/milk_classen-Zs0pTi5Z.webp",
     "src": "resources/img/milk_classen.webp"
+  },
+  "resources/img/mini_BFF2512_a-e1666651832579.jpg": {
+    "file": "assets/mini_BFF2512_a-e1666651832579-DsExeHub.jpg",
+    "src": "resources/img/mini_BFF2512_a-e1666651832579.jpg"
   },
   "resources/img/placeholder.webp": {
     "file": "assets/placeholder-FmWpOVGg.webp",
@@ -607,8 +667,12 @@
     "file": "assets/stala-mdf-42-400x270-A2BsjRv1.jpg",
     "src": "resources/img/prd-images/thumbnails/stala-mdf-42-400x270.jpg"
   },
+  "resources/img/slide-1.webp": {
+    "file": "assets/slide-1-pYvz0OxY.webp",
+    "src": "resources/img/slide-1.webp"
+  },
   "resources/js/app.js": {
-    "file": "assets/app-CO5hwJ9f.js",
+    "file": "assets/app-DmIQ71F8.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -617,7 +681,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-D6LmifPW.css"
+      "assets/app-DAxCZBR8.css"
     ],
     "assets": [
       "assets/tooltip-icon2-cYKXuiC6.svg",
@@ -637,7 +701,7 @@
     "isEntry": true
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-BpOtLOS_.js",
+    "file": "assets/swiperJS-Mf9jutbL.js",
     "name": "swiperJS",
     "src": "resources/js/swiperJS.js",
     "isEntry": true
