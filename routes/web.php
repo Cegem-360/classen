@@ -24,10 +24,7 @@ use Illuminate\Support\Str;
 */
 
 // home
-
-/* Route::get('/fooldal-regi', [ManagePageContentController::class, 'index'])->name('index'); */
-/* Route::get('/fooldal-modositas-2025-09', [\App\Http\Controllers\ManagePageContentFooldalModositas202509Controller::class, 'index'])->name('fooldal-modositas-2025-09'); */
-Route::get('/', [\App\Http\Controllers\ManagePageContentFooldalModositas202509Controller::class, 'index'])->name('index');
+Route::get('/', [ManagePageContentController::class, 'index'])->name('index');
 
 Route::get('/ajtok', [DoorController::class, 'index'])->name('door.index');
 Route::get('/ajtok/{door}', [DoorController::class, 'show'])->name('door.show');
@@ -145,9 +142,3 @@ Route::prefix('kiemelt-ertekesitesi-teruleteink')->as('featured-sales-areas.')->
 Route::get('/ir-wenge-belteri-ajto-akcio', function () {
     return view('pages.ir-wenge-belteri-ajto-akcio');
 })->name('ir-wenge-akcio');
-
-// CPL fóliás és dekor beltéri ajtók akciós oldal
-Route::get('/CPL-folias-es-dekor-belteri-ajtok-akcio', function () {
-    return view('pages.CPL-folias-es-dekor-belteri-ajtok-akcio');
-})->name('pages.CPL-folias-es-dekor-belteri-ajtok-akcio');
-
