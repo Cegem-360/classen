@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources;
 
+use Filament\Schemas\Schema;
+use Filament\Actions\ExportAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
 use App\Filament\Exports\DoorExportByCategoryExporter;
 use App\Filament\Exports\DoorExporter;
 use App\Filament\Resources\DoorResource\Pages\CreateDoor;
@@ -13,12 +18,7 @@ use App\Models\Category;
 use App\Models\Door;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Form;
 use Filament\Resources\Resource;
-use Filament\Tables\Actions\BulkActionGroup;
-use Filament\Tables\Actions\DeleteBulkAction;
-use Filament\Tables\Actions\EditAction;
-use Filament\Tables\Actions\ExportAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
@@ -27,12 +27,12 @@ final class DoorResource extends Resource
 {
     protected static ?string $model = Door::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    public static function form(Form $form): Form
+    public static function form(Schema $schema): Schema
     {
-        return $form
-            ->schema([
+        return $schema
+            ->components([
                 TextInput::make('product_id')
                     ->numeric(),
                 TextInput::make('price')
@@ -111,11 +111,11 @@ final class DoorResource extends Resource
                     ->label('Export Additional Attributes')
                     ->icon('heroicon-o-document-text'),
             ])
-            ->actions([
+            ->recordActions([
                 EditAction::make(),
 
             ])
-            ->bulkActions([
+            ->toolbarActions([
                 BulkActionGroup::make([
                     DeleteBulkAction::make(),
                 ]),
