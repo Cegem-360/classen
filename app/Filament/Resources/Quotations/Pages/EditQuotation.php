@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\QuotationResource\Pages;
+namespace App\Filament\Resources\Quotations\Pages;
 
-use App\Filament\Resources\QuotationResource;
+use App\Filament\Resources\Quotations\QuotationResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 

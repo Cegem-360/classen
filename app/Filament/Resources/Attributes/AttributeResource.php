@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Attributes;
 
 use Filament\Schemas\Schema;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\AttributeResource\Pages\CreateAttribute;
-use App\Filament\Resources\AttributeResource\Pages\EditAttribute;
-use App\Filament\Resources\AttributeResource\Pages\ListAttributes;
+use App\Filament\Resources\Attributes\Pages\CreateAttribute;
+use App\Filament\Resources\Attributes\Pages\EditAttribute;
+use App\Filament\Resources\Attributes\Pages\ListAttributes;
 use App\Models\Attribute;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;

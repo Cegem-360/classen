@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Doors;
 
 use Filament\Schemas\Schema;
 use Filament\Actions\ExportAction;
@@ -11,9 +11,9 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use App\Filament\Exports\DoorExportByCategoryExporter;
 use App\Filament\Exports\DoorExporter;
-use App\Filament\Resources\DoorResource\Pages\CreateDoor;
-use App\Filament\Resources\DoorResource\Pages\EditDoor;
-use App\Filament\Resources\DoorResource\Pages\ListDoors;
+use App\Filament\Resources\Doors\Pages\CreateDoor;
+use App\Filament\Resources\Doors\Pages\EditDoor;
+use App\Filament\Resources\Doors\Pages\ListDoors;
 use App\Models\Category;
 use App\Models\Door;
 use Filament\Forms\Components\Select;

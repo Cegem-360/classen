@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\DoorResource\Pages;
+namespace App\Filament\Resources\Doors\Pages;
 
 use App\Filament\Exports\DoorExportByCategoryExporter;
-use App\Filament\Resources\DoorResource;
+use App\Filament\Resources\Doors\DoorResource;
 use Filament\Actions\CreateAction;
 use Filament\Actions\ExportAction;
 use Filament\Resources\Pages\ListRecords;

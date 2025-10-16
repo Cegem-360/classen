@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Colors;
 
 use Filament\Schemas\Schema;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\ColorResource\Pages\CreateColor;
-use App\Filament\Resources\ColorResource\Pages\EditColor;
-use App\Filament\Resources\ColorResource\Pages\ListColors;
+use App\Filament\Resources\Colors\Pages\CreateColor;
+use App\Filament\Resources\Colors\Pages\EditColor;
+use App\Filament\Resources\Colors\Pages\ListColors;
 use App\Models\Color;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;

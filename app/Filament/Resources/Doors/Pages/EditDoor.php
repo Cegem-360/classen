@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\DoorResource\Pages;
+namespace App\Filament\Resources\Doors\Pages;
 
-use App\Filament\Resources\DoorResource;
+use App\Filament\Resources\Doors\DoorResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 

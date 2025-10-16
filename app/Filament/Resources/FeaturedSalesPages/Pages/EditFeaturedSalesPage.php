@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\FeaturedSalesPageResource\Pages;
+namespace App\Filament\Resources\FeaturedSalesPages\Pages;
 
-use App\Filament\Resources\FeaturedSalesPageResource;
+use App\Filament\Resources\FeaturedSalesPages\FeaturedSalesPageResource;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;

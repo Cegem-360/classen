@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\WebsiteOptions;
 
 use Filament\Schemas\Schema;
 use Filament\Actions\ViewAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\WebsiteOptionsResource\Pages\CreateWebsiteOptions;
-use App\Filament\Resources\WebsiteOptionsResource\Pages\EditWebsiteOptions;
-use App\Filament\Resources\WebsiteOptionsResource\Pages\ListWebsiteOptions;
-use App\Filament\Resources\WebsiteOptionsResource\Pages\ViewWebsiteOptions;
+use App\Filament\Resources\WebsiteOptions\Pages\CreateWebsiteOptions;
+use App\Filament\Resources\WebsiteOptions\Pages\EditWebsiteOptions;
+use App\Filament\Resources\WebsiteOptions\Pages\ListWebsiteOptions;
+use App\Filament\Resources\WebsiteOptions\Pages\ViewWebsiteOptions;
 use App\Models\WebsiteOptions;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;

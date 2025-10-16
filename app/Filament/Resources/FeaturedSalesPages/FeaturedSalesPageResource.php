@@ -2,19 +2,22 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\FeaturedSalesPages;
 
-use Filament\Schemas\Schema;
-use Filament\Schemas\Components\Utilities\Set;
-use Filament\Actions\ViewAction;
-use Filament\Actions\EditAction;
+use App\Filament\Exports\FeaturedSalesPageExporter;
+use App\Filament\Imports\FeaturedSalesPageImporter;
+use App\Filament\Resources\FeaturedSalesPages\Pages\CreateFeaturedSalesPage;
+use App\Filament\Resources\FeaturedSalesPages\Pages\EditFeaturedSalesPage;
+use App\Filament\Resources\FeaturedSalesPages\Pages\ListFeaturedSalesPages;
+use App\Filament\Resources\FeaturedSalesPages\Pages\ViewFeaturedSalesPage;
+use App\Models\FeaturedSalesPage;
+use BackedEnum;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\FeaturedSalesPageResource\Pages\CreateFeaturedSalesPage;
-use App\Filament\Resources\FeaturedSalesPageResource\Pages\EditFeaturedSalesPage;
-use App\Filament\Resources\FeaturedSalesPageResource\Pages\ListFeaturedSalesPages;
-use App\Filament\Resources\FeaturedSalesPageResource\Pages\ViewFeaturedSalesPage;
-use App\Models\FeaturedSalesPage;
+use Filament\Actions\EditAction;
+use Filament\Actions\ExportAction;
+use Filament\Actions\ImportAction;
+use Filament\Actions\ViewAction;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -22,18 +25,21 @@ use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
+use Filament\Schemas\Components\Utilities\Set;
+use Filament\Schemas\Schema;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
+use UnitEnum;
 
 final class FeaturedSalesPageResource extends Resource
 {
     protected static ?string $model = FeaturedSalesPage::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
-    protected static string | \UnitEnum | null $navigationGroup = 'Sales Pages';
+    protected static string|UnitEnum|null $navigationGroup = 'Sales Pages';
 
     protected static ?string $navigationLabel = 'Featured Sales Pages';
 
@@ -155,6 +161,16 @@ final class FeaturedSalesPageResource extends Resource
             ->filters([
                 //
             ])
+            ->headerActions(
+                [
+                    ImportAction::make()
+                        ->importer(FeaturedSalesPageImporter::class)
+                        ->label('Import Featured Sales Pages'),
+                    ExportAction::make()
+                        ->exporter(FeaturedSalesPageExporter::class)
+                        ->label('Export Featured Sales Pages'),
+                ]
+            )
             ->recordActions([
                 ViewAction::make(),
                 EditAction::make(),

@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\QuotationItems;
 
 use Filament\Schemas\Schema;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\QuotationItemResource\Pages\CreateQuotationItem;
-use App\Filament\Resources\QuotationItemResource\Pages\EditQuotationItem;
-use App\Filament\Resources\QuotationItemResource\Pages\ListQuotationItems;
+use App\Filament\Resources\QuotationItems\Pages\CreateQuotationItem;
+use App\Filament\Resources\QuotationItems\Pages\EditQuotationItem;
+use App\Filament\Resources\QuotationItems\Pages\ListQuotationItems;
 use App\Models\QuotationItem;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;

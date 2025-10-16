@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\MetaKeyWords;
 
 use Filament\Schemas\Schema;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\MetaKeyWordsResource\Pages\CreateMetaKeyWords;
-use App\Filament\Resources\MetaKeyWordsResource\Pages\EditMetaKeyWords;
-use App\Filament\Resources\MetaKeyWordsResource\Pages\ListMetaKeyWords;
+use App\Filament\Resources\MetaKeyWords\Pages\CreateMetaKeyWords;
+use App\Filament\Resources\MetaKeyWords\Pages\EditMetaKeyWords;
+use App\Filament\Resources\MetaKeyWords\Pages\ListMetaKeyWords;
 use App\Models\MetaKeyWords;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;

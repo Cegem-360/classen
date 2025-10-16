@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\ColorResource\Pages;
+namespace App\Filament\Resources\Colors\Pages;
 
-use App\Filament\Resources\ColorResource;
+use App\Filament\Resources\Colors\ColorResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 

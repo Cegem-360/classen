@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\TagResource\Pages;
+namespace App\Filament\Resources\Tags\Pages;
 
-use App\Filament\Resources\TagResource;
+use App\Filament\Resources\Tags\TagResource;
 use Filament\Resources\Pages\CreateRecord;
 
 final class CreateTag extends CreateRecord

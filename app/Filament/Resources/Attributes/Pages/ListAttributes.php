@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\AttributeResource\Pages;
+namespace App\Filament\Resources\Attributes\Pages;
 
-use App\Filament\Resources\AttributeResource;
+use App\Filament\Resources\Attributes\AttributeResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
 

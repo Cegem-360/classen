@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\WebsiteOptionsResource\Pages;
+namespace App\Filament\Resources\WebsiteOptions\Pages;
 
-use App\Filament\Resources\WebsiteOptionsResource;
+use App\Filament\Resources\WebsiteOptions\WebsiteOptionsResource;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;

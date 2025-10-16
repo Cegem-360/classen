@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\AdditionalAttributes;
 
 use Filament\Schemas\Schema;
 use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use App\Filament\Resources\AdditionalAttributeResource\Pages\CreateAdditionalAttribute;
-use App\Filament\Resources\AdditionalAttributeResource\Pages\EditAdditionalAttribute;
-use App\Filament\Resources\AdditionalAttributeResource\Pages\ListAdditionalAttributes;
+use App\Filament\Resources\AdditionalAttributes\Pages\CreateAdditionalAttribute;
+use App\Filament\Resources\AdditionalAttributes\Pages\EditAdditionalAttribute;
+use App\Filament\Resources\AdditionalAttributes\Pages\ListAdditionalAttributes;
 use App\Models\AdditionalAttribute;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;

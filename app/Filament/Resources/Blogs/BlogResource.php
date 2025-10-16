@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources;
+namespace App\Filament\Resources\Blogs;
 
 use Filament\Schemas\Schema;
 use Filament\Actions\ViewAction;
@@ -13,10 +13,10 @@ use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use App\Filament\Exports\BlogExporter;
 use App\Filament\Imports\BlogImporter;
-use App\Filament\Resources\BlogResource\Pages\CreateBlog;
-use App\Filament\Resources\BlogResource\Pages\EditBlog;
-use App\Filament\Resources\BlogResource\Pages\ListBlogs;
-use App\Filament\Resources\BlogResource\Pages\ViewBlog;
+use App\Filament\Resources\Blogs\Pages\CreateBlog;
+use App\Filament\Resources\Blogs\Pages\EditBlog;
+use App\Filament\Resources\Blogs\Pages\ListBlogs;
+use App\Filament\Resources\Blogs\Pages\ViewBlog;
 use App\Models\Blog;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Filament\Resources\ColorResource\Pages;
+namespace App\Filament\Resources\Colors\Pages;
 
-use App\Filament\Resources\ColorResource;
+use App\Filament\Resources\Colors\ColorResource;
 use Filament\Resources\Pages\CreateRecord;
 
 final class CreateColor extends CreateRecord
