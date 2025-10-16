@@ -4,17 +4,22 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\MetaKeyWords;
 
-use Filament\Schemas\Schema;
-use Filament\Actions\EditAction;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
+use App\Filament\Exports\MetaKeyWordsExporter;
+use App\Filament\Imports\MetaKeyWordsImporter;
 use App\Filament\Resources\MetaKeyWords\Pages\CreateMetaKeyWords;
 use App\Filament\Resources\MetaKeyWords\Pages\EditMetaKeyWords;
 use App\Filament\Resources\MetaKeyWords\Pages\ListMetaKeyWords;
 use App\Models\MetaKeyWords;
+use BackedEnum;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ExportAction;
+use Filament\Actions\ImportAction;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -22,7 +27,7 @@ final class MetaKeyWordsResource extends Resource
 {
     protected static ?string $model = MetaKeyWords::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Schema $schema): Schema
     {
@@ -55,6 +60,10 @@ final class MetaKeyWordsResource extends Resource
             ])
             ->filters([
                 //
+            ])
+            ->headerActions([
+                ImportAction::make()->importer(MetaKeyWordsImporter::class),
+                ExportAction::make()->exporter(MetaKeyWordsExporter::class),
             ])
             ->recordActions([
                 EditAction::make(),
