@@ -47,7 +47,7 @@ final class CategoryController extends Controller
         $category = Category::whereName($category)->first();
         $doors = collect($category->doors()->get());
         $catalogs = $category->attributes()->get();
-        $tags = $doors->mapToGroups(fn($item, $key) => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]])->all();
+        $tags = $doors->mapToGroups(fn ($item, $key) => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]])->all();
         $doors = $doors->groupBy('tag');
         $doors = $doors->all();
 
@@ -56,9 +56,6 @@ final class CategoryController extends Controller
         foreach ($tags_tmp as $collection => $tag) {
             $tags[$collection] = $tag->first();
         }
-
-        // $colorVariants = Door::whereName($door->name)->whereCategoryId($door->category_id)->get()->groupBy('tag')->all();
-        // dd($tags);
 
         return view('collections.show', ['category' => $category, 'doors' => $doors, 'catalogs' => $catalogs, 'tags' => $tags]);
     }
