@@ -45,11 +45,14 @@ final class ImportWoocommerce extends Command
      */
     public function handle()
     {
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         DB::table('products')->truncate();
         DB::table('doors')->truncate();
+        DB::table('attribute_category')->truncate();
         DB::table('attributes')->truncate();
         DB::table('categories')->truncate();
-
+        DB::table('additional_attributes')->truncate();
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
         $this->wooCommerce = new WC(
             UrlPath::BASEURLWC,
             'ck_dae8ceb27e124f2ecd884d0e1aff83ebed5bbdbd',
@@ -195,5 +198,10 @@ final class ImportWoocommerce extends Command
             ]
         );
 
+    }
+
+    public function str_replace_json($search, $replace, $subject): mixed
+    {
+        return json_decode(str_replace($search, $replace, json_encode($subject)));
     }
 }
