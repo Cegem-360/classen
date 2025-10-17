@@ -46,8 +46,7 @@
                                 </div>
                                 <div class="door_color__meta mt-3">
                                     <h4> {{ __($name) }}</h4>
-                                    @dump($name)
-                                    @dump($tag)
+
                                     <p class="text-sm font-bold">{{ __($tag['tag_category']) }}</p>
                                 </div>
                             </div>
