@@ -728,5 +728,17 @@
         "We will get back to you as soon as possible.": "A lehető leghamarabb jelentkezünk.",
         "White": "Fehér",
         "white": "fehér",
-        "Lakier": "Festett ajtó"
+        "Lakier": "Festett ajtó",
+        "black-9005-gold-profile": "fekete-9005-arany-intarzia",
+        "black-9005-black-profile": "fekete-9005-fekete-intarzia",
+        "black-9005-alu-profile": "fekete-9005-alumínium-intarzia",
+        "cashmere-ncs-2005-gold-profile": "cashmere-ncs-2005-arany-intarzia",
+        "cashmere-ncs-2005-black-profile": "cashmere-ncs-2005-fekete-intarzia",
+        "cashmere-ncs-2005-alu-profile": "cashmere-ncs-2005-alumínium-intarzia",
+        "gray-7004-gold-profile": "szürke-7004-arany-intarzia",
+        "gray-7004-black-profile": "szürke-7004-fekete-intarzia",
+        "gray-7004-alu-profile": "szürke-7004-alumínium-intarzia",
+        "white-9003-gold-profile": "fehér-9003-arany-intarzia",
+        "white-9003-black-profile": "fehér-9003-fekete-intarzia",
+        "white-9003-alu-profile": "fehér-9003-alumínium-intarzia"
     }
