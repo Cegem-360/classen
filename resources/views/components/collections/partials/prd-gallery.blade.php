@@ -30,6 +30,7 @@
                        $category->name != 'Standard 2-Pack door frame' &&
                        $category->name != 'Single leaf and double leaf sliding system' &&
                        $category->name != 'Modi Design sliding system' &&
+                       $category->name != 'Adjustable Reverse 80 door frame' &&
                        $category->name != 'Compact' &&
                        $category->name != 'Raktári ajtók' &&
                        $category->name != 'Door Outlet kollekció')

@@ -43,6 +43,12 @@
                     value="{{ __('Standard 2-Pack door frame') }}" wire:model.live="frame" @selected($frame == __('Standard 2-Pack door frame'))>
                 <span class="ml-3 text-xs">{{ __('Standard 2-Pack door frame') }}</span>
             </div>
+            <div class="mb-2 flex">
+                <input class="form-radio" id="{{ Str::slug(__('Adjustable Reverse 80 door frame')) }}" type="radio"
+                    value="{{ __('Adjustable Reverse 80 door frame') }}" wire:model.live="frame"
+                    @selected($frame == __('Adjustable Reverse 80 door frame'))>
+                <span class="ml-3 text-xs">{{ __('Adjustable Reverse 80 door frame') }}</span>
+            </div>
         </div>
     </div>
 

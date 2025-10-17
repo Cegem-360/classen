@@ -49,6 +49,14 @@
                 'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_2_en.jpg',
                 'https://admin.classen.cegem360.hu/wp-content/uploads/2024/02/std_2_pack_1_en.jpg',
             ],
+            'Adjustable Reverse 80 door frame' => [
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2025/10/rew-1-en-270x200-1.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2025/10/rew-2-en-270x200-1.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2025/10/rew-3-en-270x200-1.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2025/10/rew-4-en-270x200-1.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2025/10/rew-5-en-270x200-1.jpg',
+                'https://admin.classen.cegem360.hu/wp-content/uploads/2025/10/rew-6-en-270x200-1.jpg',
+            ],
         ];
     @endphp
     @if ($category->name == 'Adjustable door frame')
@@ -59,6 +67,9 @@
     @endif
     @if ($category->name == 'Standard 2-Pack door frame')
         <x-collections.partials.photos :photos="$photos['Standard 2-Pack door frame']" />
+    @endif
+    @if ($category->name == 'Adjustable Reverse 80 door frame')
+        <x-collections.partials.photos :photos="$photos['Adjustable Reverse 80 door frame']" />
     @endif
 
     <!-- gap -->
