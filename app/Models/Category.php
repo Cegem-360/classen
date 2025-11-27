@@ -22,6 +22,7 @@ final class Category extends Model implements Sitemapable
             'id',
             'name',
             'category_id',
+            'short_description',
             'technical_parameter',
             'additional_options',
             'door_specification',
