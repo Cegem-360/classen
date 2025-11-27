@@ -24,7 +24,7 @@
            <h2 class="mb-3 text-4xl font-bold">{{ __($category?->name) }}</h2>
            <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
            <p class="text-lg leading-7 text-justify">
-               {!! nl2br(e($category?->short_description)) !!}
+               {!! $category?->short_description !!}
            <p>
                @if (
                    $category->name != 'Adjustable door frame' &&
