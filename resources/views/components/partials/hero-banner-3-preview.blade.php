@@ -5,14 +5,7 @@
             'text' => 'CPL fóliás és dekor beltéri ajtók a készlet erejéig raktárról azonnal elérhetők',
             'img_url' => Vite::asset('resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-1.webp'),
             'link_title' => 'Ajtók megtekintése',
-            'url' => route('pages.CPL-folias-es-dekor-belteri-ajtok-akcio'),
-        ],
-        [
-            'title' => 'Hihetetlen áron',
-            'text' => 'CPL fóliás és dekor beltéri ajtók a készlet erejéig raktárról azonnal elérhetők',
-            'img_url' => Vite::asset('resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-1.webp'),
-            'link_title' => 'Ajtók megtekintése',
-            'url' => route('pages.CPL-folias-es-dekor-belteri-ajtok-akcio'),
+            'url' => route('pages.CPL-folias-es-dekor-belteri-ajtok-akcio-banner-2.webp'),
         ],
         [
             'title' => 'Az ajtótokok felületkezeltek',
