@@ -318,7 +318,7 @@ html {
 
     .jsTooltipBig {
         cursor: pointer;
-        background: transparent url(../img/icons/tooltip-icon2.svg) no-repeat;
+        background: transparent url(../img/icons/tooltip-info.svg) no-repeat;
         margin: 0;
         width: 33px;
         height: 32px;
@@ -327,7 +327,7 @@ html {
         top: 0;
 
         &:hover {
-            background-image: url(../img/icons/tooltip-icon.svg);
+            background-image: url(../img/icons/tooltip-info.svg);
         }
     }
 }

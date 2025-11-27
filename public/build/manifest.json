@@ -219,6 +219,10 @@
     "file": "assets/tooltip-icon2-cYKXuiC6.svg",
     "src": "resources/img/icons/tooltip-icon2.svg"
   },
+  "resources/img/icons/tooltip-info.svg": {
+    "file": "assets/tooltip-info-DqyE97Hq.svg",
+    "src": "resources/img/icons/tooltip-info.svg"
+  },
   "resources/img/katalogus-02.webp": {
     "file": "assets/katalogus-02-GZu4L9dn.webp",
     "src": "resources/img/katalogus-02.webp"
@@ -672,7 +676,7 @@
     "src": "resources/img/slide-1.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-_6QwmApQ.js",
+    "file": "assets/app-DaViCqtt.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -681,11 +685,10 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-BYZh7N91.css"
+      "assets/app-BwJVRPlN.css"
     ],
     "assets": [
-      "assets/tooltip-icon2-cYKXuiC6.svg",
-      "assets/tooltip-icon-6REH7RtE.svg"
+      "assets/tooltip-info-DqyE97Hq.svg"
     ]
   },
   "resources/js/customJS.js": {
