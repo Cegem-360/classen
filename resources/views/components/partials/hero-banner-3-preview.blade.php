@@ -1,6 +1,6 @@
 @php
     $heroBannerItems = [
-        [
+        /* [
             'title' => 'Boldog Karácsonyt kívánunk!',
             'text' => 'Köszönjük, hogy idén is velünk tartottak – bízunk benne,
                 hogy jövőre is részesei lehetünk otthona szépítésének.
@@ -8,7 +8,7 @@
             'img_url' => Vite::asset('resources/img/karacsonyi_lap.png'),
             'link_title' => 'Ajtók megtekintése',
             'url' => '#',
-        ],
+        ], */
         [
             'title' => 'Hihetetlen áron',
             'text' => 'CPL fóliás és dekor beltéri ajtók a készlet erejéig raktárról azonnal elérhetők',
