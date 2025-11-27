@@ -1,73 +1,12 @@
-{{-- 
-<div
-    class="mx-auto flex h-1/2 flex-wrap items-center grid-cols-[1fr_3fr] sm:grid-cols-1 bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
-    <div class="relative h-[80vh] sm:h-fit">
-        <!-- Slide 1: Az ajtótokok felületkezeltek -->
-        <div id="slide-1" class="py-24 hero-wrapper sm:py-6">
-            <div class="hero-content">
-                <h2 class="px-6 mb-4 text-5xl font-bold hero-title">Az ajtótokok felületkezeltek</h2>
-                <hr class="relative h-1 mb-6 ml-6 border-0 hero-line w-96 bg-sarga">
-                <h3 class="px-6 text-lg font-bold hero-text">Minden ajtótokunkat modern technológiával, tartós
-                    felületkezeléssel látjuk el, hogy hosszú távon megőrizze szépségét és ellenállóságát.</h3>
-                <a class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white"
-                    href="/ajtok" wire:navigate>
-                    <span>Ajtók megtekintése</span>
-                    <x-svg.hero-btn-arrow />
-                </a>
-            </div>
-        </div>
-        <!-- Slide 2: Elkészült az új katalógus -->
-        <div id="slide-2" class="py-24 hero-wrapper sm:py-6">
-            <div class="hero-content">
-                <h2 class="px-6 mb-4 text-5xl font-bold hero-title">Elkészült az új katalógus</h2>
-                <hr class="relative h-1 mb-6 ml-6 border-0 hero-line w-96 bg-sarga">
-                <h3 class="px-6 text-lg font-bold hero-text">Fedezze fel legújabb termékeinket és inspirálódjon az új
-                    katalógusunkból! Letölthető vagy megtekinthető online.</h3>
-                <a class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white"
-                    href="/letoltesek" wire:navigate>
-                    <span>Katalógus letöltése</span>
-                    <x-svg.hero-btn-arrow />
-                </a>
-            </div>
-        </div>
-        <!-- Slide 3: Raktárról -->
-        <div id="slide-3" class="py-24 hero-wrapper sm:py-6">
-            <div class="hero-content">
-                <h2 class="px-6 mb-4 text-5xl font-bold hero-title">Raktárról azonnal elérhető ajtók</h2>
-                <hr class="relative h-1 mb-6 ml-6 border-0 hero-line w-96 bg-sarga">
-                <h3 class="px-6 text-lg font-bold hero-text">Válogasson raktáron lévő ajtóink közül, gyors szállítással
-                    és kedvező árakkal!</h3>
-                <a class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] px-6 py-2 text-lg font-bold text-white"
-                    href="/ajtok" wire:navigate>
-                    <span>Raktárról elérhető ajtók</span>
-                    <x-svg.hero-btn-arrow />
-                </a>
-            </div>
-        </div>
-        <div class="absolute z-10 block hero-nav bottom-16 sm:hidden">
-            <div class="flex items-center justify-around gap-16 px-6 py-2 mx-auto text-white w-fit">
-                <div class="p-4 bg-white rounded-full cursor-pointer hero-swiper-button-prev"><x-svg.hero-nav-prev />
-                </div>
-                <div class="swiper-pagination hero-swiper-pagination"></div>
-                <div class="p-4 bg-white rounded-full cursor-pointer hero-swiper-button-next"><x-svg.hero-nav-next />
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
- --}}
-
-
-
-
-
-
-
-
-
-
 @php
     $heroBannerItems = [
+        [
+            'title' => 'Hihetetlen áron',
+            'text' => 'CPL fóliás és dekor beltéri ajtók a készlet erejéig raktárról azonnal elérhetők',
+            'img_url' => Vite::asset('resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-1.webp'),
+            'link_title' => 'Ajtók megtekintése',
+            'url' => route('pages.CPL-folias-es-dekor-belteri-ajtok-akcio'),
+        ],
         [
             'title' => 'Hihetetlen áron',
             'text' => 'CPL fóliás és dekor beltéri ajtók a készlet erejéig raktárról azonnal elérhetők',
