@@ -220,7 +220,7 @@
     "src": "resources/img/icons/tooltip-icon2.svg"
   },
   "resources/img/icons/tooltip-info.svg": {
-    "file": "assets/tooltip-info-DqyE97Hq.svg",
+    "file": "assets/tooltip-info-g4pbaeMe.svg",
     "src": "resources/img/icons/tooltip-info.svg"
   },
   "resources/img/katalogus-02.webp": {
@@ -676,7 +676,7 @@
     "src": "resources/img/slide-1.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DaViCqtt.js",
+    "file": "assets/app-DheDRgrn.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -685,10 +685,10 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-BwJVRPlN.css"
+      "assets/app-BtYfqyz8.css"
     ],
     "assets": [
-      "assets/tooltip-info-DqyE97Hq.svg"
+      "assets/tooltip-info-g4pbaeMe.svg"
     ]
   },
   "resources/js/customJS.js": {
