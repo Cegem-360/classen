@@ -219,9 +219,17 @@
     "file": "assets/tooltip-icon2-cYKXuiC6.svg",
     "src": "resources/img/icons/tooltip-icon2.svg"
   },
+  "resources/img/icons/tooltip-info-orig.svg": {
+    "file": "assets/tooltip-info-orig-g4pbaeMe.svg",
+    "src": "resources/img/icons/tooltip-info-orig.svg"
+  },
   "resources/img/icons/tooltip-info.svg": {
-    "file": "assets/tooltip-info-g4pbaeMe.svg",
+    "file": "assets/tooltip-info-B0Zb4pzj.svg",
     "src": "resources/img/icons/tooltip-info.svg"
+  },
+  "resources/img/icons/tooltip-info2.svg": {
+    "file": "assets/tooltip-info2-C1iSsJI2.svg",
+    "src": "resources/img/icons/tooltip-info2.svg"
   },
   "resources/img/karacsonyi_lap.png": {
     "file": "assets/karacsonyi_lap-CGHjg2fM.png",
@@ -680,7 +688,7 @@
     "src": "resources/img/slide-1.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-DheDRgrn.js",
+    "file": "assets/app-LW05XIK_.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -689,10 +697,11 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-BtYfqyz8.css"
+      "assets/app-Dn59T9w1.css"
     ],
     "assets": [
-      "assets/tooltip-info-g4pbaeMe.svg"
+      "assets/tooltip-info-B0Zb4pzj.svg",
+      "assets/tooltip-info2-C1iSsJI2.svg"
     ]
   },
   "resources/js/customJS.js": {
@@ -708,7 +717,7 @@
     "isEntry": true
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-BpOtLOS_.js",
+    "file": "assets/swiperJS-RYhaCT7o.js",
     "name": "swiperJS",
     "src": "resources/js/swiperJS.js",
     "isEntry": true

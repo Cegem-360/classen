@@ -327,7 +327,7 @@ html {
         top: 0;
 
         &:hover {
-            background-image: url(../img/icons/tooltip-info.svg);
+            background-image: url(../img/icons/tooltip-info2.svg);
         }
     }
 }

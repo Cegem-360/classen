@@ -224,7 +224,7 @@ export function initSwiperJS() {
             tippy.js
        ##################################  */
     tippy(".jsTooltipBig", {
-        trigger: "click",
+        trigger: "mouseenter",
         hideOnClick: true,
         allowHTML: true,
         theme: "arcadia",
