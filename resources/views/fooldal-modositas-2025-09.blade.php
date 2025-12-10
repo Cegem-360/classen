@@ -17,11 +17,12 @@
 
     {{-- Ideiglenes értesítés - 2025.12.13-ig megjelenik --}}
     @if (now()->lte(\Carbon\Carbon::parse('2025-12-13 23:59:59')))
-        <div class="w-full bg-[#434B58] py-3">
+        <div class="w-full bg-[#d50606] py-3">
             <div class="container mx-auto px-4 text-center">
                 <p class="text-white text-sm md:text-base">
                     <span class="font-semibold">Kedves Vásárlóink!</span>
-                    Tájékoztatjuk Önöket, hogy <span class="font-bold">2025. december 13-án (szombat)</span> üzletünk zárva tart.
+                    Tájékoztatjuk Önöket, hogy <span class="font-bold">2025. december 13-án (szombat)</span> üzletünk
+                    zárva tart.
                     Megértésüket köszönjük, szeretettel várjuk Önöket a többi napon!
                 </p>
             </div>
@@ -176,8 +177,8 @@
                         class="absolute bottom-4 left-4 bg-white/80 text-[#434B58] px-4 py-2 rounded font-bold text-lg shadow">Clif</span>
                     <span
                         class="absolute right-4 bottom-4 text-[#978f88] group-hover:translate-x-2 transition-transform">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
-                            class="w-6 h-6">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                         </svg>
                     </span>
