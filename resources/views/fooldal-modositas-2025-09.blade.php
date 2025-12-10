@@ -14,6 +14,20 @@
         <meta name="keywords"
             content="beltéri ajtók, festett ajtók, fa mintázatú ajtók, modern ajtók, klasszikus ajtók, rusztikus ajtók, Budapest, Citroën utca 4., Arcadia 98 Kft.">
     </x-slot>
+
+    {{-- Ideiglenes értesítés - 2025.12.13-ig megjelenik --}}
+    @if (now()->lte(\Carbon\Carbon::parse('2025-12-13 23:59:59')))
+        <div class="w-full bg-[#434B58] py-3">
+            <div class="container mx-auto px-4 text-center">
+                <p class="text-white text-sm md:text-base">
+                    <span class="font-semibold">Kedves Vásárlóink!</span>
+                    Tájékoztatjuk Önöket, hogy <span class="font-bold">2025. december 13-án (szombat)</span> üzletünk zárva tart.
+                    Megértésüket köszönjük, szeretettel várjuk Önöket a többi napon!
+                </p>
+            </div>
+        </div>
+    @endif
+
     <!-- Hero banner (prezentációhoz) -->
 
     <x-partials.hero-banner-3-preview />
