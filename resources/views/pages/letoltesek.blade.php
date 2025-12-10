@@ -22,11 +22,16 @@
             <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
         <div class="grid grid-cols-6 gap-12 md:grid-cols-2">
-            <a href="{{ Storage::url('dl/Arcadia_98_Kft_Belteri_ajto_katalogus_2025.pdf') }}" target="_blank">
+            <a href="{{ Storage::url('dl/katalog_classen_hu_2025_01_251209.pdf') }}" target="_blank">
+                <img src="{{ Vite::asset('resources/img/cover-images/Belteri_ajto_katalogus_2025.jpg') }}"
+                    alt="Arcadia_98_Kft_Beltéri_ajtó_katalógus_2025.pdf" />
+                <p class="mt-3 text-sm">Arcadia98 Kft. Ajtókatalógus 2025 12 09 HU</p>
+            </a>
+            {{-- <a href="{{ Storage::url('dl/Arcadia_98_Kft_Belteri_ajto_katalogus_2025.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Belteri_ajto_katalogus_2025.jpg') }}"
                     alt="Arcadia_98_Kft_Beltéri_ajtó_katalógus_2025.pdf" />
                 <p class="mt-3 text-sm">Arcadia98 Kft. bővített beltéri ajtókatalógus 2025-HU-ENG</p>
-            </a>
+            </a> --}}
             <a href="{{ Storage::url('dl/Dooroutlet_Szabvany_belteri_ajto_katalogus_2025.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Szabvany_belteri_ajto_katalogus_2025.jpg') }}"
                     alt="Dooroutlet_Szabvány_beltéri_ajtó_katalógus_2025.pdf" />

@@ -47,22 +47,8 @@ final class ManagePageContentController extends Controller
         return view('favorites.index', ['products' => $products]);
     }
 
-    public function rolunk()
-    {
-        return view('rolunk/index');
-    }
-
-    public function kapcsolat()
-    {
-        return view('kapcsolat/index');
-    }
-
     public function sendContact(Request $request)
     {
-
-        /* if ($request->website !== '') {
-            return redirect()->route('kapcsolat')->error(__('Bot detected!'));
-        } */
 
         $request->validate([
             'first_name' => ['required'],
@@ -87,11 +73,6 @@ final class ManagePageContentController extends Controller
         ));
 
         return redirect()->route('kapcsolat')->success(__('Message sent successfully!'));
-    }
-
-    public function szolgaltatasaink()
-    {
-        return view('szolgaltatasaink/index');
     }
 
     // ne nyulj hozzá

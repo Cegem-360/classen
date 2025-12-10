@@ -27,7 +27,7 @@ use Illuminate\Support\Str;
 
 /* Route::get('/fooldal-regi', [ManagePageContentController::class, 'index'])->name('index'); */
 /* Route::get('/fooldal-modositas-2025-09', [\App\Http\Controllers\ManagePageContentFooldalModositas202509Controller::class, 'index'])->name('fooldal-modositas-2025-09'); */
-Route::get('/', [\App\Http\Controllers\ManagePageContentFooldalModositas202509Controller::class, 'index'])->name('index');
+Route::get('/', [App\Http\Controllers\ManagePageContentFooldalModositas202509Controller::class, 'index'])->name('index');
 
 Route::get('/ajtok', [DoorController::class, 'index'])->name('door.index');
 Route::get('/ajtok/{door}', [DoorController::class, 'show'])->name('door.show');
@@ -39,16 +39,10 @@ Route::prefix('kollekciok')->as('category.')->group(function () {
 Route::get('/category-import', [CategoryController::class, 'upload']);
 Route::post('/category-proccess', [CategoryController::class, 'import'])->name('exel.proccess');
 
-Route::get('/rolunk', [ManagePageContentController::class, 'rolunk'])->name('rolunk');
-
-Route::get('/kapcsolat', [ManagePageContentController::class, 'kapcsolat'])->name('kapcsolat');
-
 Route::prefix('mail')->as('mail.')->group(function () {
     // Route::get('/contact', [ManagePageContentController::class, 'contact'])->name('contact');
     Route::post('/sendContact', [ManagePageContentController::class, 'sendContact'])->name('sendContact');
 });
-
-Route::get('/szolgaltatasaink', [ManagePageContentController::class, 'szolgaltatasaink'])->name('szolgaltatasaink');
 
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
@@ -56,11 +50,12 @@ Route::get('/blog/{slug}', [BlogController::class, 'show'])->name('blog.show');
 Route::prefix('kedvencek')->as('favorites.')->group(function () {
     Route::get('/', [ManagePageContentController::class, 'favorites'])->name('index');
 });
-Route::get('/letoltesek', function () {
-    return view('letoltesek.index');
-})->name('downloads');
 
-Route::view('/kilincsek', 'kilincsek.index')->name('kilincsek');
+Route::view('/rolunk', 'pages.rolunk')->name('rolunk');
+Route::view('/kapcsolat', 'pages.kapcsolat')->name('kapcsolat');
+Route::view('/letoltesek', 'pages.letoltesek')->name('downloads');
+Route::view('/szolgaltatasaink', 'pages.szolgaltatasaink')->name('szolgaltatasaink');
+Route::view('/kilincsek', 'pages.kilincsek')->name('kilincsek');
 Route::view(
     '/'.Str::slug('Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók', '-', 'hu'),
     'google.index'
@@ -150,4 +145,3 @@ Route::get('/ir-wenge-belteri-ajto-akcio', function () {
 Route::get('/CPL-folias-es-dekor-belteri-ajtok-akcio', function () {
     return view('pages.CPL-folias-es-dekor-belteri-ajtok-akcio');
 })->name('pages.CPL-folias-es-dekor-belteri-ajtok-akcio');
-
