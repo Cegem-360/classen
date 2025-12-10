@@ -23,7 +23,7 @@ final class ManagePageContentController extends Controller
     {
         $latestBlogs = Blog::latest()->take(3)->get();
 
-        return view('index', ['latestBlogs' => $latestBlogs]);
+        return view('fooldal-modositas-2025-09', ['latestBlogs' => $latestBlogs]);
     }
 
     public function favorites(Request $request)

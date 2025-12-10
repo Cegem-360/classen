@@ -12,22 +12,7 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-
-// home
-
-/* Route::get('/fooldal-regi', [ManagePageContentController::class, 'index'])->name('index'); */
-/* Route::get('/fooldal-modositas-2025-09', [\App\Http\Controllers\ManagePageContentFooldalModositas202509Controller::class, 'index'])->name('fooldal-modositas-2025-09'); */
-Route::get('/', [App\Http\Controllers\ManagePageContentFooldalModositas202509Controller::class, 'index'])->name('index');
+Route::get('/', [ManagePageContentController::class, 'index'])->name('index');
 
 Route::get('/ajtok', [DoorController::class, 'index'])->name('door.index');
 Route::get('/ajtok/{door}', [DoorController::class, 'show'])->name('door.show');
@@ -40,7 +25,6 @@ Route::get('/category-import', [CategoryController::class, 'upload']);
 Route::post('/category-proccess', [CategoryController::class, 'import'])->name('exel.proccess');
 
 Route::prefix('mail')->as('mail.')->group(function () {
-    // Route::get('/contact', [ManagePageContentController::class, 'contact'])->name('contact');
     Route::post('/sendContact', [ManagePageContentController::class, 'sendContact'])->name('sendContact');
 });
 
@@ -56,6 +40,15 @@ Route::view('/kapcsolat', 'pages.kapcsolat')->name('kapcsolat');
 Route::view('/letoltesek', 'pages.letoltesek')->name('downloads');
 Route::view('/szolgaltatasaink', 'pages.szolgaltatasaink')->name('szolgaltatasaink');
 Route::view('/kilincsek', 'pages.kilincsek')->name('kilincsek');
+Route::view('/kiemelt-termekeink', 'pages.kiemelt-termekeink')->name('kiemelt-termekeink');
+Route::view('/raktari-ajtok–megbizhatosag-tartossag', 'google.raktari-ajtok–megbizhatosag-tartossag')->name('seo.raktari-ajtok-megbizhatosag-tartossag');
+Route::view('/raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere', 'google.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere')->name('seo.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere');
+Route::view('beltéri-ajtók–stilus-minőség-tartósság', 'google.belteri')->name('seo.belteri-ajtok');
+Route::view('/cpl-belteri-ajtok-karcallo-modern-ajtok', 'google.cpl')->name('seo.cpl');
+Route::view('/aszf', 'pages.aszf')->name('aszf');
+Route::view('/adatvedelmi-nyilatkozat', 'pages.adatvedelem')->name('adatvedelem');
+Route::view('/ir-wenge-belteri-ajto-akcio', 'pages.ir-wenge-belteri-ajto-akcio')->name('ir-wenge-akcio');
+Route::view('/CPL-folias-es-dekor-belteri-ajtok-akcio', 'pages.CPL-folias-es-dekor-belteri-ajtok-akcio')->name('pages.CPL-folias-es-dekor-belteri-ajtok-akcio');
 Route::view(
     '/'.Str::slug('Fa mintázatú beltéri ajtók, festett beltéri ajtók, modul beltéri ajtók, technikai beltéri ajtók', '-', 'hu'),
     'google.index'
@@ -73,8 +66,6 @@ Route::view(
     'google.woodenstyle'
 )->name('woodenstyle');
 
-Route::view('/kiemelt-termekeink', 'kiemelt-termekeink')->name('kiemelt-termekeink');
-
 Route::prefix('ajanlatkeres')->as('quotation.')->middleware('ensure.quotation')->group(function () {
     Route::get('/', [QuotationController::class, 'index'])->name('index');
     Route::post('/add/{door}', [QuotationController::class, 'addItem'])->name('add');
@@ -83,19 +74,6 @@ Route::prefix('ajanlatkeres')->as('quotation.')->middleware('ensure.quotation')-
     Route::delete('/delete/{quotationItem}', [QuotationController::class, 'deleteItem'])->name('remove');
     Route::patch('/update/{quotationItem}', [QuotationController::class, 'updateItem'])->name('updateItem');
 });
-
-Route::get('/raktari-ajtok–megbizhatosag-tartossag', function () {
-    return view('google.raktari-ajtok–megbizhatosag-tartossag');
-})->name('seo.raktari-ajtok-megbizhatosag-tartossag');
-Route::get('/raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere', function () {
-    return view('google.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere');
-})->name('seo.raktari-ajtok-tokeletes-valasztas-otthonaba-es-munkahelyere');
-Route::get('beltéri-ajtók–stilus-minőség-tartósság', function () {
-    return view('google.belteri');
-})->name('seo.belteri-ajtok');
-Route::get('/cpl-belteri-ajtok-karcallo-modern-ajtok', function () {
-    return view('google.cpl');
-})->name('seo.cpl');
 
 // ne nyulj hozzá
 Route::post('/xmlExport', [ManagePageContentController::class, 'xmlExport']);
@@ -108,8 +86,6 @@ Route::prefix('updateWebsiteDatabase')->as('updateWebsiteDatabase.')->group(func
     Route::get('/', [DatabaseUpdaterController::class, 'trigger'])->name('trigger');
 });
 
-Route::view('/aszf', 'jogi.aszf')->name('aszf');
-Route::view('/adatvedelmi-nyilatkozat', 'jogi.adatvedelem')->name('adatvedelem');
 Route::get('/refreshDatabase', function () {
     Artisan::call('migrate:fresh', ['--seed' => 1]);
 });
@@ -135,13 +111,3 @@ Route::prefix('kiemelt-ertekesitesi-teruleteink')->as('featured-sales-areas.')->
     })->name('show');
 
 });
-
-// IR-WENGE akciós oldal
-Route::get('/ir-wenge-belteri-ajto-akcio', function () {
-    return view('pages.ir-wenge-belteri-ajto-akcio');
-})->name('ir-wenge-akcio');
-
-// CPL fóliás és dekor beltéri ajtók akciós oldal
-Route::get('/CPL-folias-es-dekor-belteri-ajtok-akcio', function () {
-    return view('pages.CPL-folias-es-dekor-belteri-ajtok-akcio');
-})->name('pages.CPL-folias-es-dekor-belteri-ajtok-akcio');
