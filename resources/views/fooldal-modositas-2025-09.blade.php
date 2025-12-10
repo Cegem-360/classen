@@ -15,6 +15,7 @@
             content="beltéri ajtók, festett ajtók, fa mintázatú ajtók, modern ajtók, klasszikus ajtók, rusztikus ajtók, Budapest, Citroën utca 4., Arcadia 98 Kft.">
     </x-slot>
     <!-- Hero banner (prezentációhoz) -->
+
     <x-partials.hero-banner-3-preview />
 
     <!-- Ajto tipusok -->
@@ -203,7 +204,6 @@
         </div>
     </section>
 
-
     <div class="flex flex-wrap items-center justify-end mx-auto text-white bg-cover ad-banner h-1/2"
         style="background-position: 50% 50%; background-image: url('{{ Vite::asset('resources/img/kozepso_banner_hatter.webp') }}');">
         <div class="banner-container -mt-12 mb-12 h-[50vh] w-1/2 bg-zold_attetszo px-16 py-24 sm:w-full">
@@ -220,7 +220,6 @@
             </a>
         </div>
     </div>
-
 
     <!-- Vélemények szakasz -->
     <section class="w-full py-20 bg-gray-100">
@@ -314,18 +313,8 @@
         </div>
     </section>
 
-
-
-
-
-
     <!-- Elonyok -->
     <x-partials.elonyok />
-
-
-
-
-
 
     <!-- Új szakasz: Ajtókereső és kedvencek -->
     <section class="w-full py-32 bg-cover bg-center relative"
@@ -356,12 +345,6 @@
 
     </section>
 
-
-
-
-
-
-
     <!-- Termekek carousel -->
     {{-- <x-partials.blog :latestBlogs='$latestBlogs' /> --}}
 
@@ -376,8 +359,6 @@
 
     <!-- Szakértő segítség -->
     <x-partials.expert-help />
-
-
 
     <!-- Footer -->
     <x-footer.layout></x-footer.layout>
