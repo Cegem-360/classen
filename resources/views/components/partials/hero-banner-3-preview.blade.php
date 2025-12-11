@@ -1,13 +1,13 @@
 @php
     $heroBannerItems = [
         [
-            'title' => 'Boldog Karácsonyt kívánunk!',
-            'text' => 'Köszönjük, hogy idén is velünk tartottak – bízunk benne,
-                hogy jövőre is részesei lehetünk otthona szépítésének.
-                <br><br>🎅 Békés, boldog karácsonyt és sikerekben gazdag új évet kíván az Arcadia 98 csapata!',
-            'img_url' => Vite::asset('resources/img/karacsonyi_lap.png'),
+            'title' => '🎄 Karácsonyi Üdvözlet',
+            'text' => 'Köszönjük egész éves bizalmukat! Bízunk benne, hogy jövőre is segíthetjük otthonuk szépítését.
+                <br><br>🎅 Békés, boldog karácsonyt és sikerekben gazdag új évet kíván az Arcadia 98 csapata!
+                <br><br><strong>🗓️ Ünnepi nyitvatartás:</strong><br>Zárva: december 24. – január 4.<br>Nyitás: 2026. január 5., hétfő',
+            'img_url' => Vite::asset('resources/img/arcadia karácsony.webp'),
             'link_title' => 'Ajtók megtekintése',
-            'url' => '#',
+            'url' => '/ajtok',
         ],
         [
             'title' => 'Hihetetlen áron',
