@@ -2,8 +2,7 @@
     $heroBannerItems = [
         [
             'title' => '🎄 Karácsonyi Üdvözlet',
-            'text' => 'Köszönjük egész éves bizalmukat! Bízunk benne, hogy jövőre is segíthetjük otthonuk szépítését.
-                <br><br>🎅 Békés, boldog karácsonyt és sikerekben gazdag új évet kíván az Arcadia 98 csapata!
+            'text' => '🎅 Békés, boldog karácsonyt és sikerekben gazdag új évet kíván az Arcadia 98 csapata!
                 <br><br><strong>🗓️ Ünnepi nyitvatartás:</strong><br>Zárva: december 24. – január 4.<br>Nyitás: 2026. január 5., hétfő',
             'img_url' => Vite::asset('resources/img/arcadia karácsony.webp'),
             'link_title' => 'Ajtók megtekintése',
