@@ -79,9 +79,9 @@
     <!-- gap -->
     <div class="min-h-[10px]"></div>
 
-    @isset($category->technical_parameter && $category->additional_options)
+    @if($category->technical_parameter && $category->additional_options)
         <x-collections.partials.technical-parameters :technical_parameter='$category->technical_parameter' :additional_options='$category->additional_options' />
-    @endisset
+    @endif
 
     <x-footer.layout></x-footer.layout>
 
