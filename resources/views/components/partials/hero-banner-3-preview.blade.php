@@ -1,14 +1,6 @@
 @php
     $heroBannerItems = [
         [
-            'title' => '🎄 Karácsonyi Üdvözlet',
-            'text' => '🎅 Békés, boldog karácsonyt és sikerekben gazdag új évet kíván az Arcadia 98 csapata!
-                <br><br><strong>🗓️ Ünnepi nyitvatartás:</strong><br>Zárva: december 24. – január 4.<br>Nyitás: 2026. január 5., hétfő',
-            'img_url' => Vite::asset('resources/img/arcadia karácsony.webp'),
-            'link_title' => 'Ajtók megtekintése',
-            'url' => '/ajtok',
-        ],
-        [
             'title' => 'Hihetetlen áron',
             'text' => 'CPL fóliás és dekor beltéri ajtók a készlet erejéig raktárról azonnal elérhetők',
             'img_url' => Vite::asset('resources/img/CPL-folias-es-dekor-belteri-ajtok-akcio-banner-2.webp'),
