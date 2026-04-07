@@ -15,6 +15,10 @@
             content="beltéri ajtók, festett ajtók, fa mintázatú ajtók, modern ajtók, klasszikus ajtók, rusztikus ajtók, Budapest, Citroën utca 4., Arcadia 98 Kft.">
     </x-slot>
 
+    <x-slot name="schema">
+        <x-schema.localbusiness />
+    </x-slot>
+
     {{-- Ideiglenes értesítés - 2025.12.13-ig megjelenik --}}
     @if (now()->lte(\Carbon\Carbon::parse('2025-12-13 23:59:59')))
         <div class="w-full bg-[#d50606] py-3">

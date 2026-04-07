@@ -12,6 +12,10 @@
 
     </x-slot>
 
+    <x-slot name="schema">
+        <x-schema.faq-cpl />
+    </x-slot>
+
     <x-nav.breadcrumb>
         CPL fóliás és dekor beltéri ajtók akció
     </x-nav.breadcrumb>

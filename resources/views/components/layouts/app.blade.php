@@ -16,6 +16,11 @@
             {{ $meta }}
         @endisset
 
+        {{-- Schema.org structured data --}}
+        @isset($schema)
+            {{ $schema }}
+        @endisset
+
         @isset($style)
             <style>
                 {{ $style }}

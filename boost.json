@@ -1,7 +1,17 @@
 {
     "agents": [
-        "claude_code",
-        "copilot"
+        "claude_code"
     ],
-    "guidelines": []
+    "guidelines": true,
+    "herd_mcp": true,
+    "mcp": true,
+    "packages": [
+        "filament/filament"
+    ],
+    "sail": false,
+    "skills": [
+        "livewire-development",
+        "pest-testing",
+        "tailwindcss-development"
+    ]
 }
