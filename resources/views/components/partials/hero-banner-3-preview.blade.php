@@ -33,7 +33,7 @@
     ];
 @endphp
 <div
-    class="mx-auto flex h-1/2 flex-wrap items-center  grid-cols-[1fr_3fr] sm:grid-cols-1 bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
+    class="mx-auto flex h-1/2 flex-wrap items-center grid! grid-cols-[1fr_3fr] sm:grid-cols-1 bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
 
     <div class="relative h-[80vh] sm:h-fit">
         @foreach ($heroBannerItems as $index => $item)
