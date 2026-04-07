@@ -33,7 +33,7 @@
     ];
 @endphp
 <div
-    class="mx-auto flex h-1/2 flex-wrap items-center !grid grid-cols-[1fr_3fr] sm:grid-cols-1 bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
+    class="mx-auto flex h-1/2 flex-wrap items-center  grid-cols-[1fr_3fr] sm:grid-cols-1 bg-gradient-to-b from-[#978f88] to-[#c4c0bd] text-white">
 
     <div class="relative h-[80vh] sm:h-fit">
         @foreach ($heroBannerItems as $index => $item)
@@ -42,7 +42,7 @@
                     <h2 class="px-6 mb-4 text-5xl font-bold hero-title">{{ $item['title'] }}</h2>
                     <hr class="relative h-1 mb-6 ml-6 border-0 hero-line w-96 bg-sarga">
                     <h3 class="px-6 text-lg font-bold hero-text">{!! $item['text'] !!}</h3>
-                    <a class="hero-cta group mt-8 flex w-full items-center justify-between bg-[#434B5855] bg-sarga px-6 py-2 text-lg font-bold text-black"
+                    <a class="hero-cta group mt-8 flex w-full items-center justify-between  bg-sarga px-6 py-2 text-lg font-bold text-black"
                         href="{{ $item['url'] }}" wire:navigate>
                         <span>{{ $item['link_title'] }}</span>
                         <x-svg.hero-btn-arrow />
@@ -65,7 +65,7 @@
         <div class="swiper-wrapper">
             @foreach ($heroBannerItems as $item)
                 <div class="swiper-slide">
-                    <div class="hero-image sm:h-[70vw] h-[80vh] bg-cover bg-center sm:h-[100vh]"
+                    <div class="hero-image  h-[80vh] bg-cover bg-center sm:h-[100vh]"
                         style="background-position: 40% 50%; background-image: url('{{ $item['img_url'] }}');"></div>
                 </div>
             @endforeach

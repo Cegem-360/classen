@@ -692,7 +692,7 @@
     "src": "resources/img/slide-1.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-vTnu7mcE.js",
+    "file": "assets/app-Db4AHS9y.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -701,7 +701,7 @@
       "resources/js/favorites.js"
     ],
     "css": [
-      "assets/app-BOKkBVoq.css"
+      "assets/app-BCUmk08x.css"
     ],
     "assets": [
       "assets/tooltip-info-B0Zb4pzj.svg",
@@ -721,7 +721,7 @@
     "isEntry": true
   },
   "resources/js/swiperJS.js": {
-    "file": "assets/swiperJS-DRAD0V2F.js",
+    "file": "assets/swiperJS-CW5aIPUI.js",
     "name": "swiperJS",
     "src": "resources/js/swiperJS.js",
     "isEntry": true
