@@ -65,7 +65,7 @@
         <div class="swiper-wrapper">
             @foreach ($heroBannerItems as $item)
                 <div class="swiper-slide">
-                    <div class="hero-image  h-[80vh] bg-cover bg-center sm:h-[100vh]"
+                    <div class="hero-image h-[80vh] bg-cover bg-center sm:h-[100vh]"
                         style="background-position: 40% 50%; background-image: url('{{ $item['img_url'] }}');"></div>
                 </div>
             @endforeach

@@ -11,9 +11,9 @@
                 <strong class="text-4xl text-sarga">1.</strong>{{ __(' Choose the surface colour') }}
             </h3>
             <div class="swiper door-fronts-swiper-thumbs door_colors">
-                <div class="swiper-wrapper !grid min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
+                <div class="swiper-wrapper grid! min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
                     @foreach ($tags as $name => $tag)
-                        <div class="swiper-slide door_color m-px !h-auto !w-auto p-3">
+                        <div class="swiper-slide door_color m-px h-auto! w-auto! p-3">
                             <div class="door_color__wrapper">
                                 <div class="door_color__image">
                                     <img src="{{ $tag['tag_img_url'] }}" alt="White" loading="lazy" loading='lazy'>
@@ -36,7 +36,7 @@
                 <div class="swiper door-fronts-swiper w-full">
                     <div class="swiper-wrapper items-center">
                         @foreach ($doors as $collection)
-                            <div class="swiper-slide !grid grid-cols-3 gap-6 md:grid-cols-2">
+                            <div class="swiper-slide grid! grid-cols-3 gap-6 md:grid-cols-2">
                                 @foreach ($collection as $item)
                                     <div class="relative grid">
                                         <img class="max-h-[500px]" src="{{ $item->img_url }}" alt=""

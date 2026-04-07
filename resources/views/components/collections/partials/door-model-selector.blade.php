@@ -2,7 +2,7 @@
    <div class="mx-8 grid grid-cols-2 gap-3 md:grid-cols-1">
        <div class="door-model-swiper w-full">
            <div class="bg-neutral-200 p-12">
-               <div class="!flex justify-center sm:w-full">
+               <div class="flex! justify-center sm:w-full">
                    <img class="max-h-[500px]"
                        src="{{ $door->img_url ?? Vite::asset('resources/img/placeholder.webp') }}" />
                </div>

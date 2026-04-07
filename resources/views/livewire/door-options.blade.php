@@ -30,7 +30,7 @@
                 <h3 class="doors__subheader mb-6 text-2xl font-bold">
                     <strong class="text-4xl text-sarga">1.</strong>{{ __(' Choose the surface colour') }}
                 </h3>
-                <div class="door_colors !grid min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
+                <div class="door_colors grid! min-h-[330px] grid-cols-4 items-start lg:grid-cols-3 md:grid-cols-2">
                     @foreach ($tags as $name => $tag)
                         @if ($loop->first)
                             <script>
@@ -39,7 +39,7 @@
                                 });
                             </script>
                         @endif
-                        <div class="door_color m-px !h-auto !w-auto cursor-pointer p-3" id="{{ $tag['tag'] }}-icon">
+                        <div class="door_color m-px h-auto! w-auto! cursor-pointer p-3" id="{{ $tag['tag'] }}-icon">
                             <div class="door_color__wrapper">
                                 <div class="door_color__image" onclick="selectColor('{{ $tag['tag'] }}')">
                                     <img src="{{ $tag['tag_img_url'] }}" alt="White">

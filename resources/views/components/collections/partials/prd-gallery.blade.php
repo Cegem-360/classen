@@ -11,7 +11,7 @@
            </div>
        </div>
        <div class="w-full swiper detail-page-swiper-thumbs md:w-1/3" thumbsSlider="">
-           <div class="swiper-wrapper !h-auto flex-wrap">
+           <div class="swiper-wrapper h-auto! flex-wrap">
                @foreach ($category?->gallery_imgs as $img)
                    <div class="swiper-slide">
                        <img src=" {{ !empty($img) ? $img : Vite::asset('resources/img/placeholder.webp') }}"
