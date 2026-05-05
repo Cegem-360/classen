@@ -28,9 +28,8 @@ final class AdminPanelServiceProvider extends PanelProvider
         return $panel
             ->default()
             ->id('admin')
-            ->path('app')
+            ->path('belepes')
             ->login()
-            ->loginRouteSlug('belepes')
             ->colors([
                 'primary' => Color::Amber,
             ])
