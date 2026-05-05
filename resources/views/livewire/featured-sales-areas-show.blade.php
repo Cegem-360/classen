@@ -1,9 +1,8 @@
 <div>
-    {{-- Meta tags for SEO and social sharing --}}
     <x-slot name="meta">
         <meta name="description" content="{{ $featuredSalesPage->excerpt ?? 'Kiemelt értékesítési területek' }}">
         <meta name="keywords" content="{{ $featuredSalesPage->tags ?? 'értékesítési terület, kiemelt, ajánlat' }}">
-        <meta name="author" content="{{ $featuredSalesPage->author ?? 'Cegem360 Kft.' }}">
+        <meta name="author" content="{{ $featuredSalesPage->author ?? 'Arcadia 98 Kft.' }}">
         <meta property="og:title" content="{{ $featuredSalesPage->title ?? 'Kiemelt értékesítési területek' }}">
         <meta property="og:description" content="{{ $featuredSalesPage->excerpt ?? 'Kiemelt értékesítési területek' }}">
         <meta property="og:image"
@@ -15,6 +14,45 @@
             content="{{ $featuredSalesPage->excerpt ?? 'Kiemelt értékesítési területek' }}">
         <meta name="twitter:image"
             content="{{ $featuredSalesPage->featured_media ?? asset('images/default-featured.jpg') }}">
+
+        {{-- Schema.org JSON-LD --}}
+        <script type="application/ld+json">
+        {!! json_encode([
+            '@context' => 'https://schema.org',
+            '@graph'   => array_filter([
+
+                // 1. Article
+                [
+                    '@type'            => 'Article',
+                    'headline'         => $featuredSalesPage->title,
+                    'description'      => $featuredSalesPage->excerpt,
+                    'url'              => request()->url(),
+                    'inLanguage'       => 'hu-HU',
+                    'articleSection'   => 'Kiemelt értékesítési területeink',
+                    'datePublished'    => optional($featuredSalesPage->created_at)->toIso8601String(),
+                    'dateModified'     => optional($featuredSalesPage->updated_at)->toIso8601String(),
+                    'image'            => $featuredSalesPage->featured_media
+                        ? ['@type' => 'ImageObject', 'url' => $featuredSalesPage->featured_media]
+                        : null,
+                    'author'    => ['@type' => 'Organization', '@id' => 'https://arcadia98.hu/#organization'],
+                    'publisher' => ['@type' => 'Organization', '@id' => 'https://arcadia98.hu/#organization'],
+                    'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => request()->url()],
+                ],
+
+                // 2. BreadcrumbList
+                [
+                    '@type'           => 'BreadcrumbList',
+                    'itemListElement' => [
+                        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Főoldal',                          'item' => url('/')],
+                        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Kiemelt értékesítési területeink', 'item' => url('/kiemelt-ertekesitesi-teruleteink')],
+                        ['@type' => 'ListItem', 'position' => 3, 'name' => $featuredSalesPage->title,          'item' => request()->url()],
+                    ],
+                ],
+
+            ]),
+        ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
+        </script>
+
         <style>
             .featured-sales-wrapper {
 
@@ -65,14 +103,15 @@
                 ol {
                     margin: 1rem 0;
                 }
+            }
         </style>
     </x-slot>
+
     @empty($featuredSalesPage)
         <p class="text-gray-500">Nincs elérhető kiemelt értékesítési terület.</p>
     @else
         <div class="mx-auto max-w-4xl">
             <h3 class="mb-4 font-semibold text-lg text-gray-800">{{ $featuredSalesPage->title }}</h3>
-
             <div class="featured-sales-wrapper mt-2 text-gray-600">{!! $featuredSalesPage->content !!}</div>
         </div>
     @endempty
