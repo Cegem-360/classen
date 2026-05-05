@@ -2,14 +2,17 @@
     "agents": [
         "claude_code"
     ],
+    "cloud": false,
     "guidelines": true,
-    "herd_mcp": true,
     "mcp": true,
+    "nightwatch": false,
     "packages": [
-        "filament/filament"
+        "filament/filament",
+        "filament/blueprint"
     ],
     "sail": false,
     "skills": [
+        "laravel-best-practices",
         "livewire-development",
         "pest-testing",
         "tailwindcss-development"
