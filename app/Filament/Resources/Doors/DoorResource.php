@@ -4,11 +4,6 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Doors;
 
-use Filament\Schemas\Schema;
-use Filament\Actions\ExportAction;
-use Filament\Actions\EditAction;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
 use App\Filament\Exports\DoorExportByCategoryExporter;
 use App\Filament\Exports\DoorExporter;
 use App\Filament\Resources\Doors\Pages\CreateDoor;
@@ -16,9 +11,15 @@ use App\Filament\Resources\Doors\Pages\EditDoor;
 use App\Filament\Resources\Doors\Pages\ListDoors;
 use App\Models\Category;
 use App\Models\Door;
+use BackedEnum;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ExportAction;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
@@ -27,7 +28,7 @@ final class DoorResource extends Resource
 {
     protected static ?string $model = Door::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Schema $schema): Schema
     {

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Imports;
 
 use App\Models\FeaturedSalesPage;
@@ -8,7 +10,7 @@ use Filament\Actions\Imports\Importer;
 use Filament\Actions\Imports\Models\Import;
 use Illuminate\Support\Number;
 
-class FeaturedSalesPageImporter extends Importer
+final class FeaturedSalesPageImporter extends Importer
 {
     protected static ?string $model = FeaturedSalesPage::class;
 
@@ -63,19 +65,19 @@ class FeaturedSalesPageImporter extends Importer
         ];
     }
 
-    public function resolveRecord(): FeaturedSalesPage
-    {
-        return new FeaturedSalesPage();
-    }
-
     public static function getCompletedNotificationBody(Import $import): string
     {
-        $body = 'Your featured sales page import has completed and ' . Number::format($import->successful_rows) . ' ' . str('row')->plural($import->successful_rows) . ' imported.';
+        $body = 'Your featured sales page import has completed and '.Number::format($import->successful_rows).' '.str('row')->plural($import->successful_rows).' imported.';
 
-        if ($failedRowsCount = $import->getFailedRowsCount()) {
-            $body .= ' ' . Number::format($failedRowsCount) . ' ' . str('row')->plural($failedRowsCount) . ' failed to import.';
+        if (($failedRowsCount = $import->getFailedRowsCount()) !== 0) {
+            $body .= ' '.Number::format($failedRowsCount).' '.str('row')->plural($failedRowsCount).' failed to import.';
         }
 
         return $body;
+    }
+
+    public function resolveRecord(): FeaturedSalesPage
+    {
+        return new FeaturedSalesPage();
     }
 }

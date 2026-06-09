@@ -20,10 +20,10 @@ final class BlogFactory extends Factory
     public function definition(): array
     {
         return [
-            'title' => $this->faker->sentence(),
-            'slug' => $this->faker->slug(),
-            'img_url' => $this->faker->imageUrl(),
-            'content' => $this->faker->paragraphs(3, true),
+            'title' => fake()->sentence(),
+            'slug' => fake()->slug(),
+            'img_url' => fake()->imageUrl(),
+            'content' => fake()->paragraphs(3, true),
         ];
     }
 }

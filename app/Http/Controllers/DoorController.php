@@ -6,6 +6,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Door;
 use GuzzleHttp\Client;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 final class DoorController extends Controller
@@ -15,7 +17,7 @@ final class DoorController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): Factory|View
     {
         return view('doors.index');
     }
@@ -31,7 +33,7 @@ final class DoorController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Door $door)
+    public function show(Door $door): Factory|View
     {
 
         $category = $door->category()->first();

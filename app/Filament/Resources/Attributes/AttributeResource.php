@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Attributes;
 
-use Filament\Schemas\Schema;
-use Filament\Actions\EditAction;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
 use App\Filament\Resources\Attributes\Pages\CreateAttribute;
 use App\Filament\Resources\Attributes\Pages\EditAttribute;
 use App\Filament\Resources\Attributes\Pages\ListAttributes;
 use App\Models\Attribute;
+use BackedEnum;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -21,7 +22,7 @@ final class AttributeResource extends Resource
 {
     protected static ?string $model = Attribute::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Schema $schema): Schema
     {

@@ -9,18 +9,11 @@ use App\Enums\UrlPath;
 use App\Models\WebsiteOptions;
 use Artisan;
 use GuzzleHttp\Client;
-use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Foundation\Bus\Dispatchable;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Queue\SerializesModels;
 
 final class UpdateWebsiteDatabase implements ShouldQueue
 {
-    use Dispatchable;
-    use InteractsWithQueue;
-    use Queueable;
-    use SerializesModels;
+    use \Illuminate\Foundation\Queue\Queueable;
 
     public Client $client;
 

@@ -6,27 +6,17 @@ namespace App\Console\Commands;
 
 use App\Models\Category;
 use App\Models\Door;
+use Illuminate\Console\Attributes\Description;
+use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 
+#[Description('Generate the sitemap.')]
+#[Signature('sitemap:generate')]
 final class GenerateSitemap extends Command
 {
-    /**
-     * The console command name.
-     *
-     * @var string
-     */
-    protected $signature = 'sitemap:generate';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Generate the sitemap.';
-
     /**
      * Execute the console command.
      */

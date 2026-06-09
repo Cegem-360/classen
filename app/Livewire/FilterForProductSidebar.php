@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Livewire;
 
 use App\Models\Door;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Component;
 use Livewire\WithoutUrlPagination;
@@ -58,7 +60,7 @@ final class FilterForProductSidebar extends Component
 
     public $collections;
 
-    public function render()
+    public function render(): Factory|View
     {
         if ($this->in_array_recursive(true, $this->options, true)) {
 

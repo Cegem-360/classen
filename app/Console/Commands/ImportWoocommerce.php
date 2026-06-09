@@ -14,9 +14,13 @@ use Automattic\WooCommerce\Client as WC;
 use Automattic\WooCommerce\HttpClient\HttpClientException;
 use Excel;
 use GuzzleHttp\Client;
+use Illuminate\Console\Attributes\Description;
+use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
 
+#[Description('Command description')]
+#[Signature('app:import-woocommerce')]
 final class ImportWoocommerce extends Command
 {
     /**
@@ -24,26 +28,12 @@ final class ImportWoocommerce extends Command
      */
     public Client $client;
 
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
-    protected $signature = 'app:import-woocommerce';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Command description';
-
     private WC $wooCommerce;
 
     /**
      * Execute the console command.
      */
-    public function handle()
+    public function handle(): void
     {
         DB::statement('SET FOREIGN_KEY_CHECKS=0;');
         DB::table('products')->truncate();

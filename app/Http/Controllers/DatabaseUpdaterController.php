@@ -11,7 +11,7 @@ final class DatabaseUpdaterController extends Controller
     public function trigger()
     {
 
-        UpdateWebsiteDatabase::dispatch();
+        dispatch(new UpdateWebsiteDatabase());
 
         return response()->json(['message' => 'Database update job has been dispatched']);
     }

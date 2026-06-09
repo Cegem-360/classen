@@ -4,17 +4,18 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\AdditionalAttributes;
 
-use Filament\Schemas\Schema;
-use Filament\Actions\EditAction;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
 use App\Filament\Resources\AdditionalAttributes\Pages\CreateAdditionalAttribute;
 use App\Filament\Resources\AdditionalAttributes\Pages\EditAdditionalAttribute;
 use App\Filament\Resources\AdditionalAttributes\Pages\ListAdditionalAttributes;
 use App\Models\AdditionalAttribute;
+use BackedEnum;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
@@ -23,7 +24,7 @@ final class AdditionalAttributeResource extends Resource
 {
     protected static ?string $model = AdditionalAttribute::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Schema $schema): Schema
     {

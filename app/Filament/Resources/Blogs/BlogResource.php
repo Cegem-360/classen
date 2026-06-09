@@ -4,13 +4,6 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Blogs;
 
-use Filament\Schemas\Schema;
-use Filament\Actions\ViewAction;
-use Filament\Actions\EditAction;
-use Filament\Actions\ImportAction;
-use Filament\Actions\ExportAction;
-use Filament\Actions\BulkActionGroup;
-use Filament\Actions\DeleteBulkAction;
 use App\Filament\Exports\BlogExporter;
 use App\Filament\Imports\BlogImporter;
 use App\Filament\Resources\Blogs\Pages\CreateBlog;
@@ -18,9 +11,17 @@ use App\Filament\Resources\Blogs\Pages\EditBlog;
 use App\Filament\Resources\Blogs\Pages\ListBlogs;
 use App\Filament\Resources\Blogs\Pages\ViewBlog;
 use App\Models\Blog;
+use BackedEnum;
+use Filament\Actions\BulkActionGroup;
+use Filament\Actions\DeleteBulkAction;
+use Filament\Actions\EditAction;
+use Filament\Actions\ExportAction;
+use Filament\Actions\ImportAction;
+use Filament\Actions\ViewAction;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
+use Filament\Schemas\Schema;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
@@ -28,7 +29,7 @@ final class BlogResource extends Resource
 {
     protected static ?string $model = Blog::class;
 
-    protected static string | \BackedEnum | null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
 
     public static function form(Schema $schema): Schema
     {

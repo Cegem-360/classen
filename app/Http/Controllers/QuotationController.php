@@ -9,13 +9,15 @@ use App\Mail\RequestQuotationSended;
 use App\Models\Door;
 use App\Models\Quotation;
 use App\Models\QuotationItem;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 final class QuotationController extends Controller
 {
-    public function index()
+    public function index(): Factory|View
     {
         $quotation = session('quotation');
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
@@ -23,7 +25,7 @@ final class QuotationController extends Controller
         return view('quotation.index', ['quotation' => $quotation, 'quotationItems' => $quotationItems]);
     }
 
-    public function success()
+    public function success(): Factory|View
     {
         // reset session Quotation
         session()->forget('quotation');
@@ -41,14 +43,14 @@ final class QuotationController extends Controller
             'door_id' => $door->id,
         ]);
 
-        return redirect()->route('quotation.index');
+        return to_route('quotation.index');
     }
 
     public function deleteItem(QuotationItem $quotationItem)
     {
         $quotationItem->delete();
 
-        return redirect()->route('quotation.index');
+        return to_route('quotation.index');
     }
 
     public function updateItem(QuotationItem $quotationItem, $quantity)
@@ -57,7 +59,7 @@ final class QuotationController extends Controller
             'quantity' => $quantity,
         ]);
 
-        return redirect()->route('quotation.index');
+        return to_route('quotation.index');
     }
 
     public function store(Request $request)
@@ -65,14 +67,14 @@ final class QuotationController extends Controller
         $quotation = session('quotation');
 
         if (! $quotation) {
-            return redirect()->route('quotation.index')->error('Kérjük válasszon terméket az árajánlat kéréshez');
+            return to_route('quotation.index')->error('Kérjük válasszon terméket az árajánlat kéréshez');
         }
 
         $validated = Validator::make($request->all(), [
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'contactEmail' => 'required|email',
-            'phone' => 'required',
+            'first_name' => ['required'],
+            'last_name' => ['required'],
+            'contactEmail' => ['required', 'email'],
+            'phone' => ['required'],
         ])->validate();
 
         $quotationItems = QuotationItem::with(['door', 'door.category'])->where('quotation_id', $quotation->id)->get();
@@ -89,6 +91,6 @@ final class QuotationController extends Controller
         Mail::to($validated['contactEmail'])->cc('info@arcadia98.hu')->send(new RequestQuotationSended($quotation, $quotationItems));
         Mail::to('info@arcadia98.hu')->send(new QuotationInner($quotation, $quotationItems));
 
-        return redirect()->route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
+        return to_route('quotation.success')->success('Köszönjük az árajánlat kérést, kollégánk hamarosan felveszi Önnel a kapcsolatot');
     }
 }

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace App\Livewire;
 
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
 final class PopUpModal extends Component
@@ -45,7 +47,7 @@ final class PopUpModal extends Component
         $this->doClose();
     }
 
-    public function render()
+    public function render(): Factory|View
     {
 
         return view('livewire.pop-up-modal');

@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Livewire;
 
 use App\Models\QuotationItem;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\On;
 use Livewire\Component;
 use Masmerise\Toaster\Toaster;
@@ -13,7 +15,7 @@ final class RemoveQuotationItem extends Component
 {
     public QuotationItem $quotationItem;
 
-    public function render()
+    public function render(): Factory|View
     {
         return view('livewire.remove-quotation-item');
     }

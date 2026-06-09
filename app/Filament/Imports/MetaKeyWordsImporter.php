@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Filament\Imports;
 
 use App\Models\MetaKeyWords;
@@ -8,7 +10,7 @@ use Filament\Actions\Imports\Importer;
 use Filament\Actions\Imports\Models\Import;
 use Illuminate\Support\Number;
 
-class MetaKeyWordsImporter extends Importer
+final class MetaKeyWordsImporter extends Importer
 {
     protected static ?string $model = MetaKeyWords::class;
 
@@ -23,19 +25,19 @@ class MetaKeyWordsImporter extends Importer
         ];
     }
 
-    public function resolveRecord(): MetaKeyWords
-    {
-        return new MetaKeyWords();
-    }
-
     public static function getCompletedNotificationBody(Import $import): string
     {
-        $body = 'Your meta key words import has completed and ' . Number::format($import->successful_rows) . ' ' . str('row')->plural($import->successful_rows) . ' imported.';
+        $body = 'Your meta key words import has completed and '.Number::format($import->successful_rows).' '.str('row')->plural($import->successful_rows).' imported.';
 
-        if ($failedRowsCount = $import->getFailedRowsCount()) {
-            $body .= ' ' . Number::format($failedRowsCount) . ' ' . str('row')->plural($failedRowsCount) . ' failed to import.';
+        if (($failedRowsCount = $import->getFailedRowsCount()) !== 0) {
+            $body .= ' '.Number::format($failedRowsCount).' '.str('row')->plural($failedRowsCount).' failed to import.';
         }
 
         return $body;
+    }
+
+    public function resolveRecord(): MetaKeyWords
+    {
+        return new MetaKeyWords();
     }
 }

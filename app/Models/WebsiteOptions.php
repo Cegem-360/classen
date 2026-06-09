@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+#[Fillable(['name', 'img_url', 'text', 'title', 'page', 'link_title'])]
 final class WebsiteOptions extends Model
 {
     use HasFactory;
-
-    protected $fillable = ['name', 'img_url', 'text', 'title', 'page', 'link_title'];
 }

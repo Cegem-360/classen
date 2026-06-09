@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Livewire;
 
 use App\Models\QuotationItem;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Attributes\On;
 use Livewire\Component;
 
@@ -48,7 +50,7 @@ final class UpdateQuotationItem extends Component
         // $this->resetPage();
     }
 
-    public function render()
+    public function render(): Factory|View
     {
         $this->quotationItem->update([
             'frame' => $this->frame,

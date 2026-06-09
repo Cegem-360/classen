@@ -6,10 +6,10 @@ namespace App\Http\Controllers;
 
 use App\Imports\CategoryPriceImport;
 use App\Models\Category;
+use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -42,12 +42,12 @@ final class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($category)
+    public function show($category): Factory|View
     {
         $category = Category::whereName($category)->first();
         $doors = collect($category->doors()->get());
         $catalogs = $category->attributes()->get();
-        $tags = $doors->mapToGroups(fn ($item, $key) => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]])->all();
+        $tags = $doors->mapToGroups(fn ($item, $key): array => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]])->all();
         $doors = $doors->groupBy('tag');
         $doors = $doors->all();
 
@@ -84,7 +84,7 @@ final class CategoryController extends Controller
         //
     }
 
-    public function upload()
+    public function upload(): Factory|View
     {
         return view('collections.upload');
     }
@@ -96,7 +96,7 @@ final class CategoryController extends Controller
         ]);
 
         if ($validator->fails()) {
-            return Redirect::back()->error('Import sikertelen!');
+            return back()->error('Import sikertelen!');
         }
 
         // Get the uploaded file
@@ -105,6 +105,6 @@ final class CategoryController extends Controller
         // process the file
         Excel::import(new CategoryPriceImport(), $file);
 
-        return Redirect::route('index')->info('Import sikeres!');
+        return to_route('index')->info('Import sikeres!');
     }
 }

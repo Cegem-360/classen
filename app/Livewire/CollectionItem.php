@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Livewire;
 
 use App\Models\Category;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
 final class CollectionItem extends Component
@@ -16,7 +18,7 @@ final class CollectionItem extends Component
         $this->category = $category;
     }
 
-    public function render()
+    public function render(): Factory|View
     {
         return view('livewire.collection-item', [
             'category' => $this->category,

@@ -5,6 +5,8 @@ declare(strict_types=1);
 namespace App\Livewire;
 
 use App\Models\Category;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 
 final class SearchBox extends Component
@@ -44,7 +46,7 @@ final class SearchBox extends Component
         return $this->redirect(route('category.show', ['category' => $record->name]), navigate: true);
     }
 
-    public function render()
+    public function render(): Factory|View
     {
         return view('livewire.search-box');
     }

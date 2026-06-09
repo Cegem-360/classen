@@ -8,7 +8,11 @@ use App\Mail\ContactForm;
 use App\Models\Blog;
 use App\Models\Door;
 use GuzzleHttp\Client;
+use Illuminate\Contracts\Routing\ResponseFactory;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
 
@@ -19,21 +23,21 @@ final class ManagePageContentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): Factory|View
     {
         $latestBlogs = Blog::latest()->take(3)->get();
 
         return view('fooldal-modositas-2025-09', ['latestBlogs' => $latestBlogs]);
     }
 
-    public function favorites(Request $request)
+    public function favorites(Request $request): Factory|View
     {
         /** @var array<int, int|string>|null $rawFavoriteIds */
         $rawFavoriteIds = json_decode($request->cookie('favorites', '[]'), true);
 
         $favoriteProductIds = collect(is_array($rawFavoriteIds) ? $rawFavoriteIds : [])
-            ->filter(fn ($id) => is_int($id) || (is_string($id) && ctype_digit($id)))
-            ->map(fn ($id) => (int) $id)
+            ->filter(fn ($id): bool => is_int($id) || (is_string($id) && ctype_digit($id)))
+            ->map(fn ($id): int => (int) $id)
             ->unique()
             ->values()
             ->all();
@@ -72,11 +76,11 @@ final class ManagePageContentController extends Controller
             $emailMessage
         ));
 
-        return redirect()->route('kapcsolat')->success(__('Message sent successfully!'));
+        return to_route('kapcsolat')->success(__('Message sent successfully!'));
     }
 
     // ne nyulj hozzá
-    public function xmlExport(Request $request)
+    public function xmlExport(Request $request): ResponseFactory|Response
     {
         $xmlData = $request->input('AXELPRO_EXP_ITEMS'); // Assuming AXELPRO_EXP_ITEMS is the key in your POST request
 

@@ -6,6 +6,8 @@ namespace App\Livewire;
 
 use App\Models\Quotation;
 use App\Models\QuotationItem;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Livewire\Component;
 use Masmerise\Toaster\Toaster;
 
@@ -36,7 +38,7 @@ final class DoorOptions extends Component
         // return $this->redirect(route('category.show', ['door' => $this->door]), navigate: true);
     }
 
-    public function render()
+    public function render(): Factory|View
     {
         return view('livewire.door-options');
     }

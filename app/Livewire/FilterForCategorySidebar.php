@@ -6,6 +6,8 @@ namespace App\Livewire;
 
 use App\Models\AdditionalAttribute;
 use App\Models\Category;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
 use Illuminate\Database\Eloquent\Builder;
 use Livewire\Attributes\Url;
 use Livewire\Component;
@@ -43,7 +45,7 @@ final class FilterForCategorySidebar extends Component
     #[Url(as: 'g')]
     public string $g = '';
 
-    public function render()
+    public function render(): Factory|View
     {
         if ($this->g === 'surface') {
             if ($this->q === 'lacquered') {
