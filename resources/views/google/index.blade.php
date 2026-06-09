@@ -75,7 +75,7 @@
             <p class="text-lg">Weboldal: arcadia98.hu</p>
         </div>
 
-        <div class="min-h-[180px]"></div>
+        <div class="min-h-45"></div>
 
         <section>
             <h2 class="mb-4 text-2xl font-bold">Az Arcadia98 Fa Mintázatú Beltéri Ajtók Előnyei</h2>
@@ -214,7 +214,7 @@
     </div>
 
     <!-- gap -->
-    <div class="min-h-[180px]"></div>
+    <div class="min-h-45"></div>
 
-    <x-footer.layout></x-footer.layout>
+    <x-footer.layout />
 </x-layouts.app>

@@ -380,6 +380,6 @@
     <x-partials.expert-help />
 
     <!-- Footer -->
-    <x-footer.layout></x-footer.layout>
+    <x-footer.layout />
 
 </x-layouts.app>

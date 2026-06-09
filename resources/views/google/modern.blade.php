@@ -215,7 +215,7 @@
     </main>
 
     <!-- gap -->
-    <div class="min-h-[180px]"></div>
+    <div class="min-h-45"></div>
 
-    <x-footer.layout></x-footer.layout>
+    <x-footer.layout />
 </x-layouts.app>
