@@ -13,17 +13,17 @@ use Masmerise\Toaster\Toaster;
 
 final class DoorOptions extends Component
 {
-    public $doors;
+    public mixed $doors = null;
 
-    public $tags;
+    public mixed $tags = null;
 
-    public function mount($doors, $tags): void
+    public function mount(mixed $doors, mixed $tags): void
     {
         $this->doors = $doors;
         $this->tags = $tags;
     }
 
-    public function addToQuotation($id): void
+    public function addToQuotation(int $id): void
     {
         $quotation = session()->get('quotation', Quotation::create([
             'session_id' => session()->getId(),

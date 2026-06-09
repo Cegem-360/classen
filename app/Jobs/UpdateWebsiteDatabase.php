@@ -10,10 +10,11 @@ use App\Models\WebsiteOptions;
 use Artisan;
 use GuzzleHttp\Client;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Queue\Queueable;
 
 final class UpdateWebsiteDatabase implements ShouldQueue
 {
-    use \Illuminate\Foundation\Queue\Queueable;
+    use Queueable;
 
     public Client $client;
 

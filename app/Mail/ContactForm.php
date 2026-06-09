@@ -19,7 +19,7 @@ final class ContactForm extends Mailable
     /**
      * Create a new message instance.
      */
-    public function __construct(public $first_name, public $last_name, public $contactEmail, public $phone, public $emailMessage) {}
+    public function __construct(public string $first_name, public string $last_name, public string $contactEmail, public ?string $phone, public string $emailMessage) {}
 
     /**
      * Get the message envelope.

@@ -5,16 +5,16 @@ declare(strict_types=1);
 namespace App\Imports;
 
 use App\Models\MetaKeyWords;
-use Illuminate\Support\Collection;
+use Illuminate\Database\Eloquent\Model;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 final class MetaDataImport implements ToModel, WithHeadingRow
 {
     /**
-     * @param  Collection  $collection
+     * @param  array<string, mixed>  $row
      */
-    public function model(array $row)
+    public function model(array $row): Model
     {
         $meta = MetaKeyWords::firstOrCreate(
             [

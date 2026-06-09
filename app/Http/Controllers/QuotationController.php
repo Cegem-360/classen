@@ -11,6 +11,7 @@ use App\Models\Quotation;
 use App\Models\QuotationItem;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
@@ -35,7 +36,7 @@ final class QuotationController extends Controller
         return view('quotation.success');
     }
 
-    public function addItem(Door $door)
+    public function addItem(Door $door): RedirectResponse
     {
         $quotation = session('quotation');
         QuotationItem::where('quotation_id', $quotation->id)->where('door_id', $door->id)->firstOrCreate([
@@ -46,14 +47,14 @@ final class QuotationController extends Controller
         return to_route('quotation.index');
     }
 
-    public function deleteItem(QuotationItem $quotationItem)
+    public function deleteItem(QuotationItem $quotationItem): RedirectResponse
     {
         $quotationItem->delete();
 
         return to_route('quotation.index');
     }
 
-    public function updateItem(QuotationItem $quotationItem, $quantity)
+    public function updateItem(QuotationItem $quotationItem, int $quantity): RedirectResponse
     {
         $quotationItem->update([
             'quantity' => $quantity,
@@ -62,7 +63,7 @@ final class QuotationController extends Controller
         return to_route('quotation.index');
     }
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $quotation = session('quotation');
 

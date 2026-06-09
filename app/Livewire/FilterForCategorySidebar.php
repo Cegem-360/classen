@@ -14,7 +14,10 @@ use Livewire\Component;
 
 final class FilterForCategorySidebar extends Component
 {
-    public $options = [
+    /**
+     * @var array<string, array<string, bool>>
+     */
+    public array $options = [
         'surface' => [
             '3d_finishing' => false,
             'iridium_finishing' => false,
@@ -37,7 +40,10 @@ final class FilterForCategorySidebar extends Component
         ],
     ];
 
-    public $collections;
+    /**
+     * @var array<mixed>
+     */
+    public array $collections = [];
 
     #[Url(as: 'q')]
     public string $q = '';

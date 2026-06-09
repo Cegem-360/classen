@@ -17,7 +17,7 @@ final class BlogController extends Controller
         ]);
     }
 
-    public function show($slug)
+    public function show(string $slug): Factory|View
     {
         /* dump($slug); */
         $blog = Blog::whereSlug($slug)->first();

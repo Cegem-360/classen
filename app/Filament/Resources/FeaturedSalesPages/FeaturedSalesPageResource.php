@@ -49,8 +49,8 @@ final class FeaturedSalesPageResource extends Resource
             ->components([
                 TextInput::make('title')
                     ->required()
-                    ->afterStateUpdated(function ($state, Set $set): void {
-                        $set('slug', Str::slug($state, '-', 'hu'));
+                    ->afterStateUpdated(function (?string $state, Set $set): void {
+                        $set('slug', Str::slug($state ?? '', '-', 'hu'));
                     })
                     ->maxLength(255),
                 TextInput::make('seo_title')
@@ -60,8 +60,8 @@ final class FeaturedSalesPageResource extends Resource
                 TextInput::make('slug')
                     ->live(onBlur: true, debounce: 1000)
                     ->maxLength(255)
-                    ->afterStateUpdated(function ($state, Set $set): void {
-                        $set('slug', Str::slug($state));
+                    ->afterStateUpdated(function (?string $state, Set $set): void {
+                        $set('slug', Str::slug($state ?? ''));
                     }),
                 TextInput::make('link')
                     ->maxLength(255),

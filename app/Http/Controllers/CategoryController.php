@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 
 use App\Imports\CategoryPriceImport;
 use App\Models\Category;
+use App\Models\Door;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
@@ -42,12 +43,12 @@ final class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show($category): Factory|View
+    public function show(string $category): Factory|View
     {
         $category = Category::whereName($category)->first();
         $doors = collect($category->doors()->get());
         $catalogs = $category->attributes()->get();
-        $tags = $doors->mapToGroups(fn ($item, $key): array => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]])->all();
+        $tags = $doors->mapToGroups(fn (Door $item, int $key): array => [$item['tag'] => ['tag_img_url' => $item['tag_img_url'], 'tag_category' => $item['tag_category'], 'tag' => $item['tag']]])->all();
         $doors = $doors->groupBy('tag');
         $doors = $doors->all();
 

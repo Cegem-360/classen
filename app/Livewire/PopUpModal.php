@@ -10,19 +10,22 @@ use Livewire\Component;
 
 final class PopUpModal extends Component
 {
-    public $data;
+    public mixed $data = null;
 
-    public $show;
+    public bool $show = false;
 
+    /**
+     * @var array<string, string>
+     */
     protected $listeners = ['showModal' => 'showModal'];
 
-    public function mount($data): void
+    public function mount(mixed $data): void
     {
         $this->data = $data;
         $this->show = false;
     }
 
-    public function showModal($data): void
+    public function showModal(mixed $data): void
     {
         $this->data = $data;
 

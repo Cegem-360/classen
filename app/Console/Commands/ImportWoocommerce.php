@@ -190,7 +190,7 @@ final class ImportWoocommerce extends Command
 
     }
 
-    public function str_replace_json($search, $replace, $subject): mixed
+    public function str_replace_json(mixed $search, mixed $replace, mixed $subject): mixed
     {
         return json_decode(str_replace($search, $replace, json_encode($subject)));
     }

@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 #[Fillable([
     'door_id',
@@ -19,12 +20,18 @@ final class QuotationItem extends Model
 {
     use HasFactory;
 
-    public function door()
+    /**
+     * @return BelongsTo<Door, $this>
+     */
+    public function door(): BelongsTo
     {
         return $this->belongsTo(Door::class);
     }
 
-    public function quotation()
+    /**
+     * @return BelongsTo<Quotation, $this>
+     */
+    public function quotation(): BelongsTo
     {
         return $this->belongsTo(Quotation::class);
     }

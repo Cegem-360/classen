@@ -1,0 +1,67 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Call to function is_null\(\) with string will always evaluate to false\.$#'
+			identifier: function.impossibleType
+			count: 1
+			path: app/Console/Commands/ImportWoocommerce.php
+
+		-
+			message: '#^Method App\\Filament\\Imports\\BlogImporter\:\:resolveRecord\(\) never returns null so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: app/Filament/Imports/BlogImporter.php
+
+		-
+			message: '#^Method App\\Filament\\Imports\\DoorImporter\:\:resolveRecord\(\) never returns null so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: app/Filament/Imports/DoorImporter.php
+
+		-
+			message: '#^Called ''pluck'' on Laravel collection, but could have been retrieved as a query\.$#'
+			identifier: larastan.noUnnecessaryCollectionCall
+			count: 1
+			path: app/Filament/Resources/Doors/DoorResource.php
+
+		-
+			message: '#^Parameter \#1 \$callback of method Illuminate\\Support\\Collection\<int,Illuminate\\Database\\Eloquent\\Model\>\:\:mapToGroups\(\) expects callable\(Illuminate\\Database\\Eloquent\\Model, int\)\: array\<array\{tag_img_url\: mixed, tag_category\: mixed, tag\: mixed\}\>, Closure\(App\\Models\\Door, int\)\: non\-empty\-array\<array\{tag_img_url\: mixed, tag_category\: mixed, tag\: mixed\}\> given\.$#'
+			identifier: argument.type
+			count: 1
+			path: app/Http/Controllers/CategoryController.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\Database\\Eloquent\\Model\:\:attributes\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Http/Controllers/DoorController.php
+
+		-
+			message: '#^Call to function is_string\(\) with string will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
+			count: 1
+			path: app/Http/Controllers/ManagePageContentController.php
+
+		-
+			message: '#^PHPDoc tag @param references unknown parameter\: \$collection$#'
+			identifier: parameter.notFound
+			count: 1
+			path: app/Imports/CategoryPriceImport.php
+
+		-
+			message: '#^Return type \(void\) of method App\\Imports\\CategoryPriceImport\:\:model\(\) should be compatible with return type \(array\<Illuminate\\Database\\Eloquent\\Model\>\|Illuminate\\Database\\Eloquent\\Model\|null\) of method Maatwebsite\\Excel\\Concerns\\ToModel\:\:model\(\)$#'
+			identifier: method.childReturnType
+			count: 1
+			path: app/Imports/CategoryPriceImport.php
+
+		-
+			message: '#^Call to an undefined method Whitecube\\LaravelCookieConsent\\CookiesCategory\:\:google\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Providers/CookiesServiceProvider.php
+
+		-
+			message: '#^Call to an undefined method Whitecube\\LaravelCookieConsent\\CookiesCategory\:\:session\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: app/Providers/CookiesServiceProvider.php

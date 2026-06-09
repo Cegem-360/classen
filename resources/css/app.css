@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @plugin "@tailwindcss/forms";
 @plugin "@tailwindcss/typography";
@@ -19,7 +19,9 @@
 
 @theme {
     /* Font family */
-    --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans:
+        "Montserrat", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
     /* Border widths */
     --border-width-0: 0px;
@@ -141,9 +143,9 @@
     --color-indigo-1000: #000;
 
     --color-primary: #008ddd;
-    --color-primary-300: #67C7F1;
+    --color-primary-300: #67c7f1;
     --color-primary-400: #008ddd;
-    --color-primary-500: #2E92BC;
+    --color-primary-500: #2e92bc;
 
     --color-red-50: #fef2f2;
     --color-red-100: #fee2e2;
@@ -177,15 +179,14 @@
   looks the same as it did with Tailwind CSS v3.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentcolor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
 }
-
 
 html {
     scroll-behavior: smooth;

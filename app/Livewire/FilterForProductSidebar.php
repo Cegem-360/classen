@@ -17,7 +17,10 @@ final class FilterForProductSidebar extends Component
     use WithoutUrlPagination;
     use WithPagination;
 
-    public $options = [
+    /**
+     * @var array<string, array<string, bool>>
+     */
+    public array $options = [
         'storage' => [
             'storage' => false,
         ],
@@ -58,7 +61,10 @@ final class FilterForProductSidebar extends Component
 
     ];
 
-    public $collections;
+    /**
+     * @var array<mixed>|null
+     */
+    public ?array $collections = null;
 
     public function render(): Factory|View
     {
@@ -187,7 +193,7 @@ final class FilterForProductSidebar extends Component
         return false;
     }
 
-    public function showDetails($id): void
+    public function showDetails(int $id): void
     {
         $door = Door::find($id);
         $this->redirect(route('door.show', ['door' => $door]), navigate: true);

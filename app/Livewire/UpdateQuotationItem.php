@@ -14,9 +14,9 @@ final class UpdateQuotationItem extends Component
 {
     public QuotationItem $quotationItem;
 
-    public $quantity;
+    public ?int $quantity = null;
 
-    public $frame;
+    public ?string $frame = null;
 
     #[On('quotation-increment')]
     public function increment(): void

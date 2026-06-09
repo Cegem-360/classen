@@ -7,21 +7,25 @@ namespace App\Livewire;
 use App\Models\Category;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Database\Eloquent\Collection;
 use Livewire\Component;
 
 final class SearchBox extends Component
 {
-    public $showdiv = false;
+    public bool $showdiv = false;
 
-    public $search = '';
+    public string $search = '';
 
-    public $records;
+    /**
+     * @var Collection<int, Category>|null
+     */
+    public ?Collection $records = null;
 
     // Fetch records
     public function searchResult(): void
     {
 
-        if (! empty($this->search)) {
+        if ($this->search !== '' && $this->search !== '0') {
 
             $this->records = Category::where('name', 'like', '%'.$this->search.'%')
                 ->limit(5)
@@ -33,7 +37,7 @@ final class SearchBox extends Component
         }
     }
 
-    public function fetchCategory($id = 0)
+    public function fetchCategory(int $id = 0): void
     {
 
         $record = Category::select('*')
@@ -43,7 +47,7 @@ final class SearchBox extends Component
         $this->search = $record->name;
         $this->showdiv = false;
 
-        return $this->redirect(route('category.show', ['category' => $record->name]), navigate: true);
+        $this->redirect(route('category.show', ['category' => $record->name]), navigate: true);
     }
 
     public function render(): Factory|View

@@ -11,11 +11,11 @@ use Livewire\Component;
 
 final class FeaturedSalesAreasShow extends Component
 {
-    public $slug;
+    public string $slug = '';
 
     public ?FeaturedSalesPage $featuredSalesPage = null;
 
-    public function mount($slug): void
+    public function mount(string $slug): void
     {
         $this->slug = $slug;
         $this->featuredSalesPage = FeaturedSalesPage::where('slug', $slug)->first();

@@ -11,10 +11,12 @@ use GuzzleHttp\Client;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Storage;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 final class ManagePageContentController extends Controller
 {
@@ -36,8 +38,8 @@ final class ManagePageContentController extends Controller
         $rawFavoriteIds = json_decode($request->cookie('favorites', '[]'), true);
 
         $favoriteProductIds = collect(is_array($rawFavoriteIds) ? $rawFavoriteIds : [])
-            ->filter(fn ($id): bool => is_int($id) || (is_string($id) && ctype_digit($id)))
-            ->map(fn ($id): int => (int) $id)
+            ->filter(fn (mixed $id): bool => is_int($id) || (is_string($id) && ctype_digit($id)))
+            ->map(fn (mixed $id): int => (int) $id)
             ->unique()
             ->values()
             ->all();
@@ -51,7 +53,7 @@ final class ManagePageContentController extends Controller
         return view('favorites.index', ['products' => $products]);
     }
 
-    public function sendContact(Request $request)
+    public function sendContact(Request $request): RedirectResponse
     {
 
         $request->validate([
@@ -95,7 +97,7 @@ final class ManagePageContentController extends Controller
     }
 
     // ne nyulj hozzá
-    public function xmlFile()
+    public function xmlFile(): BinaryFileResponse
     {
         $filePath = storage_path('app/axelpro_exp_items_.xml');
 
