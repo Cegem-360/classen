@@ -13,8 +13,8 @@ it('shows favorites on favorites page', function () {
     // Szimuláljuk a cookie-t
     $cookieValue = json_encode($favoriteIds);
 
-    // GET kérés a cookie-val
-    $response = $this->withCookies(['favorites' => $cookieValue])
+    // GET kérés a cookie-val (a favorites cookie titkosítatlan, ahogy a JS is kezeli)
+    $response = $this->withUnencryptedCookies(['favorites' => $cookieValue])
         ->get('/kedvencek');
 
     $response->assertStatus(200);
@@ -33,8 +33,8 @@ it('initializes favorites counter in navbar', function () {
     // Szimuláljuk a cookie-t
     $cookieValue = json_encode($favoriteIds);
 
-    // GET kérés a főoldalra a cookie-val
-    $response = $this->withCookies(['favorites' => $cookieValue])
+    // GET kérés a főoldalra a cookie-val (a favorites cookie titkosítatlan, ahogy a JS is kezeli)
+    $response = $this->withUnencryptedCookies(['favorites' => $cookieValue])
         ->get('/');
 
     $response->assertStatus(200);
