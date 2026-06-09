@@ -18,6 +18,8 @@ use Filament\Actions\EditAction;
 use Filament\Actions\ExportAction;
 use Filament\Actions\ImportAction;
 use Filament\Actions\ViewAction;
+use Filament\Forms\Components\CodeEditor;
+use Filament\Forms\Components\CodeEditor\Enums\Language;
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
@@ -55,6 +57,12 @@ final class FeaturedSalesPageResource extends Resource
                     ->maxLength(255),
                 TextInput::make('seo_title')
                     ->maxLength(255),
+                CodeEditor::make('json_schema')
+                    ->label('Egyedi JSON-LD schema')
+                    ->language(Language::Json)
+                    ->rules(['nullable', 'json'])
+                    ->helperText('schema.org strukturált adat. Üresen hagyva nem jelenik meg JSON-LD.')
+                    ->columnSpanFull(),
                 RichEditor::make('content')
                     ->columnSpanFull(),
                 TextInput::make('slug')

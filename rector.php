@@ -27,7 +27,6 @@ return RectorConfig::configure()
     )
     ->withPhpSets()
     ->withImportNames(true)
-    // here we can define, what prepared sets of rules will be applied
     ->withSets([
         SetList::DEAD_CODE,
         SetList::CODE_QUALITY,

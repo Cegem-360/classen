@@ -15,43 +15,9 @@
         <meta name="twitter:image"
             content="{{ $featuredSalesPage->featured_media ?? asset('images/default-featured.jpg') }}">
 
-        {{-- Schema.org JSON-LD --}}
-        <script type="application/ld+json">
-        {!! json_encode([
-            '@context' => 'https://schema.org',
-            '@graph'   => array_filter([
-
-                // 1. Article
-                [
-                    '@type'            => 'Article',
-                    'headline'         => $featuredSalesPage->title,
-                    'description'      => $featuredSalesPage->excerpt,
-                    'url'              => request()->url(),
-                    'inLanguage'       => 'hu-HU',
-                    'articleSection'   => 'Kiemelt értékesítési területeink',
-                    'datePublished'    => optional($featuredSalesPage->created_at)->toIso8601String(),
-                    'dateModified'     => optional($featuredSalesPage->updated_at)->toIso8601String(),
-                    'image'            => $featuredSalesPage->featured_media
-                        ? ['@type' => 'ImageObject', 'url' => $featuredSalesPage->featured_media]
-                        : null,
-                    'author'    => ['@type' => 'Organization', '@id' => 'https://arcadia98.hu/#organization'],
-                    'publisher' => ['@type' => 'Organization', '@id' => 'https://arcadia98.hu/#organization'],
-                    'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => request()->url()],
-                ],
-
-                // 2. BreadcrumbList
-                [
-                    '@type'           => 'BreadcrumbList',
-                    'itemListElement' => [
-                        ['@type' => 'ListItem', 'position' => 1, 'name' => 'Főoldal',                          'item' => url('/')],
-                        ['@type' => 'ListItem', 'position' => 2, 'name' => 'Kiemelt értékesítési területeink', 'item' => url('/kiemelt-ertekesitesi-teruleteink')],
-                        ['@type' => 'ListItem', 'position' => 3, 'name' => $featuredSalesPage->title,          'item' => request()->url()],
-                    ],
-                ],
-
-            ]),
-        ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) !!}
-        </script>
+        @if ($jsonLd = $featuredSalesPage?->renderedJsonLd())
+            <script type="application/ld+json">{!! $jsonLd !!}</script>
+        @endif
 
         <style>
             .featured-sales-wrapper {
