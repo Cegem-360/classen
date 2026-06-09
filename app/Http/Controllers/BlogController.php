@@ -13,7 +13,7 @@ final class BlogController extends Controller
     public function index(): Factory|View
     {
         return view('blog.index', [
-            'blogs' => Blog::latest()->get(),
+            'blogs' => Blog::query()->latest()->get(),
         ]);
     }
 

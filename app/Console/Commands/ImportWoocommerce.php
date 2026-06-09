@@ -160,7 +160,7 @@ final class ImportWoocommerce extends Command
 
                 $woocommerceCategory = Category::whereName($product->categories[0]->name)->first();
 
-                Door::create([
+                Door::query()->create([
                     'id' => $product->id,
                     'product_id' => $product->id,
                     'price' => $product->regular_price,

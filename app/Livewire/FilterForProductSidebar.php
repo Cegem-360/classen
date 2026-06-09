@@ -167,7 +167,7 @@ final class FilterForProductSidebar extends Component
                     ->inRandomOrder()->paginate(perPage: 40);
 
         } else {
-            $doors = Door::inRandomOrder()->paginate(perPage: 40);
+            $doors = Door::query()->inRandomOrder()->paginate(perPage: 40);
         }
 
         return view('livewire.filter-for-product-sidebar', ['doors' => $doors]);
@@ -195,7 +195,7 @@ final class FilterForProductSidebar extends Component
 
     public function showDetails(int $id): void
     {
-        $door = Door::find($id);
+        $door = Door::query()->find($id);
         $this->redirect(route('door.show', ['door' => $door]), navigate: true);
     }
 }

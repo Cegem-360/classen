@@ -33,12 +33,12 @@ final class UpdateWebsiteDatabase implements ShouldQueue
         $result = $result[0]['acf'];
         Artisan::call('migrate:refresh', ['--path' => 'database/migrations/2024_02_28_123239_create_website_options_table']);
         foreach ($result['fooldal_hero_banner'] as $value) {
-            WebsiteOptions::updateOrCreate([
+            WebsiteOptions::query()->updateOrCreate([
                 'name' => 'fooldal_hero_banner_kepek',
                 'key' => 'kep',
                 'value' => $value['kep']['url'],
             ]);
-            WebsiteOptions::updateOrCreate([
+            WebsiteOptions::query()->updateOrCreate([
                 'name' => 'fooldal_hero_banner_kepek',
                 'key' => 'szoveg',
                 'value' => $value['szoveg'],

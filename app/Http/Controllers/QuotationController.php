@@ -31,7 +31,7 @@ final class QuotationController extends Controller
         // reset session Quotation
         session()->forget('quotation');
         // frm database reset
-        Quotation::where('session_id', session()->getId())->delete();
+        Quotation::query()->where('session_id', session()->getId())->delete();
 
         return view('quotation.success');
     }
@@ -39,7 +39,7 @@ final class QuotationController extends Controller
     public function addItem(Door $door): RedirectResponse
     {
         $quotation = session('quotation');
-        QuotationItem::where('quotation_id', $quotation->id)->where('door_id', $door->id)->firstOrCreate([
+        QuotationItem::query()->where('quotation_id', $quotation->id)->where('door_id', $door->id)->firstOrCreate([
             'quotation_id' => $quotation->id,
             'door_id' => $door->id,
         ]);

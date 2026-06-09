@@ -34,7 +34,7 @@ final class AdditionalAttributeSeeder extends Seeder
         $result = json_decode($response->getBody()->getContents(), true);
         $result = $result[0]['acf'];
         foreach ($result['fooldal_hero_banner'] as $value) {
-            WebsiteOptions::updateOrCreate([
+            WebsiteOptions::query()->updateOrCreate([
                 'name' => 'fooldal_hero_banner_kepek',
                 'title' => $value['title'],
                 'page' => $value['category_page'],

@@ -36,7 +36,7 @@ final class AdditionalAttributeImport implements ToCollection, WithHeadingRow
                     }
                 }
 
-                AdditionalAttribute::create($data);
+                AdditionalAttribute::query()->create($data);
             } catch (Throwable) {
                 dd($row['kollekciok']);
             }

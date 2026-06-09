@@ -27,7 +27,7 @@ final class SearchBox extends Component
 
         if ($this->search !== '' && $this->search !== '0') {
 
-            $this->records = Category::where('name', 'like', '%'.$this->search.'%')
+            $this->records = Category::query()->where('name', 'like', '%'.$this->search.'%')
                 ->limit(5)
                 ->get();
 
@@ -40,7 +40,7 @@ final class SearchBox extends Component
     public function fetchCategory(int $id = 0): void
     {
 
-        $record = Category::select('*')
+        $record = Category::query()->select('*')
             ->where('id', $id)
             ->first();
 

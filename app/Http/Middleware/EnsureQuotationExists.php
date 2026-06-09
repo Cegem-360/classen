@@ -21,7 +21,7 @@ final class EnsureQuotationExists
         // Ellenőrizzük, hogy van-e quotation a session-ben
         if (! session()->has('quotation')) {
             // Ha nincs, akkor létrehozunk egyet vagy megkeresünk egy meglévőt a session_id alapján
-            $quotation = Quotation::firstOrCreate([
+            $quotation = Quotation::query()->firstOrCreate([
                 'session_id' => session()->getId(),
             ]);
 
@@ -31,8 +31,8 @@ final class EnsureQuotationExists
             // Ha van quotation a session-ben, de esetleg törölték az adatbázisból,
             // akkor újra létrehozzuk
             $quotation = session('quotation');
-            if (! $quotation || ! Quotation::find($quotation->id)) {
-                $quotation = Quotation::firstOrCreate([
+            if (! $quotation || ! Quotation::query()->find($quotation->id)) {
+                $quotation = Quotation::query()->firstOrCreate([
                     'session_id' => session()->getId(),
                 ]);
                 session(['quotation' => $quotation]);

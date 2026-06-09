@@ -25,10 +25,10 @@ final class DoorOptions extends Component
 
     public function addToQuotation(int $id): void
     {
-        $quotation = session()->get('quotation', Quotation::create([
+        $quotation = session()->get('quotation', Quotation::query()->create([
             'session_id' => session()->getId(),
         ]));
-        QuotationItem::where('quotation_id', $quotation->id)->where('door_id', $id)->firstOrCreate([
+        QuotationItem::query()->where('quotation_id', $quotation->id)->where('door_id', $id)->firstOrCreate([
             'quotation_id' => $quotation->id,
             'door_id' => $id,
         ]);

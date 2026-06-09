@@ -18,7 +18,7 @@ final class FeaturedSalesAreasShow extends Component
     public function mount(string $slug): void
     {
         $this->slug = $slug;
-        $this->featuredSalesPage = FeaturedSalesPage::where('slug', $slug)->first();
+        $this->featuredSalesPage = FeaturedSalesPage::query()->where('slug', $slug)->first();
     }
 
     public function render(): Factory|View

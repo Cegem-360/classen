@@ -60,7 +60,7 @@ final class DoorImporter extends Importer
 
     public function resolveRecord(): ?Door
     {
-        return Door::firstOrNew([
+        return Door::query()->firstOrNew([
             'email' => $this->data['email'],
         ]);
     }

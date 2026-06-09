@@ -43,7 +43,7 @@ final class BlogImporter extends Importer
 
     public function resolveRecord(): ?Blog
     {
-        return Blog::firstOrNew([
+        return Blog::query()->firstOrNew([
             'slug' => $this->data['slug'],
         ]);
 

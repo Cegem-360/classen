@@ -16,11 +16,9 @@ final class MetaDataImport implements ToModel, WithHeadingRow
      */
     public function model(array $row): Model
     {
-        $meta = MetaKeyWords::firstOrCreate(
-            [
-                'collection_name' => $row['collection_name'],
-            ]
-        );
+        $meta = MetaKeyWords::query()->firstOrCreate([
+            'collection_name' => $row['collection_name'],
+        ]);
         $meta->update([
             'meta_description' => $row['meta_description'],
             'key_words' => $row['key_words'],
