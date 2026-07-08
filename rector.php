@@ -26,7 +26,7 @@ return RectorConfig::configure()
         earlyReturn: true,
     )
     ->withPhpSets()
-    ->withImportNames(true)
+    ->withImportNames()
     ->withSets([
         SetList::DEAD_CODE,
         SetList::CODE_QUALITY,
