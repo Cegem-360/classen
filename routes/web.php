@@ -86,10 +86,6 @@ Route::prefix('updateWebsiteDatabase')->as('updateWebsiteDatabase.')->group(func
     Route::get('/', [DatabaseUpdaterController::class, 'trigger'])->name('trigger');
 });
 
-Route::get('/refreshDatabase', function () {
-    Artisan::call('migrate:fresh', ['--seed' => 1]);
-});
-
 Route::get('/clearCache', function () {
     Artisan::call('cache:clear');
     Artisan::call('config:clear');
