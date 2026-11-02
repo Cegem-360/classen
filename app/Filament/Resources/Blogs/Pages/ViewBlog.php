@@ -7,11 +7,13 @@ namespace App\Filament\Resources\Blogs\Pages;
 use App\Filament\Resources\Blogs\BlogResource;
 use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
+use Override;
 
 final class ViewBlog extends ViewRecord
 {
     protected static string $resource = BlogResource::class;
 
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [

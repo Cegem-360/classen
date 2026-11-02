@@ -44,7 +44,7 @@
                                         <a class="group absolute inset-0 flex items-center justify-center bg-black bg-opacity-5 transition duration-300 hover:bg-opacity-40"
                                             href="#">
                                             <div class="text-lg font-bold text-white opacity-0 group-hover:opacity-100">
-                                                <x-svg.plus-icon></x-svg.plus-icon>
+                                                <x-svg.plus-icon />
                                             </div>
                                         </a>
                                         <h4 class="mt-3">{{ __($item->name) }}</h4>

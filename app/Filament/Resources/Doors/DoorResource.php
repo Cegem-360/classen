@@ -20,16 +20,19 @@ use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Override;
 
 final class DoorResource extends Resource
 {
     protected static ?string $model = Door::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    #[Override]
     public static function form(Schema $schema): Schema
     {
         return $schema
@@ -64,6 +67,7 @@ final class DoorResource extends Resource
             ]);
     }
 
+    #[Override]
     public static function table(Table $table): Table
     {
         return $table
@@ -107,10 +111,10 @@ final class DoorResource extends Resource
             ->headerActions([
                 ExportAction::make()->exporter(DoorExportByCategoryExporter::class)
                     ->label('Export by Category')
-                    ->icon('heroicon-o-document'),
+                    ->icon(Heroicon::OutlinedDocument),
                 ExportAction::make()->exporter(DoorExporter::class)
                     ->label('Export Additional Attributes')
-                    ->icon('heroicon-o-document-text'),
+                    ->icon(Heroicon::OutlinedDocumentText),
             ])
             ->recordActions([
                 EditAction::make(),
@@ -123,6 +127,7 @@ final class DoorResource extends Resource
             ]);
     }
 
+    #[Override]
     public static function getRelations(): array
     {
         return [
@@ -130,6 +135,7 @@ final class DoorResource extends Resource
         ];
     }
 
+    #[Override]
     public static function getPages(): array
     {
         return [

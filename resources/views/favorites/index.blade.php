@@ -30,7 +30,7 @@
                             <div class="absolute top-0 right-0 z-50">
                                 <button class="favorite"
                                     onclick="initFavoritesJS.toggleFavoriteItem('{{ $product['id'] }}')">
-                                    <x-svg.heart class="fill-white" id="heart-{{ $product['id'] }}"> </x-svg.heart>
+                                    <x-svg.heart class="fill-white" id="heart-{{ $product['id'] }}" />
                                 </button>
                             </div>
                             <a href="{{ route('door.show', ['door' => $product['id']]) }}" wire:navigate>

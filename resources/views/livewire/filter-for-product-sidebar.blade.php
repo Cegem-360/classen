@@ -199,7 +199,7 @@
                     <div class="relative grid px-6 pt-14 pb-2 place-content-center bg-neutral-100">
                         <button class="favorite bg-neutral-100"
                             onclick="initFavoritesJS.toggleFavoriteItem('{{ $door->id }}')">
-                            <x-svg.heart class="" id="heart-{{ $door->id }}"> </x-svg.heart>
+                            <x-svg.heart class="" id="heart-{{ $door->id }}" />
                         </button>
                         <a class="" href="{{ route('door.show', ['door' => $door->id]) }}" wire:navigate>
                             <img class="h-[330px]"

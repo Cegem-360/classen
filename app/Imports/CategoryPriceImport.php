@@ -7,24 +7,24 @@ namespace App\Imports;
 use App\Models\Category;
 use App\Models\Door;
 use Exception;
-use Illuminate\Support\Collection;
+use Illuminate\Database\Eloquent\Model;
 use Maatwebsite\Excel\Concerns\ToModel;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
 final class CategoryPriceImport implements ToModel, WithHeadingRow
 {
     /**
-     * @param  Collection  $collection
+     * @param  array<string, mixed>  $row
      */
-    public function model(array $row): void
+    public function model(array $row): ?Model
     {
         try {
             $category = Category::whereName($row['kollekcio'])->first();
             if (! $category) {
-                return;
+                return null;
             }
         } catch (Exception) {
-            return;
+            return null;
         }
 
         $models = Door::whereCategoryId(Category::whereName($row['kollekcio'])->first()->id)->get();
@@ -33,5 +33,7 @@ final class CategoryPriceImport implements ToModel, WithHeadingRow
                 'price' => $row['ar'],
             ]);
         }
+
+        return null;
     }
 }

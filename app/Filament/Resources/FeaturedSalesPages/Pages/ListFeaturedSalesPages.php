@@ -7,11 +7,13 @@ namespace App\Filament\Resources\FeaturedSalesPages\Pages;
 use App\Filament\Resources\FeaturedSalesPages\FeaturedSalesPageResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
+use Override;
 
 final class ListFeaturedSalesPages extends ListRecords
 {
     protected static string $resource = FeaturedSalesPageResource::class;
 
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [

@@ -8,11 +8,13 @@ use App\Filament\Resources\FeaturedSalesPages\FeaturedSalesPageResource;
 use Filament\Actions\DeleteAction;
 use Filament\Actions\ViewAction;
 use Filament\Resources\Pages\EditRecord;
+use Override;
 
 final class EditFeaturedSalesPage extends EditRecord
 {
     protected static string $resource = FeaturedSalesPageResource::class;
 
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [

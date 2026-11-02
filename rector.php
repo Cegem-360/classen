@@ -2,11 +2,9 @@
 
 declare(strict_types=1);
 
+use Madbox99\RectorFilament\Set\FilamentSetList;
 use Rector\Config\RectorConfig;
-use Rector\Php83\Rector\ClassMethod\AddOverrideAttributeToOverriddenMethodsRector;
-use Rector\Set\ValueObject\SetList;
-use RectorLaravel\Set\LaravelLevelSetList;
-use RectorLaravel\Set\LaravelSetList;
+use Rector\Privatization\Rector\ClassMethod\PrivatizeFinalClassMethodRector;
 
 return RectorConfig::configure()
     ->withPaths([
@@ -16,26 +14,19 @@ return RectorConfig::configure()
         __DIR__.'/public',
     ])
     ->withSkip([
-        AddOverrideAttributeToOverriddenMethodsRector::class,
+        PrivatizeFinalClassMethodRector::class => [__DIR__.'/app/Filament', __DIR__.'/app/Livewire'],
+    ])
+    ->withComposerBased()
+    ->withImportNames()
+    ->withPhpSets()
+    ->withParallel()
+    ->withSets([
+        FilamentSetList::LARAVEL_APP,
     ])
     ->withPreparedSets(
         deadCode: true,
         codeQuality: true,
+        codingStyle: true,
         typeDeclarations: true,
         privatization: true,
-    )
-    ->withPhpSets()
-    ->withImportNames()
-    ->withSets([
-        SetList::DEAD_CODE,
-        SetList::CODE_QUALITY,
-        SetList::CODING_STYLE,
-        SetList::PHP_83,
-        SetList::TYPE_DECLARATION,
-        LaravelSetList::LARAVEL_CODE_QUALITY,
-        LaravelSetList::LARAVEL_ARRAY_STR_FUNCTION_TO_STATIC_CALL,
-        LaravelSetList::LARAVEL_COLLECTION,
-        LaravelSetList::LARAVEL_ELOQUENT_MAGIC_METHOD_TO_QUERY_BUILDER,
-        LaravelSetList::LARAVEL_ARRAYACCESS_TO_METHOD_CALL,
-        LaravelLevelSetList::UP_TO_LARAVEL_130,
-    ]);
+    );

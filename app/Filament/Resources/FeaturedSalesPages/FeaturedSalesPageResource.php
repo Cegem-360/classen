@@ -29,22 +29,25 @@ use Filament\Forms\Components\Toggle;
 use Filament\Resources\Resource;
 use Filament\Schemas\Components\Utilities\Set;
 use Filament\Schemas\Schema;
+use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 use Illuminate\Support\Str;
+use Override;
 use UnitEnum;
 
 final class FeaturedSalesPageResource extends Resource
 {
     protected static ?string $model = FeaturedSalesPage::class;
 
-    protected static string|BackedEnum|null $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
     protected static string|UnitEnum|null $navigationGroup = 'Sales Pages';
 
     protected static ?string $navigationLabel = 'Featured Sales Pages';
 
+    #[Override]
     public static function form(Schema $schema): Schema
     {
         return $schema
@@ -109,6 +112,7 @@ final class FeaturedSalesPageResource extends Resource
             ]);
     }
 
+    #[Override]
     public static function table(Table $table): Table
     {
         return $table
@@ -190,6 +194,7 @@ final class FeaturedSalesPageResource extends Resource
             ]);
     }
 
+    #[Override]
     public static function getRelations(): array
     {
         return [
@@ -197,6 +202,7 @@ final class FeaturedSalesPageResource extends Resource
         ];
     }
 
+    #[Override]
     public static function getPages(): array
     {
         return [

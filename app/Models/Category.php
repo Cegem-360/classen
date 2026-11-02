@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Facades\Date;
 use Spatie\Sitemap\Contracts\Sitemapable;
 use Spatie\Sitemap\Tags\Url;
@@ -29,11 +30,17 @@ final class Category extends Model implements Sitemapable
 {
     use HasFactory;
 
+    /**
+     * @return HasMany<Door, $this>
+     */
     public function doors(): HasMany
     {
         return $this->hasMany(Door::class, 'category_id', 'id');
     }
 
+    /**
+     * @return BelongsToMany<Attribute, $this, Pivot>
+     */
     public function attributes(): BelongsToMany
     {
         return $this->belongsToMany(Attribute::class, 'attribute_category');
@@ -41,6 +48,8 @@ final class Category extends Model implements Sitemapable
 
     /**
      * Get the additionalAttribute associated with the Category
+     *
+     * @return HasOne<AdditionalAttribute, $this>
      */
     public function additionalAttribute(): HasOne
     {

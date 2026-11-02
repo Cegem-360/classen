@@ -7,11 +7,13 @@ namespace App\Filament\Resources\FeaturedSalesPages\Pages;
 use App\Filament\Resources\FeaturedSalesPages\FeaturedSalesPageResource;
 use Filament\Actions\EditAction;
 use Filament\Resources\Pages\ViewRecord;
+use Override;
 
 final class ViewFeaturedSalesPage extends ViewRecord
 {
     protected static string $resource = FeaturedSalesPageResource::class;
 
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [

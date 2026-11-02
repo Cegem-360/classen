@@ -19,12 +19,7 @@ final class BlogController extends Controller
 
     public function show(string $slug): Factory|View
     {
-        /* dump($slug); */
-        $blog = Blog::whereSlug($slug)->first();
-        /* dump($blog); */
-        if (! $blog) {
-            abort(404);
-        }
+        $blog = Blog::whereSlug($slug)->firstOrFail();
 
         return view('blog.show')->with('blog', $blog);
     }

@@ -7,11 +7,13 @@ namespace App\Filament\Resources\Tags\Pages;
 use App\Filament\Resources\Tags\TagResource;
 use Filament\Actions\CreateAction;
 use Filament\Resources\Pages\ListRecords;
+use Override;
 
 final class ListTags extends ListRecords
 {
     protected static string $resource = TagResource::class;
 
+    #[Override]
     protected function getHeaderActions(): array
     {
         return [

@@ -7,6 +7,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
 final class Attribute extends Model
 {
@@ -16,6 +17,9 @@ final class Attribute extends Model
         'id', 'name', 'value', 'slug',
     ];
 
+    /**
+     * @return BelongsToMany<Category, $this, Pivot>
+     */
     public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class, 'attribute_category');

@@ -23,7 +23,7 @@ use Illuminate\Support\Carbon;
  * @method static Builder|Tag whereId($value)
  * @method static Builder|Tag whereUpdatedAt($value)
  *
- * @mixin \Eloquent
+ * @mixin Model
  */
 final class Tag extends Model
 {

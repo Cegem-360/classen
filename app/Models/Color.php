@@ -16,11 +16,17 @@ final class Color extends Model
 {
     use HasFactory;
 
+    /**
+     * @return BelongsTo<Door, $this>
+     */
     public function door(): BelongsTo
     {
         return $this->belongsTo(Door::class);
     }
 
+    /**
+     * @return BelongsTo<Category, $this>
+     */
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);

@@ -4,7 +4,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import PhotoSwipeLightbox from "https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js";
 import PhotoSwipe from "https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js";
-import { speed } from "jquery";
 
 gsap.registerPlugin(ScrollTrigger);
 

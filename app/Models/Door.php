@@ -27,11 +27,17 @@ final class Door extends Model implements Sitemapable
 {
     use HasFactory;
 
+    /**
+     * @return BelongsTo<Category, $this>
+     */
     public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
 
+    /**
+     * @return HasMany<Color, $this>
+     */
     public function colors(): HasMany
     {
         return $this->hasMany(Color::class, 'color_door');
