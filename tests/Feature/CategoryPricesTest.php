@@ -2,18 +2,22 @@
 
 declare(strict_types=1);
 
-use App\Exports\CategoryPricesExport;
 use App\Filament\Resources\Categories\Pages\ListCategories;
-use App\Imports\CategoryPriceImport;
 use App\Models\Category;
 use App\Models\Door;
 use App\Models\User;
+use Filament\Actions\Exports\Models\Export;
 use Filament\Actions\Testing\TestAction;
 use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Facades\Storage;
 use Livewire\Livewire;
-use Maatwebsite\Excel\Facades\Excel;
 
 use function Pest\Laravel\actingAs;
+
+beforeEach(function (): void {
+    Storage::fake(config('filament.default_filesystem_disk'));
+    actingAs(User::factory()->create(['password' => bcrypt('password')]));
+});
 
 it('no longer exposes the public price import page', function (string $uri): void {
     $this->get($uri)->assertNotFound();
@@ -25,56 +29,28 @@ it('exports one row per collection with its most common door price', function ()
     Door::factory()->create(['category_id' => $alfa->id, 'price' => 60000]);
     Category::factory()->create(['name' => 'Beta']);
 
-    $export = new CategoryPricesExport();
+    Livewire::test(ListCategories::class)
+        ->callAction(TestAction::make('export'));
 
-    expect($export->headings())->toBe(['Kollekció', 'Ár'])
-        ->and($export->collection()->all())->toBe([['Alfa', 50000], ['Beta', 0]]);
+    $export = Export::query()->sole();
+    $csv = collect($export->getFileDisk()->files($export->getFileDirectory()))
+        ->filter(fn (string $path): bool => str_ends_with($path, '.csv'))
+        ->map(fn (string $path): string => $export->getFileDisk()->get($path))
+        ->implode('');
+
+    expect($csv)->toContain('Alfa,50000')->toContain('Beta,0');
 });
 
-it('downloads the price list from the admin panel', function (): void {
-    Excel::fake();
-    actingAs(User::factory()->create(['password' => bcrypt('password')]));
-
-    Livewire::test(ListCategories::class)->callAction(TestAction::make('exportPrices'));
-
-    Excel::assertDownloaded('kollekcio-arak-'.now()->format('Y-m-d').'.xlsx');
-});
-
-it('round-trips the exported file back into door prices', function (): void {
+it('imports collection prices into every door of the collection', function (): void {
     $alfa = Category::factory()->create(['name' => 'Alfa']);
-    $door = Door::factory()->create(['category_id' => $alfa->id, 'price' => 50000]);
-
-    $path = Excel::raw(new class implements Maatwebsite\Excel\Concerns\FromArray
-    {
-        public function array(): array
-        {
-            return [['Kollekció', 'Ár'], ['Alfa', 72000], ['Nincs ilyen', 1000], ['Alfa ures', '']];
-        }
-    }, Maatwebsite\Excel\Excel::XLSX);
-    $file = UploadedFile::fake()->createWithContent('arak.xlsx', $path);
-
-    $import = new CategoryPriceImport();
-    Excel::import($import, $file);
-
-    expect($door->refresh()->price)->toBe(72000)
-        ->and($import->updatedCollections)->toBe(1);
-});
-
-it('imports prices from the admin panel', function (): void {
-    actingAs(User::factory()->create(['password' => bcrypt('password')]));
-    $alfa = Category::factory()->create(['name' => 'Alfa']);
-    Door::factory()->create(['category_id' => $alfa->id, 'price' => 50000]);
-
-    $file = UploadedFile::fake()->createWithContent('arak.xlsx', Excel::raw(new class implements Maatwebsite\Excel\Concerns\FromArray
-    {
-        public function array(): array
-        {
-            return [['Kollekció', 'Ár'], ['Alfa', 64000]];
-        }
-    }, Maatwebsite\Excel\Excel::XLSX));
+    $doors = Door::factory()->count(2)->create(['category_id' => $alfa->id, 'price' => 50000]);
+    $other = Door::factory()->create(['category_id' => Category::factory()->create()->id, 'price' => 10000]);
 
     Livewire::test(ListCategories::class)
-        ->callAction(TestAction::make('importPrices'), ['file' => $file])
-        ->assertHasNoFormErrors()
-        ->assertNotified('1 kollekció ára frissítve.');
+        ->mountAction('import')
+        ->fillForm(['file' => UploadedFile::fake()->createWithContent('arak.csv', "Kollekció,Ár\nAlfa,72000\nNincs ilyen,1000\n")])
+        ->callMountedAction();
+
+    expect($doors->map(fn (Door $door): int => $door->refresh()->price)->all())->toBe([72000, 72000])
+        ->and($other->refresh()->price)->toBe(10000);
 });

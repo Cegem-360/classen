@@ -4,29 +4,26 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Doors;
 
-use App\Exports\DoorPricesExport;
+use App\Filament\Exports\DoorExporter;
 use App\Filament\Resources\Doors\Pages\CreateDoor;
 use App\Filament\Resources\Doors\Pages\EditDoor;
 use App\Filament\Resources\Doors\Pages\ListDoors;
 use App\Models\Category;
 use App\Models\Door;
 use BackedEnum;
-use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Actions\ExportAction;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
-use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
-use Maatwebsite\Excel\Facades\Excel;
 use Override;
-use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 final class DoorResource extends Resource
 {
@@ -111,14 +108,10 @@ final class DoorResource extends Resource
                     ),
             ])
             ->headerActions([
-                Action::make('exportDoorPrices')
-                    ->label('Ajtók letöltése árakkal (Excel)')
-                    ->icon(Heroicon::OutlinedArrowDownTray)
-                    ->color('gray')
-                    ->action(fn (HasTable $livewire): BinaryFileResponse => Excel::download(
-                        new DoorPricesExport($livewire->getFilteredTableQuery()),
-                        'ajtok-arak-'.now()->format('Y-m-d').'.xlsx',
-                    )),
+                ExportAction::make()
+                    ->exporter(DoorExporter::class)
+                    ->label('Ajtók exportálása árakkal')
+                    ->icon(Heroicon::OutlinedArrowDownTray),
             ])
             ->recordActions([
                 EditAction::make(),
