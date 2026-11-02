@@ -4,7 +4,11 @@ import "../css/classen.css";
 import "swiper/css/bundle";
 
 import "../../vendor/masmerise/livewire-toaster/resources/js";
-import.meta.glob(["../img/**"], { eager: true, query: "?url", import: "default" });
+import.meta.glob(["../img/**"], {
+    eager: true,
+    query: "?url",
+    import: "default",
+});
 import "flowbite";
 import { initSwiperJS } from "./swiperJS.js";
 import initFavoritesJS from "./favorites.js"; // Replace 'require' with 'import'
