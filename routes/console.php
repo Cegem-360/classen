@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
+use Illuminate\Support\Facades\Schedule;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +27,5 @@ Artisan::command('clearCache', function () {
     Artisan::call('view:clear');
     $this->info('Cache cleared');
 })->purpose('Clear cache');
+
+Schedule::command('sitemap:generate')->dailyAt('03:00')->withoutOverlapping();

@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace App\Console\Commands;
 
+use App\Models\Blog;
 use App\Models\Category;
 use App\Models\Door;
+use App\Models\FeaturedSalesPage;
 use Illuminate\Console\Attributes\Description;
 use Illuminate\Console\Attributes\Signature;
 use Illuminate\Console\Command;
@@ -48,6 +50,8 @@ final class GenerateSitemap extends Command
         $sitemap->add(Url::create('/cpl-belteri-ajtok-karcallo-modern-ajtok')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
         $sitemap->add(Category::all());
         $sitemap->add(Door::all());
+        $sitemap->add(Blog::all());
+        $sitemap->add(FeaturedSalesPage::query()->whereNotNull('slug')->get());
         $sitemap->writeToFile(public_path('sitemap.xml'));
     }
 }

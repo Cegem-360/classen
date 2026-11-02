@@ -7,6 +7,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Date;
+use Spatie\Sitemap\Contracts\Sitemapable;
+use Spatie\Sitemap\Tags\Url;
 
 #[Fillable([
     'id',
@@ -37,7 +40,7 @@ use Illuminate\Database\Eloquent\Model;
     'excerpt',
     'json_schema',
 ])]
-final class FeaturedSalesPage extends Model
+final class FeaturedSalesPage extends Model implements Sitemapable
 {
     use HasFactory;
 
@@ -59,5 +62,13 @@ final class FeaturedSalesPage extends Model
         return is_array($decoded)
             ? json_encode($decoded, JSON_HEX_TAG | JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE)
             : null;
+    }
+
+    public function toSitemapTag(): Url
+    {
+        return Url::create(route('featured-sales-areas.show', $this->slug))
+            ->setLastModificationDate(Date::create($this->updated_at))
+            ->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY)
+            ->setPriority(0.7);
     }
 }

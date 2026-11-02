@@ -7,7 +7,6 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DoorController;
 use App\Http\Controllers\ManagePageContentController;
 use App\Http\Controllers\QuotationController;
-use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 
@@ -82,19 +81,7 @@ Route::get('/quoteMail', function () {
     return view('mail.quotation.sended');
 })->name('quote');
 
-Route::get('/clearCache', function () {
-    Artisan::call('cache:clear');
-    Artisan::call('config:clear');
-    Artisan::call('route:clear');
-    Artisan::call('view:clear');
-
-    return 'Cache cleared';
-});
-Route::get('/sitemap', function () {
-    Artisan::call('sitemap:generate');
-
-    return 'Sitemap generated';
-});
+Route::get('/robots.txt', fn () => response("User-agent: *\nDisallow:\n\nSitemap: ".url('sitemap.xml')."\n", 200, ['Content-Type' => 'text/plain']))->name('robots');
 
 Route::prefix('kiemelt-ertekesitesi-teruleteink')->as('featured-sales-areas.')->group(function () {
     Route::view('/', 'pages.featured-sales-areas.index')->name('index');
