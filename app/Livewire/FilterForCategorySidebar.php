@@ -15,6 +15,22 @@ use Livewire\Component;
 final class FilterForCategorySidebar extends Component
 {
     /**
+     * Display order of the collection groups (category breadcrumbs); groups not listed here follow after them.
+     *
+     * @var list<string>
+     */
+    private const array COLLECTION_ORDER = [
+        'LACQUERED DOORS',
+        'FRAMED DOORS',
+        'VENEER PANEL DOORS',
+        'INTERIOR ENTRANCE DOORS',
+        'TECHNICAL AND SYSTEMS DOORS',
+        'SLIDING DOORS',
+        'STORAGE PRODUCTS',
+        'WOOD-BASED DOOR FRAMES',
+    ];
+
+    /**
      * @var array<string, array<string, bool>>
      */
     public array $options = [
@@ -139,16 +155,10 @@ final class FilterForCategorySidebar extends Component
             $this->collections = $collection->groupBy('breadcrumb')->sortBy('breadcrumb')->all();
             // dump($this->collections);
         } else {
-            $this->collections = Category::all()->groupBy('breadcrumb')->all();
-            $tmp['LACQUERED DOORS'] = $this->collections['LACQUERED DOORS'];
-            $tmp['FRAMED DOORS'] = $this->collections['FRAMED DOORS'];
-            $tmp['VENEER PANEL DOORS'] = $this->collections['VENEER PANEL DOORS'];
-            $tmp['INTERIOR ENTRANCE DOORS'] = $this->collections['INTERIOR ENTRANCE DOORS'];
-            $tmp['TECHNICAL AND SYSTEMS DOORS'] = $this->collections['TECHNICAL AND SYSTEMS DOORS'];
-            $tmp['SLIDING DOORS'] = $this->collections['SLIDING DOORS'];
-            $tmp['STORAGE PRODUCTS'] = $this->collections['STORAGE PRODUCTS'];
-            $tmp['WOOD-BASED DOOR FRAMES'] = $this->collections['WOOD-BASED DOOR FRAMES'];
-            $this->collections = collect($tmp)->all();
+            $this->collections = Category::all()
+                ->groupBy('breadcrumb')
+                ->sortBy(fn (mixed $categories, string $breadcrumb): int => array_flip(self::COLLECTION_ORDER)[$breadcrumb] ?? count(self::COLLECTION_ORDER))
+                ->all();
         }
 
         return view('livewire.filter-for-category-sidebar', ['collections' => $this->collections]);
