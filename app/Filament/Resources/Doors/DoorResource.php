@@ -4,27 +4,29 @@ declare(strict_types=1);
 
 namespace App\Filament\Resources\Doors;
 
-use App\Filament\Exports\DoorExportByCategoryExporter;
-use App\Filament\Exports\DoorExporter;
+use App\Exports\DoorPricesExport;
 use App\Filament\Resources\Doors\Pages\CreateDoor;
 use App\Filament\Resources\Doors\Pages\EditDoor;
 use App\Filament\Resources\Doors\Pages\ListDoors;
 use App\Models\Category;
 use App\Models\Door;
 use BackedEnum;
+use Filament\Actions\Action;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
-use Filament\Actions\ExportAction;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Filters\SelectFilter;
 use Filament\Tables\Table;
+use Maatwebsite\Excel\Facades\Excel;
 use Override;
+use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 final class DoorResource extends Resource
 {
@@ -42,7 +44,7 @@ final class DoorResource extends Resource
                 TextInput::make('price')
                     ->numeric()
                     ->default(0)
-                    ->prefix('$'),
+                    ->suffix('Ft'),
                 TextInput::make('name')
                     ->required()
                     ->maxLength(255),
@@ -76,7 +78,7 @@ final class DoorResource extends Resource
                     ->numeric()
                     ->sortable(),
                 TextColumn::make('price')
-                    ->money()
+                    ->money('HUF', locale: 'hu')
                     ->sortable(),
                 TextColumn::make('name')
                     ->searchable(),
@@ -109,12 +111,14 @@ final class DoorResource extends Resource
                     ),
             ])
             ->headerActions([
-                ExportAction::make()->exporter(DoorExportByCategoryExporter::class)
-                    ->label('Export by Category')
-                    ->icon(Heroicon::OutlinedDocument),
-                ExportAction::make()->exporter(DoorExporter::class)
-                    ->label('Export Additional Attributes')
-                    ->icon(Heroicon::OutlinedDocumentText),
+                Action::make('exportDoorPrices')
+                    ->label('Ajtók letöltése árakkal (Excel)')
+                    ->icon(Heroicon::OutlinedArrowDownTray)
+                    ->color('gray')
+                    ->action(fn (HasTable $livewire): BinaryFileResponse => Excel::download(
+                        new DoorPricesExport($livewire->getFilteredTableQuery()),
+                        'ajtok-arak-'.now()->format('Y-m-d').'.xlsx',
+                    )),
             ])
             ->recordActions([
                 EditAction::make(),
