@@ -6,34 +6,35 @@ namespace App\Imports;
 
 use App\Models\Category;
 use App\Models\Door;
-use Exception;
-use Illuminate\Database\Eloquent\Model;
-use Maatwebsite\Excel\Concerns\ToModel;
+use Illuminate\Support\Collection;
+use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 
-final class CategoryPriceImport implements ToModel, WithHeadingRow
+/**
+ * Sets the price of every door in a collection from the collection and price columns of CategoryPricesExport.
+ */
+final class CategoryPriceImport implements ToCollection, WithHeadingRow
 {
+    public int $updatedCollections = 0;
+
     /**
-     * @param  array<string, mixed>  $row
+     * @param  Collection<int, Collection<string, mixed>>  $rows
      */
-    public function model(array $row): ?Model
+    public function collection(Collection $rows): void
     {
-        try {
-            $category = Category::whereName($row['kollekcio'])->first();
-            if (! $category) {
-                return null;
+        foreach ($rows as $row) {
+            if (blank($row['kollekcio'] ?? null) || ! is_numeric($row['ar'] ?? null)) {
+                continue;
             }
-        } catch (Exception) {
-            return null;
-        }
 
-        $models = Door::whereCategoryId(Category::whereName($row['kollekcio'])->first()->id)->get();
-        foreach ($models as $model) {
-            $model->update([
-                'price' => $row['ar'],
-            ]);
-        }
+            $category = Category::query()->where('name', $row['kollekcio'])->first();
 
-        return null;
+            if ($category === null) {
+                continue;
+            }
+
+            Door::query()->where('category_id', $category->id)->update(['price' => (int) $row['ar']]);
+            $this->updatedCollections++;
+        }
     }
 }

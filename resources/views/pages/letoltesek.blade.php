@@ -3,7 +3,7 @@
         <meta name="robots" content="index, follow">
         <meta name="googlebot" content="index, follow">
         <meta name="description"
-            content="Arcadia98 Kft. letölthető dokumentumok: bővített beltéri ajtókatalógus 2024, Dooroutlet belteri ajtó raktári üveges színek 2024, Dooroutlet ajtólap méretek és nyitási irányok, Dooroutlet utólag beépíthető falcolt tok méretek, Arcadia 98 Kft. bruttó Kiskereskedelmi árlista 2023.">
+            content="Arcadia98 Kft. letölthető dokumentumok: beltéri ajtó katalógus 2025, Dooroutlet beltéri ajtókatalógus MSZ, bruttó kiskereskedelmi árlista 2026.04.01.">
         <meta name="keywords"
             content="letöltések, Arcadia98 Kft., beltéri ajtók, katalógus, árlista, Dooroutlet, méretek, nyitási irányok">
         <link rel="canonical" href="{{ Request::url() }}">
@@ -22,26 +22,26 @@
             <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
         <div class="grid grid-cols-6 gap-12 md:grid-cols-2">
-            <a href="{{ Storage::url('dl/katalog_classen_hu_2025_01_251209.pdf') }}" target="_blank">
+            <a href="{{ Storage::url('dl/arcadia98-belteri-ajto-katalogus-2025.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Belteri_ajto_katalogus_2025.jpg') }}"
-                    alt="Arcadia_98_Kft_Beltéri_ajtó_katalógus_2025.pdf" />
-                <p class="mt-3 text-sm">Arcadia98 Kft. Ajtókatalógus 2025 12 09 HU</p>
+                    alt="Arcadia98 Kft. beltéri ajtó katalógus 2025" />
+                <p class="mt-3 text-sm">Arcadia98 Kft. beltéri ajtó katalógus 2025</p>
             </a>
             {{-- <a href="{{ Storage::url('dl/Arcadia_98_Kft_Belteri_ajto_katalogus_2025.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Belteri_ajto_katalogus_2025.jpg') }}"
                     alt="Arcadia_98_Kft_Beltéri_ajtó_katalógus_2025.pdf" />
                 <p class="mt-3 text-sm">Arcadia98 Kft. bővített beltéri ajtókatalógus 2025-HU-ENG</p>
             </a> --}}
-            <a href="{{ Storage::url('dl/Dooroutlet_Szabvany_belteri_ajto_katalogus_2025.pdf') }}" target="_blank">
+            <a href="{{ Storage::url('dl/dooroutlet-belteri-ajtokatalogus-msz.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Szabvany_belteri_ajto_katalogus_2025.jpg') }}"
-                    alt="Dooroutlet_Szabvány_beltéri_ajtó_katalógus_2025.pdf" />
-                <p class="mt-3 text-sm">Dooroutlet beltéri ajtó raktári üveges színek 2025.pdf</p>
+                    alt="Dooroutlet beltéri ajtókatalógus MSZ" />
+                <p class="mt-3 text-sm">Dooroutlet beltéri ajtókatalógus MSZ</p>
             </a>
-            <a href="{{ Storage::url('dl/Arcadia 98 Kft._Bruttó_Kiskeresekdelmi_árlista_20250317.pdf') }}"
+            <a href="{{ Storage::url('dl/arcadia98-brutto-kiskereskedelmi-arlista-2026-04-01.pdf') }}"
                 target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/door_outlet_img.png') }}"
-                    alt="Arcadia 98 Kft._Bruttó_Kiskeresekdelmi_árlista_20250317.pdf" />
-                <p class="mt-3 text-sm">Arcadia98 Kft. bruttó Kiskereskedelmi árlista</p>
+                    alt="Arcadia98 Kft. bruttó kiskereskedelmi árlista 2026.04.01." />
+                <p class="mt-3 text-sm">Arcadia98 Kft. bruttó kiskereskedelmi árlista (2026.04.01.)</p>
             </a>
 
         </div>

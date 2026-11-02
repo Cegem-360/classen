@@ -4,15 +4,11 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Imports\CategoryPriceImport;
 use App\Models\Category;
 use App\Models\Door;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use Maatwebsite\Excel\Facades\Excel;
 
 final class CategoryController extends Controller
 {
@@ -83,29 +79,5 @@ final class CategoryController extends Controller
     public function destroy(Category $category): void
     {
         //
-    }
-
-    public function upload(): Factory|View
-    {
-        return view('collections.upload');
-    }
-
-    public function import(Request $request): RedirectResponse
-    {
-        $validator = Validator::make($request->all(), [
-            'file' => ['required', 'mimes:xlsx,xls'],
-        ]);
-
-        if ($validator->fails()) {
-            return back()->error('Import sikertelen!');
-        }
-
-        // Get the uploaded file
-        $file = $request->file('file');
-
-        // process the file
-        Excel::import(new CategoryPriceImport(), $file);
-
-        return to_route('index')->info('Import sikeres!');
     }
 }

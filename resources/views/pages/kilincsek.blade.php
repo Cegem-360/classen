@@ -22,10 +22,10 @@
             <hr class="relative w-32 h-1 mt-3 mb-3 border-0 bg-sarga">
         </div>
         <div class="grid grid-cols-6 gap-12 md:grid-cols-2">
-            <a href="{{ Storage::url('dl/Maestro_kilincskatalogus_online_2023.1.pdf') }}" target="_blank">
+            <a href="{{ Storage::url('dl/maestro-kilincskatalogus-2026-3.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/Maestro_kilincskatalogus_online_2023.1.webp') }}"
-                    alt="Maestro_kilincskatalogus_online_2023.1.pdf" />
-                <p class="mt-3 text-sm text-wrap">Maestro kilincskatalógus online 2023.1</p>
+                    alt="Maestro kilincskatalógus 2026.3" />
+                <p class="mt-3 text-sm text-wrap">Maestro kilincskatalógus 2026.3</p>
             </a>
             <a href="{{ Storage::url('dl/TUPAI-kilincskatalogus-2022.pdf') }}" target="_blank">
                 <img src="{{ Vite::asset('resources/img/cover-images/TUPAI-kilincskatalogus-2022.webp') }}"
