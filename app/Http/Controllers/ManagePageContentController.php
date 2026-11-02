@@ -7,7 +7,6 @@ namespace App\Http\Controllers;
 use App\Mail\ContactForm;
 use App\Models\Blog;
 use App\Models\Door;
-use GuzzleHttp\Client;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -20,8 +19,6 @@ use Symfony\Component\HttpFoundation\BinaryFileResponse;
 
 final class ManagePageContentController extends Controller
 {
-    public Client $client;
-
     /**
      * Display a listing of the resource.
      */

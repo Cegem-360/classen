@@ -27,10 +27,6 @@ final class DatabaseSeeder extends Seeder
 
         $this->call([
             MetaKeyWordsSeeder::class,
-            AttributeSeeder::class,
-            CategorySeeder::class,
-            DoorSeeder::class,
-            AdditionalAttributeSeeder::class,
             BlogSeeder::class,
         ]);
 

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\DatabaseUpdaterController;
 use App\Http\Controllers\DoorController;
 use App\Http\Controllers\ManagePageContentController;
 use App\Http\Controllers\QuotationController;
@@ -82,9 +81,6 @@ Route::get('/xmlFile', [ManagePageContentController::class, 'xmlFile']);
 Route::get('/quoteMail', function () {
     return view('mail.quotation.sended');
 })->name('quote');
-Route::prefix('updateWebsiteDatabase')->as('updateWebsiteDatabase.')->group(function () {
-    Route::get('/', [DatabaseUpdaterController::class, 'trigger'])->name('trigger');
-});
 
 Route::get('/clearCache', function () {
     Artisan::call('cache:clear');

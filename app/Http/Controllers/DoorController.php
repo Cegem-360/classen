@@ -5,15 +5,12 @@ declare(strict_types=1);
 namespace App\Http\Controllers;
 
 use App\Models\Door;
-use GuzzleHttp\Client;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\Request;
 
 final class DoorController extends Controller
 {
-    public Client $client;
-
     /**
      * Display a listing of the resource.
      */
