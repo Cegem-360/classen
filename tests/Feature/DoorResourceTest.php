@@ -43,3 +43,21 @@ it('exports the doors with prices, respecting the collection filter', function (
             && $columnMap['category.name'] === 'Kollekció';
     });
 });
+
+it('soft deletes doors and can restore them from the admin panel', function (): void {
+    $door = Door::factory()->create(['category_id' => Category::factory()->create()->id]);
+
+    Livewire::test(ListDoors::class)
+        ->selectTableRecords([$door])
+        ->callAction(TestAction::make('delete')->table()->bulk())
+        ->assertCanNotSeeTableRecords([$door]);
+
+    expect($door->fresh()->trashed())->toBeTrue();
+
+    Livewire::test(ListDoors::class)
+        ->filterTable('trashed', true)
+        ->assertCanSeeTableRecords([$door])
+        ->callAction(TestAction::make('restore')->table($door));
+
+    expect($door->fresh()->trashed())->toBeFalse();
+});

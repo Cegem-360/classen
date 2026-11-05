@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Date;
 use Spatie\Sitemap\Contracts\Sitemapable;
 use Spatie\Sitemap\Tags\Url;
@@ -26,6 +27,7 @@ use Spatie\Sitemap\Tags\Url;
 final class Door extends Model implements Sitemapable
 {
     use HasFactory;
+    use SoftDeletes;
 
     /**
      * @return BelongsTo<Category, $this>

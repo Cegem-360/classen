@@ -25,7 +25,7 @@ final class QuotationItem extends Model
      */
     public function door(): BelongsTo
     {
-        return $this->belongsTo(Door::class);
+        return $this->belongsTo(Door::class)->withTrashed();
     }
 
     /**

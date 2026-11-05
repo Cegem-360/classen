@@ -6,6 +6,8 @@ namespace App\Filament\Resources\Doors\Pages;
 
 use App\Filament\Resources\Doors\DoorResource;
 use Filament\Actions\DeleteAction;
+use Filament\Actions\ForceDeleteAction;
+use Filament\Actions\RestoreAction;
 use Filament\Resources\Pages\EditRecord;
 use Override;
 
@@ -18,6 +20,8 @@ final class EditDoor extends EditRecord
     {
         return [
             DeleteAction::make(),
+            ForceDeleteAction::make(),
+            RestoreAction::make(),
         ];
     }
 }
